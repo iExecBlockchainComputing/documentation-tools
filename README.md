@@ -2,8 +2,8 @@
 
 This is the source repository of the [iExec tools documentation](https://tools.docs.iex.ec) rendered by gitbook.
 
-- production branch is rendered at <https://tools.docs.iex.ec>
-- staging branch is rendered at <https://documentations.iex.ec/iexec-tools-staging>
+- [`production`](https://github.com/iExecBlockchainComputing/documentation-tools/tree/production) branch is rendered at <https://tools.docs.iex.ec>
+- [`staging`](https://github.com/iExecBlockchainComputing/documentation-tools/tree/staging) branch is rendered at <https://documentations.iex.ec/iexec-tools-staging>
 
 ## Contributing
 
