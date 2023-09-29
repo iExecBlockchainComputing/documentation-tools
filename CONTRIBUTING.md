@@ -16,6 +16,6 @@ Apply your changes on your forked branch, stage them and commit.
 
 Open a Pull-Request from your branch to the `develop` branch.
 
-Once accepted your changes will be live on the staging environment.
+Once accepted your changes will be live on the [staging environment](https://documentations.iex.ec/iexec-tools-staging/).
 
-After a short while changes on staging environment will be shipped to the production environment through a PR from the `staging` branch to the `production` branch.
+After a short while changes on staging environment will be shipped to the [production environment](https://tools.docs.iex.ec) through a PR from the `staging` branch to the `production` branch.
