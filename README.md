@@ -1,20 +1,30 @@
-# Contributing
+# iExec Tools documentation
 
-Thank you for contributing to iExec tools documentation.
+This is the source repository of the [iExec tools documentation](https://tools.docs.iex.ec) rendered by gitbook.
+
+- production branch is rendered at <https://tools.docs.iex.ec>
+- staging branch is rendered at <https://documentations.iex.ec/iexec-tools-staging>
+
+## Contributing
 
 To keep the contribution process smooth, please read this small guide.
 
-## Fork
+### Fork
 
 Fork the `staging` branch
 
 [![fork-button](./hidden-assets/fork-button.png)](https://github.com/iExecBlockchainComputing/documentation-tools/fork)
 
-## Contribution
+### Contribution
 
 Apply your changes on your forked branch, stage them and commit.
 
-## PR time
+> _**Tips:**_  
+> The space root is [`./documentation/`](./documentation/)  
+> The first page is [`./documentation/README.md`](./documentation/README.md)  
+> The summary is [`./documentation/SUMMARY.md`](./documentation/SUMMARY.md)
+
+### PR time
 
 Open a Pull-Request from your branch to the `develop` branch.
 
@@ -29,6 +39,6 @@ Click on the "Details" link to access the preview.
 
 Open Pull-Request will be reviewed by the team and merged once approved.
 
-## Going live
+### Going live
 
 After a short while the team will merge the `staging` branch into the `production` branch and your changes will be live on [tools.docs.iex.ec](https://tools.docs.iex.ec).
