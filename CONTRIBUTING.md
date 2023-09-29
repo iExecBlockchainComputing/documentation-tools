@@ -6,7 +6,9 @@ To keep the contribution process smooth, please read this small guide.
 
 ## Fork
 
-[Fork the staging branch](https://github.com/iExecBlockchainComputing/documentation-tool/fork)
+Fork the `staging` branch
+
+[![fork-button](./hidden-assets/fork-button.png)](https://github.com/iExecBlockchainComputing/documentation-tools/fork)
 
 ## Contribution
 
@@ -16,6 +18,17 @@ Apply your changes on your forked branch, stage them and commit.
 
 Open a Pull-Request from your branch to the `develop` branch.
 
-Once accepted your changes will be live on the [staging environment](https://documentations.iex.ec/iexec-tools-staging/).
+A preview of your changes will be rendered on the staging environment.
 
-After a short while changes on staging environment will be shipped to the [production environment](https://tools.docs.iex.ec) through a PR from the `staging` branch to the `production` branch.
+![PR-preview](./hidden-assets/PR-preview.png)
+
+Click on the "Details" link to access the preview.
+
+> _**Tips:**_  
+> You can open a draft Pull-Request and set it "Ready for review" when you are happy with the preview.
+
+Open Pull-Request will be reviewed by the team and merged once approved.
+
+## Going live
+
+After a short while the team will merge the `staging` branch into the `production` branch and your changes will be live on [tools.docs.iex.ec](https://tools.docs.iex.ec).
