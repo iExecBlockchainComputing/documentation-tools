@@ -26,7 +26,7 @@ Apply your changes on your forked branch, stage them and commit.
 
 ### PR time
 
-Open a Pull-Request from your branch to the `develop` branch.
+Open a Pull-Request from your branch to the `staging` branch.
 
 A preview of your changes will be rendered on the staging environment.
 
