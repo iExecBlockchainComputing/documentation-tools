@@ -58,12 +58,11 @@ This section is for the gitbook administrator.
 
 ##### Themes
 
+- Theme: `Contrast`
 - Ligth Mode
   - Primary Colour: `#F1C400`
-  - Theme: `Contrast`
 - Dark Mode
   - Primary Colour: `#F1C400`
-  - Theme: `Default`
 
 ##### Mode
 
