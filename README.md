@@ -17,7 +17,9 @@ Fork the `staging` branch
 
 ### Contribute
 
-Apply your changes on your forked branch, stage them and commit.
+Apply your changes on your forked branch, stage them and commit them with a descriptive commit message.
+
+Push your changes to your forked branch.
 
 > _**Tips:**_  
 > The space root is [`./documentation/`](./documentation/)  
@@ -26,7 +28,7 @@ Apply your changes on your forked branch, stage them and commit.
 
 ### PR time
 
-Open a Pull-Request from your branch to the `staging` branch.
+Open a Pull-Request from your forked branch to the `staging` branch.
 
 A preview of your changes will be rendered on the staging environment.
 
