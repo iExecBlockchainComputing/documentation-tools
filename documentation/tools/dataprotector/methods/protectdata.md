@@ -8,29 +8,26 @@ Method to secure and protect any type of data.
 
 Currently these types are detected:
 
-Scalars:
-
-- `boolean`
-- `number`
-- `string`
-
-Binary:
-
-- `application/octet-stream`
-- `application/pdf`
-- `application/xml`
-- `application/zip`
-- `audio/midi`
-- `audio/mpeg`
-- `audio/x-wav`
-- `image/bmp`
-- `image/gif`
-- `image/jpeg`
-- `image/png`
-- `image/webp`
-- `video/mp4`
-- `video/mpeg`
-- `video/x-msvideo`
+- Scalars
+  - `boolean`
+  - `number`
+  - `string`
+- Binary:
+  - `application/octet-stream`
+  - `application/pdf`
+  - `application/xml`
+  - `application/zip`
+  - `audio/midi`
+  - `audio/mpeg`
+  - `audio/x-wav`
+  - `image/bmp`
+  - `image/gif`
+  - `image/jpeg`
+  - `image/png`
+  - `image/webp`
+  - `video/mp4`
+  - `video/mpeg`
+  - `video/x-msvideo`
 
 _NB:_ Undetected binary data are categorized as `application/octet-stream`
 
