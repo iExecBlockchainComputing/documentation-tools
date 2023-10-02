@@ -15,7 +15,7 @@ Fork the `staging` branch
 
 [![fork-button](./hidden-assets/fork-button.png)](https://github.com/iExecBlockchainComputing/documentation-tools/fork)
 
-### Contribution
+### Contribute
 
 Apply your changes on your forked branch, stage them and commit.
 
