@@ -2,6 +2,40 @@
 
 Method to secure and protect any type of data.
 
+{% hint style="info" %}
+
+`protectData` process the data on the client side to extract the data schema before encryption.
+
+Currently these types are detected:
+
+Scalars:
+
+- `boolean`
+- `number`
+- `string`
+
+Binary:
+
+- `application/octet-stream`
+- `application/pdf`
+- `application/xml`
+- `application/zip`
+- `audio/midi`
+- `audio/mpeg`
+- `audio/x-wav`
+- `image/bmp`
+- `image/gif`
+- `image/jpeg`
+- `image/png`
+- `image/webp`
+- `video/mp4`
+- `video/mpeg`
+- `video/x-msvideo`
+
+_NB:_ Undetected binary data are categorized as `application/octet-stream`
+
+{% endhint %}
+
 ## **1. With promise**
 
 ## Usage
