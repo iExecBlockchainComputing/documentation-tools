@@ -73,7 +73,7 @@ If you want to authorize every user to use the protected data, write **0x0000000
 
 ### pricePerAccess (optional)
 
-pricePerAccess parameter specifies the usage fee in nano RLC (nRLC) associated with each access of the data. It represents the cost incurred for each individual interaction with application. By invoking the grantAccess method with a specific "pricePerAccess" you define the fee that users must pay for each access to the data.
+`pricePerAccess` parameter specifies the usage fee in nano RLC (nRLC) associated with each access of the data. It represents the cost incurred for each individual interaction with application. By invoking the grantAccess method with a specific `pricePerAccess` you define the fee that users must pay for each access to the data.
 The fee is paid to the owner of the protected data.
 
 <pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
@@ -85,8 +85,8 @@ The fee is paid to the owner of the protected data.
 </code></pre>
 
 {% hint style="info" %}
-pricePerAccess is expressed in nano RLC (nRLC). nRLC is the smallest subdivision of the RLC token, 1 RLC equals to 10^9 nRLC. 
-when provided, pricePerAccess must be a non-negative integer value.
+`pricePerAccess` is expressed in nano RLC (nRLC). nRLC is the smallest subdivision of the RLC token, 1 RLC equals to 10^9 nRLC. 
+When provided, `pricePerAccess` must be a non-negative integer value.
 {% endhint %}
 
 ### numberOfAccess (optional)
