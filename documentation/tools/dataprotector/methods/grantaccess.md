@@ -76,6 +76,7 @@ If you want to authorize every user to use the protected data, write **0x0000000
 `pricePerAccess` parameter specifies the usage fee in nano RLC (nRLC) associated with each access of the data. It represents the cost incurred for each individual interaction with application.
 
 By invoking the grantAccess method with a specific `pricePerAccess` you define the fee that the specified user (`authorizedUser` parameter) users must pay for each access to the data when used with the specified application (`authorizedApp` parameter).
+
 The fee is paid to the owner of the protected data.
 
 <pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
