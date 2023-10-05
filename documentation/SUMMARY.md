@@ -1,6 +1,6 @@
 # Table of contents
 
-* [iExec tools documentation](README.md)
+* [iExec tools doc](README.md)
 
 ## Overview
 
