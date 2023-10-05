@@ -1,4 +1,4 @@
-# iExec tools documentation
+# iExec tools doc
 
 ## Start building with iExec
 
