@@ -23,7 +23,8 @@
   * [Quick start](tools/web3mail/quick-start.md)
   * [Methods](tools/web3mail/methods/README.md)
     * [fetchMyContacts](tools/web3mail/methods/fetchmycontacts.md)
-    * [sendEmail](tools/web3mail/methods/sendemail.md)
+    * [sendEmail](tools/web3mail/methods/sendemail.md
+* [✉ Oracle Factory](tools/web3mail/README.md)
 
 ## Help
 
