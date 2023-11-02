@@ -5,7 +5,7 @@ Method to revoke all access related to a protected data.
 ### Usage
 
 ```javascript
-const revokeAllAccessObservable = await dataProtector
+const revokeAllAccessObservable = dataProtector
     .revokeAllAccessObservable({
         protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e'
     })
