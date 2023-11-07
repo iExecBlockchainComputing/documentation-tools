@@ -1,4 +1,4 @@
-# 🧙♂ Oracle Factory
+# 🧙 Oracle Factory
 
 The iExec Oracle Factory is a service that facilitates the creation of custom oracles using either pre-set or user-defined APIs. Its objective is to simplify the oracle creation process for developers and other users.
 
