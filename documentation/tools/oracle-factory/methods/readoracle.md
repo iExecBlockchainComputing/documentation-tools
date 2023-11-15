@@ -1,22 +1,30 @@
----
-description: >-
-  This method facilitates the reading of the current value of the oracle smart
-  contract.
----
+# readOracle
 
-# Read Oracle
+Method to retrieve the value from a specific oracle.
+Example below is based on oracle created thanks to following public API which gives ethereum price in usd : https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd
 
-## Parameters
+## Usage
 
-* **paramSet|ipfsCid|oracleId (Required):** These are different identifiers which can be used to specify the oracle. It can be either paramSet, ipfsCid, or oracleId.
-* **dataType (Optional):** This specifies the type of data you are reading from the oracle. It can be string, number, boolean, or raw. By default, raw is used, which returns a hexadecimal string.
+```javascript
+const readOracleRes = await factory.readOracle("QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"); // Content ID of the Oracle
+```
 
-## Outputs
+## Return value example
 
-This method returns a promise, which when resolved, gives an object with two properties:
+```javascript
+{
+  value: 1995.74,
+  date: 1700047387
+}
+```
 
-* **value:** The current value of the oracle smart contract. It could be of type String, Number, or Boolean.
-* **date:** This is a number which represents the timestamp when the value was last updated.
+## Configuration
 
-Note that if the oracle is not yet updated, this method will throw a NoValueError.
+### cid (required)
 
+Content ID of the Oracle to be read.
+
+<pre class="language-javascript"><code class="lang-javascript">const readOracleRes = await factory.readOracle(
+<strong>    "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"
+</strong>);
+</code></pre>
