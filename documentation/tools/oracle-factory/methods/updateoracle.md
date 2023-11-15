@@ -1,77 +1,58 @@
----
-description: This method allows the update of an oracle.
----
+# updateOracle
 
-# Update Oracle
+Method to update an existing oracle to have the latest data from the linked API.
 
-## Parameters
+Below, following public API which gives ethereum price in usd will be used : https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd
 
-paramSet|ipfsCid: Can either be the paramSet object or an IPFS CID. The paramSet should contain the updated parameters, or the IPFS CID that contains these updated parameters.
+## Usage
 
-| Name       | Type   | Required/Optional | Description                                       |
-| ---------- | ------ | ----------------- | ------------------------------------------------- |
-| workerpool | string | Optional          | The address of the workerpool to use for the task |
-
-
-
-## Outputs
-
-The method returns a cold Observable. It provides several callbacks: next, error, complete, and cancel.
-
-* next is called on every process step with a message and additional pieces of data.
-* error is called when an error occurs and cancels the observable process.
-* complete is called when the process ends without an error.
-* cancel can be called to stop the observed process and prevent any further callback call.
-
-Messages received through next and their additional entries are as follows:
-
-| Message                                  | Sent                  | Additional Entries                                                                    |
-| ---------------------------------------- | --------------------- | ------------------------------------------------------------------------------------- |
-| ENSURE\_PARAMS                           | once                  | <p><br></p>                                                                           |
-| ENSURE\_PARAMS\_SUCCESS                  | once                  | paramSet: Object, cid: String                                                         |
-| FETCH\_APP\_ORDER                        | once                  | <p><br></p>                                                                           |
-| FETCH\_APP\_ORDER\_SUCCESS               | once                  | order: Object                                                                         |
-| FETCH\_DATASET\_ORDER                    | once if using dataset | <p><br></p>                                                                           |
-| FETCH\_DATASET\_ORDER\_SUCCESS           | once if using dataset | order: Object                                                                         |
-| FETCH\_WORKERPOOL\_ORDER                 | once                  | <p><br></p>                                                                           |
-| FETCH\_WORKERPOOL\_ORDER\_SUCCESS        | once                  | order: Object                                                                         |
-| REQUEST\_ORDER\_SIGNATURE\_SIGN\_REQUEST | once                  | order: Object                                                                         |
-| REQUEST\_ORDER\_SIGNATURE\_SUCCESS       | once                  | order: Object                                                                         |
-| MATCH\_ORDERS\_SIGN\_TX\_REQUEST         | once                  | apporder: Object, datasetorder: Object, workerpoolorder: Object, requestorder: Object |
-| MATCH\_ORDERS\_SUCCESS                   | once                  | dealid: String, txHash: String                                                        |
-| TASK\_UPDATED                            | once per task update  | dealid: String, taskid: String, status: 'UNSET'                                       |
-| TASK\_COMPLETED                          | once                  | dealid: String, taskid: String, status: String                                        |
-
-
-
-## Example Usage
-
-
-
-```
-factory
-  .updateOracle({
-    url: 'https://foo.io',
-    method: 'GET',
-    headers: {
-      authorization: '%API_KEY%',
-    },
-    dataType: 'string',
-    JSONPath: '$.data',
-    dataset: '0xdB5e636e332916eA0de602CB94d00E8e343cAB36',
-  })
-  .subscribe({
-    error: (e) => console.error(e),
-    next: (value) => {
-      const { message, ...additionalEntries } = value;
-      console.log(message);
-      console.info(JSON.stringify(additionalEntries));
-    },
-    complete: () => {
-      console.log('Update task completed!');
-    },
-  });
-
+```javascript
+const updateOracleRes = await factory.updateOracle({
+  cid: "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit", // Content ID of the Oracle
+  workerpool: "0x0e7bc972c99187c191a17f3cae4a2711a4188c3f", // Workerpool address (required)
+  targetBlockchains: ["134", "137"], // Target blockchain IDs, 137 for polygon, 134 for iExec (required)
+});
 ```
 
-In this example, the factory updates an oracle using a paramSet. The subscribe method is used to monitor the oracle update process. In the next callback, messages and additional entries are logged to the console. The error callback logs any errors to the console, and the complete callback logs the completion of the update task.
+## Return value example
+
+```javascript
+{
+  dealid: '0x86e1d2b13cd176f86b2c9d10931bc20dba0d626f1dac07dd76c1b1cec569f232',
+  taskid: '0x90a100c10780f1d0595dd9e37dc1655eb66f192bf1b2b31d719a6ca3c6b62d07',
+  status: 'REVEALING'
+}
+```
+
+## Configuration
+
+### cid (required)
+
+Content ID of the Oracle that needs to be updated.
+
+<pre class="language-javascript"><code class="lang-javascript">const updateOracleRes = await factory.updateOracle({
+<strong>    cid: "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit",
+</strong>    // Other parameters...
+})
+</code></pre>
+
+### workerpool (required)
+
+Address of the workerpool that should perform the update. 
+Workerpool defined below is : 0x0e7bc972c99187c191a17f3cae4a2711a4188c3f.
+
+<pre class="language-javascript"><code class="lang-javascript">const updateOracleRes = await factory.updateOracle({
+<strong>    workerpool: "0x0e7bc972c99187c191a17f3cae4a2711a4188c3f",
+</strong>    // Other parameters...
+})
+</code></pre>
+
+### targetBlockchains (optional)
+
+Array of target blockchain IDs where the oracle is deployed. 137 for polygon, 134 for iExec.
+
+<pre class="language-javascript"><code class="lang-javascript">const updateOracleRes = await factory.updateOracle({
+<strong>    targetBlockchains: ["134", "137"],
+</strong>    // Other parameters...
+})
+</code></pre>
