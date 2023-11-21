@@ -24,6 +24,12 @@
   * [Methods](tools/web3mail/methods/README.md)
     * [fetchMyContacts](tools/web3mail/methods/fetchmycontacts.md)
     * [sendEmail](tools/web3mail/methods/sendemail.md)
+* [🧙♂ Oracle Factory](tools/oracle-factory/README.md)
+  * [Quick start](tools/oracle-factory/quick-start.md)
+  * [Methods](tools/oracle-factory/methods/README.md)
+    * [Create](tools/oracle-factory/methods/create.md)
+    * [Read Oracle](tools/oracle-factory/methods/read-oracle.md)
+    * [Update Oracle](tools/oracle-factory/methods/update-oracle.md)
 
 ## Help
 
