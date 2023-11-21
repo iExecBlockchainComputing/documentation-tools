@@ -48,7 +48,7 @@ Messages received through next and their additional entries are as follows:
 
 
 
-```
+```javascript
 factory
   .updateOracle({
     url: 'https://foo.io',

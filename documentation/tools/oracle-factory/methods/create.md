@@ -18,8 +18,6 @@ description: This method allows the creation of an oracle from an API using rawP
 | JSONPath | string                         | Required          | JSONPath expression                                 |
 | dataType | 'boolean', 'number', 'string'  | Required          | The type of data the API returns                    |
 
-
-
 Note: Use %API\_KEY% placeholder in URL or headers to inject the apiKey. You may want to call utils.testRawParams(rawParams) to test the rawParams returned value before creating an oracle.
 
 ## Outputs
@@ -53,7 +51,7 @@ Messages received through next and their additional entries are as follows:
 
 ### Example usage
 
-```
+```javascript
 let paramSet;
 let cid;
 
