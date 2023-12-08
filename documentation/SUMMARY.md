@@ -27,9 +27,9 @@
 * [🧙♂ Oracle Factory](tools/oracle-factory/README.md)
   * [Quick start](tools/oracle-factory/quick-start.md)
   * [Methods](tools/oracle-factory/methods/README.md)
-    * [Create](tools/oracle-factory/methods/createoracle.md)
-    * [Read Oracle](tools/oracle-factory/methods/readoracle.md)
-    * [Update Oracle](tools/oracle-factory/methods/updateoracle.md)
+    * [createOracle](tools/oracle-factory/methods/createoracle.md)
+    * [readOracle](tools/oracle-factory/methods/readoracle.md)
+    * [updateOracle](tools/oracle-factory/methods/updateoracle.md)
 
 ## Help
 
