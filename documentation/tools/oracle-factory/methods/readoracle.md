@@ -5,13 +5,13 @@ Example below is based on oracle created thanks to following public API which gi
 
 ## Usage
 
-```
+```javascript
 const readOracleRes = await factory.readOracle("QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"); // Content ID of the Oracle
 ```
 
 ## Return value example
 
-```
+```javascript
 {
   value: 1995.74,
   date: 1700047387

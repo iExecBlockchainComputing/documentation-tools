@@ -5,7 +5,7 @@ As an example below, following coingecko public API which gives ethereum price i
 
 ## Usage
 
-```
+```javascript
 const createOracleRes = await factory.createOracle({
   url: "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd",
   method: "GET",
@@ -20,7 +20,7 @@ const createOracleRes = await factory.createOracle({
 
 ## Return value example
 
-```
+```javascript
 {
   paramSet: {
     JSONPath: '$.ethereum.usd',
