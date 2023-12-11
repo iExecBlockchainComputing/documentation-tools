@@ -24,6 +24,10 @@ Build decentralized applications that combine ownership, privacy, and monetizati
 [web3mail](tools/web3mail/)
 {% endcontent-ref %}
 
+{% content-ref url="tools/oracle-factory/" %}
+[oraclefactory](tools/oracle-factory/)
+{% endcontent-ref %}
+
 ## Help
 
 {% content-ref url="help/contact-us.md" %}
