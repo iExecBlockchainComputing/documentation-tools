@@ -27,19 +27,31 @@ You can find the project [here](https://github.com/iExecBlockchainComputing/web3
 
 Install `web3MailSDK` .
 
-With npm:
-
+{% tabs %}
+{% tab title="npm" %}
 ```
 npm install @iexec/web3mail
 ```
+{% endtab %}
 
-Or
-
-With yarn:
-
+{% tab title="yarn" %}
 ```
 yarn add @iexec/web3mail
 ```
+{% endtab %}
+
+{% tab title="pnpm" %}
+```
+pnpm add @iexec/web3mail
+```
+{% endtab %}
+
+{% tab title="bun" %}
+```
+bun add @iexec/web3mail
+```
+{% endtab %}
+{% endtabs %}
 
 **This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
