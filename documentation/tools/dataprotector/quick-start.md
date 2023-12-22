@@ -12,7 +12,7 @@ Before getting started, ensure that you have the following installed on your sys
 
 \- [**Node.js**](https://nodejs.org/en/) version 18 or higher
 
-\- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)\
+\- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
 
 ### **2.2. Start a new project**
