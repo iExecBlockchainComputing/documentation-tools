@@ -27,19 +27,31 @@ You can find the project [here](https://github.com/iExecBlockchainComputing/data
 
 Install `dataProtectorSDK` .
 
-With npm:
-
+{% tabs %}
+{% tab title="npm" %}
 ```
 npm install @iexec/dataprotector
 ```
+{% endtab %}
 
-Or
-
-With yarn:
-
+{% tab title="yarn" %}
 ```
 yarn add @iexec/dataprotector
 ```
+{% endtab %}
+
+{% tab title="pnpm" %}
+```
+pnpm add @iexec/dataprotector
+```
+{% endtab %}
+
+{% tab title="bun" %}
+```
+bun add @iexec/dataprotector
+```
+{% endtab %}
+{% endtabs %}
 
 **This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
