@@ -1,6 +1,6 @@
 # transferOwnership
 
-Allows transferring ownership of protected data to a new owner, identified by their ETH address. The return value provides a transaction number and confirmation of the new owner of the data.
+Allows transferring ownership of protected data to a new owner, identified by their ETH address. The return value provides a transaction hash and confirmation of the new owner of the data.
 
 ## Usage
 
