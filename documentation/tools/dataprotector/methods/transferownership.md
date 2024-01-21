@@ -16,7 +16,7 @@ const transferResponse = await dataProtector.transferOwnership({
 ```javascript
 [
     {
-        "address": "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e"
+        "address": "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
         "to": "0xnewowner...",
         "txHash": "0xabc123..."
     }
