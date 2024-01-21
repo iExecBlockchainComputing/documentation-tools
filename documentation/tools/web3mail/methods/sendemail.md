@@ -1,16 +1,24 @@
 # sendEmail
 
-Method to send an email to a user represented by an ETH address.
+Method to send an email to a user represented by an ETH address. 
 
 ## Usage
+
 
 ```javascript
 const sendEmail = await web3mail.sendEmail({
     protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
     emailSubject: 'My email subject',
-    emailContent: 'My email content'
+    emailContent: 'My email content''
+    contentType: 'text/html',
+    senderName: 'Alice'
 })
 ```
+
+### Usage Notes
+
+* The maximum size of delivered email messages is 512 kb.
+* Email content is encrypted and uploaded to IPFS.
 
 ## Return value example
 
@@ -20,7 +28,7 @@ const sendEmail = await web3mail.sendEmail({
 }
 ```
 
-## Configuration
+## Parameters
 
 ### protectedData (required)
 
@@ -54,3 +62,11 @@ The email content that needs to be sent.
 <strong>    emailContent: 'My mail content'
 </strong>})
 </code></pre>
+
+### contentType (optional)
+
+This may be one of: `text/html`, `text/plain`. This is used by the mail client to properly render the delivered text.
+
+### senderName (optional)
+
+Allows specifying a sender name for the email. This is used by the mail client in rendering the email to the user.
