@@ -24,6 +24,7 @@
   * [Methods](tools/web3mail/methods/README.md)
     * [fetchMyContacts](tools/web3mail/methods/fetchmycontacts.md)
     * [sendEmail](tools/web3mail/methods/sendemail.md)
+    * [web3mailApplicationWhitelist](tools/web3mail/methods/applicationWhitelist.md)
 * [🧙♂ Oracle Factory](tools/oracle-factory/README.md)
   * [Quick start](tools/oracle-factory/quick-start.md)
   * [Methods](tools/oracle-factory/methods/README.md)
