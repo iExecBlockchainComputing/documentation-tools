@@ -20,7 +20,7 @@ You can find the project [here](https://github.com/iExecBlockchainComputing/iexe
 
 ### **1.3. Basic installation**
 
-Install `oracleFactoryWrapper` .
+Install `@iexec/iexec-oracle-factory-wrapper`.
 
 {% tabs %}
 {% tab title="npm" %}
