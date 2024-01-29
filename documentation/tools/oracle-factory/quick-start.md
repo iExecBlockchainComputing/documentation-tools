@@ -12,7 +12,7 @@ Before getting started, ensure that you have the following installed on your sys
 
 ### **1.2. Start a new project**
 
-In this section, we will show you how to set up and call the different methods of the SDK in a React.js app.
+In this section, we will show you how to set up and call the different methods of the SDK in JS app.
 
 You can reach the following open-source GitHub project, clone it and start from there.
 
