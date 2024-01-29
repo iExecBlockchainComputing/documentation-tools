@@ -2,7 +2,7 @@
 
 ## 1.  Sandbox
 
-{% embed url="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=/src/features/protectDataFunc.ts:6,31&preventWorkspaceRedirect=true" %}
+{% embed url="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true" %}
 
 ## 2.  Getting started
 
@@ -12,7 +12,7 @@ Before getting started, ensure that you have the following installed on your sys
 
 \- [**Node.js**](https://nodejs.org/en/) version 18 or higher
 
-\- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)\
+\- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
 
 ### **2.2. Start a new project**
@@ -27,19 +27,31 @@ You can find the project [here](https://github.com/iExecBlockchainComputing/data
 
 Install `dataProtectorSDK` .
 
-With npm:
-
+{% tabs %}
+{% tab title="npm" %}
 ```
 npm install @iexec/dataprotector
 ```
+{% endtab %}
 
-Or
-
-With yarn:
-
+{% tab title="yarn" %}
 ```
 yarn add @iexec/dataprotector
 ```
+{% endtab %}
+
+{% tab title="pnpm" %}
+```
+pnpm add @iexec/dataprotector
+```
+{% endtab %}
+
+{% tab title="bun" %}
+```
+bun add @iexec/dataprotector
+```
+{% endtab %}
+{% endtabs %}
 
 **This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 

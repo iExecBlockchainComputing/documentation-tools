@@ -1,12 +1,8 @@
-# Quick start
+# Quick Start
 
-## 1.  Sandbox
+## 1.  Getting started
 
-[https://oracle-factory.iex.ec/gallery](https://oracle-factory.iex.ec/gallery)
-
-## 2.  Getting started
-
-### **2.1.  Prerequisites**
+### **1.1.  Prerequisites**
 
 Before getting started, ensure that you have the following installed on your system:
 
@@ -14,38 +10,51 @@ Before getting started, ensure that you have the following installed on your sys
 
 \- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)\
 
-
-### **2.2. Start a new project**
+### **1.2. Start a new project**
 
 In this section, we will show you how to set up and call the different methods of the SDK in a React.js app.
 
 You can reach the following open-source GitHub project, clone it and start from there.
 
+You can find the project [here](https://github.com/iExecBlockchainComputing/iexec-oracle-factory-wrapper).
 
+### **1.3. Basic installation**
 
-### **2.3. Basic installation**
+Install `oracleFactoryWrapper` .
 
-Install `web3MailSDK` .
-
-With npm:
-
+{% tabs %}
+{% tab title="npm" %}
 ```
 npm install @iexec/iexec-oracle-factory-wrapper
 ```
+{% endtab %}
 
-Or
-
-With yarn:
-
+{% tab title="yarn" %}
 ```
 yarn add @iexec/iexec-oracle-factory-wrapper
 ```
+{% endtab %}
+
+{% tab title="pnpm" %}
+```
+pnpm add @iexec/iexec-oracle-factory-wrapper
+```
+{% endtab %}
+
+{% tab title="bun" %}
+```
+bun add @iexec/iexec-oracle-factory-wrapper
+```
+{% endtab %}
+{% endtabs %}
 
 **This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
 If you use it with Webpack, you need the latest Webpack version and ensure you configure it correctly for ESM.
 
-### **2.4. Instantiate SDK**
+### **1.4. Instantiate SDK**
+
+Import and initialize the Oracle Factory SDK in your application.
 
 {% tabs %}
 {% tab title="Browser" %}
@@ -54,19 +63,11 @@ Instantiate the SDK in your front-end project:
 #### 2.4.1. Basic Instantiation
 
 ```javascript
-import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+import { IExecOracleFactory } from "@iexec/iexec-oracle-factory-wrapper";
 
-const getOracleFactory = async () => {
-  if (!window.ethereum) {
-    throw Error('Need to install MetaMask');
-  }
-  try {
-    await window.ethereum.enable();
-  } catch (error) {
-    throw Error('User denied access', error);
-  }
-  return new IExecOracleFactory(window.ethereum);
-};
+const web3Provider = window.ethereum;
+// instantiate
+const factory = new IExecOracleFactory(web3Provider);
 ```
 {% endtab %}
 
@@ -76,12 +77,11 @@ Instantiate the SDK in your back-end project:
 #### 2.4.1. Basic Instantiation
 
 ```javascript
-const {
-  IExecOracleFactory,
-  utils,
-} = require('@iexec/iexec-oracle-factory-wrapper');
+import { IExecOracleFactory, utils } from "@iexec/iexec-oracle-factory-wrapper";
 
-const signer = utils.getSignerFromPrivateKey('goerli', process.env.PRIVATE_KEY);
+const { PRIVATE_KEY } = process.env; 
+// get web3 provider from a private key
+const signer = utils.getSignerFromPrivateKey("https://bellecour.iex.ec", "your-private-key");
 const factory = new IExecOracleFactory(signer);
 ```
 {% endtab %}

@@ -19,6 +19,7 @@
     * [revokeOneAccess](tools/dataprotector/methods/revokeoneaccess.md)
     * [fetchProtectedData](tools/dataprotector/methods/fetchprotecteddata.md)
     * [fetchGrantedAccess](tools/dataprotector/methods/fetchgrantedaccess.md)
+    * [transferOwnership](tools/dataprotector/methods/transferownership.md)
 * [✉ Web3Mail](tools/web3mail/README.md)
   * [Quick start](tools/web3mail/quick-start.md)
   * [Methods](tools/web3mail/methods/README.md)
@@ -27,9 +28,9 @@
 * [🧙♂ Oracle Factory](tools/oracle-factory/README.md)
   * [Quick start](tools/oracle-factory/quick-start.md)
   * [Methods](tools/oracle-factory/methods/README.md)
-    * [Create](tools/oracle-factory/methods/create.md)
-    * [Read Oracle](tools/oracle-factory/methods/read-oracle.md)
-    * [Update Oracle](tools/oracle-factory/methods/update-oracle.md)
+    * [createOracle](tools/oracle-factory/methods/createoracle.md)
+    * [readOracle](tools/oracle-factory/methods/readoracle.md)
+    * [updateOracle](tools/oracle-factory/methods/updateoracle.md)
 
 ## Help
 

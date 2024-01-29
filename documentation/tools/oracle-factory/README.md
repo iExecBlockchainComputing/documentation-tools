@@ -1,11 +1,13 @@
-# 🧙♂ Oracle Factory
+# 🧙 Oracle Factory
 
-The iExec Oracle Factory is a service that facilitates the creation of custom oracles using either pre-set or user-defined APIs. Its objective is to simplify the oracle creation process for developers and other users.
+Oracle Factory introduces a streamlined and efficient way for developers to integrate real-world data into blockchain applications. Leveraging the power of the iExec decentralized cloud infrastructure, Oracle Factory ensures the creation of reliable and trustworthy oracles.
 
 iExec Oracle Factory's functionality is underpinned by the iExec's Web3 Marketplace infrastructure. The iExec Proof of Contribution consensus protocol is used for certifying the results returned by the oracles, ensuring their reliability for on-chain settlement of off-chain events. This guarantees that the data provided to the blockchain can be trusted.
 
-Created oracles can be made available in a [gallery](https://oracle-factory.iex.ec/gallery) for use in decentralized applications (DApps). The factory also provides support for oracle migration to the new production chains, allowing users to stay up-to-date with technological advancements.
+- **Create Oracle**—This method allows for the creation of custom oracles from any API, with a limitation of one data return per oracle. This feature is pivotal in fetching specific, relevant data for decentralized applications.
+- **Update Oracle**—This method ensures that the oracle stays current by fetching the latest data from its linked API. It maintains the oracle's relevance and accuracy, crucial for real-time data-dependent applications.
+- **Read Oracle**—This method allows users to retrieve the value from the oracle.
 
-Moreover, the Oracle Factory has cross-chain capabilities, with its reach extending from iExec Sidechain to Ethereum, or Polygon. This enhances the tool's versatility in the DApps space.
+Oracles created with Oracle Factory can be showcased in a dedicated [gallery](https://oracle-factory.iex.ec/gallery), allowing for broader accessibility and application.
 
-The iExec Oracle Factory is designed for ease of use, enabling developers to create custom oracles quickly. By providing a more straightforward process, the service aims to democratize access to reliable data for blockchain applications.
+With its cross-chain functionality, extending from the iExec Sidechain to networks like Ethereum and Polygon, Oracle Factory demonstrates remarkable versatility. It is a critical tool for developers looking to bridge the gap between blockchain and the real world, democratizing access to reliable data for DApps.
