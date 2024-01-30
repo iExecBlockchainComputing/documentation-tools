@@ -55,6 +55,6 @@ Filter the granted access by an authorized user address.
 
 <pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
     protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    authorizedUser: '0xth9840a85d5af5bf1d1762f925bdaddc4201f984'
+<strong>    authorizedUser: '0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37'
 </strong>})
 </code></pre>
