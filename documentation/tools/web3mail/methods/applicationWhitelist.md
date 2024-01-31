@@ -1,6 +1,6 @@
 # web3mailApplicationWhitelist
 
-Convenience method to grant ongoing access to the Web3Mail Smart Contract Whitelist. With the whitelist feature, you can grant access to your email address with a pre-approved list of Web3Mai application versions, eliminating the need to repeat the process whenever an application is updated.
+Convenience method to grant ongoing access to the Web3Mail Smart Contract Whitelist. With the whitelist feature, you can grant access to your email address with a pre-approved list of Web3Mail application versions, eliminating the need to repeat the process whenever an application is updated.
 
 ## Usage
 
