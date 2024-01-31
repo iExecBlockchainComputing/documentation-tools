@@ -19,7 +19,7 @@ const grantedAccess= await dataProtector.grantAccess({
 
 ### protectedData (required)
 
-Address of the dataProtector app you're granting access to.
+Address of the protected data you're granting access to.
 
 <pre class="language-javascript"><code class="lang-javascript">const web3mailApplicationWhitelist= "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e";
 
