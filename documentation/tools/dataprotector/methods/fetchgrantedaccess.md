@@ -93,7 +93,7 @@ Specifies the results page to return. If using this field you may also specify a
 
 ### pageSize (optional)
 
-Specifies the number of records in each page of the resultset. This is used in conjunction with the optional `page` parameter to constrain the size of the result. The default for this value is `20` but this only comes into play when specifying a `page` ID.
+Specifies the number of records in each page of the result set. This is used in conjunction with the optional `page` parameter to constrain the size of the result. The default for this value is `20` but this only comes into play when specifying a `page` parameter.
 
 <pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
     protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
