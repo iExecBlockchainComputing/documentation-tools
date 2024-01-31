@@ -80,7 +80,7 @@ Filter the granted access by an authorized user address.
 
 ### page (optional)
 
-Specifies the results page to return. If using this field you may also specify a `pageSize`. The default for this is `0` but if using paging, the functionality begins counting from index `1`.
+Specifies the results page to return. The default for this is `0` which returns all results. Pages are indexed starting at page 1. If using this field you may also specify a `pageSize` to control the results.
 
 <pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
     protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
