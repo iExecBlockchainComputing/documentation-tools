@@ -17,6 +17,8 @@ const taskid = await dataProtector.processProtectedData({
 
 ## Return value example
 
+This method returns a taskId, a unique identifier associated with a task currently running on the iExec Bellecour blockchain. It uniquely identifies the specific execution of the application (data processing) on the blockchain.
+
 ```javascript
 0xabcd1234...
 ```
@@ -25,7 +27,7 @@ const taskid = await dataProtector.processProtectedData({
 
 ### protectedData (required)
 
-The ETH address or Ethereum Name Service (ENS) reference for the protected data tool.
+The ETH address or Ethereum Name Service (ENS) reference for the protected data.
 
 <pre class="language-javascript"><code class="lang-javascript">const taskid = await dataProtector.processProtectedData({
     <strong>protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',</strong>
