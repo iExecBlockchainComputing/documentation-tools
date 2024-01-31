@@ -8,7 +8,7 @@ Convenience method to grant ongoing access to the Web3Mail Smart Contract Whitel
 ```javascript
 const web3mailApplicationWhitelist= "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e";
 
-constgrantedAccess=awaitdataProtector.grantAccess({
+const grantedAccess= await dataProtector.grantAccess({
     protectedData:"0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     authorizedApp:web3mailApplicationWhitelist,
     authorizedUser:"0xecb504d39723b0be0e3a9aa33d646642d1051ee1"
