@@ -45,7 +45,7 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ### authorizedUser (required)
 
-The ETH address for the user needing authorized for the whitelist.
+The ETH address of the user needing to be authorized to access the data in order to send an email.
 
 <pre class="language-javascript"><code class="lang-javascript">const web3mailApplicationWhitelist= "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e";
 
