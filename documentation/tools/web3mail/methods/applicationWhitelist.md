@@ -32,7 +32,7 @@ constgrantedAccess=awaitdataProtector.grantAccess({
 
 ### authorizedApp (required)
 
-The Web3Mail smart contract address. This is a fixed value. Each time a new Web3Mail distributed app smart contract is deployed, it's added to this smart contract.
+The Web3Mail smart contract address. This is a fixed value. Each time a new Web3Mail distributed app smart contract is deployed, the address is added to this smart contract.
 
 <pre class="language-javascript"><code class="lang-javascript"><strong>const web3mailApplicationWhitelist= "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e";</strong>
 
