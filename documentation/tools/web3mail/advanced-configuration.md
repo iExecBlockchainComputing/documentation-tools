@@ -1,7 +1,7 @@
 # Advanced configuration
 
 The `IExecWeb3mail` constructor accepts configuration options object.
-As these options are very specific you wont need use them for a standard usage of `@iexec/web3mail`.
+As these options are very specific, you won't need to use them for a standard usage of `@iexec/web3mail`.
 
 ```js
 new IExecWeb3mail(ethProvider, options);
