@@ -69,8 +69,7 @@ This may be one of: `text/html`, `text/plain` (default `text/plain`). This is us
     emailSubject: "My email subject",
     emailContent: "<h1>Hello world!</h1>",
 <strong>    contentType: "text/html"
-</strong>
-})
+</strong>})
 </code></pre>
 
 ### senderName (optional)
@@ -82,8 +81,7 @@ Allows specifying a sender name for the email. This is used by the mail client i
     emailSubject: "My email subject",
     emailContent: "My email content",
 <strong>    senderName: "Awesome project team"
-</strong>
-})
+</strong>})
 </code></pre>
 
 ### label (optional)
@@ -95,8 +93,7 @@ Allow adding a custom public label that will be written onchain as `iexec_args` 
     emailSubject: "My email subject",
     emailContent: "My email content",
 <strong>    label: "some-cutom-id"
-</strong>
-})
+</strong>})
 </code></pre>
 
 ### workerpoolAddressOrEns (optional)
@@ -121,8 +118,7 @@ Allows specifying the maximum amount you want to pay the email address provider 
     emailSubject: "My email subject",
     emailContent: "My email content",
 <strong>    dataMaxPrice: 42
-</strong>
-})
+</strong>})
 </code></pre>
 
 ### appMaxPrice (optional)
@@ -134,8 +130,7 @@ Allows specifying the maximum amount you want to pay the web3mail app provider f
     emailSubject: "My email subject",
     emailContent: "My email content",
 <strong>    appMaxPrice: 42
-</strong>
-})
+</strong>})
 </code></pre>
 
 ### workerpoolMaxPrice (optional)
@@ -147,6 +142,5 @@ Allows specifying the maximum amount you want to pay the workerpool provider for
     emailSubject: "My email subject",
     emailContent: "My email content",
 <strong>    workerpoolMaxPrice: 42
-</strong>
-})
+</strong>})
 </code></pre>
