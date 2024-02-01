@@ -119,7 +119,7 @@ Allows specifying the maximum amount you want to pay the email address provider 
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
-    dataMaxPrice: "My email content",
+    emailContent: "My email content",
 <strong>    dataMaxPrice: 42
 </strong>
 })
@@ -132,8 +132,8 @@ Allows specifying the maximum amount you want to pay the web3mail app provider f
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
-    appMaxPrice: "My email content",
-<strong>    dataMaxPrice: 42
+    emailContent: "My email content",
+<strong>    appMaxPrice: 42
 </strong>
 })
 </code></pre>
@@ -145,8 +145,8 @@ Allows specifying the maximum amount you want to pay the workerpool provider for
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
-    appMaxPrice: "My email content",
-<strong>    dataMaxPrice: 42
+    emailContent: "My email content",
+<strong>    workerpoolMaxPrice: 42
 </strong>
 })
 </code></pre>
