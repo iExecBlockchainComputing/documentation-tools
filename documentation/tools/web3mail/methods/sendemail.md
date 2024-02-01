@@ -21,7 +21,7 @@ const sendEmail = await web3mail.sendEmail({
 
 ```javascript
 {
-  taskId: "0x882cbfb34453f260dfa14d224fd9ae0263edbfcb";
+  taskId: "0x882cbfb34453f260dfa14d224fd9ae0263edbfcb",
 }
 ```
 
