@@ -1,11 +1,13 @@
-# fetchMyContacts
+# fetchUserContacts
 
-Method to get the ETH addresses that gave access to their protected data for messaging usage.
+Method to get the ETH addresses that gave access to their protected data for messaging usage to a specific user address or ENS.
 
 ## Usage
 
 ```javascript
-const listContact = await web3mail.fetchMyContacts();
+const listContact = await web3mail.fetchUserContacts(
+  "0xF048eF3d7E3B33A465E0599E641BB29421f7Df92"
+);
 ```
 
 ## Return value example

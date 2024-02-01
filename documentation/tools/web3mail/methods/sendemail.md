@@ -9,8 +9,6 @@ const sendEmail = await web3mail.sendEmail({
   protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
   emailSubject: "My email subject",
   emailContent: "My email content",
-  contentType: "text/html",
-  senderName: "Alice",
 });
 ```
 
@@ -34,9 +32,9 @@ const sendEmail = await web3mail.sendEmail({
 Protected data address to which you will send the email.
 
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
-<strong>    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-</strong>    emailSubject: 'My email subject',
-    emailContent: 'My mail content'
+<strong>    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+</strong>    emailSubject: "My email subject",
+    emailContent: "My email content"
 })
 </code></pre>
 
@@ -45,9 +43,9 @@ Protected data address to which you will send the email.
 The email object that needs to be sent.
 
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    emailSubject: 'My email subject',
-</strong>    emailContent: 'My mail content'
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+<strong>    emailSubject: "My email subject",
+</strong>    emailContent: "My email content"
 })
 </code></pre>
 
@@ -56,16 +54,99 @@ The email object that needs to be sent.
 The email content that needs to be sent.
 
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    emailSubject: 'My email subject',
-<strong>    emailContent: 'My mail content'
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    emailSubject: "My email subject",
+<strong>    emailContent: "My email content"
 </strong>})
 </code></pre>
 
 ### contentType (optional)
 
-This may be one of: `text/html`, `text/plain` (default `text/plain`). This is used by the mail client to properly render the delivered text.
+This may be one of: `text/html`, `text/plain` (default `text/plain`). This is used by the mail client to properly render the delivered text, use it to enable rich HTML content in your email.
+
+<pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    emailSubject: "My email subject",
+    emailContent: "<h1>Hello world!</h1>",
+<strong>    contentType: "text/html"
+</strong>
+})
+</code></pre>
 
 ### senderName (optional)
 
 Allows specifying a sender name for the email. This is used by the mail client in rendering the email to the user.
+
+<pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    emailSubject: "My email subject",
+    emailContent: "My email content",
+<strong>    senderName: "Awesome project team"
+</strong>
+})
+</code></pre>
+
+### label (optional)
+
+Allow adding a custom public label that will be written onchain as `iexec_args` in the deal params.
+
+<pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    emailSubject: "My email subject",
+    emailContent: "My email content",
+<strong>    label: "some-cutom-id"
+</strong>
+})
+</code></pre>
+
+### workerpoolAddressOrEns (optional)
+
+Allows specifying the workerpool to use (default iExec's production workerpool).
+
+<pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    emailSubject: "My email subject",
+    emailContent: "My email content",
+<strong>    workerpoolAddressOrEns: "prod-v8-bellecour.main.pools.iexec.eth"
+</strong>
+})
+</code></pre>
+
+### dataMaxPrice (optional)
+
+Allows specifying the maximum amount you want to pay the email address provider for accessing her/his data in nRLC (default 0).
+
+<pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    emailSubject: "My email subject",
+    dataMaxPrice: "My email content",
+<strong>    dataMaxPrice: 42
+</strong>
+})
+</code></pre>
+
+### appMaxPrice (optional)
+
+Allows specifying the maximum amount you want to pay the web3mail app provider for using her/his application in nRLC (default 0).
+
+<pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    emailSubject: "My email subject",
+    appMaxPrice: "My email content",
+<strong>    dataMaxPrice: 42
+</strong>
+})
+</code></pre>
+
+### workerpoolMaxPrice (optional)
+
+Allows specifying the maximum amount you want to pay the workerpool provider for using her/his infrastructure to run the web3mail app in nRLC (default 0).
+
+<pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    emailSubject: "My email subject",
+    appMaxPrice: "My email content",
+<strong>    dataMaxPrice: 42
+</strong>
+})
+</code></pre>
