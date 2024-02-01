@@ -88,7 +88,7 @@ Allows specifying a sender name for the email. This is used by the mail client i
 
 ### label
 
-Allow adding a custom public label that will be written onchain as `iexec_args` in the deal params.
+Allows adding a custom public label that will be written onchain as `iexec_args` in the deal params.
 
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
