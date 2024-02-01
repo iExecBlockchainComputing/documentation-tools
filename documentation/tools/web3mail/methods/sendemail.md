@@ -34,7 +34,7 @@ Protected data address to which you will send the email.
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
 <strong>    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
 </strong>    emailSubject: "My email subject",
-    emailContent: "My email content"
+    emailContent: "My email content",
 })
 </code></pre>
 
@@ -45,7 +45,7 @@ The email object that needs to be sent.
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
 <strong>    emailSubject: "My email subject",
-</strong>    emailContent: "My email content"
+</strong>    emailContent: "My email content",
 })
 </code></pre>
 
@@ -56,7 +56,7 @@ The email content that needs to be sent.
 <pre class="language-javascript"><code class="lang-javascript">const sendEmail = await web3mail.sendEmail({
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
-<strong>    emailContent: "My email content"
+<strong>    emailContent: "My email content",
 </strong>})
 </code></pre>
 
@@ -68,7 +68,7 @@ This may be one of: `text/html`, `text/plain` (default `text/plain`). This is us
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
     emailContent: "<h1>Hello world!</h1>",
-<strong>    contentType: "text/html"
+<strong>    contentType: "text/html",
 </strong>})
 </code></pre>
 
@@ -80,7 +80,7 @@ Allows specifying a sender name for the email. This is used by the mail client i
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
     emailContent: "My email content",
-<strong>    senderName: "Awesome project team"
+<strong>    senderName: "Awesome project team",
 </strong>})
 </code></pre>
 
@@ -92,7 +92,7 @@ Allow adding a custom public label that will be written onchain as `iexec_args` 
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
     emailContent: "My email content",
-<strong>    label: "some-cutom-id"
+<strong>    label: "some-cutom-id",
 </strong>})
 </code></pre>
 
@@ -104,7 +104,7 @@ Allows specifying the workerpool to use (default iExec's production workerpool).
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
     emailContent: "My email content",
-<strong>    workerpoolAddressOrEns: "prod-v8-bellecour.main.pools.iexec.eth"
+<strong>    workerpoolAddressOrEns: "prod-v8-bellecour.main.pools.iexec.eth",
 </strong>
 })
 </code></pre>
@@ -117,7 +117,7 @@ Allows specifying the maximum amount you want to pay the email address provider 
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
     emailContent: "My email content",
-<strong>    dataMaxPrice: 42
+<strong>    dataMaxPrice: 42,
 </strong>})
 </code></pre>
 
@@ -129,7 +129,7 @@ Allows specifying the maximum amount you want to pay the web3mail app provider f
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
     emailContent: "My email content",
-<strong>    appMaxPrice: 42
+<strong>    appMaxPrice: 42,
 </strong>})
 </code></pre>
 
@@ -141,6 +141,6 @@ Allows specifying the maximum amount you want to pay the workerpool provider for
     protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
     emailSubject: "My email subject",
     emailContent: "My email content",
-<strong>    workerpoolMaxPrice: 42
+<strong>    workerpoolMaxPrice: 42,
 </strong>})
 </code></pre>
