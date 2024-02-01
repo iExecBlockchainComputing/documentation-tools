@@ -13,7 +13,7 @@ new IExecWeb3mail(ethProvider, options);
 
 The Ethereum contract address or ENS (Ethereum Name Service) for the web3mail dapp.
 
-If not provided, the default ENS `web3mail.apps.iexec.eth` pointing to the latest version of the web3mail provided by iExec will be used.
+If not provided, the default ENS `web3mail.apps.iexec.eth` pointing to the latest version of the web3mail dapp provided by iExec will be used.
 
 ```js
 new IExecWeb3mail(ethProvider, {
