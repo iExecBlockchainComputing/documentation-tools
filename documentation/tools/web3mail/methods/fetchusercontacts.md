@@ -5,7 +5,7 @@ Method to get the ETH addresses that gave access to their protected data for mes
 ## Usage
 
 ```javascript
-const listContact = await web3mail.fetchUserContacts(
+const contactsList = await web3mail.fetchUserContacts(
   "0xF048eF3d7E3B33A465E0599E641BB29421f7Df92"
 );
 ```
