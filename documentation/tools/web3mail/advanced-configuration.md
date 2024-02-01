@@ -23,7 +23,7 @@ new IExecWeb3mail(ethProvider, {
 
 ### dappWhitelistAddress
 
-The Ethereum contract address for the web3mail dapps whitelist contract. By granting access to a whitelist, email address owner ensure their email is still available for consumers when a new version of web3mail dapp is released.
+The Ethereum contract address for the web3mail dapps whitelist contract. By granting access to a whitelist, email address owners ensure their email is still available to consumers even after a new version of web3mail dapp gets released.
 
 If not provided, the default whitelist smart contract address provided by iExec will be used.
 
