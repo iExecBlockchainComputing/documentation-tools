@@ -36,7 +36,7 @@ access: GrantedAccess
 
 ### Parameters
 
-### protectedData (required)
+### protectedData
 
 Protected data address on which you want to revoke all access.
 

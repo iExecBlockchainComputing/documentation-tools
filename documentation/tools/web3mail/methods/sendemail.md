@@ -60,9 +60,7 @@ The email content that needs to be sent.
 </strong>})
 </code></pre>
 
-## Optional parameters
-
-### contentType
+### contentType (optional)
 
 This may be one of: `text/html`, `text/plain` (default `text/plain`). This is used by the mail client to properly render the delivered text, use it to enable rich HTML content in your email.
 
@@ -74,7 +72,7 @@ This may be one of: `text/html`, `text/plain` (default `text/plain`). This is us
 </strong>})
 </code></pre>
 
-### senderName
+### senderName (optional)
 
 Allows specifying a sender name for the email. This is used by the mail client in rendering the email to the user.
 
@@ -86,7 +84,7 @@ Allows specifying a sender name for the email. This is used by the mail client i
 </strong>})
 </code></pre>
 
-### label
+### label (optional)
 
 Allows adding a custom public label that will be written onchain as `iexec_args` in the deal params.
 
@@ -98,7 +96,7 @@ Allows adding a custom public label that will be written onchain as `iexec_args`
 </strong>})
 </code></pre>
 
-### workerpoolAddressOrEns
+### workerpoolAddressOrEns (optional)
 
 Allows specifying the workerpool to use (default iExec's production workerpool).
 
@@ -111,7 +109,7 @@ Allows specifying the workerpool to use (default iExec's production workerpool).
 })
 </code></pre>
 
-### dataMaxPrice
+### dataMaxPrice (optional)
 
 Allows specifying the maximum amount you want to pay the email address provider for accessing her/his data in nRLC (default 0).
 
@@ -123,7 +121,7 @@ Allows specifying the maximum amount you want to pay the email address provider 
 </strong>})
 </code></pre>
 
-### appMaxPrice
+### appMaxPrice (optional)
 
 Allows specifying the maximum amount you want to pay the web3mail app provider for using her/his application in nRLC (default 0).
 
@@ -135,7 +133,7 @@ Allows specifying the maximum amount you want to pay the web3mail app provider f
 </strong>})
 </code></pre>
 
-### workerpoolMaxPrice
+### workerpoolMaxPrice (optional)
 
 Allows specifying the maximum amount you want to pay the workerpool provider for using her/his infrastructure to run the web3mail app in nRLC (default 0).
 

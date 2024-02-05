@@ -25,7 +25,7 @@ This method returns a taskId, a unique identifier associated with a task current
 
 ## Parameters
 
-### protectedData (required)
+### protectedData
 
 The ETH address or Ethereum Name Service (ENS) reference for the protected data.
 
@@ -39,7 +39,7 @@ The ETH address or Ethereum Name Service (ENS) reference for the protected data.
 });
 </code></pre>
 
-### app (required)
+### app
 
 The ETH address or Ethereum Name Service (ENS) address for the dataProtector application to process the protected data.
 

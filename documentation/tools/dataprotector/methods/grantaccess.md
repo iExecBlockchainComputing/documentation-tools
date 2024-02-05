@@ -30,7 +30,7 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ## Parameters
 
-### protectedData (required)
+### protectedData
 
 Protected data address on which access will be granted.
 
@@ -41,7 +41,7 @@ Protected data address on which access will be granted.
 })
 </code></pre>
 
-### authorizedApp (required)
+### authorizedApp
 
 Application address which will be able to process the data in a secured environment.
 
@@ -56,7 +56,7 @@ Application address which will be able to process the data in a secured environm
 If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
 {% endhint %}
 
-### authorizedUser (required)
+### authorizedUser
 
 User address who will have the right to use the data without knowing it.
 

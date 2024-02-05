@@ -33,7 +33,7 @@ The grantedAccess parameter represent the object that can be get from the fetchG
 
 ## Parameters
 
-### grantedAccess (required)
+### grantedAccess
 
 The grantedAccess object can be get from the fetchGrantedAccess method.
 
