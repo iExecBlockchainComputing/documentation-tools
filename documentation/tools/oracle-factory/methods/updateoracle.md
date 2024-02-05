@@ -24,9 +24,9 @@ const updateOracleRes = await factory.updateOracle({
 }
 ```
 
-## Configuration
+## Parameters
 
-### cid (required)
+### cid
 
 Content ID of the Oracle that needs to be updated.
 
@@ -36,7 +36,7 @@ Content ID of the Oracle that needs to be updated.
 })
 </code></pre>
 
-### workerpool (required)
+### workerpool
 
 Address of the workerpool that should perform the update.
 Workerpool defined below is : 0x0e7bc972c99187c191a17f3cae4a2711a4188c3f.
