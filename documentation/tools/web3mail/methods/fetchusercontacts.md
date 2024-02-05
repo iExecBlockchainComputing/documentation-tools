@@ -21,3 +21,14 @@ const contactsList = await web3mail.fetchUserContacts(
   },
 ];
 ```
+
+## Parameters
+
+### userAddress
+
+Specify the Ethereum address of the user from whom you wish to obtain the list of contact.
+
+<pre class="language-javascript"><code class="lang-javascript">const contactsList = await web3mail.fetchUserContacts({
+<strong>    userAddress: "0xF048eF3d7E3B33A465E0599E641BB29421f7Df92",
+</strong>});
+</code></pre>
