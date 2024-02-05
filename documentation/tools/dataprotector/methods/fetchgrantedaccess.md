@@ -6,12 +6,12 @@ Method to fetch the list of accesses granted on a protected data application. Yo
 
 ```javascript
 const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    authorizedApp: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
-    authorizedUser: '0xth9840a85d5af5bf1d1762f925bdaddc4201f984',
-    page: 1,
-    pageSize:100
-})
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  authorizedUser: "0xth9840a85d5af5bf1d1762f925bdaddc4201f984",
+  page: 1,
+  pageSize: 100,
+});
 ```
 
 ## Return value example
@@ -39,7 +39,7 @@ This object has two fields, a `count` parameter listing the number of results, a
 
 ## Parameters
 
-### protectedData (required)
+### protectedData
 
 Protected data address to find related to the granted access.
 

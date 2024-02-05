@@ -121,7 +121,7 @@ The zip file generated is a uint8array, so if you want to handle the binary data
 
 ## Parameters
 
-### data (required)
+### data
 
 The data you want to protect.
 
@@ -294,7 +294,7 @@ txHash: '0x83c79bcf6e09861aa41d990024a16145dbb384ac19926789810cf59c94bac14f'
 
 ## Parameters
 
-### data (required)
+### data
 
 The data you want to protect.
 

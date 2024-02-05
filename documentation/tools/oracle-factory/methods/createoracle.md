@@ -37,7 +37,7 @@ const createOracleRes = await factory.createOracle({
 
 ## Parameters
 
-### url (required)
+### url
 
 The API URL to fetch data from.
 
@@ -47,7 +47,7 @@ The API URL to fetch data from.
 })
 </code></pre>
 
-### method (required)
+### method
 
 The HTTP method to use when making the API request (e.g., "GET").
 
@@ -69,7 +69,7 @@ Any headers required for the API request.
 })
 </code></pre>
 
-### dataType (required)
+### dataType
 
 The type of data to be returned (e.g., "number").
 
@@ -79,7 +79,7 @@ The type of data to be returned (e.g., "number").
 })
 </code></pre>
 
-### JSONPath (required)
+### JSONPath
 
 The JSON path to extract the data from the API response.
 

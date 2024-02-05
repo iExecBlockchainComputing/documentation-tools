@@ -26,7 +26,7 @@ const transferResponse = await dataProtector.transferOwnership({
 
 ## Parameters
 
-### protectedData (required)
+### protectedData
 
 Address of the protected data owned by you which is to be transferred to a new owner.
 
@@ -36,7 +36,7 @@ Address of the protected data owned by you which is to be transferred to a new o
 });
 </code></pre>
 
-### newOwner (required)
+### newOwner
 
 ETH Address for the new owner for the specified data.
 

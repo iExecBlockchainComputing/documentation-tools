@@ -22,7 +22,7 @@ const readOracleRes = await factory.readOracle(
 
 ## Parameters
 
-### cid (required)
+### cid
 
 Content ID of the Oracle to be read.
 
