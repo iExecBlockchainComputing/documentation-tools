@@ -37,7 +37,7 @@ This object has two fields, a `count` parameter listing the number of results, a
 }
 ```
 
-## Configuration
+## Parameters
 
 ### protectedData (required)
 

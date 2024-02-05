@@ -6,12 +6,12 @@ Allows processing a protected dataset through use of a specified iExec applicati
 
 ```javascript
 const taskid = await dataProtector.processProtectedData({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    app: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-    maxPrice: 10,
-    args: 'arg1 arg2',
-    inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
-    secrets: ['secret1', 'secret2'],
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  app: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  maxPrice: 10,
+  args: "arg1 arg2",
+  inputFiles: ["https://example.com/file1", "https://example.com/file2"],
+  secrets: ["secret1", "secret2"],
 });
 ```
 
@@ -23,7 +23,7 @@ This method returns a taskId, a unique identifier associated with a task current
 0xabcd1234...
 ```
 
-## Configuration
+## Parameters
 
 ### protectedData (required)
 

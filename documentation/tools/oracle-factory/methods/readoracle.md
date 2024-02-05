@@ -20,7 +20,7 @@ const readOracleRes = await factory.readOracle(
 }
 ```
 
-## Configuration
+## Parameters
 
 ### cid (required)
 

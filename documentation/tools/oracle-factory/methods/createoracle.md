@@ -35,7 +35,7 @@ const createOracleRes = await factory.createOracle({
 }
 ```
 
-## Configuration
+## Parameters
 
 ### url (required)
 
