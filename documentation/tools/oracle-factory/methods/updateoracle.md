@@ -24,7 +24,7 @@ const updateOracleRes = await factory.updateOracle({
 }
 ```
 
-## Configuration
+## Parameters
 
 ### cid (required)
 

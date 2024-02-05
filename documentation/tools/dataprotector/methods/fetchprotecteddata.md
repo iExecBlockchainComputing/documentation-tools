@@ -10,32 +10,32 @@ A data schema is a representation of the structure of the data object.
 
 ```javascript
 const listProtectedData = await dataProtector.fetchProtectedData({
-    owner: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e'
-})
+  owner: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+});
 ```
 
 ## Return value example
 
 ```javascript
 [
-    {
-        name: 'John Doe professional email address',
-        address: '0x7a35BfD91a8D3Cfe0B8Fd8B1317e4Bc21dDc9aF2',
-        owner: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-        creationTimestamp: 1687528535,
-        schema: {
-            "email": "string",
-            "avatar": "JPEG",
-            "smtp": {
-                "server": "string",
-                "port": "number"
-            }
-        }
-    }  
-]
+  {
+    name: "John Doe professional email address",
+    address: "0x7a35BfD91a8D3Cfe0B8Fd8B1317e4Bc21dDc9aF2",
+    owner: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    creationTimestamp: 1687528535,
+    schema: {
+      email: "string",
+      avatar: "JPEG",
+      smtp: {
+        server: "string",
+        port: "number",
+      },
+    },
+  },
+];
 ```
 
-## Configuration
+## Parameters
 
 ### owner (optional)
 

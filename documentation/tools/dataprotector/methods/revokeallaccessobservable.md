@@ -6,20 +6,20 @@ Method to revoke all access related to a protected data.
 
 ```javascript
 const revokeAllAccessObservable = dataProtector
-    .revokeAllAccessObservable({
-        protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e'
-    })
-    .subscribe({
-        next: (data) => {
-            console.log('next', data);
-        },
-        error: (error) => {
-            console.log('error', error);
-        },
-        complete: () => {
-            console.log('revokeAllAccess complete');
-        },
-    })
+  .revokeAllAccessObservable({
+    protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  })
+  .subscribe({
+    next: (data) => {
+      console.log("next", data);
+    },
+    error: (error) => {
+      console.log("error", error);
+    },
+    complete: () => {
+      console.log("revokeAllAccess complete");
+    },
+  });
 ```
 
 {% hint style="info" %}
@@ -34,7 +34,7 @@ You need to explicitly subscribe to the observable for `dataProtector` to actual
 access: GrantedAccess
 </code></pre></td></tr></tbody></table>
 
-### Configuration
+### Parameters
 
 ### protectedData (required)
 

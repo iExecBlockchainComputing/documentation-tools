@@ -24,7 +24,7 @@ const transferResponse = await dataProtector.transferOwnership({
 ];
 ```
 
-## Configuration
+## Parameters
 
 ### protectedData (required)
 
