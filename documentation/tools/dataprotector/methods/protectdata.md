@@ -39,16 +39,16 @@ _NB:_ Undetected binary data are categorized as `application/octet-stream`
 
 ```javascript
 const protectedData = await dataProtector.protectData({
-    data: {
-        email: 'example@gmail.com'
-    }
-})
+  data: {
+    email: "example@gmail.com",
+  },
+});
 ```
 
 ## Return value example
 
 ```javascript
-{ 
+{
   name: "My protected data name",
   address: "0x459FA81e0731e1dd39DD578fa16E31ADe898023e",
   owner: "0xda225B8325A1818A4239a68990349987C4221828",
@@ -119,9 +119,9 @@ const protectedData = await dataProtector.protectData({
 The zip file generated is a uint8array, so if you want to handle the binary data or download it consider adding a zip extension to it.
 {% endhint %}
 
-## Configuration
+## Parameters
 
-### data (required)
+### data
 
 The data you want to protect.
 
@@ -212,7 +212,7 @@ const protectedData = await dataProtector.protectDataObservable({
               break;
             default:
           }
-      
+
       },
       error: (e) => {
         //Setup how you handle errors
@@ -292,9 +292,9 @@ owner: '0xda225B8325A1818A4239a68990349987C4221828',
 txHash: '0x83c79bcf6e09861aa41d990024a16145dbb384ac19926789810cf59c94bac14f'
 </code></pre></td></tr><tr><td>PUSH_SECRET_TO_SMS_SIGN_REQUEST</td><td><em>Empty</em></td></tr><tr><td>PUSH_SECRET_TO_SMS_SUCCESS</td><td><em>Empty</em></td></tr></tbody></table>
 
-## Configuration
+## Parameters
 
-### data (required)
+### data
 
 The data you want to protect.
 

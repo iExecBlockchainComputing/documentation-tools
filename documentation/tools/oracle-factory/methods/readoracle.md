@@ -6,7 +6,9 @@ Example below is based on oracle created thanks to following public API which gi
 ## Usage
 
 ```javascript
-const readOracleRes = await factory.readOracle("QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"); // Content ID of the Oracle
+const readOracleRes = await factory.readOracle(
+  "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"
+); // Content ID of the Oracle
 ```
 
 ## Return value example
@@ -18,9 +20,9 @@ const readOracleRes = await factory.readOracle("QmbXhtjAJysMMA69KkB8KohsEDTZA2PX
 }
 ```
 
-## Configuration
+## Parameters
 
-### cid (required)
+### cid
 
 Content ID of the Oracle to be read.
 

@@ -5,9 +5,7 @@ Method to revoke access to a single user.
 ## Usage
 
 ```javascript
-const revokeAccess = await dataProtector.revokeOneAccess(
-    grantedAccess
-)
+const revokeAccess = await dataProtector.revokeOneAccess(grantedAccess);
 ```
 
 {% hint style="info" %}
@@ -29,13 +27,13 @@ The grantedAccess parameter represent the object that can be get from the fetchG
         volume: '1',
         workerpoolrestrict: '0x0000000000000000000000000000000000000000'
     },
-    txHash: '0x9f7e76a220aba21c6a9c79bd1680eaf33b10afc2127593fd7e9a9e2b03c2c9fd'     
+    txHash: '0x9f7e76a220aba21c6a9c79bd1680eaf33b10afc2127593fd7e9a9e2b03c2c9fd'
 }
 ```
 
-## Configuration
+## Parameters
 
-### grantedAccess (required)
+### grantedAccess
 
 The grantedAccess object can be get from the fetchGrantedAccess method.
 
