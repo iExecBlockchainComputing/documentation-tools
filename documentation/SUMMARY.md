@@ -16,6 +16,7 @@
     - [Data Sharing](tools/dataprotector/methods/sharing/README.md)
       - [createCollection](tools/dataprotector/methods/sharing/createcollection.md)
       - [addToCollection](tools/dataprotector/methods/sharing/addtocollection.md)
+      - [setSubscriptionParams](tools/dataprotector/methods/sharing/setsubscriptionparams.md)
     - [protectData](tools/dataprotector/methods/protectdata.md)
     - [grantAccess](tools/dataprotector/methods/grantaccess.md)
     - [revokeAllAccessObservable](tools/dataprotector/methods/revokeallaccessobservable.md)
