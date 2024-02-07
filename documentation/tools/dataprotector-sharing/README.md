@@ -14,7 +14,7 @@ smart-contract.
 
 Let's try to make it more visual:
 
-![Data Sharing smart-contract](./data-sharing-sc.png)
+![Data Sharing smart-contract](data-sharing-sc.png)
 
 This special smart-contract will be responsible for **enforcing governance** over your protected data,
 based on your distribution choices. (renting, selling, etc.)
@@ -50,6 +50,12 @@ Here is the list of methods of DataProtector Data Sharing module:
     <td align="center"><strong>setSubscriptionParams</strong></td>
     <td></td>
     <td><a href="setsubscriptionparams.md">setsubscriptionparams.md</a></td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center"><strong>setProtectedDataToSubscription</strong></td>
+    <td></td>
+    <td><a href="setprotecteddatatosubscription.md">setprotecteddatatosubscription.md</a></td>
   </tr>
   </tbody>
 </table>

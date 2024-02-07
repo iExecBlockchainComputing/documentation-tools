@@ -10,7 +10,7 @@ Under the hood, this method performs two actions:
 ## Usage
 
 ```javascript
-const { collectionId } = await dataProtector.addToCollection({
+const { success } = await dataProtector.addToCollection({
   protectedDataAddress: '0x123abc...',
   collectionId: 12,
   onStatusUpdate: ({ title, isDone }) => {
