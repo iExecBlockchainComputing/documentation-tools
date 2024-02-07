@@ -34,7 +34,7 @@ const { collectionId } = await dataProtector.addToCollection({
 Address of the protected data you'd like to add to your collection.
 
 Before any smart-contract interaction, the existence of the protected data will be checked,
-as well as the ownership: it should be the the wallet address you used to instantiate
+as well as the ownership: it should be the wallet address you used to instantiate
 DataProtector SDK.
 
 ### collectionId (required)

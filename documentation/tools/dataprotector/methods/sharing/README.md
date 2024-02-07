@@ -1,16 +1,22 @@
 # Data sharing methods
 
-Protected Data Sharing is a special module that includes a set of methods for you to distribute and
-monetise your protected data.
+Protected Data Sharing is a special module that includes a set of methods for you to **distribute and
+monetise your protected data**.
+
+That includes:
+ - Free sharing
+ - Renting
+ - Include in a subscription bundle
+ - Selling
 
 One of the key aspects is that your protected data will be managed by a special Data Sharing
 smart-contract.
 
 Let's try to make it more visual:
 
-![Data Sharing smart-contract](./hidden-assets/data-sharing-sc.png)
+![Data Sharing smart-contract](../../../../hidden-assets/data-sharing-sc.png)
 
-This special smart-contract will be responsible for enforcing governance over your protected data,
+This special smart-contract will be responsible for **enforcing governance** over your protected data,
 based on your distribution choices. (renting, selling, etc.)
 
 -----
