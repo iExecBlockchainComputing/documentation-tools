@@ -1,16 +1,20 @@
 # fetchGrantedAccess
 
-Method to fetch the access granted on a protected data.
+This method provides a listing of all access grants given to the specified protected data object. It supports several optional parameters to restrict the size of the result set. Options for filtering include specifying a user, an application, or both.
 
 ## Usage
 
 ```javascript
 const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e'
+    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+    authorizedApp: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
+    authorizedUser: '0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37'
 })
 ```
 
 ## Return value example
+
+The result of this method is a list of zero or more objects listing grants for authorization. You may use these result objects in conjunction with the [revokeOneAccess](revokeoneaccess.md) method to revoke a previously granted authorization for access.
 
 ```javascript
 [
@@ -28,33 +32,16 @@ const listGrantedAccess = await dataProtector.fetchGrantedAccess({
 ]
 ```
 
-## Configuration
+## Parameters
 
 ### protectedData (required)
 
-Protected data address to find related to the granted access.
-
-<pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-<strong>    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e'
-</strong>})
-</code></pre>
+Address of the protected data object for which you are querying access authorization grants.
 
 ### authorizedApp (optional)
 
-Filter the granted access by an authorized application address.
-
-<pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({        
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    authorizedApp: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984'
-</strong>})
-</code></pre>
+Optional filter to restrict the results to include only authorizations for the specified application.
 
 ### authorizedUser (optional)
 
-Filter the granted access by an authorized user address.
-
-<pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    authorizedUser: '0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37'
-</strong>})
-</code></pre>
+Optional filter to restrict the results to include only authorizations for the specified user.

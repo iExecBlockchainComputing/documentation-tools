@@ -8,8 +8,8 @@ When initially created via `protectData`, only the user creating the data object
 const grantedAccess = await dataProtector.grantAccess({
     protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
     authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
-    pricePerAccess: 3
+    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
+    pricePerAccess: 3,
     numberOfAccess: 10
 })
 ```

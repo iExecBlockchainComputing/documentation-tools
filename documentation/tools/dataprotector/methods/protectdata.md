@@ -35,7 +35,7 @@ Any undetected binary data type is categorized as `application/octet-stream`
 
 ## Parameters
 
-The `dataProtector` method accepts the following parameters
+The `protectData` method accepts the following parameters
 
 ### data (required)
 
@@ -84,7 +84,7 @@ The name will be public and not encrypted. If you don't pass a name to your prot
 
 ## Usage Examples
 
-The `dataProtector` method may be invoked using either the promise pattern or the observable pattern. Examples of both approaches are included below.
+The `protectData` method may be invoked using either the promise pattern or the observable pattern. Examples of both approaches are included below.
 
 ### **1. With promise**
 
