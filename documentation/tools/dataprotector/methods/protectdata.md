@@ -1,12 +1,12 @@
 # protectData
 
-Method to secure and protect any type of data.
+The iExec tool suite supports deployment of applications where the user of the application has complete and total control over access to their data. This ensures privacy and security when invoking these applications. Through use of the protectData API, a user may secure any type of data. Data may be secured using either promise or observable methods.
 
 {% hint style="info" %}
 
-`protectData` process the data on the client side to extract the data schema before encryption.
+The `protectData` method allows processing all data on the client side, including extracting the data schema prior to encryption.
 
-Currently these types are detected:
+The following data types are automatically detected: 
 
 - Scalars
   - `boolean`
@@ -29,13 +29,66 @@ Currently these types are detected:
   - `video/mpeg`
   - `video/x-msvideo`
 
-_NB:_ Undetected binary data are categorized as `application/octet-stream`
+Any undetected binary data type is categorized as `application/octet-stream`
 
 {% endhint %}
 
-## **1. With promise**
+## Parameters
 
-## Usage
+The `dataProtector` method accepts the following parameters
+
+### data (required)
+
+This is the actual data the user is protecting. An email address, for example, may be submitted as:
+
+<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
+<strong>    data: {
+</strong><strong>        email: 'example@gmail.com'
+</strong><strong>    }
+</strong>})
+</code></pre>
+
+{% hint style="info" %}
+Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
+{% endhint %}
+
+The following example illustrates protection of multiple categories of data within one object:
+
+```javascript
+{
+    email: 'example@gmail.com',
+    SMTPserver: {
+        port: 5000,
+        smtp_server: 'smtp.gmail.com'
+    }
+}
+```
+
+### name (optional)
+
+Allows providing a descriptive name for the protected data. This is considered public metadata, describing the protected data.
+
+<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
+    data: {
+        email: 'example@gmail.com'
+    },
+<strong>    name: 'My protected data name'
+</strong>})
+
+</code></pre>
+
+{% hint style="info" %}
+The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
+{% endhint %}
+
+
+## Usage Examples
+
+The `dataProtector` method may be invoked using either the promise pattern or the observable pattern. Examples of both approaches are included below.
+
+### **1. With promise**
+
+#### Sample invocation with promise pattern
 
 ```javascript
 const protectedData = await dataProtector.protectData({
@@ -45,7 +98,7 @@ const protectedData = await dataProtector.protectData({
 })
 ```
 
-## Return value example
+#### Return value example with promise pattern
 
 ```javascript
 { 
@@ -119,55 +172,9 @@ const protectedData = await dataProtector.protectData({
 The zip file generated is a uint8array, so if you want to handle the binary data or download it consider adding a zip extension to it.
 {% endhint %}
 
-## Configuration
+### **2. With observable**
 
-### data (required)
-
-The data you want to protect.
-
-<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
-<strong>    data: {
-</strong><strong>        email: 'example@gmail.com'
-</strong><strong>    }
-</strong>})
-</code></pre>
-
-{% hint style="info" %}
-Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
-{% endhint %}
-
-Here is another example of a data object:
-
-```javascript
-{
-    email: 'example@gmail.com',
-    SMTPserver: {
-        port: 5000,
-        smtp_server: 'smtp.gmail.com'
-    }
-}
-```
-
-### name (optional)
-
-The name of the protected data.
-
-<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
-    data: {
-        email: 'example@gmail.com'
-    },
-<strong>    name: 'My protected data name'
-</strong>})
-
-</code></pre>
-
-{% hint style="info" %}
-The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
-{% endhint %}
-
-## **2. With observable**
-
-## Usage
+#### Sample invocation with observable pattern
 
 ```javascript
 const protectedData = await dataProtector.protectDataObservable({
@@ -223,7 +230,7 @@ const protectedData = await dataProtector.protectDataObservable({
 })
 ```
 
-## Return value example
+#### Return value example with observable pattern
 
 <table><thead><tr><th width="278.5">Message</th><th>Return value</th></tr></thead><tbody><tr><td>DATA_SCHEMA_EXTRACTED</td><td><pre class="language-javascript"><code class="lang-javascript">schema: {
     "email": "string"
@@ -291,48 +298,3 @@ checksum: '0xcc2e86e73a429d7c2c38669ea61db2f07e78300f24687143dbf915133fd316c3'
 owner: '0xda225B8325A1818A4239a68990349987C4221828',
 txHash: '0x83c79bcf6e09861aa41d990024a16145dbb384ac19926789810cf59c94bac14f'
 </code></pre></td></tr><tr><td>PUSH_SECRET_TO_SMS_SIGN_REQUEST</td><td><em>Empty</em></td></tr><tr><td>PUSH_SECRET_TO_SMS_SUCCESS</td><td><em>Empty</em></td></tr></tbody></table>
-
-## Configuration
-
-### data (required)
-
-The data you want to protect.
-
-<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
-<strong>    data: {
-</strong><strong>        email: 'example@gmail.com'
-</strong><strong>    }
-</strong>})
-</code></pre>
-
-{% hint style="info" %}
-Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
-{% endhint %}
-
-Here is an other example of a data object:
-
-```javascript
-{
-    email: 'example@gmail.com',
-    SMTPserver: {
-        port: 5000,
-        smtp_server: 'smtp.gmail.com'
-    }
-}
-```
-
-### name (optional)
-
-The name of the protected data.
-
-<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
-    data: {
-        email: 'example@gmail.com'
-    },
-<strong>    name: 'My protected data name'
-</strong>})
-</code></pre>
-
-{% hint style="info" %}
-The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
-{% endhint %}

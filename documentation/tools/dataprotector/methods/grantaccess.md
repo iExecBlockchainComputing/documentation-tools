@@ -1,6 +1,6 @@
 # grantAccess
 
-Method to grant access to a protected data from an application that will process the data and from a user.
+When initially created via `protectData`, only the user creating the data object may access it. The `grantAccess` method authorizes an iExec application to securely access and utilize a piece of protected data. Only the specified user(s) may submit this protected data to this iExec application. The user(s) do not gain access to view the data, only to submit it for processing to a secure application environment.data and from a user.
 
 ## Usage
 
@@ -9,6 +9,8 @@ const grantedAccess = await dataProtector.grantAccess({
     protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
     authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
     authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
+    pricePerAccess: 3
+    numberOfAccess: 10
 })
 ```
 
@@ -28,29 +30,15 @@ const grantedAccess = await dataProtector.grantAccess({
 }
 ```
 
-## Configuration
+## Parameters
 
 ### protectedData (required)
 
-Protected data address on which access will be granted.
-
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
-<strong>    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-</strong>    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
-})
-</code></pre>
+The address of the protected data supplied by the user.
 
 ### authorizedApp (required)
 
-Application address which will be able to process the data in a secured environment.
-
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-</strong>    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
-})
-</code></pre>
+The address of the application permitted to process the protected data within a secure execution environment.
 
 {% hint style="info" %}
 If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
@@ -58,14 +46,7 @@ If you want to authorize every app to use the protected data, write **0x00000000
 
 ### authorizedUser (required)
 
-User address who will have the right to use the data without knowing it.
-
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-<strong>    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
-</strong>})
-</code></pre>
+The address of the user(s) permitted to use this piece of protected data. Note that these users may not view or manipulate the data. This only grants permission for the user to submit the data to an iExec application.
 
 {% hint style="info" %}
 If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
@@ -73,26 +54,12 @@ If you want to authorize every user to use the protected data, write **0x0000000
 
 ### pricePerAccess (optional)
 
-The defined price in nRLC for each access of the data.
+Allows specifying an optional nRLC cost associated with every access of the protected data.
 
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-<strong>    pricePerAccess: 3
-</strong>})
-</code></pre>
+*default*: 0
 
 ### numberOfAccess (optional)
 
-The number of times the data can be processed and used. The numberOfAccess defaults to 1 if omitted.
+Allows optionally restricting the number of times the protected data may be processed and used. 
 
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess(
-    args: {
-        protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-        authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-        authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-<strong>        numberOfAccess: 10
-</strong>    }
-)
-</code></pre>
+*default*: 1
