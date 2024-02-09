@@ -1,6 +1,6 @@
 # revokeAllAccessObservable
 
-Method to revoke all access related to a protected data.
+This method allows revoking any and all access granted to a piece of protected data. Using this method requires use of the JavaScript observable pattern. The method will not have any effect if this pattern is not used. You may optionally specify application or user addresses for revocation. If you do not specify either of these optional values, this method will revoke all access for all users and applications.
 
 ### Usage
 
@@ -8,6 +8,8 @@ Method to revoke all access related to a protected data.
 const revokeAllAccessObservable = dataProtector
     .revokeAllAccessObservable({
         protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e'
+        authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
+        authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
     })
     .subscribe({
         next: (data) => {
@@ -23,7 +25,7 @@ const revokeAllAccessObservable = dataProtector
 ```
 
 {% hint style="info" %}
-You need to explicitly subscribe to the observable for `dataProtector` to actually revoke all access.
+You must explicitly subscribe to the observables for `dataProtector` to revoke access.
 {% endhint %}
 
 ### Return value example
@@ -34,33 +36,16 @@ You need to explicitly subscribe to the observable for `dataProtector` to actual
 access: GrantedAccess
 </code></pre></td></tr></tbody></table>
 
-### Configuration
+### Parameters
 
 ### protectedData (required)
 
-Protected data address on which you want to revoke all access.
-
-<pre class="language-javascript"><code class="lang-javascript">const revokeAllAccessObservable = await dataProtector.revokeAllAccessObservable({
-<strong>    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-</strong>})
-</code></pre>
+The address of the protected data subject to access revocation.
 
 ### authorizedApp (optional)
 
-Application address on which you want to revoke all access from.
-
-<pre class="language-javascript"><code class="lang-javascript">const revokeAllAccessObservable = await dataProtector.revokeAllAccessObservable({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
-</strong>})
-</code></pre>
+The application address to be removed from the authorization list for this piece of protected data.
 
 ### authorizedUser (optional)
 
-User address on which you want to revoke all access.
-
-<pre class="language-javascript"><code class="lang-javascript">const revokeAllAccessObservable = await dataProtector.revokeAllAccessObservable({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
-</strong>})
-</code></pre>
+The user address to be removed from the authorization list for this piece of protected data.
