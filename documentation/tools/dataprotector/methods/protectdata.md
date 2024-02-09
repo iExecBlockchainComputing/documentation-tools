@@ -33,6 +33,14 @@ Any undetected binary data type is categorized as `application/octet-stream`
 
 {% endhint %}
 
+## Usage
+
+This method may be invoked using either the promise or observable patterns. Examples of each are provided below.
+
+## Return value example
+
+The return type is different based on which invocation pattern you employ. The result object includes the specified optional `name` parameter, along with metadata including the owner, schema for the protected data, creation timestamp, transaction hash, and a uint8-encoded array representing the zipped data for the object.
+
 ## Parameters
 
 The `protectData` method accepts the following parameters
@@ -82,7 +90,7 @@ The name will be public and not encrypted. If you don't pass a name to your prot
 {% endhint %}
 
 
-## Usage Examples
+## Example invocations
 
 The `protectData` method may be invoked using either the promise pattern or the observable pattern. Examples of both approaches are included below.
 
