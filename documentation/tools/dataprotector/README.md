@@ -7,7 +7,7 @@ Through DataProtector, users may allow iExec apps to use their data without ever
 * end-to-end encryption backed by a confidential computing technology that prevents iExec apps from accessing users’ unencrypted data
 * smart contracts that manage iExec apps’ rights to use users’ encrypted data
 
-DataProtector bundles 6 methods:
+DataProtector bundles 6 methods: 
 
 * **protectData**—that safeguards any data. It takes responsibility for encrypting the data and recording ownership on a smart contract
 * **grantAccess**—that authorizes an app to use users’ data without ever revealing the data itself
