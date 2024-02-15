@@ -5,7 +5,7 @@ Method to remove a protected data for sale.
 ## Usage
 
 ```javascript
-const { success, txHash } = await dataProtector.removeProtectedDataForSale({
+const notForSaleAymoreResult = await dataProtector.removeProtectedDataForSale({
   protectedDataAddress: '0x123abc...',
 });
 ```
@@ -15,7 +15,7 @@ const { success, txHash } = await dataProtector.removeProtectedDataForSale({
 ```json
 {
   "success": true,
-  "txHash": ""
+  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
 }
 ```
 

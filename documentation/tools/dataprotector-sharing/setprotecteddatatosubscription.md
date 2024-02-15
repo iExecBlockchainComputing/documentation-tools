@@ -7,23 +7,24 @@ Any user who has an active subscription to your collection will be able to consu
 ## Usage
 
 ```javascript
-const { success } = await dataProtector.setProtectedDataToSubscription({
-  collectionId: 12,
+const setToSubscriptionResult = await dataProtector.setProtectedDataToSubscription({
+  collectionTokenId: 12,
   protectedDataAddress: '0x123abc...'
 });
 ```
 
 ## Return value example
 
-```javascript
+```json
 {
-  success: true
+  "success": true,
+  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
 }
 ```
 
 ## Parameters
 
-### collectionId (required)
+### collectionTokenId (required)
 
 Collection ID in which the protected data currently lives in. 
 

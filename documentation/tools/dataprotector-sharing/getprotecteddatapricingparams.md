@@ -5,14 +5,7 @@ Method to get all distribution params from a protected data.
 ## Usage
 
 ```javascript
-const {
-  id: Address,
-  name: string,
-  isFree: boolean,
-  isRentable: boolean,
-  isIncludedInSubscription: boolean,
-  isForSale: boolean,
-} = await dataProtector.getProtectedDataPricingParams();
+const pricingParams = await dataProtector.getProtectedDataPricingParams();
 ```
 
 ## Return value example

@@ -10,7 +10,7 @@ Under the hood, this method performs two actions:
 ## Usage
 
 ```javascript
-const { success } = await dataProtector.addToCollection({
+const addToCollectionResult = await dataProtector.addToCollection({
   protectedDataAddress: '0x123abc...',
   collectionId: 12,
   onStatusUpdate: ({ title, isDone }) => {
@@ -21,9 +21,10 @@ const { success } = await dataProtector.addToCollection({
 
 ## Return value example
 
-```javascript
+```json
 {
-  success: true
+  "success": true,
+  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
 }
 ```
 
