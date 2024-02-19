@@ -49,33 +49,33 @@ Callback function to be notified at intermediate steps.
 You can expect this callback function to be called four times:
 
 1️⃣
-```javascript
+```json
 {
-  title: 'Give ownership to the collection smart-contract',
-  isDone: false
+  "title": "Give ownership to the collection smart-contract",
+  "isDone": false
 }
 ```
 
 2️⃣
-```javascript
+```json
 {
-  title: 'Give ownership to the collection smart-contract',
-  isDone: true
+  "title": "Give ownership to the collection smart-contract",
+  "isDone": true
 }
 ```
 
 3️⃣
-```javascript
+```json
 {
-  title: 'Add protected data to your collection',
-  isDone: false
+  "title": "Add protected data to your collection",
+  "isDone": false
 }
 ```
 
 4️⃣
-```javascript
+```json
 {
-  title: 'Add protected data to your collection',
-  isDone: true
+  "title": "Add protected data to your collection",
+  "isDone": true
 }
 ```

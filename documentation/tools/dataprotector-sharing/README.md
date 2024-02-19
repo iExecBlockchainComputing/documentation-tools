@@ -113,6 +113,18 @@ Here is the list of methods of DataProtector Sharing module:
   </tr>
   <tr>
     <td align="center"></td>
+    <td align="center"><strong>setProtectedDataToRenting</strong></td>
+    <td></td>
+    <td><a href="setprotecteddatatorenting.md">setprotecteddatatorenting.md</a></td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center"><strong>removeProtectedDataFromRenting</strong></td>
+    <td></td>
+    <td><a href="removeprotecteddatafromrenting.md">removeprotecteddatafromrenting.md</a></td>
+  </tr>
+  <tr>
+    <td align="center"></td>
     <td align="center"><strong>setProtectedDataForSale</strong></td>
     <td></td>
     <td><a href="setprotecteddataforsale.md">setprotecteddataforsale.md</a></td>
