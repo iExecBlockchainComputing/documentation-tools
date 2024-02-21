@@ -16,3 +16,5 @@ The DataProtector tool encompasses the following suite of API methods:
 * **revokeOneAccess**—removes access granted to one iExec application for a specified piece of protected data
 * **fetchProtectedData**—retrieve a list of all protected data for one owner and/or data schema
 * **fetchGrantedAccess**—retrieve a list of all authorized users and applications for a piece of protected data
+* **processProtectedData**-process a protected dataset through use of a specified iExec application
+* **transferOwnership**-transfer a protectedData object to a new owner

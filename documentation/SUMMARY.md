@@ -19,6 +19,8 @@
     * [revokeOneAccess](tools/dataprotector/methods/revokeoneaccess.md)
     * [fetchProtectedData](tools/dataprotector/methods/fetchprotecteddata.md)
     * [fetchGrantedAccess](tools/dataprotector/methods/fetchgrantedaccess.md)
+    * [processProtectedData](tools/dataprotector/methods/processprotecteddata.md)
+    * [transferOwnership](tools/dataprotector/methods/transferownership.md)
 * [✉ Web3Mail](tools/web3mail/README.md)
   * [Quick start](tools/web3mail/quick-start.md)
   * [Methods](tools/web3mail/methods/README.md)

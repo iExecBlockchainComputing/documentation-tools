@@ -63,3 +63,25 @@ Allows specifying an optional nRLC cost associated with every access of the prot
 Allows optionally restricting the number of times the protected data may be processed and used. 
 
 *default*: 1
+
+## Result
+
+The result of this method confirms the new access grant. It consists of a JSON object with a number of fields.
+
+### apprestrict
+
+### dataset
+
+### datasetprice
+
+### requesterrestrict
+
+### salt
+
+### sign
+
+### tag
+
+### volume
+
+### workerpoolrestrict

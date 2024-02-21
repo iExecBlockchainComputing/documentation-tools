@@ -49,3 +49,7 @@ The application address to be removed from the authorization list for this piece
 ### authorizedUser (optional)
 
 The user address to be removed from the authorization list for this piece of protected data.
+
+## Result
+
+The result of this method is partially dependent on the parameters used in invoking it. In general, for each access on the specified protectedData, your results will contain an `access` field identifying what access(es) are processed and a `txHash` for your records as a confirmation of the operation.

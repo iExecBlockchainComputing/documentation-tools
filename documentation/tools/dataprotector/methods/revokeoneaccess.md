@@ -50,3 +50,13 @@ The return value of this operation confirms the `granted access` object values a
 ### grantedAccess (required)
 
 This is the complete `granted access` object retrieved from an invocation of `fetchGrantedAccess`.
+
+## Result
+
+This method returns a JSON object containing two fields.
+
+### access
+
+This is a nested JSON object providing details on the prior granted access. The fields of this object are as follows:
+
+### txHash

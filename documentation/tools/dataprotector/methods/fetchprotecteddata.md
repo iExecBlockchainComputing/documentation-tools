@@ -54,3 +54,13 @@ Provides a list of protected data objects owned by the user with this ETH addres
 ### dataSchema (optional)
 
 Provides a list of protected data objects matching this schema.
+
+## Result
+
+This method returns an array of objects containing the protectedData information queried. Each object contains the following parameters:
+
+* **name**
+* **adress**
+* **owner**
+* **creationTimestamp**
+* **schema**
