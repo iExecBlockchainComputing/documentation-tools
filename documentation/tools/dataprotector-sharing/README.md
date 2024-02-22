@@ -135,5 +135,11 @@ Here is the list of methods of DataProtector Sharing module:
     <td></td>
     <td><a href="removeprotecteddataforsale.md">removeprotecteddataforsale.md</a></td>
   </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center"><strong>consumeProtectedData</strong></td>
+    <td></td>
+    <td><a href="consumeprotecteddata.md">consumeProtectedData.md</a></td>
+  </tr>
   </tbody>
 </table>
