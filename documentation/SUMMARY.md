@@ -34,6 +34,7 @@
   - [setProtectedDataForSale](tools/dataprotector-sharing/setprotecteddataforsale.md)
   - [removeProtectedDataForSale](tools/dataprotector-sharing/removeprotecteddataforsale.md)
   - [getProtectedDataPricingParams](tools/dataprotector-sharing/getprotecteddatapricingparams.md)
+  - [consumeProtectedData](tools/dataprotector-sharing/consumeprotecteddata.md)
 - [✉ Web3Mail](tools/web3mail/README.md)
   - [Quick start](tools/web3mail/quick-start.md)
   - [Methods](tools/web3mail/methods/README.md)
