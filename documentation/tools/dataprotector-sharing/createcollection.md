@@ -10,10 +10,12 @@ A wallet address may have multiple collections.
 ## Usage
 
 ```javascript
-const createCollectionResult = await dataProtector.createCollection();
+const createCollectionResult = await dataProtectorSharing.createCollection();
 ```
 
 ## Return value example
+
+Response type: `SuccessWithTransactionHash`
 
 ```json
 {

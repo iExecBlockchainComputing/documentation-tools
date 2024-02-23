@@ -10,7 +10,7 @@ smart-contract will check that the given user has a currently valid subscription
 ```javascript
 const durationInDays = 30;
 
-const setSubscriptionParamsResult = await dataProtector.setSubscriptionParams({
+const setSubscriptionParamsResult = await dataProtectorSharing.setSubscriptionParams({
   collectionId: 12,
   priceInNRLC: BigInt(priceInNrlc),
   durationInSeconds: durationInDays * 60 * 60 * 24,

@@ -5,7 +5,7 @@ Method to allow a protected data to be rented.
 ## Usage
 
 ```javascript
-const setForRentingResult = await dataProtector.setProtectedDataToRenting({
+const setForRentingResult = await dataProtectorSharing.setProtectedDataToRenting({
   protectedDataAddress: '0x123abc...',
   priceInNRLC: 1_000_000_000, // 1 RLC
   durationInSeconds: 60 * 60 * 24 * 30, // 30 days

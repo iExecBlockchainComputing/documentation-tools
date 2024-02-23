@@ -5,7 +5,7 @@ Method to rent a protected data.
 ## Usage
 
 ```javascript
-const rentResult = await dataProtector.rentProtectedData({
+const rentResult = await dataProtectorSharing.rentProtectedData({
   protectedDataAddress: '0x123abc...',
 });
 ```

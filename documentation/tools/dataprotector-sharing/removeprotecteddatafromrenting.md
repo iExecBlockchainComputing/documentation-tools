@@ -8,7 +8,7 @@ end of their rental period.
 ## Usage
 
 ```javascript
-const notForRentingAymoreResult = await dataProtector.removeProtectedDataFromRenting({
+const notForRentingAymoreResult = await dataProtectorSharing.removeProtectedDataFromRenting({
   protectedDataAddress: '0x123abc...',
 });
 ```

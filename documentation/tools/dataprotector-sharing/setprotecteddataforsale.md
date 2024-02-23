@@ -9,7 +9,7 @@ protected data for their own use.
 ## Usage
 
 ```javascript
-const setForSaleResult = await dataProtector.setProtectedDataForSale({
+const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
   protectedDataAddress: '0x123abc...',
   priceInNRLC: 2,
 });

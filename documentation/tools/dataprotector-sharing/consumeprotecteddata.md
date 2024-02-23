@@ -10,13 +10,12 @@ subscription to the corresponding collection.
 Input parameters type: `ConsumeProtectedDataParams`
 
 ```javascript
-const consumeProtectedDataResult = await dataProtectorSharing.consumeProtectedData();
-```
-
-or
-
-```javascript
-const consumeProtectedDataResult = await dataProtector.dataProtectorSharing.consumeProtectedData();
+const consumeProtectedDataResult = await dataProtectorSharing.consumeProtectedData({
+  protectedDataAddress: "0x123...",
+  onStatusUpdate: ({ title, isDone }) => {
+    console.log(title, isDone);
+  },
+});
 ```
 
 ## Return value example

@@ -9,8 +9,10 @@ Under the hood, this method performs two actions:
 
 ## Usage
 
+Input parameters type: `AddToCollectionParams`
+
 ```javascript
-const addToCollectionResult = await dataProtector.addToCollection({
+const { success } = await dataProtectorSharing.addToCollection({
   protectedDataAddress: '0x123abc...',
   collectionId: 12,
   onStatusUpdate: ({ title, isDone }) => {
@@ -20,6 +22,8 @@ const addToCollectionResult = await dataProtector.addToCollection({
 ```
 
 ## Return value example
+
+Response type: `SuccessWithTransactionHash`
 
 ```json
 {
@@ -79,3 +83,7 @@ You can expect this callback function to be called four times:
   "isDone": true
 }
 ```
+
+## Possible errors
+
+TODO

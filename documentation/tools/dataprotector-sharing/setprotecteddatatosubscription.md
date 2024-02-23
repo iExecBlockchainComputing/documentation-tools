@@ -7,7 +7,7 @@ Any user who has an active subscription to your collection will be able to consu
 ## Usage
 
 ```javascript
-const setToSubscriptionResult = await dataProtector.setProtectedDataToSubscription({
+const setToSubscriptionResult = await dataProtectorSharing.setProtectedDataToSubscription({
   collectionTokenId: 12,
   protectedDataAddress: '0x123abc...'
 });

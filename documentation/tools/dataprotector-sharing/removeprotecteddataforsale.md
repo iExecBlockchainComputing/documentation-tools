@@ -5,7 +5,7 @@ Method to remove a protected data for sale.
 ## Usage
 
 ```javascript
-const notForSaleAymoreResult = await dataProtector.removeProtectedDataForSale({
+const notForSaleAymoreResult = await dataProtectorSharing.removeProtectedDataForSale({
   protectedDataAddress: '0x123abc...',
 });
 ```
