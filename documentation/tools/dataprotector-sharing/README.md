@@ -85,67 +85,67 @@ Here is the list of methods of DataProtector Sharing module:
     <td align="center"></td>
     <td align="center"><strong>createCollection</strong></td>
     <td></td>
-    <td><a href="createcollection.md">createcollection.md</a></td>
+    <td><a href="collections/createcollection.md">createcollection.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>addToCollection</strong></td>
     <td></td>
-    <td><a href="addtocollection.md">addtocollection.md</a></td>
+    <td><a href="collections/addtocollection.md">addtocollection.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>setSubscriptionParams</strong></td>
     <td></td>
-    <td><a href="setsubscriptionparams.md">setsubscriptionparams.md</a></td>
+    <td><a href="subscription/setsubscriptionparams.md">setsubscriptionparams.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>setProtectedDataToSubscription</strong></td>
     <td></td>
-    <td><a href="setprotecteddatatosubscription.md">setprotecteddatatosubscription.md</a></td>
+    <td><a href="subscription/setprotecteddatatosubscription.md">setprotecteddatatosubscription.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>getProtectedDataPricingParams</strong></td>
     <td></td>
-    <td><a href="getprotecteddatapricingparams.md">getprotecteddatapricingparams.md</a></td>
+    <td><a href="misc/getprotecteddatapricingparams.md">getprotecteddatapricingparams.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>setProtectedDataToRenting</strong></td>
     <td></td>
-    <td><a href="setprotecteddatatorenting.md">setprotecteddatatorenting.md</a></td>
+    <td><a href="renting/setprotecteddatatorenting.md">setprotecteddatatorenting.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>removeProtectedDataFromRenting</strong></td>
     <td></td>
-    <td><a href="removeprotecteddatafromrenting.md">removeprotecteddatafromrenting.md</a></td>
+    <td><a href="renting/removeprotecteddatafromrenting.md">removeprotecteddatafromrenting.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>setProtectedDataForSale</strong></td>
     <td></td>
-    <td><a href="setprotecteddataforsale.md">setprotecteddataforsale.md</a></td>
+    <td><a href="selling/setprotecteddataforsale.md">setprotecteddataforsale.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>removeProtectedDataForSale</strong></td>
     <td></td>
-    <td><a href="removeprotecteddataforsale.md">removeprotecteddataforsale.md</a></td>
+    <td><a href="selling/removeprotecteddataforsale.md">removeprotecteddataforsale.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>getProtectedDataPricingParams</strong></td>
     <td></td>
-    <td><a href="getprotecteddatapricingparams.md">getprotecteddatapricingparams.md</a></td>
+    <td><a href="misc/getprotecteddatapricingparams.md">getprotecteddatapricingparams.md</a></td>
   </tr>
   <tr>
     <td align="center"></td>
     <td align="center"><strong>consumeProtectedData</strong></td>
     <td></td>
-    <td><a href="consumeprotecteddata.md">consumeprotecteddata.md</a></td>
+    <td><a href="misc/consumeprotecteddata.md">consumeprotecteddata.md</a></td>
   </tr>
   </tbody>
 </table>
