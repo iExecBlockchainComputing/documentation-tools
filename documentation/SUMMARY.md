@@ -21,23 +21,23 @@
     - [fetchGrantedAccess](tools/dataprotector/methods/fetchgrantedaccess.md)
     - [transferOwnership](tools/dataprotector/methods/transferownership.md)
   - [Sharing methods](tools/dataprotector-sharing/README.md)
-    - Collections
+    ### Collections
     - [createCollection](tools/dataprotector-sharing/createcollection.md)
     - [removeCollection](tools/dataprotector-sharing/removecollection.md)
     - [addToCollection](tools/dataprotector-sharing/addtocollection.md)
     - [removeFromCollection](tools/dataprotector-sharing/removefromcollection.md)
-    - Renting
+    ### Renting
     - [setProtectedDataToRenting](tools/dataprotector-sharing/setprotecteddatatorenting.md)
     - [removeProtectedDataFromRenting](tools/dataprotector-sharing/removeprotecteddatafromrenting.md)
     - [rentProtectedData](tools/dataprotector-sharing/rentprotecteddata.md)
     - [setProtectedDataToSubscription](tools/dataprotector-sharing/setprotecteddatatosubscription.md)
-    - Subscription
+    ### Subscription
     - [setSubscriptionParams](tools/dataprotector-sharing/setsubscriptionparams.md)
     - [subscribe](tools/dataprotector-sharing/subscribe.md)
-    - Selling
+    ### Selling
     - [setProtectedDataForSale](tools/dataprotector-sharing/setprotecteddataforsale.md)
     - [removeProtectedDataForSale](tools/dataprotector-sharing/removeprotecteddataforsale.md)
-    - Misc
+    ### Misc
     - [getProtectedDataPricingParams](tools/dataprotector-sharing/getprotecteddatapricingparams.md)
     - [consumeProtectedData](tools/dataprotector-sharing/consumeprotecteddata.md)
 - [✉ Web3Mail](tools/web3mail/README.md)
