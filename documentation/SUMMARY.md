@@ -39,6 +39,7 @@
   - [removeProtectedDataForSale](tools/dataprotector-sharing/selling/removeprotecteddataforsale.md)
   - [buyProtectedData](tools/dataprotector-sharing/selling/buyprotecteddata.md)
 - [Sharing - Misc](tools/dataprotector-sharing/README-other.md)
+  - [getProtectedDataInCollections](tools/dataprotector-sharing/misc/getprotecteddataincollections.md)
   - [getProtectedDataPricingParams](tools/dataprotector-sharing/misc/getprotecteddatapricingparams.md)
   - [consumeProtectedData](tools/dataprotector-sharing/misc/consumeprotecteddata.md)
 
