@@ -1,6 +1,6 @@
 # fetchMyContacts
 
-Method to get the ETH addresses that gave access to their protected data for messaging usage.
+This method gives the requester a list of Ethereum addresses that previously gave access to their protected data for messaging usage. The user's email address is stored as a piece of `protectedData` ensuring only authorized applications may access the clear text address for sending communications.
 
 ## Usage
 
@@ -19,3 +19,24 @@ const contactsList = await web3mail.fetchMyContacts();
   },
 ];
 ```
+## Result
+
+The result object contains a list of Contact objects. Each Contact represents one Ethereum address whose owner previously granted you permission to send them messages. Each object contains the following fields.
+
+### accessGrantTimestamp
+
+The date and time the owner of this Ethereum address granted you permission to send them communications. 
+
+*type*: This is a string representation of a timestamp with the format yyyy-mm-ddThh:mm:ss.ssssZ.
+
+### owner
+
+The user who granted permission to send them communications.
+
+*type*: A string representation of an Ethereum address.
+
+### address
+
+TBD
+
+*type*: A string representation of an Ethereum address.
