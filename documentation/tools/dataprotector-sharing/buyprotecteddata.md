@@ -9,17 +9,19 @@ to keep it for yourself.
 
 ## Usage
 
-Input parameters type: `BuyProtectedDataParams`
-
 ```javascript
 const { success } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: '0x123abc...',
+  protectedDataAddress: '0x123abc...', // required
+  collectionTokenIdTo: 12,
+  appAddress: '0xdef456...',
 });
 ```
 
-## Return value example
+{% hint style="info" %}
+Input parameters type: `BuyProtectedDataParams`
+{% endhint %}
 
-Response type: `SuccessWithTransactionHash`
+## Return value example
 
 ```json
 {
@@ -27,6 +29,10 @@ Response type: `SuccessWithTransactionHash`
   "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
 }
 ```
+
+{% hint style="info" %}
+Response type: `SuccessWithTransactionHash`
+{% endhint %}
 
 ## Parameters
 
@@ -43,3 +49,9 @@ still fully own it as you own the collection to which it'll transferred.
 ### appAddress (optional)
 
 TODO
+
+## Possible errors
+
+```
+This protected data is currently not for sale.
+```

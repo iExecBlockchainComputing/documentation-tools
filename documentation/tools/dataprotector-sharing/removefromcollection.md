@@ -7,15 +7,15 @@ To put it differently, this method will transfer the ownership of the protected 
 
 ## Usage
 
-{% hint style="info" %}
-Input parameters type: `RemoveFromCollectionParams`
-{% endhint %}
-
 ```javascript
 const { success } = await dataProtectorSharing.removeFromCollection({
   protectedDataAddress: '0x123abc...',
 });
 ```
+
+{% hint style="info" %}
+Input parameters type: `RemoveFromCollectionParams`
+{% endhint %}
 
 ## Pre-conditions
 
@@ -25,16 +25,16 @@ const { success } = await dataProtectorSharing.removeFromCollection({
 
 ## Return value example
 
-{% hint style="info" %}
-Response type: `SuccessWithTransactionHash`
-{% endhint %}
-
 ```json
 {
   "success": true,
   "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
 }
 ```
+
+{% hint style="info" %}
+Response type: `SuccessWithTransactionHash`
+{% endhint %}
 
 ## Parameters
 
