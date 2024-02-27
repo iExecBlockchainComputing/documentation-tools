@@ -4,6 +4,8 @@ This method provides a listing of all access grants given to the specified prote
 
 ## Usage
 
+The request object is a JSON FetchGrantedAccessParams object. Each address in the object is a String representation of an ethereum address or ENS name (Ethereum Name Service) reference.
+
 ```javascript
 const listGrantedAccess = await dataProtector.fetchGrantedAccess({
     protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
@@ -27,7 +29,7 @@ The return value for this method has two fields: a `count` parameter listing the
             dataset: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
             datasetprice: '0',
             requesterrestrict: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-            salt: '0x0147499ca7604fe9343a71c99125f1c3f8af0e1ebb933d570cb653ef8eb043b8'
+            salt: '0x0147499ca7604fe9343a71c99125f1c3f8af0e1ebb933d570cb653ef8eb043b8',
             sign: '0xc22c1f57f0b68af0fb4833e776adb73f30cc197445834bf564e9829913e104b07ab856ac39085edb5c9180f430c1ee2f29021ae33cd79eb0ddb73181e347799f1b',
             tag: '0x0000000000000000000000000000000000000000000000000000000000000003',
             volume: '1',
@@ -43,13 +45,19 @@ The return value for this method has two fields: a `count` parameter listing the
 
 Address of the protected data object for which you are querying access authorization grants.
 
+*type* - String representation of ethereum address or ENS name (Ethereum Name Service)
+
 ### authorizedApp (optional)
 
 Optional filter to restrict the results to include only authorizations for the specified application.
 
+*type* - String representation of ethereum address or ENS name (Ethereum Name Service)
+
 ### authorizedUser (optional)
 
 Optional filter to restrict the results to include only authorizations for the specified user.
+
+*type* - String representation of ethereum address or ENS name (Ethereum Name Service)
 
 ### page (optional)
 

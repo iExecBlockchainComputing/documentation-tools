@@ -30,6 +30,8 @@ You must explicitly subscribe to the observables for `dataProtector` to revoke a
 
 ### Return value example
 
+These are the possible events iExec may send the subscriber:
+
 <table><thead><tr><th width="310">Message</th><th>Return value</th></tr></thead><tbody><tr><td>GRANTED_ACCESS_RETRIEVED</td><td><pre class="language-javascript"><code class="lang-javascript">access: GrantedAccess[]
 </code></pre></td></tr><tr><td>REVOKE_ONE_ACCESS_REQUEST</td><td><pre class="language-javascript"><code class="lang-javascript">access: GrantedAccess
 </code></pre></td></tr><tr><td>REVOKE_ONE_ACCESS_SUCCESS</td><td><pre class="language-javascript"><code class="lang-javascript">txHash: '0x9f7e76a220aba21c6a9c79bd1680eaf33b10afc2127593fd7e9a9e2b03c2c9fd',
