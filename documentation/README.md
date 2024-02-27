@@ -20,10 +20,6 @@ Build decentralized applications that combine ownership, privacy, and monetizati
 [dataprotector](tools/dataprotector/)
 {% endcontent-ref %}
 
-{% content-ref url="tools/dataprotector-sharing/" %}
-[dataprotector-sharing](tools/dataprotector-sharing/)
-{% endcontent-ref %}
-
 {% content-ref url="tools/web3mail/" %}
 [web3mail](tools/web3mail/)
 {% endcontent-ref %}
