@@ -6,9 +6,13 @@ Method to remove a protected data for sale.
 
 ```javascript
 const notForSaleAymoreResult = await dataProtectorSharing.removeProtectedDataForSale({
-  protectedDataAddress: '0x123abc...',
+  protectedDataAddress: '0x123abc...', // required
 });
 ```
+
+{% hint style="info" %}
+Input parameters type: `RemoveProtectedDataForSaleParams`
+{% endhint %}
 
 ## Return value example
 
@@ -19,8 +23,14 @@ const notForSaleAymoreResult = await dataProtectorSharing.removeProtectedDataFor
 }
 ```
 
+{% hint style="info" %}
+Response type: `SuccessWithTransactionHash`
+{% endhint %}
+
 ## Parameters
 
 ### protectedDataAddress (required)
+
+`AddressOrENS`
 
 Address of the protected data.

@@ -38,15 +38,21 @@ Response type: `SuccessWithTransactionHash`
 
 ### protectedDataAddress (required)
 
+`AddressOrENS`
+
 Address of the protected data you'd like to buy.
 
-### collectionTokenIdTo (optional)
+### collectionTokenIdTo
+
+`number | undefined`
 
 Collection token id to which you'd like to transfer the ownership of the protected data.  
 The Data Sharing smart-contract will still be the technical owner of the protected data, but you'll
 still fully own it as you own the collection to which it'll transferred.
 
-### appAddress (optional)
+### appAddress
+
+`AddressOrENS | undefined`
 
 TODO
 
