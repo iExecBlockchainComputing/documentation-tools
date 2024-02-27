@@ -2,8 +2,6 @@
 
 [![npm version](https://badge.fury.io/js/@iexec%2Fdataprotector.svg)](https://badge.fury.io/js/@iexec%2Fdataprotector)
 
-[![NPM](https://nodei.co/npm/@iexec/dataprotector.png)](https://nodei.co/npm/@iexec/dataprotector/)
-
 DataProtector offers developers methods to create apps that give users unparalleled ownership and privacy over their data.&#x20;
 
 Through DataProtector, users may allow iExec apps to use their data without ever revealing the data itself. This revolutionary approach to data management relies on:
