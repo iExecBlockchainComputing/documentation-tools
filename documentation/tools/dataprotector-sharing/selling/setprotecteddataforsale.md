@@ -15,9 +15,8 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 });
 ```
 
-{% hint style="info" %}
-Input parameters type: `SetProtectedDataForSaleParams`
-{% endhint %}
+Types:
+`(args: SetProtectedDataForSaleParams) => Promise<SuccessWithTransactionHash>`
 
 ## Return value example
 
@@ -27,10 +26,6 @@ Input parameters type: `SetProtectedDataForSaleParams`
   "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
 }
 ```
-
-{% hint style="info" %}
-Response type: `SuccessWithTransactionHash`
-{% endhint %}
 
 ## Parameters
 
