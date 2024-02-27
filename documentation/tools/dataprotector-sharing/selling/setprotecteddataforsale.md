@@ -2,7 +2,7 @@
 
 Method to set a protected data for sale.
 
-During a successful sale, the ownership of the protected data is transferred to the buyer.
+During a successful sale, **the ownership** of the protected data **is transferred** to the buyer.
 The buyer will then be able to set their own pricing parameters, or simply keep the
 protected data for their own use.
 
@@ -15,6 +15,10 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 });
 ```
 
+{% hint style="info" %}
+Input parameters type: `SetProtectedDataForSaleParams`
+{% endhint %}
+
 ## Return value example
 
 ```json
@@ -24,12 +28,20 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 }
 ```
 
+{% hint style="info" %}
+Response type: `SuccessWithTransactionHash`
+{% endhint %}
+
 ## Parameters
 
 ### protectedDataAddress (required)
 
+`AddressOrENS`
+
 Address of the protected data.
 
 ### priceInNRLC (required)
+
+`number`
 
 The price you ask from someone who wants to buy the protected data.
