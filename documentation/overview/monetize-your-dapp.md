@@ -34,7 +34,7 @@ For example with web3mail:
 
 ```js
 new IExecWeb3mail(ethProvider, {
-  DAppAddressOrENS: "web3mail.apps.iexec.eth",
+  DAppAddressOrENS: "YourDappAddressOrENS",
 });
 ```
 
