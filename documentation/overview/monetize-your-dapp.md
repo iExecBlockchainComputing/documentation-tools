@@ -27,6 +27,7 @@ Each monetization model has two sub-models. Choose the one that best suits your 
 As a builder you should do those steps :
 
 1 - Build your own tee DApp
+
 2 - Choose the corresponding dev tools and set your own DApp
 
 For example with web3mail:
