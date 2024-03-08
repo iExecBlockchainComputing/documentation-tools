@@ -1,6 +1,6 @@
 # fetchGrantedAccess
 
-This method provides a listing of all access grants given to the specified protected data object. It supports several optional parameters to restrict the size of the result set. Options for filtering include specifying a user, an application, or both. You may optionally receive the results as a paginated list.
+This method provides a listing of all access grants given to the specified protected data object. It supports several optional parameters to restrict the size of the result set. Options for filtering include specifying an authorized user, an application, or both. You may optionally receive the results as a paginated list.
 
 ## Usage
 
@@ -41,50 +41,39 @@ The return value for this method has two fields: a `count` parameter listing the
 
 ## Parameters
 
-### protectedData (required)
+protectedData (required)
+: Address of the protected data object for which you are querying access authorization grants.
+: *type* - String representation of ethereum address or ENS name (Ethereum Name Service)
 
-Address of the protected data object for which you are querying access authorization grants.
+authorizedApp (optional)
+: Optional filter to restrict the results to include only authorizations for the specified application.
+: *type* - String representation of ethereum address or ENS name (Ethereum Name Service)
 
-*type* - String representation of ethereum address or ENS name (Ethereum Name Service)
+authorizedUser (optional)
+: Optional filter to restrict the results to include only authorizations for the specified user.
+: *type* - String representation of ethereum address or ENS name (Ethereum Name Service)
 
-### authorizedApp (optional)
+page (optional)
+: Specifies the results page to return. The default for this is `0` which returns all results. Pages are indexed starting at page 1. If using this field you may also specify a `pageSize` to control the size of the results.
 
-Optional filter to restrict the results to include only authorizations for the specified application.
-
-*type* - String representation of ethereum address or ENS name (Ethereum Name Service)
-
-### authorizedUser (optional)
-
-Optional filter to restrict the results to include only authorizations for the specified user.
-
-*type* - String representation of ethereum address or ENS name (Ethereum Name Service)
-
-### page (optional)
-
-Specifies the results page to return. The default for this is `0` which returns all results. Pages are indexed starting at page 1. If using this field you may also specify a `pageSize` to control the results.
-
-### pageSize (optional)
-
-Specifies the number of records in each page of the result set. This is used in conjunction with the optional `page` parameter to constrain the size of the result. The default for this value is `20` but this only comes into play when specifying a `page` parameter.
+pageSize (optional)
+: Specifies the number of records in each page of the result set. This is used in conjunction with the optional `page` parameter to constrain the size of the result. The default for this value is `20` but this only comes into play when specifying a `page` parameter.
 
 ## Result
 
-This method returns an object with two fields. 
+This method returns an object with two fields:
 
-### count
+count
+: An integer value indicating the number of results returned by this method. This is of particular note when using paging as the number of records returned may be smaller than the page size.
 
-An integer value indicating the number of results returned by this method. This is of particular note when using paging as the number of records returned may be smaller than the page size.
-
-### grantedAccess
-
-This is an array of objects. Each object has the following fields:
-
-* **apprestrict** -
-* **dataset** - 
-* **datasetprice** - 
-* **requesterrestrict** - 
-* **salt** - 
-* **sign** - 
-* **tag** - 
-* **volume** - 
-* **workerpoolrestrict**- - 
+grantedAccess
+: This is an array of `grantedAccess` objects. Each object has the following fields:
+: **apprestrict** - address of the authorized application; a value of 0x0 indicates any application may access this data  
+**dataset** - address of the `protectedData` containing user data  
+**datasetprice** - price (iun nRLC) to charge the user specified in `requesterrestrict` for each use of this `protectedData`
+**requesterrestrict** - address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data  
+**volume** - number of authorized uses of this `protectedData`; each use decrements this counter  
+**workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
+**salt** - TBD  
+**sign** - TBD  
+**tag** - TBD    
