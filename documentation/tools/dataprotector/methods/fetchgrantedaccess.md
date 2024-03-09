@@ -49,9 +49,13 @@ Address of the protected data object for which you are querying access authoriza
 
 ***authorizedApp (optional)***
 
-Optional filter to restrict the results to include only authorizations for the specified application.
+Optional filter to restrict the results to include only authorizations for the specified application. 
 
 *type* - String representation of ethereum address or ENS name (Ethereum Name Service)
+
+{% hint style="info" %}
+If you specified an application whitelist when using [`grantAccess`](./grantaccess.md), you must specify that same whitelist address when using this filtering option. The `fetchGrantedAccess` method does not check against whitelist smart contracts when aggregating results. If you granted authorization to a whitelist but specify an application address for the `authorizedApp` parameter, you will not receive any results unless you *also* explicitly granted access to that application address.
+{% endhint %}
 
 ***authorizedUser (optional)***
 

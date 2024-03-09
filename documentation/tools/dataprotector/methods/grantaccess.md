@@ -2,6 +2,8 @@
 
 Data encrypted through the Data Protector tool requires explicit authorization for runtime access. A newly created `protectedData` object has no inherent authorizations. This method grants permission to securely access the specified `protectedData` for processing using the `processProtectedData` method. Users may grant permissions to an application, an application whitelist, or a user.
 
+
+
 ## Usage
 
 ```javascript
@@ -38,10 +40,12 @@ The address of the protected data supplied by the user.
 
 ***authorizedApp (required)***
 
-The address of the application you wish to authorize to process the `protectedData` within a secure execution environment.
+The address of the application you wish to authorize to process the `protectedData` within a secure execution environment. You may specify either a single application or an application whitelist. To specify a whitelist, you provide the ETH address of an [iExec Whitelist Smart Contract](https://github.com/iExecBlockchainComputing/whitelist-smart-contract/tree/main). This smart contract aggregates multiple application versions. This allows you to introduce new versions of your application without needing to grant access for the `protectedData` each time you do so.
 
 {% hint style="info" %}
 You may authorize all apps to use the protected data by setting this to **0x00000000000000000000000000000000000000**
+
+iExec maintains a whitelist for the Web3Mail distributed application. Granting access to this whitelist allows use of your `protectedData` with all versions of the Web3Mail application, ensuring you only have to grant this access once. The ETH address for this whitelist is **0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e**
 {% endhint %}
 
 ***authorizedUser (required)***
