@@ -1,6 +1,6 @@
 # grantAccess
 
-When a `protectedData` object is initially created via the `protectData` method, only the user creating the `protectedData` may access it. The `grantAccess` method authorizes an iExec application to securely access and utilize a piece of protected data. Only the specified user(s) may submit this protected data to this iExec application. The user(s) do not gain access to view the data, only to submit it for processing to a secure application environment.data and from a user.
+Data encrypted through the Data Protector tool requires explicit authorization for runtime access. A newly created `protectedData` object has no inherent authorizations. This method grants permission to securely access the specified `protectedData` for processing using the `processProtectedData` method. Users may grant permissions to an application, an application whitelist, or a user.
 
 ## Usage
 
@@ -38,18 +38,18 @@ The address of the protected data supplied by the user.
 
 ***authorizedApp (required)***
 
-The address of the application permitted to process the protected data within a secure execution environment.
+The address of the application you wish to authorize to process the `protectedData` within a secure execution environment.
 
 {% hint style="info" %}
-If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
+You may authorize all apps to use the protected data by setting this to **0x00000000000000000000000000000000000000**
 {% endhint %}
 
 ***authorizedUser (required)***
 
-The address of the user(s) permitted to use this piece of protected data. Note that these users may not view or manipulate the data. This only grants permission for the user to submit the data to an iExec application.
+The address of the user you wish to authorize to use the `protectedData`. Note that these users may not view or manipulate the data. This only grants permission for the user to submit the data to an iExec application.
 
 {% hint style="info" %}
-If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
+You may authorize all users to use the protected data by setting this to **0x00000000000000000000000000000000000000**
 {% endhint %}
 
 ***pricePerAccess (optional)***
@@ -66,11 +66,11 @@ Allows optionally restricting the number of times the protected data may be proc
 
 ## Result
 
-The result of this method confirms the new access grant. It consists of a JSON `grantedAccess` field.
+The result of this method confirms the new access grant. It consists of a JSON `grantedAccess` object.
 
 ***grantedAccess***
 
-This is an array of `grantedAccess` objects. Each object has the following fields:
+The `grantedAccess` object has the following fields:
 
 **apprestrict** - address of the authorized application; a value of 0x0 indicates any application may access this data  
 **dataset** - address of the `protectedData` containing user data  
@@ -78,6 +78,6 @@ This is an array of `grantedAccess` objects. Each object has the following field
 **requesterrestrict** - address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data  
 **volume** - number of authorized uses of this `protectedData`; each use decrements this counter  
 **workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
-**salt** - TBD  
-**sign** - TBD  
-**tag** - TBD  
+**salt** - random value to make an order unique and reusable as nonce in a blockchain transaction  
+**sign** - order signature of all the `grantedAccess` fields  
+**tag** - defines whether a `protectedData` is usable in a TEE environment; `0x00` is TEE while `0x03` is non-TEE  

@@ -85,6 +85,6 @@ This is an array of `grantedAccess` objects. Each object has the following field
 **requesterrestrict** - address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data  
 **volume** - number of authorized uses of this `protectedData`; each use decrements this counter  
 **workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
-**salt** - TBD  
-**sign** - TBD  
-**tag** - TBD  
+**salt** - random value to make an order unique and reusable as nonce in a blockchain transaction  
+**sign** - order signature of all the `grantedAccess` fields  
+**tag** - defines whether a `protectedData` is usable in a TEE environment; `0x00` is TEE while `0x03` is non-TEE  
