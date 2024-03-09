@@ -1,8 +1,10 @@
 # revokeOneAccess
 
-This method allows revoking a specific access authorization from a piece of protected data. This method is used in conjunction with the [fetchGrantedAccess](fetchgrantedaccess.md) method, which provides a list of all authorizations on the data.
+This method allows revoking a specific access authorization from a `protectedData` entity. The input parameter for this method is sourced from the [fetchGrantedAccess](fetchgrantedaccess.md) method, which provides a list of all authorizations on single `protectedData` entity.
 
 ## Usage
+
+The `revokeOneAccess` method requires a `grantedAccess` object as an input parameter. This object is retrieved from the [`fetchGrantedAccess`](./fetchgrantedaccess.md) method.
 
 ```javascript
 const revokeAccess = await dataProtector.revokeOneAccess(
@@ -19,10 +21,6 @@ const revokeAccess = await dataProtector.revokeOneAccess(
     }
 )
 ```
-
-{% hint style="info" %}
-The grantedAccess parameter is one of the objects retrieved from the fetchGrantedAccess() method
-{% endhint %}
 
 ## Return value example
 
@@ -47,7 +45,7 @@ The return value of this operation confirms the `granted access` object values a
 
 ## Parameters
 
-### grantedAccess (required)
+***grantedAccess (required)***
 
 This is the complete `granted access` object retrieved from an invocation of `fetchGrantedAccess`.
 
@@ -55,8 +53,20 @@ This is the complete `granted access` object retrieved from an invocation of `fe
 
 This method returns a JSON object containing two fields.
 
-### access
+***access***
 
-This is a nested JSON object providing details on the prior granted access. The fields of this object are as follows:
+This is a nested `grantedAccess` object providing details on the prior granted access. The `grantedAccess` object has the following fields:
 
-### txHash
+**apprestrict** - address of the authorized application; a value of 0x0 indicates any application may access this data  
+**dataset** - address of the `protectedData` containing user data  
+**datasetprice** - price (iun nRLC) to charge the user specified in `requesterrestrict` for each use of this `protectedData`  
+**requesterrestrict** - address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data  
+**volume** - number of authorized uses of this `protectedData`; each use decrements this counter  
+**workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
+**salt** - random value to make an order unique and reusable as nonce in a blockchain transaction  
+**sign** - order signature of all the `grantedAccess` fields  
+**tag** - defines whether a `protectedData` is usable in a TEE environment; `0x00` is TEE while `0x03` is non-TEE
+
+***txHash***
+
+The ID of the transaction that happened on iExec's side chain. You may view details on the transaction using the [iExec explorer](https://explorer.iex.ec).

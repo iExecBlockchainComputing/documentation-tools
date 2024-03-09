@@ -1,8 +1,10 @@
 # revokeAllAccessObservable
 
-This method allows revoking any and all access granted to a piece of protected data. Using this method requires use of the JavaScript observable pattern. The method will not have any effect if this pattern is not used. You may optionally specify application or user addresses for revocation. If you do not specify either of these optional values, this method will revoke all access for all users and applications.
+This method allows revoking authorizations granted to a `protectedData` entity. You may optionally specify application or user addresses for revocation. If you do not specify either of these optional values, this method will revoke all access for all users and applications.
 
-### Usage
+## Usage
+
+This method is asynchronous and requires use of the JavaScript observable pattern.
 
 ```javascript
 const revokeAllAccessObservable = dataProtector
@@ -24,11 +26,7 @@ const revokeAllAccessObservable = dataProtector
     })
 ```
 
-{% hint style="info" %}
-You must explicitly subscribe to the observables for `dataProtector` to revoke access.
-{% endhint %}
-
-### Return value example
+## Return value example
 
 These are the possible events iExec may send the subscriber:
 
@@ -38,20 +36,62 @@ These are the possible events iExec may send the subscriber:
 access: GrantedAccess
 </code></pre></td></tr></tbody></table>
 
-### Parameters
+## Parameters
 
-### protectedData (required)
+***protectedData (required)***
 
-The address of the protected data subject to access revocation.
+The address of the `protectedData` subject to access revocation.
 
-### authorizedApp (optional)
+***authorizedApp (optional)***
 
-The application address to be removed from the authorization list for this piece of protected data.
+The application address to be removed from the authorization list for the specified `protectedData`.
 
-### authorizedUser (optional)
+***authorizedUser (optional)***
 
-The user address to be removed from the authorization list for this piece of protected data.
+The user address to be removed from the authorization list for the specified `protectedData`.
 
 ## Result
 
-The result of this method is partially dependent on the parameters used in invoking it. In general, for each access on the specified protectedData, your results will contain an `access` field identifying what access(es) are processed and a `txHash` for your records as a confirmation of the operation.
+As an observable method, the `revokeAllAccessObservable` method returns several events. Those include the following.
+
+### GRANTED_ACCESS_RETRIEVED
+
+Triggered when the `revokeAllAccessObservable` method begins processing the authorization grants for the specified `protectedData`. It contains the following data element:
+
+***access***
+
+A JSON list of `grantedAccess` objects detailing the set of authorizations for the specified `protectedData`.
+
+### REVOKE_ONE_ACCESS_REQUEST
+
+Triggered when the `revokeAllAccessObservable` method begins revoking one of the authorizations for the `protectedData`. It contains the following data element:
+
+***access***
+
+The `grantedAccess` object detailing authorization iExec is currently revoking.
+
+### REVOKE_ONE_ACCESS_SUCCESS
+
+Triggered upon completion of an authorization revocation. It contains the following data elements:
+
+***txHash***
+
+The ID of the transaction that happened on iExec's side chain. You may view details on the transaction using the [iExec explorer](https://explorer.iex.ec).
+
+***access***
+
+The `grantedAccess` object detailing authorization iExec successfully revoked.
+
+{% hint style="info" %}
+The `grantedAccess` object has the following fields:
+
+**apprestrict** - address of the authorized application; a value of 0x0 indicates any application may access this data  
+**dataset** - address of the `protectedData` containing user data  
+**datasetprice** - price (iun nRLC) to charge the user specified in `requesterrestrict` for each use of this `protectedData`  
+**requesterrestrict** - address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data  
+**volume** - number of authorized uses of this `protectedData`; each use decrements this counter  
+**workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
+**salt** - random value to make an order unique and reusable as nonce in a blockchain transaction  
+**sign** - order signature of all the `grantedAccess` fields  
+**tag** - defines whether a `protectedData` is usable in a TEE environment; `0x00` is TEE while `0x03` is non-TEE  
+{% endhint %}

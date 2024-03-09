@@ -19,13 +19,15 @@ const protectedData = await dataProtector.protectData({
 Your object may contain any number of custom keys. The following example illustrates protection of multiple categories of data within one object:
 
 ```javascript
-{
-    email: 'example@gmail.com',
-    SMTPserver: {
-        port: 5000,
-        smtp_server: 'smtp.gmail.com'
-    }
-}
+const protectedData = await dataProtector.protectData({
+    data: {
+      email: 'example@gmail.com',
+      SMTPserver: {
+          port: 5000,
+          smtp_server: 'smtp.gmail.com'
+      }
+  }
+})
 ```
 
 ## Return value example
@@ -49,6 +51,8 @@ The name is public and not encrypted. If you don't pass a name to your protected
 {% endhint %}
 
 ## Result
+
+The `protectData` method returns the following fields, either as a JSON object or as individual fields depending on whether you use the promise or observable pattern respectively.
 
 ***name***
 
@@ -99,7 +103,7 @@ A unix-style timestamp indicating the creation time of this `protectedData`.
 
 ***transactionHash***
 
-Identifies the transaction on the iExec side chain.
+The ID of the transaction that happened on iExec's side chain. You may view details on the transaction using the [iExec explorer](https://explorer.iex.ec).
 
 ***zipFile***
 
