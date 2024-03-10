@@ -1,4 +1,4 @@
-# sendEmail
+1# sendEmail
 
 This method allows an authorized application to send an email message to a User without needing to know their email address. Email content is encrypted and stored in IPFS so there is a permanent secure record of the communication for audit and traceability purposes.
 

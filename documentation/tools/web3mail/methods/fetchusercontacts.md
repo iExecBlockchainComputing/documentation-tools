@@ -1,6 +1,6 @@
 # fetchUserContacts
 
-Recipients of Web3Mail communications have granular control over which applications may contact them. This method retrieves a list of applications previously granted access to send messages to the specified user. The user's email address is stored as a piece of `protectedData` ensuring only authorized applications may access the clear text address for sending communications.
+This method provides a list of `contact` objects identifying all users who previously granted authorization to a specified entity to send them email messages. Each contact contains the contact's ETH address as well as the ETH address for the `protectedData` containing their email address.
 
 ## Usage
 
