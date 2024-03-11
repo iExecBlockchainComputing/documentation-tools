@@ -1,8 +1,8 @@
 # Quick Start
 
-## 1. Getting started
+## Getting started
 
-### **1.1. Prerequisites**
+### Prerequisites
 
 Before getting started, ensure that you have the following installed on your system:
 
@@ -10,7 +10,7 @@ Before getting started, ensure that you have the following installed on your sys
 
 \- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
-### **1.2. Start a new project**
+### Start a new project
 
 In this section, we will show you how to set up and call the different methods of the SDK in JS app.
 
@@ -18,7 +18,7 @@ You can reach the following open-source GitHub project, clone it and start from 
 
 You can find the project [here](https://github.com/iExecBlockchainComputing/iexec-oracle-factory-wrapper).
 
-### **1.3. Basic installation**
+### Basic installation
 
 Install `@iexec/iexec-oracle-factory-wrapper`.
 
@@ -46,7 +46,7 @@ bun add @iexec/iexec-oracle-factory-wrapper
 
 If you use it with Webpack, you need the latest Webpack version and ensure you configure it correctly for ESM.
 
-### **1.4. Instantiate SDK**
+### Instantiate SDK
 
 Import and initialize the Oracle Factory SDK in your application.
 

@@ -3,7 +3,7 @@ import { getSidebar } from "./sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "iExec tools documentation",
+  title: "Dev Tools",
   description: "iExec documentation for dev tools",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -11,11 +11,20 @@ export default defineConfig({
       { text: "Home", link: "https://protocol.docs.iex.ec/" },
       { text: "Tools", link: "/overview/what-we-do" },
     ],
-
+    outline: [2, 3],
+    search: {
+      provider: "local",
+    },
     sidebar: getSidebar(),
-
+    logo: {
+      light: "../public/Logo-RLC-Yellow-Simple.png",
+      dark: "../public/Logo-RLC-Yellow-Simple.png",
+      alt: "iExec logo",
+    },
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/iExecBlockchainComputing" },
+      { icon: "twitter", link: "https://twitter.com/iEx_ec" },
+      { icon: "discord", link: "https://discord.gg/rgpYhwSs" },
     ],
   },
 });

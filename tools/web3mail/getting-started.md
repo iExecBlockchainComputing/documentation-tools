@@ -1,12 +1,12 @@
 # Quick start
 
-## 1. Sandbox
+## Sandbox
 
 {% embed url="<https://codesandbox.io/p/github/iExecBlockchainComputing/web3mail-sandbox/main?file=/src/web3mail/web3mail.tsx:1,1&preventWorkspaceRedirect=true>" %}
 
-## 2. Getting started
+## Getting started
 
-### **2.1. Prerequisites**
+### Prerequisites
 
 Before getting started, ensure that you have the following installed on your system:
 
@@ -14,7 +14,7 @@ Before getting started, ensure that you have the following installed on your sys
 
 \- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
-### **2.2. Start a new project**
+### 2.2. Start a new project
 
 In this section, we will show you how to set up and call the different methods of the SDK in a React.js app.
 
@@ -22,7 +22,7 @@ You can reach the following open-source GitHub project, clone it and start from 
 
 You can find the project [here](https://github.com/iExecBlockchainComputing/web3Mail-sandbox).
 
-### **2.3. Basic installation**
+### 2.3. Basic installation
 
 Install `web3MailSDK` .
 
@@ -50,7 +50,7 @@ bun add @iexec/web3mail
 
 If you use it with Webpack, you need the latest Webpack version and ensure you configure it correctly for ESM.
 
-### **2.4. Instantiate SDK**
+### Instantiate SDK
 
 ::: code-group
 

@@ -33,6 +33,10 @@ export function getSidebar() {
                 link: "/tools/dataProtector/getting-started",
               },
               {
+                text: "Migrate from v1",
+                link: "/tools/dataProtector/migrate-from-v1",
+              },
+              {
                 text: "fetchGrantedAccess",
                 link: "/tools/dataProtector/fetchGrantedAccess",
               },
@@ -231,6 +235,10 @@ export function getSidebar() {
             ],
           },
         ],
+      },
+      {
+        text: "Help",
+        items: [{ text: "Contact Us", link: "/help/contact-us" }],
       },
     ],
   } satisfies DefaultTheme.Sidebar;

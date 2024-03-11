@@ -1,12 +1,12 @@
 # Quick start
 
-## 1. Sandbox
+## Sandbox
 
 {% embed url="<https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true>" %}
 
-## 2. Getting started
+## Getting started
 
-### **2.1. Prerequisites**
+### Prerequisites
 
 Before getting started, ensure that you have the following installed on your system:
 
@@ -14,7 +14,7 @@ Before getting started, ensure that you have the following installed on your sys
 
 \- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
-### **2.2. Start a new project**
+### Start a new project
 
 In this section, we will show you how to set up and call the different methods of the SDK in a React.js app.
 
@@ -22,7 +22,7 @@ You can reach the following open-source GitHub project, clone it and start from 
 
 You can find the project [here](https://github.com/iExecBlockchainComputing/dataprotector-sandbox).
 
-### **2.3. Basic installation**
+### Basic installation
 
 Install `dataProtectorSDK` .
 
@@ -50,7 +50,7 @@ bun add @iexec/dataprotector
 
 If you use it with Webpack, you need the latest Webpack version and ensure you configure it correctly for ESM.
 
-### **2.4. Instantiate SDK**
+### Instantiate SDK
 
 ::: code-group
 
