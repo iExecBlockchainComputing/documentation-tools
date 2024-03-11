@@ -5,6 +5,12 @@ import { getSidebar } from "./sidebar";
 export default defineConfig({
   title: "Dev Tools",
   description: "iExec documentation for dev tools",
+  markdown: {
+    theme: {
+      light: "vitesse-light",
+      dark: "vitesse-dark",
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -17,8 +23,8 @@ export default defineConfig({
     },
     sidebar: getSidebar(),
     logo: {
-      light: "../public/Logo-RLC-Yellow-Simple.png",
-      dark: "../public/Logo-RLC-Yellow-Simple.png",
+      light: "/Logo-RLC-Yellow-Simple.png",
+      dark: "/Logo-RLC-Yellow-Simple.png",
       alt: "iExec logo",
     },
     socialLinks: [
