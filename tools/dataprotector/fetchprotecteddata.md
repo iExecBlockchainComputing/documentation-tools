@@ -2,13 +2,11 @@
 
 Method to get all protected data encrypted or filtered by a specific owner and/or a data schema.
 
-{% hint style="info" %}
-A data schema is a representation of the structure of the data object.
-{% endhint %}
+⚠️ A data schema is a representation of the structure of the data object.
 
 ## Usage
 
-```javascript
+```js
 const listProtectedData = await dataProtector.fetchProtectedData({
   owner: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
 });
@@ -16,7 +14,7 @@ const listProtectedData = await dataProtector.fetchProtectedData({
 
 ## Return value example
 
-```javascript
+```js
 [
   {
     name: "John Doe professional email address",

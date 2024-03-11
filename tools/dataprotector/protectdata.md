@@ -2,7 +2,7 @@
 
 Method to secure and protect any type of data.
 
-{% hint style="info" %}
+```txt
 
 `protectData` process the data on the client side to extract the data schema before encryption.
 
@@ -31,7 +31,7 @@ Currently these types are detected:
 
 _NB:_ Undetected binary data are categorized as `application/octet-stream`
 
-{% endhint %}
+```
 
 ## **1. With promise**
 

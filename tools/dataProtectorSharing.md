@@ -1,68 +1,19 @@
-# Data sharing methods
+# 🔐 DataProtector
 
-Part of DataProtector, "Sharing" is a special module that includes a set of methods for you
-to **distribute and monetise your protected data**.
+[![npm version](https://badge.fury.io/js/@iexec%2Fdataprotector.svg)](https://badge.fury.io/js/@iexec%2Fdataprotector)
 
-That includes:
- - Free sharing
- - Renting
- - Include in a subscription bundle
- - Selling
+DataProtector offers developers methods to create apps that give users unparalleled ownership and privacy over their data.&#x20;
 
-One of the key aspects is that your protected data will be managed by a special Data Sharing
-smart-contract.
+Through DataProtector, users may allow iExec apps to use their data without ever revealing the data itself. This revolutionary approach to data management relies on:
 
-Let's try to make it more visual:
+- end-to-end encryption backed by a confidential computing technology that prevents iExec apps from accessing users’ unencrypted data
+- smart contracts that manage iExec apps’ rights to use users’ encrypted data
 
-![Data Sharing smart-contract](data-sharing-sc.png)
+DataProtector bundles 6 methods:
 
-This special smart-contract will be responsible for **enforcing governance** over your protected data,
-based on your distribution choices. (renting, selling, etc.)
-
------
-
-## Why is it different from DataProtector?
-
-With `DataProtector`, you can **grant access** to your protected data to a specific user.
- - You need to know the user's Ethereum address.
- - You'll have to sign a transaction at the moment you grant the access.
- - You define a number of times the user can access the data.
-
-With `DataProtector Sharing`, you can **distribute** your protected data to a wider audience.
- - You don't need to know the user's Ethereum address.
- - You don't need to sign a transaction at the moment of distribution (but the user who wants to
-access your content will).
- - Any user can access your content as long as they comply with your distribution and monetization
-choices.
-
------
-
-## Installation
-
-{% tabs %}
-{% tab title="npm" %}
-```
-npm install @iexec/dataprotector
-```
-{% endtab %}
-
-{% tab title="yarn" %}
-```
-yarn add @iexec/dataprotector
-```
-{% endtab %}
-
-{% tab title="pnpm" %}
-```
-pnpm add @iexec/dataprotector
-```
-{% endtab %}
-
-{% tab title="bun" %}
-```
-bun add @iexec/dataprotector
-```
-{% endtab %}
-{% endtabs %}
-
-Find more details in the [Quick start](../dataprotector/quick-start.md) section.
+- **protectData**—that safeguards any data. It takes responsibility for encrypting the data and recording ownership on a smart contract
+- **grantAccess**—that authorizes an app to use users’ data without ever revealing the data itself
+- **revokeAllAccessObservable**—that revokes all iExec apps' access to users’ data
+- **revokeOneAccess**—that revokes an app's access to users’ data
+- **fetchProtectedData**—that retrieves data protected by DataProtector
+- **fetchGrantedAccess**—that provides the list of authorization with associated iExec apps and users to use existing protected data

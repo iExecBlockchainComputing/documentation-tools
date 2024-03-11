@@ -14,7 +14,7 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ## Return value example
 
-```javascript
+```js
 {
     apprestrict: '0xea6912aed5183cd6c1ad9e5e434becb2a060cd0d',
     dataset: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
@@ -34,42 +34,41 @@ const grantedAccess = await dataProtector.grantAccess({
 
 Protected data address on which access will be granted.
 
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
-<strong>    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-</strong>    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
-})
-</code></pre>
+```js
+const grantedAccess = await dataProtector.grantAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
+});
+```
 
 ### authorizedApp
 
 Application address which will be able to process the data in a secured environment.
 
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
+```js
+const grantedAccess = await dataProtector.grantAccess({
     protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
 <strong>    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
 </strong>    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
 })
-</code></pre>
+```
 
-{% hint style="info" %}
-If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
-{% endhint %}
+⚠️ If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
 
 ### authorizedUser
 
 User address who will have the right to use the data without knowing it.
 
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-<strong>    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
-</strong>})
-</code></pre>
+```js
+const grantedAccess = await dataProtector.grantAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
+});
+```
 
-{% hint style="info" %}
-If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
-{% endhint %}
+⚠️If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
 
 ### pricePerAccess (optional)
 

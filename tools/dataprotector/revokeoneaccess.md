@@ -8,9 +8,7 @@ Method to revoke access to a single user.
 const revokeAccess = await dataProtector.revokeOneAccess(grantedAccess);
 ```
 
-{% hint style="info" %}
-The grantedAccess parameter represent the object that can be get from the fetchGrantedAccess() method
-{% endhint %}
+⚠️ The grantedAccess parameter represent the object that can be get from the fetchGrantedAccess() method
 
 ## Return value example
 
