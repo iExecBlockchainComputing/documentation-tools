@@ -3,16 +3,13 @@
 layout: home
 
 hero:
-  name: "test"
-  text: "test"
-  tagline: My great project tagline
+  name: "Dev Tools"
+  text: "iExec tools documentation"
+  tagline: Easiest way to achieve privacy with blockchain
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Overview
+      link: /overview/what-we-do
 
 features:
   - title: Feature A

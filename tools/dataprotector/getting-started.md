@@ -1,19 +1,18 @@
 # Quick start
 
-## 1.  Sandbox
+## 1. Sandbox
 
-{% embed url="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true" %}
+{% embed url="<https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true>" %}
 
-## 2.  Getting started
+## 2. Getting started
 
-### **2.1.  Prerequisites**
+### **2.1. Prerequisites**
 
 Before getting started, ensure that you have the following installed on your system:
 
 \- [**Node.js**](https://nodejs.org/en/) version 18 or higher
 
 \- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
-
 
 ### **2.2. Start a new project**
 
@@ -27,31 +26,25 @@ You can find the project [here](https://github.com/iExecBlockchainComputing/data
 
 Install `dataProtectorSDK` .
 
-{% tabs %}
-{% tab title="npm" %}
-```
+::: code-group
+
+```bash [npm]
 npm install @iexec/dataprotector
 ```
-{% endtab %}
 
-{% tab title="yarn" %}
-```
+```bash [pnpm]
 yarn add @iexec/dataprotector
 ```
-{% endtab %}
 
-{% tab title="pnpm" %}
-```
+```bash [yarn]
 pnpm add @iexec/dataprotector
 ```
-{% endtab %}
 
-{% tab title="bun" %}
-```
+```bash [bun]
 bun add @iexec/dataprotector
 ```
-{% endtab %}
-{% endtabs %}
+
+:::
 
 **This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
@@ -59,35 +52,25 @@ If you use it with Webpack, you need the latest Webpack version and ensure you c
 
 ### **2.4. Instantiate SDK**
 
-{% tabs %}
-{% tab title="Browser" %}
-Instantiate the SDK in your front-end project:
+::: code-group
 
-#### 2.4.1. Basic Instantiation
-
-```javascript
+```js [Browser]
 import { IExecDataProtector } from "@iexec/dataprotector";
 
-const web3Provider = window.ethereum;
+const web3Provider = window.ethereum;
 // instantiate
-const dataProtector = new IExecDataProtector(web3Provider);
+const dataProtector = new IExecDataProtector(web3Provider);
 ```
-{% endtab %}
 
-{% tab title="NodeJS" %}
-Instantiate the SDK in your back-end project:
-
-#### 2.4.1. Basic Instantiation
-
-```javascript
+```js [NodeJS]
 import { IExecDataProtector, getWeb3Provider } from "@iexec/dataprotector";
 
-const { PRIVATE_KEY } = process.env; 
+const { PRIVATE_KEY } = process.env;
 // get web3 provider from a private key
 const web3Provider = getWeb3Provider(PRIVATE_KEY);
 
 // instantiate
 const dataProtector = new IExecDataProtector(web3Provider);
 ```
-{% endtab %}
-{% endtabs %}
+
+:::
