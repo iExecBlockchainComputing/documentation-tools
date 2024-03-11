@@ -38,7 +38,9 @@ const grantedAccess = await dataProtector.grantAccess({
 });
 ```
 
-⚠️ If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
+::: tip
+If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
+:::
 
 ### authorizedUser
 
@@ -52,7 +54,9 @@ const grantedAccess = await dataProtector.grantAccess({
 });
 ```
 
-⚠️If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
+::: tip
+If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
+::
 
 ### pricePerAccess (optional)
 

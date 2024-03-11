@@ -34,6 +34,7 @@ export default defineConfig({
       {
         icon: "youtube",
         link: "https://www.youtube.com/channel/UCwWxZWvKVHn3CXnmDooLWtA",
+      },
     ],
   },
 });

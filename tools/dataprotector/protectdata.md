@@ -115,7 +115,9 @@ const protectedData = await dataProtector.protectData({
 }
 ```
 
-⚠️ The zip file generated is a uint8array, so if you want to handle the binary data or download it consider adding a zip extension to it.
+::: tip
+The zip file generated is a uint8array, so if you want to handle the binary data or download it consider adding a zip extension to it.
+:::
 
 ## Parameters
 
@@ -132,7 +134,9 @@ const protectedData = await dataProtector.protectData({
 });
 ```
 
-⚠️ Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
+::: tip
+Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
+:::
 
 Here is another example of a data object:
 
@@ -159,7 +163,9 @@ const protectedData = await dataProtector.protectData({
 });
 ```
 
-⚠️ The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
+::: tip
+The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
+:::
 
 ## **2. With observable**
 
@@ -234,7 +240,9 @@ const protectedData = await dataProtector.protectData({
 });
 ```
 
-⚠️ Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
+::: tip
+Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
+:::
 
 Here is an other example of a data object:
 
@@ -261,7 +269,9 @@ const protectedData = await dataProtector.protectData({
 });
 ```
 
-⚠️ The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
+::: tip
+The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
+::
 
 ## Return value example
 

@@ -22,7 +22,9 @@ const revokeAllAccessObservable = dataProtector
   });
 ```
 
-⚠️ You need to explicitly subscribe to the observable for `dataProtector` to actually revoke all access.
+::: tip
+You need to explicitly subscribe to the observable for `dataProtector` to actually revoke all access.
+:::
 
 ### Parameters
 

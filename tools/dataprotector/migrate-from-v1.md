@@ -1,6 +1,8 @@
 # Migrate to V2
 
-⚠️ This page concerns projects created with data protector prior or equal to version 0.5.1
+::: tip
+This page concerns projects created with data protector prior or equal to version 0.5.1
+:::
 
 ## Constructor
 

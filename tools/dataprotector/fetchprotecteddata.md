@@ -2,7 +2,9 @@
 
 Method to get all protected data encrypted or filtered by a specific owner and/or a data schema.
 
-⚠️ A data schema is a representation of the structure of the data object.
+::: tip
+A data schema is a representation of the structure of the data object.
+:::
 
 ## Usage
 
