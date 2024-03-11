@@ -8,8 +8,6 @@
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.45",
-    "@unocss/reset": "^0.58.5",
-    "unocss": "^0.58.5"
+    "vitepress": "^1.0.0-rc.45"
   }
 }
