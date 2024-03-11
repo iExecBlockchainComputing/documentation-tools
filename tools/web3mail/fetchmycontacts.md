@@ -4,13 +4,13 @@ Method to get the ETH addresses that gave access to their protected data for mes
 
 ## Usage
 
-```javascript
+```js
 const contactsList = await web3mail.fetchMyContacts();
 ```
 
 ## Return value example
 
-```javascript
+```js
 [
   {
     accessGrantTimestamp: "2023-06-16T09:01:31.683Z",

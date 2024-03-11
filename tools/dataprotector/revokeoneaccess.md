@@ -4,15 +4,25 @@ Method to revoke access to a single user.
 
 ## Usage
 
-```javascript
+```js
 const revokeAccess = await dataProtector.revokeOneAccess(grantedAccess);
 ```
 
 ⚠️ The grantedAccess parameter represent the object that can be get from the fetchGrantedAccess() method
 
+## Parameters
+
+### grantedAccess
+
+The grantedAccess object can be get from the fetchGrantedAccess method.
+
+```js
+const revokeAccess = await dataProtector.revokeOneAccess(grantedAccess); // [!code focus]
+```
+
 ## Return value example
 
-```javascript
+```js
 {
     access: {
         apprestrict: '0xea6912aed5183cd6c1ad9e5e434becb2a060cd0d',
@@ -28,14 +38,3 @@ const revokeAccess = await dataProtector.revokeOneAccess(grantedAccess);
     txHash: '0x9f7e76a220aba21c6a9c79bd1680eaf33b10afc2127593fd7e9a9e2b03c2c9fd'
 }
 ```
-
-## Parameters
-
-### grantedAccess
-
-The grantedAccess object can be get from the fetchGrantedAccess method.
-
-<pre class="language-javascript"><code class="lang-javascript">const revokeAccess = await dataProtector.revokeOneAccess(
-<strong>    grantedAccess
-</strong>)
-</code></pre>

@@ -14,6 +14,78 @@ const listGrantedAccess = await dataProtector.fetchGrantedAccess({
 });
 ```
 
+## Parameters
+
+### protectedData
+
+Protected data address to find related to the granted access.
+
+```js
+const listGrantedAccess = await dataProtector.fetchGrantedAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e", // [!code focus]
+  authorizedApp: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  authorizedUser: "0xth9840a85d5af5bf1d1762f925bdaddc4201f984",
+  page: 1,
+  pageSize: 100,
+});
+```
+
+### authorizedApp
+
+Filter the granted access by an authorized application address.
+
+```js
+const listGrantedAccess = await dataProtector.fetchGrantedAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984", // [!code focus]
+  authorizedUser: "0xth9840a85d5af5bf1d1762f925bdaddc4201f984",
+  page: 1,
+  pageSize: 100,
+});
+```
+
+### authorizedUser (optional)
+
+Filter the granted access by an authorized user address.
+
+```js
+const listGrantedAccess = await dataProtector.fetchGrantedAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  authorizedUser: "0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37", // [!code focus]
+  page: 1,
+  pageSize: 100,
+});
+```
+
+### page (optional)
+
+Specifies the results page to return. The default for this is `0` which returns all results. Pages are indexed starting at page 1. If using this field you may also specify a `pageSize` to control the results.
+
+```js
+const listGrantedAccess = await dataProtector.fetchGrantedAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  authorizedUser: "0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37",
+  page: 1, // [!code focus]
+  pageSize: 100,
+});
+```
+
+### pageSize (optional)
+
+Specifies the number of records in each page of the result set. This is used in conjunction with the optional `page` parameter to constrain the size of the result. The default for this value is `20` but this only comes into play when specifying a `page` parameter.
+
+```js
+const listGrantedAccess = await dataProtector.fetchGrantedAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  authorizedUser: "0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37",
+  page: 1,
+  pageSize: 100, // [!code focus]
+});
+```
+
 ## Return value example
 
 This object has two fields, a `count` parameter listing the number of results, and an array of `GrantedAccess` objects containing all access data. When using the optional paging parameters, the `count` will be limited by the selected `pageSize` parameter.
@@ -36,70 +108,3 @@ This object has two fields, a `count` parameter listing the number of results, a
   ];
 }
 ```
-
-## Parameters
-
-### protectedData
-
-Protected data address to find related to the granted access.
-
-<pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-<strong>    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',</strong>
-    authorizedApp: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
-    authorizedUser: '0xth9840a85d5af5bf1d1762f925bdaddc4201f984',
-    page: 1,
-    pageSize:100
-})
-</code></pre>
-
-### authorizedApp (optional)
-
-Filter the granted access by an authorized application address.
-
-<pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    authorizedApp: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',</strong>
-    authorizedUser: '0xth9840a85d5af5bf1d1762f925bdaddc4201f984',
-    page: 1,
-    pageSize:100
-})
-</code></pre>
-
-### authorizedUser (optional)
-
-Filter the granted access by an authorized user address.
-
-<pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    authorizedApp: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
-<strong>    authorizedUser: '0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37',</strong>
-    page: 1,
-    pageSize:100
-})
-</code></pre>
-
-### page (optional)
-
-Specifies the results page to return. The default for this is `0` which returns all results. Pages are indexed starting at page 1. If using this field you may also specify a `pageSize` to control the results.
-
-<pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    authorizedApp: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
-    authorizedUser: '0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37',
-    <strong>page: 1,</strong>
-    pageSize:100
-})
-</code></pre>
-
-### pageSize (optional)
-
-Specifies the number of records in each page of the result set. This is used in conjunction with the optional `page` parameter to constrain the size of the result. The default for this value is `20` but this only comes into play when specifying a `page` parameter.
-
-<pre class="language-javascript"><code class="lang-javascript">const listGrantedAccess = await dataProtector.fetchGrantedAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    authorizedApp: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
-    authorizedUser: '0x4a3B7c1eF78fA81bDf1aAa314D09a97578b0CA37',
-    page: 1,
-    <strong>pageSize:100</strong>
-})
-</code></pre>

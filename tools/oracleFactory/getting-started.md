@@ -22,39 +22,25 @@ You can find the project [here](https://github.com/iExecBlockchainComputing/iexe
 
 Install `@iexec/iexec-oracle-factory-wrapper`.
 
-{% tabs %}
-{% tab title="npm" %}
+::: code-group
 
-```sh
+```sh [npm]
 npm install @iexec/iexec-oracle-factory-wrapper
 ```
 
-{% endtab %}
-
-{% tab title="yarn" %}
-
-```sh
-yarn add @iexec/iexec-oracle-factory-wrapper
-```
-
-{% endtab %}
-
-{% tab title="pnpm" %}
-
-```sh
+```sh [pnpm]
 pnpm add @iexec/iexec-oracle-factory-wrapper
 ```
 
-{% endtab %}
+```sh [yarn]
+yarn add @iexec/iexec-oracle-factory-wrapper
+```
 
-{% tab title="bun" %}
-
-```sh
+```sh [burn]
 bun add @iexec/iexec-oracle-factory-wrapper
 ```
 
-{% endtab %}
-{% endtabs %}
+:::
 
 **This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
@@ -64,13 +50,9 @@ If you use it with Webpack, you need the latest Webpack version and ensure you c
 
 Import and initialize the Oracle Factory SDK in your application.
 
-{% tabs %}
-{% tab title="Browser" %}
-Instantiate the SDK in your front-end project:
+::: code-group
 
-#### 1.4.1. Basic Instantiation
-
-```javascript
+```js [Browser]
 import { IExecOracleFactory } from "@iexec/iexec-oracle-factory-wrapper";
 
 const web3Provider = window.ethereum;
@@ -78,14 +60,7 @@ const web3Provider = window.ethereum;
 const factory = new IExecOracleFactory(web3Provider);
 ```
 
-{% endtab %}
-
-{% tab title="NodeJS" %}
-Instantiate the SDK in your back-end project:
-
-#### 1.4.1. Basic Instantiation
-
-```javascript
+```js [NodeJS]
 import { IExecOracleFactory, utils } from "@iexec/iexec-oracle-factory-wrapper";
 
 const { PRIVATE_KEY } = process.env;
@@ -97,5 +72,4 @@ const signer = utils.getSignerFromPrivateKey(
 const factory = new IExecOracleFactory(signer);
 ```
 
-{% endtab %}
-{% endtabs %}
+:::

@@ -37,7 +37,7 @@ _NB:_ Undetected binary data are categorized as `application/octet-stream`
 
 ## Usage
 
-```javascript
+```js
 const protectedData = await dataProtector.protectData({
   data: {
     email: "example@gmail.com",
@@ -47,7 +47,7 @@ const protectedData = await dataProtector.protectData({
 
 ## Return value example
 
-```javascript
+```js
 {
   name: "My protected data name",
   address: "0x459FA81e0731e1dd39DD578fa16E31ADe898023e",
@@ -115,9 +115,7 @@ const protectedData = await dataProtector.protectData({
 }
 ```
 
-{% hint style="info" %}
-The zip file generated is a uint8array, so if you want to handle the binary data or download it consider adding a zip extension to it.
-{% endhint %}
+⚠️ The zip file generated is a uint8array, so if you want to handle the binary data or download it consider adding a zip extension to it.
 
 ## Parameters
 
@@ -125,20 +123,20 @@ The zip file generated is a uint8array, so if you want to handle the binary data
 
 The data you want to protect.
 
-<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
-<strong>    data: {
-</strong><strong>        email: 'example@gmail.com'
-</strong><strong>    }
-</strong>})
-</code></pre>
+```js
+const protectedData = await dataProtector.protectData({
+  data: {
+    // [!code focus]
+    email: "example@gmail.com", // [!code focus]
+  }, // [!code focus]
+});
+```
 
-{% hint style="info" %}
-Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
-{% endhint %}
+⚠️ Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
 
 Here is another example of a data object:
 
-```javascript
+```js
 {
     email: 'example@gmail.com',
     SMTPserver: {
@@ -152,24 +150,22 @@ Here is another example of a data object:
 
 The name of the protected data.
 
-<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
-    data: {
-        email: 'example@gmail.com'
-    },
-<strong>    name: 'My protected data name'
-</strong>})
+```js
+const protectedData = await dataProtector.protectData({
+  data: {
+    email: "example@gmail.com",
+  },
+  name: "My protected data name", // [!code focus]
+});
+```
 
-</code></pre>
-
-{% hint style="info" %}
-The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
-{% endhint %}
+⚠️ The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
 
 ## **2. With observable**
 
 ## Usage
 
-```javascript
+```js
 const protectedData = await dataProtector.protectDataObservable({
     data: {
         email: 'example@gmail.com'
@@ -222,6 +218,50 @@ const protectedData = await dataProtector.protectDataObservable({
       }
 })
 ```
+
+## Parameters
+
+### data
+
+The data you want to protect.
+
+```js
+const protectedData = await dataProtector.protectData({
+  data: {
+    // [!code focus]
+    email: "example@gmail.com", // [!code focus]
+  }, // [!code focus]
+});
+```
+
+⚠️ Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
+
+Here is an other example of a data object:
+
+```js
+{
+    email: 'example@gmail.com',
+    SMTPserver: {
+        port: 5000,
+        smtp_server: 'smtp.gmail.com'
+    }
+}
+```
+
+### name (optional)
+
+The name of the protected data.
+
+```js
+const protectedData = await dataProtector.protectData({
+  data: {
+    email: "example@gmail.com",
+  },
+  name: "My protected data name", // [!code focus]
+});
+```
+
+⚠️ The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
 
 ## Return value example
 
@@ -291,48 +331,3 @@ checksum: '0xcc2e86e73a429d7c2c38669ea61db2f07e78300f24687143dbf915133fd316c3'
 owner: '0xda225B8325A1818A4239a68990349987C4221828',
 txHash: '0x83c79bcf6e09861aa41d990024a16145dbb384ac19926789810cf59c94bac14f'
 </code></pre></td></tr><tr><td>PUSH_SECRET_TO_SMS_SIGN_REQUEST</td><td><em>Empty</em></td></tr><tr><td>PUSH_SECRET_TO_SMS_SUCCESS</td><td><em>Empty</em></td></tr></tbody></table>
-
-## Parameters
-
-### data
-
-The data you want to protect.
-
-<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
-<strong>    data: {
-</strong><strong>        email: 'example@gmail.com'
-</strong><strong>    }
-</strong>})
-</code></pre>
-
-{% hint style="info" %}
-Keep in mind that you can create your object with custom keys and any number of them as desired. Following this, the object will be encrypted.
-{% endhint %}
-
-Here is an other example of a data object:
-
-```javascript
-{
-    email: 'example@gmail.com',
-    SMTPserver: {
-        port: 5000,
-        smtp_server: 'smtp.gmail.com'
-    }
-}
-```
-
-### name (optional)
-
-The name of the protected data.
-
-<pre class="language-javascript"><code class="lang-javascript">const protectedData = await dataProtector.protectData({
-    data: {
-        email: 'example@gmail.com'
-    },
-<strong>    name: 'My protected data name'
-</strong>})
-</code></pre>
-
-{% hint style="info" %}
-The name will be public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
-{% endhint %}

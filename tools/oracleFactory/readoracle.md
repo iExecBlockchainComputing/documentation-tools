@@ -7,19 +7,10 @@ the price of Ethereum in USD:
 
 ## Usage
 
-```javascript
+```js
 const readOracleRes = await factory.readOracle(
   "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"
 ); // Content ID of the Oracle
-```
-
-## Return value example
-
-```javascript
-{
-  value: 1995.74,
-  date: 1700047387
-}
 ```
 
 ## Parameters
@@ -28,7 +19,17 @@ const readOracleRes = await factory.readOracle(
 
 Content ID of the Oracle to be read.
 
-<pre class="language-javascript"><code class="lang-javascript">const readOracleRes = await factory.readOracle(
-<strong>  "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"
-</strong>);
-</code></pre>
+```js
+const readOracleRes = await factory.readOracle(
+  "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"
+);
+```
+
+## Return value example
+
+```js
+{
+  value: 1995.74,
+  date: 1700047387
+}
+```

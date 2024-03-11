@@ -2,7 +2,7 @@
 
 ## 1. Sandbox
 
-{% embed url="https://codesandbox.io/p/github/iExecBlockchainComputing/web3mail-sandbox/main?file=/src/web3mail/web3mail.tsx:1,1&preventWorkspaceRedirect=true" %}
+{% embed url="<https://codesandbox.io/p/github/iExecBlockchainComputing/web3mail-sandbox/main?file=/src/web3mail/web3mail.tsx:1,1&preventWorkspaceRedirect=true>" %}
 
 ## 2. Getting started
 
@@ -26,39 +26,25 @@ You can find the project [here](https://github.com/iExecBlockchainComputing/web3
 
 Install `web3MailSDK` .
 
-{% tabs %}
-{% tab title="npm" %}
+::: code-group
 
-```sh
+```sh [npm]
 npm install @iexec/web3mail
 ```
-
-{% endtab %}
-
-{% tab title="yarn" %}
 
 ```sh
 yarn add @iexec/web3mail
 ```
 
-{% endtab %}
-
-{% tab title="pnpm" %}
-
 ```sh
 pnpm add @iexec/web3mail
 ```
-
-{% endtab %}
-
-{% tab title="bun" %}
 
 ```sh
 bun add @iexec/web3mail
 ```
 
-{% endtab %}
-{% endtabs %}
+:::
 
 **This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
@@ -66,13 +52,9 @@ If you use it with Webpack, you need the latest Webpack version and ensure you c
 
 ### **2.4. Instantiate SDK**
 
-{% tabs %}
-{% tab title="Browser" %}
-Instantiate the SDK in your front-end project:
+::: code-group
 
-#### 2.4.1. Basic Instantiation
-
-```javascript
+```js [Browser]
 import { IExecWeb3mail } from "@iexec/web3mail";
 
 const web3Provider = window.ethereum;
@@ -80,14 +62,7 @@ const web3Provider = window.ethereum;
 const web3mail = new IExecWeb3mail(web3Provider);
 ```
 
-{% endtab %}
-
-{% tab title="NodeJS" %}
-Instantiate the SDK in your back-end project:
-
-#### 2.4.1. Basic Instantiation
-
-```javascript
+```js [NodeJS]
 import { IExecWeb3mail, getWeb3Provider } from "@iexec/web3mail";
 
 const { PRIVATE_KEY } = process.env;
@@ -97,5 +72,4 @@ const web3Provider = getWeb3Provider(PRIVATE_KEY);
 const web3mail = new IExecWeb3mail(web3Provider);
 ```
 
-{% endtab %}
-{% endtabs %}
+:::

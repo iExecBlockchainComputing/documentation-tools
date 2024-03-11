@@ -2,7 +2,7 @@
 
 Method to update an existing oracle to have the latest data from the linked API.
 
-Below, following public API which gives ethereum price in usd will be used : https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd
+Below, following public API which gives ethereum price in usd will be used : <https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd>
 
 ## Usage
 
@@ -14,6 +14,42 @@ const updateOracleRes = await factory.updateOracle({
 });
 ```
 
+## Parameters
+
+### cid
+
+Content ID of the Oracle that needs to be updated.
+
+```js
+const updateOracleRes = await factory.updateOracle({
+  cid: "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit",
+   // Other parameters...
+})
+```
+
+### workerpool
+
+Address of the workerpool that should perform the update.
+Workerpool defined below is : 0x0e7bc972c99187c191a17f3cae4a2711a4188c3f.
+
+```js
+const updateOracleRes = await factory.updateOracle({
+   workerpool: "0x0e7bc972c99187c191a17f3cae4a2711a4188c3f",
+   // Other parameters...
+})
+```
+
+### targetBlockchains (optional)
+
+Array of target blockchain IDs where the oracle is deployed. 137 for polygon, 134 for iExec.
+
+```js
+const updateOracleRes = await factory.updateOracle({
+  targetBlockchains: ["134", "137"],
+   // Other parameters...
+})
+```
+
 ## Return value example
 
 ```javascript
@@ -23,36 +59,3 @@ const updateOracleRes = await factory.updateOracle({
   status: 'REVEALING'
 }
 ```
-
-## Parameters
-
-### cid
-
-Content ID of the Oracle that needs to be updated.
-
-<pre class="language-javascript"><code class="lang-javascript">const updateOracleRes = await factory.updateOracle({
-<strong>    cid: "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit",
-</strong>    // Other parameters...
-})
-</code></pre>
-
-### workerpool
-
-Address of the workerpool that should perform the update.
-Workerpool defined below is : 0x0e7bc972c99187c191a17f3cae4a2711a4188c3f.
-
-<pre class="language-javascript"><code class="lang-javascript">const updateOracleRes = await factory.updateOracle({
-<strong>    workerpool: "0x0e7bc972c99187c191a17f3cae4a2711a4188c3f",
-</strong>    // Other parameters...
-})
-</code></pre>
-
-### targetBlockchains (optional)
-
-Array of target blockchain IDs where the oracle is deployed. 137 for polygon, 134 for iExec.
-
-<pre class="language-javascript"><code class="lang-javascript">const updateOracleRes = await factory.updateOracle({
-<strong>    targetBlockchains: ["134", "137"],
-</strong>    // Other parameters...
-})
-</code></pre>

@@ -4,12 +4,82 @@ Method to grant access to a protected data from an application that will process
 
 ## Usage
 
-```javascript
+```js
 const grantedAccess = await dataProtector.grantAccess({
   protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
   authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
   authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
 });
+```
+
+## Parameters
+
+### protectedData
+
+Protected data address on which access will be granted.
+
+```js
+const grantedAccess = await dataProtector.grantAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e", // [!code focus]
+  authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
+});
+```
+
+### authorizedApp
+
+Application address which will be able to process the data in a secured environment.
+
+```js
+const grantedAccess = await dataProtector.grantAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e", // [!code focus]
+  authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
+});
+```
+
+⚠️ If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
+
+### authorizedUser
+
+User address who will have the right to use the data without knowing it.
+
+```js
+const grantedAccess = await dataProtector.grantAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1", // [!code focus]
+});
+```
+
+⚠️If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
+
+### pricePerAccess (optional)
+
+The defined price in nRLC for each access of the data.
+
+```js
+const grantedAccess = await dataProtector.grantAccess({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
+  pricePerAccess: 3, // [!code focus]
+});
+```
+
+### numberOfAccess (optional)
+
+The number of times the data can be processed and used. The numberOfAccess defaults to 1 if omitted.
+
+```js
+const grantedAccess = await dataProtector.grantAccess(
+    args: {
+        protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+        authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+        authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
+      numberOfAccess: 10  // [!code focus]
+  }
+)
 ```
 
 ## Return value example
@@ -27,71 +97,3 @@ const grantedAccess = await dataProtector.grantAccess({
     workerpoolrestrict: '0x0000000000000000000000000000000000000000'
 }
 ```
-
-## Parameters
-
-### protectedData
-
-Protected data address on which access will be granted.
-
-```js
-const grantedAccess = await dataProtector.grantAccess({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
-  authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
-});
-```
-
-### authorizedApp
-
-Application address which will be able to process the data in a secured environment.
-
-```js
-const grantedAccess = await dataProtector.grantAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-<strong>    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-</strong>    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
-})
-```
-
-⚠️ If you want to authorize every app to use the protected data, write **0x00000000000000000000000000000000000000**
-
-### authorizedUser
-
-User address who will have the right to use the data without knowing it.
-
-```js
-const grantedAccess = await dataProtector.grantAccess({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  authorizedApp: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
-  authorizedUser: "0xecb504d39723b0be0e3a9aa33d646642d1051ee1",
-});
-```
-
-⚠️If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
-
-### pricePerAccess (optional)
-
-The defined price in nRLC for each access of the data.
-
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
-    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-<strong>    pricePerAccess: 3
-</strong>})
-</code></pre>
-
-### numberOfAccess (optional)
-
-The number of times the data can be processed and used. The numberOfAccess defaults to 1 if omitted.
-
-<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess(
-    args: {
-        protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-        authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-        authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-<strong>        numberOfAccess: 10
-</strong>    }
-)
-</code></pre>

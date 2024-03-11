@@ -28,19 +28,19 @@ Install `dataProtectorSDK` .
 
 ::: code-group
 
-```bash [npm]
+```sh [npm]
 npm install @iexec/dataprotector
 ```
 
-```bash [pnpm]
+```sh [pnpm]
 yarn add @iexec/dataprotector
 ```
 
-```bash [yarn]
+```sh [yarn]
 pnpm add @iexec/dataprotector
 ```
 
-```bash [bun]
+```sh [bun]
 bun add @iexec/dataprotector
 ```
 

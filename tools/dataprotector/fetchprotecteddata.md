@@ -12,6 +12,37 @@ const listProtectedData = await dataProtector.fetchProtectedData({
 });
 ```
 
+## Parameters
+
+### owner (optional)
+
+Owner address to find related protected data.
+
+```js
+const listProtectedData = await dataProtector.fetchProtectedData({
+  owner: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e", // [!code focus]
+});
+```
+
+### dataSchema (optional)
+
+Filter the protected data by a specific schema.
+
+```js
+const listProtectedData = await dataProtector.fetchProtectedData({
+  schema: {
+    // [!code focus]
+    email: "string", // [!code focus]
+    avatar: "JPEG", // [!code focus]
+    smtp: {
+      // [!code focus]
+      server: "string", // [!code focus]
+      port: "number", // [!code focus]
+    }, // [!code focus]
+  },
+});
+```
+
 ## Return value example
 
 ```js
@@ -32,30 +63,3 @@ const listProtectedData = await dataProtector.fetchProtectedData({
   },
 ];
 ```
-
-## Parameters
-
-### owner (optional)
-
-Owner address to find related protected data.
-
-<pre class="language-javascript"><code class="lang-javascript">const listProtectedData = await dataProtector.fetchProtectedData({
-<strong>    owner: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e'
-</strong>})
-</code></pre>
-
-### dataSchema (optional)
-
-Filter the protected data by a specific schema.
-
-<pre class="language-javascript"><code class="lang-javascript">const listProtectedData = await dataProtector.fetchProtectedData({
-<strong>    schema: {
-</strong>        "email": "string",
-        "avatar": "JPEG",
-        "smtp": {
-            "server": "string",
-            "port": "number"
-        }
-    }
-})
-</code></pre>
