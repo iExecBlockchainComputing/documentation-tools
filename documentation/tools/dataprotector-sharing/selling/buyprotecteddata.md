@@ -9,38 +9,29 @@ to keep it for yourself.
 
 ## Usage
 
-```javascript
-const { success } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: '0x123abc...', // required
-  collectionTokenIdTo: 12,
-  appAddress: '0xdef456...',
+```js
+const { txHash } = await dataProtectorSharing.buyProtectedData({
+  protectedDataAddress: "0x123abc...",
 });
 ```
 
-{% hint style="info" %}
-Input parameters type: `BuyProtectedDataParams`
-{% endhint %}
-
-## Return value example
-
-```json
-{
-  "success": true,
-  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
-}
-```
-
-{% hint style="info" %}
-Response type: `SuccessWithTransactionHash`
-{% endhint %}
-
 ## Parameters
 
-### protectedDataAddress (required)
+```js
+import { type BuyProtectedDataParams } from "@iexec/dataprotector";
+```
+
+### protectedDataAddress
 
 `AddressOrENS`
 
 Address of the protected data you'd like to buy.
+
+```js
+const { txHash } = await dataProtectorSharing.buyProtectedData({
+  protectedDataAddress: "0x123abc...", // [!code focus]
+});
+```
 
 ### collectionTokenIdTo
 
@@ -50,14 +41,42 @@ Collection token id to which you'd like to transfer the ownership of the protect
 The Data Sharing smart-contract will still be the technical owner of the protected data, but you'll
 still fully own it as you own the collection to which it'll transferred.
 
-### appAddress
+```js
+const { txHash } = await dataProtectorSharing.buyProtectedData({
+  protectedDataAddress: "0x123abc...",
+  collectionTokenIdTo: 12, // [!code focus]
+  appAddress: "0xdef456...",
+});
+```
+
+### appWhitelist
 
 `AddressOrENS | undefined`
 
+The whitelist smart contract containing application that will be set to consume your new protected data in your your collection.
+
+```js
+const { txHash } = await dataProtectorSharing.buyProtectedData({
+  protectedDataAddress: "0x123abc...",
+  collectionTokenIdTo: 12,
+  appAddress: "0xdef456...", // [!code focus]
+});
+```
+
+## Return value example
+
+```js
+import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+```
+
+The transaction hash of the function action.
+
+```json
+{
+  "txHash": "0x33..."
+}
+```
+
+## Error
+
 TODO
-
-## Possible errors
-
-```
-This protected data is currently not for sale.
-```

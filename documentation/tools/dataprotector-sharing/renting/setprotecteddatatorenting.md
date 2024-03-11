@@ -4,33 +4,80 @@ Method to allow a protected data to be rented.
 
 ## Usage
 
-```javascript
-const setForRentingResult = await dataProtectorSharing.setProtectedDataToRenting({
-  protectedDataAddress: '0x123abc...',
-  priceInNRLC: 1_000_000_000, // 1 RLC
-  durationInSeconds: 60 * 60 * 24 * 30, // 30 days
-});
-```
-
-## Return value example
-
-```json
-{
-  "success": true,
-  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
-}
+```js
+const setForRentingResult =
+  await dataProtectorSharing.setProtectedDataToRenting({
+    protectedDataAddress: "0x123abc...",
+    priceInNRLC: 1_000_000_000, // 1 RLC
+    durationInSeconds: 60 * 60 * 24 * 30, // 30 days
+  });
 ```
 
 ## Parameters
 
-### protectedDataAddress (required)
+```js
+import { type SetProtectedDataToRentingParams } from "@iexec/dataprotector";
+```
 
-Address of the protected data.
+### protectedDataAddress
 
-### priceInNRLC (required)
+`AddressOrENS`
 
-The price you ask from someone who wants to rent the protected data.
+Address of the protected data you'd like to set renting parameters.
 
-### durationInSeconds (required)
+```js
+const setForRentingResult =
+  await dataProtectorSharing.setProtectedDataToRenting({
+    protectedDataAddress: "0x123abc...", // [!code focus]
+    priceInNRLC: 1_000_000_000,
+    durationInSeconds: 60 * 60 * 24 * 30,
+  });
+```
+
+### priceInNRLC
+
+`number`
+
+The price in nano RLC you ask from someone who wants to rent the protected data.
+
+```js
+const setForRentingResult =
+  await dataProtectorSharing.setProtectedDataToRenting({
+    protectedDataAddress: "0x123abc...",
+    priceInNRLC: 1_000_000_000, // [!code focus]
+    durationInSeconds: 60 * 60 * 24 * 30,
+  });
+```
+
+### durationInSeconds
+
+`number`
 
 The duration of the rental in seconds.
+
+```js
+const setForRentingResult =
+  await dataProtectorSharing.setProtectedDataToRenting({
+    protectedDataAddress: "0x123abc...",
+    priceInNRLC: 1_000_000_000,
+    durationInSeconds: 60 * 60 * 24 * 30, // [!code focus]
+  });
+```
+
+## Return value example
+
+```js
+import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+```
+
+The transaction hash of the function action.
+
+```json
+{
+  "txHash": "0x33..."
+}
+```
+
+## Error
+
+TODO

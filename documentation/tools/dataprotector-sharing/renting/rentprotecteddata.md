@@ -4,23 +4,44 @@ Method to rent a protected data.
 
 ## Usage
 
-```javascript
+```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
-  protectedDataAddress: '0x123abc...',
+  protectedDataAddress: "0x123abc...",
+});
+```
+
+## Parameters
+
+```js
+import { type RentProtectedDataParams } from "@iexec/dataprotector";
+```
+
+### protectedDataAddress (required)
+
+`AddressOrENS`
+
+Address of the protected data that you'd like rent.
+
+```js
+const rentResult = await dataProtectorSharing.rentProtectedData({
+  protectedDataAddress: "0x123abc...",
 });
 ```
 
 ## Return value example
 
+```js
+import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+```
+
+The transaction hash of the function action.
+
 ```json
 {
-  "success": true,
-  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
+  "txHash": "0x33..."
 }
 ```
 
-## Parameters
+## Error
 
-### protectedDataAddress (required)
-
-Address of the protected data.
+TODO

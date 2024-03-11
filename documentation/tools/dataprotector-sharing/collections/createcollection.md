@@ -9,17 +9,25 @@ A wallet address may have multiple collections.
 
 ## Usage
 
-```javascript
+```js
 const createCollectionResult = await dataProtectorSharing.createCollection();
 ```
 
-## Return value example
+## Return value
 
-Response type: `SuccessWithTransactionHash`
+```js
+import { type CreateCollectionResponse } from "@iexec/dataprotector";
+```
+
+The collection token ID created and the transaction hash of the function action.
 
 ```json
 {
   "collectionId": 12,
-  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
+  "txHash": "0x33..."
 }
 ```
+
+## Error
+
+TODO

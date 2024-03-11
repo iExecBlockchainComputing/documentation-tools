@@ -3,11 +3,12 @@
 Method to get all distribution params from a protected data.
 
 Inside a collection, a protected data can be in a number of different states:
- - Not distributed, ie. only the collection's owner can see it
- - For free
- - For rent
- - For rent AND included in the subscription
- - For sale
+
+- Not distributed, ie. only the collection's owner can see it
+- For free
+- For rent
+- For rent AND included in the subscription
+- For sale
 
 ## Usage
 
@@ -15,11 +16,17 @@ Input parameters type: `GetProtectedDataPricingParams`
 
 ```javascript
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
-  protectedDataAddress: "0x123..."
+  protectedDataAddress: "0x123...",
 });
 ```
 
-## Return value example
+## Parameters
+
+### protectedDataAddress
+
+Address of the protected data you'd like to get the pricing parameters.
+
+## Return value
 
 Response type: `GetProtectedDataPricingResponse`
 
@@ -34,12 +41,6 @@ Response type: `GetProtectedDataPricingResponse`
 }
 ```
 
-## Parameters
-
-### protectedDataAddress (required)
-
-Address of the protected data you'd like to get the pricing parameters.
-
-## Possible errors
+## Error
 
 This method might throw if the subgraph is not reachable.

@@ -7,39 +7,82 @@ smart-contract will check that the given user has a currently valid subscription
 
 ## Usage
 
-```javascript
+```js
 const durationInDays = 30;
 
-const setSubscriptionParamsResult = await dataProtectorSharing.setSubscriptionParams({
-  collectionId: 12,
-  priceInNRLC: BigInt(priceInNrlc),
-  durationInSeconds: durationInDays * 60 * 60 * 24,
-});
-```
-
-## Return value example
-
-```json
-{
-  "success": true, 
-  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
-}
+const setSubscriptionParamsResult =
+  await dataProtectorSharing.setSubscriptionParams({
+    collectionId: 12,
+    priceInNRLC: BigInt(priceInNrlc),
+    durationInSeconds: durationInDays * 60 * 60 * 24,
+  });
 ```
 
 ## Parameters
 
-### collectionId (required)
+```js
+import { type SetSubscriptionParams } from "@iexec/dataprotector";
+```
+
+### collectionId
 
 Collection ID to which you'd like to set the subscription params.
 
-### priceInNRLC (required)
+```js
+const durationInDays = 30;
 
-The price it's going to cost a subscriber to access your collection.
+const setSubscriptionParamsResult =
+  await dataProtectorSharing.setSubscriptionParams({
+    collectionId: 12, // [!code focus]
+    priceInNRLC: BigInt(priceInNrlc),
+    durationInSeconds: durationInDays * 60 * 60 * 24,
+  });
+```
 
-Unit is nRLC (nano RLC).
+### priceInNRLC
 
-### durationInSeconds (required)
+The price (in nano RLC) it's going to cost a subscriber to access your collection.
 
-The duration for a period of subscription.
+```js
+const durationInDays = 30;
 
-Unit is seconds.
+const setSubscriptionParamsResult =
+  await dataProtectorSharing.setSubscriptionParams({
+    collectionId: 12,
+    priceInNRLC: BigInt(priceInNrlc), // [!code focus]
+    durationInSeconds: durationInDays * 60 * 60 * 24,
+  });
+```
+
+### durationInSeconds
+
+The duration (in seconds) for a period of subscription.
+
+```js
+const durationInDays = 30;
+
+const setSubscriptionParamsResult =
+  await dataProtectorSharing.setSubscriptionParams({
+    collectionId: 12,
+    priceInNRLC: BigInt(priceInNrlc),
+    durationInSeconds: durationInDays * 60 * 60 * 24, // [!code focus]
+  });
+```
+
+## Return value
+
+```js
+import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+```
+
+The transaction hash of the function action.
+
+```json
+{
+  "txHash": "0x33..."
+}
+```
+
+## Error
+
+TODO

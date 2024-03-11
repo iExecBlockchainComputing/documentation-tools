@@ -8,40 +8,59 @@ protected data for their own use.
 
 ## Usage
 
-```javascript
+```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
-  protectedDataAddress: '0x123abc...', // required
-  priceInNRLC: 2, // required
+  protectedDataAddress: "0x123abc...",
+  priceInNRLC: 2,
 });
 ```
 
-{% hint style="info" %}
-Input parameters type: `SetProtectedDataForSaleParams`
-{% endhint %}
-
-## Return value example
-
-```json
-{
-  "success": true,
-  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
-}
-```
-
-{% hint style="info" %}
-Response type: `SuccessWithTransactionHash`
-{% endhint %}
-
 ## Parameters
 
-### protectedDataAddress (required)
+```js
+import { type SetProtectedDataForSaleParams } from "@iexec/dataprotector";
+```
+
+### protectedDataAddress
 
 `AddressOrENS`
 
-Address of the protected data.
+Address of the protected data that you'd like to set for sale.
 
-### priceInNRLC (required)
+```js
+const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
+  protectedDataAddress: "0x123abc...", // [!code focus]
+  priceInNRLC: 2,
+});
+```
+
+### priceInNRLC
 
 `number`
 
-The price you ask from someone who wants to buy the protected data.
+The price in nano RLC you ask from someone who wants to buy the protected data.
+
+```js
+const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
+  protectedDataAddress: "0x123abc...",
+  priceInNRLC: 2, // [!code focus]
+});
+```
+
+## Return value
+
+```js
+import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+```
+
+The transaction hash of the function action.
+
+```json
+{
+  "txHash": "0x33..."
+}
+```
+
+## Error
+
+TODO

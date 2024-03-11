@@ -5,32 +5,45 @@ Method to remove a protected data for sale.
 ## Usage
 
 ```javascript
-const notForSaleAymoreResult = await dataProtectorSharing.removeProtectedDataForSale({
-  protectedDataAddress: '0x123abc...', // required
-});
+const notForSaleAymoreResult =
+  await dataProtectorSharing.removeProtectedDataForSale({
+    protectedDataAddress: "0x123abc...",
+  });
 ```
-
-{% hint style="info" %}
-Input parameters type: `RemoveProtectedDataForSaleParams`
-{% endhint %}
-
-## Return value example
-
-```json
-{
-  "success": true,
-  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
-}
-```
-
-{% hint style="info" %}
-Response type: `SuccessWithTransactionHash`
-{% endhint %}
 
 ## Parameters
 
-### protectedDataAddress (required)
+```js
+import { type RemoveProtectedDataForSaleParams } from "@iexec/dataprotector";
+```
+
+### protectedDataAddress
 
 `AddressOrENS`
 
-Address of the protected data.
+Address of the protected data that you'd like to remove for sale.
+
+```javascript
+const notForSaleAymoreResult =
+  await dataProtectorSharing.removeProtectedDataForSale({
+    protectedDataAddress: "0x123abc...", // [!code focus]
+  });
+```
+
+## Return value example
+
+```js
+import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+```
+
+The transaction hash of the function action.
+
+```json
+{
+  "txHash": "0x33..."
+}
+```
+
+## Error
+
+TODO

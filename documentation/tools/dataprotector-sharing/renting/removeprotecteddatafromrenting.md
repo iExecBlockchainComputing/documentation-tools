@@ -7,23 +7,46 @@ end of their rental period.
 
 ## Usage
 
-```javascript
-const notForRentingAymoreResult = await dataProtectorSharing.removeProtectedDataFromRenting({
-  protectedDataAddress: '0x123abc...',
-});
-```
-
-## Return value example
-
-```json
-{
-  "success": true,
-  "txHash": "0x33e58a89631e6b4271528a1a65eaa9717bf5d2e098602f164e30fe56585895e6"
-}
+```js
+const notForRentingAnymoreResult =
+  await dataProtectorSharing.removeProtectedDataFromRenting({
+    protectedDataAddress: "0x123abc...",
+  });
 ```
 
 ## Parameters
 
-### protectedDataAddress (required)
+```js
+import { type RemoveProtectedDataFromRentingParams } from "@iexec/dataprotector";
+```
 
-Address of the protected data.
+### protectedDataAddress
+
+`AddressOrENS`
+
+Address of the protected data you'd like to remove from renting.
+
+```js
+const notForRentingAnymoreResult =
+  await dataProtectorSharing.removeProtectedDataFromRenting({
+    protectedDataAddress: "0x123abc...", // [!code focus]
+  });
+```
+
+## Return value example
+
+```js
+import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+```
+
+The transaction hash of the function action.
+
+```json
+{
+  "txHash": "0x33..."
+}
+```
+
+## Error
+
+TODO

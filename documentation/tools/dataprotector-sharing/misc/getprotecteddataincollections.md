@@ -8,21 +8,111 @@ subscription to the corresponding collection.
 ## Usage
 
 ```javascript
+const protectedData =
+  await dataProtectorSharing.getProtectedDataInCollections();
+```
+
+## Parameters
+
+```js
+import { type GetProtectedDataInCollectionsParams } from "@iexec/dataprotector";
+```
+
+### requiredSchema
+
+`DataSchema | undefined`
+
+```javascript
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
+  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" }, // [!code focus]
   collectionTokenId: 12,
-  collectionOwner: '0x123...',
-  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
+  collectionOwner: "0x123...",
   creationTimestampGte: 1707237580,
   page: 3,
-  pageSize: 25
+  pageSize: 25,
 });
 ```
 
-{% hint style="info" %}
-Input parameters type: `GetProtectedDataInCollectionsParams`
-{% endhint %}
+### collectionTokenId
 
-## Return value example
+`number | undefined`
+
+```javascript
+const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
+  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  collectionTokenId: 12, // [!code focus]
+  collectionOwner: "0x123...",
+  creationTimestampGte: 1707237580,
+  page: 3,
+  pageSize: 25,
+});
+```
+
+### collectionOwner
+
+`AddressOrENS | undefined`
+
+```javascript
+const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
+  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  collectionTokenId: 12,
+  collectionOwner: "0x123...", // [!code focus]
+  creationTimestampGte: 1707237580,
+  page: 3,
+  pageSize: 25,
+});
+```
+
+### creationTimestampGte
+
+`number | undefined`
+
+```javascript
+const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
+  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  collectionTokenId: 12,
+  collectionOwner: "0x123...",
+  creationTimestampGte: 1707237580, // [!code focus]
+  page: 3,
+  pageSize: 25,
+});
+```
+
+### page
+
+`number | undefined`
+
+```javascript
+const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
+  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  collectionTokenId: 12,
+  collectionOwner: "0x123...",
+  creationTimestampGte: 1707237580,
+  page: 3, // [!code focus]
+  pageSize: 25,
+});
+```
+
+### pageSize
+
+`number | undefined`
+
+```javascript
+const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
+  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  collectionTokenId: 12,
+  collectionOwner: "0x123...",
+  creationTimestampGte: 1707237580,
+  page: 3,
+  pageSize: 25, // [!code focus]
+});
+```
+
+## Return value
+
+```js
+import { type ProtectedDataInCollection } from "@iexec/dataprotector";
+```
 
 ```json
 [
@@ -39,10 +129,6 @@ Input parameters type: `GetProtectedDataInCollectionsParams`
 ]
 ```
 
-{% hint style="info" %}
-Response type: `Promise<ProtectedDataInCollection[]>`
-{% endhint %}
-
-## Possible errors
+## Error
 
 TODO
