@@ -15,12 +15,13 @@ const transferResponse = await dataProtector.transferOwnership({
 
 ```javascript
 [
-    {
-        "address": "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-        "to": "0xnewowner...",
-        "txHash": "0xabc123..."
-    }
-]
+  {
+    address: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    to: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+    txHash:
+      "0x9f7e76a220aba21c6a9c79bd1680eaf33b10afc2127593fd7e9a9e2b03c2c9fd",
+  },
+];
 ```
 
 ## Parameters

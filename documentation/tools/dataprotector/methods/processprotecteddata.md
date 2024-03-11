@@ -6,6 +6,7 @@ Allows processing a protected dataset through use of a specified iExec applicati
 You must ensure this application has authorization to use the `protectedData`. You may grant this permission using the [`grantAccess`](./grantaccess.md) method.
 {% endhint %}
 
+
 ## Usage
 
 ```javascript
@@ -15,7 +16,7 @@ const taskid = await dataProtector.processProtectedData({
     maxPrice: 10,
     args: 'arg1 arg2',
     inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
-    secrets: ['secret1', 'secret2'],
+    secrets: ['secret1', 'secret2']
 });
 ```
 

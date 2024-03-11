@@ -123,16 +123,16 @@ You may invoke the `protectData` method using either the promise pattern or the 
 
 ```javascript
 const protectedData = await dataProtector.protectData({
-    data: {
-        email: 'example@gmail.com'
-    }
-})
+  data: {
+    email: "example@gmail.com",
+  },
+});
 ```
 
 #### Return value example with promise pattern
 
 ```javascript
-{ 
+{
   name: "My protected data name",
   address: "0x459FA81e0731e1dd39DD578fa16E31ADe898023e",
   owner: "0xda225B8325A1818A4239a68990349987C4221828",
@@ -197,7 +197,7 @@ const protectedData = await dataProtector.protectDataObservable({
               break;
             default:
           }
-      
+
       },
       error: (e) => {
         //Setup how you handle errors
@@ -230,3 +230,4 @@ checksum: '0xcc2e86e73a429d7c2c38669ea61db2f07e78300f24687143dbf915133fd316c3'
 owner: '0xda225B8325A1818A4239a68990349987C4221828',
 txHash: '0x83c79bcf6e09861aa41d990024a16145dbb384ac19926789810cf59c94bac14f'
 </code></pre></td></tr><tr><td>PUSH_SECRET_TO_SMS_SIGN_REQUEST</td><td><em>Empty</em></td></tr><tr><td>PUSH_SECRET_TO_SMS_SUCCESS</td><td><em>Empty</em></td></tr></tbody></table>
+

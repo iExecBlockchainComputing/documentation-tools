@@ -1,12 +1,12 @@
 # Table of contents
 
-* [iExec tools documentation](README.md)
+- [iExec tools documentation](README.md)
 
 ## Overview
 
-* [💡 What we do](overview/what-we-do.md)
-* [📽 Use case demo](overview/use-case-demo/README.md)
-  * [Privacy Enhancing Marketing](overview/use-case-demo/privacy-enhancing-marketing.md)
+- [💡 What we do](overview/what-we-do.md)
+- [📽 Use case demo](overview/use-case-demo/README.md)
+  - [Privacy Enhancing Marketing](overview/use-case-demo/privacy-enhancing-marketing.md)
 
 ## Tools
 
@@ -32,7 +32,6 @@
     * [createOracle](tools/oracle-factory/methods/createoracle.md)
     * [readOracle](tools/oracle-factory/methods/readoracle.md)
     * [updateOracle](tools/oracle-factory/methods/updateoracle.md)
-
 ## Help
 
-* [🆘 Contact us](help/contact-us.md)
+- [🆘 Contact us](help/contact-us.md)

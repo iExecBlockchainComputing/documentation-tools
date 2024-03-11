@@ -36,10 +36,10 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ***protectedData (required)***
 
+
 The address of the protected data supplied by the user.
 
 ***authorizedApp (required)***
-
 The address of the application you wish to authorize to process the `protectedData` within a secure execution environment. You may specify either a single application or an application whitelist. To specify a whitelist, you provide the ETH address of an [iExec Whitelist Smart Contract](https://github.com/iExecBlockchainComputing/whitelist-smart-contract/tree/main). This smart contract aggregates multiple application versions. This allows you to introduce new versions of your application without needing to grant access for the `protectedData` each time you do so.
 
 {% hint style="info" %}
@@ -49,7 +49,6 @@ iExec maintains a whitelist for the Web3Mail distributed application. Granting a
 {% endhint %}
 
 ***authorizedUser (required)***
-
 The address of the user you wish to authorize to use the `protectedData`. Note that these users may not view or manipulate the data. This only grants permission for the user to submit the data to an iExec application.
 
 {% hint style="info" %}
@@ -57,7 +56,6 @@ You may authorize all users to use the protected data by setting this to **0x000
 {% endhint %}
 
 ***pricePerAccess (optional)***
-
 Allows specifying an optional nRLC cost associated with every access of the protected data.
 
 *default*: 0

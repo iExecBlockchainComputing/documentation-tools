@@ -39,7 +39,7 @@ The return value of this operation confirms the `granted access` object values a
         volume: '1',
         workerpoolrestrict: '0x0000000000000000000000000000000000000000'
     },
-    txHash: '0x9f7e76a220aba21c6a9c79bd1680eaf33b10afc2127593fd7e9a9e2b03c2c9fd'     
+    txHash: '0x9f7e76a220aba21c6a9c79bd1680eaf33b10afc2127593fd7e9a9e2b03c2c9fd'
 }
 ```
 
@@ -65,7 +65,7 @@ This is a nested `grantedAccess` object providing details on the prior granted a
 **workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
 **salt** - random value to make an order unique and reusable as nonce in a blockchain transaction  
 **sign** - order signature of all the `grantedAccess` fields  
-**tag** - defines whether a `protectedData` is usable in a TEE environment; `0x00` is TEE while `0x03` is non-TEE
+**tag** - defines whether a `protectedData` is usable in a TEE environment (Trusted Execution Environment); `0x00` is TEE while `0x03` is non-TEE
 
 ***txHash***
 

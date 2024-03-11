@@ -28,21 +28,21 @@ The `name` and `address` fields in the result object(s) represent the name provi
 
 ```javascript
 [
-    {
-        name: 'John Doe professional email address',
-        address: '0x7a35BfD91a8D3Cfe0B8Fd8B1317e4Bc21dDc9aF2',
-        owner: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-        creationTimestamp: 1687528535,
-        schema: {
-            "email": "string",
-            "avatar": "JPEG",
-            "smtp": {
-                "server": "string",
-                "port": "number"
-            }
-        }
-    }  
-]
+  {
+    name: "John Doe professional email address",
+    address: "0x7a35BfD91a8D3Cfe0B8Fd8B1317e4Bc21dDc9aF2",
+    owner: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+    creationTimestamp: 1687528535,
+    schema: {
+      email: "string",
+      avatar: "JPEG",
+      smtp: {
+        server: "string",
+        port: "number",
+      },
+    },
+  },
+];
 ```
 
 ## Parameters
@@ -59,8 +59,9 @@ Provides a list of protected data objects matching this schema.
 
 This method returns an array of objects containing the protectedData information queried. Each object contains the following parameters:
 
-* **name**
-* **adress**
-* **owner**
-* **creationTimestamp**
-* **schema**
+* **name**: Name specified when the protected data was created. This information is public and visible on-chain.
+* **adress**: ETH address of the protected data.
+* **owner**: ETH address of the protected data owner.
+* **creationTimestamp**: Timestamp specifying when the protected data was created, expressed in milliseconds since the epoch. This timestamp provides precise information about the moment of creation and can be used for chronological ordering or time-based operations.
+
+* **schema**: Data schema for the protected data as defined when the protected data was created (see [protectedData](protectdata.md)). `schema` provides a structured representation of the protected data format and attributes. This field plays a crucial role in understanding and interpreting the underlying structure of the sensitive information.
