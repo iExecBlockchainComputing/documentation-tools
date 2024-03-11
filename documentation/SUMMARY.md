@@ -12,6 +12,7 @@
 
 - [Overview](tools/dataprotector/README.md)
 - [Quick start](tools/dataprotector/quick-start.md)
+- [Migrate to V2](tools/dataprotector/migrate-to-v2.md)
 - [Initial methods](tools/dataprotector/methods/README.md)
   - [protectData](tools/dataprotector/methods/protectdata.md)
   - [grantAccess](tools/dataprotector/methods/grantaccess.md)
@@ -42,6 +43,7 @@
   - [getProtectedDataInCollections](tools/dataprotector-sharing/misc/getprotecteddataincollections.md)
   - [getProtectedDataPricingParams](tools/dataprotector-sharing/misc/getprotecteddatapricingparams.md)
   - [consumeProtectedData](tools/dataprotector-sharing/misc/consumeprotecteddata.md)
+- [Migrate to V2](tools/dataprotector/migrate-to-v2.md)
 
 ## ✉ Web3Mail
 
