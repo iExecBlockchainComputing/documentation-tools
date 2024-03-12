@@ -25,6 +25,8 @@ const sendEmail = await web3mail.sendEmail({
 
 ## Return value example
 
+The `sendEmail` method returns a unique identifier for the email task on the iExec side chain. You can view the status of the `sendEmail` method by monitoring the task on the [iExec Explorer](https://explorer.iex.ec/bellecour).
+
 ```javascript
 {
   taskId: "0x882cbfb34453f260dfa14d224fd9ae0263edbfcb",
@@ -85,7 +87,7 @@ Allows specifying the workerpool that will run the Web3Mail application.
 
 *default*: iExec's production workerpool
 
-### dataMaxPrice (optional)
+***dataMaxPrice (optional)***
 
 Allows specifying the maximum amount (in nRLC) you are willing to pay the email address owner for using their data. The owner of the protected email address receives this as a payment for sharing their data.
 
@@ -93,7 +95,7 @@ Allows specifying the maximum amount (in nRLC) you are willing to pay the email 
 
 *default*: 0
 
-### appMaxPrice (optional)
+***appMaxPrice (optional)***
 
 Allows specifying the maximum amount (in nRLC) you are willing to pay the Web3Mail app provider (iExec) for using the Web3Mail application.
 
@@ -101,10 +103,18 @@ Allows specifying the maximum amount (in nRLC) you are willing to pay the Web3Ma
 
 *default*: 0
 
-### workerpoolMaxPrice (optional)
+***workerpoolMaxPrice (optional)***
 
 Allows specifying the maximum amount you want to pay the workerpool provider for using their infrastructure to run the web3mail app in nRLC (default 0).
 
 *type*: Integer
 
 *default*: 0
+
+## Result
+
+The `Web3Mail` tool returns a single value:
+
+***taskId***
+
+This uniquely identifies the email task on the iExec side chain. You can view the status of the `sendEmail` method by monitoring the task on the [iExec Explorer](https://explorer.iex.ec/bellecour).
