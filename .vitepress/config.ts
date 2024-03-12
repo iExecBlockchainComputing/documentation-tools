@@ -5,6 +5,7 @@ import { getSidebar } from "./sidebar";
 export default defineConfig({
   title: "Dev Tools",
   description: "iExec documentation for dev tools",
+  appearance: "force-dark",
   markdown: {
     theme: {
       light: "vitesse-light",
