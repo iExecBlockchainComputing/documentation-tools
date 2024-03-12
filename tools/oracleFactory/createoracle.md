@@ -20,7 +20,13 @@ const createOracleRes = await factory.createOracle({
 
 ## Parameters
 
+```js
+import { type RawParams } from "@iexec/iexec-oracle-factory-wrapper";
+```
+
 ### url
+
+`string`
 
 The API URL to fetch data from.
 
@@ -33,6 +39,8 @@ const createOracleRes = await factory.createOracle({
 
 ### method
 
+`'GET' | 'POST' | 'PUT' | 'DELETE'`
+
 The HTTP method to use when making the API request (e.g., "GET").
 
 ```js
@@ -42,7 +50,9 @@ const createOracleRes = await factory.createOracle({
 });
 ```
 
-### headers (optional)
+### headers
+
+`Record<string, string> | undefined`
 
 Any headers required for the API request.
 
@@ -55,18 +65,9 @@ const createOracleRes = await factory.createOracle({
 });
 ```
 
-### dataType
-
-The type of data to be returned (e.g., "number").
-
-```js
-const createOracleRes = await factory.createOracle({
-  dataType: "number",
-  // Other parameters...
-});
-```
-
 ### JSONPath
+
+`string`
 
 The JSON path to extract the data from the API response.
 
@@ -77,7 +78,22 @@ const createOracleRes = await factory.createOracle({
 });
 ```
 
-### apiKey (optional)
+### dataType
+
+`DataType`
+
+The type of data to be returned (e.g., "number").
+
+```js
+const createOracleRes = await factory.createOracle({
+  dataType: "number",
+  // Other parameters...
+});
+```
+
+### apiKey
+
+`string | undefined`
 
 API key if required by the data source.
 
@@ -88,7 +104,15 @@ const createOracleRes = await factory.createOracle({
 });
 ```
 
-## Return value example
+## Return value
+
+```js
+import { type CreateOracleMessage } from "@iexec/iexec-oracle-factory-wrapper";
+```
+
+`Observable<CreateOracleMessage>`
+
+This is an example of possible return
 
 ```js
 {

@@ -15,7 +15,13 @@ const readOracleRes = await factory.readOracle(
 
 ## Parameters
 
+```js
+import { type ReadOracleParams } from "@iexec/iexec-oracle-factory-wrapper";
+```
+
 ### cid
+
+`paramSetOrCidOrOracleId`
 
 Content ID of the Oracle to be read.
 
@@ -25,7 +31,15 @@ const readOracleRes = await factory.readOracle(
 );
 ```
 
-## Return value example
+## Return value
+
+```js
+import { type OracleValue } from "@iexec/iexec-oracle-factory-wrapper";
+```
+
+`Promise<OracleValue>`
+
+This is an example of possible returns
 
 ```js
 {
