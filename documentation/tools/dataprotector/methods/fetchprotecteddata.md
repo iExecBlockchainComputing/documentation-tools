@@ -60,8 +60,8 @@ Provides a list of protected data objects matching this schema.
 This method returns an array of objects containing the protectedData information queried. Each object contains the following parameters:
 
 * **name**: Name specified when the protected data was created. This information is public and visible on-chain.
-* **adress**: ETH address of the protected data.
-* **owner**: ETH address of the protected data owner.
+* **adress**: Ethereum address of the protected data.
+* **owner**: Ethereum address of the protected data owner.
 * **creationTimestamp**: Timestamp specifying when the protected data was created, expressed in milliseconds since the epoch. This timestamp provides precise information about the moment of creation and can be used for chronological ordering or time-based operations.
 
 * **schema**: Data schema for the protected data as defined when the protected data was created (see [protectedData](protectdata.md)). `schema` provides a structured representation of the protected data format and attributes. This field plays a crucial role in understanding and interpreting the underlying structure of the sensitive information.

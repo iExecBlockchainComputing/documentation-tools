@@ -16,5 +16,5 @@ The DataProtector SDK encompasses the following suite of methods:
 * **revokeOneAccess**—removes a specific access previously granted on a `protectedData`
 * **fetchProtectedData**—retrieve a list of all protected data for one owner and/or data schema
 * **fetchGrantedAccess**—retrieve a list of all authorized users and applications for a `protectedData` object containing a user's data
-* **processProtectedData**-process a `protectedData` object containing a user's data with a specified iExec application
-* **transferOwnership**-transfer a protectedData object to a new owner
+* **processProtectedData**—process a `protectedData` object containing a user's data with a specified iExec application
+* **transferOwnership**—transfer a protectedData object to a new owner
