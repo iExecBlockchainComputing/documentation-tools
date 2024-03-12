@@ -118,3 +118,5 @@ The `Web3Mail` tool returns a single value:
 ***taskId***
 
 This uniquely identifies the email task on the iExec side chain. You can view the status of the `sendEmail` method by monitoring the task on the [iExec Explorer](https://explorer.iex.ec/bellecour).
+
+*type*: A string representation of an Ethereum address.
