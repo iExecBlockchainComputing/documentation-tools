@@ -6,32 +6,40 @@ Allows transferring ownership of a `protectedData` entity to a new owner, identi
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  newOwner: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  protectedData: "0xA0C...",
+  newOwner: "0xC5E...",
 });
 ```
 
 ## Parameters
 
+```js
+import { type TransferParams } from "@iexec/dataprotector";
+```
+
 ### protectedData
+
+`AddressOrENS`
 
 ETH address of the `protectedData` owned by you which is to be transferred to a new owner.
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e", // [!code focus]
-  newOwner: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  protectedData: "0xA0C...",
+  newOwner: "0xC5E...", // [!code focus]
 });
 ```
 
 ### newOwner
 
+`AddressOrENS`
+
 ETH address for the new owner for the `protectedData`.
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  newOwner: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e", // [!code focus]
+  protectedData: "0xA0C...",
+  newOwner: "0xC5E...", // [!code focus]
 });
 ```
 

@@ -21,12 +21,6 @@ import { type CreateCollectionResponse } from "@iexec/dataprotector";
 
 The collection token ID created and the transaction hash of the function action.
 
-```json
-{
-  "collectionId": 12,
-  "txHash": "0x33..."
-}
-```
 
 ## Error
 

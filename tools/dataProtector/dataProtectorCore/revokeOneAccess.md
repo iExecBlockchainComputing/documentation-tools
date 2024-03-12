@@ -1,32 +1,58 @@
 # revokeOneAccess
 
-This method allows revoking a specific access authorization from a `protectedData` entity. The input parameter for this method is sourced from the [fetchGrantedAccess](fetchgrantedaccess.md) method, which provides a list of all authorizations on single `protectedData` entity.
+This method allows revoking a specific access authorization from a `protectedData` entity. The input parameter for this method is sourced from the [getGrantedAccess](getGrantedAccess.md) method, which provides a list of all authorizations on single `protectedData` entity.
 
 ## Usage
 
-The `revokeOneAccess` method requires a `grantedAccess` object as an input parameter. This object is retrieved from the [`fetchGrantedAccess`](./fetchgrantedaccess.md) method.
+The `revokeOneAccess` method requires a `grantedAccess` object as an input parameter. This object is retrieved from the [`getGrantedAccess`](./getGrantedAccess.md) method.
 
 ```javascript
 const revokeAccess = await dataProtector.revokeOneAccess(
     {
-        apprestrict: '0xea6912aed5183cd6c1ad9e5e434becb2a060cd0d',
-        dataset: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+        apprestrict: '0xea...',
+        dataset: '0xA0C...',
         datasetprice: '0',
-        requesterrestrict: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-        salt: '0x0147499ca7604fe9343a71c99125f1c3f8af0e1ebb933d570cb653ef8eb043b8'
-        sign: '0xc22c1f57f0b68af0fb4833e776adb73f30cc197445834bf564e9829913e104b07ab856ac39085edb5c9180f430c1ee2f29021ae33cd79eb0ddb73181e347799f1b',
+        requesterrestrict: '0xecb..',
+        salt: '0x0147...'
+        sign: '0xc22c1...',
         tag: '0x0000000000000000000000000000000000000000000000000000000000000003',
         volume: '1',
-        workerpoolrestrict: '0x0000000000000000000000000000000000000000'
+        workerpoolrestrict: '0x000...'
     }
 )
 ```
 
 ## Parameters
 
+```js
+import { type GrantedAccess } from "@iexec/dataprotector";
+```
+
 ### grantedAccess
 
+`GrantedAccess`
+
 This is the complete `granted access` object retrieved from an invocation of `fetchGrantedAccess`.
+
+```javascript
+const revokeAccess = await dataProtector.revokeOneAccess(
+    {
+        apprestrict: '0xea...', // [!code focus]
+        dataset: '0xA0C...', // [!code focus]
+        datasetprice: '0', // [!code focus]
+        requesterrestrict: '0xecb..', // [!code focus]
+        salt: '0x0147...' // [!code focus]
+        sign: '0xc22c1...',// [!code focus]
+        tag: '0x0000000000000000000000000000000000000000000000000000000000000003', // [!code focus]
+        volume: '1', // [!code focus]
+        workerpoolrestrict: '0x000...'// [!code focus]
+    }
+)
+```
+
+::: warning
+The tag must always be set to `0x0000000000000000000000000000000000000000000000000000000000000003`. This specific value indicates that the order is for a confidential asset (a protected data).
+:::
 
 ## Result
 

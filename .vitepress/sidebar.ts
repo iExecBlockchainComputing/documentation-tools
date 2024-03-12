@@ -66,8 +66,8 @@ export function getSidebar() {
                     link: "/tools/dataProtector/dataProtectorCore/revokeOneAccess",
                   },
                   {
-                    text: "revokeAllAccessObservable",
-                    link: "/tools/dataProtector/dataProtectorCore/revokeAllAccessObservable",
+                    text: "revokeAllAccess",
+                    link: "/tools/dataProtector/dataProtectorCore/revokeAllAccess",
                   },
                   {
                     text: "transferOwnership",

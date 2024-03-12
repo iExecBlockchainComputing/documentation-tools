@@ -4,7 +4,7 @@ The iExec tool suite supports deployment of applications where the user of the a
 
 ## Usage
 
-This is an asynchronous method that supports both the promise and observable patterns. Examples of each are provided below. Regardless of the invocation pattern, the method accepts a JSON object containing the data to encrypt and an optional name to identify the data.
+The method accepts a JSON object containing the data to encrypt and an optional name to identify the data.
 
 An email address, for example, may be submitted as:
 
@@ -32,15 +32,39 @@ const protectedData = await dataProtector.protectData({
 
 ## Parameters
 
-The `protectData` method accepts the following parameters
+```js
+import { type ProtectDataParams } from "@iexec/dataprotector";
+```
 
 ### data
 
+`DataObject`
+
 This is the actual data the user is protecting, provided as a JSON object with any number of custom keys. The data is encrypted and stored as an NFT.
+
+```javascript
+const protectedData = await dataProtector.protectData({
+  data: {
+    // [!code focus]
+    email: "example@gmail.com", // [!code focus]
+  }, // [!code focus]
+});
+```
 
 ### name
 
+`string | undefined`
+
 Allows providing a descriptive name for the protected data. This is considered public metadata, describing the protected data.
+
+```javascript
+const protectedData = await dataProtector.protectData({
+  name: "myEmail", // [!code focus]
+  data: {
+    email: "example@gmail.com",
+  },
+});
+```
 
 ::: tip
 The name is public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
@@ -146,65 +170,7 @@ const protectedData = await dataProtector.protectData({
 The zip file generated is a uint8array, so if you want to handle the binary data or download it consider adding a zip extension to it.
 :::
 
-### **2. With observable**
-
-#### Sample invocation with observable pattern
-
-```js
-const protectedData = await dataProtector.protectDataObservable({
-    data: {
-        email: 'example@gmail.com'
-    }
-}).subscribe({
-      next: (data) => {
-        if (mounted.current) {
-          const { message } = data;
-          switch (message) {
-            case "DATA_SCHEMA_EXTRACTED":
-              const dataSchema = data.schema;
-              //Execute your customized logic here
-              break;
-            case "ZIP_FILE_CREATED":
-              const zipFileUint8array= data.zipFile;
-              //Execute your customized logic here
-              break;
-            case "ENCRYPTION_KEY_CREATED":
-              //Execute your customized logic here
-              break;
-            case "FILE_ENCRYPTED":
-              //Execute your customized logic here
-              break;
-            case "ENCRYPTED_FILE_UPLOADED":
-              const multiaddr = data.multiaddr ;
-              //Execute your customized logic here
-              break;
-            case "PROTECTED_DATA_DEPLOYMENT_REQUEST":
-              //Execute your customized logic here
-              break;
-            case "PROTECTED_DATA_DEPLOYMENT_SUCCESS":
-              const dataAddress = data.address;
-              //Execute your customized logic here
-              break;
-            case "PUSH_SECRET_TO_SMS_SIGN_REQUEST":
-              //Execute your customized logic here
-              break;
-            case "PUSH_SECRET_TO_SMS_SUCCESS":
-              //Execute your customized logic here
-              break;
-            default:
-          }
-
-      },
-      error: (e) => {
-        //Setup how you handle errors
-      },
-      complete: () => {
-        //Will be executed once the Protected Data creation is completed
-      }
-})
-```
-
-#### Return value example with observable pattern
+#### Return value with callback function
 
 <table><thead><tr><th width="278.5">Message</th><th>Return value</th></tr></thead><tbody><tr><td>DATA_SCHEMA_EXTRACTED</td><td><pre class="language-javascript"><code class="lang-javascript">schema: {
     "email": "string"

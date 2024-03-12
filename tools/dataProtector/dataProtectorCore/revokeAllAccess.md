@@ -1,4 +1,4 @@
-# revokeAllAccessObservable
+# revokeAllAccess
 
 This method allows revoking authorizations granted to a `protectedData` entity. You may optionally specify application or user addresses for revocation. If you do not specify either of these optional values, this method will revoke all access for all users and applications.
 
@@ -8,37 +8,78 @@ This method is asynchronous and requires use of the JavaScript observable patter
 
 ```js
 const revokeAllAccessObservable = dataProtector
-    .revokeAllAccessObservable({
-        protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e'
-        authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
-        authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1'
+    .revokeAllAccess({
+        protectedData: '0xA0C...'
+        authorizedApp: '0xC2E...'
+        authorizedUser: '0xecb...'
     })
-    .subscribe({
-        next: (data) => {
-            console.log('next', data);
-        },
-        error: (error) => {
-            console.log('error', error);
-        },
-        complete: () => {
-            console.log('revokeAllAccess complete');
-        }
-    });
 ```
 
 ## Parameters
 
+```js
+import { type RevokeAllAccessParams } from "@iexec/dataprotector";
+```
+
 ### protectedData
+
+`AddressOrENS`
 
 The address of the `protectedData` subject to access revocation.
 
+```js
+const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+  protectedData: "0xA0C...", // [!code focus]
+  authorizedApp: "0xC2E...",
+  authorizedUser: "0xecb...",
+});
+```
+
 ### authorizedApp
+
+`AddressOrENS | 'any' | undefined`
 
 The application address to be removed from the authorization list for the specified `protectedData`.
 
+```js
+const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+  protectedData: "0xA0C...",
+  authorizedApp: "0xC2E...", // [!code focus]
+  authorizedUser: "0xecb...",
+});
+```
+
 ### authorizedUser
 
+`AddressOrENS | 'any' | undefined`
+
 The user address to be removed from the authorization list for the specified `protectedData`.
+
+```js
+const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+  protectedData: "0xA0C...",
+  authorizedApp: "0xC2E...",
+  authorizedUser: "0xecb...", // [!code focus]
+});
+```
+
+### onStatusUpdate
+
+`OnStatusUpdateFn | undefined`
+
+Callback function to be notified at intermediate steps.
+
+```js
+const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+  protectedData: "0xA0C...",
+  authorizedApp: "0xC2E...",
+  authorizedUser: "0xecb...",
+  onStatusUpdate: ({ title, isDone }) => {
+    // [!code focus]
+    console.log(title, isDone); // [!code focus]
+  }, // [!code focus]
+});
+```
 
 ## Result
 

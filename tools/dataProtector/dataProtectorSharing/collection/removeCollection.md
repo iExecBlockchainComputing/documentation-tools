@@ -39,13 +39,11 @@ const { txHash } = await dataProtectorSharing.removeCollection({
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 
-The transaction hash of the function action.
+### txHash
 
-```json
-{
-  "txHash": "0x33..."
-}
-```
+`txHash`
+
+The transaction hash of the function action.
 
 ## Error
 

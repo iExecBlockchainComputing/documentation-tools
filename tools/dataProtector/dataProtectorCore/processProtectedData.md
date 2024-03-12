@@ -7,10 +7,10 @@ Allows processing a protected dataset through use of a specified iExec applicati
 
 ## Usage
 
-```javascript
+```js
 const taskid = await dataProtector.processProtectedData({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  app: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  protectedData: "0xA0C...",
+  app: "0xC2E...",
   maxPrice: 10,
   args: "arg1 arg2",
   inputFiles: ["https://example.com/file1", "https://example.com/file2"],
@@ -20,21 +20,63 @@ const taskid = await dataProtector.processProtectedData({
 
 ## Parameters
 
+```js
+import { type ProcessProtectedDataParams } from "@iexec/dataprotector";
+```
+
 ### protectedData
+
+`AddressOrENS`
 
 The ETH address or Ethereum Name Service (ENS) reference for the protected data you wish the `app` to process.
 
+```js
+const taskid = await dataProtector.processProtectedData({
+  protectedData: "0xA0C...", // [!code focus]
+  app: "0xC2E...",
+});
+```
+
 ### app
+
+`AddressOrENS`
 
 The ETH address or Ethereum Name Service (ENS) address for the iExec application to process the protected data.
 
+```js
+const taskid = await dataProtector.processProtectedData({
+  protectedData: "0xA0C...",
+  app: "0xC2E...", // [!code focus]
+});
+```
+
 ### maxPrice
+
+`number | undefined`
 
 The maximum price (in nRLC) that a requester is willing to pay for each task related to processing the protected data. It is the sum of the application price, dataset price, and workerpool price per task.
 
+```js
+const taskid = await dataProtector.processProtectedData({
+  protectedData: "0xA0C...",
+  app: "0xC2E...",
+  maxPrice: 10, // [!code focus]
+});
+```
+
 ### args
 
+`string | undefined`
+
 Set of execution arguments for the application.
+
+```js
+const taskid = await dataProtector.processProtectedData({
+  protectedData: "0xA0C...",
+  app: "0xC2E...",
+  args: "arg1 arg2", // [!code focus]
+});
+```
 
 ::: danger
 Do not use this to provide any sensitive information to the application. All arguments passed this way are visible in plain text using the [iExec blockchain explorer](https://explorer.iex.ec).
@@ -42,11 +84,50 @@ Do not use this to provide any sensitive information to the application. All arg
 
 ### inputFiles
 
+`string[] | undefined`
+
 A set of URLs representing the input files required for application execution.
+
+```js
+const taskid = await dataProtector.processProtectedData({
+  protectedData: "0xA0C...",
+  app: "0xC2E...",
+  inputFiles: ["https://example.com/file1", "https://example.com/file2"], // [!code focus]
+});
+```
 
 ### secrets
 
+`Record<number, string> | undefined`
+
 A set of requester secrets necessary for the application's execution. This is represented as a mapping of numerical identifiers to corresponding secrets stored in the secrets manager needed for the application's execution.
+
+```js
+const taskid = await dataProtector.processProtectedData({
+  protectedData: "0xA0C...",
+  app: "0xC2E...",
+  maxPrice: 10,
+  secrets: ["secret1", "secret2"], // [!code focus]
+});
+```
+
+### workerpool
+
+`AddressOrENS | 'any' | undefined`
+
+The ETH address or Ethereum Name Service (ENS) address for the iExec workerpool. It's the confidential computer on which the iExec application will run.
+
+::: tip
+iExec currently offers a production workerpool located at the Ethereum Name Service (ENS) address `prod-v8-bellecour.main.pools.iexec.eth`. This is the default workerpool for running confidential computations on the iExec platform. If no specific workerpool address is specified, computations will automatically be directed to this default workerpool.
+:::
+
+```js
+const taskid = await dataProtector.processProtectedData({
+  protectedData: "0xA0C...",
+  app: "0xC2E...",
+  workerpool: "0xA5d...", // [!code focus]
+});
+```
 
 ## Result
 
