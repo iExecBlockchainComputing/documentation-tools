@@ -2,7 +2,7 @@
 
 The DataProtector tool allows application developers to provide users with unparalleled ownership over their data. End users gain the ability to invoke iExec apps without ever exposing their data to any other party. They gain complete privacy of personally identifiable information (PII) or other sensitive classes of data. 
 
-This revolutionary approach to data management relies on:
+This approach to data management relies on:
 
 * end-to-end encryption of data with access controlled entirely by the owner of the data
 * confidential computing technology that ensures only authorized apps are permitted access to a user's data
