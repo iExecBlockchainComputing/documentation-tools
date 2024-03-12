@@ -1,6 +1,6 @@
 # transferOwnership
 
-Method to transfer ownership of a protected data to a new owner, identified by their ETH address. The return value provides a transaction hash and confirmation of the new owner of the data.
+Allows transferring ownership of a `protectedData` entity to a new owner, identified by their ETH address. The return value provides a transaction hash and confirmation of the new owner of the `protectedData`. Only the current owner of the `protectedData` may invoke this method.
 
 ## Usage
 
@@ -15,7 +15,7 @@ const transferResponse = await dataProtector.transferOwnership({
 
 ### protectedData
 
-Address of the protected data owned by you which is to be transferred to a new owner.
+ETH address of the `protectedData` owned by you which is to be transferred to a new owner.
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
@@ -26,7 +26,7 @@ const transferResponse = await dataProtector.transferOwnership({
 
 ### newOwner
 
-ETH Address for the new owner for the specified data.
+ETH address for the new owner for the `protectedData`.
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
@@ -36,6 +36,20 @@ const transferResponse = await dataProtector.transferOwnership({
 ```
 
 ## Return value example
+
+The result of this method is an array of objects identifying the new owner. The objects contain the three fields:
+
+**_address_**
+
+The ETH address of the `protectedData` you transferred.
+
+**_to_**
+
+The ETH address of the new owner of the `protectedData`.
+
+**_txHash_**
+
+The ID of the transaction that happened on iExec's side chain. You may view details on the transaction using the [iExec explorer](https://explorer.iex.ec).
 
 ```js
 [

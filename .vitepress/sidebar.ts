@@ -37,12 +37,12 @@ export function getSidebar() {
                 link: "/tools/dataProtector/migrate-from-v1",
               },
               {
-                text: "fetchGrantedAccess",
-                link: "/tools/dataProtector/fetchGrantedAccess",
+                text: "getGrantedAccess",
+                link: "/tools/dataProtector/getGrantedAccess",
               },
               {
-                text: "fetchProtectedData",
-                link: "/tools/dataProtector/fetchProtectedData",
+                text: "getProtectedData",
+                link: "/tools/dataProtector/getProtectedData",
               },
               {
                 text: "grantAccess",
