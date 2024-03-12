@@ -37,7 +37,7 @@ const grantedAccess = await dataProtector.grantAccess({
 ***protectedData (required)***
 
 
-The address of the protected data supplied by the user.
+The ethereum address of the protected data supplied by the user.
 
 ***authorizedApp (required)***
 The address of the application you wish to authorize to process the `protectedData` within a secure execution environment. You may specify either a single application or an application whitelist. To specify a whitelist, you provide the ETH address of an [iExec Whitelist Smart Contract](https://github.com/iExecBlockchainComputing/whitelist-smart-contract/tree/main). This smart contract aggregates multiple application versions. This allows you to introduce new versions of your application without needing to grant access for the `protectedData` each time you do so.
