@@ -3,7 +3,7 @@
 This method allows the user to retrieve all protected data for a given owner, data schema, or both. Only protected data objects the invoker has permissions to access are included in the result set. You must include at least one of the optional parameters when invoking this method. 
 
 {% hint style="info" %}
-A data schema is metedata describing the contents protected data object. The schema is returned to the user as part of the [protectedData](protectdata.md) method invocation.
+A data schema is the metadata describing the contents of the protected data object. The schema is returned as part of the [protectedData](protectdata.md) method invocation.
 {% endhint %}
 
 ## Usage
