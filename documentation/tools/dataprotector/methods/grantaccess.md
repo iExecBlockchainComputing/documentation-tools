@@ -1,8 +1,6 @@
 # grantAccess
 
-Data encrypted through the Data Protector tool requires explicit authorization for runtime access. A newly created `protectedData` object has no inherent authorizations. This method grants permission to securely access the specified `protectedData` for processing using the `processProtectedData` method. Users may grant permissions to an application, an application whitelist, or a user.
-
-
+Data encrypted through the Data Protector tool requires explicit authorization for runtime access. A newly created `protectedData` object has no inherent authorizations. This method grants permission to securely access the specified `protectedData` for processing using the `processProtectedData` method. Authorization to use the `protectedData` is given to a user in the context of an application (or a designated list of applications).
 
 ## Usage
 
@@ -45,9 +43,7 @@ The address of the application you wish to authorize to process the `protectedDa
 {% hint style="info" %}
 You may authorize all apps to use the protected data by setting this to **0x00000000000000000000000000000000000000**
 
-{% hint style="info" %}
 iExec maintains a whitelist for the Web3Mail decentralized application. Granting access to this whitelist allows use of an email `protectedData` with all versions of the Web3Mail application, ensuring you only have to grant this access once. The ETH address for this whitelist is **0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e**
-{% endhint %}
 {% endhint %}
 
 ***authorizedUser (required)***
