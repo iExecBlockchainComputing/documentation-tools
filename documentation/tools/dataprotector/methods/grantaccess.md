@@ -45,7 +45,9 @@ The address of the application you wish to authorize to process the `protectedDa
 {% hint style="info" %}
 You may authorize all apps to use the protected data by setting this to **0x00000000000000000000000000000000000000**
 
-iExec maintains a whitelist for the Web3Mail distributed application. Granting access to this whitelist allows use of your `protectedData` with all versions of the Web3Mail application, ensuring you only have to grant this access once. The ETH address for this whitelist is **0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e**
+{% hint style="info" %}
+iExec maintains a whitelist for the Web3Mail decentralized application. Granting access to this whitelist allows use of an email `protectedData` with all versions of the Web3Mail application, ensuring you only have to grant this access once. The ETH address for this whitelist is **0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e**
+{% endhint %}
 {% endhint %}
 
 ***authorizedUser (required)***
