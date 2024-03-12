@@ -24,161 +24,164 @@ export function getSidebar() {
         text: "Tools",
         items: [
           {
+            text: "Getting Started",
+            link: "/tools/dataProtector/getting-started",
+          },
+          {
+            text: "Migrate from v1 to v2",
+            link: "/tools/dataProtector/migrate-from-v1",
+          },
+          {
             text: "DataProtector",
             link: "/tools/dataProtector",
             collapsed: true,
             items: [
               {
-                text: "Getting Started",
-                link: "/tools/dataProtector/getting-started",
-              },
-              {
-                text: "Migrate from v1 to v2",
-                link: "/tools/dataProtector/migrate-from-v1",
-              },
-              {
-                text: "getGrantedAccess",
-                link: "/tools/dataProtector/getGrantedAccess",
-              },
-              {
-                text: "getProtectedData",
-                link: "/tools/dataProtector/getProtectedData",
-              },
-              {
-                text: "grantAccess",
-                link: "/tools/dataProtector/grantAccess",
-              },
-              {
-                text: "processProtectedData",
-                link: "/tools/dataProtector/processProtectedData",
-              },
-              {
-                text: "protectData",
-                link: "/tools/dataProtector/protectData",
-              },
-              {
-                text: "revokeOneAccess",
-                link: "/tools/dataProtector/revokeOneAccess",
-              },
-              {
-                text: "revokeAllAccessObservable",
-                link: "/tools/dataProtector/revokeAllAccessObservable",
-              },
-              {
-                text: "transferOwnership",
-                link: "/tools/dataProtector/transferOwnership",
-              },
-            ],
-          },
-          {
-            text: "DataProtectorSharing",
-            link: "/tools/dataProtectorSharing",
-            collapsed: true,
-            items: [
-              {
-                text: "Getting Started",
-                link: "/tools/dataProtectorSharing/getting-started",
-              },
-              {
-                text: "Collection",
-                link: "/tools/dataProtectorSharing/collection",
+                text: "DataProtectorCore",
+                link: "/tools/dataProtector/dataProtectorCore/getting-started",
                 collapsed: true,
                 items: [
                   {
-                    text: "createCollection",
-                    link: "/tools/dataProtectorSharing/collection/createCollection",
+                    text: "getGrantedAccess",
+                    link: "/tools/dataProtector/dataProtectorCore/getGrantedAccess",
                   },
                   {
-                    text: "removeCollection",
-                    link: "/tools/dataProtectorSharing/collection/removeCollection",
+                    text: "getProtectedData",
+                    link: "/tools/dataProtector/dataProtectorCore/getProtectedData",
                   },
                   {
-                    text: "addToCollection",
-                    link: "/tools/dataProtectorSharing/collection/addToCollection",
+                    text: "grantAccess",
+                    link: "/tools/dataProtector/dataProtectorCore/grantAccess",
                   },
                   {
-                    text: "removeFromCollection",
-                    link: "/tools/dataProtectorSharing/collection/removeFromCollection",
+                    text: "processProtectedData",
+                    link: "/tools/dataProtector/dataProtectorCore/processProtectedData",
+                  },
+                  {
+                    text: "protectData",
+                    link: "/tools/dataProtector/dataProtectorCore/protectData",
+                  },
+                  {
+                    text: "revokeOneAccess",
+                    link: "/tools/dataProtector/dataProtectorCore/revokeOneAccess",
+                  },
+                  {
+                    text: "revokeAllAccessObservable",
+                    link: "/tools/dataProtector/dataProtectorCore/revokeAllAccessObservable",
+                  },
+                  {
+                    text: "transferOwnership",
+                    link: "/tools/dataProtector/dataProtectorCore/transferOwnership",
                   },
                 ],
               },
               {
-                text: "Misc",
-                link: "/tools/dataProtectorSharing/misc",
+                text: "DataProtectorSharing",
+                link: "/tools/dataProtector/dataProtectorSharing/getting-started",
                 collapsed: true,
                 items: [
                   {
-                    text: "consumeProtectedData",
-                    link: "/tools/dataProtectorSharing/misc/consumeProtectedData",
+                    text: "Collection",
+                    link: "/tools/dataProtector/dataProtectorSharing/collection",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "createCollection",
+                        link: "/tools/dataProtector/dataProtectorSharing/collection/createCollection",
+                      },
+                      {
+                        text: "removeCollection",
+                        link: "/tools/dataProtector/dataProtectorSharing/collection/removeCollection",
+                      },
+                      {
+                        text: "addToCollection",
+                        link: "/tools/dataProtector/dataProtectorSharing/collection/addToCollection",
+                      },
+                      {
+                        text: "removeFromCollection",
+                        link: "/tools/dataProtector/dataProtectorSharing/collection/removeFromCollection",
+                      },
+                    ],
                   },
                   {
-                    text: "getProtectedDataInCollection",
-                    link: "/tools/dataProtectorSharing/misc/getProtectedDataInCollections",
+                    text: "Misc",
+                    link: "/tools/dataProtector/dataProtectorSharing/misc",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "consumeProtectedData",
+                        link: "/tools/dataProtector/dataProtectorSharing/misc/consumeProtectedData",
+                      },
+                      {
+                        text: "getProtectedDataInCollection",
+                        link: "/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataInCollections",
+                      },
+                      {
+                        text: "getProtectedDataPricingParams",
+                        link: "/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataPricingParams",
+                      },
+                    ],
                   },
                   {
-                    text: "getProtectedDataPricingParams",
-                    link: "/tools/dataProtectorSharing/misc/getProtectedDataPricingParams",
-                  },
-                ],
-              },
-              {
-                text: "Renting",
-                link: "/tools/dataProtectorSharing/renting",
-                collapsed: true,
-                items: [
-                  {
-                    text: "setProtectedDataToRenting",
-                    link: "/tools/dataProtectorSharing/renting/setProtectedDataToRenting",
-                  },
-                  {
-                    text: "rentProtectedData",
-                    link: "/tools/dataProtectorSharing/renting/rentProtectedData",
-                  },
-                  {
-                    text: "setProtectedDataToRenting",
-                    link: "/tools/dataProtectorSharing/renting/setProtectedDataToRenting",
-                  },
-                ],
-              },
-              {
-                text: "Selling",
-                link: "/tools/dataProtectorSharing/selling",
-                collapsed: true,
-                items: [
-                  {
-                    text: "setProtectedDataForSale",
-                    link: "/tools/dataProtectorSharing/selling/setProtectedDataForSale",
+                    text: "Renting",
+                    link: "/tools/dataProtector/dataProtectorSharing/renting",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "setProtectedDataToRenting",
+                        link: "/tools/dataProtector/dataProtectorSharing/renting/setProtectedDataToRenting",
+                      },
+                      {
+                        text: "rentProtectedData",
+                        link: "/tools/dataProtector/dataProtectorSharing/renting/rentProtectedData",
+                      },
+                      {
+                        text: "removeProtectedDataFromRenting",
+                        link: "/tools/dataProtector/dataProtectorSharing/renting/removeProtectedDataFromRenting",
+                      },
+                    ],
                   },
                   {
-                    text: "buyProtectedData",
-                    link: "/tools/dataProtectorSharing/selling/buyProtectedData",
+                    text: "Selling",
+                    link: "/tools/dataProtector/dataProtectorSharing/selling",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "setProtectedDataForSale",
+                        link: "/tools/dataProtector/dataProtectorSharing/selling/setProtectedDataForSale",
+                      },
+                      {
+                        text: "buyProtectedData",
+                        link: "/tools/dataProtector/dataProtectorSharing/selling/buyProtectedData",
+                      },
+                      {
+                        text: "removeProtectedDataForSale",
+                        link: "/tools/dataProtector/dataProtectorSharing/selling/removeProtectedDataForSale",
+                      },
+                    ],
                   },
                   {
-                    text: "removeProtectedDataForSale",
-                    link: "/tools/dataProtectorSharing/selling/removeProtectedDataForSale",
-                  },
-                ],
-              },
-              {
-                text: "Subscription",
-                link: "/tools/dataProtectorSharing/subscription",
-                collapsed: true,
-                items: [
-                  {
-                    text: "setSubscriptionParams",
-                    link: "/tools/dataProtectorSharing/subscription/setSubscriptionParams",
-                  },
-                  {
-                    text: "setProtectedDataToSubscription",
-                    link: "/tools/dataProtectorSharing/subscription/setProtectedDataToSubscription",
-                  },
-                  {
-                    text: "subscribe",
-                    link: "/tools/dataProtectorSharing/subscription/subscribe",
-                  },
-                  {
-                    text: "removeProtectedDataFromSubscription",
-                    link: "/tools/dataProtectorSharing/subscription/removeProtectedDataFromSubscription",
+                    text: "Subscription",
+                    link: "/tools/dataProtector/dataProtectorSharing/subscription",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "setSubscriptionParams",
+                        link: "/tools/dataProtector/dataProtectorSharing/subscription/setSubscriptionParams",
+                      },
+                      {
+                        text: "setProtectedDataToSubscription",
+                        link: "/tools/dataProtector/dataProtectorSharing/subscription/setProtectedDataToSubscription",
+                      },
+                      {
+                        text: "subscribe",
+                        link: "/tools/dataProtector/dataProtectorSharing/subscription/subscribe",
+                      },
+                      {
+                        text: "removeProtectedDataFromSubscription",
+                        link: "/tools/dataProtector/dataProtectorSharing/subscription/removeProtectedDataFromSubscription",
+                      },
+                    ],
                   },
                 ],
               },

@@ -1,5 +1,7 @@
 # Quick start
 
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/dataprotector-sdk/develop?filename=packages%2Fsdk%2Fpackage.json&color=green)
+
 ## Sandbox
 
 {% embed url="<https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true>" %}
@@ -28,19 +30,19 @@ Install `dataProtectorSDK` .
 
 ::: code-group
 
-```bash [npm]
+```sh [npm]
 npm install @iexec/dataprotector
 ```
 
-```bash [pnpm]
+```sh [pnpm]
 yarn add @iexec/dataprotector
 ```
 
-```bash [yarn]
+```sh [yarn]
 pnpm add @iexec/dataprotector
 ```
 
-```bash [bun]
+```sh [bun]
 bun add @iexec/dataprotector
 ```
 
@@ -59,7 +61,7 @@ import { IExecDataProtector } from "@iexec/dataprotector";
 
 const web3Provider = window.ethereum;
 // instantiate
-const dataProtector = new IExecDataProtectorSharing(web3Provider);
+const dataProtector = new IExecDataProtector(web3Provider);
 ```
 
 ```js [NodeJS]
@@ -70,7 +72,7 @@ const { PRIVATE_KEY } = process.env;
 const web3Provider = getWeb3Provider(PRIVATE_KEY);
 
 // instantiate
-const dataProtector = new IExecDataProtectorSharing(web3Provider);
+const dataProtector = new IExecDataProtector(web3Provider);
 ```
 
 :::

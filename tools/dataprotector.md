@@ -1,22 +1,23 @@
 # 🔐 DataProtector
 
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/dataprotector-sdk/develop?filename=packages%2Fsdk%2Fpackage.json&color=green)
+## DataProtector Core
 
-The DataProtector tool allows application developers to provide users with unparalleled ownership over their data. End users gain the ability to invoke iExec apps without ever exposing their data to any other party. They gain complete privacy of personally identifiable information (PII) or other sensitive classes of data.
+**Overview**: DataProtector simplifies secure data management, offering users essential tools for protecting, managing, and sharing their data effectively. The platform consists of two key modules: DataProtectorCore and DataProtectorSharing.
 
-This approach to data management relies on:
+DataProtectorCore: As the foundational component of DataProtector, DataProtectorCore provides essential functionalities for data protection. Users can encrypt their data and record ownership on a smart contract, ensuring confidentiality and traceability. Granting access to authorized applications is streamlined, facilitating secure data management.
 
-- end-to-end encryption of data with access controlled entirely by the owner of the data
-- confidential computing technology that ensures only authorized apps are permitted access to a user's data
-- smart contracts to manage an iExec application's permissions for a user's encrypted data
+With DataProtectorCore, you can grant access to your protected data to a specific user.
 
-The DataProtector SDK encompasses the following suite of methods:
+- You need to know the user's Ethereum address.
+- You'll have to sign a transaction at the moment you grant the access.
+- You define a number of times the user can access the data.
 
-- **protectData**—safeguards data by encrypting it and recording ownership as an NFT
-- **grantAccess**—authorizes an application to process a user's data without exposing the data to any external system or user review
-- **revokeAllAccessObservable**—removes all access granted to any iExec applications or user for a `protectedData` object
-- **revokeOneAccess**—removes a specific access previously granted on a `protectedData`
-- **fetchProtectedData**—retrieve a list of all protected data for one owner and/or data schema
-- **fetchGrantedAccess**—retrieve a list of all authorized users and applications for a `protectedData` object containing a user's data
-- **processProtectedData**-process a `protectedData` object containing a user's data with a specified iExec application
-- **transferOwnership**-transfer a protectedData object to a new owner
+## DataProtector Sharing
+
+Building upon DataProtectorCore, DataProtectorSharing introduces advanced features for data sharing and ownership transfer. Users can securely transfer ownership of protected data, enabling collaboration and potential monetization opportunities. This module empowers users to share and manage their data securely, fostering innovation and collaboration in the digital realm.
+
+With DataProtector Sharing, you can distribute your protected data to a wider audience.
+
+- You don't need to know the user's Ethereum address.
+- You don't need to sign a transaction at the moment of distribution (but the user who wants to access your content will).
+- Any user can access your content as long as they comply with your distribution and monetization choices.
