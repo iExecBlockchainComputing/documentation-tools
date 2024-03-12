@@ -28,18 +28,62 @@ Address of the protected data you'd like to get the pricing parameters.
 
 ## Return value
 
-Response type: `GetProtectedDataPricingResponse`
-
-```json
-{
-  "address": "0x123...",
-  "name": "My Protected Data",
-  "isFree": false,
-  "isRentable": true,
-  "isIncludedInSubscription": true,
-  "isForSale": false
-}
+```js
+import { type GetProtectedDataPricingResponse } from "@iexec/dataprotector";
 ```
+
+### name
+
+`string`
+
+The name of the the protected data.
+
+### address
+
+`Address`
+
+Address of the protected data
+
+### schema
+
+`DataSchema`
+
+Defines the data structure of the protected data.
+
+### collectionTokenId
+
+`number`
+
+The collection token ID in which the protected data is.
+
+### isIncludedInSubscription
+
+`boolean`
+Indicates if the item is accessible through a subscription.
+
+### isRentable
+
+`boolean`
+
+Whether the item can be rented.
+
+### isForSale
+
+`boolean`
+
+Specifies if the item is available for purchase.
+
+### isFree
+
+`boolean`
+
+Specifies if the item cost zero nano RLC.
+
+### creationTimestamp
+
+`number`
+
+Timestamp marking the protected data's creation.
 
 ## Error
 

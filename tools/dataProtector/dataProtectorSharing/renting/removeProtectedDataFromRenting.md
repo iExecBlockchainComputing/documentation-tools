@@ -33,19 +33,17 @@ const notForRentingAnymoreResult =
   });
 ```
 
-## Return value example
+## Return value
 
 ```js
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 
-The transaction hash of the function action.
+### txHash
 
-```json
-{
-  "txHash": "0x33..."
-}
-```
+`string`
+
+The transaction hash corresponding to the execution of the function.
 
 ## Error
 

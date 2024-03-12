@@ -37,7 +37,7 @@ const consumeProtectedDataResult =
 
 ### onStatusUpdate
 
-`OnStatusUpdateFn<'CONSUME_PROTECTED_DATA' | 'UPLOAD_RESULT_TO_IPFS'> | undefined`
+`(status: OnStatusUpdateFn) => void  | undefined`
 
 Callback function to be notified at intermediate steps.
 
@@ -52,107 +52,36 @@ const consumeProtectedDataResult =
   });
 ```
 
-You can expect this callback function to be called four times:
-
-1️⃣
-
-```json
-{
-  "title": "CONSUME_PROTECTED_DATA",
-  "isDone": false
-}
-```
-
-2️⃣
-
-```json
-{
-  "title": "CONSUME_PROTECTED_DATA",
-  "isDone": true
-}
-```
-
-3️⃣
-
-```json
-{
-  "title": "UPLOAD_RESULT_TO_IPFS",
-  "isDone": false
-}
-```
-
-4️⃣
-
-```json
-{
-  "title": "UPLOAD_RESULT_TO_IPFS",
-  "isDone": true
-}
-```
-
 ## Return value
 
 ```js
 import { type ConsumeProtectedDataResponse } from "@iexec/dataprotector";
 ```
 
-TODO: To be completed.
+### txHash
 
-```json
-{
-  "success": true,
-  "txHash": "",
-  "dealId": "",
-  "ipfsLink": "",
-  "privateKey": ""
-}
-```
+`string`
+
+The transaction hash corresponding to the execution of the function.
+
+### dealId
+
+`string`
+
+Identifies the specific deal associated with this transaction.
+
+### ipfsLink
+
+`string`
+
+Link to the IPFS location of the transaction-related data.
+
+### privateKey
+
+`CryptoKey`
+
+Key used for decrypting the protected data.
 
 ## Error
 
-## Possible errors
-
-```
-
-This protected data does not exist in the subgraph.
-
-```
-
-```
-
-This protected data is not owned by the sharing contract, hence a sharing-related method cannot be called.
-
-```
-
-```
-
-You are not allowed to consume this protected data. You need to rent it first, or to subscribe to the user's collection.
-
-```
-
-```
-
-The app related to the protected data is not owned by the DataProtector Sharing contract
-
-```
-
-TODO: Details needed.
-Explain that an `appAddress` can be given to `addToCollection()`, etc.
-
-```
-
-Could not find a free workerpool order, maybe too many requests? You might want to try again later.
-
-```
-
-Generic error:
-
-```
-
-Sharing smart contract: Failed to consume a ProtectedData
-
-```
-
-```
-
-```
+TODO

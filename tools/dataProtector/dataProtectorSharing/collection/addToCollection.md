@@ -69,7 +69,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 
 ### onStatusUpdate
 
-`OnStatusUpdateFn | undefined`
+`(status: OnStatusUpdateFn) => void | undefined`
 
 Callback function to be notified at intermediate steps.
 
@@ -84,44 +84,6 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 });
 ```
 
-You can expect this callback function to be called four times:
-
-1️⃣
-
-```json
-{
-  "title": "APPROVE_COLLECTION_CONTRACT",
-  "isDone": false
-}
-```
-
-2️⃣
-
-```json
-{
-  "title": "APPROVE_COLLECTION_CONTRACT",
-  "isDone": true
-}
-```
-
-3️⃣
-
-```json
-{
-  "title": "ADD_PROTECTED_DATA_TO_COLLECTION",
-  "isDone": false
-}
-```
-
-4️⃣
-
-```json
-{
-  "title": "ADD_PROTECTED_DATA_TO_COLLECTION",
-  "isDone": true
-}
-```
-
 ## Return value
 
 ```js
@@ -130,9 +92,9 @@ import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 
 ### txHash
 
-`txHash`
+`string`
 
-The transaction hash of the function action.
+The transaction hash corresponding to the execution of the function.
 
 ## Error
 

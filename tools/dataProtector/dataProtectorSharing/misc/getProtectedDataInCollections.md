@@ -27,7 +27,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" }, // [!code focus]
   collectionTokenId: 12,
   collectionOwner: "0x123...",
-  creationTimestampGte: 1707237580,
+  createdAfterTimestamp: 1707237580,
   page: 3,
   pageSize: 25,
 });
@@ -42,7 +42,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12, // [!code focus]
   collectionOwner: "0x123...",
-  creationTimestampGte: 1707237580,
+  createdAfterTimestamp: 1707237580,
   page: 3,
   pageSize: 25,
 });
@@ -57,13 +57,13 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12,
   collectionOwner: "0x123...", // [!code focus]
-  creationTimestampGte: 1707237580,
+  createdAfterTimestamp: 1707237580,
   page: 3,
   pageSize: 25,
 });
 ```
 
-### creationTimestampGte
+### createdAfterTimestamp
 
 `number | undefined`
 
@@ -72,7 +72,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12,
   collectionOwner: "0x123...",
-  creationTimestampGte: 1707237580, // [!code focus]
+  createdAfterTimestamp: 1707237580, // [!code focus]
   page: 3,
   pageSize: 25,
 });
@@ -87,7 +87,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12,
   collectionOwner: "0x123...",
-  creationTimestampGte: 1707237580,
+  createdAfterTimestamp: 1707237580,
   page: 3, // [!code focus]
   pageSize: 25,
 });
@@ -102,7 +102,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12,
   collectionOwner: "0x123...",
-  creationTimestampGte: 1707237580,
+  createdAfterTimestamp: 1707237580,
   page: 3,
   pageSize: 25, // [!code focus]
 });
@@ -114,20 +114,54 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 import { type ProtectedDataInCollection } from "@iexec/dataprotector";
 ```
 
-```json
-[
-  {
-    "name": "My shared protected data",
-    "address": "0x123...",
-    "schema": { "file": "ArrayBuffer", "secretFilename": "string" },
-    "collectionTokenId": 12,
-    "isIncludedInSubscription": true,
-    "isRentable": true,
-    "isForSale": false,
-    "creationTimestamp": 1707237581
-  }
-]
-```
+`ProtectedDataInCollection[]`
+
+### name
+
+`string`
+
+The name of the the protected data.
+
+### address
+
+`Address`
+
+Address of the protected data
+
+### schema
+
+`DataSchema`
+
+Defines the data structure of the protected data.
+
+### collectionTokenId
+
+`number`
+
+The collection token ID in which the protected data is.
+
+### isIncludedInSubscription
+
+`boolean`
+Indicates if the item is accessible through a subscription.
+
+### isRentable
+
+`boolean`
+
+Whether the item can be rented.
+
+### isForSale
+
+`boolean`
+
+Specifies if the item is available for purchase.
+
+### creationTimestamp
+
+`number`
+
+Timestamp marking the protected data's creation.
 
 ## Error
 

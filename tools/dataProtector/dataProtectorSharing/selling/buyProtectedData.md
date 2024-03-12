@@ -71,9 +71,9 @@ import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 
 ### txHash
 
-`txHash`
+`string`
 
-The transaction hash of the function action.
+The transaction hash corresponding to the execution of the function.
 
 ## Error
 

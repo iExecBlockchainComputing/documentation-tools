@@ -19,8 +19,19 @@ const createCollectionResult = await dataProtectorSharing.createCollection();
 import { type CreateCollectionResponse } from "@iexec/dataprotector";
 ```
 
-The collection token ID created and the transaction hash of the function action.
+The collection token ID created and The transaction hash corresponding to the execution of the function.
 
+### collectionTokenId
+
+`number`
+
+The collection token ID
+
+### txHash
+
+`string`
+
+The transaction hash corresponding to the execution of the function.
 
 ## Error
 
