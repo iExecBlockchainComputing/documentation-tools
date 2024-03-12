@@ -1,8 +1,6 @@
 # grantAccess
 
-Data encrypted through the Data Protector tool requires explicit authorization for runtime access. A newly created `protectedData` object has no inherent authorizations. This method grants permission to securely access the specified `protectedData` for processing using the `processProtectedData` method. Users may grant permissions to an application, an application whitelist, or a user.
-
-
+Data encrypted through the Data Protector tool requires explicit authorization for runtime access. A newly created `protectedData` object has no inherent authorizations. This method grants permission to securely access the specified `protectedData` for processing using the `processProtectedData` method. Authorization to use the `protectedData` is given to a user in the context of an application (or a designated list of applications).
 
 ## Usage
 
