@@ -1,6 +1,6 @@
 # fetchGrantedAccess
 
-This method provides a listing of all access grants given to the specified protected data object. It supports several optional parameters to restrict the size of the result set. Options for filtering include specifying an authorized user, an application, or both. You may optionally receive the results as a paginated list.
+This method provides a listing of all access grants given for the specified protected data object. It supports several optional parameters to restrict the size of the result set. Options for filtering include specifying an authorized user, an application, or both. You may optionally receive the results as a paginated list.
 
 ## Usage
 
