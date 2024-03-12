@@ -10,7 +10,7 @@ This approach to data management relies on:
 
 The DataProtector SDK encompasses the following suite of methods:
 
-* **protectData**—safeguards data by encrypting it and recording ownership as an NFT using a smart contract
+* **protectData**—safeguards data by encrypting it and recording ownership as an NFT
 * **grantAccess**—authorizes an application to process a user's data without exposing the data to any external system or user review
 * **revokeAllAccessObservable**—removes all access granted to any iExec applications for a `protectedData` object containing a user's data
 * **revokeOneAccess**—removes access granted to one iExec application for a `protectedData` object containing a user's data
