@@ -12,7 +12,7 @@ The DataProtector SDK encompasses the following suite of methods:
 
 * **protectData**—safeguards data by encrypting it and recording ownership as an NFT
 * **grantAccess**—authorizes an application to process a user's data without exposing the data to any external system or user review
-* **revokeAllAccessObservable**—removes all access granted to any iExec applications for a `protectedData` object containing a user's data
+* **revokeAllAccessObservable**—removes all access granted to any iExec applications or user for a `protectedData` object
 * **revokeOneAccess**—removes access granted to one iExec application for a `protectedData` object containing a user's data
 * **fetchProtectedData**—retrieve a list of all protected data for one owner and/or data schema
 * **fetchGrantedAccess**—retrieve a list of all authorized users and applications for a `protectedData` object containing a user's data
