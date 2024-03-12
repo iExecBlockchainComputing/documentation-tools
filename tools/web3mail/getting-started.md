@@ -1,9 +1,5 @@
 # Quick start
 
-## Sandbox
-
-{% embed url="<https://codesandbox.io/p/github/iExecBlockchainComputing/web3mail-sandbox/main?file=/src/web3mail/web3mail.tsx:1,1&preventWorkspaceRedirect=true>" %}
-
 ## Getting started
 
 ### Prerequisites
@@ -73,3 +69,7 @@ const web3mail = new IExecWeb3mail(web3Provider);
 ```
 
 :::
+
+## Sandbox
+
+<CodeSandbox src="https://codesandbox.io/p/github/iExecBlockchainComputing/web3mail-sandbox/main?file=/src/web3mail/web3mail.tsx:1,1&preventWorkspaceRedirect=true"/>

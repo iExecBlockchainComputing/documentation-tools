@@ -31,10 +31,6 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/iExecBlockchainComputing" },
       { icon: "x", link: "https://twitter.com/iEx_ec" },
       { icon: "discord", link: "https://discord.com/invite/pbt9m98wnU" },
-      {
-        icon: "youtube",
-        link: "https://www.youtube.com/channel/UCwWxZWvKVHn3CXnmDooLWtA",
-      },
     ],
   },
 });

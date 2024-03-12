@@ -1,10 +1,6 @@
-# Quick start
+# Getting Started
 
-## Sandbox
-
-{% embed url="<https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true>" %}
-
-## Getting started
+## Overview
 
 ### Prerequisites
 

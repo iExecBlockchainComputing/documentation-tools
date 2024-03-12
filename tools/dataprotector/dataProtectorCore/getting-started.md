@@ -2,10 +2,6 @@
 
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/dataprotector-sdk/develop?filename=packages%2Fsdk%2Fpackage.json&color=green)
 
-## Sandbox
-
-{% embed url="<https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true>" %}
-
 ## Getting started
 
 ### Prerequisites
@@ -76,3 +72,7 @@ const dataProtector = new IExecDataProtector(web3Provider);
 ```
 
 :::
+
+## Sandbox
+
+<CodeSandbox src="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true" />

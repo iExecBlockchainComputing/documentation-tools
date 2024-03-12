@@ -24,18 +24,18 @@ export function getSidebar() {
         text: "Tools",
         items: [
           {
-            text: "Getting Started",
-            link: "/tools/dataProtector/getting-started",
-          },
-          {
-            text: "Migrate from v1 to v2",
-            link: "/tools/dataProtector/migrate-from-v1",
-          },
-          {
             text: "DataProtector",
             link: "/tools/dataProtector",
             collapsed: true,
             items: [
+              {
+                text: "Getting Started",
+                link: "/tools/dataProtector/getting-started",
+              },
+              {
+                text: "Migrate from v1 to v2",
+                link: "/tools/dataProtector/migrate-from-v1",
+              },
               {
                 text: "DataProtectorCore",
                 link: "/tools/dataProtector/dataProtectorCore/getting-started",
