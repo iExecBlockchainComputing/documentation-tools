@@ -1,8 +1,8 @@
-# Quick start
+# Getting Started
 
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/dataprotector-sdk/develop?filename=packages%2Fsdk%2Fpackage.json&color=green)
 
-## Getting started
+## Overview
 
 ### Prerequisites
 
