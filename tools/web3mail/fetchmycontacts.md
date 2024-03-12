@@ -8,7 +8,15 @@ Method to get the ETH addresses that gave access to their protected data for mes
 const contactsList = await web3mail.fetchMyContacts();
 ```
 
-## Return value example
+## Return value
+
+```js
+import { type Contact } from "@iexec/web3mail";
+```
+
+`Contract[]`
+
+This a the return type :
 
 ```js
 [

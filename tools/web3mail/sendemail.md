@@ -19,19 +19,13 @@ const sendEmail = await web3mail.sendEmail({
 
 ## Parameters
 
-### protectedData
-
-Protected data address to which you will send the email.
-
 ```js
-const sendEmail = await web3mail.sendEmail({
-   protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-    emailSubject: "My email subject",
-    emailContent: "My email content",
-})
+import { type SendEmailParams } from "@iexec/web3mail";
 ```
 
 ### emailObject
+
+`string`
 
 The email object that needs to be sent.
 
@@ -45,6 +39,8 @@ const sendEmail = await web3mail.sendEmail({
 
 ### emailContent
 
+`string`
+
 The email content that needs to be sent.
 
 ```js
@@ -55,7 +51,23 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-### contentType (optional)
+### protectedData
+
+`Address`
+
+Protected data address to which you will send the email.
+
+```js
+const sendEmail = await web3mail.sendEmail({
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  emailSubject: "My email subject",
+  emailContent: "My email content",
+});
+```
+
+### contentType
+
+`string| undefined`
 
 This may be one of: `text/html`, `text/plain` (default `text/plain`). This is used by the mail client to properly render the delivered text, use it to enable rich HTML content in your email.
 
@@ -68,7 +80,9 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-### senderName (optional)
+### senderName
+
+`string| undefined`
 
 Allows specifying a sender name for the email. This is used by the mail client in rendering the email to the user.
 
@@ -81,7 +95,9 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-### label (optional)
+### label
+
+`string| undefined`
 
 Allows adding a custom public label that will be written onchain as `iexec_args` in the deal params.
 
@@ -94,7 +110,9 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-### workerpoolAddressOrEns (optional)
+### workerpoolAddressOrEns
+
+`workerpoolAddressOrEns| undefined`
 
 Allows specifying the workerpool to use (default iExec's production workerpool).
 
@@ -107,7 +125,9 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-### dataMaxPrice (optional)
+### dataMaxPrice
+
+`number| undefined`
 
 Allows specifying the maximum amount you want to pay the email address provider for accessing her/his data in nRLC (default 0).
 
@@ -120,7 +140,9 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-### appMaxPrice (optional)
+### appMaxPrice
+
+`number| undefined`
 
 Allows specifying the maximum amount you want to pay the web3mail app provider for using her/his application in nRLC (default 0).
 
@@ -133,7 +155,9 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-### workerpoolMaxPrice (optional)
+### workerpoolMaxPrice
+
+`number| undefined`
 
 Allows specifying the maximum amount you want to pay the workerpool provider for using her/his infrastructure to run the web3mail app in nRLC (default 0).
 

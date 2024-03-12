@@ -1,19 +1,39 @@
-# 🔐 DataProtector
+# 🔐 DataProtectorSharing
 
-[![npm version](https://badge.fury.io/js/@iexec%2Fdataprotector.svg)](https://badge.fury.io/js/@iexec%2Fdataprotector)
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/dataprotector-sdk/v2?filename=packages%2Fsdk%2Fpackage.json&color=green)
 
-DataProtector offers developers methods to create apps that give users unparalleled ownership and privacy over their data.&#x20;
+DataProtectorSharing enhances the capabilities of the DataProtector module by introducing additional functionalities. These functionalities streamline the process of monetizing access to data. Specifically, they include subscription methods, enabling users to pay for continuous access to a protected data on a recurring basis. Moreover, the platform offers renting options, allowing users to access data temporarily for a specified duration in exchange for payment. Additionally, DataProtectorSharing provides sales capabilities, making it effortless to directly sell a protected data to interested parties.
 
-Through DataProtector, users may allow iExec apps to use their data without ever revealing the data itself. This revolutionary approach to data management relies on:
+DataProtectorSHaring bundles 22 methods:
 
-- end-to-end encryption backed by a confidential computing technology that prevents iExec apps from accessing users’ unencrypted data
-- smart contracts that manage iExec apps’ rights to use users’ encrypted data
+#### Collections Methods
 
-DataProtector bundles 6 methods:
+- **createCollection**— Creates a new collection within the system.
+- **addToCollection**— Adds specified items to an existing collection.
+- **removeCollection**— Deletes a collection from the system.
+- **removeFromCollection**— Removes specified items from a collection.
 
-- **protectData**—that safeguards any data. It takes responsibility for encrypting the data and recording ownership on a smart contract
-- **grantAccess**—that authorizes an app to use users’ data without ever revealing the data itself
-- **revokeAllAccessObservable**—that revokes all iExec apps' access to users’ data
-- **revokeOneAccess**—that revokes an app's access to users’ data
-- **fetchProtectedData**—that retrieves data protected by DataProtector
-- **fetchGrantedAccess**—that provides the list of authorization with associated iExec apps and users to use existing protected data
+#### Misc Methods
+
+- **consumeProtectedData**— Allows access to protected data for authorized users.
+- **getProtectedDataInCollection**— Retrieves protected data contained within a specified collection.
+- **getProtectedDataPricingParams**— Fetches pricing parameters for accessing protected data.
+
+#### Subscription Methods
+
+- **setSubscriptionParams**— Configures parameters for subscription services.
+- **setProtectedDataToSubscription**— Assigns protected data to a subscription plan.
+- **subscribe**— Initiates a subscription to access protected data.
+- **removeProtectedDataFromSubscription**— Removes protected data from an active subscription.
+
+#### Renting Methods
+
+- **setProtectedDataToRenting**— Designates protected data for renting purposes.
+- **rentProtectedData**— Facilitates the process of renting protected data.
+- **removeProtectedDataFromRenting**— Withdraws protected data from the rental inventory.
+
+#### Selling Methods
+
+- **setProtectedDataForSale**— Sets up protected data for sale.
+- **buyProtectedData**— Enables the purchase of protected data.
+- **removeProtectedDataForSale**— Takes protected data out of the sales inventory.

@@ -12,7 +12,13 @@ const contactsList = await web3mail.fetchUserContacts({
 
 ## Parameters
 
+```js
+import { type FetchUserContactsParams } from "@iexec/web3mail";
+```
+
 ### userAddress
+
+`Address`
 
 Specify the Ethereum address of the user from whom you wish to obtain the list of contact.
 
@@ -22,7 +28,15 @@ const contactsList = await web3mail.fetchUserContacts({
 });
 ```
 
-## Return value example
+## Return value
+
+```js
+import { type Contact } from "@iexec/web3mail";
+```
+
+`Contact[]`
+
+This a the return type :
 
 ```js
 [

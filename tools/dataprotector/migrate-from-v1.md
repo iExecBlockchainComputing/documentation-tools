@@ -1,4 +1,4 @@
-# Migrate to V2
+# Migrate from v1 to v2
 
 ::: tip
 This page concerns projects created with data protector prior or equal to version 0.5.1
@@ -10,23 +10,35 @@ When instantiating the IExecDataProtector object, reference the _dataProtector_ 
 
 ```js
 // 0.5.1 and before
-const dataProtector = new IExecDataProtector(web3Provider);
+const dataProtector = new IExecDataProtector(web3Provider); // [!code --]
 
 // after 0.5.1
-const dataProtector = new IExecDataProtector(web3Provider).dataProtector;
+const dataProtector = new IExecDataProtector(web3Provider).dataProtector; // [!code ++]
 ```
 
 ## Methods
 
-### Method renaming
+### Rename `fetchProtectedData` & add new param
 
 Some methods were renamed in order to standardize the SDK, they still provide the same functionalities as before
 
-| Previous name      | New name         |
-| ------------------ | ---------------- |
-| fetchProtectedData | getProtectedData |
-| fetchGrantedAccess | getGrantedAccess |
+```js
+await dataProtector.fetchProtectedData({ // [!code --]
+await dataProtector.getProtectedData({ // [!code ++]
+  owner: "0xA0...",
+  creationTimestampGte: "545645" // [!code ++]
+});
+```
 
-### Additional parameters
+### Rename `fetchGrantedAccess`
 
-`getProtectedData` now takes a parameter _creationTimestampGte_ to filter elements created after a certain date
+Some methods were renamed in order to standardize the SDK, they still provide the same functionalities as before
+
+```js
+await dataProtector.fetchGrantedAccess({ // [!code --]
+await dataProtector.getGrantedAccess({ // [!code ++]
+  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  authorizedApp: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  owner: "0xA0...",
+});
+```

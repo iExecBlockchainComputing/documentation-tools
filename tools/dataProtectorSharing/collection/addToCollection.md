@@ -33,9 +33,6 @@ Collection ID to which you'd like to add the protected data.
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12, // [!code focus]
   protectedDataAddress: "0x123abc...",
-  onStatusUpdate: ({ title, isDone }) => {
-    console.log(title, isDone);
-  },
 });
 ```
 

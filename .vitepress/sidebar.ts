@@ -33,7 +33,7 @@ export function getSidebar() {
                 link: "/tools/dataProtector/getting-started",
               },
               {
-                text: "Migrate from v1",
+                text: "Migrate from v1 to v2",
                 link: "/tools/dataProtector/migrate-from-v1",
               },
               {

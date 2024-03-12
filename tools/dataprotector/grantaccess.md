@@ -56,7 +56,7 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ::: tip
 If you want to authorize every user to use the protected data, write **0x00000000000000000000000000000000000000**
-::
+:::
 
 ### pricePerAccess (optional)
 
