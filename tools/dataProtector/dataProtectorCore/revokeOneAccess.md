@@ -65,3 +65,7 @@ This method returns a JSON object containing two fields.
 ### txHash
 
 The ID of the transaction that happened on iExec's side chain. You may view details on the transaction using the [iExec explorer](https://explorer.iex.ec).
+
+### access
+
+[`GrantedAccess`](../glossary/types)

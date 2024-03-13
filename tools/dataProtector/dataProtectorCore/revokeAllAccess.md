@@ -83,46 +83,10 @@ const revokeAllAccessObservable = dataProtector.revokeAllAccess({
 
 ## Result
 
-As an observable method, the `revokeAllAccessObservable` method returns several events. Those include the following.
+```js
+import { type AllAccessRevoked } from "@iexec/dataprotector";
+```
 
-### GRANTED_ACCESS_RETRIEVED
+### allAccessRevoked
 
-Triggered when the `revokeAllAccessObservable` method begins processing the authorization grants for the specified `protectedData`. It contains the following data element:
-
-**_access_**
-
-A JSON list of `grantedAccess` objects detailing the set of authorizations for the specified `protectedData`.
-
-### REVOKE_ONE_ACCESS_REQUEST
-
-Triggered when the `revokeAllAccessObservable` method begins revoking one of the authorizations for the `protectedData`. It contains the following data element:
-
-**_access_**
-
-The `grantedAccess` object detailing authorization iExec is currently revoking.
-
-### REVOKE_ONE_ACCESS_SUCCESS
-
-Triggered upon completion of an authorization revocation. It contains the following data elements:
-
-**_txHash_**
-
-The ID of the transaction that happened on iExec's side chain. You may view details on the transaction using the [iExec explorer](https://explorer.iex.ec).
-
-**_access_**
-
-The `grantedAccess` object detailing authorization iExec successfully revoked.
-
-::: tip
-The `grantedAccess` object has the following fields:
-
-**apprestrict** - address of the authorized application; a value of 0x0 indicates any application may access this data  
-**dataset** - address of the `protectedData` containing user data  
-**datasetprice** - price (in nRLC) to charge the user specified in `requesterrestrict` for each use of this `protectedData`  
-**requesterrestrict** - address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data  
-**volume** - number of authorized uses of this `protectedData`; each use decrements this counter  
-**workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
-**salt** - random value to make an order unique and reusable as nonce in a blockchain transaction  
-**sign** - order signature of all the `grantedAccess` fields  
-**tag** - defines whether a `protectedData` is usable in a TEE environment (Trusted Execution Environment) ; `0x00` is TEE while `0x03` is non-TEE  
-:::
+It's a list of [`GrantedAccess`](./revokeOneAccess.md#result-value)
