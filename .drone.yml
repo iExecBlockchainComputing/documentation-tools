@@ -1,0 +1,81 @@
+kind: pipeline
+type: docker
+name: default
+
+trigger:
+  event: push
+
+steps:
+  - name: npm install
+    image: node:18.19
+    environment:
+      SSH_KEY:
+        from_secret: ssh-key-team-product-github
+    commands:
+      # ssh setup to npm install private package via ssh+git
+      - mkdir /root/.ssh && echo "$SSH_KEY" > /root/.ssh/id_rsa && chmod 0600 /root/.ssh/id_rsa
+      - ssh-keyscan -H github.com >> /root/.ssh/known_hosts
+      # install
+      - node -v
+      - npm -v
+      - npm ci
+
+  # - name: Check prettier
+  #   image: node:18.19
+  #   commands:
+  #     - npm run check-format
+
+  - name: Vercel deploy to preview
+    image: node:18.19
+    environment:
+      VERCEL_ORG_ID: team_qEUZmPwX3J0FFDAk23fSvIlq
+      VERCEL_PROJECT_ID: prj_XD11Fr78qNrfVoaAa46D1iAvIQIT
+      VERCEL_TOKEN:
+        from_secret: vercel-token
+    commands:
+      - npm install --global vercel@canary
+      - vercel pull --yes --scope i-exec --token $VERCEL_TOKEN
+      - VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --scope i-exec --token $VERCEL_TOKEN
+      - vercel deploy --prebuilt --scope i-exec --token $VERCEL_TOKEN
+
+---
+kind: pipeline
+type: docker
+name: main-ci
+
+trigger:
+  event: push
+  branch: main
+
+steps:
+  - name: npm install
+    image: node:18.19
+    environment:
+      SSH_KEY:
+        from_secret: ssh-key-team-product-github
+    commands:
+      # ssh setup to npm install private package via ssh+git
+      - mkdir /root/.ssh && echo "$SSH_KEY" > /root/.ssh/id_rsa && chmod 0600 /root/.ssh/id_rsa
+      - ssh-keyscan -H github.com >> /root/.ssh/known_hosts
+      # install
+      - node -v
+      - npm -v
+      - npm ci
+
+  # - name: Check prettier
+  #   image: node:18.19
+  #   commands:
+  #     - npm run check-format
+
+  - name: Vercel deploy to prod
+    image: node:18.19
+    environment:
+      VERCEL_ORG_ID: team_qEUZmPwX3J0FFDAk23fSvIlq
+      VERCEL_PROJECT_ID: prj_XD11Fr78qNrfVoaAa46D1iAvIQIT
+      VERCEL_TOKEN:
+        from_secret: vercel-token
+    commands:
+      - npm install --global vercel@canary
+      - vercel pull --yes --environment=production --scope i-exec --token $VERCEL_TOKEN
+      - SET_SUBPATH_FOR_PROD=true VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --prod --scope i-exec --token $VERCEL_TOKEN
+      - vercel deploy --prod --prebuilt --scope i-exec --token $VERCEL_TOKEN
