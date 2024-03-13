@@ -129,10 +129,16 @@ const taskid = await dataProtector.processProtectedData({
 });
 ```
 
-## Result
+## Return value
+
+```js
+import { type ProcessProtectedDataParams } from "@iexec/dataprotector";
+```
 
 This method returns a single value as the result, a `taskId`.
 
-**_taskId_**
+### taskId
+
+`string`
 
 A unique identifier associated with a task currently running on the iExec Bellecour side chain. You may monitor task execution with the [iExec blockchain explorer](https://explorer.iex.ec).

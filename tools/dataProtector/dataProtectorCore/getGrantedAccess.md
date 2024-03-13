@@ -108,6 +108,10 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 ## Return value
 
+```js
+import { type GrantedAccessResponses } from "@iexec/dataprotector";
+```
+
 The return value for this method has two fields: a `count` parameter indicating the number of results, and an array of `GrantedAccess` objects containing all access data. When using the optional paging parameters, the `count` will be limited by the selected `pageSize` parameter. You may use these result objects in conjunction with the [revokeOneAccess](revokeOneAccess.md) method to revoke a previously granted authorization for access.
 
 This method returns an object with two fields:
@@ -116,16 +120,4 @@ This method returns an object with two fields:
 
 An integer value indicating the number of results returned by this method. This is of particular note when using paging as the number of records returned may be smaller than the page size.
 
-`grantedAccess`
-
-This is an array of `grantedAccess` objects. Each object has the following fields:
-
-**apprestrict** - address of the authorized application; a value of 0x0 indicates any application may access this data  
-**dataset** - address of the `protectedData` containing user data  
-**datasetprice** - price (in nRLC) to charge the user specified in `requesterrestrict` for each use of this `protectedData`  
-**requesterrestrict** - address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data  
-**volume** - number of authorized uses of this `protectedData`; each use decrements this counter  
-**workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
-**salt** - random value to make an order unique and reusable as nonce in a blockchain transaction  
-**sign** - order signature of all the `grantedAccess` fields  
-**tag** - defines whether a `protectedData` is usable in a TEE environment (Trusted Execution Environment); `0x00` is TEE while `0x03` is non-TEE
+[`GrantedAccess`](../glossary/types)

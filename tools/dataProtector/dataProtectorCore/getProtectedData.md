@@ -105,12 +105,42 @@ const listProtectedData = await dataProtector.getProtectedData({
 
 ## Return value
 
+```js
+import { type ProtectedData } from "@iexec/dataprotector";
+```
+
+`ProtectedData[]`
+
 The `name` and `address` fields in the result object(s) represent the name provided when creating the protected data and the eth address respectively. This method also returns the owner and associated data schema, regardless of which invocation method is used.
 
 This method returns an array of objects containing the protectedData information queried. Each object contains the following parameters:
 
-- **name**: Name specified when the protected data was created. This information is public and visible on-chain.
-- **address**: Ethereum address of the protected data.
-- **owner**: Ethereum address of the protected data owner.
-- **creationTimestamp**: Timestamp specifying when the protected data was created, expressed in milliseconds since the epoch. This timestamp provides precise information about the moment of creation and can be used for chronological ordering or time-based operations.
-- **schema**: Data schema for the protected data as defined when the protected data was created (see [protectedData](protectdata.md)). `schema` provides a structured representation of the protected data format and attributes. This field plays a crucial role in understanding and interpreting the underlying structure of the sensitive information.
+### name
+
+`string`
+
+Name specified when the protected data was created. This information is public and visible on-chain.
+
+### address
+
+`Address`
+
+Ethereum address of the protected data.
+
+### owner
+
+`Address`
+
+Ethereum address of the protected data owner.
+
+### schema
+
+`DataSchema`
+
+Data schema for the protected data as defined when the protected data was created (see [protectedData](protectdata.md)). `schema` provides a structured representation of the protected data format and attributes. This field plays a crucial role in understanding and interpreting the underlying structure of the sensitive information.
+
+### creationTimestamp
+
+`number`
+
+Timestamp specifying when the protected data was created, expressed in milliseconds since the epoch. This timestamp provides precise information about the moment of creation and can be used for chronological ordering or time-based operations.

@@ -185,6 +185,17 @@ export function getSidebar() {
                   },
                 ],
               },
+              {
+                text: "Glossary",
+                link: "/tools/dataProtector/glossary/types",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Types",
+                    link: "/tools/dataProtector/glossary/types",
+                  },
+                ],
+              },
             ],
           },
           {

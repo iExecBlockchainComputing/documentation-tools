@@ -114,18 +114,62 @@ _default_: 1
 
 ## Return value
 
+```js
+import { type GrantedAccess } from "@iexec/dataprotector";
+```
+
 The result of this method confirms the new access grant. It consists of a JSON `grantedAccess` object.
 
-`grantedAccess`
+### dataset
 
-The `grantedAccess` object has the following fields:
+`string`
 
-**apprestrict** - address of the authorized application; a value of 0x0 indicates any application may access this data  
-**dataset** - address of the `protectedData` containing user data  
-**datasetprice** - price (iun nRLC) to charge the user specified in `requesterrestrict` for each use of this `protectedData`  
-**requesterrestrict** - address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data  
-**volume** - number of authorized uses of this `protectedData`; each use decrements this counter  
-**workerpoolrestrict**- address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data  
-**salt** - random value to make an order unique and reusable as nonce in a blockchain transaction  
-**sign** - order signature of all the `grantedAccess` fields  
-**tag** - defines whether a `protectedData` is usable in a TEE environment; `0x00` is TEE while `0x03` is non-TEE
+Address of the `protectedData` containing user data
+
+### datasetprice
+
+`string`
+
+Price (iun nRLC) to charge the user specified in `requesterrestrict` for each use of this `protectedData`
+
+### volume
+
+`string`
+
+Number of authorized uses of this `protectedData`; each use decrements this counter
+
+### tag
+
+`string`
+
+Defines whether a `protectedData` is usable in a TEE environment; `0x00` is TEE while `0x03` is non-TEE
+
+### apprestrict
+
+`string`
+
+Address of the authorized application; a value of 0x0 indicates any application may access this data
+
+### requesterrestrict
+
+`string`
+
+Address of the requester authorized to use this `protectedData` in workloads; a value of 0x0 indicates any requester may use this data
+
+### workerpoolrestrict
+
+`string`
+
+Address of the decentralized infrastructure (worker pool) authorized to execute the application; a value of 0x0 indicates any worker pool may access this data
+
+### salt
+
+`string`
+
+Random value to make an order unique and reusable as nonce in a blockchain transaction
+
+### sign
+
+`string`
+
+Order signature of all the `grantedAccess` fields
