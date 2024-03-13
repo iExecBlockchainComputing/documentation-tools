@@ -14,7 +14,7 @@ Inside a collection, a protected data can be in a number of different states:
 
 Input parameters type: `GetProtectedDataPricingParams`
 
-```javascript
+```js
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
   protectedDataAddress: "0x123...",
 });

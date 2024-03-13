@@ -6,7 +6,7 @@ This method allows revoking a specific access authorization from a `protectedDat
 
 The `revokeOneAccess` method requires a `grantedAccess` object as an input parameter. This object is retrieved from the [`getGrantedAccess`](./getGrantedAccess.md) method.
 
-```javascript
+```js
 const revokeAccess = await dataProtector.revokeOneAccess(
     {
         apprestrict: '0xea...',
@@ -34,7 +34,7 @@ import { type GrantedAccess } from "@iexec/dataprotector";
 
 This is the complete `granted access` object retrieved from an invocation of `fetchGrantedAccess`.
 
-```javascript
+```js
 const revokeAccess = await dataProtector.revokeOneAccess(
     {
         apprestrict: '0xea...', // [!code focus]
@@ -61,8 +61,6 @@ import { type RevokedAccess } from "@iexec/dataprotector";
 ```
 
 This method returns a JSON object containing two fields.
-
-
 
 ### txHash
 

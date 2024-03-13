@@ -3,7 +3,7 @@
 Allows processing a protected dataset through use of a specified iExec application.
 
 > [!IMPORTANT]
-> You must ensure this application has authorization to use the `protectedData`. You may grant this permission using the [`grantAccess`](./grantaccess.md) method.
+> You must ensure this application has authorization to use the `protectedData`. You may grant this permission using the [`grantAccess`](./grantAccess.md) method.
 
 ## Usage
 

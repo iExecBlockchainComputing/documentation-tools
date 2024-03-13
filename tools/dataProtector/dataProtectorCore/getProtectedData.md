@@ -137,7 +137,7 @@ Ethereum address of the protected data owner.
 
 `DataSchema`
 
-Data schema for the protected data as defined when the protected data was created (see [protectedData](protectdata.md)). `schema` provides a structured representation of the protected data format and attributes. This field plays a crucial role in understanding and interpreting the underlying structure of the sensitive information.
+Data schema for the protected data as defined when the protected data was created (see [protectedData](protectData.md)). `schema` provides a structured representation of the protected data format and attributes. This field plays a crucial role in understanding and interpreting the underlying structure of the sensitive information.
 
 ### creationTimestamp
 

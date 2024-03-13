@@ -7,6 +7,7 @@ export default defineConfig({
   description: "iExec documentation for dev tools",
   appearance: "force-dark",
   markdown: {
+    attrs: { disable: true },
     theme: {
       light: "vitesse-light",
       dark: "vitesse-dark",

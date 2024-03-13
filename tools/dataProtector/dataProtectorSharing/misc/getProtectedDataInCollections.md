@@ -7,7 +7,7 @@ subscription to the corresponding collection.
 
 ## Usage
 
-```javascript
+```js
 const protectedData =
   await dataProtectorSharing.getProtectedDataInCollections();
 ```
@@ -22,7 +22,7 @@ import { type GetProtectedDataInCollectionsParams } from "@iexec/dataprotector";
 
 `DataSchema | undefined`
 
-```javascript
+```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" }, // [!code focus]
   collectionTokenId: 12,
@@ -37,7 +37,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 `number | undefined`
 
-```javascript
+```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12, // [!code focus]
@@ -52,7 +52,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 `AddressOrENS | undefined`
 
-```javascript
+```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12,
@@ -67,7 +67,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 `number | undefined`
 
-```javascript
+```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12,
@@ -82,7 +82,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 `number | undefined`
 
-```javascript
+```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12,
@@ -97,7 +97,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 `number | undefined`
 
-```javascript
+```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
   collectionTokenId: 12,
