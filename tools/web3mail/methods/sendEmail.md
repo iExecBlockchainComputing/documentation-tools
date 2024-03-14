@@ -69,7 +69,9 @@ const sendEmail = await web3mail.sendEmail({
 
 `string| undefined`
 
-This may be one of: `text/html`, `text/plain` (default `text/plain`). This is used by the mail client to properly render the delivered text, use it to enable rich HTML content in your email.
+This may be one of: `text/html`, `text/plain` (default `text/plain`). This is
+used by the mail client to properly render the delivered text, use it to enable
+rich HTML content in your email.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
@@ -84,7 +86,8 @@ const sendEmail = await web3mail.sendEmail({
 
 `string| undefined`
 
-Allows specifying a sender name for the email. This is used by the mail client in rendering the email to the user.
+Allows specifying a sender name for the email. This is used by the mail client
+in rendering the email to the user.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
@@ -99,7 +102,8 @@ const sendEmail = await web3mail.sendEmail({
 
 `string| undefined`
 
-Allows adding a custom public label that will be written onchain as `iexec_args` in the deal params.
+Allows adding a custom public label that will be written onchain as `iexec_args`
+in the deal params.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
@@ -129,7 +133,8 @@ const sendEmail = await web3mail.sendEmail({
 
 `number| undefined`
 
-Allows specifying the maximum amount you want to pay the email address provider for accessing her/his data in nRLC (default 0).
+Allows specifying the maximum amount you want to pay the email address provider
+for accessing her/his data in nRLC (default 0).
 
 ```js
 const sendEmail = await web3mail.sendEmail({
@@ -144,7 +149,8 @@ const sendEmail = await web3mail.sendEmail({
 
 `number| undefined`
 
-Allows specifying the maximum amount you want to pay the web3mail app provider for using her/his application in nRLC (default 0).
+Allows specifying the maximum amount you want to pay the web3mail app provider
+for using her/his application in nRLC (default 0).
 
 ```js
 const sendEmail = await web3mail.sendEmail({
@@ -159,7 +165,8 @@ const sendEmail = await web3mail.sendEmail({
 
 `number| undefined`
 
-Allows specifying the maximum amount you want to pay the workerpool provider for using her/his infrastructure to run the web3mail app in nRLC (default 0).
+Allows specifying the maximum amount you want to pay the workerpool provider for
+using her/his infrastructure to run the web3mail app in nRLC (default 0).
 
 ```js
 const sendEmail = await web3mail.sendEmail({
@@ -180,4 +187,6 @@ import { type SendEmailResponse } from '@iexec/web3mail';
 
 `string`
 
-A unique identifier associated with a task currently running on the iExec Bellecour side chain. You may monitor task execution with the [iExec blockchain explorer](https://explorer.iex.ec).
+A unique identifier associated with a task currently running on the iExec
+Bellecour side chain. You may monitor task execution with the
+[iExec blockchain explorer](https://explorer.iex.ec).

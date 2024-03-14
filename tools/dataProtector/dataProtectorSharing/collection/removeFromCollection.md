@@ -1,9 +1,10 @@
 # removeFromCollection
 
-Method to remove one of your protected data from a collection of yours in the Data Sharing
-smart-contract.
+Method to remove one of your protected data from a collection of yours in the
+Data Sharing smart-contract.
 
-To put it differently, this method will transfer the ownership of the protected data back to you.
+To put it differently, this method will transfer the ownership of the protected
+data back to you.
 
 ## Usage
 
@@ -15,7 +16,8 @@ const { txHash } = await dataProtectorSharing.removeFromCollection({
 
 ## Pre-conditions
 
-- You must be the owner of the collection of which the protected data is currently part of.
+- You must be the owner of the collection of which the protected data is
+  currently part of.
 - There should be no active subscriptions to this collection.
 - There should be no active rentals of this protected data.
 

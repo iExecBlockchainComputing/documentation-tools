@@ -38,7 +38,7 @@ export function getSidebar() {
               },
               {
                 text: 'DataProtectorCore',
-                link: '/tools/dataProtector/dataProtectorCore/getting-started',
+                link: '/tools/dataProtector/dataProtectorCore',
                 collapsed: true,
                 items: [
                   {
@@ -77,7 +77,7 @@ export function getSidebar() {
               },
               {
                 text: 'DataProtectorSharing',
-                link: '/tools/dataProtector/dataProtectorSharing/getting-started',
+                link: '/tools/dataProtector/dataProtectorSharing',
                 collapsed: true,
                 items: [
                   {
@@ -105,7 +105,6 @@ export function getSidebar() {
                   },
                   {
                     text: 'Misc',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc',
                     collapsed: true,
                     items: [
                       {
@@ -186,15 +185,8 @@ export function getSidebar() {
                 ],
               },
               {
-                text: 'Glossary',
-                link: '/tools/dataProtector/glossary/types',
-                collapsed: true,
-                items: [
-                  {
-                    text: 'Types',
-                    link: '/tools/dataProtector/glossary/types',
-                  },
-                ],
+                text: 'Types',
+                link: '/tools/dataProtector/types',
               },
             ],
           },

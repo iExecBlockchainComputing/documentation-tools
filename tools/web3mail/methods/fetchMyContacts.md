@@ -1,6 +1,7 @@
 # fetchMyContacts
 
-Method to get the ETH addresses that gave access to their protected data for messaging usage.
+Method to get the ETH addresses that gave access to their protected data for
+messaging usage.
 
 ## Usage
 

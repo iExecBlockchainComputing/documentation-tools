@@ -1,12 +1,15 @@
 # Migrate from v1 to v2
 
-::: tip
-This page concerns projects created with data protector prior or equal to version 0.5.1
+::: tip This page concerns projects created with data protector prior or equal
+to version 0.5.1
+
 :::
 
 ## Constructor
 
-When instantiating the IExecDataProtector object, reference the _dataProtector_ property to use core methods. Newer versions allow the use extended methods using the _dataProtectorSharing_ property.
+When instantiating the IExecDataProtector object, reference the _dataProtector_
+property to use core methods. Newer versions allow the use extended methods
+using the _dataProtectorSharing_ property.
 
 ```js
 // 0.5.1 and before
@@ -20,7 +23,8 @@ const dataProtector = new IExecDataProtector(web3Provider).dataProtector; // [!c
 
 ### Rename `fetchProtectedData` & add new param
 
-Some methods were renamed in order to standardize the SDK, they still provide the same functionalities as before
+Some methods were renamed in order to standardize the SDK, they still provide
+the same functionalities as before
 
 ```js
 await dataProtector.fetchProtectedData({ // [!code --]
@@ -32,7 +36,8 @@ await dataProtector.getProtectedData({ // [!code ++]
 
 ### Rename `fetchGrantedAccess`
 
-Some methods were renamed in order to standardize the SDK, they still provide the same functionalities as before
+Some methods were renamed in order to standardize the SDK, they still provide
+the same functionalities as before
 
 ```js
 await dataProtector.fetchGrantedAccess({ // [!code --]

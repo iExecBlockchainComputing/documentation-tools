@@ -1,7 +1,9 @@
 # createOracle
 
-Method to create an oracle from a given API, limited to returning only one data point.
-As an example below, following coingecko public API which gives ethereum price in usd will be used : <https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd>
+Method to create an oracle from a given API, limited to returning only one data
+point. As an example below, following coingecko public API which gives ethereum
+price in usd will be used :
+<https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd>
 
 ## Usage
 

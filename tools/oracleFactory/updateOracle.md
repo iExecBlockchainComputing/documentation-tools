@@ -2,7 +2,8 @@
 
 Method to update an existing oracle to have the latest data from the linked API.
 
-Below, following public API which gives ethereum price in usd will be used : <https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd>
+Below, following public API which gives ethereum price in usd will be used :
+<https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd>
 
 ## Usage
 
@@ -29,8 +30,8 @@ const updateOracleRes = await factory.updateOracle({
 
 ### workerpool
 
-Address of the workerpool that should perform the update.
-Workerpool defined below is : 0x0e7bc972c99187c191a17f3cae4a2711a4188c3f.
+Address of the workerpool that should perform the update. Workerpool defined
+below is : 0x0e7bc972c99187c191a17f3cae4a2711a4188c3f.
 
 ```js
 const updateOracleRes = await factory.updateOracle({
@@ -41,7 +42,8 @@ const updateOracleRes = await factory.updateOracle({
 
 ### targetBlockchains (optional)
 
-Array of target blockchain IDs where the oracle is deployed. 137 for polygon, 134 for iExec.
+Array of target blockchain IDs where the oracle is deployed. 137 for polygon,
+134 for iExec.
 
 ```js
 const updateOracleRes = await factory.updateOracle({

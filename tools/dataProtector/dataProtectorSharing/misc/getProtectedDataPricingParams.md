@@ -16,7 +16,7 @@ Input parameters type: `GetProtectedDataPricingParams`
 
 ```js
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
-  protectedDataAddress: '0x123...',
+  protectedDataAddress: '0x123abc...',
 });
 ```
 
@@ -58,8 +58,7 @@ The collection token ID in which the protected data is.
 
 ### isIncludedInSubscription
 
-`boolean`
-Indicates if the item is accessible through a subscription.
+`boolean` Indicates if the item is accessible through a subscription.
 
 ### isRentable
 

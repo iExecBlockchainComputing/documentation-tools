@@ -1,10 +1,16 @@
 # protectData
 
-The iExec tool suite supports deployment of applications where the user of the application has complete and total control over access to their data. This ensures privacy and security when invoking these applications. Through use of the `protectData` method, a user may encrypt and secure any type of data. Encryption occurs on the client side, supporting the user's control over their data.
+The iExec tool suite supports deployment of applications where the user of the
+application has complete and total control over access to their data. This
+ensures privacy and security when invoking these applications. Through use of
+the `protectData` method, a user may encrypt and secure any type of data.
+Encryption occurs on the client side, supporting the user's control over their
+data.
 
 ## Usage
 
-The method accepts a JSON object containing the data to encrypt and an optional name to identify the data.
+The method accepts a JSON object containing the data to encrypt and an optional
+name to identify the data.
 
 An email address, for example, may be submitted as:
 
@@ -16,7 +22,8 @@ const protectedData = await dataProtector.protectData({
 });
 ```
 
-Your object may contain any number of custom keys. The following example illustrates protection of multiple categories of data within one object:
+Your object may contain any number of custom keys. The following example
+illustrates protection of multiple categories of data within one object:
 
 ```js
 const protectedData = await dataProtector.protectData({
@@ -40,7 +47,8 @@ import { type ProtectDataParams } from '@iexec/dataprotector';
 
 `DataObject`
 
-This is the actual data the user is protecting, provided as a JSON object with any number of custom keys. The data is encrypted and stored as an NFT.
+This is the actual data the user is protecting, provided as a JSON object with
+any number of custom keys. The data is encrypted and stored as an NFT.
 
 ```js
 const protectedData = await dataProtector.protectData({
@@ -55,7 +63,8 @@ const protectedData = await dataProtector.protectData({
 
 `string | undefined`
 
-Allows providing a descriptive name for the protected data. This is considered public metadata, describing the protected data.
+Allows providing a descriptive name for the protected data. This is considered
+public metadata, describing the protected data.
 
 ```js
 const protectedData = await dataProtector.protectData({
@@ -66,9 +75,8 @@ const protectedData = await dataProtector.protectData({
 });
 ```
 
-::: tip
-The name is public and not encrypted. If you don't pass a name to your protected data we will automatically define it as "Untitled".
-:::
+::: tip The name is public and not encrypted. If you don't pass a name to your
+protected data we will automatically define it as "Untitled". :::
 
 ### onStatusUpdate
 
@@ -95,13 +103,16 @@ const protectedData = await dataProtector.protectData({
 import { type ProtectedDataWithSecretProps } from '@iexec/dataprotector';
 ```
 
-The `protectData` method returns the following fields, either as a JSON object or as individual fields depending on whether you use the promise or observable pattern respectively.
+The `protectData` method returns the following fields, either as a JSON object
+or as individual fields depending on whether you use the promise or observable
+pattern respectively.
 
 ### name
 
 `string`
 
-The optional name provided during invocation of the method. If no name is specified this value defaults to `Untitled`.
+The optional name provided during invocation of the method. If no name is
+specified this value defaults to `Untitled`.
 
 ### address
 
@@ -119,10 +130,10 @@ The ETH address of the creator and owner of this `protectedData`.
 
 `DataSchema`
 
-Metadata describing the fields provided in the `data` parameter. The data types are automatically detected and listed in the schema.
+Metadata describing the fields provided in the `data` parameter. The data types
+are automatically detected and listed in the schema.
 
-::: tip
-The following data types are automatically detected:
+::: tip The following data types are automatically detected:
 
 - Scalars
   - `boolean`
@@ -145,8 +156,7 @@ The following data types are automatically detected:
   - `video/mpeg`
   - `video/x-msvideo`
 
-Any undetected binary data type is categorized as `application/octet-stream`
-:::
+Any undetected binary data type is categorized as `application/octet-stream` :::
 
 ### creationTimestamp
 
@@ -158,20 +168,23 @@ A unix-style timestamp indicating the creation time of this `protectedData`.
 
 `string`
 
-The ID of the transaction that happened on iExec's side chain. You may view details on the transaction using the [iExec explorer](https://explorer.iex.ec).
+The ID of the transaction that happened on iExec's side chain. You may view
+details on the transaction using the [iExec explorer](https://explorer.iex.ec).
 
 ### zipFile
 
 `string`
 
-This is a binary representation of the data stored in the `protectedData`. This is intended as debug data and we will remove this in a future SDK release.
+This is a binary representation of the data stored in the `protectedData`. This
+is intended as debug data and we will remove this in a future SDK release.
 
 ### encryptionKey
 
 `Uint8Array`
 
-The encryption key generated by the client to encrypt the data. This key is for your own usage. You will not have to share it in the context of the iExec protocol or developer tools.
+The encryption key generated by the client to encrypt the data. This key is for
+your own usage. You will not have to share it in the context of the iExec
+protocol or developer tools.
 
-::: tip
-The zip file generated is a uint8array, so if you want to handle the binary data or download it consider adding a zip extension to it.
-:::
+::: tip The zip file generated is a uint8array, so if you want to handle the
+binary data or download it consider adding a zip extension to it. :::

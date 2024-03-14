@@ -2,8 +2,8 @@
 
 Method to create a new collection in the Data Sharing smart-contract.
 
-Having a collection is a required step before choosing how you would like to distribute your
-protected data.
+Having a collection is a required step before choosing how you would like to
+distribute your protected data.
 
 A wallet address may have multiple collections.
 
@@ -19,7 +19,8 @@ const createCollectionResult = await dataProtectorSharing.createCollection();
 import { type CreateCollectionResponse } from '@iexec/dataprotector';
 ```
 
-The collection token ID created and The transaction hash corresponding to the execution of the function.
+The collection token ID created and The transaction hash corresponding to the
+execution of the function.
 
 ### collectionTokenId
 

@@ -1,8 +1,8 @@
 # Data sharing - Collection methods
 
 Under the Data Sharing module, everything starts with a collection.  
-A collection is a way to group your protected data. It's a required step before choosing
-how you would like to distribute your protected data.
+A collection is a way to group your protected data. It's a required step before
+choosing how you would like to distribute your protected data.
 
 And yes, you can have multiple collections.
 

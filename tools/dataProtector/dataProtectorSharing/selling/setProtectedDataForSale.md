@@ -2,9 +2,9 @@
 
 Method to set a protected data for sale.
 
-During a successful sale, **the ownership** of the protected data **is transferred** to the buyer.
-The buyer will then be able to set their own pricing parameters, or simply keep the
-protected data for their own use.
+During a successful sale, **the ownership** of the protected data **is
+transferred** to the buyer. The buyer will then be able to set their own pricing
+parameters, or simply keep the protected data for their own use.
 
 ## Usage
 

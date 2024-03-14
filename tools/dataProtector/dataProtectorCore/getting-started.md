@@ -1,12 +1,11 @@
 # Getting Started
 
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/dataprotector-sdk/develop?filename=packages%2Fsdk%2Fpackage.json&color=green)
-
 ## Overview
 
 ### Prerequisites
 
-Before getting started, ensure that you have the following installed on your system:
+Before getting started, ensure that you have the following installed on your
+system:
 
 \- [**Node.js**](https://nodejs.org/en/) version 18 or higher
 
@@ -14,15 +13,18 @@ Before getting started, ensure that you have the following installed on your sys
 
 ### Start a new project
 
-In this section, we will show you how to set up and call the different methods of the SDK in a React.js app.
+In this section, we will show you how to set up and call the different methods
+of the SDK.
 
-You can reach the following open-source GitHub project, clone it and start from there.
+You can reach the following open-source GitHub project, clone it and start from
+there.
 
-You can find the project [here](https://github.com/iExecBlockchainComputing/dataprotector-sandbox).
+You can find the project
+[here](https://github.com/iExecBlockchainComputing/dataprotector-sandbox).
 
 ### Basic installation
 
-Install `dataProtectorSDK` .
+Install `dataProtectorSDK`
 
 ::: code-group
 
@@ -44,9 +46,11 @@ bun add @iexec/dataprotector
 
 :::
 
-**This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
+**This package is an ESM package. Your project needs to be ESM too.**
+[**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
-If you use it with Webpack, you need the latest Webpack version and ensure you configure it correctly for ESM.
+If you use it with Webpack, you need the latest Webpack version and ensure you
+configure it correctly for ESM.
 
 ### Instantiate SDK
 

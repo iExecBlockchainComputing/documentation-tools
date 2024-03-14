@@ -1,6 +1,7 @@
 # fetchUserContacts
 
-Method to get the ETH addresses that gave access to their protected data for messaging usage to a specific user address or ENS.
+Method to get the ETH addresses that gave access to their protected data for
+messaging usage to a specific user address or ENS.
 
 ## Usage
 
@@ -20,7 +21,8 @@ import { type FetchUserContactsParams } from '@iexec/web3mail';
 
 `Address`
 
-Specify the Ethereum address of the user from whom you wish to obtain the list of contact.
+Specify the Ethereum address of the user from whom you wish to obtain the list
+of contact.
 
 ```js
 const contactsList = await web3mail.fetchUserContacts({

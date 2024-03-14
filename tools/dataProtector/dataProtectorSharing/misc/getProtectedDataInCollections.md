@@ -2,8 +2,8 @@
 
 Method to consume a protected data, ie. visualize it or download it.
 
-For this method to be successful, you need to either rent the protected data or have a
-subscription to the corresponding collection.
+For this method to be successful, you need to either rent the protected data or
+have a subscription to the corresponding collection.
 
 ## Usage
 
@@ -142,8 +142,7 @@ The collection token ID in which the protected data is.
 
 ### isIncludedInSubscription
 
-`boolean`
-Indicates if the item is accessible through a subscription.
+`boolean` Indicates if the item is accessible through a subscription.
 
 ### isRentable
 

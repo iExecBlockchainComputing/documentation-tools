@@ -2,7 +2,8 @@
 
 Method to set a protected data part of your subscription.
 
-Any user who has an active subscription to your collection will be able to consume this protected data.
+Any user who has an active subscription to your collection will be able to
+consume this protected data.
 
 ## Usage
 

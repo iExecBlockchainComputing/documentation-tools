@@ -2,8 +2,8 @@
 
 Method to consume a protected data, ie. visualize it or download it.
 
-For this method to be successful, you need to either rent the protected data or have a
-subscription to the corresponding collection.
+For this method to be successful, you need to either rent the protected data or
+have a subscription to the corresponding collection.
 
 ## Usage
 
@@ -12,7 +12,7 @@ Input parameters type: `ConsumeProtectedDataParams`
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
-    protectedDataAddress: '0x123...',
+    protectedDataAddress: '0x123abc...',
   });
 ```
 
@@ -31,7 +31,7 @@ Address of the protected data you'd like to visualize.
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
-    protectedDataAddress: '0x123...', // [!code focus]
+    protectedDataAddress: '0x123abc...', // [!code focus]
   });
 ```
 

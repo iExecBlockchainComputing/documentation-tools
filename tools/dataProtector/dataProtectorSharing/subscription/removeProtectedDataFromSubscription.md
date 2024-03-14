@@ -13,7 +13,8 @@ const { success } =
 
 ## Pre-conditions
 
-- You must be the owner of the collection of which the protected data is currently part of.
+- You must be the owner of the collection of which the protected data is
+  currently part of.
 - There should be no active subscriptions to this collection.
 - The protected data should be part of your subscription.
 

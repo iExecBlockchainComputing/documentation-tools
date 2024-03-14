@@ -2,8 +2,8 @@
 
 Method to remove a protected data from renting.
 
-If there are still active rentals to the protected data, these rentals will be honored until the
-end of their rental period.
+If there are still active rentals to the protected data, these rentals will be
+honored until the end of their rental period.
 
 ## Usage
 
