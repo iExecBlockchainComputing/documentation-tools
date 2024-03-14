@@ -90,9 +90,7 @@ const revokeAllAccessObservable = dataProtector.revokeAllAccess({
 ## Result
 
 ```ts
-import { type AllAccessRevoked } from '@iexec/dataprotector';
+import { type RevokedAccess } from '@iexec/dataprotector';
 ```
 
-### allAccessRevoked
-
-[`GrantedAccess[]`](../types.md#grantedaccess)
+[`RevokedAccess[]`](../types.md#revokedaccess)
