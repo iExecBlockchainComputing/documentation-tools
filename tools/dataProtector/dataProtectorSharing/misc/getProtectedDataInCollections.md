@@ -162,7 +162,3 @@ Specifies if the item is available for purchase.
 `number`
 
 Timestamp marking the protected data's creation.
-
-## Error
-
-TODO

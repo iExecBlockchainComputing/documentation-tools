@@ -48,13 +48,3 @@ import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 `string`
 
 The transaction hash corresponding to the execution of the function.
-
-## Error
-
-### yup `ValidationError` errors
-
-```
-protectedDataAddress should be an ethereum address, a ENS name, or "any"
-```
-
-TODO To be continued...

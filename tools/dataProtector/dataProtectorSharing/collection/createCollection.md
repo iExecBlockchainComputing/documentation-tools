@@ -32,7 +32,3 @@ The collection token ID
 `string`
 
 The transaction hash corresponding to the execution of the function.
-
-## Error
-
-TODO

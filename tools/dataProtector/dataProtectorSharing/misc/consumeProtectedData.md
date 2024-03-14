@@ -81,7 +81,3 @@ Link to the IPFS location of the transaction-related data.
 `CryptoKey`
 
 Key used for decrypting the protected data.
-
-## Error
-
-TODO
