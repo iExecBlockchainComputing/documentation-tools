@@ -19,6 +19,8 @@ const dataProtector = new IExecDataProtector(web3Provider); // [!code --]
 
 // after 0.5.1
 const dataProtector = new IExecDataProtector(web3Provider).dataProtector; // [!code ++]
+// or
+const { dataProtector } = new IExecDataProtector(web3Provider); // [!code ++]
 ```
 
 ## Methods
@@ -31,8 +33,8 @@ the same functionalities as before
 ```js
 await dataProtector.fetchProtectedData({ // [!code --]
 await dataProtector.getProtectedData({ // [!code ++]
-  owner: "0xA0...",
-  creationTimestampGte: "545645" // [!code ++]
+  owner: '0xA0c15z...',
+  creationTimestampGte: 1707237580, // Feb 6th, 2024 16:39:40 GMT // [!code ++]
 });
 ```
 
@@ -44,8 +46,8 @@ the same functionalities as before
 ```js
 await dataProtector.fetchGrantedAccess({ // [!code --]
 await dataProtector.getGrantedAccess({ // [!code ++]
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  authorizedApp: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-  owner: "0xA0...",
+  protectedData: '0x123abc...',
+  authorizedApp: '0x456def...',
+  owner: '0xA0c15z...',
 });
 ```

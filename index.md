@@ -1,21 +1,36 @@
----
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
+# iExec tools documentation
 
-hero:
-  name: 'Dev Tools'
-  text: 'iExec tools documentation'
-  tagline: Easiest way to achieve privacy with blockchain
-  actions:
-    - theme: brand
-      text: Overview
-      link: /overview/what-we-do
-#
-#features:
-#  - title: Feature A
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#  - title: Feature B
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#  - title: Feature C
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
----
+## Start building with iExec
+
+Build decentralized applications that combine ownership, privacy, and
+monetization.
+
+### Overview
+
+<a href="./overview/what-we-do" class="link-for-home">
+  💡 &nbsp;What we do
+</a>
+
+<a href="./overview/use-case-demo" class="link-for-home">
+  📽 &nbsp;Use case demo
+</a>
+
+### Our tools
+
+<a href="./tools/dataProtector" class="link-for-home">
+  🔐 &nbsp;DataProtector
+</a>
+
+<a href="./tools/web3mail" class="link-for-home">
+  ✉ &nbsp;Web3Mail
+</a>
+
+<a href="./tools/oracleFactory" class="link-for-home">
+  🧙 &nbsp;Oracle Factory
+</a>
+
+### Help
+
+<a href="./help/contact-us" class="link-for-home">
+  🆘 &nbsp;Contact us
+</a>

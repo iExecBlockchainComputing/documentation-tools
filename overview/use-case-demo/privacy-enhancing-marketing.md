@@ -47,7 +47,9 @@ projects to create their own PEM applications or campaigns.
 
 **Try the demo:**
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Privacy Enhancing Marketing Demo</strong></td><td></td><td><a href="https://web3mail.iex.ec/">https://web3mail.iex.ec/</a></td></tr></tbody></table>
+<a href="https://demo.iex.ec/pem/" target="_blank" rel="noreferrer" class="link-as-block">
+  Privacy Enhancing Marketing Demo
+</a>
 
 **Fork the use case demo code repository:**
 

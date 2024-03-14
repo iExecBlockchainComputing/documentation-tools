@@ -5,7 +5,7 @@ import { getSidebar } from './sidebar';
 export default defineConfig({
   title: 'iExec tools',
   description: 'iExec documentation for dev tools',
-  // appearance: "force-dark",
+  lastUpdated: true,
   markdown: {
     attrs: { disable: true },
     theme: {
@@ -35,5 +35,15 @@ export default defineConfig({
       { icon: 'x', link: 'https://twitter.com/iEx_ec' },
       { icon: 'discord', link: 'https://discord.com/invite/pbt9m98wnU' },
     ],
+    lastUpdated: {
+      formatOptions: {
+        dateStyle: 'medium',
+      },
+    },
+    // TODO: Switch to 'main' branch
+    editLink: {
+      pattern:
+        'https://github.com/iExecBlockchainComputing/documentation-tools/edit/feature/migrate-to-vitepress/:path',
+    },
   },
 });
