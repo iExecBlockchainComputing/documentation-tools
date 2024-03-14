@@ -37,4 +37,4 @@ const readOracleRes = await factory.readOracle(
 import { type OracleValue } from "@iexec/iexec-oracle-factory-wrapper";
 ```
 
-`Promise<OracleValue>`
+`OracleValue`
