@@ -11,14 +11,14 @@ to keep it for yourself.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
 });
 ```
 
 ## Parameters
 
 ```ts
-import { type BuyProtectedDataParams } from "@iexec/dataprotector";
+import { type BuyProtectedDataParams } from '@iexec/dataprotector';
 ```
 
 ### protectedDataAddress
@@ -29,7 +29,7 @@ Address of the protected data you'd like to buy.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: "0x123abc...", // [!code focus]
+  protectedDataAddress: '0x123abc...', // [!code focus]
 });
 ```
 
@@ -43,9 +43,9 @@ still fully own it as you own the collection to which it'll transferred.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
   collectionTokenIdTo: 12, // [!code focus]
-  appAddress: "0xdef456...",
+  appAddress: '0xdef456...',
 });
 ```
 
@@ -57,16 +57,16 @@ The whitelist smart contract containing application that will be set to consume 
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
   collectionTokenIdTo: 12,
-  appAddress: "0xdef456...", // [!code focus]
+  appAddress: '0xdef456...', // [!code focus]
 });
 ```
 
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

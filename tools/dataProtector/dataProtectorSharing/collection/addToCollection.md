@@ -12,7 +12,7 @@ Under the hood, this method performs two actions:
 
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
   collectionId: 12,
 });
 ```
@@ -20,7 +20,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 ## Parameters
 
 ```ts
-import { type AddToCollectionParams } from "@iexec/dataprotector";
+import { type AddToCollectionParams } from '@iexec/dataprotector';
 ```
 
 ### collectionId
@@ -32,7 +32,7 @@ Collection ID to which you'd like to add the protected data.
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12, // [!code focus]
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
 });
 ```
 
@@ -45,7 +45,7 @@ Address of the protected data you'd like to add to your collection.
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
-  protectedDataAddress: "0x123abc...", // [!code focus]
+  protectedDataAddress: '0x123abc...', // [!code focus]
 });
 ```
 
@@ -62,8 +62,8 @@ Address of the whitelist smart contract that contains applications able to consu
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
-  protectedDataAddress: "0x123abc...",
-  appWhitelist: "0x423abc...", // [!code focus]
+  protectedDataAddress: '0x123abc...',
+  appWhitelist: '0x423abc...', // [!code focus]
 });
 ```
 
@@ -75,7 +75,7 @@ Callback function to be notified at intermediate steps.
 
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
   collectionId: 12,
   onStatusUpdate: ({ title, isDone }) => {
     // [!code focus]
@@ -87,7 +87,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

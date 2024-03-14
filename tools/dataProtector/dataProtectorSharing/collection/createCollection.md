@@ -16,7 +16,7 @@ const createCollectionResult = await dataProtectorSharing.createCollection();
 ## Return value
 
 ```ts
-import { type CreateCollectionResponse } from "@iexec/dataprotector";
+import { type CreateCollectionResponse } from '@iexec/dataprotector';
 ```
 
 The collection token ID created and The transaction hash corresponding to the execution of the function.

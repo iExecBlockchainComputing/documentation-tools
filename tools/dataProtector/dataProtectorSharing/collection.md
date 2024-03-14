@@ -7,10 +7,11 @@ how you would like to distribute your protected data.
 And yes, you can have multiple collections.
 
 Inside a collection, your protected data can be:
- - Shared for free (equivalent to renting with a price of 0)
- - Rented
- - Included in a subscription bundle
- - Sold
- - And even: not available for sharing
+
+- Shared for free (equivalent to renting with a price of 0)
+- Rented
+- Included in a subscription bundle
+- Sold
+- And even: not available for sharing
 
 ![Data Sharing collection](inside-a-collection.png)

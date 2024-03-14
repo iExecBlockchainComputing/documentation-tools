@@ -13,7 +13,7 @@ const { txHash } = await dataProtectorSharing.subscribe({
 ## Parameters
 
 ```ts
-import { type SubscribeParams } from "@iexec/dataprotector";
+import { type SubscribeParams } from '@iexec/dataprotector';
 ```
 
 ### collectionId
@@ -31,7 +31,7 @@ const { txHash } = await dataProtectorSharing.subscribe({
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

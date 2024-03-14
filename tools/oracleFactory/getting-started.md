@@ -55,7 +55,7 @@ Import and initialize the Oracle Factory SDK in your application.
 ::: code-group
 
 ```js [Browser]
-import { IExecOracleFactory } from "@iexec/iexec-oracle-factory-wrapper";
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
 
 const web3Provider = window.ethereum;
 // instantiate
@@ -63,13 +63,13 @@ const factory = new IExecOracleFactory(web3Provider);
 ```
 
 ```js [NodeJS]
-import { IExecOracleFactory, utils } from "@iexec/iexec-oracle-factory-wrapper";
+import { IExecOracleFactory, utils } from '@iexec/iexec-oracle-factory-wrapper';
 
 const { PRIVATE_KEY } = process.env;
 // get web3 provider from a private key
 const signer = utils.getSignerFromPrivateKey(
-  "https://bellecour.iex.ec",
-  "your-private-key"
+  'https://bellecour.iex.ec',
+  'your-private-key'
 );
 const factory = new IExecOracleFactory(signer);
 ```

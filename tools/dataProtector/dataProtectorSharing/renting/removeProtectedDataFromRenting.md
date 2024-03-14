@@ -10,14 +10,14 @@ end of their rental period.
 ```js
 const notForRentingAnymoreResult =
   await dataProtectorSharing.removeProtectedDataFromRenting({
-    protectedDataAddress: "0x123abc...",
+    protectedDataAddress: '0x123abc...',
   });
 ```
 
 ## Parameters
 
 ```ts
-import { type RemoveProtectedDataFromRentingParams } from "@iexec/dataprotector";
+import { type RemoveProtectedDataFromRentingParams } from '@iexec/dataprotector';
 ```
 
 ### protectedDataAddress
@@ -29,14 +29,14 @@ Address of the protected data you'd like to remove from renting.
 ```js
 const notForRentingAnymoreResult =
   await dataProtectorSharing.removeProtectedDataFromRenting({
-    protectedDataAddress: "0x123abc...", // [!code focus]
+    protectedDataAddress: '0x123abc...', // [!code focus]
   });
 ```
 
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

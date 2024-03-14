@@ -9,14 +9,14 @@ Any user who has an active subscription to your collection will be able to consu
 ```js
 const setToSubscriptionResult =
   await dataProtectorSharing.setProtectedDataToSubscription({
-    protectedDataAddress: "0x123abc...",
+    protectedDataAddress: '0x123abc...',
   });
 ```
 
 ## Parameters
 
 ```ts
-import { type SetProtectedDataToSubscriptionParams } from "@iexec/dataprotector";
+import { type SetProtectedDataToSubscriptionParams } from '@iexec/dataprotector';
 ```
 
 ### protectedDataAddress
@@ -28,14 +28,14 @@ Address of the protected data you'd like to be part of your subscription.
 ```js
 const setToSubscriptionResult =
   await dataProtectorSharing.setProtectedDataToSubscription({
-    protectedDataAddress: "0x123abc...",
+    protectedDataAddress: '0x123abc...',
   });
 ```
 
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

@@ -25,7 +25,7 @@ const revokeAccess = await dataProtector.revokeOneAccess(
 ## Parameters
 
 ```ts
-import { type GrantedAccess } from "@iexec/dataprotector";
+import { type GrantedAccess } from '@iexec/dataprotector';
 ```
 
 ### grantedAccess
@@ -57,7 +57,7 @@ The tag must always be set to `0x00000000000000000000000000000000000000000000000
 ## Result value
 
 ```ts
-import { type RevokedAccess } from "@iexec/dataprotector";
+import { type RevokedAccess } from '@iexec/dataprotector';
 ```
 
 This method returns a JSON object containing two fields.

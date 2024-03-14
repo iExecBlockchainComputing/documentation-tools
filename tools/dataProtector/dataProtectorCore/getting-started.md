@@ -53,7 +53,7 @@ If you use it with Webpack, you need the latest Webpack version and ensure you c
 ::: code-group
 
 ```js [Browser]
-import { IExecDataProtectorCore } from "@iexec/dataprotector";
+import { IExecDataProtectorCore } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
 // instantiate
@@ -61,7 +61,7 @@ const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 ```
 
 ```js [NodeJS]
-import { IExecDataProtectorCore, getWeb3Provider } from "@iexec/dataprotector";
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const { PRIVATE_KEY } = process.env;
 // get web3 provider from a private key

@@ -53,7 +53,7 @@ If you use it with Webpack, you need the latest Webpack version and ensure you c
 ::: code-group
 
 ```js [Browser]
-import { IExecWeb3mail } from "@iexec/web3mail";
+import { IExecWeb3mail } from '@iexec/web3mail';
 
 const web3Provider = window.ethereum;
 // instantiate
@@ -61,7 +61,7 @@ const web3mail = new IExecWeb3mail(web3Provider);
 ```
 
 ```js [NodeJS]
-import { IExecWeb3mail, getWeb3Provider } from "@iexec/web3mail";
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
 const { PRIVATE_KEY } = process.env;
 // get web3 provider from a private key

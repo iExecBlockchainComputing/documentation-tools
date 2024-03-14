@@ -9,7 +9,7 @@ To put it differently, this method will transfer the ownership of the protected 
 
 ```js
 const { txHash } = await dataProtectorSharing.removeFromCollection({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
 });
 ```
 
@@ -22,7 +22,7 @@ const { txHash } = await dataProtectorSharing.removeFromCollection({
 ## Parameters
 
 ```ts
-import { type RemoveFromCollectionParams } from "@iexec/dataprotector";
+import { type RemoveFromCollectionParams } from '@iexec/dataprotector';
 ```
 
 ### protectedDataAddress
@@ -33,14 +33,14 @@ Address of the protected data you'd like to remove from your collection.
 
 ```js
 const { txHash } = await dataProtectorSharing.removeFromCollection({
-  protectedDataAddress: "0x123abc...", // [!code focus]
+  protectedDataAddress: '0x123abc...', // [!code focus]
 });
 ```
 
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

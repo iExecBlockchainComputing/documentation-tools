@@ -10,13 +10,13 @@ A data schema is the metadata describing the contents of the protected data obje
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: "0xA0C...",
+  owner: '0xA0C...',
   schema: {
-    email: "string",
-    avatar: "JPEG",
+    email: 'string',
+    avatar: 'JPEG',
     smtp: {
-      server: "string",
-      port: "number",
+      server: 'string',
+      port: 'number',
     },
   },
 });
@@ -25,7 +25,7 @@ const listProtectedData = await dataProtector.getProtectedData({
 ## Parameters
 
 ```ts
-import { type GetProtectedDataParams } from "@iexec/dataprotector";
+import { type GetProtectedDataParams } from '@iexec/dataprotector';
 ```
 
 ### requiredSchema
@@ -38,12 +38,12 @@ Provides a list of protected data objects matching this schema.
 const listProtectedData = await dataProtector.getProtectedData({
   schema: {
     // [!code focus]
-    email: "string", // [!code focus]
-    avatar: "JPEG", // [!code focus]
+    email: 'string', // [!code focus]
+    avatar: 'JPEG', // [!code focus]
     smtp: {
       // [!code focus]
-      server: "string", // [!code focus]
-      port: "number", // [!code focus]
+      server: 'string', // [!code focus]
+      port: 'number', // [!code focus]
     }, // [!code focus]
   },
 });
@@ -57,7 +57,7 @@ Provides a list of protected data objects owned by the user with this ETH addres
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: "0xA0Cf...", // [!code focus]
+  owner: '0xA0Cf...', // [!code focus]
 });
 ```
 
@@ -69,8 +69,8 @@ Provides a list of protected data objects created after this timestamp value. Th
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: "0xA0Cf...",
-  createdAfterTimestamp: "1710257612", // [!code focus]
+  owner: '0xA0Cf...',
+  createdAfterTimestamp: '1710257612', // [!code focus]
 });
 ```
 
@@ -82,8 +82,8 @@ Specifies the results page to return. The default for this is `0` which returns 
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: "0xA0Cf...",
-  createdAfterTimestamp: "1710257612",
+  owner: '0xA0Cf...',
+  createdAfterTimestamp: '1710257612',
   page: 1, // [!code focus]
 });
 ```
@@ -96,8 +96,8 @@ Specifies the number of records in each page of the result set. This is used in 
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: "0xA0Cf...",
-  createdAfterTimestamp: "1710257612",
+  owner: '0xA0Cf...',
+  createdAfterTimestamp: '1710257612',
   page: 1,
   pageSize: 100, // [!code focus]
 });
@@ -106,7 +106,7 @@ const listProtectedData = await dataProtector.getProtectedData({
 ## Return value
 
 ```ts
-import { type ProtectedData } from "@iexec/dataprotector";
+import { type ProtectedData } from '@iexec/dataprotector';
 ```
 
 `ProtectedData[]`

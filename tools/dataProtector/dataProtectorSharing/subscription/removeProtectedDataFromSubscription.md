@@ -7,7 +7,7 @@ Method to remove a protected data from your subscription.
 ```js
 const { success } =
   await dataProtectorSharing.removeProtectedDataFromSubscription({
-    protectedDataAddress: "0x123abc...",
+    protectedDataAddress: '0x123abc...',
   });
 ```
 
@@ -20,7 +20,7 @@ const { success } =
 ## Parameters
 
 ```ts
-import { type RemoveProtectedDataFromSubscriptionParams } from "@iexec/dataprotector";
+import { type RemoveProtectedDataFromSubscriptionParams } from '@iexec/dataprotector';
 ```
 
 ### protectedDataAddress
@@ -32,14 +32,14 @@ Address of the protected data you'd like to remove from subscription.
 ```js
 const { success } =
   await dataProtectorSharing.removeProtectedDataFromSubscription({
-    protectedDataAddress: "0x123abc...", // [!code focus]
+    protectedDataAddress: '0x123abc...', // [!code focus]
   });
 ```
 
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

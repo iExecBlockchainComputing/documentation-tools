@@ -8,9 +8,9 @@ The request object is a JSON FetchGrantedAccessParams object. Each address in th
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: "0xA0C...",
-  authorizedApp: "0x1f9...",
-  authorizedUser: "0x4a...",
+  protectedData: '0xA0C...',
+  authorizedApp: '0x1f9...',
+  authorizedUser: '0x4a...',
   page: 1,
   pageSize: 100,
 });
@@ -19,7 +19,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 ## Parameters
 
 ```ts
-import { type GetGrantedAccessParams } from "@iexec/dataprotector";
+import { type GetGrantedAccessParams } from '@iexec/dataprotector';
 ```
 
 ### protectedData
@@ -30,9 +30,9 @@ Address of the protected data object for which you are querying access authoriza
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: "0xA0C...", // [!code focus]
-  authorizedApp: "0x1f9...",
-  authorizedUser: "0x4a...",
+  protectedData: '0xA0C...', // [!code focus]
+  authorizedApp: '0x1f9...',
+  authorizedUser: '0x4a...',
   page: 1,
   pageSize: 100,
 });
@@ -46,9 +46,9 @@ Optional filter to restrict the results to include only authorizations for the s
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: "0xA0C...",
-  authorizedApp: "0x1f9...", // [!code focus]
-  authorizedUser: "0x4a...",
+  protectedData: '0xA0C...',
+  authorizedApp: '0x1f9...', // [!code focus]
+  authorizedUser: '0x4a...',
   page: 1,
   pageSize: 100,
 });
@@ -66,9 +66,9 @@ Optional filter to restrict the results to include only authorizations for the s
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: "0xA0C...",
-  authorizedApp: "0x1f9...",
-  authorizedUser: "0x4a...", // [!code focus]
+  protectedData: '0xA0C...',
+  authorizedApp: '0x1f9...',
+  authorizedUser: '0x4a...', // [!code focus]
   page: 1,
   pageSize: 100,
 });
@@ -82,9 +82,9 @@ Specifies the results page to return. The default for this is `0` which returns 
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: "0xA0C...",
-  authorizedApp: "0x1f9...",
-  authorizedUser: "0x4a...",
+  protectedData: '0xA0C...',
+  authorizedApp: '0x1f9...',
+  authorizedUser: '0x4a...',
   page: 1, // [!code focus]
   pageSize: 100,
 });
@@ -98,9 +98,9 @@ Specifies the number of records in each page of the result set. This is used in 
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: "0xA0C...",
-  authorizedApp: "0x1f9...",
-  authorizedUser: "0x4a...",
+  protectedData: '0xA0C...',
+  authorizedApp: '0x1f9...',
+  authorizedUser: '0x4a...',
   page: 1,
   pageSize: 100, // [!code focus]
 });
@@ -109,7 +109,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 ## Return value
 
 ```ts
-import { type GrantedAccessResponse } from "@iexec/dataprotector";
+import { type GrantedAccessResponse } from '@iexec/dataprotector';
 ```
 
 The return value for this method has two fields: a `count` parameter indicating the number of results, and an array of `GrantedAccess` objects containing all access data. When using the optional paging parameters, the `count` will be limited by the selected `pageSize` parameter. You may use these result objects in conjunction with the [revokeOneAccess](revokeOneAccess.md) method to revoke a previously granted authorization for access.

@@ -6,15 +6,15 @@ Allows transferring ownership of a `protectedData` entity to a new owner, identi
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
-  protectedData: "0xA0C...",
-  newOwner: "0xC5E...",
+  protectedData: '0xA0C...',
+  newOwner: '0xC5E...',
 });
 ```
 
 ## Parameters
 
 ```ts
-import { type TransferParams } from "@iexec/dataprotector";
+import { type TransferParams } from '@iexec/dataprotector';
 ```
 
 ### protectedData
@@ -25,8 +25,8 @@ ETH address of the `protectedData` owned by you which is to be transferred to a 
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
-  protectedData: "0xA0C...",
-  newOwner: "0xC5E...", // [!code focus]
+  protectedData: '0xA0C...',
+  newOwner: '0xC5E...', // [!code focus]
 });
 ```
 
@@ -38,15 +38,15 @@ ETH address for the new owner for the `protectedData`.
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
-  protectedData: "0xA0C...",
-  newOwner: "0xC5E...", // [!code focus]
+  protectedData: '0xA0C...',
+  newOwner: '0xC5E...', // [!code focus]
 });
 ```
 
 ## Return value
 
 ```ts
-import { type TransferResponse } from "@iexec/dataprotector";
+import { type TransferResponse } from '@iexec/dataprotector';
 ```
 
 The result of this method is an array of objects identifying the new owner. The objects contain the three fields:

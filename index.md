@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Dev Tools"
-  text: "iExec tools documentation"
+  name: 'Dev Tools'
+  text: 'iExec tools documentation'
   tagline: Easiest way to achieve privacy with blockchain
   actions:
     - theme: brand

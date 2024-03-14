@@ -6,14 +6,14 @@ Method to rent a protected data.
 
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
 });
 ```
 
 ## Parameters
 
 ```ts
-import { type RentProtectedDataParams } from "@iexec/dataprotector";
+import { type RentProtectedDataParams } from '@iexec/dataprotector';
 ```
 
 ### protectedDataAddress (required)
@@ -24,14 +24,14 @@ Address of the protected data that you'd like rent.
 
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
 });
 ```
 
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

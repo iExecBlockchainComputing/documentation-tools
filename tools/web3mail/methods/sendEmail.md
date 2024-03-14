@@ -6,9 +6,9 @@ Method to send an email to a user represented by an ETH address.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
 });
 ```
 
@@ -20,7 +20,7 @@ const sendEmail = await web3mail.sendEmail({
 ## Parameters
 
 ```ts
-import { type SendEmailParams } from "@iexec/web3mail";
+import { type SendEmailParams } from '@iexec/web3mail';
 ```
 
 ### emailObject
@@ -31,9 +31,9 @@ The email object that needs to be sent.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
 });
 ```
 
@@ -45,9 +45,9 @@ The email content that needs to be sent.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
 });
 ```
 
@@ -59,9 +59,9 @@ Protected data address to which you will send the email.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
 });
 ```
 
@@ -73,10 +73,10 @@ This may be one of: `text/html`, `text/plain` (default `text/plain`). This is us
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "<h1>Hello world!</h1>",
-  contentType: "text/html",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: '<h1>Hello world!</h1>',
+  contentType: 'text/html',
 });
 ```
 
@@ -88,10 +88,10 @@ Allows specifying a sender name for the email. This is used by the mail client i
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
-  senderName: "Awesome project team",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
+  senderName: 'Awesome project team',
 });
 ```
 
@@ -103,10 +103,10 @@ Allows adding a custom public label that will be written onchain as `iexec_args`
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
-  label: "some-cutom-id",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
+  label: 'some-cutom-id',
 });
 ```
 
@@ -118,10 +118,10 @@ Allows specifying the workerpool to use (default iExec's production workerpool).
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
-  workerpoolAddressOrEns: "prod-v8-bellecour.main.pools.iexec.eth",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
+  workerpoolAddressOrEns: 'prod-v8-bellecour.main.pools.iexec.eth',
 });
 ```
 
@@ -133,9 +133,9 @@ Allows specifying the maximum amount you want to pay the email address provider 
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
   dataMaxPrice: 42,
 });
 ```
@@ -148,9 +148,9 @@ Allows specifying the maximum amount you want to pay the web3mail app provider f
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
   appMaxPrice: 42,
 });
 ```
@@ -163,9 +163,9 @@ Allows specifying the maximum amount you want to pay the workerpool provider for
 
 ```js
 const sendEmail = await web3mail.sendEmail({
-  protectedData: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  emailSubject: "My email subject",
-  emailContent: "My email content",
+  protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
   workerpoolMaxPrice: 42,
 });
 ```
@@ -173,7 +173,7 @@ const sendEmail = await web3mail.sendEmail({
 ## Return value
 
 ```ts
-import { type SendEmailResponse } from "@iexec/web3mail";
+import { type SendEmailResponse } from '@iexec/web3mail';
 ```
 
 ### taskId

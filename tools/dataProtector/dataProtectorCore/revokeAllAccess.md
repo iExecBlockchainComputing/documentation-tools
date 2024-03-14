@@ -18,7 +18,7 @@ const revokeAllAccessObservable = dataProtector
 ## Parameters
 
 ```ts
-import { type RevokeAllAccessParams } from "@iexec/dataprotector";
+import { type RevokeAllAccessParams } from '@iexec/dataprotector';
 ```
 
 ### protectedData
@@ -29,9 +29,9 @@ The address of the `protectedData` subject to access revocation.
 
 ```js
 const revokeAllAccessObservable = dataProtector.revokeAllAccess({
-  protectedData: "0xA0C...", // [!code focus]
-  authorizedApp: "0xC2E...",
-  authorizedUser: "0xecb...",
+  protectedData: '0xA0C...', // [!code focus]
+  authorizedApp: '0xC2E...',
+  authorizedUser: '0xecb...',
 });
 ```
 
@@ -43,9 +43,9 @@ The application address to be removed from the authorization list for the specif
 
 ```js
 const revokeAllAccessObservable = dataProtector.revokeAllAccess({
-  protectedData: "0xA0C...",
-  authorizedApp: "0xC2E...", // [!code focus]
-  authorizedUser: "0xecb...",
+  protectedData: '0xA0C...',
+  authorizedApp: '0xC2E...', // [!code focus]
+  authorizedUser: '0xecb...',
 });
 ```
 
@@ -57,9 +57,9 @@ The user address to be removed from the authorization list for the specified `pr
 
 ```js
 const revokeAllAccessObservable = dataProtector.revokeAllAccess({
-  protectedData: "0xA0C...",
-  authorizedApp: "0xC2E...",
-  authorizedUser: "0xecb...", // [!code focus]
+  protectedData: '0xA0C...',
+  authorizedApp: '0xC2E...',
+  authorizedUser: '0xecb...', // [!code focus]
 });
 ```
 
@@ -71,9 +71,9 @@ Callback function to be notified at intermediate steps.
 
 ```js
 const revokeAllAccessObservable = dataProtector.revokeAllAccess({
-  protectedData: "0xA0C...",
-  authorizedApp: "0xC2E...",
-  authorizedUser: "0xecb...",
+  protectedData: '0xA0C...',
+  authorizedApp: '0xC2E...',
+  authorizedUser: '0xecb...',
   onStatusUpdate: ({ title, isDone }) => {
     // [!code focus]
     console.log(title, isDone); // [!code focus]
@@ -84,7 +84,7 @@ const revokeAllAccessObservable = dataProtector.revokeAllAccess({
 ## Result
 
 ```ts
-import { type AllAccessRevoked } from "@iexec/dataprotector";
+import { type AllAccessRevoked } from '@iexec/dataprotector';
 ```
 
 ### allAccessRevoked

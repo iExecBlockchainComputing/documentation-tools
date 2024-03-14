@@ -6,7 +6,7 @@ Method to remove one of your collection in the Data Sharing smart-contract.
 
 ```js
 const { txHash } = await dataProtectorSharing.removeCollection({
-  collectionTokenId: "0x123abc...",
+  collectionTokenId: '0x123abc...',
 });
 ```
 
@@ -18,7 +18,7 @@ const { txHash } = await dataProtectorSharing.removeCollection({
 ## Parameters
 
 ```ts
-import { type RemoveCollectionParams } from "@iexec/dataprotector";
+import { type RemoveCollectionParams } from '@iexec/dataprotector';
 ```
 
 ### collectionTokenId
@@ -29,14 +29,14 @@ The collection token ID of tha collection that you want to remove.
 
 ```js
 const { txHash } = await dataProtectorSharing.removeCollection({
-  collectionTokenId: "0x123abc...", // [!code focus]
+  collectionTokenId: '0x123abc...', // [!code focus]
 });
 ```
 
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

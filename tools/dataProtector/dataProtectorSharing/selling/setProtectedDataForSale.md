@@ -10,7 +10,7 @@ protected data for their own use.
 
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
   priceInNRLC: 2,
 });
 ```
@@ -18,7 +18,7 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 ## Parameters
 
 ```ts
-import { type SetProtectedDataForSaleParams } from "@iexec/dataprotector";
+import { type SetProtectedDataForSaleParams } from '@iexec/dataprotector';
 ```
 
 ### protectedDataAddress
@@ -29,7 +29,7 @@ Address of the protected data that you'd like to set for sale.
 
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
-  protectedDataAddress: "0x123abc...", // [!code focus]
+  protectedDataAddress: '0x123abc...', // [!code focus]
   priceInNRLC: 2,
 });
 ```
@@ -42,7 +42,7 @@ The price in nano RLC you ask from someone who wants to buy the protected data.
 
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
-  protectedDataAddress: "0x123abc...",
+  protectedDataAddress: '0x123abc...',
   priceInNRLC: 2, // [!code focus]
 });
 ```
@@ -50,7 +50,7 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

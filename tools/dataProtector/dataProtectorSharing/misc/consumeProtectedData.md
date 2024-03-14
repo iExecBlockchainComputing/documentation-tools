@@ -12,14 +12,14 @@ Input parameters type: `ConsumeProtectedDataParams`
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
-    protectedDataAddress: "0x123...",
+    protectedDataAddress: '0x123...',
   });
 ```
 
 ## Parameters
 
 ```ts
-import { type ConsumeProtectedDataParams } from "@iexec/dataprotector";
+import { type ConsumeProtectedDataParams } from '@iexec/dataprotector';
 ```
 
 ### protectedDataAddress
@@ -31,7 +31,7 @@ Address of the protected data you'd like to visualize.
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
-    protectedDataAddress: "0x123...", // [!code focus]
+    protectedDataAddress: '0x123...', // [!code focus]
   });
 ```
 
@@ -44,7 +44,7 @@ Callback function to be notified at intermediate steps.
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
-    protectedDataAddress: "0x123abc...",
+    protectedDataAddress: '0x123abc...',
     onStatusUpdate: ({ title, isDone }) => {
       // [!code focus]
       console.log(title, isDone); // [!code focus]
@@ -55,7 +55,7 @@ const consumeProtectedDataResult =
 ## Return value
 
 ```ts
-import { type ConsumeProtectedDataResponse } from "@iexec/dataprotector";
+import { type ConsumeProtectedDataResponse } from '@iexec/dataprotector';
 ```
 
 ### txHash

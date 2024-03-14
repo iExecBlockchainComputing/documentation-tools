@@ -15,7 +15,7 @@ const protectedData =
 ## Parameters
 
 ```ts
-import { type GetProtectedDataInCollectionsParams } from "@iexec/dataprotector";
+import { type GetProtectedDataInCollectionsParams } from '@iexec/dataprotector';
 ```
 
 ### requiredSchema
@@ -24,9 +24,9 @@ import { type GetProtectedDataInCollectionsParams } from "@iexec/dataprotector";
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" }, // [!code focus]
+  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' }, // [!code focus]
   collectionTokenId: 12,
-  collectionOwner: "0x123...",
+  collectionOwner: '0x123...',
   createdAfterTimestamp: 1707237580,
   page: 3,
   pageSize: 25,
@@ -39,9 +39,9 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12, // [!code focus]
-  collectionOwner: "0x123...",
+  collectionOwner: '0x123...',
   createdAfterTimestamp: 1707237580,
   page: 3,
   pageSize: 25,
@@ -54,9 +54,9 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
-  collectionOwner: "0x123...", // [!code focus]
+  collectionOwner: '0x123...', // [!code focus]
   createdAfterTimestamp: 1707237580,
   page: 3,
   pageSize: 25,
@@ -69,9 +69,9 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
-  collectionOwner: "0x123...",
+  collectionOwner: '0x123...',
   createdAfterTimestamp: 1707237580, // [!code focus]
   page: 3,
   pageSize: 25,
@@ -84,9 +84,9 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
-  collectionOwner: "0x123...",
+  collectionOwner: '0x123...',
   createdAfterTimestamp: 1707237580,
   page: 3, // [!code focus]
   pageSize: 25,
@@ -99,9 +99,9 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: "ArrayBuffer", secretFilename: "string" },
+  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
-  collectionOwner: "0x123...",
+  collectionOwner: '0x123...',
   createdAfterTimestamp: 1707237580,
   page: 3,
   pageSize: 25, // [!code focus]
@@ -111,7 +111,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 ## Return value
 
 ```ts
-import { type ProtectedDataInCollection } from "@iexec/dataprotector";
+import { type ProtectedDataInCollection } from '@iexec/dataprotector';
 ```
 
 `ProtectedDataInCollection[]`

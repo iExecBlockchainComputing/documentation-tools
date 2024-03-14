@@ -1,6 +1,6 @@
 /* https://vitepress.dev/guide/extending-default-theme#customizing-css */
 :root {
-  --vp-c-brand-1: #FCD15A;
+  --vp-c-brand-1: #fcd15a;
   --vp-c-brand-2: rgb(145 118 0); /* hover on links */
   --vp-code-color: var(--vp-c-brand-2); /* `Code` */
   /*--vp-sidebar-bg-color: white;*/

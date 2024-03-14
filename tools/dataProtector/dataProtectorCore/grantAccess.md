@@ -6,9 +6,9 @@ Data encrypted through the Data Protector tool requires explicit authorization f
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: "0xA0Cf...",
-  authorizedApp: "0xC2E...",
-  authorizedUser: "0xecB...",
+  protectedData: '0xA0Cf...',
+  authorizedApp: '0xC2E...',
+  authorizedUser: '0xecB...',
   pricePerAccess: 3,
   numberOfAccess: 10,
 });
@@ -17,7 +17,7 @@ const grantedAccess = await dataProtector.grantAccess({
 ## Parameters
 
 ```ts
-import { type GrantAccessParams } from "@iexec/dataprotector";
+import { type GrantAccessParams } from '@iexec/dataprotector';
 ```
 
 ### protectedData
@@ -28,9 +28,9 @@ The ethereum address of the protected data supplied by the user.
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: "0xA0Cf...", // [!code focus]
-  authorizedApp: "0xC2E...",
-  authorizedUser: "0xecB...",
+  protectedData: '0xA0Cf...', // [!code focus]
+  authorizedApp: '0xC2E...',
+  authorizedUser: '0xecB...',
 });
 ```
 
@@ -42,9 +42,9 @@ The address of the application you wish to authorize to process the `protectedDa
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: "0xA0Cf...",
-  authorizedApp: "0xC2E...", // [!code focus]
-  authorizedUser: "0xecB...",
+  protectedData: '0xA0Cf...',
+  authorizedApp: '0xC2E...', // [!code focus]
+  authorizedUser: '0xecB...',
 });
 ```
 
@@ -62,9 +62,9 @@ The address of the user you wish to authorize to use the `protectedData`. Note t
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: "0xA0Cf...",
-  authorizedApp: "0xC2E...",
-  authorizedUser: "0xecB...", // [!code focus]
+  protectedData: '0xA0Cf...',
+  authorizedApp: '0xC2E...',
+  authorizedUser: '0xecB...', // [!code focus]
 });
 ```
 
@@ -80,9 +80,9 @@ Allows specifying an optional nano RLC cost associated with every access of the 
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: "0xA0Cf...",
-  authorizedApp: "0xC2E...",
-  authorizedUser: "0xecB...",
+  protectedData: '0xA0Cf...',
+  authorizedApp: '0xC2E...',
+  authorizedUser: '0xecB...',
   pricePerAccess: 3, // [!code focus]
   numberOfAccess: 10,
 });
@@ -100,9 +100,9 @@ Allows optionally restricting the number of times the protected data may be proc
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: "0xA0Cf...",
-  authorizedApp: "0xC2E...",
-  authorizedUser: "0xecB...",
+  protectedData: '0xA0Cf...',
+  authorizedApp: '0xC2E...',
+  authorizedUser: '0xecB...',
   pricePerAccess: 3,
   numberOfAccess: 10, // [!code focus]
 });
@@ -115,7 +115,7 @@ _default_: 1
 ## Return value
 
 ```ts
-import { type GrantedAccess } from "@iexec/dataprotector";
+import { type GrantedAccess } from '@iexec/dataprotector';
 ```
 
 The result of this method confirms the new access grant. It consists of a JSON `grantedAccess` object.

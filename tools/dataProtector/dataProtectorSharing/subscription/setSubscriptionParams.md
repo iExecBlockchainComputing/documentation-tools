@@ -21,7 +21,7 @@ const setSubscriptionParamsResult =
 ## Parameters
 
 ```ts
-import { type SetSubscriptionParams } from "@iexec/dataprotector";
+import { type SetSubscriptionParams } from '@iexec/dataprotector';
 ```
 
 ### collectionId
@@ -72,7 +72,7 @@ const setSubscriptionParamsResult =
 ## Return value
 
 ```ts
-import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
+import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
 ### txHash

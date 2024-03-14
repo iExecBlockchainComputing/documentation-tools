@@ -8,9 +8,9 @@ Below, following public API which gives ethereum price in usd will be used : <ht
 
 ```js
 const updateOracleRes = await factory.updateOracle({
-  cid: "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit", // Content ID of the Oracle
-  workerpool: "0x0e7bc972c99187c191a17f3cae4a2711a4188c3f", // Workerpool address (required)
-  targetBlockchains: ["134", "137"], // Target blockchain IDs, 137 for polygon, 134 for iExec (required)
+  cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit', // Content ID of the Oracle
+  workerpool: '0x0e7bc972c99187c191a17f3cae4a2711a4188c3f', // Workerpool address (required)
+  targetBlockchains: ['134', '137'], // Target blockchain IDs, 137 for polygon, 134 for iExec (required)
 });
 ```
 
@@ -22,7 +22,7 @@ Content ID of the Oracle that needs to be updated.
 
 ```js
 const updateOracleRes = await factory.updateOracle({
-  cid: "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit",
+  cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
   // Other parameters...
 });
 ```
@@ -34,7 +34,7 @@ Workerpool defined below is : 0x0e7bc972c99187c191a17f3cae4a2711a4188c3f.
 
 ```js
 const updateOracleRes = await factory.updateOracle({
-  workerpool: "0x0e7bc972c99187c191a17f3cae4a2711a4188c3f",
+  workerpool: '0x0e7bc972c99187c191a17f3cae4a2711a4188c3f',
   // Other parameters...
 });
 ```
@@ -45,7 +45,7 @@ Array of target blockchain IDs where the oracle is deployed. 137 for polygon, 13
 
 ```js
 const updateOracleRes = await factory.updateOracle({
-  targetBlockchains: ["134", "137"],
+  targetBlockchains: ['134', '137'],
   // Other parameters...
 });
 ```

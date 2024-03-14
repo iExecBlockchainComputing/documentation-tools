@@ -6,14 +6,14 @@ Method to get the ETH addresses that gave access to their protected data for mes
 
 ```js
 const contactsList = await web3mail.fetchUserContacts({
-  userAddress: "0xF048eF3d7E3B33A465E0599E641BB29421f7Df92",
+  userAddress: '0xF048eF3d7E3B33A465E0599E641BB29421f7Df92',
 });
 ```
 
 ## Parameters
 
 ```ts
-import { type FetchUserContactsParams } from "@iexec/web3mail";
+import { type FetchUserContactsParams } from '@iexec/web3mail';
 ```
 
 ### userAddress
@@ -24,14 +24,14 @@ Specify the Ethereum address of the user from whom you wish to obtain the list o
 
 ```js
 const contactsList = await web3mail.fetchUserContacts({
-  userAddress: "0xF048eF3d7E3B33A465E0599E641BB29421f7Df92",
+  userAddress: '0xF048eF3d7E3B33A465E0599E641BB29421f7Df92',
 });
 ```
 
 ## Return value
 
 ```ts
-import { type Contact } from "@iexec/web3mail";
+import { type Contact } from '@iexec/web3mail';
 ```
 
 [`Contract[]`](../types.md#contact)

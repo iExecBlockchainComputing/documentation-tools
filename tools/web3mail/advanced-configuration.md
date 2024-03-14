@@ -17,7 +17,7 @@ If not provided, the default ENS `web3mail.apps.iexec.eth` pointing to the lates
 
 ```js
 new IExecWeb3mail(ethProvider, {
-  dappAddressOrENS: "web3mail.apps.iexec.eth",
+  dappAddressOrENS: 'web3mail.apps.iexec.eth',
 });
 ```
 
@@ -29,7 +29,7 @@ If not provided, the default whitelist smart contract address provided by iExec 
 
 ```js
 new IExecWeb3mail(ethProvider, {
-  dappWhitelistAddress: "0x781482C39CcE25546583EaC4957Fb7Bf04C277D2",
+  dappWhitelistAddress: '0x781482C39CcE25546583EaC4957Fb7Bf04C277D2',
 });
 ```
 
@@ -42,7 +42,7 @@ If not provided, the default data protector subgraph provided by iExec will be u
 ```js
 new IExecWeb3mail(ethProvider, {
   dataProtectorSubgraph:
-    "https://thegraph-product.iex.ec/subgraphs/name/bellecour/dataprotector",
+    'https://thegraph-product.iex.ec/subgraphs/name/bellecour/dataprotector',
 });
 ```
 
@@ -54,7 +54,7 @@ If not provided, the default IPFS node provided by iExec will be used.
 
 ```js
 new IExecWeb3mail(ethProvider, {
-  ipfsNode: "https://ipfs-upload.v8-bellecour.iex.ec",
+  ipfsNode: 'https://ipfs-upload.v8-bellecour.iex.ec',
 });
 ```
 
@@ -66,7 +66,7 @@ If not provided, the default IPFS gateway provided by iExec will be used.
 
 ```js
 new ipfsGateway(ethProvider, {
-  ipfsGateway: "https://ipfs-gateway.v8-bellecour.iex.ec",
+  ipfsGateway: 'https://ipfs-gateway.v8-bellecour.iex.ec',
 });
 ```
 

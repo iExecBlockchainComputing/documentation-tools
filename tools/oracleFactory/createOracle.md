@@ -7,21 +7,21 @@ As an example below, following coingecko public API which gives ethereum price i
 
 ```js
 const createOracleRes = await factory.createOracle({
-  url: "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd",
-  method: "GET",
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
   headers: {
-    authorization: "%API_KEY%",
+    authorization: '%API_KEY%',
   },
-  dataType: "number",
-  JSONPath: "$.ethereum.usd",
-  apiKey: "MY_TEST_API_KEY",
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
 });
 ```
 
 ## Parameters
 
 ```ts
-import { type RawParams } from "@iexec/iexec-oracle-factory-wrapper";
+import { type RawParams } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
 ### url
@@ -32,7 +32,7 @@ The API URL to fetch data from.
 
 ```js
 const createOracleRes = await factory.createOracle({
-  url: "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd",
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
   // Other parameters...
 });
 ```
@@ -45,7 +45,7 @@ The HTTP method to use when making the API request (e.g., "GET").
 
 ```js
 const createOracleRes = await factory.createOracle({
-  method: "GET",
+  method: 'GET',
   // Other parameters...
 });
 ```
@@ -59,7 +59,7 @@ Any headers required for the API request.
 ```js
 const createOracleRes = await factory.createOracle({
   headers: {
-    authorization: "%API_KEY%",
+    authorization: '%API_KEY%',
   },
   // Other parameters...
 });
@@ -73,7 +73,7 @@ The JSON path to extract the data from the API response.
 
 ```js
 const createOracleRes = await factory.createOracle({
-  JSONPath: "$.ethereum.usd",
+  JSONPath: '$.ethereum.usd',
   // Other parameters...
 });
 ```
@@ -86,7 +86,7 @@ The type of data to be returned (e.g., "number").
 
 ```js
 const createOracleRes = await factory.createOracle({
-  dataType: "number",
+  dataType: 'number',
   // Other parameters...
 });
 ```
@@ -99,7 +99,7 @@ API key if required by the data source.
 
 ```js
 const createOracleRes = await factory.createOracle({
-  apiKey: "MY_TEST_API_KEY",
+  apiKey: 'MY_TEST_API_KEY',
   // Other parameters...
 });
 ```
@@ -107,7 +107,7 @@ const createOracleRes = await factory.createOracle({
 ## Return value
 
 ```ts
-import { type CreateOracleMessage } from "@iexec/iexec-oracle-factory-wrapper";
+import { type CreateOracleMessage } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
 `Observable<CreateOracleMessage>`

@@ -9,14 +9,14 @@ the price of Ethereum in USD:
 
 ```js
 const readOracleRes = await factory.readOracle(
-  "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"
+  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit'
 ); // Content ID of the Oracle
 ```
 
 ## Parameters
 
 ```ts
-import { type ReadOracleParams } from "@iexec/iexec-oracle-factory-wrapper";
+import { type ReadOracleParams } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
 ### cid
@@ -27,14 +27,14 @@ Content ID of the Oracle to be read.
 
 ```js
 const readOracleRes = await factory.readOracle(
-  "QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit"
+  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit'
 );
 ```
 
 ## Return value
 
 ```ts
-import { type OracleValue } from "@iexec/iexec-oracle-factory-wrapper";
+import { type OracleValue } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
 `OracleValue`

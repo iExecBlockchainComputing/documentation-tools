@@ -11,7 +11,7 @@ An email address, for example, may be submitted as:
 ```js
 const protectedData = await dataProtector.protectData({
   data: {
-    email: "example@gmail.com",
+    email: 'example@gmail.com',
   },
 });
 ```
@@ -21,10 +21,10 @@ Your object may contain any number of custom keys. The following example illustr
 ```js
 const protectedData = await dataProtector.protectData({
   data: {
-    email: "example@gmail.com",
+    email: 'example@gmail.com',
     SMTPserver: {
       port: 5000,
-      smtp_server: "smtp.gmail.com",
+      smtp_server: 'smtp.gmail.com',
     },
   },
 });
@@ -33,7 +33,7 @@ const protectedData = await dataProtector.protectData({
 ## Parameters
 
 ```ts
-import { type ProtectDataParams } from "@iexec/dataprotector";
+import { type ProtectDataParams } from '@iexec/dataprotector';
 ```
 
 ### data
@@ -46,7 +46,7 @@ This is the actual data the user is protecting, provided as a JSON object with a
 const protectedData = await dataProtector.protectData({
   data: {
     // [!code focus]
-    email: "example@gmail.com", // [!code focus]
+    email: 'example@gmail.com', // [!code focus]
   }, // [!code focus]
 });
 ```
@@ -59,9 +59,9 @@ Allows providing a descriptive name for the protected data. This is considered p
 
 ```js
 const protectedData = await dataProtector.protectData({
-  name: "myEmail", // [!code focus]
+  name: 'myEmail', // [!code focus]
   data: {
-    email: "example@gmail.com",
+    email: 'example@gmail.com',
   },
 });
 ```
@@ -78,9 +78,9 @@ Callback function to be notified at intermediate steps.
 
 ```js
 const protectedData = await dataProtector.protectData({
-  name: "myEmail", // [!code focus]
+  name: 'myEmail', // [!code focus]
   data: {
-    email: "example@gmail.com",
+    email: 'example@gmail.com',
   },
   onStatusUpdate: ({ title, isDone }) => {
     // [!code focus]
@@ -92,7 +92,7 @@ const protectedData = await dataProtector.protectData({
 ## Return value
 
 ```ts
-import { type ProtectedDataWithSecretProps } from "@iexec/dataprotector";
+import { type ProtectedDataWithSecretProps } from '@iexec/dataprotector';
 ```
 
 The `protectData` method returns the following fields, either as a JSON object or as individual fields depending on whether you use the promise or observable pattern respectively.

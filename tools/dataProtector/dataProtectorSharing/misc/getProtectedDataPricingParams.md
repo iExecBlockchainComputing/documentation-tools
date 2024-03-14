@@ -16,7 +16,7 @@ Input parameters type: `GetProtectedDataPricingParams`
 
 ```js
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
-  protectedDataAddress: "0x123...",
+  protectedDataAddress: '0x123...',
 });
 ```
 
@@ -29,7 +29,7 @@ Address of the protected data you'd like to get the pricing parameters.
 ## Return value
 
 ```ts
-import { type GetProtectedDataPricingResponse } from "@iexec/dataprotector";
+import { type GetProtectedDataPricingResponse } from '@iexec/dataprotector';
 ```
 
 ### name
