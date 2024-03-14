@@ -3,9 +3,9 @@ import { getSidebar } from "./sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Dev Tools",
+  title: "iExec tools",
   description: "iExec documentation for dev tools",
-  appearance: "force-dark",
+  // appearance: "force-dark",
   markdown: {
     attrs: { disable: true },
     theme: {
@@ -16,8 +16,9 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "https://protocol.docs.iex.ec/" },
-      { text: "Tools", link: "/overview/what-we-do" },
+      { text: "DataProtector", link: "/tools/dataProtector" },
+      { text: "Web3Mail", link: "/tools/web3mail" },
+      { text: "Oracle Factory", link: "/tools/oracleFactory" }
     ],
     outline: [2, 3],
     search: {

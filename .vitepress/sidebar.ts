@@ -6,9 +6,9 @@ export function getSidebar() {
       {
         text: "Overview",
         items: [
-          { text: "What We Do", link: "/overview/what-we-do" },
+          { text: "💡&nbsp;&nbsp;What We Do", link: "/overview/what-we-do" },
           {
-            text: "Use Case Demo",
+            text: "📽&nbsp;&nbsp;Use Case Demo",
             collapsed: true,
             link: "/overview/use-case-demo",
             items: [
@@ -208,32 +208,31 @@ export function getSidebar() {
                 link: "/tools/web3mail/getting-started",
               },
               {
-                text: "Advanced Configuration",
-                link: "/tools/web3mail/advanced-configuration",
-              },
-              {
-                text: "fetchMyContacts",
-                link: "/tools/web3mail/fetchMyContacts",
-              },
-              {
-                text: "fetchUserContacts",
-                link: "/tools/web3mail/fetchUserContacts",
-              },
-              {
-                text: "sendEmail",
-                link: "/tools/web3mail/sendEmail",
-              },
-              {
-                text: "Glossary",
-                link: "/tools/web3mail/glossary/types",
+                text: "Methods",
                 collapsed: true,
                 items: [
                   {
-                    text: "Types",
-                    link: "/tools/web3mail/glossary/types",
+                    text: "fetchMyContacts",
+                    link: "/tools/web3mail/methods/fetchMyContacts",
+                  },
+                  {
+                    text: "fetchUserContacts",
+                    link: "/tools/web3mail/methods/fetchUserContacts",
+                  },
+                  {
+                    text: "sendEmail",
+                    link: "/tools/web3mail/methods/sendEmail",
                   },
                 ],
               },
+              {
+                text: "Advanced Configuration",
+                link: "/tools/web3mail/advanced-configuration",
+              },
+              // {
+              //   text: "Types",
+              //   link: "/tools/web3mail/types",
+              // }
             ],
           },
           {
@@ -263,7 +262,7 @@ export function getSidebar() {
       },
       {
         text: "Help",
-        items: [{ text: "Contact Us", link: "/help/contact-us" }],
+        items: [{ text: "🆘&nbsp;&nbsp;Contact Us", link: "/help/contact-us" }],
       },
     ],
   } satisfies DefaultTheme.Sidebar;

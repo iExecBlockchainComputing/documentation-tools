@@ -14,4 +14,4 @@ const contactsList = await web3mail.fetchMyContacts();
 import { type Contact } from "@iexec/web3mail";
 ```
 
-[`Contract[]`](../glossary/types#contact)
+[`Contract[]`](../types.md#contact)

@@ -1,7 +1,24 @@
-body {
-  background-color: #1b1b1f; /* Light grey background */
+/* https://vitepress.dev/guide/extending-default-theme#customizing-css */
+:root {
+  --vp-c-brand-1: #FCD15A;
+  --vp-c-brand-2: rgb(145 118 0); /* hover on links */
+  --vp-code-color: var(--vp-c-brand-2); /* `Code` */
+  /*--vp-sidebar-bg-color: white;*/
+  /*--vp-nav-bg-color: black;*/
+  /*--vp-c-bg-alt: rgb(51, 51, 51); !* Search Cmd K input *!*/
 }
 
-nav.navbar {
-  background-color: #161618; /* Change the navbar background */
+/*header {*/
+/*  background-color: black;*/
+/*}*/
+/*header .title > span {*/
+/*  color: white;*/
+/*}*/
+
+.is-active > .item > .link .text {
+  font-weight: bold !important;
 }
+
+/*nav.navbar {*/
+/*  background-color: #161618; !* Change the navbar background *!*/
+/*}*/
