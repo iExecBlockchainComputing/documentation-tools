@@ -9,13 +9,11 @@ a currently valid subscription.
 ## Usage
 
 ```js
-const durationInDays = 30;
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
-    priceInNRLC: BigInt(priceInNrlc),
-    durationInSeconds: durationInDays * 60 * 60 * 24,
+    priceInNRLC: 2_000_000_000, // 2 RLC
+    durationInSeconds: 60 * 60 * 24 * 30, // 30 days
   });
 ```
 
@@ -30,13 +28,11 @@ import { type SetSubscriptionParams } from '@iexec/dataprotector';
 Collection ID to which you'd like to set the subscription params.
 
 ```js
-const durationInDays = 30;
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12, // [!code focus]
-    priceInNRLC: BigInt(priceInNrlc),
-    durationInSeconds: durationInDays * 60 * 60 * 24,
+    priceInNRLC: 2_000_000_000, // 2 RLC
+    durationInSeconds: 60 * 60 * 24 * 30, // 30 days
   });
 ```
 
@@ -46,13 +42,11 @@ The price (in nano RLC) it's going to cost a subscriber to access your
 collection.
 
 ```js
-const durationInDays = 30;
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
-    priceInNRLC: BigInt(priceInNrlc), // [!code focus]
-    durationInSeconds: durationInDays * 60 * 60 * 24,
+    priceInNRLC: 2_000_000_000, // 2 RLC // [!code focus]
+    durationInSeconds: 60 * 60 * 24 * 30, // 30 days
   });
 ```
 
@@ -61,13 +55,11 @@ const setSubscriptionParamsResult =
 The duration (in seconds) for a period of subscription.
 
 ```js
-const durationInDays = 30;
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
-    priceInNRLC: BigInt(priceInNrlc),
-    durationInSeconds: durationInDays * 60 * 60 * 24, // [!code focus]
+    priceInNRLC: 2_000_000_000, // 2 RLC
+    durationInSeconds: 60 * 60 * 24 * 30, // 30 days // [!code focus]
   });
 ```
 

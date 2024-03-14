@@ -64,7 +64,7 @@ consume the protected data.
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedDataAddress: '0x123abc...',
-  appWhitelist: '0x423abc...', // [!code focus]
+  appWhitelist: '0x423ovk...', // [!code focus]
 });
 ```
 

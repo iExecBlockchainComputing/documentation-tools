@@ -29,7 +29,7 @@ Address of the protected data you'd like to be part of your subscription.
 ```js
 const setToSubscriptionResult =
   await dataProtectorSharing.setProtectedDataToSubscription({
-    protectedDataAddress: '0x123abc...',
+    protectedDataAddress: '0x123abc...', // [!code focus]
   });
 ```
 

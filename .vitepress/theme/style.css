@@ -4,22 +4,34 @@
   --vp-c-brand-2: rgb(145 118 0); /* hover on links */
   --vp-c-brand-3: var(--vp-c-brand-1);
   --vp-code-color: var(--vp-c-brand-2); /* `Code` */
-  /*--vp-sidebar-bg-color: white;*/
-  /*--vp-nav-bg-color: black;*/
-  /*--vp-c-bg-alt: rgb(51, 51, 51); !* Search Cmd K input *!*/
+  --vp-c-tip-1: var(--vp-c-text-1); /* `Code` in tips */
+  --vp-code-link-color: var(
+    --vp-code-color
+  ); /* `Code` in links. Primary yellow is too light */
 }
 
-/*header {*/
-/*  background-color: black;*/
-/*}*/
-/*header .title > span {*/
-/*  color: white;*/
-/*}*/
+/* Force dark header even if light theme */
+header {
+  --vp-c-bg: #1b1b1f;
+  --vp-c-text-1: rgba(255, 255, 245, 0.86);
+  --vp-nav-bg-color: #1b1b1f;
+  --vp-c-bg-alt: #161618;
+  --vp-c-text-2: rgba(235, 235, 245, 0.6);
+  --vp-c-divider: #2e2e32;
+  --vp-c-bg-elv: #202127;
+}
+
+.VPNavBar {
+  /* Override here, otherwise it is 'transparent' */
+  background-color: var(--vp-c-bg) !important;
+}
 
 .is-active > .item > .link .text {
   font-weight: bold !important;
 }
 
-/*nav.navbar {*/
-/*  background-color: #161618; !* Change the navbar background *!*/
-/*}*/
+/* `Code` in links. Primary yellow is too light */
+/* Here especially for the underline color */
+.vp-doc a {
+  color: var(--vp-code-color);
+}

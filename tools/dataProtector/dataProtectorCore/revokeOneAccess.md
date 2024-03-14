@@ -52,7 +52,9 @@ const revokeAccess = await dataProtector.revokeOneAccess({
 });
 ```
 
-::: warning The tag must always be set to
+::: warning
+
+The tag must always be set to
 `0x0000000000000000000000000000000000000000000000000000000000000003`. This
 specific value indicates that the order is for a confidential asset (a protected
 data).

@@ -41,16 +41,17 @@ const consumeProtectedDataResult =
 
 Callback function to be notified at intermediate steps.
 
+<!-- prettier-ignore-start -->
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedDataAddress: '0x123abc...',
-    onStatusUpdate: ({ title, isDone }) => {
-      // [!code focus]
+    onStatusUpdate: ({ title, isDone }) => { // [!code focus]
       console.log(title, isDone); // [!code focus]
     }, // [!code focus]
   });
 ```
+<!-- prettier-ignore-end -->
 
 ## Return value
 

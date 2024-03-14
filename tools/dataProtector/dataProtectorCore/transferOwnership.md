@@ -10,7 +10,7 @@ of the `protectedData` may invoke this method.
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E...',
+  newOwner: '0xC5E9h4...',
 });
 ```
 
@@ -30,7 +30,7 @@ new owner.
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E...', // [!code focus]
+  newOwner: '0xC5E9h4...', // [!code focus]
 });
 ```
 
@@ -43,7 +43,7 @@ ETH address for the new owner for the `protectedData`.
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E...', // [!code focus]
+  newOwner: '0xC5E9h4...', // [!code focus]
 });
 ```
 

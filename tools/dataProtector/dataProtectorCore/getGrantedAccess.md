@@ -64,7 +64,9 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 });
 ```
 
-::: tip If you specified an application whitelist when using
+::: tip
+
+If you specified an application whitelist when using
 [`grantAccess`](./grantAccess.md), you must specify that same whitelist address
 when using this filtering option. The `getGrantedAccess` method does not check
 against whitelist smart contracts when aggregating results. If you granted

@@ -11,7 +11,7 @@ application (or a designated list of applications).
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: '0xA0Cf...',
+  protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...',
   pricePerAccess: 3,
@@ -33,7 +33,7 @@ The ethereum address of the protected data supplied by the user.
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: '0xA0Cf...', // [!code focus]
+  protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...',
 });
@@ -54,13 +54,15 @@ the `protectedData` each time you do so.
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: '0xA0Cf...',
+  protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789ghi...',
 });
 ```
 
-::: tip You may authorize all apps to use the protected data by setting this to
+::: tip
+
+You may authorize all apps to use the protected data by setting this to
 **0x00000000000000000000000000000000000000**
 
 iExec maintains a whitelist for the Web3Mail decentralized application. Granting
@@ -81,13 +83,15 @@ permission for the user to submit the data to an iExec application.
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: '0xA0Cf...',
+  protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...', // [!code focus]
 });
 ```
 
-::: tip You may authorize all users to use the protected data by setting this to
+::: tip
+
+You may authorize all users to use the protected data by setting this to
 **0x00000000000000000000000000000000000000**
 
 :::
@@ -101,7 +105,7 @@ protected data.
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: '0xA0Cf...',
+  protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...',
   pricePerAccess: 3, // [!code focus]
@@ -120,7 +124,7 @@ processed and used.
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
-  protectedData: '0xA0Cf...',
+  protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...',
   pricePerAccess: 3,

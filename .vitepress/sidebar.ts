@@ -37,7 +37,7 @@ export function getSidebar() {
                 link: '/tools/dataProtector/migrate-from-v1',
               },
               {
-                text: 'DataProtectorCore',
+                text: 'DataProtector Core',
                 link: '/tools/dataProtector/dataProtectorCore',
                 collapsed: true,
                 items: [
@@ -76,7 +76,7 @@ export function getSidebar() {
                 ],
               },
               {
-                text: 'DataProtectorSharing',
+                text: 'DataProtector Sharing',
                 link: '/tools/dataProtector/dataProtectorSharing',
                 collapsed: true,
                 items: [

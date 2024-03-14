@@ -27,7 +27,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' }, // [!code focus]
   collectionTokenId: 12,
   collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580,
+  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
   page: 3,
   pageSize: 25,
 });
@@ -42,7 +42,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12, // [!code focus]
   collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580,
+  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
   page: 3,
   pageSize: 25,
 });
@@ -57,7 +57,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
   collectionOwner: '0x123...', // [!code focus]
-  createdAfterTimestamp: 1707237580,
+  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
   page: 3,
   pageSize: 25,
 });
@@ -72,7 +72,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
   collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580, // [!code focus]
+  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
   page: 3,
   pageSize: 25,
 });
@@ -87,7 +87,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
   collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580,
+  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
   page: 3, // [!code focus]
   pageSize: 25,
 });
@@ -102,7 +102,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
   collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580,
+  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
   page: 3,
   pageSize: 25, // [!code focus]
 });

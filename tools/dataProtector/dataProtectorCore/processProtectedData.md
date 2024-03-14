@@ -84,9 +84,13 @@ const taskid = await dataProtector.processProtectedData({
 });
 ```
 
-::: danger Do not use this to provide any sensitive information to the
+::: danger
+
+Do not use this to provide any sensitive information to the
 application. All arguments passed this way are visible in plain text using the
-[iExec blockchain explorer](https://explorer.iex.ec). :::
+[iExec blockchain explorer](https://explorer.iex.ec).
+
+:::
 
 ### inputFiles
 
@@ -126,11 +130,15 @@ const taskid = await dataProtector.processProtectedData({
 The ETH address or Ethereum Name Service (ENS) address for the iExec workerpool.
 It's the confidential computer on which the iExec application will run.
 
-::: tip iExec currently offers a production workerpool located at the Ethereum
-Name Service (ENS) address `prod-v8-bellecour.main.pools.iexec.eth`. This is the
+::: tip
+
+iExec currently offers a production workerpool located at the Ethereum Name
+Service (ENS) address `prod-v8-bellecour.main.pools.iexec.eth`. This is the
 default workerpool for running confidential computations on the iExec platform.
 If no specific workerpool address is specified, computations will automatically
-be directed to this default workerpool. :::
+be directed to this default workerpool.
+
+:::
 
 ```js
 const taskid = await dataProtector.processProtectedData({

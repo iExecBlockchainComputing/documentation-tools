@@ -5,9 +5,10 @@ Method to get all distribution params from a protected data.
 Inside a collection, a protected data can be in a number of different states:
 
 - Not distributed, ie. only the collection's owner can see it
-- For free
+- For free (equivalent to renting with a price of 0)
 - For rent
-- For rent AND included in the subscription
+- Included in the subscription bundle
+- For rent AND included in the subscription bundle
 - For sale
 
 ## Usage

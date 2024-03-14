@@ -1,7 +1,9 @@
 # Migrate from v1 to v2
 
-::: tip This page concerns projects created with data protector prior or equal
-to version 0.5.1
+::: tip
+
+This page concerns projects created with data protector prior or equal to
+version 0.5.1
 
 :::
 

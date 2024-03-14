@@ -5,9 +5,11 @@ data schema, or both. Only protected data objects the invoker has permissions to
 access are included in the result set. You must include at least one of the
 optional parameters when invoking this method.
 
-::: tip A data schema is the metadata describing the contents of the protected
-data object. The schema is returned as part of the
-[protectedData](protectData.md) method invocation.
+::: tip
+
+A data schema is the metadata describing the contents of the protected data
+object. The schema is returned as part of the [protectedData](protectData.md)
+method invocation.
 
 :::
 
@@ -15,14 +17,9 @@ data object. The schema is returned as part of the
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0C...',
-  schema: {
+  owner: '0xA0c15z...',
+  requiredSchema: {
     email: 'string',
-    avatar: 'JPEG',
-    smtp: {
-      server: 'string',
-      port: 'number',
-    },
   },
 });
 ```
@@ -41,15 +38,9 @@ Provides a list of protected data objects matching this schema.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  schema: {
+  requiredSchema: {
     // [!code focus]
     email: 'string', // [!code focus]
-    avatar: 'JPEG', // [!code focus]
-    smtp: {
-      // [!code focus]
-      server: 'string', // [!code focus]
-      port: 'number', // [!code focus]
-    }, // [!code focus]
   },
 });
 ```
@@ -63,7 +54,7 @@ address.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0Cf...', // [!code focus]
+  owner: '0xA0c15z...', // [!code focus]
 });
 ```
 
@@ -76,8 +67,8 @@ The provided value should be in seconde.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0Cf...',
-  createdAfterTimestamp: '1710257612', // [!code focus]
+  owner: '0xA0c15z...',
+  createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT // [!code focus]
 });
 ```
 
@@ -91,8 +82,8 @@ also specify a `pageSize` to control the size of the results.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0Cf...',
-  createdAfterTimestamp: '1710257612',
+  owner: '0xA0c15z...',
+  createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT
   page: 1, // [!code focus]
 });
 ```
@@ -108,8 +99,8 @@ specifying a `page` parameter.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0Cf...',
-  createdAfterTimestamp: '1710257612',
+  owner: '0xA0c15z...',
+  createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT
   page: 1,
   pageSize: 100, // [!code focus]
 });
