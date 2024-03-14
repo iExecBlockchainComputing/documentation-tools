@@ -31,8 +31,7 @@ const updateOracleRes = await factory.updateOracle({
 
 ### workerpool
 
-Address of the workerpool that should perform the update. Workerpool defined
-below is : 0x0e7bc972c99187c191a17f3cae4a2711a4188c3f.
+Address of the workerpool that should perform the update.
 
 ```js
 const updateOracleRes = await factory.updateOracle({
@@ -41,6 +40,14 @@ const updateOracleRes = await factory.updateOracle({
   targetBlockchains: ['134', '137'],
 });
 ```
+
+::: tip
+
+iExec currently offers a production workerpool located at the Ethereum Name
+Service (ENS) address `prod-v8-bellecour.main.pools.iexec.eth`. This is the
+default workerpool for running confidential computations on the iExec platform.
+
+:::
 
 ### targetBlockchains (optional)
 
