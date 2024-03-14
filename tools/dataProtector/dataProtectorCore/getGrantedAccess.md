@@ -24,7 +24,7 @@ import { type GetGrantedAccessParams } from "@iexec/dataprotector";
 
 ### protectedData
 
-`AddressOrENS | 'any' | undefined`
+`AddressOrENS | any | undefined`
 
 Address of the protected data object for which you are querying access authorization grants. It's a representation of ethereum address or ENS name (Ethereum Name Service)
 
@@ -40,7 +40,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 ### authorizedApp
 
-`AddressOrENS | 'any' | undefined`
+`AddressOrENS | any | undefined`
 
 Optional filter to restrict the results to include only authorizations for the specified application.It's a representation of ethereum address or ENS name (Ethereum Name Service)
 
@@ -60,7 +60,7 @@ If you specified an application whitelist when using [`grantAccess`](./grantAcce
 
 ### authorizedUser
 
-`AddressOrENS | 'any' | undefined`
+`AddressOrENS | any | undefined`
 
 Optional filter to restrict the results to include only authorizations for the specified user.It's a String representation of ethereum address or ENS name (Ethereum Name Service)
 
@@ -76,7 +76,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 ### page
 
-`number |undefined`
+`number | undefined`
 
 Specifies the results page to return. The default for this is `0` which returns all results. Pages are indexed starting at page 1. If using this field you may also specify a `pageSize` to control the size of the results.
 
@@ -92,7 +92,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 ### pageSize
 
-`number |undefined`
+`number | undefined`
 
 Specifies the number of records in each page of the result set. This is used in conjunction with the optional `page` parameter to constrain the size of the result. The default for this value is `20` but this only comes into play when specifying a `page` parameter.
 
@@ -109,7 +109,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 ## Return value
 
 ```ts
-import { type GrantedAccessResponses } from "@iexec/dataprotector";
+import { type GrantedAccessResponse } from "@iexec/dataprotector";
 ```
 
 The return value for this method has two fields: a `count` parameter indicating the number of results, and an array of `GrantedAccess` objects containing all access data. When using the optional paging parameters, the `count` will be limited by the selected `pageSize` parameter. You may use these result objects in conjunction with the [revokeOneAccess](revokeOneAccess.md) method to revoke a previously granted authorization for access.

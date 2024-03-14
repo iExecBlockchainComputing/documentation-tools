@@ -113,7 +113,7 @@ const taskid = await dataProtector.processProtectedData({
 
 ### workerpool
 
-`AddressOrENS | 'any' | undefined`
+`AddressOrENS | any | undefined`
 
 The ETH address or Ethereum Name Service (ENS) address for the iExec workerpool. It's the confidential computer on which the iExec application will run.
 

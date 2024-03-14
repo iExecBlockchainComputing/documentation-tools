@@ -63,7 +63,7 @@ const listProtectedData = await dataProtector.getProtectedData({
 
 ### createdAfterTimestamp
 
-`number |undefined`
+`number | undefined`
 
 Provides a list of protected data objects created after this timestamp value. The provided value should be in seconde.
 
@@ -76,7 +76,7 @@ const listProtectedData = await dataProtector.getProtectedData({
 
 ### page
 
-`number |undefined`
+`number | undefined`
 
 Specifies the results page to return. The default for this is `0` which returns all results. Pages are indexed starting at page 1. If using this field you may also specify a `pageSize` to control the size of the results.
 
@@ -90,7 +90,7 @@ const listProtectedData = await dataProtector.getProtectedData({
 
 ### pageSize
 
-`number |undefined`
+`number | undefined`
 
 Specifies the number of records in each page of the result set. This is used in conjunction with the optional `page` parameter to constrain the size of the result. The default for this value is `20` but this only comes into play when specifying a `page` parameter.
 

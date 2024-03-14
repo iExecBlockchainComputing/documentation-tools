@@ -172,7 +172,7 @@ const sendEmail = await web3mail.sendEmail({
 
 ## Return value
 
-```js
+```ts
 import { type SendEmailResponse } from "@iexec/web3mail";
 ```
 

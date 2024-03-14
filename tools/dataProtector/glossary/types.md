@@ -1,6 +1,6 @@
 # Types
 
-Glossary of Types in viem.
+Glossary of Types in DataProtector.
 
 ## GrantedAccess
 
