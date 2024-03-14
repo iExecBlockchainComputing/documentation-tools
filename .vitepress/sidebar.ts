@@ -223,6 +223,17 @@ export function getSidebar() {
                 text: "sendEmail",
                 link: "/tools/web3mail/sendEmail",
               },
+              {
+                text: "Glossary",
+                link: "/tools/web3mail/glossary/types",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Types",
+                    link: "/tools/web3mail/glossary/types",
+                  },
+                ],
+              },
             ],
           },
           {

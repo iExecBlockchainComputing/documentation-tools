@@ -120,4 +120,4 @@ This method returns an object with two fields:
 
 An integer value indicating the number of results returned by this method. This is of particular note when using paging as the number of records returned may be smaller than the page size.
 
-[`GrantedAccess`](../glossary/types)
+[`GrantedAccess`](../glossary/types#grantedaccess)

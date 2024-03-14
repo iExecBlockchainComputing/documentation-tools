@@ -2,7 +2,7 @@
 
 Glossary of Types in viem.
 
-## grantedAccess
+## GrantedAccess
 
 ### dataset
 

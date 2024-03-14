@@ -111,20 +111,3 @@ import { type CreateOracleMessage } from "@iexec/iexec-oracle-factory-wrapper";
 ```
 
 `Observable<CreateOracleMessage>`
-
-This is an example of possible return
-
-```js
-{
-  paramSet: {
-    JSONPath: '$.ethereum.usd',
-    body: '',
-    dataType: 'number',
-    dataset: '0x0eFf9Ba4304D5d3EB775cA9dB1F011e65C2eb0cE',
-    headers: { authorization: '%API_KEY%' },
-    method: 'GET',
-    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd'
-  },
-  cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit'
-}
-```

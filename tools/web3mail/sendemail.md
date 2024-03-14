@@ -170,10 +170,14 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-## Return value example
+## Return value
 
 ```js
-{
-  taskId: "0x882cbfb34453f260dfa14d224fd9ae0263edbfcb",
-}
+import { type SendEmailResponse } from "@iexec/web3mail";
 ```
+
+### taskId
+
+`string`
+
+A unique identifier associated with a task currently running on the iExec Bellecour side chain. You may monitor task execution with the [iExec blockchain explorer](https://explorer.iex.ec).

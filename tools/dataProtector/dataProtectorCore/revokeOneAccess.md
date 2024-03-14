@@ -68,4 +68,4 @@ The ID of the transaction that happened on iExec's side chain. You may view deta
 
 ### access
 
-[`GrantedAccess`](../glossary/types)
+[`GrantedAccess`](../glossary/types#grantedaccess)

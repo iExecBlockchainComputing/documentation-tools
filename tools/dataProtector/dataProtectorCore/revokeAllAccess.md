@@ -89,4 +89,4 @@ import { type AllAccessRevoked } from "@iexec/dataprotector";
 
 ### allAccessRevoked
 
-It's a list of [`GrantedAccess`](./revokeOneAccess.md#result-value)
+[`GrantedAccess[]`](../glossary/types#grantedaccess)

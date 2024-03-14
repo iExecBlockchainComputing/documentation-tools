@@ -50,7 +50,7 @@ const updateOracleRes = await factory.updateOracle({
 });
 ```
 
-## Return value example
+## Return value
 
 ```js
 {

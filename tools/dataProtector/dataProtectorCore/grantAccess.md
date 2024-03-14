@@ -120,4 +120,4 @@ import { type GrantedAccess } from "@iexec/dataprotector";
 
 The result of this method confirms the new access grant. It consists of a JSON `grantedAccess` object.
 
-[`GrantedAccess`](../glossary/types)
+[`GrantedAccess`](../glossary/types#grantedaccess)
