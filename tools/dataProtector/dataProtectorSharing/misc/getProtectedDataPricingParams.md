@@ -28,7 +28,7 @@ Address of the protected data you'd like to get the pricing parameters.
 
 ## Return value
 
-```js
+```ts
 import { type GetProtectedDataPricingResponse } from "@iexec/dataprotector";
 ```
 
@@ -84,7 +84,3 @@ Specifies if the item cost zero nano RLC.
 `number`
 
 Timestamp marking the protected data's creation.
-
-## Error
-
-This method might throw if the subgraph is not reachable.

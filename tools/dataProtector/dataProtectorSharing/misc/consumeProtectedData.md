@@ -18,7 +18,7 @@ const consumeProtectedDataResult =
 
 ## Parameters
 
-```js
+```ts
 import { type ConsumeProtectedDataParams } from "@iexec/dataprotector";
 ```
 
@@ -54,7 +54,7 @@ const consumeProtectedDataResult =
 
 ## Return value
 
-```js
+```ts
 import { type ConsumeProtectedDataResponse } from "@iexec/dataprotector";
 ```
 
@@ -81,7 +81,3 @@ Link to the IPFS location of the transaction-related data.
 `CryptoKey`
 
 Key used for decrypting the protected data.
-
-## Error
-
-TODO

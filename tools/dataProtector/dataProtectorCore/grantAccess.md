@@ -16,7 +16,7 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ## Parameters
 
-```js
+```ts
 import { type GrantAccessParams } from "@iexec/dataprotector";
 ```
 
@@ -114,7 +114,7 @@ _default_: 1
 
 ## Return value
 
-```js
+```ts
 import { type GrantedAccess } from "@iexec/dataprotector";
 ```
 

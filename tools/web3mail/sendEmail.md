@@ -19,7 +19,7 @@ const sendEmail = await web3mail.sendEmail({
 
 ## Parameters
 
-```js
+```ts
 import { type SendEmailParams } from "@iexec/web3mail";
 ```
 

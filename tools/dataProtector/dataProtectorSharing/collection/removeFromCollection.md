@@ -21,7 +21,7 @@ const { txHash } = await dataProtectorSharing.removeFromCollection({
 
 ## Parameters
 
-```js
+```ts
 import { type RemoveFromCollectionParams } from "@iexec/dataprotector";
 ```
 
@@ -39,7 +39,7 @@ const { txHash } = await dataProtectorSharing.removeFromCollection({
 
 ## Return value
 
-```js
+```ts
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 
@@ -48,13 +48,3 @@ import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 `string`
 
 The transaction hash corresponding to the execution of the function.
-
-## Error
-
-### yup `ValidationError` errors
-
-```
-protectedDataAddress should be an ethereum address, a ENS name, or "any"
-```
-
-TODO To be continued...

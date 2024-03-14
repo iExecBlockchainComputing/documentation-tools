@@ -24,7 +24,7 @@ export function getSidebar() {
         text: "Tools",
         items: [
           {
-            text: "DataProtector",
+            text: "🔐&nbsp;&nbsp;DataProtector",
             link: "/tools/dataProtector",
             collapsed: true,
             items: [
@@ -199,7 +199,7 @@ export function getSidebar() {
             ],
           },
           {
-            text: "Web3mail",
+            text: "✉&nbsp;&nbsp;Web3mail",
             link: "/tools/web3mail",
             collapsed: true,
             items: [
@@ -237,7 +237,7 @@ export function getSidebar() {
             ],
           },
           {
-            text: "Oracle Factory",
+            text: "🧙&nbsp;&nbsp;Oracle Factory",
             link: "/tools/oracleFactory",
             collapsed: true,
             items: [

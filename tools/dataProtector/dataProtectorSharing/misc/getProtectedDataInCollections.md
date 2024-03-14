@@ -14,7 +14,7 @@ const protectedData =
 
 ## Parameters
 
-```js
+```ts
 import { type GetProtectedDataInCollectionsParams } from "@iexec/dataprotector";
 ```
 
@@ -110,7 +110,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ## Return value
 
-```js
+```ts
 import { type ProtectedDataInCollection } from "@iexec/dataprotector";
 ```
 
@@ -162,7 +162,3 @@ Specifies if the item is available for purchase.
 `number`
 
 Timestamp marking the protected data's creation.
-
-## Error
-
-TODO

@@ -17,7 +17,7 @@ const revokeAllAccessObservable = dataProtector
 
 ## Parameters
 
-```js
+```ts
 import { type RevokeAllAccessParams } from "@iexec/dataprotector";
 ```
 
@@ -83,7 +83,7 @@ const revokeAllAccessObservable = dataProtector.revokeAllAccess({
 
 ## Result
 
-```js
+```ts
 import { type AllAccessRevoked } from "@iexec/dataprotector";
 ```
 

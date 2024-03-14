@@ -19,7 +19,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 
 ## Parameters
 
-```js
+```ts
 import { type AddToCollectionParams } from "@iexec/dataprotector";
 ```
 
@@ -86,7 +86,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 
 ## Return value
 
-```js
+```ts
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 
@@ -95,7 +95,3 @@ import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 `string`
 
 The transaction hash corresponding to the execution of the function.
-
-## Error
-
-TODO

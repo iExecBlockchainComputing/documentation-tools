@@ -17,7 +17,7 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 
 ## Parameters
 
-```js
+```ts
 import { type SetProtectedDataForSaleParams } from "@iexec/dataprotector";
 ```
 
@@ -49,7 +49,7 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 
 ## Return value
 
-```js
+```ts
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 
@@ -58,7 +58,3 @@ import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 `string`
 
 The transaction hash corresponding to the execution of the function.
-
-## Error
-
-TODO

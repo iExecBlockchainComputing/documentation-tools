@@ -32,7 +32,7 @@ const protectedData = await dataProtector.protectData({
 
 ## Parameters
 
-```js
+```ts
 import { type ProtectDataParams } from "@iexec/dataprotector";
 ```
 
@@ -91,7 +91,7 @@ const protectedData = await dataProtector.protectData({
 
 ## Return value
 
-```js
+```ts
 import { type ProtectedDataWithSecretProps } from "@iexec/dataprotector";
 ```
 

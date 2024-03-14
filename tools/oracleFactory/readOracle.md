@@ -15,7 +15,7 @@ const readOracleRes = await factory.readOracle(
 
 ## Parameters
 
-```js
+```ts
 import { type ReadOracleParams } from "@iexec/iexec-oracle-factory-wrapper";
 ```
 
@@ -33,7 +33,7 @@ const readOracleRes = await factory.readOracle(
 
 ## Return value
 
-```js
+```ts
 import { type OracleValue } from "@iexec/iexec-oracle-factory-wrapper";
 ```
 
