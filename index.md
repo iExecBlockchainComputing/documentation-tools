@@ -5,7 +5,7 @@
 Build decentralized applications that combine ownership, privacy, and
 monetization.
 
-### Overview
+## Overview
 
 <a href="./overview/what-we-do" class="link-for-home">
   💡 &nbsp;What we do
@@ -15,7 +15,7 @@ monetization.
   📽 &nbsp;Use case demo
 </a>
 
-### Our tools
+## Our tools
 
 <a href="./tools/dataProtector" class="link-for-home">
   🔐 &nbsp;DataProtector
@@ -29,7 +29,7 @@ monetization.
   🧙 &nbsp;Oracle Factory
 </a>
 
-### Help
+## Help
 
 <a href="./help/contact-us" class="link-for-home">
   🆘 &nbsp;Contact us

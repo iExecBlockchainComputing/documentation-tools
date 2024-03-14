@@ -1,10 +1,10 @@
-import { DefaultTheme } from 'vitepress';
+import type { DefaultTheme } from 'vitepress';
 
 export function getSidebar() {
   return {
     '/': [
       {
-        text: 'Overview',
+        text: 'OVERVIEW',
         items: [
           { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/what-we-do' },
           {
@@ -21,7 +21,7 @@ export function getSidebar() {
         ],
       },
       {
-        text: 'Tools',
+        text: 'TOOLS',
         items: [
           {
             text: '🔐&nbsp;&nbsp;DataProtector',
@@ -259,7 +259,7 @@ export function getSidebar() {
         ],
       },
       {
-        text: 'Help',
+        text: 'HELP',
         items: [{ text: '🆘&nbsp;&nbsp;Contact Us', link: '/help/contact-us' }],
       },
     ],

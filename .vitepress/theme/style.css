@@ -1,10 +1,17 @@
 /* https://vitepress.dev/guide/extending-default-theme#customizing-css */
 :root {
+  --vp-nav-logo-height: 32px;
+
+  --vp-font-family-base: 'Open Sans', 'Chinese Quotes', 'Inter var', Inter,
+    ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto,
+    'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
   --vp-c-brand-1: #fcd15a;
   --vp-c-brand-2: var(--vp-c-brand-1); /* hover on links */
   --vp-c-brand-3: var(--vp-c-brand-1);
   --vp-code-color: rgb(145 118 0); /* `Code` */
-  --vp-c-tip-1: var(--vp-c-text-1); /* `Code` in tips */
+  --vp-c-tip-1: rgba(255, 255, 245, 0.86); /* `Code` in tips */
   --vp-code-link-color: var(
     --vp-code-color
   ); /* `Code` in links. Primary yellow is too light */
@@ -18,12 +25,17 @@
 /* Force dark header even if light theme */
 header {
   --vp-c-bg: #161618;
-  --vp-c-text-1: rgba(255, 255, 245, 0.86);
+  --vp-c-text-1: white;
   --vp-nav-bg-color: var(--vp-c-bg);
   --vp-c-bg-alt: var(--vp-c-bg);
   --vp-c-text-2: rgba(235, 235, 245, 0.6);
   --vp-c-divider: #2e2e32;
   --vp-c-bg-elv: #202127;
+}
+header .title > span {
+  font-size: 18px !important;
+  margin-left: 4px;
+  letter-spacing: -0.45px;
 }
 
 .VPNavBar {
@@ -84,6 +96,9 @@ header {
   transition-property: right;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.15s;
+}
+.dark .link-for-home:after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='grey' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' shape-rendering='geometricPrecision' viewBox='0 0 24 24' class='w-4 h-4 stroke-dark/7 transition-all group-hover:translate-x-0.5 group-hover:stroke-primary/8 dark:stroke-light/6' height='24' width='24' style='color: currentcolor;'%3E%3Cpath d='M9 18l6-6-6-6'%3E%3C/path%3E%3C/svg%3E");
 }
 .link-for-home:hover:after {
   right: 17px;
