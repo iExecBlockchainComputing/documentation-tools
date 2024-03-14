@@ -49,7 +49,7 @@ default workerpool for running confidential computations on the iExec platform.
 
 :::
 
-### targetBlockchains (optional)
+### targetBlockchains
 
 Array of target blockchain IDs where the oracle is deployed. 137 for polygon,
 134 for iExec.
