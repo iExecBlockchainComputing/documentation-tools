@@ -12,7 +12,7 @@ const rentResult = await dataProtectorSharing.rentProtectedData({
 
 ## Parameters
 
-```js
+```ts
 import { type RentProtectedDataParams } from "@iexec/dataprotector";
 ```
 
@@ -30,7 +30,7 @@ const rentResult = await dataProtectorSharing.rentProtectedData({
 
 ## Return value
 
-```js
+```ts
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 

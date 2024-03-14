@@ -19,7 +19,7 @@ const { success } =
 
 ## Parameters
 
-```js
+```ts
 import { type RemoveProtectedDataFromSubscriptionParams } from "@iexec/dataprotector";
 ```
 
@@ -38,7 +38,7 @@ const { success } =
 
 ## Return value
 
-```js
+```ts
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 

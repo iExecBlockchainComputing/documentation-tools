@@ -17,7 +17,7 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 
 ## Parameters
 
-```js
+```ts
 import { type BuyProtectedDataParams } from "@iexec/dataprotector";
 ```
 
@@ -65,7 +65,7 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 
 ## Return value
 
-```js
+```ts
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 

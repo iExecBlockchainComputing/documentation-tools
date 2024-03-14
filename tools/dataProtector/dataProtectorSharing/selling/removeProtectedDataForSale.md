@@ -13,7 +13,7 @@ const notForSaleAymoreResult =
 
 ## Parameters
 
-```js
+```ts
 import { type RemoveProtectedDataForSaleParams } from "@iexec/dataprotector";
 ```
 
@@ -32,7 +32,7 @@ const notForSaleAymoreResult =
 
 ## Return value
 
-```js
+```ts
 import { type SuccessWithTransactionHash } from "@iexec/dataprotector";
 ```
 

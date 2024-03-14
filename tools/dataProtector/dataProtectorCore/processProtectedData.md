@@ -20,7 +20,7 @@ const taskid = await dataProtector.processProtectedData({
 
 ## Parameters
 
-```js
+```ts
 import { type ProcessProtectedDataParams } from "@iexec/dataprotector";
 ```
 
@@ -131,7 +131,7 @@ const taskid = await dataProtector.processProtectedData({
 
 ## Return value
 
-```js
+```ts
 import { type ProcessProtectedDataParams } from "@iexec/dataprotector";
 ```
 

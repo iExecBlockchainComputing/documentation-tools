@@ -24,7 +24,7 @@ const revokeAccess = await dataProtector.revokeOneAccess(
 
 ## Parameters
 
-```js
+```ts
 import { type GrantedAccess } from "@iexec/dataprotector";
 ```
 
@@ -56,7 +56,7 @@ The tag must always be set to `0x00000000000000000000000000000000000000000000000
 
 ## Result value
 
-```js
+```ts
 import { type RevokedAccess } from "@iexec/dataprotector";
 ```
 

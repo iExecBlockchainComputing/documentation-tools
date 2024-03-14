@@ -10,7 +10,7 @@ const contactsList = await web3mail.fetchMyContacts();
 
 ## Return value
 
-```js
+```ts
 import { type Contact } from "@iexec/web3mail";
 ```
 

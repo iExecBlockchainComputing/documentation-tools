@@ -28,7 +28,7 @@ Address of the protected data you'd like to get the pricing parameters.
 
 ## Return value
 
-```js
+```ts
 import { type GetProtectedDataPricingResponse } from "@iexec/dataprotector";
 ```
 

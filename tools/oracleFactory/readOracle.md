@@ -15,7 +15,7 @@ const readOracleRes = await factory.readOracle(
 
 ## Parameters
 
-```js
+```ts
 import { type ReadOracleParams } from "@iexec/iexec-oracle-factory-wrapper";
 ```
 
@@ -33,7 +33,7 @@ const readOracleRes = await factory.readOracle(
 
 ## Return value
 
-```js
+```ts
 import { type OracleValue } from "@iexec/iexec-oracle-factory-wrapper";
 ```
 
@@ -41,9 +41,9 @@ import { type OracleValue } from "@iexec/iexec-oracle-factory-wrapper";
 
 This is an example of possible returns
 
-```js
+```json
 {
-  value: 1995.74,
-  date: 1700047387
+  "value": 1995.74,
+  "date": 1700047387
 }
 ```

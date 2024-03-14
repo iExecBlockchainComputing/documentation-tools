@@ -52,10 +52,10 @@ const updateOracleRes = await factory.updateOracle({
 
 ## Return value example
 
-```js
+```json
 {
-  dealid: '0x86e1d2b13cd176f86b2c9d10931bc20dba0d626f1dac07dd76c1b1cec569f232',
-  taskid: '0x90a100c10780f1d0595dd9e37dc1655eb66f192bf1b2b31d719a6ca3c6b62d07',
-  status: 'REVEALING'
+  "dealid": "0x86e1d2b13cd176f86b2c9d10931bc20dba0d626f1dac07dd76c1b1cec569f232",
+  "taskid": "0x90a100c10780f1d0595dd9e37dc1655eb66f192bf1b2b31d719a6ca3c6b62d07",
+  "status": "REVEALING"
 }
 ```

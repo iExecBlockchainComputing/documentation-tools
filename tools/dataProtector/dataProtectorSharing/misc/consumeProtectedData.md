@@ -18,7 +18,7 @@ const consumeProtectedDataResult =
 
 ## Parameters
 
-```js
+```ts
 import { type ConsumeProtectedDataParams } from "@iexec/dataprotector";
 ```
 
@@ -54,7 +54,7 @@ const consumeProtectedDataResult =
 
 ## Return value
 
-```js
+```ts
 import { type ConsumeProtectedDataResponse } from "@iexec/dataprotector";
 ```
 

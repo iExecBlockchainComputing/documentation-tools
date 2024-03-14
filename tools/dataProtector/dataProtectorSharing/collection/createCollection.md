@@ -15,7 +15,7 @@ const createCollectionResult = await dataProtectorSharing.createCollection();
 
 ## Return value
 
-```js
+```ts
 import { type CreateCollectionResponse } from "@iexec/dataprotector";
 ```
 

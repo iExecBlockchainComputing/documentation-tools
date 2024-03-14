@@ -20,7 +20,7 @@ const createOracleRes = await factory.createOracle({
 
 ## Parameters
 
-```js
+```ts
 import { type RawParams } from "@iexec/iexec-oracle-factory-wrapper";
 ```
 
@@ -106,7 +106,7 @@ const createOracleRes = await factory.createOracle({
 
 ## Return value
 
-```js
+```ts
 import { type CreateOracleMessage } from "@iexec/iexec-oracle-factory-wrapper";
 ```
 
