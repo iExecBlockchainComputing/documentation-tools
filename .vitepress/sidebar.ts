@@ -237,16 +237,22 @@ export function getSidebar() {
                 link: '/tools/oracleFactory/getting-started',
               },
               {
-                text: 'createOracle',
-                link: '/tools/oracleFactory/createOracle',
-              },
-              {
-                text: 'readOracle',
-                link: '/tools/oracleFactory/readOracle',
-              },
-              {
-                text: 'updateOracle',
-                link: '/tools/oracleFactory/updateOracle',
+                text: 'Methods',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'createOracle',
+                    link: '/tools/oracleFactory/createOracle',
+                  },
+                  {
+                    text: 'readOracle',
+                    link: '/tools/oracleFactory/readOracle',
+                  },
+                  {
+                    text: 'updateOracle',
+                    link: '/tools/oracleFactory/updateOracle',
+                  },
+                ],
               },
             ],
           },

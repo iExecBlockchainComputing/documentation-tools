@@ -27,7 +27,7 @@ Content ID of the Oracle to be read.
 
 ```js
 const readOracleRes = await factory.readOracle(
-  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit'
+  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit' // [!code focus]
 );
 ```
 

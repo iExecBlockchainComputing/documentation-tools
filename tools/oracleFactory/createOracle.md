@@ -34,8 +34,14 @@ The API URL to fetch data from.
 
 ```js
 const createOracleRes = await factory.createOracle({
-  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-  // Other parameters...
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', // [!code focus]
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
 });
 ```
 
@@ -47,8 +53,14 @@ The HTTP method to use when making the API request (e.g., "GET").
 
 ```js
 const createOracleRes = await factory.createOracle({
-  method: 'GET',
-  // Other parameters...
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET', // [!code focus]
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
 });
 ```
 
@@ -58,14 +70,20 @@ const createOracleRes = await factory.createOracle({
 
 Any headers required for the API request.
 
+<!-- prettier-ignore-start -->
 ```js
 const createOracleRes = await factory.createOracle({
-  headers: {
-    authorization: '%API_KEY%',
-  },
-  // Other parameters...
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: { // [!code focus]
+    authorization: '%API_KEY%', // [!code focus]
+  }, // [!code focus]
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
 });
 ```
+<!-- prettier-ignore-end -->
 
 ### JSONPath
 
@@ -75,8 +93,14 @@ The JSON path to extract the data from the API response.
 
 ```js
 const createOracleRes = await factory.createOracle({
-  JSONPath: '$.ethereum.usd',
-  // Other parameters...
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd', // [!code focus]
+  apiKey: 'MY_TEST_API_KEY',
 });
 ```
 
@@ -88,8 +112,14 @@ The type of data to be returned (e.g., "number").
 
 ```js
 const createOracleRes = await factory.createOracle({
-  dataType: 'number',
-  // Other parameters...
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number', // [!code focus]
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
 });
 ```
 
@@ -101,8 +131,14 @@ API key if required by the data source.
 
 ```js
 const createOracleRes = await factory.createOracle({
-  apiKey: 'MY_TEST_API_KEY',
-  // Other parameters...
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY', // [!code focus]
 });
 ```
 
