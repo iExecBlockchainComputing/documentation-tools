@@ -15,7 +15,7 @@ Data Sharing smart-contract.
 
 Let's try to make it more visual:
 
-![Data Sharing smart-contract](data-sharing-sc.png)
+![Data Sharing smart-contract](./dataProtectorSharing/data-sharing-sc.png)
 
 This special smart-contract will be responsible for **enforcing governance**
 over your protected data, based on your distribution choices. (renting, selling,
@@ -40,29 +40,3 @@ wider audience.
   user who wants to access your content will).
 - Any user can access your content as long as they comply with your distribution
   and monetization choices.
-
----
-
-## Installation
-
-::: code-group
-
-```bash [npm]
-npm install @iexec/dataprotector
-```
-
-```bash [pnpm]
-yarn add @iexec/dataprotector
-```
-
-```bash [yarn]
-pnpm add @iexec/dataprotector
-```
-
-```bash [bun]
-bun add @iexec/dataprotector
-```
-
-:::
-
-Find more details in the [Quick start](../dataprotector/quick-start.md) section.
