@@ -74,15 +74,54 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 
 Callback function to be notified at intermediate steps.
 
+<!-- prettier-ignore-start -->
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedDataAddress: '0x123abc...',
   collectionId: 12,
-  onStatusUpdate: ({ title, isDone }) => {
-    // [!code focus]
+  onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]
   }, // [!code focus]
 });
+```
+<!-- prettier-ignore-end -->
+
+You can expect this callback function to be called four times:
+
+1️⃣
+
+```json
+{
+  "title": "APPROVE_COLLECTION_CONTRACT",
+  "isDone": false
+}
+```
+
+2️⃣
+
+```json
+{
+  "title": "APPROVE_COLLECTION_CONTRACT",
+  "isDone": true
+}
+```
+
+3️⃣
+
+```json
+{
+  "title": "ADD_PROTECTED_DATA_TO_COLLECTION",
+  "isDone": false
+}
+```
+
+4️⃣
+
+```json
+{
+  "title": "ADD_PROTECTED_DATA_TO_COLLECTION",
+  "isDone": true
+}
 ```
 
 ## Return value

@@ -74,17 +74,18 @@ const revokeAllAccessObservable = dataProtector.revokeAllAccess({
 
 Callback function to be notified at intermediate steps.
 
+<!-- prettier-ignore-start -->
 ```js
 const revokeAllAccessObservable = dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...',
-  onStatusUpdate: ({ title, isDone }) => {
-    // [!code focus]
+  onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]
   }, // [!code focus]
 });
 ```
+<!-- prettier-ignore-end -->
 
 ## Result
 
