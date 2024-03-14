@@ -88,7 +88,6 @@ Instantiate the SDK in your back-end project:
 ```javascript
 import { IExecOracleFactory, utils } from "@iexec/iexec-oracle-factory-wrapper";
 
-const { PRIVATE_KEY } = process.env;
 // get web3 provider from a private key
 const signer = utils.getSignerFromPrivateKey(
   "https://bellecour.iex.ec",
