@@ -21,10 +21,10 @@ steps:
       - npm -v
       - npm ci
 
-  # - name: Check prettier
-  #   image: node:18.19
-  #   commands:
-  #     - npm run check-format
+  - name: Check prettier
+    image: node:18.19
+    commands:
+      - npm run check-format
 
   - name: Vercel deploy to prod
     image: node:18.19
