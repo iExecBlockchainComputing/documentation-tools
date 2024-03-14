@@ -2,6 +2,7 @@
 :root {
   --vp-c-brand-1: #fcd15a;
   --vp-c-brand-2: rgb(145 118 0); /* hover on links */
+  --vp-c-brand-3: var(--vp-c-brand-1);
   --vp-code-color: var(--vp-c-brand-2); /* `Code` */
   /*--vp-sidebar-bg-color: white;*/
   /*--vp-nav-bg-color: black;*/
