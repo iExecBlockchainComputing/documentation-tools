@@ -86,8 +86,8 @@ const taskid = await dataProtector.processProtectedData({
 
 ::: danger
 
-Do not use this to provide any sensitive information to the
-application. All arguments passed this way are visible in plain text using the
+Do not use this to provide any sensitive information to the application. All
+arguments passed this way are visible in plain text using the
 [iExec blockchain explorer](https://explorer.iex.ec).
 
 :::

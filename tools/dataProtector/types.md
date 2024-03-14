@@ -64,3 +64,18 @@ transaction
 `string`
 
 Order signature of all the `grantedAccess` fields
+
+## RevokedAccess
+
+### access
+
+[`GrantedAccess`](./types.md#grantedaccess)
+
+The granted access that was revoked.
+
+### txHash
+
+`string`
+
+The ID of the transaction that happened on iExec's side chain. You may view
+details on the transaction using the [iExec explorer](https://explorer.iex.ec).

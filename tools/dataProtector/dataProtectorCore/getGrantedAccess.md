@@ -144,12 +144,14 @@ limited by the selected `pageSize` parameter. You may use these result objects
 in conjunction with the [revokeOneAccess](revokeOneAccess.md) method to revoke a
 previously granted authorization for access.
 
-This method returns an object with two fields:
+### count
 
-`count`
+`number`
 
 An integer value indicating the number of results returned by this method. This
 is of particular note when using paging as the number of records returned may be
 smaller than the page size.
 
-[`GrantedAccess`](../types.md#grantedaccess)
+### grantedAccess
+
+[`GrantedAccess[]`](../types.md#grantedaccess)
