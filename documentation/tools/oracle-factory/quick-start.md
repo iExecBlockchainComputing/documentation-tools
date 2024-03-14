@@ -99,3 +99,39 @@ const factory = new IExecOracleFactory(signer);
 
 {% endtab %}
 {% endtabs %}
+
+### **1.5. Instantiate Only IExecOracleReader**
+
+Import and initialize the IExecOracleReader from the Oracle Factory SDK in your application.
+
+{% tabs %}
+{% tab title="Browser" %}
+Instantiate the SDK in your front-end project:
+
+#### 1.5.1. Basic Instantiation
+
+```javascript
+import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
+
+const BELLECOUR_BLOCKCHAIN_ENDPOINT = 'https://bellecour.iex.ec';
+// instantiate
+const bellecourBlockchainReader = new IExecOracleReader(BELLECOUR_BLOCKCHAIN_ENDPOINT);
+```
+
+{% endtab %}
+
+{% tab title="NodeJS" %}
+Instantiate the IExecOracleReader from the Oracle Factory SDK in your back-end project:
+
+#### 1.5.1. Basic Instantiation
+
+```javascript
+import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
+
+const BELLECOUR_BLOCKCHAIN_ENDPOINT = 'https://bellecour.iex.ec';
+// instantiate
+const bellecourBlockchainReader = new IExecOracleReader(BELLECOUR_BLOCKCHAIN_ENDPOINT);
+```
+
+{% endtab %}
+{% endtabs %}
