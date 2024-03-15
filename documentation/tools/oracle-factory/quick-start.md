@@ -112,9 +112,8 @@ Instantiate the SDK in your front-end project:
 ```javascript
 import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
 
-const BELLECOUR_BLOCKCHAIN_ENDPOINT = 'https://bellecour.iex.ec';
 // instantiate
-const bellecourBlockchainReader = new IExecOracleReader(BELLECOUR_BLOCKCHAIN_ENDPOINT);
+const mainnetBlockchainReader = new IExecOracleReader('mainnet');
 ```
 
 {% endtab %}
@@ -127,10 +126,21 @@ Instantiate the IExecOracleReader from the Oracle Factory SDK in your back-end p
 ```javascript
 import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
 
-const BELLECOUR_BLOCKCHAIN_ENDPOINT = 'https://bellecour.iex.ec';
 // instantiate
-const bellecourBlockchainReader = new IExecOracleReader(BELLECOUR_BLOCKCHAIN_ENDPOINT);
+const mainnetBlockchainReader = new IExecOracleReader('mainnet');
 ```
 
 {% endtab %}
 {% endtabs %}
+{% hint style="info" %}
+You can initialize the IExecOracleReader with the blockchain name or the chain id or even your custom blockchain Endpoint.
+Supported blockchains: 
+| blockchain name                      | chainID              | 
+| ------------------------------------ | -------------------- |
+| mainnet                              | 1                    |
+| goerli                               | 5                    |
+| bellecour                            | 134                  |
+| polygon                              | 137                  |
+| mumbai                               | 80001                |
+
+{% endhint %}
