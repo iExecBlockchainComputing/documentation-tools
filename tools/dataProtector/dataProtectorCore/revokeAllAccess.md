@@ -70,7 +70,7 @@ const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
 
 ### onStatusUpdate
 
-`OnStatusUpdateFn | undefined`
+`OnStatusUpdateFn<RevokeAllAccessStatuses> | undefined`
 
 Callback function to be notified at intermediate steps.
 

@@ -70,7 +70,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 
 ### onStatusUpdate
 
-`(status: OnStatusUpdateFn) => void | undefined`
+`OnStatusUpdateFn<AddToCollectionStatuses> | undefined`
 
 Callback function to be notified at intermediate steps.
 

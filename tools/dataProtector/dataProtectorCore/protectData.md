@@ -84,7 +84,7 @@ data we will automatically define it as "Untitled".
 
 ### onStatusUpdate
 
-`(status: OnStatusUpdateFn) => void | undefined`
+`OnStatusUpdateFn<ProtectDataStatuses> | undefined`
 
 Callback function to be notified at intermediate steps.
 

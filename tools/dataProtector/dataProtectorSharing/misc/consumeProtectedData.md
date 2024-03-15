@@ -37,7 +37,7 @@ const consumeProtectedDataResult =
 
 ### onStatusUpdate
 
-`(status: OnStatusUpdateFn) => void  | undefined`
+`OnStatusUpdateFn<ConsumeProtectedDataStatuses> | undefined`
 
 Callback function to be notified at intermediate steps.
 
