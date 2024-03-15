@@ -1,9 +1,10 @@
 # createOracle
 
-Method to create an oracle from a given API, limited to returning only one data point.
-As an example below, following coingecko public API which gives ethereum price in usd will be used : https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd
+The createOracle method is designed to facilitate the creation of an oracle, which serves as a reliable source of real-time data from a specified Application Programming Interface (API). This method is particularly suited for scenarios where only a single data point is required from the API.
 
 ## Usage
+
+As an example, we will utilize the CoinGecko public API, which provides the Ethereum price in USD: <a href="https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd">CoinGecko Ethereum API</a>.
 
 ```javascript
 const createOracleRes = factory.createOracle({
