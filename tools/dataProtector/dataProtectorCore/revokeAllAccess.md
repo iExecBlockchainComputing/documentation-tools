@@ -11,7 +11,7 @@ This method is asynchronous and requires use of the JavaScript observable
 pattern.
 
 ```js
-const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...',
@@ -31,7 +31,7 @@ import { type RevokeAllAccessParams } from '@iexec/dataprotector';
 The address of the `protectedData` subject to access revocation.
 
 ```js
-const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...',
@@ -46,7 +46,7 @@ The application address to be removed from the authorization list for the
 specified `protectedData`.
 
 ```js
-const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789ghi...',
@@ -61,7 +61,7 @@ The user address to be removed from the authorization list for the specified
 `protectedData`.
 
 ```js
-const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...', // [!code focus]
@@ -76,7 +76,7 @@ Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
 ```js
-const revokeAllAccessObservable = dataProtector.revokeAllAccess({
+const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789ghi...',
