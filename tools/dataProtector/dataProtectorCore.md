@@ -32,3 +32,7 @@ The DataProtector SDK encompasses the following suite of methods:
 - **processProtectedData**—process a `protectedData` object containing a user's
   data with a specified iExec application
 - **transferOwnership**—transfer a protectedData object to a new owner
+
+## Sandbox
+
+<CodeSandbox src="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true" />
