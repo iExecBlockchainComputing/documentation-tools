@@ -9,7 +9,7 @@ export default defineConfig({
   markdown: {
     attrs: { disable: true },
     theme: {
-      light: 'vitesse-light',
+      light: 'min-light',
       dark: 'vitesse-dark',
     },
   },
