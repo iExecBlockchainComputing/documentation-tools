@@ -134,6 +134,8 @@ const mainnetBlockchainReader = new IExecOracleReader('mainnet');
 {% endtabs %}
 {% hint style="info" %}
 You can initialize the IExecOracleReader with the blockchain name or the chain id or even your custom blockchain Endpoint.
+{% endhint %}
+
 Supported blockchains: 
 | blockchain name                      | chainID              | 
 | ------------------------------------ | -------------------- |
@@ -142,5 +144,3 @@ Supported blockchains:
 | bellecour                            | 134                  |
 | polygon                              | 137                  |
 | mumbai                               | 80001                |
-
-{% endhint %}
