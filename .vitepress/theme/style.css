@@ -5,7 +5,7 @@
     'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-  --vp-sidebar-width: 405px; /* Default is 272px, but we have some long method names */
+  --vp-sidebar-width: 360px; /* Default is 272px, but we have some long method names */
   --vp-nav-logo-height: 32px;
 
   --vp-c-brand-1: #fcd15a;
