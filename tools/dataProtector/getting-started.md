@@ -13,20 +13,7 @@ system:
 
 \- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
-### Start a new project
-
-In this section, we will show you how to set up and call the different methods
-of the SDK.
-
-You can reach the following open-source GitHub project, clone it and start from
-there.
-
-You can find the project
-[here](https://github.com/iExecBlockchainComputing/dataprotector-sandbox).
-
-### Basic installation
-
-Install `dataProtectorSDK`
+### Installation
 
 ::: code-group
 
@@ -49,10 +36,11 @@ bun add @iexec/dataprotector
 :::
 
 **This package is an ESM package. Your project needs to be ESM too.**
-[**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
+&nbsp;[**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
 
-If you use it with Webpack, you need the latest Webpack version and ensure you
-configure it correctly for ESM.
+If you use it with **Webpack**, some polyfills will be needed. You can find a
+working project
+[here](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/demo/browser-webpack).
 
 ### Instantiate SDK
 
@@ -63,7 +51,7 @@ access specific sets of features.
 #### Instantiate using the umbrella module
 
 For projects requiring the full functionality of the SDK, including both core
-and access functions.
+and sharing functions.
 
 ::: code-group
 
@@ -74,8 +62,8 @@ const web3Provider = window.ethereum;
 // Instantiate using the umbrella module for full functionality
 const dataProtector = new IExecDataProtector(web3Provider);
 
-const dataProtectorCore = dataProtector.core; // access to core methods
-const dataProtectorSharing = dataProtector.sharing; // access to methods
+const dataProtectorCore = dataProtector.core;
+const dataProtectorSharing = dataProtector.sharing;
 ```
 
 ```js [NodeJS]
@@ -104,7 +92,7 @@ For projects focusing solely on core data protection functions.
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
-// Instantiate using the Core module for core functions
+// Instantiate only the Core module
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 ```
 
@@ -115,7 +103,7 @@ const { PRIVATE_KEY } = process.env;
 // Get Web3 provider from a private key
 const web3Provider = getWeb3Provider(PRIVATE_KEY);
 
-// Instantiate using the Core module for core functions
+// Instantiate only the Core module
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 ```
 
@@ -131,7 +119,7 @@ For projects that need access management functions specifically.
 import { IExecDataProtectorSharing } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
-// Instantiate using the Sharing module for access functions
+// Instantiate only the Sharing module
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 ```
 
@@ -145,7 +133,7 @@ const { PRIVATE_KEY } = process.env;
 // Get Web3 provider from a private key
 const web3Provider = getWeb3Provider(PRIVATE_KEY);
 
-// Instantiate using the Sharing module for access functions
+// Instantiate only the Sharing module
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 ```
 
