@@ -57,10 +57,10 @@ export default defineConfig({
         dateStyle: 'medium',
       },
     },
-    // TODO: Switch to 'main' branch
-    editLink: {
-      pattern:
-        'https://github.com/iExecBlockchainComputing/documentation-tools/edit/feature/migrate-to-vitepress/:path',
-    },
+    // TODO: See if we keep that, and if so witch to 'main' branch
+    // editLink: {
+    //   pattern:
+    //     'https://github.com/iExecBlockchainComputing/documentation-tools/edit/feature/migrate-to-vitepress/:path',
+    // },
   },
 });
