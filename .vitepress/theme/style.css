@@ -27,6 +27,7 @@
 header {
   --vp-c-bg: #161618;
   --vp-c-text-1: white;
+  --vp-c-text-3: rgba(235, 235, 245, 0.38);
   --vp-nav-bg-color: var(--vp-c-bg);
   --vp-c-bg-alt: var(--vp-c-bg);
   --vp-c-text-2: rgba(235, 235, 245, 0.6);
