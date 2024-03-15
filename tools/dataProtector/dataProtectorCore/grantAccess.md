@@ -16,6 +16,9 @@ const grantedAccess = await dataProtector.grantAccess({
   authorizedUser: '0x789ghi...',
   pricePerAccess: 3,
   numberOfAccess: 10,
+  onStatusUpdate: ({ title, isDone }) => {
+    console.log(title, isDone);
+  },
 });
 ```
 
@@ -133,6 +136,63 @@ const grantedAccess = await dataProtector.grantAccess({
 ```
 
 Default: `1`
+
+### onStatusUpdate
+
+`OnStatusUpdateFn<GrantAccessStatuses> | undefined`
+
+Callback function to be notified at intermediate steps.
+
+<!-- prettier-ignore-start -->
+```js
+const grantedAccess = await dataProtector.grantAccess({
+  protectedData: '0x123abc...',
+  authorizedApp: '0x456def...',
+  authorizedUser: '0x789ghi...',
+  onStatusUpdate: ({ title, isDone }) => { // [!code focus]
+    console.log(title, isDone); // [!code focus]
+  }, // [!code focus]
+});
+```
+<!-- prettier-ignore-end -->
+
+You can expect this callback function to be called four times:
+
+1️⃣
+
+```json
+{
+  "title": "CREATE_DATASET_ORDER",
+  "isDone": false
+}
+```
+
+2️⃣
+
+```json
+{
+  "title": "CREATE_DATASET_ORDER",
+  "isDone": true
+}
+```
+
+3️⃣
+
+```json
+{
+  "title": "PUBLISH_DATASET_ORDER",
+  "isDone": false
+}
+```
+
+4️⃣
+
+```json
+{
+  "title": "PUBLISH_DATASET_ORDER",
+  "isDone": true
+}
+```
 
 ## Return value
 
