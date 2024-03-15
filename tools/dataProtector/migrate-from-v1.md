@@ -2,21 +2,25 @@
 
 ::: tip
 
-This page concerns projects created with data protector prior or equal to
-version 0.5.1
+This page concerns projects created with DataProtector prior or equal to version
+0.5.1
 
 :::
 
+```sh
+npm install @iexec/dataprotector@latest
+```
+
 ## Constructor
 
-The instantiation process has been updated to accommodate new modular
-architecture introduced in version 2. This change allows for more flexibility
+The instantiation process has been updated to accommodate **new modular
+architecture** introduced in version 2. This change allows for more flexibility
 and enables the use of specific functionalities tailored to the developers'
 needs.
 
 When instantiating the IExecDataProtector object, reference the _dataProtector_
-property to use core methods. Newer versions allow the use extended methods
-using the _dataProtectorSharing_ property.
+property to use core methods. Newer versions allow to use extended methods using
+the _dataProtectorSharing_ property.
 
 ```js
 // 0.5.1 and before
@@ -102,7 +106,7 @@ const allAccessRevoked = await dataProtector.revokeAllAccess({
 
 ::: tip
 
-The introduction of callback functions in protectData and revokeAllAccess
+The introduction of callback functions in `protectData` and `revokeAllAccess`
 methods allows for real-time status updates, making the data protection and
 access revocation processes more interactive and manageable.
 

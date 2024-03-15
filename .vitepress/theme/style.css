@@ -11,7 +11,7 @@
   --vp-c-brand-2: var(--vp-c-brand-1); /* hover on links */
   --vp-c-brand-3: var(--vp-c-brand-1);
   --vp-code-color: rgb(145 118 0); /* `Code` */
-  --vp-c-tip-1: rgba(255, 255, 245, 0.86); /* `Code` in tips */
+  --vp-c-tip-1: var(--vp-c-text-1); /* `Code` in tips */
   --vp-code-link-color: var(
     --vp-code-color
   ); /* `Code` in links. Primary yellow is too light */
