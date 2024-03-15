@@ -60,7 +60,7 @@ Depending on your project's requirements, you can instantiate the SDK using the
 umbrella module for full functionality or opt for one of the submodules to
 access specific sets of features.
 
-#### Instantiate Using the Umbrella Module
+#### Instantiate using the umbrella module
 
 For projects requiring the full functionality of the SDK, including both core
 and access functions.
@@ -94,7 +94,7 @@ const dataProtectorSharing = dataProtector.sharing; // access to methods
 
 :::
 
-#### Instantiate Using the Core Module
+#### Instantiate only the `core` module
 
 For projects focusing solely on core data protection functions.
 
@@ -121,7 +121,7 @@ const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 
 :::
 
-#### Instantiate Using the Sharing Module
+#### Instantiate only the `sharing` module
 
 For projects that need access management functions specifically.
 
