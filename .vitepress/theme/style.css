@@ -1,11 +1,12 @@
 /* https://vitepress.dev/guide/extending-default-theme#customizing-css */
 :root {
-  --vp-nav-logo-height: 32px;
-
   --vp-font-family-base: 'Open Sans', 'Chinese Quotes', 'Inter var', Inter,
     ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto,
     'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --vp-sidebar-width: 405px; /* Default is 272px, but we have some long method names */
+  --vp-nav-logo-height: 32px;
 
   --vp-c-brand-1: #fcd15a;
   --vp-c-brand-2: var(--vp-c-brand-1); /* hover on links */
