@@ -1,8 +1,8 @@
-# Quick start
+# Getting Started
 
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/web3mail/main?color=green)
 
-## Getting started
+## Overview
 
 ### Prerequisites
 
@@ -13,20 +13,7 @@ system:
 
 \- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
-### 2.2. Start a new project
-
-In this section, we will show you how to set up and call the different methods
-of the SDK.
-
-You can reach the following open-source GitHub project, clone it and start from
-there.
-
-You can find the project
-[here](https://github.com/iExecBlockchainComputing/web3Mail-sandbox).
-
-### 2.3. Basic installation
-
-Install `web3MailSDK` .
+### Installation
 
 ::: code-group
 
@@ -49,10 +36,11 @@ bun add @iexec/web3mail
 :::
 
 **This package is an ESM package. Your project needs to be ESM too.**
-[**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
+&nbsp;[**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
 
-If you use it with Webpack, you need the latest Webpack version and ensure you
-configure it correctly for ESM.
+If you use it with **Webpack**, some polyfills will be needed. You can find a
+working project
+[here](https://github.com/iExecBlockchainComputing/web3mail-sdk/tree/main/demo/browser-webpack).
 
 ### Instantiate SDK
 
@@ -80,4 +68,12 @@ const web3mail = new IExecWeb3mail(web3Provider);
 
 ## Sandbox
 
-<CodeSandbox src="https://codesandbox.io/p/github/iExecBlockchainComputing/web3mail-sandbox/main?file=/src/web3mail/web3mail.tsx:1,1&preventWorkspaceRedirect=true"/>
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/web3mail-sandbox/main?file=/src/web3mail/web3mail.tsx:1,1&preventWorkspaceRedirect=true" target="_blank" rel="noreferrer" class="link-as-block">
+  ⚡ &nbsp;Code Sandbox
+</a>
+
+Corresponding GitHub repository:
+
+<a href="https://github.com/iExecBlockchainComputing/web3Mail-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
+  🔎 &nbsp;GitHub repository sandbox
+</a>
