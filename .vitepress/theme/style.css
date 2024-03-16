@@ -58,6 +58,24 @@ header .title > span {
   color: var(--vp-code-color);
 }
 
+/**
+ * Override hover style for sidebar:
+ * Have a grey background-color instead of text-color; primary
+ * (Similar to old Gitbook)
+ */
+.VPSidebarItem.is-link:not(.is-active) > .item > .link:hover .text {
+  color: var(--vp-c-text-2) !important;
+  background-color: #f6f6f6;
+  padding-left: 16px;
+  margin-left: -16px;
+}
+.VPSidebarItem.is-link:not(.is-active) > .item > .link:hover + .caret {
+  color: var(--vp-c-text-2) !important;
+  background-color: #f6f6f6;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
 /* --- Custom classes --- */
 
 .link-as-block {
