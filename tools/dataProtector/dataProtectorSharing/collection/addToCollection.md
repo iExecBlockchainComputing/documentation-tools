@@ -130,8 +130,4 @@ You can expect this callback function to be called four times:
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
-### txHash
-
-`string`
-
-The transaction hash corresponding to the execution of the function.
+See [`SuccessWithTransactionHash`](../../types.md#successwithtransactionhash)

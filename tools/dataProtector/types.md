@@ -79,3 +79,16 @@ The granted access that was revoked.
 
 The ID of the transaction that happened on iExec's side chain. You may view
 details on the transaction using the [iExec explorer](https://explorer.iex.ec).
+
+_Example:_ `0xc9c2d58fc01fe54149b7daf49a0026d4ab1fdd3d10fb7c76350790fff03fe24d`
+
+## SuccessWithTransactionHash
+
+### txHash
+
+`string`
+
+The ID of the transaction that happened on iExec's side chain. You may view
+details on the transaction using the [iExec explorer](https://explorer.iex.ec).
+
+_Example:_ `0xc9c2d58fc01fe54149b7daf49a0026d4ab1fdd3d10fb7c76350790fff03fe24d`

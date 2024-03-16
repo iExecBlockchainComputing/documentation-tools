@@ -72,8 +72,4 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
-### txHash
-
-`string`
-
-The transaction hash corresponding to the execution of the function.
+See [`SuccessWithTransactionHash`](../../types.md#successwithtransactionhash)
