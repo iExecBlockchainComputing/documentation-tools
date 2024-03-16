@@ -1,15 +1,6 @@
 # getProtectedDataPricingParams
 
-Method to get all distribution params from a protected data.
-
-Inside a collection, a protected data can be in a number of different states:
-
-- Not distributed, ie. only the collection's owner can see it
-- For free (equivalent to renting with a price of 0)
-- For rent
-- Included in the subscription bundle
-- For rent AND included in the subscription bundle
-- For sale
+Method to get all distribution params for a protected data.
 
 ## Usage
 

@@ -9,9 +9,9 @@ Web3Mail offers developers methods to create apps that:
 
 Web3Mail is composed of 3 methods:
 
-- **fetchMyContacts**—that enables an entity to retrieve a list of Ethereum
+- **fetchMyContacts** — that enables an entity to retrieve a list of Ethereum
   accounts whose owners have authorized the entity to email them
-- **fetchUserContacts**—that enables anyone to retrieve a list of Ethereum
+- **fetchUserContacts** — that enables anyone to retrieve a list of Ethereum
   accounts whose owners have authorized a given entity to email them
-- **sendEmail**—that allows an entity to email a user knowing only her Ethereum
-  account.
+- **sendEmail** — that allows an entity to email a user knowing only her
+  Ethereum account.

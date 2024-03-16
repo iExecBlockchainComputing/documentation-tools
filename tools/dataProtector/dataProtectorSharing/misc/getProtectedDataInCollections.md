@@ -1,9 +1,7 @@
 # getProtectedDataInCollections
 
-Method to consume a protected data, ie. visualize it or download it.
-
-For this method to be successful, you need to either rent the protected data or
-have a subscription to the corresponding collection.
+Method to get protected data that are in collections, ie. owned by the Data
+Sharing smart-contract.
 
 ## Usage
 

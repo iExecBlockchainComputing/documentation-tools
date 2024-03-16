@@ -2,9 +2,6 @@
 
 Method to consume a protected data, ie. visualize it or download it.
 
-For this method to be successful, you need to either rent the protected data or
-have a subscription to the corresponding collection.
-
 ## Usage
 
 Input parameters type: `ConsumeProtectedDataParams`
@@ -15,6 +12,12 @@ const consumeProtectedDataResult =
     protectedDataAddress: '0x123abc...',
   });
 ```
+
+## Pre-conditions
+
+- You need to have an active rental for the protected data,
+- OR to have an active subscription to the corresponding collection if the
+  protected data is part of the collection subscription bundle.
 
 ## Parameters
 
@@ -52,6 +55,47 @@ const consumeProtectedDataResult =
   });
 ```
 <!-- prettier-ignore-end -->
+
+You can expect this callback function to be called four times:
+
+1️⃣
+
+```json
+{
+  "title": "CONSUME_PROTECTED_DATA",
+  "isDone": false
+}
+```
+
+2️⃣
+
+```json
+{
+  "title": "CONSUME_PROTECTED_DATA",
+  "isDone": true,
+  "payload": {
+    "txHash": "0xc9c2d5..."
+  }
+}
+```
+
+3️⃣
+
+```json
+{
+  "title": "UPLOAD_RESULT_TO_IPFS",
+  "isDone": false
+}
+```
+
+4️⃣
+
+```json
+{
+  "title": "UPLOAD_RESULT_TO_IPFS",
+  "isDone": true
+}
+```
 
 ## Return value
 

@@ -13,7 +13,8 @@ const { txHash } = await dataProtectorSharing.removeCollection({
 ## Pre-conditions
 
 - You must be the owner of the collection.
-- There should be no protected data in the collection.
+- There should be no protected data in the collection. See
+  [`removeFromCollection`](./removeFromCollection.md).
 
 ## Parameters
 
@@ -25,7 +26,7 @@ import { type RemoveCollectionParams } from '@iexec/dataprotector';
 
 `number`
 
-The collection token ID of tha collection that you want to remove.
+The collection token ID of the collection you want to remove.
 
 ```js
 const { txHash } = await dataProtectorSharing.removeCollection({
@@ -39,8 +40,4 @@ const { txHash } = await dataProtectorSharing.removeCollection({
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 
-### txHash
-
-`string`
-
-The transaction hash corresponding to the execution of the function.
+See [`SuccessWithTransactionHash`](../../types.md#successwithtransactionhash)

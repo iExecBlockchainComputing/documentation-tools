@@ -154,4 +154,4 @@ smaller than the page size.
 
 ### grantedAccess
 
-[`GrantedAccess[]`](../types.md#grantedaccess)
+See [`GrantedAccess[]`](../types.md#grantedaccess)
