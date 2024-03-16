@@ -64,17 +64,41 @@ header .title > span {
  * Have a grey background-color instead of text-color; primary
  * (Similar to old Gitbook)
  */
-.VPSidebarItem.is-link:not(.is-active) > .item > .link:hover .text {
+.VPSidebarItem.is-link:not(.collapsible):not(.is-active)
+  > .item
+  > .link:hover
+  .text {
   color: var(--vp-c-text-2) !important;
   background-color: #f6f6f6;
   padding-left: 16px;
   margin-left: -16px;
-}
-.VPSidebarItem.is-link:not(.is-active) > .item > .link:hover + .caret {
-  color: var(--vp-c-text-2) !important;
-  background-color: #f6f6f6;
+  margin-right: -7px;
   border-top-right-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
+}
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover,
+.VPSidebarItem.is-link.collapsible:not(.is-active)
+  > .item
+  > .link:hover
+  + .caret {
+  color: var(--vp-c-text-2) !important;
+  background-color: #f6f6f6;
+}
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover {
+  padding-left: 16px;
+  margin-left: -16px;
+}
+.VPSidebarItem.is-link.collapsible:not(.is-active)
+  > .item
+  > .link:hover
+  + .caret {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover h2,
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover h3,
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover h4 {
+  color: var(--vp-c-text-2) !important;
 }
 
 /* --- Custom classes --- */
