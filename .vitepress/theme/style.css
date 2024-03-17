@@ -18,10 +18,13 @@
     --vp-code-color
   ); /* `Code` in links. Primary yellow is too light */
   --vp-sidebar-bg-color: white;
+
+  --sidebar-links-hover: #f6f6f6;
 }
 
 .dark {
   --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+  --sidebar-links-hover: rgba(255, 255, 255, 0.08);
 }
 
 /* Force dark header even if light theme */
@@ -69,7 +72,7 @@ header .title > span {
   > .link:hover
   .text {
   color: var(--vp-c-text-2) !important;
-  background-color: #f6f6f6;
+  background-color: var(--sidebar-links-hover);
   padding-left: 16px;
   margin-left: -16px;
   margin-right: -7px;
@@ -82,7 +85,7 @@ header .title > span {
   > .link:hover
   + .caret {
   color: var(--vp-c-text-2) !important;
-  background-color: #f6f6f6;
+  background-color: var(--sidebar-links-hover);
 }
 .VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover {
   padding-left: 16px;
