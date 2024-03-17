@@ -88,7 +88,6 @@ Instantiate the SDK in your back-end project:
 ```javascript
 import { IExecOracleFactory, utils } from "@iexec/iexec-oracle-factory-wrapper";
 
-const { PRIVATE_KEY } = process.env;
 // get web3 provider from a private key
 const signer = utils.getSignerFromPrivateKey(
   "https://bellecour.iex.ec",
@@ -99,3 +98,49 @@ const factory = new IExecOracleFactory(signer);
 
 {% endtab %}
 {% endtabs %}
+
+### **1.5. Instantiate Only IExecOracleReader**
+
+Import and initialize the IExecOracleReader from the Oracle Factory SDK in your application.
+
+{% tabs %}
+{% tab title="Browser" %}
+Instantiate the SDK in your front-end project:
+
+#### 1.5.1. Basic Instantiation
+
+```javascript
+import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
+
+// instantiate
+const mainnetBlockchainReader = new IExecOracleReader('mainnet');
+```
+
+{% endtab %}
+
+{% tab title="NodeJS" %}
+Instantiate the IExecOracleReader from the Oracle Factory SDK in your back-end project:
+
+#### 1.5.1. Basic Instantiation
+
+```javascript
+import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
+
+// instantiate
+const mainnetBlockchainReader = new IExecOracleReader('mainnet');
+```
+
+{% endtab %}
+{% endtabs %}
+{% hint style="info" %}
+You can initialize the IExecOracleReader with the blockchain name or the chain id or even your custom blockchain Endpoint.
+{% endhint %}
+
+Supported blockchains: 
+| blockchain name                      | chainID              | 
+| ------------------------------------ | -------------------- |
+| mainnet                              | 1                    |
+| goerli                               | 5                    |
+| bellecour                            | 134                  |
+| polygon                              | 137                  |
+| mumbai                               | 80001                |
