@@ -35,10 +35,10 @@ const dataProtector = new IExecDataProtectorCore(web3Provider); // [!code ++]
 
 ## Methods
 
-### Rename `fetchProtectedData` & add new param
+### Rename `fetchProtectedData` & add new filtering param
 
 Some methods were renamed in order to standardize the SDK, they still provide
-the same functionalities as before
+the same functionalities as before.
 
 ```js
 await dataProtector.fetchProtectedData({ // [!code --]
@@ -51,7 +51,7 @@ await dataProtector.getProtectedData({ // [!code ++]
 ### Rename `fetchGrantedAccess`
 
 Some methods were renamed in order to standardize the SDK, they still provide
-the same functionalities as before
+the same functionalities as before.
 
 ```js
 await dataProtector.fetchGrantedAccess({ // [!code --]

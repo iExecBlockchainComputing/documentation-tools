@@ -25,15 +25,15 @@ etc.)
 
 ## Why is it different from DataProtector?
 
-With `DataProtector`, you can **grant access** to your protected data to a
+With `DataProtector Core`, you can **grant access** to your protected data to a
 specific user.
 
 - You need to know the user's Ethereum address.
 - You'll have to sign a transaction at the moment you grant the access.
 - You define a number of times the user can access the data.
 
-With `DataProtector Sharing`, you can **distribute** your protected data to a
-wider audience.
+With `DataProtector Sharing`, you can **distribute** your protected data to **a
+wider audience**.
 
 - You don't need to know the user's Ethereum address.
 - You don't need to sign a transaction at the moment of distribution (but the
