@@ -34,6 +34,7 @@
     * [createOracle](tools/oracle-factory/methods/createoracle.md)
     * [readOracle](tools/oracle-factory/methods/readoracle.md)
     * [updateOracle](tools/oracle-factory/methods/updateoracle.md)
+  * [Advanced configuration](tools/oracle-factory/advanced-configuration.md)
 ## Help
 
 - [🆘 Contact us](help/contact-us.md)
