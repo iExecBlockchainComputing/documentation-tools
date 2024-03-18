@@ -1,8 +1,12 @@
 # Quick Start
 
-## 1. Getting started
+## 1. Sandbox
 
-### **1.1. Prerequisites**
+{% embed url="https://codesandbox.io/p/github/iExecBlockchainComputing/oracle-factory-sandbox/main?file=%2Fsrc%2Findex.js%3A1%2C1" %}
+
+## 2. Getting started
+
+### **2.1. Prerequisites**
 
 Before getting started, ensure that you have the following installed on your system:
 
@@ -10,7 +14,7 @@ Before getting started, ensure that you have the following installed on your sys
 
 \- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
-### **1.2. Start a new project**
+### **2.2. Start a new project**
 
 In this section, we will show you how to set up and call the different methods of the SDK in JS app.
 
@@ -18,7 +22,7 @@ You can reach the following open-source GitHub project, clone it and start from 
 
 You can find the project [here](https://github.com/iExecBlockchainComputing/iexec-oracle-factory-wrapper).
 
-### **1.3. Basic installation**
+### **2.3. Basic installation**
 
 Install `@iexec/iexec-oracle-factory-wrapper`.
 
@@ -60,7 +64,7 @@ bun add @iexec/iexec-oracle-factory-wrapper
 
 If you use it with Webpack, you need the latest Webpack version and ensure you configure it correctly for ESM.
 
-### **1.4. Instantiate SDK**
+### **2.4. Instantiate SDK**
 
 Import and initialize the Oracle Factory SDK in your application.
 
@@ -68,7 +72,7 @@ Import and initialize the Oracle Factory SDK in your application.
 {% tab title="Browser" %}
 Instantiate the SDK in your front-end project:
 
-#### 1.4.1. Basic Instantiation
+#### 2.4.1. Basic Instantiation
 
 ```javascript
 import { IExecOracleFactory } from "@iexec/iexec-oracle-factory-wrapper";
@@ -83,7 +87,7 @@ const factory = new IExecOracleFactory(web3Provider);
 {% tab title="NodeJS" %}
 Instantiate the SDK in your back-end project:
 
-#### 1.4.1. Basic Instantiation
+#### 2.4.1. Basic Instantiation
 
 ```javascript
 import { IExecOracleFactory, utils } from "@iexec/iexec-oracle-factory-wrapper";
@@ -99,7 +103,7 @@ const factory = new IExecOracleFactory(signer);
 {% endtab %}
 {% endtabs %}
 
-### **1.5. Instantiate Only IExecOracleReader**
+### **2.5. Instantiate Only IExecOracleReader**
 
 Import and initialize the IExecOracleReader from the Oracle Factory SDK in your application.
 
@@ -107,7 +111,7 @@ Import and initialize the IExecOracleReader from the Oracle Factory SDK in your 
 {% tab title="Browser" %}
 Instantiate the SDK in your front-end project:
 
-#### 1.5.1. Basic Instantiation
+#### 2.5.1. Basic Instantiation
 
 ```javascript
 import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
@@ -121,7 +125,7 @@ const mainnetBlockchainReader = new IExecOracleReader('mainnet');
 {% tab title="NodeJS" %}
 Instantiate the IExecOracleReader from the Oracle Factory SDK in your back-end project:
 
-#### 1.5.1. Basic Instantiation
+#### 2.5.1. Basic Instantiation
 
 ```javascript
 import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
