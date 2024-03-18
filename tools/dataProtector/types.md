@@ -65,6 +65,96 @@ transaction
 
 Order signature of all the `grantedAccess` fields
 
+## ProtectedData
+
+### name
+
+`string`
+
+Name specified when the protected data was created. This piece of information is
+public and visible on-chain.
+
+### address
+
+`Address`
+
+Ethereum address of the protected data.
+
+### owner
+
+`Address`
+
+Ethereum address of the protected data owner.
+
+### schema
+
+`DataSchema`
+
+Data schema for the protected data as defined when the protected data was
+created (see [protectedData](protectData.md)). `schema` provides a structured
+representation of the protected data format and attributes. This field plays a
+crucial role in understanding and interpreting the underlying structure of the
+sensitive information.
+
+### creationTimestamp
+
+`number`
+
+Timestamp specifying when the protected data was created, expressed in
+milliseconds since the epoch. This timestamp provides precise information about
+the moment of creation and can be used for chronological ordering or time-based
+operations.
+
+## ProtectedDataInCollection
+
+### name
+
+`string`
+
+The name of the the protected data.
+
+### address
+
+`Address`
+
+Address of the protected data.
+
+### schema
+
+`DataSchema`
+
+Data structure of the protected data.
+
+### collectionTokenId
+
+`number`
+
+The collection token ID to which the protected data belongs.
+
+### isIncludedInSubscription
+
+`boolean`
+
+Whether the protected data is accessible through the collection subscription.
+
+### isRentable
+
+`boolean`
+
+Whether the protected data can be rented.
+
+### isForSale
+
+`boolean`
+
+Whether the protected data is available for purchase.
+
+### creationTimestamp
+
+`number`
+
+Timestamp marking the protected data's creation.
+
 ## RevokedAccess
 
 ### access
