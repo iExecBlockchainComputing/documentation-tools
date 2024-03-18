@@ -1,6 +1,15 @@
 # sendEmail
 
-Method to send an email to a user represented by an ETH address.
+This method allows an authorized entity to send an email message to a User
+without needing to know their email address.
+
+The recipient email address is stored in a `protectedData` entity. The user
+receiving email must explicitly authorize you to send them email communications
+and permission must be granted for the `Web3Mail` tool to use the
+`protectedData` entity containing their email address. This is best done by
+granting authorization to the Web3Mail whitelist. Refer to the
+[Data Protector `grantAccess`](../../dataProtector/dataProtectorCore/grantAccess.md)
+documentation for more details.
 
 ## Usage
 
@@ -9,13 +18,27 @@ const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: 'My email content',
+  contentType: 'text/html',
+  senderName: 'Awesome project team',
+  label: 'some-cutom-id',
+  workerpoolAddressOrEns: 'prod-v8-bellecour.main.pools.iexec.eth',
+  dataMaxPrice: 42,
+  appMaxPrice: 42,
+  workerpoolMaxPrice: 42,
 });
 ```
 
-### Usage Notes
+## Return value example
 
-- The maximum size of delivered email messages is 512 kb.
-- Email content is encrypted and uploaded to IPFS.
+The `sendEmail` method returns a unique identifier for the email task on the
+iExec side chain. You can view the status of the `sendEmail` method by
+monitoring the task on the [iExec Explorer](https://explorer.iex.ec/bellecour).
+
+```json
+{
+  "taskId": "0x882cbfb34453f260dfa14d224fd9ae0263edbfcb"
+}
+```
 
 ## Parameters
 
@@ -23,16 +46,33 @@ const sendEmail = await web3mail.sendEmail({
 import { type SendEmailParams } from '@iexec/web3mail';
 ```
 
-### emailObject
+### protectedData
+
+`Address`
+
+The address of the `protectedData` holding the contact's email address.
+
+```js
+const sendEmail = await web3mail.sendEmail({
+  protectedData: '0x123abc...', // [!code focus]
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
+});
+```
+
+### emailSubject
 
 `string`
 
-The email object that needs to be sent.
+_maximum length_: 78 characters
+
+The subject line for the email you are sending. This field is limited to 78
+characters. Any characters beyond that limited are truncated.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
-  emailSubject: 'My email subject',
+  emailSubject: 'My email subject', // [!code focus]
   emailContent: 'My email content',
 });
 ```
@@ -41,91 +81,90 @@ const sendEmail = await web3mail.sendEmail({
 
 `string`
 
-The email content that needs to be sent.
+optionally HTML encoded
+
+_maximum size_: 512 kb
+
+The email content that needs to be sent. The content is limited to 512 kb in
+size. Email content is encrypted and stored in IPFS.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
-  emailContent: 'My email content',
-});
-```
-
-### protectedData
-
-`Address`
-
-Protected data address to which you will send the email.
-
-```js
-const sendEmail = await web3mail.sendEmail({
-  protectedData: '0x123abc...',
-  emailSubject: 'My email subject',
-  emailContent: 'My email content',
+  emailContent: 'My email content', // [!code focus]
 });
 ```
 
 ### contentType
 
-`string| undefined`
+`string | undefined`
 
-This may be one of: `text/html`, `text/plain` (default `text/plain`). This is
-used by the mail client to properly render the delivered text, use it to enable
-rich HTML content in your email.
+may be one of: `text/html`, `text/plain`
+
+This is used by the mail client to properly render the delivered text. Set this
+to `text/html` to enable rich HTML content in your email.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: '<h1>Hello world!</h1>',
-  contentType: 'text/html',
+  contentType: 'text/html', // [!code focus]
 });
 ```
 
 ### senderName
 
-`string| undefined`
+`string | undefined`
+
+_default_: `Web3Mail`
 
 Allows specifying a sender name for the email. This is used by the mail client
-in rendering the email to the user.
+in rendering the email to the user. The Web3Mail tool appends `via Web3Mail` to
+the supplied name. Setting this to `Tom`, for example, will result in a sender
+name of, `Tom via Web3Mail`, in the delivered email. If no name is specified,
+the Web3Mail tool sets this to a value of `Web3Mail`.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: 'My email content',
-  senderName: 'Awesome project team',
+  senderName: 'Awesome project team', // [!code focus]
 });
 ```
 
 ### label
 
-`string| undefined`
+`string | undefined`
 
-Allows adding a custom public label that will be written onchain as `iexec_args`
-in the deal params.
+Allows adding a custom public label. The Web3Mail tool writes this onchain as
+`iexec_args` in the deal params.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: 'My email content',
-  label: 'some-cutom-id',
+  label: 'some-cutom-id', // [!code focus]
 });
 ```
 
 ### workerpoolAddressOrEns
 
-`workerpoolAddressOrEns| undefined`
+`workerpoolAddressOrEns | undefined`
 
-Allows specifying the workerpool to use (default iExec's production workerpool).
+_default_: iExec's production workerpool
+
+Allows specifying the workerpool that will run the Web3Mail application.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: 'My email content',
-  workerpoolAddressOrEns: 'prod-v8-bellecour.main.pools.iexec.eth',
+  workerpoolAddressOrEns: 'prod-v8-bellecour.main.pools.iexec.eth', // [!code focus]
 });
 ```
 
@@ -139,49 +178,56 @@ default workerpool for running confidential computations on the iExec platform.
 
 ### dataMaxPrice
 
-`number| undefined`
+`number | undefined`
 
-Allows specifying the maximum amount you want to pay the email address provider
-for accessing her/his data in nRLC (default 0).
+_default_: 0
+
+Allows specifying the maximum amount (in nRLC) you are willing to pay the email
+address owner for using their data. The owner of the protected email address
+receives this as a payment for sharing their data.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: 'My email content',
-  dataMaxPrice: 42,
+  dataMaxPrice: 42, // [!code focus]
 });
 ```
 
 ### appMaxPrice
 
-`number| undefined`
+`number | undefined`
 
-Allows specifying the maximum amount you want to pay the web3mail app provider
-for using her/his application in nRLC (default 0).
+_default_: 0
+
+Allows specifying the maximum amount (in nRLC) you are willing to pay the
+Web3Mail app provider (iExec) for using the Web3Mail application.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: 'My email content',
-  appMaxPrice: 42,
+  appMaxPrice: 42, // [!code focus]
 });
 ```
 
 ### workerpoolMaxPrice
 
-`number| undefined`
+`number | undefined`
+
+_default_: 0
 
 Allows specifying the maximum amount you want to pay the workerpool provider for
-using her/his infrastructure to run the web3mail app in nRLC (default 0).
+using their infrastructure to run the web3mail app in nRLC.
 
 ```js
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: 'My email content',
-  workerpoolMaxPrice: 42,
+  workerpoolMaxPrice: 42, // [!code focus]
 });
 ```
 
@@ -193,8 +239,8 @@ import { type SendEmailResponse } from '@iexec/web3mail';
 
 ### taskId
 
-`string`
+`Addess`
 
-A unique identifier associated with a task currently running on the iExec
-Bellecour side chain. You may monitor task execution with the
-[iExec blockchain explorer](https://explorer.iex.ec).
+This uniquely identifies the email task on the iExec side chain. You can view
+the status of the `sendEmail` method by monitoring the task on the
+[iExec Explorer](https://explorer.iex.ec/bellecour).

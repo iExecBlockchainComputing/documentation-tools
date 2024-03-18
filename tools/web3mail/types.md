@@ -8,19 +8,18 @@ Types in Web3mail.
 
 `Address`
 
-This refers to the Ethereum address of the protected data, including the
-contact's email.
+The address of the `protectedData` holding the contact's email address.
 
 ### owner
 
 `Address`
 
-This Ethereum address that controls the protected data containing the contact's
-email.
+The address for the contact who granted permission to send them communications.
 
 ### accessGrantTimestamp
 
-`TimeStamp`
+`number`
 
-This is the exact timestamp indicating when your contact authorized you to
-access their protected data.
+The precise date and time when the user granted authorization to send them
+email-based communications. This timestamp represents the moment the access was
+granted.

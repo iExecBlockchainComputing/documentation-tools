@@ -9,7 +9,10 @@ Key features of Oracle Factory include:
 
 - **Create Oracle** — This method allows for the creation of custom oracles from
   any API, with a limitation of one data return per oracle. This feature is
-  pivotal in fetching specific, relevant data for decentralized applications.
+  pivotal in fetching specific, relevant data for decentralized applications,
+  Oracles can be created solely from APIs to return data types such as 'number',
+  'string', and 'boolean', ensuring flexibility and compatibility with various
+  data sources.
 - **Update Oracle** — This method ensures that the oracle stays current by
   fetching the latest data from its linked API. It maintains the oracle's
   relevance and accuracy, crucial for real-time data-dependent applications.

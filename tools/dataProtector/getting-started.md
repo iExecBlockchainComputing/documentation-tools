@@ -35,7 +35,7 @@ bun add @iexec/dataprotector
 
 :::
 
-**This package is an ESM package. Your project needs to be ESM too.**
+**This package is an ESM package. Your project needs to use ESM too.**
 &nbsp;[**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
 
 If you use it with **Webpack**, some polyfills will be needed. You can find a

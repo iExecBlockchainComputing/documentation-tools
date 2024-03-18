@@ -1,7 +1,9 @@
 # fetchMyContacts
 
-Method to get the ETH addresses that gave access to their protected data for
-messaging usage.
+This method provides a list of `contact` objects identifying all users who
+previously granted authorization to send them email messages. Each contact
+contains the contact's ETH address as well as the ETH address for the
+`protectedData` containing their email address.
 
 ## Usage
 
@@ -11,8 +13,12 @@ const contactsList = await web3mail.fetchMyContacts();
 
 ## Return value
 
+The result object contains a list of `contact` objects. Each `contact`
+represents one user who previously granted you authorization to send them
+messages.
+
 ```ts
 import { type Contact } from '@iexec/web3mail';
 ```
 
-[`Contract[]`](../types.md#contact)
+[`Contact[]`](../types.md#contact)

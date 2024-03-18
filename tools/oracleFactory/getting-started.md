@@ -24,9 +24,7 @@ there.
 You can find the project
 [here](https://github.com/iExecBlockchainComputing/iexec-oracle-factory-wrapper).
 
-### Basic installation
-
-Install `@iexec/iexec-oracle-factory-wrapper`
+### Installation
 
 ::: code-group
 
@@ -48,11 +46,13 @@ bun add @iexec/iexec-oracle-factory-wrapper
 
 :::
 
-**This package is an ESM package. Your project needs to be ESM too.**
+**This package is an ESM package. Your project needs to use ESM too.**
 [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
-If you use it with Webpack, you need the latest Webpack version and ensure you
-configure it correctly for ESM.
+When deployed with WebPack, the Web3Mail tool requires WebPack version 5 or
+greater. You can refer to our
+[sample WebPack project](https://github.com/iExecBlockchainComputing/web3mail-sdk/tree/main/demo/browser-webpack)
+for more information.
 
 ### Instantiate SDK
 
@@ -81,3 +81,54 @@ const factory = new IExecOracleFactory(signer);
 ```
 
 :::
+
+### Instantiate only `IExecOracleReader`
+
+Import and initialize the `IExecOracleReader` from the Oracle Factory SDK in
+your application.
+
+::: code-group
+
+```js [Browser]
+import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
+
+// instantiate
+const mainnetBlockchainReader = new IExecOracleReader('mainnet');
+```
+
+```js [NodeJS]
+import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
+
+// instantiate
+const mainnetBlockchainReader = new IExecOracleReader('mainnet');
+```
+
+:::
+
+::: tip
+
+You can initialize the `IExecOracleReader` with the `blockchain name` or the
+`chain id` or even your custom blockchain endpoint.
+
+:::
+
+Supported blockchains:
+
+| blockchain name | chainID |
+| --------------- | ------- |
+| mainnet         | 1       |
+| bellecour       | 134     |
+| polygon         | 137     |
+| mumbai          | 80001   |
+
+## Sandbox
+
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/oracle-factory-sandbox/main?file=%2Fsrc%2Findex.js&embed=1" target="_blank" rel="noreferrer" class="link-as-block">
+  ⚡ &nbsp;Code Sandbox
+</a>
+
+Corresponding GitHub repository:
+
+<a href="https://github.com/iExecBlockchainComputing/oracle-factory-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
+  🔎 &nbsp;GitHub repository sandbox
+</a>
