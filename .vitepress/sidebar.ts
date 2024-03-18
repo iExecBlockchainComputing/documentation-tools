@@ -251,6 +251,10 @@ export function getSidebar() {
               },
             ],
           },
+          {
+            text: 'Advanced Configuration',
+            link: '/tools/oracleFactory/advanced-configuration',
+          },
         ],
       },
       {
