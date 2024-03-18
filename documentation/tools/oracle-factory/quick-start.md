@@ -144,7 +144,6 @@ Supported blockchains:
 | blockchain name                      | chainID              | 
 | ------------------------------------ | -------------------- |
 | mainnet                              | 1                    |
-| goerli                               | 5                    |
 | bellecour                            | 134                  |
 | polygon                              | 137                  |
 | mumbai                               | 80001                |
