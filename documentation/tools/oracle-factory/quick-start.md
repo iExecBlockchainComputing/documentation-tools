@@ -2,7 +2,7 @@
 
 ## 1. Sandbox
 
-{% embed url="https://codesandbox.io/p/github/iExecBlockchainComputing/oracle-factory-sandbox/main?file=%2Fsrc%2Findex.js%3A1%2C1" %}
+{% embed url="https://codesandbox.io/p/github/iExecBlockchainComputing/oracle-factory-sandbox/main?file=%2Fsrc%2Findex.js&embed=1" %}
 
 ## 2. Getting started
 
