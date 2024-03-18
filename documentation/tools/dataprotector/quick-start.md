@@ -1,10 +1,10 @@
 # Quick start
 
-## 1.  Sandbox
+## 1. Sandbox
 
 {% embed url="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true" %}
 
-## 2.  Getting started
+## 2. Getting started
 
 ### **2.1.  Prerequisites**
 
@@ -61,21 +61,21 @@ If you use it with Webpack, you need the latest Webpack version and ensure you c
 
 {% tabs %}
 {% tab title="Browser" %}
-Instantiate the SDK in your front-end project:
+Instantiate the SDK in your frontend project:
 
 #### 2.4.1. Basic Instantiation
 
 ```javascript
 import { IExecDataProtector } from "@iexec/dataprotector";
 
-const web3Provider = window.ethereum;
+const web3Provider = window.ethereum;
 // instantiate
-const dataProtector = new IExecDataProtector(web3Provider);
+const dataProtector = new IExecDataProtector(web3Provider);
 ```
 {% endtab %}
 
 {% tab title="NodeJS" %}
-Instantiate the SDK in your back-end project:
+Instantiate the SDK in your backend project:
 
 #### 2.4.1. Basic Instantiation
 

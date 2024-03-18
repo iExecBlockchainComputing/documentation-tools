@@ -68,7 +68,7 @@ When deployed with WebPack, the Web3Mail tool requires WebPack version 5 or grea
 
 {% tabs %}
 {% tab title="Browser" %}
-Instantiate the SDK in your front-end project:
+Instantiate the SDK in your frontend project:
 
 #### 2.4.1. Basic Instantiation
 
@@ -83,7 +83,7 @@ const web3mail = new IExecWeb3mail(web3Provider);
 {% endtab %}
 
 {% tab title="NodeJS" %}
-Instantiate the SDK in your back-end project:
+Instantiate the SDK in your backend project:
 
 #### 2.4.1. Basic Instantiation
 

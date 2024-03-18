@@ -1,6 +1,6 @@
 # readOracle
 
-The readOracle method is designed to retrieve the value from a specific oracle. This enables users to access data fetched by an oracle, which serves as a reliable source of information sourced from external APIs or other data providers.
+The `readOracle` method is designed to retrieve the value from a specific oracle. This enables users to access data fetched by an oracle, which serves as a reliable source of information sourced from external APIs or other data providers.
 
 ## Usage
 
@@ -12,7 +12,7 @@ const readOracleRes = await readerOrFactory.readOracle(
 ); // Content ID of the Oracle
 ```
 {% hint style="info" %}
-You can utilize either type of SDK instance, be it the basic IExecOracleFactory or the IExecOracleReader, to invoke the readOracle method.
+You can utilize either type of SDK instance, be it the basic `IExecOracleFactory` or the `IExecOracleReader`, to invoke the `readOracle` method.
 {% endhint %}
 
 ## Return value example

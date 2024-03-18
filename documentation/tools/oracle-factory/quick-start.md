@@ -70,7 +70,7 @@ Import and initialize the Oracle Factory SDK in your application.
 
 {% tabs %}
 {% tab title="Browser" %}
-Instantiate the SDK in your front-end project:
+Instantiate the SDK in your frontend project:
 
 #### 2.4.1. Basic Instantiation
 
@@ -85,7 +85,7 @@ const factory = new IExecOracleFactory(web3Provider);
 {% endtab %}
 
 {% tab title="NodeJS" %}
-Instantiate the SDK in your back-end project:
+Instantiate the SDK in your backend project:
 
 #### 2.4.1. Basic Instantiation
 
@@ -103,13 +103,13 @@ const factory = new IExecOracleFactory(signer);
 {% endtab %}
 {% endtabs %}
 
-### **2.5. Instantiate Only IExecOracleReader**
+### **2.5. Instantiate only IExecOracleReader**
 
 Import and initialize the IExecOracleReader from the Oracle Factory SDK in your application.
 
 {% tabs %}
 {% tab title="Browser" %}
-Instantiate the SDK in your front-end project:
+Instantiate the SDK in your frontend project:
 
 #### 2.5.1. Basic Instantiation
 
@@ -123,7 +123,7 @@ const mainnetBlockchainReader = new IExecOracleReader('mainnet');
 {% endtab %}
 
 {% tab title="NodeJS" %}
-Instantiate the IExecOracleReader from the Oracle Factory SDK in your back-end project:
+Instantiate the IExecOracleReader from the Oracle Factory SDK in your backend project:
 
 #### 2.5.1. Basic Instantiation
 
@@ -137,7 +137,7 @@ const mainnetBlockchainReader = new IExecOracleReader('mainnet');
 {% endtab %}
 {% endtabs %}
 {% hint style="info" %}
-You can initialize the IExecOracleReader with the blockchain name or the chain id or even your custom blockchain Endpoint.
+You can initialize the `IExecOracleReader` with the `blockchain name` or the `chain id` or even your custom blockchain Endpoint.
 {% endhint %}
 
 Supported blockchains: 

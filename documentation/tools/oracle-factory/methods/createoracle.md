@@ -1,6 +1,6 @@
 # createOracle
 
-The createOracle method is designed to facilitate the creation of an oracle, which serves as a reliable source of real-time data from a specified Application Programming Interface (API). This method is particularly suited for scenarios where only a single data point is required from the API.
+The `createOracle` method is designed to facilitate the creation of an oracle, which serves as a reliable source of real-time data from a specified Application Programming Interface (API). This method is particularly suited for scenarios where only a single data point is required from the API.
 
 ## Usage
 
