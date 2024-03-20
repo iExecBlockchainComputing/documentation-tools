@@ -5,14 +5,14 @@ via the blockchain. This mechanism helps protect the personal information of the
 email recipients through use of Ethereum addresses.
 
 The email address is stored as a `protectedData` entity using the
-[iExec Data Protector tool](../dataprotector/README.md). Through this mechanism,
-users have complete control over which applications may use their email address
-for sending communications. Sending a user a message, therefore, requires
-knowledge of the Ethereum address of their `protectedData` as well positive
-authorization for your account to contact them. Your account may be bound to
-either an application or an individual. At any time a user may revoke
-permissions and this revocation is immediate, giving users complete control over
-the privacy and security of their information.
+[iExec Data Protector tool](./dataProtector.md). Through this mechanism, users
+have complete control over which applications may use their email address for
+sending communications. Sending a user a message, therefore, requires knowledge
+of the Ethereum address of their `protectedData` as well positive authorization
+for your account to contact them. Your account may be bound to either an
+application or an individual. At any time a user may revoke permissions and this
+revocation is immediate, giving users complete control over the privacy and
+security of their information.
 
 Apps using the Web3Mail tool can:
 
