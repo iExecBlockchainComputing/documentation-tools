@@ -26,7 +26,7 @@ const listProtectedData = await dataProtector.getProtectedData({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type GetProtectedDataParams } from '@iexec/dataprotector';
 ```
 
@@ -108,7 +108,7 @@ const listProtectedData = await dataProtector.getProtectedData({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type ProtectedData } from '@iexec/dataprotector';
 ```
 

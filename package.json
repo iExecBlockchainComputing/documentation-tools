@@ -10,7 +10,12 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@shikijs/vitepress-twoslash": "^1.2.0",
     "prettier": "^3.2.5",
     "vitepress": "^1.0.0-rc.45"
+  },
+  "dependencies": {
+    "@iexec/dataprotector": "^2.0.0-nightly-ae4a80a66149394e48bf61c1d0ffea9ed17f2737",
+    "vue": "^3.4.21"
   }
 }

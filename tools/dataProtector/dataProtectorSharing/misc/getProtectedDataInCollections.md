@@ -12,7 +12,7 @@ const protectedData =
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type GetProtectedDataInCollectionsParams } from '@iexec/dataprotector';
 ```
 
@@ -108,7 +108,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type GetProtectedDataInCollectionsResponse } from '@iexec/dataprotector';
 ```
 

@@ -10,7 +10,7 @@ const pricingParams = await dataProtectorSharing.getCollectionsByOwner();
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type GetCollectionsByOwnerResponse } from '@iexec/dataprotector';
 ```
 

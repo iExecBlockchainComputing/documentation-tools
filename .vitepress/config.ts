@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 import { getSidebar } from './sidebar';
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,6 +8,7 @@ export default defineConfig({
   description: 'iExec documentation for dev tools',
   lastUpdated: true,
   markdown: {
+    codeTransformers: [transformerTwoslash()],
     attrs: { disable: true },
     theme: {
       light: 'min-light',

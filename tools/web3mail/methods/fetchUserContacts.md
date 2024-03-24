@@ -15,7 +15,7 @@ const contactsList = await web3mail.fetchUserContacts({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type FetchUserContactsParams } from '@iexec/web3mail';
 ```
 
@@ -37,7 +37,7 @@ The result object contains a list of `contact` objects. Each `contact`
 represents one user who previously granted authorization for the user identified
 with `userAddress` to send them messages.
 
-```ts
+```ts twoslash
 import { type Contact } from '@iexec/web3mail';
 ```
 

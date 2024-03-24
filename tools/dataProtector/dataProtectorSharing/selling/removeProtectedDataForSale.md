@@ -13,7 +13,7 @@ const notForSaleAymoreResult =
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type RemoveProtectedDataForSaleParams } from '@iexec/dataprotector';
 ```
 
@@ -32,7 +32,7 @@ const notForSaleAymoreResult =
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 

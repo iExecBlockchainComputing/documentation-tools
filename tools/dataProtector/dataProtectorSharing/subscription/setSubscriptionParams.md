@@ -19,7 +19,7 @@ const setSubscriptionParamsResult =
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type SetSubscriptionParams } from '@iexec/dataprotector';
 ```
 
@@ -65,7 +65,7 @@ const setSubscriptionParamsResult =
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 

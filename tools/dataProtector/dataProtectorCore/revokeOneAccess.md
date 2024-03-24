@@ -27,7 +27,7 @@ const revokeAccess = await dataProtector.revokeOneAccess({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type GrantedAccess } from '@iexec/dataprotector';
 ```
 
@@ -63,7 +63,7 @@ data).
 
 ## Result value
 
-```ts
+```ts twoslash
 import { type RevokedAccess } from '@iexec/dataprotector';
 ```
 

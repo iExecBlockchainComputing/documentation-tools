@@ -12,7 +12,7 @@ const protectedData = await dataProtectorSharing.getCollectionSubscriptions({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type GetCollectionSubscriptionsParams } from '@iexec/dataprotector';
 ```
 
@@ -28,7 +28,7 @@ const protectedData = await dataProtectorSharing.getCollectionSubscriptions({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type GetCollectionSubscriptionsResponse } from '@iexec/dataprotector';
 ```
 

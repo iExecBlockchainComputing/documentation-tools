@@ -24,7 +24,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type GetGrantedAccessParams } from '@iexec/dataprotector';
 ```
 
@@ -133,7 +133,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type GrantedAccessResponse } from '@iexec/dataprotector';
 ```
 

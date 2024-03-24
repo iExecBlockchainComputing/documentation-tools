@@ -14,7 +14,7 @@ const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type GetProtectedDataPricingParams } from '@iexec/dataprotector';
 ```
 

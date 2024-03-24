@@ -20,7 +20,7 @@ const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type RevokeAllAccessParams } from '@iexec/dataprotector';
 ```
 
@@ -89,7 +89,7 @@ const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
 
 ## Result
 
-```ts
+```ts twoslash
 import { type RevokedAccess } from '@iexec/dataprotector';
 ```
 

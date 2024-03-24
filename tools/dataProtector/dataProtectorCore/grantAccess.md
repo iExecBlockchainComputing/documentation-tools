@@ -24,7 +24,7 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type GrantAccessParams } from '@iexec/dataprotector';
 ```
 
@@ -196,7 +196,7 @@ You can expect this callback function to be called four times:
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type GrantedAccess } from '@iexec/dataprotector';
 ```
 

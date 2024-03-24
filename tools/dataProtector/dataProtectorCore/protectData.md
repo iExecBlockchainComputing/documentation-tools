@@ -39,7 +39,7 @@ const protectedData = await dataProtector.protectData({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type ProtectDataParams } from '@iexec/dataprotector';
 ```
 
@@ -104,7 +104,7 @@ const protectedData = await dataProtector.protectData({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type ProtectedDataWithSecretProps } from '@iexec/dataprotector';
 ```
 

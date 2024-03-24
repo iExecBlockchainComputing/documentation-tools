@@ -15,7 +15,7 @@ const createCollectionResult = await dataProtectorSharing.createCollection();
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type CreateCollectionResponse } from '@iexec/dataprotector';
 ```
 

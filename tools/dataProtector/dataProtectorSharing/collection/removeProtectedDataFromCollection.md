@@ -23,7 +23,7 @@ const { txHash } = await dataProtectorSharing.removeFromCollection({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type RemoveFromCollectionParams } from '@iexec/dataprotector';
 ```
 
@@ -41,7 +41,7 @@ const { txHash } = await dataProtectorSharing.removeFromCollection({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 

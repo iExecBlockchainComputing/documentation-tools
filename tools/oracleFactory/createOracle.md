@@ -61,7 +61,7 @@ These are the possible events iExec may send to the subscriber:
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type RawParams } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
@@ -253,7 +253,7 @@ const createOracleRes = factory
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type CreateOracleMessage } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 

@@ -20,7 +20,7 @@ const { success } =
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type RemoveProtectedDataFromSubscriptionParams } from '@iexec/dataprotector';
 ```
 
@@ -39,7 +39,7 @@ const { success } =
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 

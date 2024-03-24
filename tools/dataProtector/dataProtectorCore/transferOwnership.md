@@ -16,7 +16,7 @@ const transferResponse = await dataProtector.transferOwnership({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type TransferParams } from '@iexec/dataprotector';
 ```
 
@@ -49,7 +49,7 @@ const transferResponse = await dataProtector.transferOwnership({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type TransferResponse } from '@iexec/dataprotector';
 ```
 

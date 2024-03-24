@@ -12,7 +12,7 @@ const { txHash } = await dataProtectorSharing.subscribe({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type SubscribeParams } from '@iexec/dataprotector';
 ```
 
@@ -30,7 +30,7 @@ const { txHash } = await dataProtectorSharing.subscribe({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 

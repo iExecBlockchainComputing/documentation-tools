@@ -17,7 +17,7 @@ The result object contains a list of `contact` objects. Each `contact`
 represents one user who previously granted you authorization to send them
 messages.
 
-```ts
+```ts twoslash
 import { type Contact } from '@iexec/web3mail';
 ```
 

@@ -15,7 +15,7 @@ const setForRentingResult =
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type SetProtectedDataToRentingParams } from '@iexec/dataprotector';
 ```
 
@@ -66,7 +66,7 @@ const setForRentingResult =
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 

@@ -28,7 +28,7 @@ method.
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type ReadOracleParams } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
@@ -46,7 +46,7 @@ const readOracleRes = await readerOrFactory.readOracle(
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type OracleValue } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 

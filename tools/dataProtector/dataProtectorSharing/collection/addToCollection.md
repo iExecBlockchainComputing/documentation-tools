@@ -19,7 +19,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type AddToCollectionParams } from '@iexec/dataprotector';
 ```
 
@@ -126,7 +126,7 @@ You can expect this callback function to be called four times:
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 

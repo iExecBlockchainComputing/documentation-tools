@@ -42,7 +42,7 @@ monitoring the task on the [iExec Explorer](https://explorer.iex.ec/bellecour).
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type SendEmailParams } from '@iexec/web3mail';
 ```
 
@@ -233,7 +233,7 @@ const sendEmail = await web3mail.sendEmail({
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SendEmailResponse } from '@iexec/web3mail';
 ```
 

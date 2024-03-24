@@ -16,7 +16,7 @@ const notForRentingAnymoreResult =
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type RemoveProtectedDataFromRentingParams } from '@iexec/dataprotector';
 ```
 
@@ -35,7 +35,7 @@ const notForRentingAnymoreResult =
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type SuccessWithTransactionHash } from '@iexec/dataprotector';
 ```
 

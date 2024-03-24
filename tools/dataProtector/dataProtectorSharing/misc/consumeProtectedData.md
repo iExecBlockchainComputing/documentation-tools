@@ -19,7 +19,7 @@ const consumeProtectedDataResult =
 
 ## Parameters
 
-```ts
+```ts twoslash
 import { type ConsumeProtectedDataParams } from '@iexec/dataprotector';
 ```
 
@@ -97,7 +97,7 @@ You can expect this callback function to be called four times:
 
 ## Return value
 
-```ts
+```ts twoslash
 import { type ConsumeProtectedDataResponse } from '@iexec/dataprotector';
 ```
 
