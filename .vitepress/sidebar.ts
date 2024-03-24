@@ -95,8 +95,8 @@ export function getSidebar() {
                     link: '/tools/dataProtector/dataProtectorSharing/collection/addToCollection',
                   },
                   {
-                    text: 'removeFromCollection',
-                    link: '/tools/dataProtector/dataProtectorSharing/collection/removeFromCollection',
+                    text: 'removeProtectedDataFromCollection',
+                    link: '/tools/dataProtector/dataProtectorSharing/collection/removeProtectedDataFromCollection',
                   },
                 ],
               },
@@ -115,6 +115,22 @@ export function getSidebar() {
                   {
                     text: 'getProtectedDataPricingParams',
                     link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataPricingParams',
+                  },
+                  {
+                    text: 'getCollectionOwners',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionOwners',
+                  },
+                  {
+                    text: 'getCollectionsByOwner',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionsByOwner',
+                  },
+                  {
+                    text: 'getCollectionSubscriptions',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionSubscriptions',
+                  },
+                  {
+                    text: 'getProtectedDataRentals',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataRentals',
                   },
                 ],
               },

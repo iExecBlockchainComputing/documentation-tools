@@ -109,7 +109,9 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 ## Return value
 
 ```ts
-import { type ProtectedDataInCollection } from '@iexec/dataprotector';
+import { type GetProtectedDataInCollectionsResponse } from '@iexec/dataprotector';
 ```
+
+### protectedDataInCollection
 
 [`ProtectedDataInCollection[]`](../../types.md#protecteddataincollection)

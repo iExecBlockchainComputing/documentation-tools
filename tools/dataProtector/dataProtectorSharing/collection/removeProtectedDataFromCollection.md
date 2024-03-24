@@ -1,4 +1,4 @@
-# removeFromCollection
+# removeProtectedDataFromCollection
 
 Method to remove one of your protected data from a collection of yours in the
 Data Sharing smart-contract.

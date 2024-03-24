@@ -4,8 +4,6 @@ Method to consume a protected data, ie. visualize it or download it.
 
 ## Usage
 
-Input parameters type: `ConsumeProtectedDataParams`
-
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({

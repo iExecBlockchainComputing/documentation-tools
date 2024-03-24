@@ -16,11 +16,11 @@ const rentResult = await dataProtectorSharing.rentProtectedData({
 import { type RentProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress (required)
+### protectedDataAddress
 
 `AddressOrENS`
 
-Address of the protected data that you'd like rent.
+Address or ENS of the protected data that you'd like rent.
 
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
