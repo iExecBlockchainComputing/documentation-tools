@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@iexec/dataprotector": "^2.0.0-nightly-ae4a80a66149394e48bf61c1d0ffea9ed17f2737",
+    "@iexec/iexec-oracle-factory-wrapper": "^2.1.0",
+    "@iexec/web3mail": "^0.6.0",
     "vue": "^3.4.21"
   }
 }
