@@ -1,0 +1,153 @@
+/* https://vitepress.dev/guide/extending-default-theme#customizing-css */
+:root {
+  --vp-font-family-base: 'Open Sans', 'Chinese Quotes', 'Inter var', Inter,
+    ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto,
+    'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --vp-sidebar-width: 360px; /* Default is 272px, but we have some long method names */
+  --vp-nav-logo-height: 32px;
+
+  --vp-c-brand-1: #fcd15a;
+  --vp-c-brand-2: var(--vp-c-brand-1); /* hover on links */
+  --vp-c-brand-3: var(--vp-c-brand-1);
+  --vp-code-color: rgb(145 118 0); /* `Code` */
+  --vp-c-tip-1: var(--vp-c-text-1); /* `Code` in tips */
+  --vp-c-tip-2: var(--vp-code-color); /* `Code` in links + hover in tips */
+  --vp-code-link-color: var(
+    --vp-code-color
+  ); /* `Code` in links. Primary yellow is too light */
+  --vp-sidebar-bg-color: white;
+
+  --sidebar-links-hover: #f6f6f6;
+}
+
+.dark {
+  --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+  --sidebar-links-hover: rgba(255, 255, 255, 0.08);
+}
+
+/* Force dark header even if light theme */
+header {
+  --vp-c-bg: #161618;
+  --vp-c-text-1: white;
+  --vp-c-text-3: rgba(235, 235, 245, 0.38);
+  --vp-nav-bg-color: var(--vp-c-bg);
+  --vp-c-bg-alt: var(--vp-c-bg);
+  --vp-c-text-2: rgba(235, 235, 245, 0.6);
+  --vp-c-divider: #2e2e32;
+  --vp-c-bg-elv: #202127;
+}
+header .title > span {
+  font-size: 18px !important;
+  margin-left: 4px;
+  letter-spacing: -0.45px;
+}
+
+.VPNavBar {
+  /* Override here, otherwise it is 'transparent' */
+  background-color: var(--vp-c-bg) !important;
+}
+.VPNavBar .vpi-sun {
+  background-color: #3c3c43 !important;
+}
+
+.is-active > .item > .link .text {
+  font-weight: bold !important;
+}
+
+/* `Code` in links. Primary yellow is too light */
+/* Here especially for the underline color */
+.vp-doc a {
+  color: var(--vp-code-color);
+}
+
+/**
+ * Override hover style for sidebar:
+ * Have a grey background-color instead of text-color; primary
+ * (Similar to old Gitbook)
+ */
+.VPSidebarItem.is-link:not(.collapsible):not(.is-active)
+  > .item
+  > .link:hover
+  .text {
+  color: var(--vp-c-text-2) !important;
+  background-color: var(--sidebar-links-hover);
+  padding-left: 16px;
+  margin-left: -16px;
+  margin-right: -7px;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover,
+.VPSidebarItem.is-link.collapsible:not(.is-active)
+  > .item
+  > .link:hover
+  + .caret {
+  color: var(--vp-c-text-2) !important;
+  background-color: var(--sidebar-links-hover);
+}
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover {
+  padding-left: 16px;
+  margin-left: -16px;
+}
+.VPSidebarItem.is-link.collapsible:not(.is-active)
+  > .item
+  > .link:hover
+  + .caret {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover h2,
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover h3,
+.VPSidebarItem.is-link.collapsible:not(.is-active) > .item > .link:hover h4 {
+  color: var(--vp-c-text-2) !important;
+}
+
+/* --- Custom classes --- */
+
+.link-as-block {
+  display: inline-block;
+  min-width: 50%;
+  border: 1px solid var(--vp-c-divider);
+  text-decoration: none !important;
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition:
+    color 0.25s,
+    opacity 0.25s,
+    border-color 0.25s !important;
+}
+.link-as-block:hover {
+  border-color: var(--vp-c-brand-1);
+}
+
+.link-for-home {
+  display: block;
+  margin-top: 16px;
+  text-decoration: none !important;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 20px 20px;
+  transition:
+    color 0.25s,
+    opacity 0.25s,
+    border-color 0.25s !important;
+}
+.link-for-home:hover {
+  border-color: var(--vp-c-brand-1);
+}
+.link-for-home:after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' shape-rendering='geometricPrecision' viewBox='0 0 24 24' class='w-4 h-4 stroke-dark/7 transition-all group-hover:translate-x-0.5 group-hover:stroke-primary/8 dark:stroke-light/6' height='24' width='24' style='color: currentcolor;'%3E%3Cpath d='M9 18l6-6-6-6'%3E%3C/path%3E%3C/svg%3E");
+  position: absolute;
+  right: 20px;
+  transition-property: right;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+.dark .link-for-home:after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='grey' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' shape-rendering='geometricPrecision' viewBox='0 0 24 24' class='w-4 h-4 stroke-dark/7 transition-all group-hover:translate-x-0.5 group-hover:stroke-primary/8 dark:stroke-light/6' height='24' width='24' style='color: currentcolor;'%3E%3Cpath d='M9 18l6-6-6-6'%3E%3C/path%3E%3C/svg%3E");
+}
+.link-for-home:hover:after {
+  right: 17px;
+}
