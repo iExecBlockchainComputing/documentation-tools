@@ -7,6 +7,9 @@
 - [💡 What we do](overview/what-we-do.md)
 - [📽 Use case demo](overview/use-case-demo/README.md)
   - [Privacy Enhancing Marketing](overview/use-case-demo/privacy-enhancing-marketing.md)
+- [💰 Monetization](overview/monetization/README.md)
+  - [Monetize Your DApp](overview/monetization/monetize-your-dapp.md)
+  - [Monetize Your ProtectedData](overview/monetization/monetize-your-protectedData.md)
 
 ## Tools
 
