@@ -9,9 +9,11 @@ data back to you.
 ## Usage
 
 ```js
-const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection({
-  protectedDataAddress: '0x123abc...',
-});
+const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
+  {
+    protectedDataAddress: '0x123abc...',
+  }
+);
 ```
 
 ## Pre-conditions
@@ -34,9 +36,11 @@ import { type RemoveFromCollectionParams } from '@iexec/dataprotector';
 Address of the protected data you'd like to remove from your collection.
 
 ```js
-const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection({
-  protectedDataAddress: '0x123abc...', // [!code focus]
-});
+const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
+  {
+    protectedDataAddress: '0x123abc...', // [!code focus]
+  }
+);
 ```
 
 ## Return value
