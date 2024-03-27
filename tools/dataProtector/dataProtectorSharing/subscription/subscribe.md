@@ -13,7 +13,7 @@ const { txHash } = await dataProtectorSharing.subscribe({
 ## Parameters
 
 ```ts twoslash
-import { type SubscribeParams } from '@iexec/dataprotector';
+import { type SubscribeToCollectionParams } from '@iexec/dataprotector';
 ```
 
 ### collectionId
@@ -23,7 +23,7 @@ import { type SubscribeParams } from '@iexec/dataprotector';
 Collection ID to which you'd like to subscribe.
 
 ```js
-const { txHash } = await dataProtectorSharing.subscribe({
+const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12, // [!code focus]
 });
 ```

@@ -254,6 +254,7 @@ const createOracleRes = factory
 ## Return value
 
 ```ts twoslash
+// @errors: 2305
 import { type CreateOracleMessage } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
