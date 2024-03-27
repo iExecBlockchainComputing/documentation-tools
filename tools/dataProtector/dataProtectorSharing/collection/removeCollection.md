@@ -14,7 +14,7 @@ const { txHash } = await dataProtectorSharing.removeCollection({
 
 - You must be the owner of the collection.
 - There should be no protected data in the collection. See
-  [`removeFromCollection`](./removeFromCollection.md).
+  [`removeProtectedDataFromCollection`](./removeProtectedDataFromCollection.md).
 
 ## Parameters
 
