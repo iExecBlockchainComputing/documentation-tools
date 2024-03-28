@@ -10,6 +10,10 @@ const rentResult = await dataProtectorSharing.rentProtectedData({
 });
 ```
 
+## Pre-conditions
+
+- You cannot rent a protected data that belongs to one of your own collections.
+
 ## Parameters
 
 ```ts twoslash
