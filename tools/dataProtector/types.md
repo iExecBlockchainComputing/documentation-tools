@@ -196,7 +196,3 @@ You can read more about he iExec Explorer
 ## CollectionWithProtectedDatas
 
 TODO
-
-## CollectionSubscription
-
-TODO

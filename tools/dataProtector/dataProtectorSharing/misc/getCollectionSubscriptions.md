@@ -1,13 +1,17 @@
 # getCollectionSubscriptions
 
-Method to get all subscriptions (active & past) for a collection.
+Method to get all subscriptions for:
+
+- a specific collection
+- a specific user
 
 ## Usage
 
 ```js
-const protectedData = await dataProtectorSharing.getCollectionSubscriptions({
-  collectionTokenId: 9,
-});
+const collectionActiveSubscriptions =
+  await dataProtectorSharing.getCollectionSubscriptions({
+    collectionTokenId: 9,
+  });
 ```
 
 ## Parameters
@@ -16,13 +20,38 @@ const protectedData = await dataProtectorSharing.getCollectionSubscriptions({
 import { type GetCollectionSubscriptionsParams } from '@iexec/dataprotector';
 ```
 
-### collectionTokenId
+### subscriberAddress
 
-`number`
+`AddressOrENS` | `undefined`
 
 ```js
-const protectedData = await dataProtectorSharing.getCollectionSubscriptions({
-  collectionTokenId: 9, // [!code focus]
+const userActiveSubscriptions =
+  await dataProtectorSharing.getCollectionSubscriptions({
+    subscriberAddress: '0x246bdf...', // [!code focus]
+  });
+```
+
+### collectionTokenId
+
+`number` | `undefined`
+
+```js
+const collectionActiveSubscriptions =
+  await dataProtectorSharing.getCollectionSubscriptions({
+    collectionTokenId: 9, // [!code focus]
+  });
+```
+
+### includePastSubscriptions
+
+`boolean | undefined`
+
+_default_: `false`
+
+```js
+const userRentals = await dataProtectorSharing.getCollectionSubscriptions({
+  subscriberAddress: '0x246bdf...',
+  includePastSubscriptions: true, // [!code focus]
 });
 ```
 
@@ -31,7 +60,3 @@ const protectedData = await dataProtectorSharing.getCollectionSubscriptions({
 ```ts twoslash
 import { type GetCollectionSubscriptionsResponse } from '@iexec/dataprotector';
 ```
-
-### collectionSubscriptions
-
-[`CollectionSubscription[]`](../../types.md#collectionsubscription)
