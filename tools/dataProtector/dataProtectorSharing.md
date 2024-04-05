@@ -21,8 +21,6 @@ This special smart-contract will be responsible for **enforcing governance**
 over your protected data, based on your distribution choices. (renting, selling,
 etc.)
 
----
-
 ## Why is it different from `DataProtector Core`?
 
 With `DataProtector Core`, you can **grant access** to your protected data **to
