@@ -193,12 +193,6 @@ _Hash example:_ `0xc9c2d58fc01fe54149b7daf49a0026d4ab1fdd3d10fb7c76350790fff03fe
 You can read more about he iExec Explorer
 [here](https://protocol.docs.iex.ec/for-developers/toolbox/iexec-explorer).
 
-## CollectionOwner
-
-### address
-
-Ethereum address of the collection owner.
-
 ## CollectionWithProtectedDatas
 
 TODO

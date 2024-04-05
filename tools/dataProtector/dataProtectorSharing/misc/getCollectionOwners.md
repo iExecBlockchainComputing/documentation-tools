@@ -1,11 +1,29 @@
 # getCollectionOwners
 
-Method to get all collection's owner.
+Method to get all collection owners.
 
 ## Usage
 
 ```js
-const pricingParams = await dataProtectorSharing.getCollectionOwners();
+const collectionOwners = await dataProtectorSharing.getCollectionOwners({
+  limit: 100,
+});
+```
+
+## Parameters
+
+```ts twoslash
+import { type GetCollectionOwnersParams } from '@iexec/dataprotector';
+```
+
+### limit
+
+`number | undefined`
+
+```js
+const collectionOwners = await dataProtectorSharing.getCollectionOwners({
+  limit: 100, // [!code focus]
+});
 ```
 
 ## Return value
@@ -13,7 +31,3 @@ const pricingParams = await dataProtectorSharing.getCollectionOwners();
 ```ts twoslash
 import { type GetCollectionOwnersResponse } from '@iexec/dataprotector';
 ```
-
-### collectionOwners
-
-[`CollectionOwner[]`](../../types.md#collectionowner)
