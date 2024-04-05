@@ -23,7 +23,7 @@ import { type CreateCollectionResponse } from '@iexec/dataprotector';
 
 `number`
 
-The collection token ID.
+The collection token ID for the created collection.
 
 ### txHash
 

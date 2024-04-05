@@ -183,7 +183,7 @@ You can read more about he iExec Explorer
 
 `string`
 
-The ID of the transaction that happened on iExec's side chain. You may view
+The hash of the transaction that happened on iExec's side chain. You may view
 details on the transaction using the [iExec explorer](https://explorer.iex.ec).
 
 <!-- prettier-ignore-start -->

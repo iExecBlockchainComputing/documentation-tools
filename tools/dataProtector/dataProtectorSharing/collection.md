@@ -9,10 +9,10 @@ And yes, you can have **multiple collections**.
 Inside a collection, a protected data can be in a number of different states:
 
 - **Not distributed**, ie. only the collection's owner can see it
-- **For free** (same as "for rent" with a price of 0)
+- **Free** (same as "for rent" with a price set to 0)
 - **For rent** (a price and a duration)
-- Included in the **subscription bundle**
-- For rent AND included in the collection subscription bundle
+- Included in the collection's **subscription bundle**
+- For rent AND included in the collection's subscription bundle
 - **For sale**
 
 ![Data Sharing collection](inside-a-collection.png)
