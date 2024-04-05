@@ -8,7 +8,7 @@ Method to get all rentals for:
 ## Usage
 
 ```js
-const protectedData = await dataProtectorSharing.getRentals({
+const protectedDataRentals = await dataProtectorSharing.getRentals({
   protectedDataAddress: '0x123abc...',
 });
 ```
@@ -24,7 +24,7 @@ import { type GetRentalsParams } from '@iexec/dataprotector';
 `AddressOrENS | undefined`
 
 ```js
-const protectedData = await dataProtectorSharing.getRentals({
+const userActiveRentals = await dataProtectorSharing.getRentals({
   renterAddress: '0x246bdf...', // [!code focus]
 });
 ```
@@ -34,7 +34,7 @@ const protectedData = await dataProtectorSharing.getRentals({
 `AddressOrENS | undefined`
 
 ```js
-const protectedData = await dataProtectorSharing.getRentals({
+const protectedDataRentals = await dataProtectorSharing.getRentals({
   protectedDataAddress: '0x123abc...', // [!code focus]
 });
 ```
@@ -46,7 +46,7 @@ const protectedData = await dataProtectorSharing.getRentals({
 _default_: `false`
 
 ```js
-const protectedData = await dataProtectorSharing.getRentals({
+const userRentals = await dataProtectorSharing.getRentals({
   renterAddress: '0x246bdf...',
   includePastRentals: true, // [!code focus]
 });
