@@ -206,7 +206,3 @@ TODO
 ## CollectionSubscription
 
 TODO
-
-## ProtectedDataRental
-
-TODO

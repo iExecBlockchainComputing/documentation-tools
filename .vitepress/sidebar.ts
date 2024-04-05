@@ -129,8 +129,8 @@ export function getSidebar() {
                     link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionSubscriptions',
                   },
                   {
-                    text: 'getProtectedDataRentals',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataRentals',
+                    text: 'getRentals',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getRentals',
                   },
                 ],
               },
