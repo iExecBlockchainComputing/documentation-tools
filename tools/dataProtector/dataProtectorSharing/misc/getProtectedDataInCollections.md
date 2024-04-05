@@ -16,19 +16,15 @@ const protectedData =
 import { type GetProtectedDataInCollectionsParams } from '@iexec/dataprotector';
 ```
 
-### requiredSchema
+### protectedDataAddress
 
-`DataSchema | undefined`
+`Address | undefined`
 
 ```js
-const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' }, // [!code focus]
-  collectionTokenId: 12,
-  collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
-  page: 3,
-  pageSize: 25,
-});
+const oneProtectedData =
+  await dataProtectorSharing.getProtectedDataInCollections({
+    protectedDataAddress: '0x123abc...', // [!code focus]
+  });
 ```
 
 ### collectionTokenId
@@ -36,14 +32,10 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 `number | undefined`
 
 ```js
-const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
-  collectionTokenId: 12, // [!code focus]
-  collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
-  page: 3,
-  pageSize: 25,
-});
+const protectedDataByCollection =
+  await dataProtectorSharing.getProtectedDataInCollections({
+    collectionTokenId: 12, // [!code focus]
+  });
 ```
 
 ### collectionOwner
@@ -51,14 +43,10 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 `AddressOrENS | undefined`
 
 ```js
-const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
-  collectionTokenId: 12,
-  collectionOwner: '0x123...', // [!code focus]
-  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
-  page: 3,
-  pageSize: 25,
-});
+const protectedDataByOwner =
+  await dataProtectorSharing.getProtectedDataInCollections({
+    collectionOwner: '0x123...', // [!code focus]
+  });
 ```
 
 ### createdAfterTimestamp
@@ -66,14 +54,32 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 `number | undefined`
 
 ```js
-const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
-  collectionTokenId: 12,
-  collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
-  page: 3,
-  pageSize: 25,
-});
+const latestProtectedData =
+  await dataProtectorSharing.getProtectedDataInCollections({
+    createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
+  });
+```
+
+### isRentable
+
+`boolean | undefined`
+
+```js
+const rentableProtectedData =
+  await dataProtectorSharing.getProtectedDataInCollections({
+    isRentable: true, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
+  });
+```
+
+### isForSale
+
+`boolean | undefined`
+
+```js
+const protectedDataForSale =
+  await dataProtectorSharing.getProtectedDataInCollections({
+    isForSale: true, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
+  });
 ```
 
 ### page
@@ -82,10 +88,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
-  collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
   page: 3, // [!code focus]
   pageSize: 25,
 });
@@ -97,10 +100,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  requiredSchema: { file: 'ArrayBuffer', secretFilename: 'string' },
   collectionTokenId: 12,
-  collectionOwner: '0x123...',
-  createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT
   page: 3,
   pageSize: 25, // [!code focus]
 });
