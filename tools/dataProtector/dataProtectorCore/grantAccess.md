@@ -65,14 +65,17 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ::: tip
 
-You may authorize all apps to use the protected data by setting this to
-**0x00000000000000000000000000000000000000**
+You may authorize a specific app or a whitelist of apps to use the protected
+data.
 
-iExec maintains a whitelist for the Web3Mail decentralized application. Granting
-access to this whitelist allows use of an email `protectedData` with all
-versions of the Web3Mail application, ensuring you only have to grant this
+iExec uses the ENS `web3mail.apps.iexec.eth` for the latest version of the
+Web3Mail decentralized application.
+
+iExec also maintains a whitelist for the Web3Mail decentralized application.
+Granting access to this whitelist allows use of an email `protectedData` with
+all versions of the Web3Mail application, ensuring you only have to grant this
 access once. The ETH address for this whitelist is
-**0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e**
+**0x781482C39CcE25546583EaC4957Fb7Bf04C277D2**.
 
 :::
 
@@ -95,7 +98,7 @@ const grantedAccess = await dataProtector.grantAccess({
 ::: tip
 
 You may authorize all users to use the protected data by setting this to
-**0x00000000000000000000000000000000000000**
+**0x0000000000000000000000000000000000000000**.
 
 :::
 
