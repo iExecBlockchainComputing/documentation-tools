@@ -22,7 +22,7 @@ import { type GetCollectionSubscriptionsParams } from '@iexec/dataprotector';
 
 ### subscriberAddress
 
-`AddressOrENS` | `undefined`
+`AddressOrENS | undefined`
 
 ```js
 const userActiveSubscriptions =
@@ -33,7 +33,7 @@ const userActiveSubscriptions =
 
 ### collectionTokenId
 
-`number` | `undefined`
+`number | undefined`
 
 ```js
 const collectionActiveSubscriptions =
