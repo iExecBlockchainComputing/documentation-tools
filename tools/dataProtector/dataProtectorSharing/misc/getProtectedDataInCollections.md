@@ -111,7 +111,3 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 ```ts twoslash
 import { type GetProtectedDataInCollectionsResponse } from '@iexec/dataprotector';
 ```
-
-### protectedDataInCollection
-
-[`ProtectedDataInCollection[]`](../../types.md#protecteddataincollection)

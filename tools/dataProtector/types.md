@@ -105,56 +105,6 @@ milliseconds since the epoch. This timestamp provides precise information about
 the moment of creation and can be used for chronological ordering or time-based
 operations.
 
-## ProtectedDataInCollection
-
-### name
-
-`string`
-
-The name of the the protected data.
-
-### address
-
-`Address`
-
-Address of the protected data.
-
-### schema
-
-`DataSchema`
-
-Data structure of the protected data.
-
-### collectionTokenId
-
-`number`
-
-The collection token ID to which the protected data belongs.
-
-### isIncludedInSubscription
-
-`boolean`
-
-Whether the protected data is accessible through the collection subscription.
-
-### isRentable
-
-`boolean`
-
-Whether the protected data can be rented.
-
-### isForSale
-
-`boolean`
-
-Whether the protected data is available for purchase.
-
-### creationTimestamp
-
-`number`
-
-Timestamp marking the protected data's creation.
-
 ## RevokedAccess
 
 ### access
