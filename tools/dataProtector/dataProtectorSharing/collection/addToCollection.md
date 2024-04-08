@@ -12,7 +12,7 @@ Under the hood, this method performs two actions:
 
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
   collectionId: 12,
 });
 ```
@@ -32,11 +32,11 @@ Collection ID to which you'd like to add the protected data.
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12, // [!code focus]
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
 });
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -45,7 +45,7 @@ Address of the protected data you'd like to add to your collection.
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
-  protectedDataAddress: '0x123abc...', // [!code focus]
+  protectedData: '0x123abc...', // [!code focus]
 });
 ```
 
@@ -63,7 +63,7 @@ consume the protected data.
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
   appWhitelist: '0x423ovk...', // [!code focus]
 });
 ```
@@ -77,7 +77,7 @@ Callback function to be notified at intermediate steps.
 <!-- prettier-ignore-start -->
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
   collectionId: 12,
   onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]

@@ -10,7 +10,7 @@ honored until the end of their rental period.
 ```js
 const notForRentingAnymoreResult =
   await dataProtectorSharing.removeProtectedDataFromRenting({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
   });
 ```
 
@@ -20,7 +20,7 @@ const notForRentingAnymoreResult =
 import { type RemoveProtectedDataFromRentingParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -29,7 +29,7 @@ Address of the protected data you'd like to remove from renting.
 ```js
 const notForRentingAnymoreResult =
   await dataProtectorSharing.removeProtectedDataFromRenting({
-    protectedDataAddress: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...', // [!code focus]
   });
 ```
 

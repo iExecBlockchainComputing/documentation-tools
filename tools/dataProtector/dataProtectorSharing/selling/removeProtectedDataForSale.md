@@ -7,7 +7,7 @@ Method to remove a protected data for sale.
 ```js
 const notForSaleAymoreResult =
   await dataProtectorSharing.removeProtectedDataForSale({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
   });
 ```
 
@@ -17,7 +17,7 @@ const notForSaleAymoreResult =
 import { type RemoveProtectedDataForSaleParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -26,7 +26,7 @@ Address of the protected data that you'd like to remove for sale.
 ```js
 const notForSaleAymoreResult =
   await dataProtectorSharing.removeProtectedDataForSale({
-    protectedDataAddress: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...', // [!code focus]
   });
 ```
 

@@ -10,7 +10,7 @@ consume this protected data.
 ```js
 const setToSubscriptionResult =
   await dataProtectorSharing.setProtectedDataToSubscription({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
   });
 ```
 
@@ -20,7 +20,7 @@ const setToSubscriptionResult =
 import { type SetProtectedDataToSubscriptionParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -29,7 +29,7 @@ Address of the protected data you'd like to be part of your subscription.
 ```js
 const setToSubscriptionResult =
   await dataProtectorSharing.setProtectedDataToSubscription({
-    protectedDataAddress: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...', // [!code focus]
   });
 ```
 
