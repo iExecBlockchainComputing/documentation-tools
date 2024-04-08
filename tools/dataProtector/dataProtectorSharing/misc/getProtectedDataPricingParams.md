@@ -4,8 +4,6 @@ Method to get all distribution params for a protected data.
 
 ## Usage
 
-Input parameters type: `GetProtectedDataPricingParams`
-
 ```js
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
   protectedDataAddress: '0x123abc...',
@@ -20,4 +18,12 @@ import { type GetProtectedDataPricingParams } from '@iexec/dataprotector';
 
 ### protectedDataAddress
 
-TODO
+`AddressOrENS`
+
+Address of the protected data that you'd like to get the pricing params for.
+
+## Return value
+
+```ts twoslash
+import { type GetProtectedDataPricingParamsResponse } from '@iexec/dataprotector';
+```
