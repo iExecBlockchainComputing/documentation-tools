@@ -19,11 +19,11 @@ const createCollectionResult = await dataProtectorSharing.createCollection();
 import { type CreateCollectionResponse } from '@iexec/dataprotector';
 ```
 
-### collectionTokenId
+### collectionId
 
 `number`
 
-The collection token ID for the created collection.
+The collection ID for the created collection.
 
 ### txHash
 

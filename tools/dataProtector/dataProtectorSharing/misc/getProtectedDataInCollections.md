@@ -27,14 +27,14 @@ const oneProtectedData =
   });
 ```
 
-### collectionTokenId
+### collectionId
 
 `number | undefined`
 
 ```js
 const protectedDataByCollection =
   await dataProtectorSharing.getProtectedDataInCollections({
-    collectionTokenId: 12, // [!code focus]
+    collectionId: 12, // [!code focus]
   });
 ```
 
@@ -88,7 +88,7 @@ const protectedDataForSale =
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  collectionTokenId: 12,
+  collectionId: 12,
   page: 3, // [!code focus]
   pageSize: 25,
 });
@@ -100,7 +100,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
-  collectionTokenId: 12,
+  collectionId: 12,
   page: 3,
   pageSize: 25, // [!code focus]
 });
