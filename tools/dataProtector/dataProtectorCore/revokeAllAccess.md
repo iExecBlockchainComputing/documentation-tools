@@ -14,7 +14,7 @@ pattern.
 const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
 });
 ```
 
@@ -34,7 +34,7 @@ The address of the `protectedData` subject to access revocation.
 const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
 });
 ```
 
@@ -49,7 +49,7 @@ specified `protectedData`.
 const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
 });
 ```
 
@@ -64,7 +64,7 @@ The user address to be removed from the authorization list for the specified
 const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...', // [!code focus]
+  authorizedUser: '0x789cba...', // [!code focus]
 });
 ```
 
@@ -79,7 +79,7 @@ Callback function to be notified at intermediate steps.
 const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]
   }, // [!code focus]

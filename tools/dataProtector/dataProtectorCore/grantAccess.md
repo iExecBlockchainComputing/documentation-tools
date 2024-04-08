@@ -13,7 +13,7 @@ application (or a designated list of applications).
 const grantedAccess = await dataProtector.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   pricePerAccess: 3,
   numberOfAccess: 10,
   onStatusUpdate: ({ title, isDone }) => {
@@ -38,7 +38,7 @@ The ethereum address of the protected data supplied by the user.
 const grantedAccess = await dataProtector.grantAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
 });
 ```
 
@@ -59,7 +59,7 @@ the `protectedData` each time you do so.
 const grantedAccess = await dataProtector.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
 });
 ```
 
@@ -88,7 +88,7 @@ permission for the user to submit the data to an iExec application.
 const grantedAccess = await dataProtector.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...', // [!code focus]
+  authorizedUser: '0x789cba...', // [!code focus]
 });
 ```
 
@@ -110,7 +110,7 @@ protected data.
 const grantedAccess = await dataProtector.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   pricePerAccess: 3, // [!code focus]
   numberOfAccess: 10,
 });
@@ -129,7 +129,7 @@ processed and used.
 const grantedAccess = await dataProtector.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   pricePerAccess: 3,
   numberOfAccess: 10, // [!code focus]
 });
@@ -148,7 +148,7 @@ Callback function to be notified at intermediate steps.
 const grantedAccess = await dataProtector.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]
   }, // [!code focus]

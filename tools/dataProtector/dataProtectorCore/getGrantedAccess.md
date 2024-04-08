@@ -16,7 +16,7 @@ the object is a String representation of an ethereum address or ENS name
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   page: 1,
   pageSize: 100,
 });
@@ -40,7 +40,7 @@ authorization grants. It's a representation of ethereum address or ENS name
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   page: 1,
   pageSize: 100,
 });
@@ -58,7 +58,7 @@ specified application.It's a representation of ethereum address or ENS name
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   page: 1,
   pageSize: 100,
 });
@@ -88,7 +88,7 @@ specified user.It's a String representation of ethereum address or ENS name
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...', // [!code focus]
+  authorizedUser: '0x789cba...', // [!code focus]
   page: 1,
   pageSize: 100,
 });
@@ -106,7 +106,7 @@ also specify a `pageSize` to control the size of the results.
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   page: 1, // [!code focus]
   pageSize: 100,
 });
@@ -125,7 +125,7 @@ specifying a `page` parameter.
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789ghi...',
+  authorizedUser: '0x789cba...',
   page: 1,
   pageSize: 100, // [!code focus]
 });
