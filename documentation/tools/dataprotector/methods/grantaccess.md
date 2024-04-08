@@ -50,7 +50,7 @@ iExec maintains a whitelist for the Web3Mail decentralized application. Granting
 The address of the user you wish to authorize to use the `protectedData`. Note that these users may not view or manipulate the data. This only grants permission for the user to submit the data to an iExec application.
 
 {% hint style="info" %}
-You may authorize all users to use the protected data by setting this to **0x00000000000000000000000000000000000000**
+You may authorize all users to use the protected data by setting this to **0x0000000000000000000000000000000000000000**
 {% endhint %}
 
 ***pricePerAccess (optional)***
