@@ -9,7 +9,7 @@ Method to get all rentals for:
 
 ```js
 const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
 });
 ```
 
@@ -29,13 +29,13 @@ const userActiveRentals = await dataProtectorSharing.getRentals({
 });
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS | undefined`
 
 ```js
 const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
-  protectedDataAddress: '0x123abc...', // [!code focus]
+  protectedData: '0x123abc...', // [!code focus]
 });
 ```
 

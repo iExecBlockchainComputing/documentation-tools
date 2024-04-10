@@ -11,7 +11,7 @@ terms, or to keep it for yourself.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
 });
 ```
 
@@ -21,7 +21,7 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 import { type BuyProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -29,7 +29,7 @@ Address of the protected data you'd like to buy.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: '0x123abc...', // [!code focus]
+  protectedData: '0x123abc...', // [!code focus]
 });
 ```
 
@@ -45,7 +45,7 @@ it'll transferred.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
   collectionTokenIdTo: 12, // [!code focus]
   appAddress: '0xdef456...',
 });
@@ -60,7 +60,7 @@ your new protected data in your your collection.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
   collectionTokenIdTo: 12,
   appAddress: '0xdef456...', // [!code focus]
 });

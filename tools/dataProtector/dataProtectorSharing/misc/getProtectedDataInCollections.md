@@ -16,14 +16,14 @@ const protectedData =
 import { type GetProtectedDataInCollectionsParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
-`Address | undefined`
+`AddressOrENS | undefined`
 
 ```js
 const oneProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
-    protectedDataAddress: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...', // [!code focus]
   });
 ```
 

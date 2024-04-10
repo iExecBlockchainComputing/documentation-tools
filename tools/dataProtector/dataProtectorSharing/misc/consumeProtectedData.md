@@ -7,7 +7,7 @@ Method to consume a protected data, ie. visualize it or download it.
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
   });
 ```
 
@@ -23,7 +23,7 @@ const consumeProtectedDataResult =
 import { type ConsumeProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -32,7 +32,7 @@ Address of the protected data you'd like to visualize.
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
-    protectedDataAddress: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...', // [!code focus]
   });
 ```
 
@@ -46,7 +46,7 @@ Callback function to be notified at intermediate steps.
 ```js
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
     onStatusUpdate: ({ title, isDone }) => { // [!code focus]
       console.log(title, isDone); // [!code focus]
     }, // [!code focus]

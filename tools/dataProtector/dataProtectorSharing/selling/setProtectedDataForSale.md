@@ -10,7 +10,7 @@ parameters, or simply keep the protected data for their own use.
 
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
   priceInNRLC: 2_000_000_000, // 2 RLC
 });
 ```
@@ -21,7 +21,7 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 import { type SetProtectedDataForSaleParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -29,7 +29,7 @@ Address of the protected data that you'd like to set for sale.
 
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
-  protectedDataAddress: '0x123abc...', // [!code focus]
+  protectedData: '0x123abc...', // [!code focus]
   priceInNRLC: 2_000_000_000, // 2 RLC
 });
 ```
@@ -42,7 +42,7 @@ The price in nano RLC you ask from someone who wants to buy the protected data.
 
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
   priceInNRLC: 2_000_000_000, // 2 RLC // [!code focus]
 });
 ```

@@ -11,7 +11,7 @@ data back to you.
 ```js
 const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
   {
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
   }
 );
 ```
@@ -29,7 +29,7 @@ const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
 import { type RemoveFromCollectionParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -38,7 +38,7 @@ Address of the protected data you'd like to remove from your collection.
 ```js
 const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
   {
-    protectedDataAddress: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...', // [!code focus]
   }
 );
 ```

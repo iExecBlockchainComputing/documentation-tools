@@ -7,7 +7,7 @@ Method to remove a protected data from your subscription.
 ```js
 const { success } =
   await dataProtectorSharing.removeProtectedDataFromSubscription({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
   });
 ```
 
@@ -24,7 +24,7 @@ const { success } =
 import { type RemoveProtectedDataFromSubscriptionParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -33,7 +33,7 @@ Address of the protected data you'd like to remove from subscription.
 ```js
 const { success } =
   await dataProtectorSharing.removeProtectedDataFromSubscription({
-    protectedDataAddress: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...', // [!code focus]
   });
 ```
 

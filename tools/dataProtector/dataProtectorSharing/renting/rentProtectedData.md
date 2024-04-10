@@ -6,7 +6,7 @@ Method to rent a protected data.
 
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
 });
 ```
 
@@ -20,7 +20,7 @@ const rentResult = await dataProtectorSharing.rentProtectedData({
 import { type RentProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -28,7 +28,7 @@ Address or ENS of the protected data that you'd like rent.
 
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
-  protectedDataAddress: '0x123abc...',
+  protectedData: '0x123abc...',
 });
 ```
 
