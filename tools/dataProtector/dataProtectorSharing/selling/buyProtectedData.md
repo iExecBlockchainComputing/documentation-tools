@@ -33,7 +33,7 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 });
 ```
 
-### collectionTokenIdTo
+### addToCollectionId
 
 `number | undefined`
 
@@ -46,7 +46,7 @@ it'll transferred.
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
-  collectionTokenIdTo: 12, // [!code focus]
+  addToCollectionId: 12, // [!code focus]
   appAddress: '0xdef456...',
 });
 ```
@@ -61,7 +61,7 @@ your new protected data in your your collection.
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
-  collectionTokenIdTo: 12,
+  addToCollectionId: 12,
   appAddress: '0xdef456...', // [!code focus]
 });
 ```

@@ -10,7 +10,7 @@ Method to get all subscriptions for:
 ```js
 const collectionActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
-    collectionTokenId: 9,
+    collectionId: 9,
   });
 ```
 
@@ -31,14 +31,14 @@ const userActiveSubscriptions =
   });
 ```
 
-### collectionTokenId
+### collectionId
 
 `number | undefined`
 
 ```js
 const collectionActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
-    collectionTokenId: 9, // [!code focus]
+    collectionId: 9, // [!code focus]
   });
 ```
 
