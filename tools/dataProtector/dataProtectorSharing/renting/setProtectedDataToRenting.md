@@ -7,7 +7,7 @@ Method to allow a protected data to be rented.
 ```js
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
     priceInNRLC: 1_000_000_000, // 1 RLC
     durationInSeconds: 60 * 60 * 24 * 30, // 30 days
   });
@@ -19,7 +19,7 @@ const setForRentingResult =
 import { type SetProtectedDataToRentingParams } from '@iexec/dataprotector';
 ```
 
-### protectedDataAddress
+### protectedData
 
 `AddressOrENS`
 
@@ -28,7 +28,7 @@ Address of the protected data you'd like to set renting parameters.
 ```js
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
-    protectedDataAddress: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...', // [!code focus]
     priceInNRLC: 1_000_000_000, // 1 RLC
     durationInSeconds: 60 * 60 * 24 * 30, // 30 days
   });
@@ -43,7 +43,7 @@ The price in nano RLC you ask from someone who wants to rent the protected data.
 ```js
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
     priceInNRLC: 1_000_000_000, // 1 RLC // [!code focus]
     durationInSeconds: 60 * 60 * 24 * 30, // 30 days
   });
@@ -58,7 +58,7 @@ The duration of the rental in seconds.
 ```js
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
-    protectedDataAddress: '0x123abc...',
+    protectedData: '0x123abc...',
     priceInNRLC: 1_000_000_000, // 1 RLC
     durationInSeconds: 60 * 60 * 24 * 30, // 30 days // [!code focus]
   });
