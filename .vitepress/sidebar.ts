@@ -109,7 +109,7 @@ export function getSidebar() {
                     link: '/tools/dataProtector/dataProtectorSharing/misc/consumeProtectedData',
                   },
                   {
-                    text: 'getProtectedDataInCollection',
+                    text: 'getProtectedDataInCollections',
                     link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataInCollections',
                   },
                   {
