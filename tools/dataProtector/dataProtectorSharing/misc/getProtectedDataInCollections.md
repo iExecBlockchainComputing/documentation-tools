@@ -67,7 +67,7 @@ const latestProtectedData =
 ```js
 const rentableProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
-    isRentable: true, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
+    isRentable: true, // [!code focus]
   });
 ```
 
@@ -78,7 +78,7 @@ const rentableProtectedData =
 ```js
 const protectedDataForSale =
   await dataProtectorSharing.getProtectedDataInCollections({
-    isForSale: true, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
+    isForSale: true, // [!code focus]
   });
 ```
 
