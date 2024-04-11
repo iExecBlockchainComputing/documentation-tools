@@ -26,7 +26,7 @@ Open a pull request from your forked branch to the `staging` branch.
 
 A preview of your changes will be rendered on the staging environment.
 
-![PR-preview](./hidden-assets/PR-preview.png)
+![PR-preview](/PR-preview.png)
 
 Click on the "Details" link to access the preview.
 
