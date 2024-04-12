@@ -56,7 +56,7 @@ steps:
     commands:
       - npm run check-format
 
-  - name: Vercel deploy to prod
+  - name: Vercel deploy to preview
     image: node:20
     environment:
       VERCEL_ORG_ID: team_qEUZmPwX3J0FFDAk23fSvIlq
