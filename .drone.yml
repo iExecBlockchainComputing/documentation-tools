@@ -4,7 +4,7 @@ name: main-ci
 
 trigger:
   event: push
-  branch: feature/migrate-to-vitepress
+  branch: v2
 
 steps:
   - name: npm install
@@ -41,7 +41,9 @@ trigger:
   event: push
   branch:
     exclude:
-      - feature/migrate-to-vitepress
+      - production
+      - staging
+      - v2
 
 steps:
   - name: npm install
