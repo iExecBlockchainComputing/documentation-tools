@@ -5,6 +5,9 @@ identified by their ETH address. The return value provides a transaction hash
 and confirmation of the new owner of the `protectedData`. Only the current owner
 of the `protectedData` may invoke this method.
 
+When transferring the `protectedData`, the grantedAccess created by the previous
+owner are revoked automatically.
+
 ## Usage
 
 ```js
