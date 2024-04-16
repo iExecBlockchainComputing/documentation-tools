@@ -98,6 +98,8 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 `number | undefined`
 
+_default_: `0`
+
 Specifies the page number of the result set to return. Pages are zero-based
 indexed, with the default value being `0`, indicating the first page. If used,
 you can also specify the `pageSize` parameter to control the number of records
@@ -118,10 +120,12 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 `number | undefined`
 
-Specifies the number of records to include in each page of the result set. The
-default value for this parameter is `20`. This is used in conjunction with the
-optional `page` parameter to limit the size of each page. The minimum value
-allowed for `pageSize` is `10`.
+_default_: `20`
+
+Specifies the number of records to include in each page of the result set. This
+is used in conjunction with the optional `page` parameter to limit the size of
+each page. The minimum value allowed for `pageSize` is `10` and the maximum is
+`1000`.
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
