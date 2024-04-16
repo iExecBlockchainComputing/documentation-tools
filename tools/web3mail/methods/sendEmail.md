@@ -181,7 +181,7 @@ default workerpool for running confidential computations on the iExec platform.
 
 `number | undefined`
 
-_default_: 0
+_default_: `0`
 
 Allows specifying the maximum amount (in nRLC) you are willing to pay the email
 address owner for using their data. The owner of the protected email address
@@ -200,7 +200,7 @@ const sendEmail = await web3mail.sendEmail({
 
 `number | undefined`
 
-_default_: 0
+_default_: `0`
 
 Allows specifying the maximum amount (in nRLC) you are willing to pay the
 Web3Mail app provider (iExec) for using the Web3Mail application.
@@ -218,7 +218,7 @@ const sendEmail = await web3mail.sendEmail({
 
 `number | undefined`
 
-_default_: 0
+_default_: `0`
 
 Allows specifying the maximum amount you want to pay the workerpool provider for
 using their infrastructure to run the web3mail app in nRLC.

@@ -106,6 +106,8 @@ You may authorize all users to use the protected data by setting this to
 
 `number | undefined`
 
+_default_: `1`
+
 Allows specifying an optional nano RLC cost associated with every access of the
 protected data.
 
@@ -119,11 +121,11 @@ const grantedAccess = await dataProtector.grantAccess({
 });
 ```
 
-Default: `1`
-
 ### numberOfAccess
 
 `number | undefined`
+
+_default_: `1`
 
 Allows optionally restricting the number of times the protected data may be
 processed and used.
@@ -137,8 +139,6 @@ const grantedAccess = await dataProtector.grantAccess({
   numberOfAccess: 10, // [!code focus]
 });
 ```
-
-Default: `1`
 
 ### onStatusUpdate
 
