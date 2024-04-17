@@ -15,7 +15,7 @@
     "vitepress": "^1.0.1"
   },
   "dependencies": {
-    "@iexec/dataprotector": "^2.0.0-nightly-18dce6b4a3f9f5153fa4095d1264d62e01f7c5c2",
+    "@iexec/dataprotector": "^2.0.0-nightly-6b3e0accd44c45a047b367c9794b1f6b1b99658c",
     "@iexec/iexec-oracle-factory-wrapper": "^2.1.0",
     "@iexec/web3mail": "^0.6.0",
     "vue": "^3.4.21"

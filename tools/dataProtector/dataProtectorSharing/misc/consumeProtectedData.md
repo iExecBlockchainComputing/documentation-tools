@@ -89,8 +89,8 @@ different schema, it won't work.
 
 ::: warning
 
-This app needs to be part of the `appWhitelist` given when calling
-[addToCollection()](../collection/addToCollection.md#appwhitelist)
+This app needs to be part of the `addOnlyAppWhitelist` given when calling
+[addToCollection()](../collection/addToCollection.md#addOnlyAppWhitelist)
 
 :::
 

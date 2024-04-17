@@ -24,7 +24,7 @@ new IExecWeb3mail(ethProvider, {
 });
 ```
 
-### dappWhitelistAddress
+### daddOnlyAppWhitelistAddress
 
 The Ethereum contract address for the web3mail dapps whitelist contract. By
 granting access to a whitelist, email address owners ensure their email is still
@@ -35,7 +35,7 @@ will be used.
 
 ```js
 new IExecWeb3mail(ethProvider, {
-  dappWhitelistAddress: '0x781482C39CcE25546583EaC4957Fb7Bf04C277D2',
+  daddOnlyAppWhitelistAddress: '0x781482C39CcE25546583EaC4957Fb7Bf04C277D2',
 });
 ```
 

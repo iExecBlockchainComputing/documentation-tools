@@ -7,6 +7,8 @@ Method to subscribe to a collection that is available for subscription.
 ```js
 const { txHash } = await dataProtectorSharing.subscribe({
   collectionId: 12,
+  price: 1,
+  duration: 172800,
 });
 ```
 
@@ -25,6 +27,40 @@ Collection ID to which you'd like to subscribe.
 ```js
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12, // [!code focus]
+  price: 1,
+  duration: 172800,
+});
+```
+
+### price
+
+`number`
+
+Price of the rental for the protected data that you expect to rent. This
+parameter ensures that you will not be front-run by the owner of the protected
+data. The unit is in nano RLC (nRLC).
+
+```js
+const { txHash } = await dataProtectorSharing.subscribeToCollection({
+  collectionId: 12,
+  price: 1, // [!code focus]
+  duration: 172800,
+});
+```
+
+### duration
+
+`number`
+
+Duration of the rental for the protected data that you expect to rent. This
+parameter ensures that you will not be front-run by the owner of the protected
+data. The unit is in seconds.
+
+```js
+const { txHash } = await dataProtectorSharing.subscribeToCollection({
+  collectionId: 12,
+  price: 1,
+  duration: 172800, // [!code focus]
 });
 ```
 
