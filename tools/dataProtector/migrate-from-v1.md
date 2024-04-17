@@ -43,7 +43,7 @@ the same functionalities as before.
 ```js
 await dataProtector.fetchProtectedData({ // [!code --]
 await dataProtector.getProtectedData({ // [!code ++]
-  owner: '0xA0c15z...',
+  owner: '0xa0c15e...',
   creationTimestampGte: 1707237580, // Feb 6th, 2024 16:39:40 GMT // [!code ++]
 });
 ```
@@ -58,7 +58,7 @@ await dataProtector.fetchGrantedAccess({ // [!code --]
 await dataProtector.getGrantedAccess({ // [!code ++]
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
-  owner: '0xA0c15z...',
+  owner: '0xa0c15e...',
 });
 ```
 

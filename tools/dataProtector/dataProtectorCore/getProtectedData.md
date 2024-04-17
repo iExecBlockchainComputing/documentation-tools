@@ -17,7 +17,7 @@ method invocation.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0c15z...',
+  owner: '0xa0c15e...',
   requiredSchema: {
     email: 'string',
   },
@@ -54,7 +54,7 @@ address.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0c15z...', // [!code focus]
+  owner: '0xa0c15e...', // [!code focus]
 });
 ```
 
@@ -67,7 +67,7 @@ The provided value should be in seconde.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0c15z...',
+  owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT // [!code focus]
 });
 ```
@@ -82,7 +82,7 @@ also specify a `pageSize` to control the size of the results.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0c15z...',
+  owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT
   page: 1, // [!code focus]
 });
@@ -99,7 +99,7 @@ specifying a `page` parameter.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  owner: '0xA0c15z...',
+  owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT
   page: 1,
   pageSize: 100, // [!code focus]

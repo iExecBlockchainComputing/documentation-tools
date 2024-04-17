@@ -13,7 +13,7 @@ owner are revoked automatically.
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E9h4...',
+  newOwner: '0xc5e9f4...',
 });
 ```
 
@@ -33,7 +33,7 @@ new owner.
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E9h4...', // [!code focus]
+  newOwner: '0xc5e9f4...', // [!code focus]
 });
 ```
 
@@ -46,7 +46,7 @@ ETH address for the new owner for the `protectedData`.
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E9h4...', // [!code focus]
+  newOwner: '0xc5e9f4...', // [!code focus]
 });
 ```
 
