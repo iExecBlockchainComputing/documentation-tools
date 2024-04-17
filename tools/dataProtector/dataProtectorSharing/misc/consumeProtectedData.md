@@ -7,9 +7,9 @@ This method does a few things under the hood:
 - Generate an RSA key pair and save it to indexedDB (if available)
 - Push the public key to iExec SMS (Secret Management Service) (For more info,
   see
-  [iExec Protocol documentation](https://protocol.docs.iex.ec/for-developers/confidential-computing/access-confidential-assets#secret-management-service-sms)
-- Wait for the consuming task to be executed by a worker. The dApp being
-  executed is the one given with the `app` parameter. The dApp will get the
+  [iExec Protocol documentation](https://protocol.docs.iex.ec/for-developers/confidential-computing/access-confidential-assets#secret-management-service-sms))
+- Wait for the consuming task to be executed by a worker. The TEE app being
+  executed is the one given with the `app` parameter. The TEE app will get the
   protected data from IPFS, encrypt it with the public key generated in the
   first step, and re-upload it to IPFS.
 - Retrieve the encrypted data from IPFS and decrypt it with the private key
@@ -68,6 +68,32 @@ const consumeProtectedDataResult =
   });
 ```
 
+For this `app` parameter you can use the following iExec provided app:
+`0x82e41e1b594ccf69b0cfda25637eddc4e6d4e0fc`.
+
+::: warning
+
+This app is specific to our Content Creator usecase-demo. It expects a protected
+data that contains a property named `file`:
+
+```json
+{
+  "file": "<ArrayBuffer>"
+}
+```
+
+You are free to use this iExec app but if the given protected data has a
+different schema, it won't work.
+
+:::
+
+::: warning
+
+This app needs to be part of the `appWhitelist` given when calling
+[addToCollection()](../collection/addToCollection.md#appwhitelist)
+
+:::
+
 ### workerpool
 
 `AddressOrENS | undefined`
@@ -84,6 +110,14 @@ const consumeProtectedDataResult =
     workerpool: 'prod-v8-bellecour.main.pools.iexec.eth', // [!code focus]
   });
 ```
+
+::: tip
+
+iExec currently offers a production workerpool located at the Ethereum Name
+Service (ENS) address `prod-v8-bellecour.main.pools.iexec.eth`. This is the
+default workerpool for running confidential computations on the iExec platform.
+
+:::
 
 ### onStatusUpdate
 
