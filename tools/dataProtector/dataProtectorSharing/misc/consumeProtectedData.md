@@ -83,7 +83,12 @@ data that contains a property named `file`:
 ```
 
 You are free to use this iExec app but if the given protected data has a
-different schema, it won't work.
+different schema, it won't work. Moreover, the app belongs to iExec
+`addOnlyAppWhitelist` deployed at the address
+`0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed`. So if you want to use this app,
+the protected data should be linked to the iExec `addOnlyAppWhitelist`.
+Otherwise you must choose an app that belongs to the `addOnlyAppWhitelist`
+linked to this protected data.
 
 :::
 

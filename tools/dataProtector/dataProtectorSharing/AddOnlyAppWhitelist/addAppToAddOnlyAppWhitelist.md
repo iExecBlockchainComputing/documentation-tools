@@ -1,10 +1,10 @@
 # addAppToAddOnlyAppWhitelist
 
-Method to add an iDapp (iExec Tee Dapp) into the `AddOnlyAppWhitelist`.
+Method to add an app (iExec Tee Dapp) into the `AddOnlyAppWhitelist`.
 
 ::: warning
 
-You can't remove an iDapp from the whitelist. The whitelist are only additive.
+You can't remove an app from the whitelist. The whitelist are only additive.
 
 :::
 
@@ -28,7 +28,7 @@ import { type AddAppToAppWhitelistParams } from '@iexec/dataprotector';
 
 `Address`
 
-Address of the `addOnlyAppWhitelist` in which you want to add an iDapp.
+Address of the `addOnlyAppWhitelist` in which you want to add an app.
 
 ```js
 const isAddedToAddAppToAddOnlyAppWhitelist =
@@ -42,7 +42,7 @@ const isAddedToAddAppToAddOnlyAppWhitelist =
 
 `AddressOrENS`
 
-Address of iDapp that you want to add to the `addOnlyAppWhitelist`.
+Address of app that you want to add to the `addOnlyAppWhitelist`.
 
 ```js
 const isAddedToAddAppToAddOnlyAppWhitelist =

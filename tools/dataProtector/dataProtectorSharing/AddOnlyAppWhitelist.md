@@ -1,3 +1,3 @@
 # AddOnlyAppWhitelist
 
-Enable creator to mange easily iDapp.
+Enable creator to mange easily app.
