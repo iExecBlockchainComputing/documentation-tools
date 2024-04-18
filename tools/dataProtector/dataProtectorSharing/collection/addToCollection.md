@@ -57,7 +57,7 @@ to instantiate DataProtector SDK.
 
 `AddressOrENS | undefined`
 
-Address of the whitelist smart contract that contains applications able to
+Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.
 
 ```js

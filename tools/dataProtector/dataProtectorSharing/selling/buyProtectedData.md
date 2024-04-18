@@ -54,11 +54,11 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 
 `number | undefined`
 
-Collection token id to which you'd like to transfer the ownership of the
-protected data.  
+Collection ID to which you'd like to transfer the ownership of the protected
+data.  
 The Data Sharing smart-contract will still be the technical owner of the
-protected data, but you'll still fully own it as you own the collection to which
-it'll transferred.
+protected data, but you'll fully own it as you own the collection to which it'll
+transferred.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
@@ -73,8 +73,8 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 
 `AddressOrENS | undefined`
 
-The whitelist smart contract containing application that will be set to consume
-your new protected data in your your collection.
+Address of the whitelist smart contract that contains applications allowed to
+consume the protected data.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
