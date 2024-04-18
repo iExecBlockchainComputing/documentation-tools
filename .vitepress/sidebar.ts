@@ -135,6 +135,24 @@ export function getSidebar() {
                 ],
               },
               {
+                text: 'AddOnlyAppWhitelist',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'addAppToAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/dataProtectorSharing/AddOnlyAppWhitelist/addAppToAddOnlyAppWhitelist',
+                  },
+                  {
+                    text: 'createAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/dataProtectorSharing/AddOnlyAppWhitelist/createAddOnlyAppWhitelist',
+                  },
+                  {
+                    text: 'getUserAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/dataProtectorSharing/AddOnlyAppWhitelist/getUserAddOnlyAppWhitelist',
+                  },
+                ],
+              },
+              {
                 text: 'Renting',
                 link: '/tools/dataProtector/dataProtectorSharing/renting',
                 collapsed: true,
