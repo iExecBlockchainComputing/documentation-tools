@@ -38,7 +38,8 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 
 `number`
 
-The price in nano RLC (nRLC) you ask from someone who wants to buy the protected data.
+The price in nano RLC (nRLC) you ask from someone who wants to buy the protected
+data.
 
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
