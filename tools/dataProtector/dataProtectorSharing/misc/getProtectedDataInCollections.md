@@ -86,7 +86,8 @@ const protectedDataForSale =
 
 `boolean | undefined`
 
-Used to filter protected data that are either for sale, renting or part of a subscription.
+Used to filter protected data that are either for sale, renting or part of a
+subscription.
 
 ```js
 const protectedDataForSale =

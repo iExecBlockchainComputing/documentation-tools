@@ -39,7 +39,8 @@ bun add @iexec/dataprotector
 &nbsp;[**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
 
 If you use it with **Webpack**, some polyfills will be needed. You can find a
-minimal working project [here](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/115b797cf62dcff0f41e2ba783405d5083d78922/packages/demo/browser-webpack).
+minimal working project
+[here](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/115b797cf62dcff0f41e2ba783405d5083d78922/packages/demo/browser-webpack).
 
 ### Instantiate SDK
 
