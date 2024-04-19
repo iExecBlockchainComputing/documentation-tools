@@ -1,6 +1,6 @@
 # Getting Started
 
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/iexec-oracle-factory-wrapper/main?color=green)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/iexec-oracle-factory-wrapper?color=green)](https://github.com/iExecBlockchainComputing/iexec-oracle-factory-wrapper)
 
 ## Overview
 
