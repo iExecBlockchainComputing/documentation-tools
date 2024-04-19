@@ -34,10 +34,10 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ***protectedData (required)***
 
-
 The ethereum address of the protected data supplied by the user.
 
 ***authorizedApp (required)***
+
 The address of the application you wish to authorize to process the `protectedData` within a secure execution environment. You may specify either a single application or an application whitelist. To specify a whitelist, you provide the ETH address of an [iExec Whitelist Smart Contract](https://github.com/iExecBlockchainComputing/whitelist-smart-contract/tree/main). This smart contract aggregates multiple application versions. This allows you to introduce new versions of your application without needing to grant access for the `protectedData` each time you do so.
 
 {% hint style="info" %}
@@ -49,6 +49,7 @@ iExec also maintains a whitelist for the Web3Mail decentralized application. Gra
 {% endhint %}
 
 ***authorizedUser (required)***
+
 The address of the user you wish to authorize to use the `protectedData`. Note that these users may not view or manipulate the data. This only grants permission for the user to submit the data to an iExec application.
 
 {% hint style="info" %}
@@ -56,15 +57,46 @@ You may authorize all users to use the protected data by setting this to **0x000
 {% endhint %}
 
 ***pricePerAccess (optional)***
+
 Allows specifying an optional nRLC cost associated with every access of the protected data.
 
 *default*: 0
+
+`pricePerAccess` parameter specifies the usage fee in nano RLC (nRLC) associated with each access of the data. It represents the cost incurred for each individual interaction with application.
+
+By invoking the grantAccess method with a specific `pricePerAccess` you define the fee that the specified user (`authorizedUser` parameter) users must pay for each access to the data when used with the specified application (`authorizedApp` parameter).
+
+The fee is paid to the owner of the protected data.
+
+<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
+    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
+<strong>    pricePerAccess: 3
+</strong>})
+</code></pre>
+
+{% hint style="info" %}
+`pricePerAccess` is expressed in nano RLC (nRLC). nRLC is the smallest subdivision of the RLC token, 1 RLC equals to 10^9 nRLC.
+
+When provided, `pricePerAccess` must be a non-negative integer value.
+{% endhint %}
 
 ***numberOfAccess (optional)***
 
 Allows optionally restricting the number of times the protected data may be processed and used. 
 
 *default*: 1
+
+<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess(
+    args: {
+        protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+        authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+        authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
+<strong>        numberOfAccess: 10
+</strong>    }
+)
+</code></pre>
 
 ## Result
 
