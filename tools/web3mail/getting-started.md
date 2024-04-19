@@ -21,15 +21,15 @@ system:
 npm install @iexec/web3mail
 ```
 
-```sh
+```sh [yarn]
 yarn add @iexec/web3mail
 ```
 
-```sh
+```sh [pnpm]
 pnpm add @iexec/web3mail
 ```
 
-```sh
+```sh [bun]
 bun add @iexec/web3mail
 ```
 
