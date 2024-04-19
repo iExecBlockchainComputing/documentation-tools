@@ -66,6 +66,40 @@ Allows optionally restricting the number of times the protected data may be proc
 
 *default*: 1
 
+`pricePerAccess` parameter specifies the usage fee in nano RLC (nRLC) associated with each access of the data. It represents the cost incurred for each individual interaction with application.
+
+By invoking the grantAccess method with a specific `pricePerAccess` you define the fee that the specified user (`authorizedUser` parameter) users must pay for each access to the data when used with the specified application (`authorizedApp` parameter).
+
+The fee is paid to the owner of the protected data.
+
+<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess({
+    protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+    authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+    authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
+<strong>    pricePerAccess: 3
+</strong>})
+</code></pre>
+
+{% hint style="info" %}
+`pricePerAccess` is expressed in nano RLC (nRLC). nRLC is the smallest subdivision of the RLC token, 1 RLC equals to 10^9 nRLC. 
+
+When provided, `pricePerAccess` must be a non-negative integer value.
+{% endhint %}
+
+### numberOfAccess (optional)
+
+The number of times the data can be processed and used. The numberOfAccess defaults to 1 if omitted.
+
+<pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess(
+    args: {
+        protectedData: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+        authorizedApp: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+        authorizedUser: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
+<strong>        numberOfAccess: 10
+</strong>    }
+)
+</code></pre>
+
 ## Result
 
 The result of this method confirms the new access grant. It consists of a JSON `grantedAccess` object.
