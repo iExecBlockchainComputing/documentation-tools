@@ -1,7 +1,7 @@
 # getProtectedDataInCollections
 
 Method to get protected data that are in collections, ie. owned by the Data
-Sharing smart-contract.
+Sharing smart contract.
 
 ## Usage
 

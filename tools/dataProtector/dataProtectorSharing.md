@@ -11,13 +11,13 @@ That includes:
 - Selling
 
 One of the key aspects is that your protected data will be managed by a special
-Data Sharing smart-contract.
+Data Sharing smart contract.
 
 Let's try to make it more visual:
 
-![Data Sharing smart-contract](./dataProtectorSharing/data-sharing-sc.png)
+![Data Sharing smart contract](./dataProtectorSharing/data-sharing-sc.png)
 
-This special smart-contract will be responsible for **enforcing governance**
+This special smart contract will be responsible for **enforcing governance**
 over your protected data, based on your distribution choices. (renting, selling,
 etc.)
 
