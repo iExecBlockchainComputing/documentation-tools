@@ -36,14 +36,15 @@ import { type GetProtectedDataParams } from '@iexec/dataprotector';
 
 Provides a list of protected data objects matching this schema.
 
+<!-- prettier-ignore-start -->
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
-  requiredSchema: {
-    // [!code focus]
+  requiredSchema: { // [!code focus]
     email: 'string', // [!code focus]
-  },
+  }, // [!code focus]
 });
 ```
+<!-- prettier-ignore-end -->
 
 ### owner
 
