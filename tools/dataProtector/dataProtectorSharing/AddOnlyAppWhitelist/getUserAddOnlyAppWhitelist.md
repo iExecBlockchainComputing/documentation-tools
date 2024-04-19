@@ -19,8 +19,7 @@ import { type GetUserAppWhitelistParams } from '@iexec/dataprotector';
 
 `AddressOrENS | undefined`
 
-Address or ENS of the user that you want to get
-`AddAppToAddOnlyAppWhitelist`that he managed.
+Address or ENS of the user that manages the `AddAppToAddOnlyAppWhitelist`
 
 ```js
 const allUserAddOnlyAppWhitelist =

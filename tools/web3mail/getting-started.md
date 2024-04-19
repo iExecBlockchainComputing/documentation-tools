@@ -1,7 +1,5 @@
 # Getting Started
 
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/web3mail/main?color=green)
-
 ## Overview
 
 ### Prerequisites
