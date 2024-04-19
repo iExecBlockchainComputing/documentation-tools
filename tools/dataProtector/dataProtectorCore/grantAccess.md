@@ -108,8 +108,16 @@ You may authorize all users to use the protected data by setting this to
 
 _default_: `1`
 
-Allows specifying an optional nano RLC cost associated with every access of the
-protected data.
+Specifies the usage fee in nano RLC (nRLC) associated with each access of the
+data. It represents the cost incurred for each individual interaction with
+application.
+
+By invoking the grantAccess method with a specific `pricePerAccess` you define
+the fee that the specified user (`authorizedUser` parameter) must pay for each
+access to the data when used with the specified application (`authorizedApp`
+parameter).
+
+The fee is paid to the owner of the protected data.
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
@@ -120,6 +128,15 @@ const grantedAccess = await dataProtector.grantAccess({
   numberOfAccess: 10,
 });
 ```
+
+::: tip
+
+`pricePerAccess` is expressed in nano RLC (nRLC). nRLC is the smallest
+subdivision of the RLC token, 1 RLC equals to 10^9 nRLC.
+
+When provided, `pricePerAccess` must be a non-negative integer value.
+
+:::
 
 ### numberOfAccess
 
