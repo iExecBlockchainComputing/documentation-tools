@@ -35,10 +35,10 @@ const dataProtector = new IExecDataProtectorCore(web3Provider); // [!code ++]
 
 ## Methods
 
-### Rename `fetchProtectedData` & add new filtering param
-
 Some methods were renamed in order to standardize the SDK, they still provide
 the same functionalities as before.
+
+### Rename `fetchProtectedData` & add new filtering param
 
 ```js
 await dataProtector.fetchProtectedData({ // [!code --]
@@ -49,9 +49,6 @@ await dataProtector.getProtectedData({ // [!code ++]
 ```
 
 ### Rename `fetchGrantedAccess`
-
-Some methods were renamed in order to standardize the SDK, they still provide
-the same functionalities as before.
 
 ```js
 await dataProtector.fetchGrantedAccess({ // [!code --]
@@ -68,7 +65,7 @@ The `protectDataObservable` function has been removed and its functionality has
 been integrated into the `protectData` method with a new optional parameter.
 This parameter is a callback function that provides status updates during the
 data protection process. This change simplifies the API and enhances flexibility
-in handling the protection process's status updates.
+in handling the protection process status updates.
 
 <!-- prettier-ignore-start -->
 ```js
@@ -86,11 +83,11 @@ const protectedData = await dataProtector.protectData({
 
 ### Removed `revokeAllAccessObservable`
 
-Similarly, the `revokeAllAccessObservable` method has been for `revokeAllAccess`
-which do the same thing as `revokeAllAccessObservable` but include an optional
-callback function parameter. This callback allows developers to receive feedback
-about the revocation process's status, providing more control and better
-handling of the process.
+Similarly, the `revokeAllAccessObservable` method has been replaced for
+`revokeAllAccess` which does the same thing as `revokeAllAccessObservable` but
+includes an optional callback function parameter. This callback allows
+developers to receive feedback about the revocation status of the process,
+providing more control and better handling of the process.
 
 <!-- prettier-ignore-start -->
 ```js

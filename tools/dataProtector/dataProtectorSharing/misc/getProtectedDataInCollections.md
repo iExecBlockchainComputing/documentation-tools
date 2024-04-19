@@ -82,6 +82,17 @@ const protectedDataForSale =
   });
 ```
 
+### isDistributed
+
+`boolean | undefined`
+
+```js
+const protectedDataForSale =
+  await dataProtectorSharing.getProtectedDataInCollections({
+    isDistributed: true, // [!code focus]
+  });
+```
+
 ### page
 
 `number | undefined`

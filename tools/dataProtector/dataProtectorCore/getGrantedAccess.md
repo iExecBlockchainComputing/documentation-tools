@@ -8,9 +8,9 @@ paginated list.
 
 ## Usage
 
-The request object is a JSON FetchGrantedAccessParams object. Each address in
-the object is a String representation of an ethereum address or ENS name
-(Ethereum Name Service) reference.
+The request object is a JSON GetGrantedAccessParams object. Each address in the
+object is a String representation of an ethereum address or ENS name (Ethereum
+Name Service) reference.
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({

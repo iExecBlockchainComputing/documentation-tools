@@ -3,7 +3,7 @@
 Method to set subscription parameters for a given collection of yours.
 
 When someone tries to consume a protected data that is part of your
-subscription, the Data Sharing smart-contract will check that the given user has
+subscription, the Data Sharing smart contract will check that the given user has
 a currently valid subscription.
 
 ## Usage
