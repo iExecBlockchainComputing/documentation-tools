@@ -1,4 +1,4 @@
-# DataProtector Sharing
+# Amazing DataProtector Sharing
 
 Part of DataProtector, "Sharing" is a special module that includes a set of
 methods for you to **distribute and monetise your protected data**.
