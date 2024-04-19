@@ -17,13 +17,13 @@ This approach to data management relies on:
 
 DataProtector Core module contains the following set of methods:
 
-- **protectData** — safeguards data by encrypting it and recording ownership as
+- **protectData** — safeguard data by encrypting it and recording ownership as
   an NFT
-- **grantAccess** — authorizes an application to process a user's data without
+- **grantAccess** — authorize an application to process a user's data without
   exposing the data to any external system or user review
-- **revokeAllAccess** — removes all access granted to any iExec applications or
+- **revokeAllAccess** — remove all access granted to any iExec applications or
   user for a `protectedData` object
-- **revokeOneAccess** — removes a specific access previously granted on a
+- **revokeOneAccess** — remove a specific access previously granted on a
   `protectedData`
 - **getProtectedData** — retrieve a list of all protected data for one owner
   and/or data schema
