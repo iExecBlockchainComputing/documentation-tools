@@ -8,9 +8,9 @@ paginated list.
 
 ## Usage
 
-The request object is a JSON GetGrantedAccessParams object. Each address in the
-object is a String representation of an ethereum address or ENS name (Ethereum
-Name Service) reference.
+The request object is a JSON `GetGrantedAccessParams` object. Each address in
+the object is a string representation of an ethereum address or ENS name
+(Ethereum Name Service) reference.
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
@@ -51,7 +51,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 `AddressOrENS | any | undefined`
 
 Optional filter to restrict the results to include only authorizations for the
-specified application.It's a representation of ethereum address or ENS name
+specified application. It's a representation of ethereum address or ENS name
 (Ethereum Name Service)
 
 ```js
@@ -81,7 +81,7 @@ explicitly granted access to that application address.
 `AddressOrENS | any | undefined`
 
 Optional filter to restrict the results to include only authorizations for the
-specified user.It's a String representation of ethereum address or ENS name
+specified user. It's a string representation of ethereum address or ENS name
 (Ethereum Name Service)
 
 ```js
