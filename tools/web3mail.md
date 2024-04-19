@@ -23,9 +23,9 @@ Apps using the Web3Mail tool can:
 
 The Web3Mail tool currently supports the following methods:
 
-- **fetchMyContacts** — retrieves a list of Ethereum addresses whose owners have
+- **fetchMyContacts** — retrieve a list of Ethereum addresses whose owners have
   authorized you to email them
 - **fetchUserContacts** — retrieve a list of Ethereum addresses whose owners
   have authorized a given entity to email them
-- **sendEmail** — used to send an email message to a user knowing only the
-  Ethereum address for the `protectedData` containing their email address
+- **sendEmail** — send an email message to a user knowing only the Ethereum
+  address for the `protectedData` containing their email address
