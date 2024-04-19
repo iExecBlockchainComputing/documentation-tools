@@ -34,10 +34,10 @@ const grantedAccess = await dataProtector.grantAccess({
 
 ***protectedData (required)***
 
-
 The ethereum address of the protected data supplied by the user.
 
 ***authorizedApp (required)***
+
 The address of the application you wish to authorize to process the `protectedData` within a secure execution environment. You may specify either a single application or an application whitelist. To specify a whitelist, you provide the ETH address of an [iExec Whitelist Smart Contract](https://github.com/iExecBlockchainComputing/whitelist-smart-contract/tree/main). This smart contract aggregates multiple application versions. This allows you to introduce new versions of your application without needing to grant access for the `protectedData` each time you do so.
 
 {% hint style="info" %}
@@ -49,6 +49,7 @@ iExec also maintains a whitelist for the Web3Mail decentralized application. Gra
 {% endhint %}
 
 ***authorizedUser (required)***
+
 The address of the user you wish to authorize to use the `protectedData`. Note that these users may not view or manipulate the data. This only grants permission for the user to submit the data to an iExec application.
 
 {% hint style="info" %}
@@ -56,15 +57,10 @@ You may authorize all users to use the protected data by setting this to **0x000
 {% endhint %}
 
 ***pricePerAccess (optional)***
+
 Allows specifying an optional nRLC cost associated with every access of the protected data.
 
 *default*: 0
-
-***numberOfAccess (optional)***
-
-Allows optionally restricting the number of times the protected data may be processed and used. 
-
-*default*: 1
 
 `pricePerAccess` parameter specifies the usage fee in nano RLC (nRLC) associated with each access of the data. It represents the cost incurred for each individual interaction with application.
 
@@ -81,14 +77,16 @@ The fee is paid to the owner of the protected data.
 </code></pre>
 
 {% hint style="info" %}
-`pricePerAccess` is expressed in nano RLC (nRLC). nRLC is the smallest subdivision of the RLC token, 1 RLC equals to 10^9 nRLC. 
+`pricePerAccess` is expressed in nano RLC (nRLC). nRLC is the smallest subdivision of the RLC token, 1 RLC equals to 10^9 nRLC.
 
 When provided, `pricePerAccess` must be a non-negative integer value.
 {% endhint %}
 
-### numberOfAccess (optional)
+***numberOfAccess (optional)***
 
-The number of times the data can be processed and used. The numberOfAccess defaults to 1 if omitted.
+Allows optionally restricting the number of times the protected data may be processed and used. 
+
+*default*: 1
 
 <pre class="language-javascript"><code class="lang-javascript">const grantedAccess = await dataProtector.grantAccess(
     args: {
