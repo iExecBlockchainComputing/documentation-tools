@@ -1,11 +1,13 @@
-# fetchMyContacts
+# fetchUserContacts
 
-This method provides a list of `contact` objects identifying all users who previously granted authorization to send them email messages. Each contact contains the contact's ETH address as well as the ETH address for the `protectedData` containing their email address.
+This method provides a list of `contact` objects identifying all entities who previously granted authorization to a specified entity to send them email messages. Each contact contains the contact's ETH address as well as the ETH address for the `protectedData` containing their email address.
 
 ## Usage
 
 ```javascript
-const contactsList = await web3mail.fetchMyContacts();
+const contactsList = await web3mail.fetchUserContacts({
+  userAddress: "0xF048eF3d7E3B33A465E0599E641BB29421f7Df92",
+});
 ```
 
 ## Return value example
@@ -19,9 +21,18 @@ const contactsList = await web3mail.fetchMyContacts();
   },
 ];
 ```
+
+## Parameters
+
+### userAddress
+
+The entity for which you wish to obtain the list of contacts.
+
+*type*: String representation of an Ethereum address. 
+
 ## Result
 
-The result object contains a list of `contact` objects. Each `contact` represents one user who previously granted you authorization to send them messages. Each object contains the following fields:
+The result object contains a list of `contact` objects. Each `contact` represents one user who previously granted authorization for the user identified with `userAddress` to send them messages. Each object contains the following fields:
 
 ***accessGrantTimestamp***
 
