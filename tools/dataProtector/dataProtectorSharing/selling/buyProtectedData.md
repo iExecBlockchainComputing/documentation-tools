@@ -58,7 +58,9 @@ Collection ID to which you'd like to transfer the ownership of the protected
 data.  
 The Data Sharing smart-contract will still be the technical owner of the
 protected data, but you'll fully own it as you own the collection to which it'll
-transferred.
+transferred. If you use this param the `addOnlyAppWhitelist` is mandatory
+because you must specify which `addOnlyAppWhitelist` will be able to consume
+your protected data.
 
 ```js
 const { txHash } = await dataProtectorSharing.buyProtectedData({
