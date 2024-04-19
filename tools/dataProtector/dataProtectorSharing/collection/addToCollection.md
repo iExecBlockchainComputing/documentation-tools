@@ -53,20 +53,29 @@ Before any smart-contract interaction, the existence of the protected data will
 be checked, as well as the ownership: it should be the wallet address you used
 to instantiate DataProtector SDK.
 
-### appWhitelist
+### addOnlyAppWhitelist
 
 `AddressOrENS | undefined`
 
-Address of the whitelist smart contract that contains applications able to
+Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.
 
 ```js
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...',
-  appWhitelist: '0x423ovk...', // [!code focus]
+  addOnlyAppWhitelist: '0xba46d6...', // [!code focus]
 });
 ```
+
+::: tip
+
+For this `addOnlyAppWhitelist`, you are free to use
+`0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed` that contains apps created for the
+purpose of Content Creator usecase-demo. This `addOnlyAppWhitelist` is managed
+by iExec.
+
+:::
 
 ### onStatusUpdate
 

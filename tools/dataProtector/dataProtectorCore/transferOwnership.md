@@ -5,12 +5,15 @@ identified by their ETH address. The return value provides a transaction hash
 and confirmation of the new owner of the `protectedData`. Only the current owner
 of the `protectedData` may invoke this method.
 
+When transferring the `protectedData`, the grantedAccess created by the previous
+owner are revoked automatically.
+
 ## Usage
 
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E9h4...',
+  newOwner: '0xc5e9f4...',
 });
 ```
 
@@ -30,7 +33,7 @@ new owner.
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E9h4...', // [!code focus]
+  newOwner: '0xc5e9f4...', // [!code focus]
 });
 ```
 
@@ -43,7 +46,7 @@ ETH address for the new owner for the `protectedData`.
 ```js
 const transferResponse = await dataProtector.transferOwnership({
   protectedData: '0x123abc...',
-  newOwner: '0xC5E9h4...', // [!code focus]
+  newOwner: '0xc5e9f4...', // [!code focus]
 });
 ```
 

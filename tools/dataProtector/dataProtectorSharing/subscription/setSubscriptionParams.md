@@ -12,8 +12,8 @@ a currently valid subscription.
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
-    priceInNRLC: 2_000_000_000, // 2 RLC
-    durationInSeconds: 60 * 60 * 24 * 30, // 30 days
+    price: 2, // 2 RLC
+    duration: 60 * 60 * 24 * 30, // 30 days
   });
 ```
 
@@ -31,26 +31,26 @@ Collection ID to which you'd like to set the subscription params.
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12, // [!code focus]
-    priceInNRLC: 2_000_000_000, // 2 RLC
-    durationInSeconds: 60 * 60 * 24 * 30, // 30 days
+    price: 2, // 2 RLC
+    duration: 60 * 60 * 24 * 30, // 30 days
   });
 ```
 
-### priceInNRLC
+### price
 
-The price (in nano RLC) it's going to cost a subscriber to access your
+The price in nano RLC (nRLC) it's going to cost a subscriber to access your
 collection.
 
 ```js
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
-    priceInNRLC: 2_000_000_000, // 2 RLC // [!code focus]
-    durationInSeconds: 60 * 60 * 24 * 30, // 30 days
+    price: 2, // 2 RLC // [!code focus]
+    duration: 60 * 60 * 24 * 30, // 30 days
   });
 ```
 
-### durationInSeconds
+### duration
 
 The duration (in seconds) for a period of subscription.
 
@@ -58,8 +58,8 @@ The duration (in seconds) for a period of subscription.
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
-    priceInNRLC: 2_000_000_000, // 2 RLC
-    durationInSeconds: 60 * 60 * 24 * 30, // 30 days // [!code focus]
+    price: 2, // 2 RLC
+    duration: 60 * 60 * 24 * 30, // 30 days // [!code focus]
   });
 ```
 

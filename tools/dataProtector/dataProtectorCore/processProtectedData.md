@@ -129,6 +129,8 @@ const taskid = await dataProtector.processProtectedData({
 
 `AddressOrENS | any | undefined`
 
+_default_: `prod-v8-bellecour.main.pools.iexec.eth`
+
 The ETH address or Ethereum Name Service (ENS) address for the iExec workerpool.
 It's the confidential computer on which the iExec application will run.
 
@@ -137,8 +139,6 @@ It's the confidential computer on which the iExec application will run.
 iExec currently offers a production workerpool located at the Ethereum Name
 Service (ENS) address `prod-v8-bellecour.main.pools.iexec.eth`. This is the
 default workerpool for running confidential computations on the iExec platform.
-If no specific workerpool address is specified, computations will automatically
-be directed to this default workerpool.
 
 :::
 

@@ -6,7 +6,7 @@ Method to get all collections for a specific user.
 
 ```js
 const userCollections = await dataProtectorSharing.getCollectionsByOwner({
-  owner: '0xA0c15z...',
+  owner: '0xa0c15e...',
 });
 ```
 
@@ -22,7 +22,7 @@ import { type GetCollectionsByOwnerParams } from '@iexec/dataprotector';
 
 ```js
 const userCollections = await dataProtectorSharing.getCollectionsByOwner({
-  owner: '0xA0c15z...', // [!code focus]
+  owner: '0xa0c15e...', // [!code focus]
 });
 ```
 
@@ -35,7 +35,7 @@ _default_: `false`
 ```js
 const userCollectionsWithAllProtectedData =
   await dataProtectorSharing.getCollectionsByOwner({
-    owner: '0xA0c15z...',
+    owner: '0xa0c15e...',
     includeHiddenProtectedDatas: true, // [!code focus]
   });
 ```

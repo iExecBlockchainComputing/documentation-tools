@@ -50,14 +50,15 @@ import { type ProtectDataParams } from '@iexec/dataprotector';
 This is the actual data the user is protecting, provided as a JSON object with
 any number of custom keys. The data is encrypted and stored as an NFT.
 
+<!-- prettier-ignore-start -->
 ```js
 const protectedData = await dataProtector.protectData({
-  data: {
-    // [!code focus]
+  data: { // [!code focus]
     email: 'example@gmail.com', // [!code focus]
   }, // [!code focus]
 });
 ```
+<!-- prettier-ignore-end -->
 
 ### name
 

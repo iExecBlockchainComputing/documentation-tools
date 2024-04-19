@@ -11,7 +11,7 @@ parameters, or simply keep the protected data for their own use.
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
   protectedData: '0x123abc...',
-  priceInNRLC: 2_000_000_000, // 2 RLC
+  price: 2, // 2 nRLC
 });
 ```
 
@@ -30,20 +30,21 @@ Address of the protected data that you'd like to set for sale.
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
   protectedData: '0x123abc...', // [!code focus]
-  priceInNRLC: 2_000_000_000, // 2 RLC
+  price: 2, // 2 nRLC
 });
 ```
 
-### priceInNRLC
+### price
 
 `number`
 
-The price in nano RLC you ask from someone who wants to buy the protected data.
+The price in nano RLC (nRLC) you ask from someone who wants to buy the protected
+data.
 
 ```js
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
   protectedData: '0x123abc...',
-  priceInNRLC: 2_000_000_000, // 2 RLC // [!code focus]
+  price: 2, // 2 nRLC // [!code focus]
 });
 ```
 

@@ -26,7 +26,7 @@ import { type RemoveCollectionParams } from '@iexec/dataprotector';
 
 `number`
 
-The collection token ID of the collection you want to remove.
+The collection ID of the collection you want to remove.
 
 ```js
 const { txHash } = await dataProtectorSharing.removeCollection({
