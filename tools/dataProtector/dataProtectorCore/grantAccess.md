@@ -144,8 +144,8 @@ When provided, `pricePerAccess` must be a non-negative integer value.
 
 _default_: `1`
 
-Allows optionally restricting the number of times the protected data may be
-processed and used.
+Allows restricting the number of times the protected data may be processed and
+used.
 
 ```js
 const grantedAccess = await dataProtector.grantAccess({
