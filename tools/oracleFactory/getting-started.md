@@ -32,12 +32,12 @@ You can find the project
 npm install @iexec/iexec-oracle-factory-wrapper
 ```
 
-```sh [pnpm]
-pnpm add @iexec/iexec-oracle-factory-wrapper
-```
-
 ```sh [yarn]
 yarn add @iexec/iexec-oracle-factory-wrapper
+```
+
+```sh [pnpm]
+pnpm add @iexec/iexec-oracle-factory-wrapper
 ```
 
 ```sh [burn]

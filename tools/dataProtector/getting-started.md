@@ -21,11 +21,11 @@ system:
 npm install @iexec/dataprotector
 ```
 
-```sh [pnpm]
+```sh [yarn]
 yarn add @iexec/dataprotector
 ```
 
-```sh [yarn]
+```sh [pnpm]
 pnpm add @iexec/dataprotector
 ```
 
