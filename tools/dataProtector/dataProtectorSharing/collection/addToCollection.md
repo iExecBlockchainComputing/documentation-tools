@@ -1,11 +1,11 @@
 # addToCollection
 
 Method to transfer one of your protected data to a collection of yours in the
-Data Sharing smart-contract.
+Data Sharing smart contract.
 
 Under the hood, this method performs two actions:
 
-- Approve the Data Sharing smart-contract to transfer the protected data.
+- Approve the Data Sharing smart contract to transfer the protected data.
 - Add the protected data to your collection.
 
 ## Usage
@@ -49,7 +49,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 });
 ```
 
-Before any smart-contract interaction, the existence of the protected data will
+Before any smart contract interaction, the existence of the protected data will
 be checked, as well as the ownership: it should be the wallet address you used
 to instantiate DataProtector SDK.
 

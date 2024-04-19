@@ -1,6 +1,6 @@
 # removeCollection
 
-Method to remove one of your collection in the Data Sharing smart-contract.
+Method to remove one of your collection in the Data Sharing smart contract.
 
 ## Usage
 
