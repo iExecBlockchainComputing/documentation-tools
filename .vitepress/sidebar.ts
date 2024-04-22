@@ -109,6 +109,10 @@ export function getSidebar() {
                     link: '/tools/dataProtector/dataProtectorSharing/misc/consumeProtectedData',
                   },
                   {
+                    text: 'getResultFromCompletedTask',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getResultFromCompletedTask',
+                  },
+                  {
                     text: 'getProtectedDataInCollections',
                     link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataInCollections',
                   },
