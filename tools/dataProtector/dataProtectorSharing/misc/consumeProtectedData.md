@@ -166,9 +166,8 @@ Identifies the specific deal associated with this transaction.
 
 Identifies the specific task associated with the deal.
 
-### fileAsBase64
+### contentAsObjectURL
 
 `string`
 
-The actual content of the protected file, encoded in base64.  
-The file is expected to be found in a `file` property inside the protected data.
+The actual content of the protected file, wrapped in an `ObjectURL`.
