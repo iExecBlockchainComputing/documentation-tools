@@ -38,3 +38,15 @@ wider audience**.
   user who wants to access your content will).
 - Any user can access your content as long as they comply with your distribution
   and monetization choices.
+
+## Sandbox
+
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sharing-sandbox/main" target="_blank" rel="noreferrer" class="link-as-block">
+  ⚡ &nbsp;Code Sandbox
+</a>
+
+Corresponding GitHub repository:
+
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sharing-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
+  🔎 &nbsp;GitHub repository sandbox
+</a>
