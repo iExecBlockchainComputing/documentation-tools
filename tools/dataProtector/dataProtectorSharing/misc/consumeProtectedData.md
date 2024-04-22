@@ -69,7 +69,7 @@ const consumeProtectedDataResult =
 ```
 
 For this `app` parameter you can use the following iExec provided app:
-`0x82e41e1b594ccf69b0cfda25637eddc4e6d4e0fc`.
+`0x85795d8eb2b5d39a6e8dfb7890924191b3d1ccf6`.
 
 ::: warning
 
