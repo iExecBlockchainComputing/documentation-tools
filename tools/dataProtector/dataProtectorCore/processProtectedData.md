@@ -18,7 +18,10 @@ const taskid = await dataProtector.processProtectedData({
   maxPrice: 10,
   args: 'arg1 arg2',
   inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
-  secrets: ['secret1', 'secret2'],
+  secrets: {
+    1: 'secret1',
+    2: 'secret2',
+  },
 });
 ```
 
@@ -116,12 +119,19 @@ A set of requester secrets necessary for the application's execution. This is
 represented as a mapping of numerical identifiers to corresponding secrets
 stored in the secrets manager needed for the application's execution.
 
+Secrets are accessible during the application's execution with environment
+variables `IEXEC_REQUESTER_SECRET_n`.
+
 ```js
 const taskid = await dataProtector.processProtectedData({
   protectedData: '0x123abc...',
   app: '0xC2E...',
   maxPrice: 10,
-  secrets: ['secret1', 'secret2'], // [!code focus]
+  secrets: {
+    // [!code focus]
+    1: 'secret1',
+    2: 'secret2',
+  },
 });
 ```
 
