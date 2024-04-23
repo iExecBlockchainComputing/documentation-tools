@@ -5,7 +5,7 @@ Data Sharing smart contract.
 
 Under the hood, this method performs two actions:
 
-- Approve the Data Sharing smart contract to transfer the protected data.
+- Approve the Data Sharing smart contract to manage your protected data.
 - Add the protected data to your collection.
 
 ## Usage
