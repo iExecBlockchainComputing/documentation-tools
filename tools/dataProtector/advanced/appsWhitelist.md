@@ -30,8 +30,8 @@ For this `addOnlyAppWhitelist`, you are free to use:
 ```
 
 that contains apps created for the purpose of
-[Content Creator usecase-demo](../useCaseDemo/contentCreator.md). This apps
-whitelist is managed by iExec.
+[Content Creator usecase-demo](../../../overview/useCaseDemo/contentCreator.md).
+This apps whitelist is managed by iExec.
 
 You can explore this apps whitelist on
 [https://blockscout-bellecour.iex.ec/](https://blockscout-bellecour.iex.ec/address/0x1099844C74F6a2bE20dbE1Aa2AfB3A1D29421aED)
