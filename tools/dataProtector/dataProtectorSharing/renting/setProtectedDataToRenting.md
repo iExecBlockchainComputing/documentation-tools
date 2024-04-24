@@ -2,6 +2,10 @@
 
 Method to allow a protected data to be rented.
 
+If you call this method on a protected data that is already set for renting, it
+will update the `price` and `duration` parameters, and will apply to future
+rentals.
+
 ## Usage
 
 ```js
