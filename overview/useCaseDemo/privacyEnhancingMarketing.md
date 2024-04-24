@@ -1,3 +1,7 @@
+<script setup>
+import { Icon } from '@iconify/vue';
+</script>
+
 # Privacy Enhancing Marketing
 
 In the Web3 ecosystem, users often rely on blockchain wallets for storing and
@@ -48,12 +52,14 @@ projects to create their own PEM applications or campaigns.
 **Try the demo:**
 
 <a href="https://demo.iex.ec/pem/" target="_blank" rel="noreferrer" class="link-as-block">
-  Privacy Enhancing Marketing Demo
+  <Icon icon="mdi:art" height="25" style="margin-right: -1px" /> Privacy Enhancing Marketing Demo
 </a>
 
-**Fork the use case demo code repository:**
+**GitHub repository:**
 
-[_https://github.com/iExecBlockchainComputing/web3mail-usecase-demo_](https://github.com/iExecBlockchainComputing/web3mail-usecase-demo)
+<a href="https://github.com/iExecBlockchainComputing/web3mail-usecase-demo" target="_blank" rel="noreferrer" class="link-as-block">
+  <Icon icon="mdi:github" height="24" /> PEM use case demo
+</a>
 
 **Discover the resources relative to the use case:**
 

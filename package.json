@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.2",
     "@shikijs/vitepress-twoslash": "^1.2.0",
     "prettier": "^3.2.5",
     "vitepress": "^1.0.1"

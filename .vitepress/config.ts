@@ -28,7 +28,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Overview', link: '/overview/what-we-do' },
+      { text: 'Overview', link: '/overview/whatWeDo' },
       {
         text: 'Tools',
         items: [
