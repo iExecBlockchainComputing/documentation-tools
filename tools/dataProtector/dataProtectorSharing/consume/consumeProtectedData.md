@@ -68,34 +68,24 @@ const consumeProtectedDataResult =
   });
 ```
 
-For this `app` parameter you can use the following iExec provided app:
-`0x85795d8eb2b5d39a6e8dfb7890924191b3d1ccf6`.
+::: tip
 
-::: warning
+For this `app` parameter you can use the following iExec TEE dApp:
 
-This app is specific to our Content Creator usecase-demo. It expects a protected
-data that contains a property named `file`:
-
-```json
-{
-  "file": "<ArrayBuffer>"
-}
+```
+0x85795d8eb2b5d39a6e8dfb7890924191b3d1ccf6
 ```
 
-You are free to use this iExec app but if the given protected data has a
-different schema, it won't work. Moreover, the app belongs to iExec
-`addOnlyAppWhitelist` deployed at the address
-`0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed`. So if you want to use this app,
-the protected data should be linked to the iExec `addOnlyAppWhitelist`.
-Otherwise you must choose an app that belongs to the `addOnlyAppWhitelist`
-linked to this protected data.
+For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
 
 :::
 
-::: warning
+::: tip
 
-This app needs to be part of the `addOnlyAppWhitelist` given when calling
-[addToCollection()](../collection/addToCollection.md#addOnlyAppWhitelist)
+If you want to provide **your own TEE dApp**, you will need to create a
+whitelist that contains your app.
+
+For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
 
 :::
 

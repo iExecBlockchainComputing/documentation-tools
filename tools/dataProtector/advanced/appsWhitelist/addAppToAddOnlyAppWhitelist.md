@@ -1,10 +1,16 @@
 # addAppToAddOnlyAppWhitelist
 
-Method to add an app (iExec Tee Dapp) into the `AddOnlyAppWhitelist`.
+Method to add an app (iExec TEE dApp) into the `AddOnlyAppWhitelist`.
 
 ::: warning
 
-You can't remove an app from the whitelist. The whitelist are only additive.
+Once added, you can't remove an app from the whitelist.
+
+_Why?_
+
+This is mainly **to protect users** who have paid for protected data. Imagine
+the collection owner could remove all apps from the initial whitelist, users
+having rented the protected data could no longer consume it.
 
 :::
 
