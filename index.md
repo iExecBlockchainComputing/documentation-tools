@@ -7,7 +7,7 @@ monetization.
 
 ## Overview
 
-<a href="./overview/what-we-do" class="link-for-home">
+<a href="./overview/whatWeDo" class="link-for-home">
   💡 &nbsp;What we do
 </a>
 

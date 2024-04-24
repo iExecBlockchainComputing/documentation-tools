@@ -6,15 +6,19 @@ export function getSidebar() {
       {
         text: 'OVERVIEW',
         items: [
-          { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/what-we-do' },
+          { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/whatWeDo' },
           {
             text: '📽&nbsp;&nbsp;Use Case Demo',
             collapsed: true,
-            link: '/overview/use-case-demo',
+            link: '/overview/useCaseDemo',
             items: [
               {
                 text: 'Privacy Enhancing Marketing',
-                link: '/overview/use-case-demo/privacy-enhancing-marketing',
+                link: '/overview/useCaseDemo/privacyEnhancingMarketing',
+              },
+              {
+                text: 'Content Creator',
+                link: '/overview/useCaseDemo/contentCreator',
               },
             ],
           },
@@ -210,10 +214,6 @@ export function getSidebar() {
           {
             text: 'Types',
             link: '/tools/dataProtector/types',
-          },
-          {
-            text: 'Use Case Demo',
-            link: '/tools/dataProtector/useCaseDemo/contentCreator',
           },
           {
             text: 'Advanced',
