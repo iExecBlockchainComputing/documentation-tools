@@ -2,6 +2,9 @@
 
 Allows transferring ownership of a `protectedData` entity to a new owner, identified by their ETH address. The return value provides a transaction hash and confirmation of the new owner of the `protectedData`. Only the current owner of the `protectedData` may invoke this method.
 
+Ownership of the `protectedData` can be renounced by transferring it to the burn
+address `0x000000000000000000000000000000000000dEaD`.
+
 ## Usage
 
 ```javascript
