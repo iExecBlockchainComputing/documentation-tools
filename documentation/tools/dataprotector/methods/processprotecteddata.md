@@ -61,7 +61,7 @@ A set of URLs representing the input files required for application execution.
 
 A set of requester secrets necessary for the application's execution. This is represented as a mapping of numerical identifiers to corresponding secrets stored in the secrets manager needed for the application's execution.
 
-Secrets are accessible during the application's execution with environment variables `IEXEC_REQUESTER_SECRET_n`.
+Secrets are accessible during the application's execution as environment variables. For more details, see [Access requester secrets](https://protocol.docs.iex.ec/for-developers/confidential-computing/access-confidential-assets/requester-secrets).
 
 ## Result
 
