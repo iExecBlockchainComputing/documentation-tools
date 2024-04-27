@@ -28,7 +28,7 @@ You can view a live demo of the Privacy-Enhancing Marketing demo on our website.
 
 **GitHub repository:**
 
-Our GitHub repository has the full code behind the demo, along with additional documentation on how to employ it. We also provide guidance on how you can integrate the demo within your own live applications.
+Our GitHub repository has the full code behind the demo, along with additional documentation on how to employ it. We also provide guidance on how you can integrate the demo within your own live applications. You have the option of running the demo locally, or within docker, using the directions in the guide.
 
 <a href="https://github.com/iExecBlockchainComputing/web3mail-usecase-demo" target="_blank" rel="noreferrer" class="link-as-block">
   <Icon icon="mdi:github" height="24" /> PEM use case demo
