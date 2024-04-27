@@ -1,42 +1,36 @@
 # 💡 What we do
 
-iExec offers a unique and innovative solution to protect and grow the value of
-your digital estate\*. Its decentralized nature, built-in blockchain protocol,
-and support for cutting-edge cryptographic technologies make it an ideal choice
-for individuals and organizations seeking to optimize their computing resources
-while prioritizing security and privacy.
+iExec's distinct approach helps protect your digital estate\* while simultaneously growing its value. Our technology couples decentralized computing with a built-in blockchain protocol and support for cutting-edge cryptographic protocols. This makes iExec an ideal choice for individuals and organizations seeking to optimize their computing resources while prioritizing security and privacy.
 
-If you are a developer interested in **privacy**, **ownership**, and
-**monetization**, iExec is the perfect platform for you.
+## Reasons to choose iExec
 
-iExec offers developers the ability to build and deploy their decentralized
-applications. This means that data is stored on a decentralized network,
-ensuring that they are protected from any unauthorized access. Additionally,
-iExec uses advanced **confidential computing** techniques to ensure that data
-remain secure and private even when processed on untrusted remote servers. That
-guarantees that data is protected from unauthorized access and tampering, even
-if the underlying hardware or operating system is compromised. Thus, iExec
-technology is built following a privacy-by-design principle, which guarantees
-that no one can access or copy users’ and developers’ data unless explicitly
-granted by their respective owners.
+iExec is the perfect platform for developers interested in **privacy**, **ownership**, and **monetization**.
 
-iExec offers developers the ability to retain ownership of their applications
-and data. This is because iExec is a decentralized platform leveraging
-**Ethereum** blockchain technology. Access control rules are stored in
-blockchain smart contracts and therefore cannot be modified by anyone. This way,
-data owners can grant or revoke access to their data as needed. You retain
-complete control over your data and applications, ensuring that you have
-complete ownership and control&#x20;
+### Privacy
 
-Finally, iExec offers developers the ability to **monetize their applications
-and data**. Thanks to iExec, developers can easily rent their applications
-following a simple pay-per-task model and allow their users to monetize the
-usage of their own data. Additionally, iExec offers developers the ability to
-earn rewards for sharing their computing resources with the network.
+iExec gives developers powerful tools to build and deploy their decentralized applications. Confidential data is encrypted and stored on a decentralized network, ensuring protection from unauthorized access. iExec also employs advanced **confidential computing** techniques to ensure that data remains secure and private even when processed on untrusted remote servers. 
 
-By combining these methods, iExec aims to provide the technology for developers
-to **build Web3 applications** that allow users to store, process, and share
-their data while maintaining control over its usage and privacy.
+This unique approach guarantees that data is protected from unauthorized access and tampering, even if the underlying hardware or operating system is compromised. This privacy-by-design principle guarantees that no one can access or copy confidential data unless explicitly granted access by the owner. To support this, iExec offers a powerful API to grant users fine-grained control over authorizations for access to their data.
+
+### Ownership
+
+iExec provides a reliable mechanism for developers to retain ownership of their applications and data. This is a key feature of iExec's decentralized nature leveraging **Ethereum** blockchain technology. The platform employs blockchain smart contracts to store access control rules, providing a tamper-proof implementation.
+
+These mechanisms ensure data owners can grant or revoke access to their data on demand. Changes to authorization take effect immediately as part of execution of the smart contracts. The distributed ledger ensures an immutable record of ownership and transactions on data.
+
+### Monetization
+
+iExec gives developers powerful options for **monetization of their applications
+and data**. An easy to understand pay-per-task model helps developers rent their applications and empowers users to monetize usage of their own data. With iExec, developers also earn rewards for sharing their computing resources with the network.
+
+## Adopting iExec
+
+Through our integrated approach to distributed computing, iExec provides the foundational technology for developers to **build entirely new types of Web3 applications**. iExec technologies allow users to store, process, and share
+their data while maintaining control over its usage and privacy. Review our use cases for further examples of how iExec can help you connect with your users and support their needs for confidentiality and security.
+
+**Use Cases**
+* [Privacy Enhanced Marketing](./useCaseDemo/privacyEnhancingMarketing.md)
+* [Content Creator](./useCaseDemo/contentCreator.md)
 
 _\*digital estate represents every digital asset that you own and can create
 value from. This can be from an email address to an entire application._
