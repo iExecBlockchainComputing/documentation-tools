@@ -18,12 +18,10 @@ const taskid = await dataProtector.processProtectedData({
   maxPrice: 10,
   args: 'arg1 arg2',
   inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
-  <!-- prettier-ignore-start -->
-  secrets: { // [!code focus]
-    1: 'secret1', // [!code focus]
-    2: 'secret2', // [!code focus]
-  }, // [!code focus]
-  <!-- prettier-ignore-end -->
+  secrets: {
+    1: 'secret1',
+    2: 'secret2',
+  },
 });
 ```
 
