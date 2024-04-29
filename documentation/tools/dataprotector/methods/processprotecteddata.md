@@ -16,7 +16,10 @@ const taskid = await dataProtector.processProtectedData({
     maxPrice: 10,
     args: 'arg1 arg2',
     inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
-    secrets: ['secret1', 'secret2']
+    secrets: {
+        1: 'secret1',
+        2: 'secret2'
+    },
 });
 ```
 
@@ -57,6 +60,8 @@ A set of URLs representing the input files required for application execution.
 ***secrets (optional)***
 
 A set of requester secrets necessary for the application's execution. This is represented as a mapping of numerical identifiers to corresponding secrets stored in the secrets manager needed for the application's execution.
+
+Secrets are accessible during the application's execution as environment variables. For more details, see [Access requester secrets](https://protocol.docs.iex.ec/for-developers/confidential-computing/access-confidential-assets/requester-secrets).
 
 ## Result
 
