@@ -122,7 +122,6 @@ const protectedData = await dataProtector.protectData({
 import type {
   ProtectedDataWithSecretProps,
   ProtectedData,
-  ProtectedDataCreationProps,
 } from '@iexec/dataprotector';
 ```
 
