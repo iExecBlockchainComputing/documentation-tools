@@ -8,6 +8,9 @@ of the `protectedData` may invoke this method.
 When transferring the `protectedData`, the grantedAccess created by the previous
 owner are revoked automatically.
 
+Ownership of the `protectedData` can be renounced by transferring it to the burn
+address `0x000000000000000000000000000000000000dEaD`.
+
 ## Usage
 
 ```js

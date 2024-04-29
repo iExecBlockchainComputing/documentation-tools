@@ -16,7 +16,7 @@ export default defineConfig({
     },
   },
   head: [
-    ['link', { rel: 'icon', href: '/logo192.png' }],
+    ['link', { rel: 'icon', href: '/Logo-RLC-Yellow.png' }],
     [
       'link',
       {
@@ -28,7 +28,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Overview', link: '/overview/what-we-do' },
+      { text: 'Overview', link: '/overview/whatWeDo' },
       {
         text: 'Tools',
         items: [
@@ -46,8 +46,8 @@ export default defineConfig({
     },
     sidebar: getSidebar(),
     logo: {
-      light: '/Logo-RLC-Yellow-Simple.png',
-      dark: '/Logo-RLC-Yellow-Simple.png',
+      light: '/Logo-RLC-Yellow.png',
+      dark: '/Logo-RLC-Yellow.png',
       alt: 'iExec logo',
     },
     socialLinks: [

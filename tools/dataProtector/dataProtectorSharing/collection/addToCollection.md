@@ -5,7 +5,7 @@ Data Sharing smart contract.
 
 Under the hood, this method performs two actions:
 
-- Approve the Data Sharing smart contract to transfer the protected data.
+- Approve the Data Sharing smart contract to manage your protected data.
 - Add the protected data to your collection.
 
 ## Usage
@@ -71,9 +71,9 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 ::: tip
 
 For this `addOnlyAppWhitelist`, you are free to use
-`0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed` that contains apps created for the
-purpose of Content Creator usecase-demo. This `addOnlyAppWhitelist` is managed
-by iExec.
+`0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed`.
+
+For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
 
 :::
 

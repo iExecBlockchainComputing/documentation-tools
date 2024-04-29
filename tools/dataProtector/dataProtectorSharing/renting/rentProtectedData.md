@@ -7,14 +7,21 @@ Method to rent a protected data.
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
   protectedData: '0x123abc...',
-  price: 1,
-  duration: 172800, // equivalent for 2 days in seconds
+  price: 1, // 1 nRLC
+  duration: 60 * 60 * 24 * 2, // 172,800 sec = 2 days
 });
 ```
 
-## Pre-conditions
+::: tip
 
-- You cannot rent a protected data that belongs to one of your own collections.
+Technically, `price` and `duration` parameters could be avoided. It is mainly a
+protection against front-running "attacks", ie. if the collection owner changes
+the price **at the same time** you rent the protected data, you would end up
+paying more than expected. Passing the `price` here allows the SDK to ensure
+you're paying the right price. If prices don't match, the SDK will throw an
+error.
+
+:::
 
 ## Parameters
 
@@ -31,8 +38,8 @@ Address or ENS of the protected data that you'd like rent.
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
   protectedData: '0x123abc...', // [!code focus]
-  price: 1,
-  duration: 172800,
+  price: 1, // 1 nRLC
+  duration: 60 * 60 * 24 * 2, // 172,800 sec = 2 days
 });
 ```
 
@@ -47,10 +54,17 @@ data. The unit is in nano RLC (nRLC).
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
   protectedData: '0x123abc...',
-  price: 1, // [!code focus]
-  duration: 172800,
+  price: 1, // 1 nRLC // [!code focus]
+  duration: 60 * 60 * 24 * 2, // 172,800 sec = 2 days
 });
 ```
+
+::: tip
+
+To get the renting price of the given protected data, you can use
+[getProtectedDataPricingParams](../misc/getProtectedDataPricingParams.md).
+
+:::
 
 ### duration
 
@@ -63,10 +77,17 @@ data. The unit is in seconds.
 ```js
 const rentResult = await dataProtectorSharing.rentProtectedData({
   protectedData: '0x123abc...',
-  price: 1,
-  duration: 172800, // [!code focus]
+  price: 1, // 1 nRLC
+  duration: 60 * 60 * 24 * 2, // 172,800 sec = 2 days // [!code focus]
 });
 ```
+
+::: tip
+
+To get the renting duration of the given protected data, you can use
+[getProtectedDataPricingParams](../misc/getProtectedDataPricingParams.md).
+
+:::
 
 ## Return value
 

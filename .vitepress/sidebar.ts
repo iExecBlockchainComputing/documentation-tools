@@ -6,15 +6,19 @@ export function getSidebar() {
       {
         text: 'OVERVIEW',
         items: [
-          { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/what-we-do' },
+          { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/whatWeDo' },
           {
             text: '📽&nbsp;&nbsp;Use Case Demo',
             collapsed: true,
-            link: '/overview/use-case-demo',
+            link: '/overview/useCaseDemo',
             items: [
               {
                 text: 'Privacy Enhancing Marketing',
-                link: '/overview/use-case-demo/privacy-enhancing-marketing',
+                link: '/overview/useCaseDemo/privacyEnhancingMarketing',
+              },
+              {
+                text: 'Content Creator',
+                link: '/overview/useCaseDemo/contentCreator',
               },
             ],
           },
@@ -101,62 +105,6 @@ export function getSidebar() {
                 ],
               },
               {
-                text: 'Misc',
-                collapsed: true,
-                items: [
-                  {
-                    text: 'consumeProtectedData',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/consumeProtectedData',
-                  },
-                  {
-                    text: 'getResultFromCompletedTask',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getResultFromCompletedTask',
-                  },
-                  {
-                    text: 'getProtectedDataInCollections',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataInCollections',
-                  },
-                  {
-                    text: 'getProtectedDataPricingParams',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataPricingParams',
-                  },
-                  {
-                    text: 'getCollectionOwners',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionOwners',
-                  },
-                  {
-                    text: 'getCollectionsByOwner',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionsByOwner',
-                  },
-                  {
-                    text: 'getCollectionSubscriptions',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionSubscriptions',
-                  },
-                  {
-                    text: 'getRentals',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getRentals',
-                  },
-                ],
-              },
-              {
-                text: 'AddOnlyAppWhitelist',
-                collapsed: true,
-                items: [
-                  {
-                    text: 'addAppToAddOnlyAppWhitelist',
-                    link: '/tools/dataProtector/dataProtectorSharing/AddOnlyAppWhitelist/addAppToAddOnlyAppWhitelist',
-                  },
-                  {
-                    text: 'createAddOnlyAppWhitelist',
-                    link: '/tools/dataProtector/dataProtectorSharing/AddOnlyAppWhitelist/createAddOnlyAppWhitelist',
-                  },
-                  {
-                    text: 'getUserAddOnlyAppWhitelist',
-                    link: '/tools/dataProtector/dataProtectorSharing/AddOnlyAppWhitelist/getUserAddOnlyAppWhitelist',
-                  },
-                ],
-              },
-              {
                 text: 'Renting',
                 link: '/tools/dataProtector/dataProtectorSharing/renting',
                 collapsed: true,
@@ -217,11 +165,80 @@ export function getSidebar() {
                   },
                 ],
               },
+              {
+                text: 'Consume',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'consumeProtectedData',
+                    link: '/tools/dataProtector/dataProtectorSharing/consume/consumeProtectedData',
+                  },
+                  {
+                    text: 'getResultFromCompletedTask',
+                    link: '/tools/dataProtector/dataProtectorSharing/consume/getResultFromCompletedTask',
+                  },
+                ],
+              },
+              {
+                text: 'Read data',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'getProtectedDataInCollections',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataInCollections',
+                  },
+                  {
+                    text: 'getProtectedDataPricingParams',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataPricingParams',
+                  },
+                  {
+                    text: 'getCollectionOwners',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionOwners',
+                  },
+                  {
+                    text: 'getCollectionsByOwner',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionsByOwner',
+                  },
+                  {
+                    text: 'getCollectionSubscriptions',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionSubscriptions',
+                  },
+                  {
+                    text: 'getRentals',
+                    link: '/tools/dataProtector/dataProtectorSharing/misc/getRentals',
+                  },
+                ],
+              },
             ],
           },
           {
             text: 'Types',
             link: '/tools/dataProtector/types',
+          },
+          {
+            text: 'Advanced',
+            collapsed: true,
+            items: [
+              {
+                text: 'Apps whitelist',
+                link: '/tools/dataProtector/advanced/appsWhitelist',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'createAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/advanced/appsWhitelist/createAddOnlyAppWhitelist',
+                  },
+                  {
+                    text: 'addAppToAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/advanced/appsWhitelist/addAppToAddOnlyAppWhitelist',
+                  },
+                  {
+                    text: 'getUserAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/advanced/appsWhitelist/getUserAddOnlyAppWhitelist',
+                  },
+                ],
+              },
+            ],
           },
         ],
       },

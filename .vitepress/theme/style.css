@@ -107,7 +107,8 @@ header .title > span {
 /* --- Custom classes --- */
 
 .link-as-block {
-  display: inline-block;
+  display: inline-flex;
+  column-gap: 8px;
   min-width: 50%;
   border: 1px solid var(--vp-c-divider);
   text-decoration: none !important;

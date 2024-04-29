@@ -1,7 +1,10 @@
 # getProtectedDataInCollections
 
-Method to get protected data that are in collections, ie. owned by the Data
-Sharing smart contract.
+Method to get protected data that are in collections.
+
+A protected data can only be in one collection at a time.
+
+Results are ordered by `creationTimestamp` desc.
 
 ## Usage
 
@@ -112,6 +115,8 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 `number | undefined`
 
+Value between `10` and `1000`.
+
 ```js
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   collectionId: 12,
@@ -123,5 +128,8 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 ## Return value
 
 ```ts twoslash
-import { type GetProtectedDataInCollectionsResponse } from '@iexec/dataprotector';
+import type {
+  GetProtectedDataInCollectionsResponse,
+  ProtectedDataInCollection,
+} from '@iexec/dataprotector';
 ```
