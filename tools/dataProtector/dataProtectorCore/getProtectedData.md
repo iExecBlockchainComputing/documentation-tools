@@ -93,10 +93,13 @@ const listProtectedData = await dataProtector.getProtectedData({
 
 `number | undefined`
 
+_default_: `20`
+
+Value between `10` and `1000`.
+
 Specifies the number of records in each page of the result set. This is used in
 conjunction with the optional `page` parameter to constrain the size of the
-result. The default for this value is `20` but this only comes into play when
-specifying a `page` parameter.
+result.
 
 ```js
 const listProtectedData = await dataProtector.getProtectedData({
