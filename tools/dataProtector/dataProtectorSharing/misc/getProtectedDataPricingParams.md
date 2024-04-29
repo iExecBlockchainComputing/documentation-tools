@@ -20,7 +20,7 @@ import { type GetProtectedDataPricingParams } from '@iexec/dataprotector';
 
 `AddressOrENS`
 
-Address of the protected data that you'd like to get the pricing params for.
+Address of the protected data you'd like to get the pricing params for.
 
 ```js
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
@@ -31,5 +31,19 @@ const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
 ## Return value
 
 ```ts twoslash
-import { type GetProtectedDataPricingParamsResponse } from '@iexec/dataprotector';
+import type {
+  GetProtectedDataPricingParamsResponse,
+  SubscriptionParams,
+  RentingParams,
+} from '@iexec/dataprotector';
 ```
+
+::: tip
+
+For `SubscriptionParams` and `RentingParams`:
+
+- `duration` is in seconds.
+
+- `price` is in nano RLC (nRLC)
+
+:::

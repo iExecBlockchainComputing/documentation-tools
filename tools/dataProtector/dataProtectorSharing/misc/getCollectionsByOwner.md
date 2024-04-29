@@ -43,5 +43,9 @@ const userCollectionsWithAllProtectedData =
 ## Return value
 
 ```ts twoslash
-import { type GetCollectionsByOwnerResponse } from '@iexec/dataprotector';
+import type {
+  GetCollectionsByOwnerResponse,
+  CollectionWithProtectedDatas,
+  ProtectedDataInCollection,
+} from '@iexec/dataprotector';
 ```
