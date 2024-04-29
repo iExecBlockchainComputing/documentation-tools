@@ -77,6 +77,8 @@ const fileAsArrayBuffer = await createArrayBufferFromFile(file);
 
 `string | undefined`
 
+_default_: `Untitled`
+
 Allows providing a descriptive name for the protected data. This is considered
 public metadata, describing the protected data.
 
@@ -91,8 +93,7 @@ const protectedData = await dataProtector.protectData({
 
 ::: tip
 
-The name is public and not encrypted. If you don't pass a name to your protected
-data we will automatically define it as "Untitled".
+The name is public and not encrypted.
 
 :::
 
@@ -218,3 +219,14 @@ The zip file generated is a `Uint8Array`, so if you want to handle the binary
 data or download it consider adding a zip extension to it.
 
 :::
+
+## Created protected data
+
+To further check your data was correctly created, you can inspect it on the
+[iExec explorer](https://explorer.iex.ec/).
+
+<a href="https://explorer.iex.ec/" target="_blank" rel="noreferrer" style="display: inline-block">
+  <img src="/assets/explorer-dataset-example.png" alt="iExec explorer - Dataset example">
+</a>
+
+The `Multiaddr` field is the URL on IPFS of your encrypted data.
