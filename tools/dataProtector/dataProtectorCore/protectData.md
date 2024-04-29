@@ -60,6 +60,19 @@ const protectedData = await dataProtector.protectData({
 ```
 <!-- prettier-ignore-end -->
 
+::: tip
+
+If you'd like to **protect a file**, you first need to convert it to some kind
+of buffer. To do so, you can use `createArrayBufferFromFile`.
+
+```js
+import { createArrayBufferFromFile } from '@iexec/dataprotector';
+
+const fileAsArrayBuffer = await createArrayBufferFromFile(file);
+```
+
+:::
+
 ### name
 
 `string | undefined`
@@ -106,7 +119,11 @@ const protectedData = await dataProtector.protectData({
 ## Return value
 
 ```ts twoslash
-import { type ProtectedDataWithSecretProps } from '@iexec/dataprotector';
+import type {
+  ProtectedDataWithSecretProps,
+  ProtectedData,
+  ProtectedDataCreationProps,
+} from '@iexec/dataprotector';
 ```
 
 The `protectData` method returns the following fields, either as a JSON object

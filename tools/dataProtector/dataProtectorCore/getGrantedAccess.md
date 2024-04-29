@@ -122,10 +122,11 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 _default_: `20`
 
+Value between `10` and `1000`.
+
 Specifies the number of records to include in each page of the result set. This
 is used in conjunction with the optional `page` parameter to limit the size of
-each page. The minimum value allowed for `pageSize` is `10` and the maximum is
-`1000`.
+each page.
 
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
