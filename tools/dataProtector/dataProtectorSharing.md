@@ -10,6 +10,12 @@ supports the following options for distributing a user's protected data:
 - Providing access for a recurring subscription fee
 - Selling ownership of the data
 
+Once access is obtained through one of these distribution methods, the
+`consume` methods allow interaction with the protected data. The application
+designer uses these methods to securely retrieve data from IPFS and decrypt
+it on the client side. This ensures only the consumer gains access to the
+data.
+
 ## How does it work?
 
 The user's protected data is managed by a special Data Sharing smart contract.
@@ -28,8 +34,7 @@ in their collections.
 The smart contract also protects the consumer of a user's data. If a consumer 
 rents access to a video clip, for example, even if the owner of the video 
 clip removes the rental option, the renter maintains their access for the 
-duration of the rental period. 
-
+duration of the rental period.
 
 ## How does this differ from `DataProtector Core`?
 
