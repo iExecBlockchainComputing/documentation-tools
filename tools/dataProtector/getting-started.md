@@ -138,3 +138,8 @@ const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 ```
 
 :::
+
+#### Advanced configuration
+
+To add optional parameters, see
+[advanced configuration](./advanced/advanced-configuration.md).
