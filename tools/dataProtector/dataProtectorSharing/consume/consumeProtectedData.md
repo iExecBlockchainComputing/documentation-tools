@@ -53,7 +53,7 @@ const consumeProtectedDataResult =
   });
 ```
 
-### app
+### app {#app-param}
 
 `AddressOrENS`
 
