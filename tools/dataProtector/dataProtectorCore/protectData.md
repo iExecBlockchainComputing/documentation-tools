@@ -2,10 +2,11 @@
 
 The iExec tool suite supports deployment of applications where the user of the
 application has complete and total control over access to their data. This
-ensures privacy and security when invoking these applications. Through use of
-the `protectData` method, a user may encrypt and secure any type of data.
-Encryption occurs on the client side, supporting the user's control over their
-data.
+ensures privacy and security when invoking these applications.
+
+Through use of the `protectData` method, a user may encrypt and secure any type
+of data. Encryption occurs on the client side, supporting the user's control
+over their data.
 
 ## Usage
 
@@ -126,9 +127,7 @@ import type {
 } from '@iexec/dataprotector';
 ```
 
-The `protectData` method returns the following fields, either as a JSON object
-or as individual fields depending on whether you use the promise or observable
-pattern respectively.
+The `protectData` method returns the following fields, as a JSON object.
 
 ### name
 
