@@ -25,7 +25,7 @@ export function getSidebar() {
         ],
       },
       {
-        text: '🔐 &nbsp;DataProtector v2 (beta)',
+        text: '🔐 &nbsp;DataProtector',
         link: '/tools/dataProtector',
         collapsed: false,
         items: [
