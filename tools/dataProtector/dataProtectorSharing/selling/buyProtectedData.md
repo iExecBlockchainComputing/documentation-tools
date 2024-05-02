@@ -90,7 +90,7 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 ::: tip
 
 For this `addOnlyAppWhitelist`, you are free to use
-`0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed` that contains apps created for the
+`0x334dc0bb08fb32a4e9917197e5e626de4b6b9b87` that contains apps created for the
 purpose of Content Creator usecase-demo. This `addOnlyAppWhitelist` is managed
 by iExec.
 

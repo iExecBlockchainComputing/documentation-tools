@@ -71,7 +71,7 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 ::: tip
 
 For this `addOnlyAppWhitelist`, you are free to use
-`0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed`.
+`0x334dc0bb08fb32a4e9917197e5e626de4b6b9b87`.
 
 For more details on how to create and manage appsWhitelist, see
 [Apps whitelist](../../advanced/appsWhitelist.md).
