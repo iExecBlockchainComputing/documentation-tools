@@ -1,5 +1,9 @@
 # 🔐 DataProtector
 
+{% hint style="info" %}
+We have recently released a new version of the DataProtector SDK. Check out the [latest documentation](https://documentation-tools.vercel.app/tools/dataProtector.html) 🎉
+{% endhint %}
+
 The DataProtector tool allows application developers to provide users with unparalleled ownership over their data. End users gain the ability to invoke iExec apps without ever exposing their data to any other party. They gain complete privacy of personally identifiable information (PII) or other sensitive classes of data. 
 
 This approach to data management relies on:
