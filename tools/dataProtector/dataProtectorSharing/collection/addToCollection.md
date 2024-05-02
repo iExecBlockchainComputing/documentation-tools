@@ -73,7 +73,8 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 For this `addOnlyAppWhitelist`, you are free to use
 `0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed`.
 
-For more details on how to create and manage appsWhitelist, see [Apps whitelist](../../advanced/appsWhitelist.md).
+For more details on how to create and manage appsWhitelist, see
+[Apps whitelist](../../advanced/appsWhitelist.md).
 
 :::
 
