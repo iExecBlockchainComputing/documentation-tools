@@ -104,6 +104,12 @@ header .title > span {
   color: var(--vp-c-text-2) !important;
 }
 
+.VPSidebarItem .vp-external-link-icon:after {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+}
+
 /* --- Custom classes --- */
 
 .link-as-block {

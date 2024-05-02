@@ -25,7 +25,7 @@ export function getSidebar() {
         ],
       },
       {
-        text: '🔐 &nbsp;DataProtector',
+        text: '🔐 &nbsp;DataProtector v2 (beta)',
         link: '/tools/dataProtector',
         collapsed: false,
         items: [
@@ -73,6 +73,10 @@ export function getSidebar() {
               {
                 text: 'transferOwnership',
                 link: '/tools/dataProtector/dataProtectorCore/transferOwnership',
+              },
+              {
+                text: 'v1 documentation',
+                link: 'https://tools.docs.iex.ec/tools/dataprotector',
               },
             ],
           },
