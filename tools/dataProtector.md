@@ -5,8 +5,9 @@ tools for protecting, managing, and sharing their data effectively.
 
 ::: tip
 
-You are currently on DataProtector **v2**, find here the
-**[v1 documentation](https://tools.docs.iex.ec/tools/dataprotector)**
+You are currently viewing the documentation for DataProtector **v2**. You can
+find the documentation for v1
+[here](https://tools.docs.iex.ec/tools/dataprotector).
 
 :::
 
