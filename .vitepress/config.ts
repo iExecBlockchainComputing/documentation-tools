@@ -9,7 +9,6 @@ export default defineConfig({
   lastUpdated: true,
   markdown: {
     codeTransformers: [transformerTwoslash()],
-    attrs: { disable: true },
     theme: {
       light: 'min-light',
       dark: 'vitesse-dark',

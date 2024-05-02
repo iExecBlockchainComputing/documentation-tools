@@ -1,14 +1,14 @@
-# Migrate from v1 to v2
+# Migrate from v1 to v2 <span style="margin-left: 12px; position: absolute; top: -2px;"><Badge type="warning" text="beta" /></span>
 
 ::: tip
 
 This page concerns projects created with DataProtector prior or equal to version
-0.5.1
+1.0.0
 
 :::
 
 ```sh
-npm install @iexec/dataprotector@latest
+npm install @iexec/dataprotector@beta
 ```
 
 ## Constructor
@@ -23,10 +23,10 @@ property to use core methods. Newer versions allow to use extended methods using
 the _dataProtectorSharing_ property.
 
 ```js
-// 0.5.1 and before
+// 1.0.0 and before
 const dataProtector = new IExecDataProtector(web3Provider); // [!code --]
 
-// AFTER 0.5.1
+// AFTER 2.0.0
 // with Umbrella Module
 const dataProtector = new IExecDataProtector(web3Provider).dataProtector; // [!code ++]
 // Or with Core Module

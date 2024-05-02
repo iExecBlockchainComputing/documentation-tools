@@ -244,6 +244,10 @@ export function getSidebar() {
               },
             ],
           },
+          {
+            text: 'v1 documentation',
+            link: 'https://tools.docs.iex.ec/tools/dataprotector',
+          },
         ],
       },
       {

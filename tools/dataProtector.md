@@ -1,7 +1,14 @@
-# 🔐 DataProtector
+# 🔐 DataProtector <span style="margin-left: 12px; position: absolute; top: -2px;"><Badge type="tip" text="2.0.0" /> <Badge type="warning" text="beta" /></span>
 
 DataProtector **simplifies secure data management**, offering users essential
 tools for protecting, managing, and sharing their data effectively.
+
+::: tip
+
+You are currently on DataProtector **v2**, find here the
+**[v1 documentation](https://tools.docs.iex.ec/tools/dataprotector)**
+
+:::
 
 ## DataProtector Core
 

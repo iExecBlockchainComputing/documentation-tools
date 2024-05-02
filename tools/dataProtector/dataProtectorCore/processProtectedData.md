@@ -45,7 +45,7 @@ const taskid = await dataProtector.processProtectedData({
 });
 ```
 
-### app
+### app {#app-param}
 
 `AddressOrENS`
 

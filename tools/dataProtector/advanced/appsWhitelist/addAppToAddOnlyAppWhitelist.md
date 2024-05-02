@@ -44,7 +44,7 @@ const isAddedToAddAppToAddOnlyAppWhitelist =
   });
 ```
 
-### app
+### app {#app-param}
 
 `AddressOrENS`
 
