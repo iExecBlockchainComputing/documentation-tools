@@ -10,7 +10,7 @@
 
 ## Tools
 
-* [🔐 DataProtector](tools/dataprotector/README.md)
+* [🔐 DataProtector v1](tools/dataprotector/README.md)
   * [V2 (beta)](https://documentation-tools.vercel.app/tools/dataProtector.html)
   * [Quick start](tools/dataprotector/quick-start.md)
   * [Methods](tools/dataprotector/methods/README.md)
