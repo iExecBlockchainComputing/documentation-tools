@@ -1,4 +1,4 @@
-# Migrate from v1 to v2
+# Migrate from v1 to v2 <span style="margin-left: 12px; position: absolute; top: -2px;"><Badge type="warning" text="beta" /></span>
 
 ::: tip
 
