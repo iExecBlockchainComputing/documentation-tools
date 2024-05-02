@@ -107,7 +107,8 @@ header .title > span {
 .VPSidebarItem .vp-external-link-icon:after {
   position: absolute;
   z-index: 10;
-  right: 0;
+  top: 12px;
+  right: 156px;
 }
 
 /* --- Custom classes --- */

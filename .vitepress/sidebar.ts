@@ -74,10 +74,6 @@ export function getSidebar() {
                 text: 'transferOwnership',
                 link: '/tools/dataProtector/dataProtectorCore/transferOwnership',
               },
-              {
-                text: 'v1 documentation',
-                link: 'https://tools.docs.iex.ec/tools/dataprotector',
-              },
             ],
           },
           {
@@ -243,6 +239,10 @@ export function getSidebar() {
                 ],
               },
             ],
+          },
+          {
+            text: 'v1 documentation',
+            link: 'https://tools.docs.iex.ec/tools/dataprotector',
           },
         ],
       },
