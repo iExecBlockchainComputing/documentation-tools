@@ -30,7 +30,7 @@ import { type GetGrantedAccessParams } from '@iexec/dataprotector';
 
 ### protectedData
 
-`AddressOrENS | any | undefined`
+`AddressOrENS | 'any' | undefined`
 
 Address of the protected data object for which you are querying access
 authorization grants. It's a representation of ethereum address or ENS name
@@ -48,7 +48,7 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 ### authorizedApp
 
-`AddressOrENS | any | undefined`
+`AddressOrENS | 'any' | undefined`
 
 Optional filter to restrict the results to include only authorizations for the
 specified application. It's a representation of ethereum address or ENS name
@@ -78,7 +78,7 @@ explicitly granted access to that application address.
 
 ### authorizedUser
 
-`AddressOrENS | any | undefined`
+`AddressOrENS | 'any' | undefined`
 
 Optional filter to restrict the results to include only authorizations for the
 specified user. It's a string representation of ethereum address or ENS name

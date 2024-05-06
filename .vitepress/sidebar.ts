@@ -220,6 +220,10 @@ export function getSidebar() {
             collapsed: true,
             items: [
               {
+                text: 'Advanced Configuration',
+                link: '/tools/dataProtector/advanced/advanced-configuration',
+              },
+              {
                 text: 'Apps whitelist',
                 link: '/tools/dataProtector/advanced/appsWhitelist',
                 collapsed: true,
@@ -239,6 +243,10 @@ export function getSidebar() {
                 ],
               },
             ],
+          },
+          {
+            text: 'v1 documentation',
+            link: 'https://tools.docs.iex.ec/tools/dataprotector',
           },
         ],
       },

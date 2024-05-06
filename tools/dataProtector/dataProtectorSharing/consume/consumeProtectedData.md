@@ -53,7 +53,7 @@ const consumeProtectedDataResult =
   });
 ```
 
-### app
+### app {#app-param}
 
 `AddressOrENS`
 
@@ -73,7 +73,7 @@ const consumeProtectedDataResult =
 For this `app` parameter you can use the following iExec TEE dApp:
 
 ```
-0x85795d8eb2b5d39a6e8dfb7890924191b3d1ccf6
+0xF248000F0E99e9203FdBE509019f008F9c169705
 ```
 
 For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).

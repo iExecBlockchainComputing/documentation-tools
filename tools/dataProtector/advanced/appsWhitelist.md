@@ -26,7 +26,7 @@ The story goes as follow:
 For this `addOnlyAppWhitelist`, you are free to use:
 
 ```
-0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed
+0x334dc0bb08fb32a4e9917197e5e626de4b6b9b87
 ```
 
 that contains apps created for the purpose of
@@ -34,13 +34,13 @@ that contains apps created for the purpose of
 This apps whitelist is managed by iExec.
 
 You can explore this apps whitelist on
-[https://blockscout-bellecour.iex.ec/](https://blockscout-bellecour.iex.ec/address/0x1099844C74F6a2bE20dbE1Aa2AfB3A1D29421aED)
+[https://blockscout-bellecour.iex.ec/](https://blockscout-bellecour.iex.ec/address/0x334dc0bb08fb32a4e9917197e5e626de4b6b9b87)
 
 For the `consumeProtectedData()` method, you can use the following iExec TEE
 dApp:
 
 ```
-0x85795d8eb2b5d39a6e8dfb7890924191b3d1ccf6
+0xF248000F0E99e9203FdBE509019f008F9c169705
 ```
 
 <br />
