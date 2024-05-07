@@ -162,7 +162,7 @@ The following data types are automatically detected:
 - Scalars
   - `bool`
   - `f64` (javascript `number`)
-  - `i128` (javascript `bigint`)
+  - `i128` (javascript `bigint` up to 128 bits)
   - `string`
 - Binary:
   - `application/octet-stream`
