@@ -25,7 +25,7 @@ export function getSidebar() {
         ],
       },
       {
-        text: '🔐 &nbsp;DataProtector',
+        text: '🔐 &nbsp;DataProtector <span class="VPBadge warning" style="margin-left: 8px; margin-bottom: -1px; transform: translateY(-1px);">beta</span>',
         link: '/tools/dataProtector',
         collapsed: false,
         items: [
