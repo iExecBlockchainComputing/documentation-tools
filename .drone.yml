@@ -34,7 +34,7 @@ steps:
     commands:
       - npm install --global vercel@34.1.7
       - vercel pull --yes --environment=production --scope i-exec --token $VERCEL_TOKEN
-      - SET_SUBPATH_FOR_PROD=true VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --prod --scope i-exec --token $VERCEL_TOKEN
+      - VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --prod --scope i-exec --token $VERCEL_TOKEN
       - vercel deploy --prod --prebuilt --scope i-exec --token $VERCEL_TOKEN
 
 ---
@@ -78,5 +78,5 @@ steps:
     commands:
       - npm install --global vercel@34.1.7
       - vercel pull --yes --environment=preview --scope i-exec --token $VERCEL_TOKEN
-      - SET_SUBPATH_FOR_PROD=true VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --scope i-exec --token $VERCEL_TOKEN
+      - VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --scope i-exec --token $VERCEL_TOKEN
       - vercel deploy --prebuilt --scope i-exec --token $VERCEL_TOKEN
