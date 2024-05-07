@@ -11,7 +11,7 @@
 ## Tools
 
 * [🔐 DataProtector](tools/dataprotector/README.md)
-  * [V2 (beta)](https://documentation-tools.vercel.app/tools/dataProtector.html)
+  * [V2 (beta)](https://beta.tools.docs.iex.ec/tools/dataProtector.html)
   * [Quick start](tools/dataprotector/quick-start.md)
   * [Methods](tools/dataprotector/methods/README.md)
     * [protectData](tools/dataprotector/methods/protectdata.md)
