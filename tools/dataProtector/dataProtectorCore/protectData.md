@@ -160,8 +160,9 @@ are automatically detected and listed in the schema.
 The following data types are automatically detected:
 
 - Scalars
-  - `boolean`
-  - `number`
+  - `bool`
+  - `f64` (javascript `number`)
+  - `i128` (javascript `bigint`)
   - `string`
 - Binary:
   - `application/octet-stream`
