@@ -76,7 +76,7 @@ steps:
       VERCEL_TOKEN:
         from_secret: vercel-token
     commands:
-      - npm install --global vercel@canary
+      - npm install --global vercel@34.1.7
       - vercel pull --yes --environment=preview --scope i-exec --token $VERCEL_TOKEN
       - SET_SUBPATH_FOR_PROD=true VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --scope i-exec --token $VERCEL_TOKEN
       - vercel deploy --prebuilt --scope i-exec --token $VERCEL_TOKEN
