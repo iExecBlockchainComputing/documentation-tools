@@ -1,6 +1,6 @@
 # Getting Started
 
-[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FiExecBlockchainComputing%2Fdataprotector-sdk%2Fmain%2Fpackages%2Fsdk%2Fpackage.json&query=%24.version&label=version&color=green)](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/sdk)
+[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FiExecBlockchainComputing%2Fdataprotector-sdk%2Fv2%2Fpackages%2Fsdk%2Fpackage.json&query=%24.version&label=version&color=green)](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/sdk)
 
 ## Overview
 
@@ -18,19 +18,19 @@ system:
 ::: code-group
 
 ```sh [npm]
-npm install @iexec/dataprotector
+npm install @iexec/dataprotector@beta
 ```
 
 ```sh [yarn]
-yarn add @iexec/dataprotector
+yarn add @iexec/dataprotector@beta
 ```
 
 ```sh [pnpm]
-pnpm add @iexec/dataprotector
+pnpm add @iexec/dataprotector@beta
 ```
 
 ```sh [bun]
-bun add @iexec/dataprotector
+bun add @iexec/dataprotector@beta
 ```
 
 :::
@@ -138,3 +138,8 @@ const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 ```
 
 :::
+
+#### Advanced configuration
+
+To add optional parameters, see
+[advanced configuration](./advanced/advanced-configuration.md).
