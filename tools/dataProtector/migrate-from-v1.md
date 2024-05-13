@@ -108,3 +108,22 @@ methods allows for real-time status updates, making the data protection and
 access revocation processes more interactive and manageable.
 
 :::
+
+## Protected Data Schema
+
+The serialization of the data protected by `protectData()` has been changed to
+support a wider range of numbers, and extend the support for processing
+protected data in non-JS-based applications.
+
+The new serialization mechanism is based on the [borsh](https://borsh.io/)
+specification.
+
+Consequently, the data schemas associated with protected data have changed.
+
+| data type | v1 data schema                                  | v2 data schema                                 |
+| --------- | ----------------------------------------------- | ---------------------------------------------- |
+| boolean   | `"boolean"`                                     | `"bool"`                                       |
+| number    | `"number"` </br> restricted to JS safe integers | `"f64"`                                        |
+| bigint    | not supported                                   | `"i128"` </br> restricted to 128 bits integers |
+| string    | `"string"`                                      | `"string"`                                     |
+| binary    | detected mime type                              | detected mime type                             |
