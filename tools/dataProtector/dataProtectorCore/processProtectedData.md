@@ -139,7 +139,7 @@ const taskid = await dataProtector.processProtectedData({
 
 ### workerpool
 
-`AddressOrENS | any | undefined`
+`AddressOrENS | 'any' | undefined`
 
 _default_: `prod-v8-bellecour.main.pools.iexec.eth`
 

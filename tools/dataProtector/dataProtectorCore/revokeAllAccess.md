@@ -37,7 +37,9 @@ const revokeAllAccessResult = await dataProtector.revokeAllAccess({
 
 ### authorizedApp
 
-`AddressOrENS | any | undefined`
+`AddressOrENS | 'any' | undefined`
+
+_default_: `any`
 
 The application address to be removed from the authorization list for the
 specified `protectedData`.
@@ -52,7 +54,9 @@ const revokeAllAccessResult = await dataProtector.revokeAllAccess({
 
 ### authorizedUser
 
-`AddressOrENS | any | undefined`
+`AddressOrENS | 'any' | undefined`
+
+_default_: `any`
 
 The user address to be removed from the authorization list for the specified
 `protectedData`.
