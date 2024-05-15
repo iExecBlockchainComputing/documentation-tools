@@ -43,9 +43,14 @@ const userCollectionsWithAllProtectedData =
 ## Return value
 
 ```ts twoslash
+import type { GetCollectionsByOwnerResponse } from '@iexec/dataprotector';
+
+// Child types
 import type {
-  GetCollectionsByOwnerResponse,
   CollectionWithProtectedDatas,
   ProtectedDataInCollection,
+  SubscriptionParams,
+  RentingParams,
+  SellingParams,
 } from '@iexec/dataprotector';
 ```

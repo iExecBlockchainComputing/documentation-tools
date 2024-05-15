@@ -39,8 +39,13 @@ const collectionOwners = await dataProtectorSharing.getCollectionOwners({
 ## Return value
 
 ```ts twoslash
-import type {
-  GetCollectionOwnersResponse,
-  CollectionOwner,
-} from '@iexec/dataprotector';
+import type { GetCollectionOwnersResponse } from '@iexec/dataprotector';
+
+// Child types
+import type { CollectionOwner, SubscriptionParams } from '@iexec/dataprotector';
 ```
+
+### hasActiveSubscription
+
+`true` if you (logged-in user) have an active subscription to one of the
+collections.

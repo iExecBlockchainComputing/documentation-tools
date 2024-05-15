@@ -32,4 +32,7 @@ const allUserAddOnlyAppWhitelist =
 
 ```ts twoslash
 import { type GetUserAppWhitelistResponse } from '@iexec/dataprotector';
+
+// Child types
+import { type AddOnlyAppWhitelist } from '@iexec/dataprotector';
 ```

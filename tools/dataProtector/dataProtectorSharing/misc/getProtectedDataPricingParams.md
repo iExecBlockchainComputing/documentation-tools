@@ -31,19 +31,8 @@ const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
 ## Return value
 
 ```ts twoslash
-import type {
-  GetProtectedDataPricingParamsResponse,
-  SubscriptionParams,
-  RentingParams,
-} from '@iexec/dataprotector';
+import type { GetProtectedDataPricingParamsResponse } from '@iexec/dataprotector';
+
+// Child types
+import type { SubscriptionParams, RentingParams } from '@iexec/dataprotector';
 ```
-
-::: tip
-
-For `SubscriptionParams` and `RentingParams`:
-
-- `duration` is in seconds.
-
-- `price` is in nano RLC (nRLC)
-
-:::

@@ -128,8 +128,12 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 ## Return value
 
 ```ts twoslash
+import type { GetProtectedDataInCollectionsResponse } from '@iexec/dataprotector';
+
+// Child types
 import type {
-  GetProtectedDataInCollectionsResponse,
   ProtectedDataInCollection,
+  RentingParams,
+  SellingParams,
 } from '@iexec/dataprotector';
 ```

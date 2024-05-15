@@ -59,4 +59,8 @@ const userRentals = await dataProtectorSharing.getCollectionSubscriptions({
 
 ```ts twoslash
 import { type GetCollectionSubscriptionsResponse } from '@iexec/dataprotector';
+
+// Child types
+// Wait for next beta version to export this type
+// import { type CollectionSubscription } from '@iexec/dataprotector';
 ```

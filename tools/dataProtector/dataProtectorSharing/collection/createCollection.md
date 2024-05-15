@@ -18,15 +18,3 @@ const createCollectionResult = await dataProtectorSharing.createCollection();
 ```ts twoslash
 import { type CreateCollectionResponse } from '@iexec/dataprotector';
 ```
-
-### collectionId
-
-`number`
-
-The collection ID for the created collection.
-
-### txHash
-
-`string`
-
-The transaction hash corresponding to the execution of the function.
