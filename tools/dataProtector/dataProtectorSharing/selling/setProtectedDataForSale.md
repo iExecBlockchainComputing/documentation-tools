@@ -1,5 +1,12 @@
 # setProtectedDataForSale
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../../../overview/keyConcepts/pricingModel.md).
+
+:::
+
 Method to set a protected data for sale.
 
 During a successful sale, **the ownership** of the protected data **is

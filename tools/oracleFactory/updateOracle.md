@@ -1,5 +1,12 @@
 # updateOracle
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../overview/keyConcepts/pricingModel.md).
+
+:::
+
 The `updateOracle` method serves to refresh an existing oracle with the latest
 data fetched from the linked API. This ensures that the oracle maintains
 up-to-date information, enhancing its reliability and usefulness for downstream

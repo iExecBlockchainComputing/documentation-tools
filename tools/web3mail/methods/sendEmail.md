@@ -1,5 +1,12 @@
 # sendEmail
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../../overview/keyConcepts/pricingModel.md).
+
+:::
+
 This method allows an authorized entity to send an email message to a User
 without needing to know their email address.
 

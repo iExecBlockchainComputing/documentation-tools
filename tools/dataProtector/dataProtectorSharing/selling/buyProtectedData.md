@@ -1,5 +1,12 @@
 # buyProtectedData
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../../../overview/keyConcepts/pricingModel.md).
+
+:::
+
 Method to buy a protected data that is for sale.
 
 "Buying" here means to get ownership of the protected data.

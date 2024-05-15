@@ -1,5 +1,12 @@
 # setSubscriptionParams
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../../../overview/keyConcepts/pricingModel.md).
+
+:::
+
 Method to set subscription parameters for a given collection of yours.
 
 ## Usage

@@ -1,5 +1,12 @@
 # grantAccess
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../../overview/keyConcepts/pricingModel.md).
+
+:::
+
 Data encrypted through the Data Protector tool requires explicit authorization
 for runtime access. A newly created `protectedData` object has no inherent
 authorizations. This method grants permission to securely access the specified

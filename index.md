@@ -15,6 +15,10 @@ monetization.
   📽 &nbsp;Use case demo
 </a>
 
+<a href="./overview/keyConcepts" class="link-for-home">
+  📖 &nbsp;Key concepts
+</a>
+
 ## Our tools
 
 <a href="./tools/dataProtector" class="link-for-home">

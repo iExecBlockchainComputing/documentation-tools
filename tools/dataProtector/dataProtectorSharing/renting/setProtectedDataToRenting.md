@@ -1,5 +1,12 @@
 # setProtectedDataToRenting
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../../../overview/keyConcepts/pricingModel.md).
+
+:::
+
 Method to allow a protected data to be rented.
 
 If you call this method on a protected data that is already set for renting, it

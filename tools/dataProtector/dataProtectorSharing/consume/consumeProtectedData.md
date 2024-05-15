@@ -1,5 +1,12 @@
 # consumeProtectedData
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../../../overview/keyConcepts/pricingModel.md).
+
+:::
+
 Method to consume a protected data, ie. visualize it or download it.
 
 This method does a few things under the hood:

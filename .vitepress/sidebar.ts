@@ -22,6 +22,17 @@ export function getSidebar() {
               },
             ],
           },
+          {
+            text: '📖&nbsp;&nbsp;Key Concepts',
+            collapsed: true,
+            link: '/overview/keyConcepts',
+            items: [
+              {
+                text: 'Pricing Model',
+                link: '/overview/keyConcepts/pricingModel',
+              },
+            ],
+          },
         ],
       },
       {
