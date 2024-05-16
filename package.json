@@ -13,10 +13,12 @@
     "@iconify/vue": "^4.1.2",
     "@shikijs/vitepress-twoslash": "^1.2.0",
     "prettier": "^3.2.5",
-    "vitepress": "^1.1.4"
+    "ts-to-zod": "^3.8.3",
+    "vitepress": "^1.1.4",
+    "zod-to-ts": "^1.2.0"
   },
   "dependencies": {
-    "@iexec/dataprotector": "^2.0.0-beta.1",
+    "@iexec/dataprotector": "2.0.0-beta.1",
     "@iexec/iexec-oracle-factory-wrapper": "^2.1.0",
     "@iexec/web3mail": "^0.6.0",
     "vue": "^3.4.21"

@@ -56,4 +56,22 @@ const userRentals = await dataProtectorSharing.getRentals({
 
 ```ts twoslash
 import { type GetRentalsResponse } from '@iexec/dataprotector';
+
+// Child types
+import { type ProtectedDataRental, RentingParams } from '@iexec/dataprotector';
+```
+
+<script setup lang="ts">
+import { printNode, zodToTs } from 'zod-to-ts';
+import { getRentalsResponseSchema } from '../../../../generated-zod-sharing-schemas.js';
+
+const identifier = 'GetRentalsResponse';
+const { node } = zodToTs(getRentalsResponseSchema, identifier);
+const GetRentalsResponse = printNode(node);
+</script>
+
+Full return type:
+
+```ts-vue
+type GetRentalsResponse = {{ GetRentalsResponse }}
 ```
