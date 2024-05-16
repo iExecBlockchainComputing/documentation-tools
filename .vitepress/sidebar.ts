@@ -242,6 +242,10 @@ export function getSidebar() {
                   },
                 ],
               },
+              {
+                text: 'Sharing smart contract',
+                link: '/tools/dataProtector/advanced/dps-smart-contract',
+              },
             ],
           },
           {
