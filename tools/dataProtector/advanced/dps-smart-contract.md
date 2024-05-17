@@ -22,37 +22,33 @@ access control, token handling, and order management.
 
 ---
 
-- consumeProtectedData(protectedData,workerpoolOrder, app)
+#### General
 
-- getProtectedDataRenter(protectedData, renterAddress)
+- `consumeProtectedData(protectedData, workerpoolOrder, app)`
+- `getProtectedDataRenter(protectedData, renterAddress)`
+- `getCollectionSubscriber(collectionTokenId, subscriberAddress)`
+- `createCollection(to)`
+- `addProtectedDataToCollection(collectionTokenId, protectedData, appWhitelist)`
+- `removeProtectedDataFromCollection(protectedData)`
 
-- getCollectionSubscriber(collectionTokenId, subscriberAddress)
+#### Subscription
 
-- createCollection(to)
+- `subscribeToCollection(collectionTokenId, subscriptionParams)`
+- `setProtectedDataToSubscription(protectedData)`
+- `removeProtectedDataFromSubscription(protectedData)`
+- `setSubscriptionParams(collectionTokenId, subscriptionParams)`
 
-- addProtectedDataToCollection(collectionTokenId, protectedData, appWhitelist)
+#### Renting
 
-- removeProtectedDataFromCollection(protectedData)
+- `rentProtectedData(protectedData, rentingParams)`
+- `setProtectedDataToRenting(protectedData, rentingParams)`
+- `removeProtectedDataFromRenting(protectedData)`
 
-- subscribeToCollection(collectionTokenId,subscriptionParams)
+#### Sale
 
-- setProtectedDataToSubscription(protectedData)
-
-- removeProtectedDataFromSubscription(protectedData)
-
-- setSubscriptionParams(collectionTokenId,subscriptionParams)
-
-- rentProtectedData(protectedData, rentingParams)
-
-- setProtectedDataToRenting(protectedData, rentingParams)
-
-- removeProtectedDataFromRenting(protectedData)
-
-- buyProtectedData(protectedData, to, price)
-
-- setProtectedDataForSale(protectedData, price)
-
-- removeProtectedDataForSale(protectedData)
+- `buyProtectedData(protectedData, to, price)`
+- `setProtectedDataForSale(protectedData, price)`
+- `removeProtectedDataForSale(protectedData)`
 
 :::
 
@@ -60,32 +56,30 @@ access control, token handling, and order management.
 
 ---
 
-- OwnershipTransferred(previousOwner, newOwner)
+#### General
 
-- ProtectedDataTransfer(protectedData, fromCollection, toCollection,
-  appWhitelist)
+- `OwnershipTransferred(previousOwner, newOwner)`
+- `ProtectedDataTransfer(protectedData, fromCollection, toCollection, appWhitelist)`
 
-- NewSubscription(collectionTokenId, subscriber, endDate)
+#### Subscription
 
-- ProtectedDataAddedForSubscription(collectionTokenId, protectedData)
+- `NewSubscription(collectionTokenId, subscriber, endDate)`
+- `ProtectedDataAddedForSubscription(collectionTokenId, protectedData)`
+- `ProtectedDataRemovedFromSubscription(collectionTokenId, protectedData)`
+- `NewSubscriptionParams(collectionTokenId, subscriptionParams)`
 
-- ProtectedDataRemovedFromSubscription(collectionTokenId, protectedData)
+#### Renting
 
-- NewSubscriptionParams(collectionTokenId, subscriptionParams)
+- `NewRental(collectionTokenId, protectedData, renter, endDate)`
+- `ProtectedDataAddedForRenting(collectionTokenId, protectedData, rentingParams)`
+- `ProtectedDataRemovedFromRenting(collectionTokenId, protectedData)`
 
-- NewRental(collectionTokenId, protectedData, renter, endDate)
+#### Sale
 
-- ProtectedDataAddedForRenting(collectionTokenId, protectedData, rentingParams)
-
-- ProtectedDataRemovedFromRenting(collectionTokenId, protectedData)
-
-- ProtectedDataSold(collectionTokenId, newOwner, protectedData)
-
-- ProtectedDataAddedForSale(collectionTokenId, protectedData, price)
-
-- ProtectedDataRemovedFromSale(collectionTokenId, protectedData)
-
-- ProtectedDataConsumed(dealid, protectedData, mode)
+- `ProtectedDataSold(collectionTokenId, newOwner, protectedData)`
+- `ProtectedDataAddedForSale(collectionTokenId, protectedData, price)`
+- `ProtectedDataRemovedFromSale(collectionTokenId, protectedData)`
+- `ProtectedDataConsumed(dealid, protectedData, mode)`
 
 :::
 
@@ -93,32 +87,29 @@ access control, token handling, and order management.
 
 ---
 
-- OnlyPocoCallerAuthorized(account)
+#### General
 
-- EmptyCallData()
+- `OnlyPocoCallerAuthorized(account)`
+- `EmptyCallData()`
 
-- InvalidSubscriptionParams(collectionTokenId, subscriptionParams)
+#### Subscription
 
-- ProtectedDataNotForSale(protectedData)
+- `InvalidSubscriptionParams(collectionTokenId, subscriptionParams)`
+- `OnGoingCollectionSubscriptions(collectionTokenId)`
+- `ProtectedDataAvailableInSubscription(collectionTokenId, protectedData)`
 
-- ProtectedDataCurrentlyBeingRented(protectedData)
+#### Renting
 
-- ProtectedDataNotAvailableForRenting(protectedData)
+- `ProtectedDataCurrentlyBeingRented(protectedData)`
+- `ProtectedDataNotAvailableForRenting(protectedData)`
+- `DurationInvalid(duration)`
+- `ProtectedDataAvailableForRenting(collectionTokenId, protectedData)`
 
-- ProtectedDataNotForSale(protectedData)
+#### Sale
 
-- InvalidPriceForPurchase(protectedData, price)
-
-- WorkerpoolOrderNotFree(workerpoolOrder)
-
-- NoValidRentalOrSubscription(collectionTokenId, protectedData)
-
-- DurationInvalid(duration)
-
-- OnGoingCollectionSubscriptions(collectionTokenId)
-
-- ProtectedDataAvailableInSubscription(collectionTokenId, protectedData)
-
-- ProtectedDataAvailableForRenting(collectionTokenId, protectedData)
+- `ProtectedDataNotForSale(protectedData)`
+- `InvalidPriceForPurchase(protectedData, price)`
+- `WorkerpoolOrderNotFree(workerpoolOrder)`
+- `NoValidRentalOrSubscription(collectionTokenId, protectedData)`
 
 :::
