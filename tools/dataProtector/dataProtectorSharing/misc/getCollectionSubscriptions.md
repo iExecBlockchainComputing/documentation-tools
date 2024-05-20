@@ -64,3 +64,6 @@ import { type GetCollectionSubscriptionsResponse } from '@iexec/dataprotector';
 // Wait for next beta version to export this type
 // import { type CollectionSubscription } from '@iexec/dataprotector';
 ```
+
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sdk/blob/c83e30e6ce8b55ecf8a35ecb4eb1014cd4ecefe9/packages/sdk/src/lib/types/sharingTypes.ts" target="_blank">See
+Type ↗️</a>

@@ -36,3 +36,6 @@ import type { GetProtectedDataPricingParamsResponse } from '@iexec/dataprotector
 // Child types
 import type { SubscriptionParams, RentingParams } from '@iexec/dataprotector';
 ```
+
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sdk/blob/c83e30e6ce8b55ecf8a35ecb4eb1014cd4ecefe9/packages/sdk/src/lib/types/sharingTypes.ts" target="_blank">See
+Type ↗️</a>
