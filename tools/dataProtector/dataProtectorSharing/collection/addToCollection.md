@@ -10,10 +10,20 @@ Under the hood, this method performs two actions:
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedData: '0x123abc...',
   collectionId: 12,
+  addOnlyAppWhitelist: '0x541abc...',
 });
 ```
 
@@ -29,10 +39,20 @@ import { type AddToCollectionParams } from '@iexec/dataprotector';
 
 Collection ID to which you'd like to add the protected data.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12, // [!code focus]
   protectedData: '0x123abc...',
+  addOnlyAppWhitelist: '0x541abc...',
 });
 ```
 
@@ -42,10 +62,20 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 
 Address of the protected data you'd like to add to your collection.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...', // [!code focus]
+  addOnlyAppWhitelist: '0x541abc...',
 });
 ```
 
@@ -60,7 +90,16 @@ to instantiate DataProtector SDK.
 Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...',
@@ -85,10 +124,20 @@ For more details on how to create and manage appsWhitelist, see
 Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedData: '0x123abc...',
   collectionId: 12,
+  addOnlyAppWhitelist: '0xba46d6...',
   onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]
   }, // [!code focus]

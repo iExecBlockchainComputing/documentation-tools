@@ -9,8 +9,14 @@ application (or a designated list of applications).
 
 ## Usage
 
-```js
-const grantedAccess = await dataProtector.grantAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -34,8 +40,14 @@ import { type GrantAccessParams } from '@iexec/dataprotector';
 
 The ethereum address of the protected data supplied by the user.
 
-```js
-const grantedAccess = await dataProtector.grantAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -55,8 +67,14 @@ This smart contract aggregates multiple application versions. This allows you to
 introduce new versions of your application without needing to grant access for
 the `protectedData` each time you do so.
 
-```js
-const grantedAccess = await dataProtector.grantAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789cba...',
@@ -87,8 +105,14 @@ The address of the user you wish to authorize to use the `protectedData`. Note
 that these users may not view or manipulate the data. This only grants
 permission for the user to submit the data to an iExec application.
 
-```js
-const grantedAccess = await dataProtector.grantAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...', // [!code focus]
@@ -119,8 +143,14 @@ parameter).
 
 The fee is paid to the owner of the protected data.
 
-```js
-const grantedAccess = await dataProtector.grantAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -147,8 +177,14 @@ _default_: `1`
 Allows restricting the number of times the protected data may be processed and
 used.
 
-```js
-const grantedAccess = await dataProtector.grantAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -164,8 +200,14 @@ const grantedAccess = await dataProtector.grantAccess({
 Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
-```js
-const grantedAccess = await dataProtector.grantAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',

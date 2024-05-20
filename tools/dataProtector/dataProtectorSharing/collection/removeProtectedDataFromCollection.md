@@ -8,7 +8,16 @@ data back to you.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
   {
     protectedData: '0x123abc...',
@@ -35,7 +44,16 @@ import { type RemoveFromCollectionParams } from '@iexec/dataprotector';
 
 Address of the protected data you'd like to remove from your collection.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
   {
     protectedData: '0x123abc...', // [!code focus]

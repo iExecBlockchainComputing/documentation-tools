@@ -12,8 +12,14 @@ The request object is a JSON `GetGrantedAccessParams` object. Each address in
 the object is a string representation of an ethereum address or ENS name
 (Ethereum Name Service) reference.
 
-```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -36,8 +42,14 @@ Address of the protected data object for which you are querying access
 authorization grants. It's a representation of ethereum address or ENS name
 (Ethereum Name Service)
 
-```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -54,8 +66,14 @@ Optional filter to restrict the results to include only authorizations for the
 specified application. It's a representation of ethereum address or ENS name
 (Ethereum Name Service)
 
-```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789cba...',
@@ -84,8 +102,14 @@ Optional filter to restrict the results to include only authorizations for the
 specified user. It's a string representation of ethereum address or ENS name
 (Ethereum Name Service)
 
-```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...', // [!code focus]
@@ -106,8 +130,14 @@ you can also specify the `pageSize` parameter to control the number of records
 per page. By default, when no page number is specified, the system returns the
 first page (page 0) containing `20` elements.
 
-```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -128,8 +158,14 @@ Specifies the number of records to include in each page of the result set. This
 is used in conjunction with the optional `page` parameter to limit the size of
 each page.
 
-```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',

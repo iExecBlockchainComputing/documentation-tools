@@ -55,7 +55,14 @@ and sharing functions.
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
 import { IExecDataProtector } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -66,12 +73,11 @@ const dataProtectorCore = dataProtector.core;
 const dataProtectorSharing = dataProtector.sharing;
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
 
-const { PRIVATE_KEY } = process.env;
 // Get Web3 provider from a private key
-const web3Provider = getWeb3Provider(PRIVATE_KEY);
+const web3Provider = getWeb3Provider('YOUR_PRIVATE_KEY');
 
 // Instantiate using the umbrella module for full functionality
 const dataProtector = new IExecDataProtector(web3Provider);
@@ -88,7 +94,14 @@ For projects focusing solely on core data protection functions.
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -96,12 +109,11 @@ const web3Provider = window.ethereum;
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
-const { PRIVATE_KEY } = process.env;
 // Get Web3 provider from a private key
-const web3Provider = getWeb3Provider(PRIVATE_KEY);
+const web3Provider = getWeb3Provider('YOUR_PRIVATE_KEY');
 
 // Instantiate only the Core module
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
@@ -115,7 +127,14 @@ For projects that need access management functions specifically.
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
 import { IExecDataProtectorSharing } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -123,15 +142,14 @@ const web3Provider = window.ethereum;
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import {
   IExecDataProtectorSharing,
   getWeb3Provider,
 } from '@iexec/dataprotector';
 
-const { PRIVATE_KEY } = process.env;
 // Get Web3 provider from a private key
-const web3Provider = getWeb3Provider(PRIVATE_KEY);
+const web3Provider = getWeb3Provider('YOUR_PRIVATE_KEY');
 
 // Instantiate only the Sharing module
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
