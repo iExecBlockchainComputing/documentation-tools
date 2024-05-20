@@ -14,7 +14,13 @@ documentation for more details.
 
 ## Usage
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -29,18 +35,6 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-## Return value example
-
-The `sendEmail` method returns a unique identifier for the email task on the
-iExec side chain. You can view the status of the `sendEmail` method by
-monitoring the task on the [iExec Explorer](https://explorer.iex.ec/bellecour).
-
-```json
-{
-  "taskId": "0x882cbfb34453f260dfa14d224fd9ae0263edbfcb"
-}
-```
-
 ## Parameters
 
 ```ts twoslash
@@ -53,7 +47,13 @@ import { type SendEmailParams } from '@iexec/web3mail';
 
 The address of the `protectedData` holding the contact's email address.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...', // [!code focus]
   emailSubject: 'My email subject',
@@ -70,7 +70,13 @@ _maximum length_: 78 characters
 The subject line for the email you are sending. This field is limited to 78
 characters. Any characters beyond that limited are truncated.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject', // [!code focus]
@@ -89,7 +95,13 @@ _maximum size_: 512 kb
 The email content that needs to be sent. The content is limited to 512 kb in
 size. Email content is encrypted and stored in IPFS.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -106,7 +118,13 @@ may be one of: `text/html`, `text/plain`
 This is used by the mail client to properly render the delivered text. Set this
 to `text/html` to enable rich HTML content in your email.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -127,7 +145,13 @@ the supplied name. Setting this to `Tom`, for example, will result in a sender
 name of, `Tom via Web3Mail`, in the delivered email. If no name is specified,
 the Web3Mail tool sets this to a value of `Web3Mail`.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -143,7 +167,13 @@ const sendEmail = await web3mail.sendEmail({
 Allows adding a custom public label. The Web3Mail tool writes this onchain as
 `iexec_args` in the deal params.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -160,7 +190,13 @@ _default_: iExec's production workerpool
 
 Allows specifying the workerpool that will run the Web3Mail application.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -187,7 +223,13 @@ Allows specifying the maximum amount (in nRLC) you are willing to pay the email
 address owner for using their data. The owner of the protected email address
 receives this as a payment for sharing their data.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -205,7 +247,13 @@ _default_: `0`
 Allows specifying the maximum amount (in nRLC) you are willing to pay the
 Web3Mail app provider (iExec) for using the Web3Mail application.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -223,7 +271,13 @@ _default_: `0`
 Allows specifying the maximum amount you want to pay the workerpool provider for
 using their infrastructure to run the web3mail app in nRLC.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',

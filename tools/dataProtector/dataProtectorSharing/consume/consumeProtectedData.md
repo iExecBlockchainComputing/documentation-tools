@@ -17,7 +17,16 @@ This method does a few things under the hood:
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
@@ -45,7 +54,16 @@ import { type ConsumeProtectedDataParams } from '@iexec/dataprotector';
 
 Address of the protected data you'd like to visualize.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...', // [!code focus]
@@ -60,7 +78,16 @@ const consumeProtectedDataResult =
 Address or ENS of the app that will be used to consume the protected data. This
 app is the one that runs within an iExec worker.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
@@ -97,7 +124,16 @@ Address or ENS of the workerpool.
 
 _default_: `prod-v8-bellecour.main.pools.iexec.eth`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
@@ -121,10 +157,20 @@ default workerpool for running confidential computations on the iExec platform.
 Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
+    app: '0x456def...',
     onStatusUpdate: ({ title, isDone }) => { // [!code focus]
       console.log(title, isDone); // [!code focus]
     }, // [!code focus]

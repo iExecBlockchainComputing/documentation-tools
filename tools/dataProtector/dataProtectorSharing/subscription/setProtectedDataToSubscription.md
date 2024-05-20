@@ -7,7 +7,16 @@ consume this protected data.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setToSubscriptionResult =
   await dataProtectorSharing.setProtectedDataToSubscription({
     protectedData: '0x123abc...',
@@ -26,7 +35,16 @@ import { type SetProtectedDataToSubscriptionParams } from '@iexec/dataprotector'
 
 Address of the protected data you'd like to be part of your subscription.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setToSubscriptionResult =
   await dataProtectorSharing.setProtectedDataToSubscription({
     protectedData: '0x123abc...', // [!code focus]

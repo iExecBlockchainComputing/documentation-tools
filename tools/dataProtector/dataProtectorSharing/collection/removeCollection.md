@@ -7,9 +7,18 @@ it to the zero address**.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.removeCollection({
-  collectionId: '0x123abc...',
+  collectionId: 15,
 });
 ```
 
@@ -31,9 +40,18 @@ import { type RemoveCollectionParams } from '@iexec/dataprotector';
 
 The collection ID of the collection you want to remove.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.removeCollection({
-  collectionId: '0x123abc...', // [!code focus]
+  collectionId: 15, // [!code focus]
 });
 ```
 

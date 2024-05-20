@@ -22,7 +22,12 @@ The Ethereum contract address or ENS (Ethereum Name Service) for dataProtector
 smart contract. If not provided, the default dataProtector contract address will
 be used.
 
-```js
+```ts twoslash
+import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
 const dataProtector = new IExecDataProtector(web3Provider, {
   dataprotectorContractAddress: '0x123abc...', // [!code focus]
 });
@@ -36,7 +41,12 @@ The Ethereum contract address or ENS (Ethereum Name Service) for dataProtector
 sharing smart contract. If not provided, the default dataProtector sharing
 contract address will be used.
 
-```js
+```ts twoslash
+import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
 const dataProtector = new IExecDataProtector(web3Provider, {
   sharingContractAddress: '0x123abc...', // [!code focus]
 });
@@ -51,7 +61,12 @@ The subgraph URL for querying data.
 If not provided, the default data protector subgraph provided by iExec will be
 used.
 
-```js
+```ts twoslash
+import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
 const dataProtector = new IExecDataProtector(web3Provider, {
   subgraphUrl:
     'https://thegraph-product.iex.ec/subgraphs/name/bellecour/dataprotector', // [!code focus]
@@ -67,7 +82,12 @@ own IPFS node to upload content.
 
 If not provided, the default IPFS node provided by iExec will be used.
 
-```js
+```ts twoslash
+import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
 const dataProtector = new IExecDataProtector(web3Provider, {
   ipfsNode: 'https://ipfs-upload.v8-bellecour.iex.ec', // [!code focus]
 });
@@ -83,7 +103,12 @@ own IPFS node for content downloads.
 
 If not provided, the default IPFS gateway provided by iExec will be used.
 
-```js
+```ts twoslash
+import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
 const dataProtector = new IExecDataProtector(web3Provider, {
   ipfsGateway: 'https://ipfs-gateway.v8-bellecour.iex.ec', // [!code focus]
 });
@@ -95,7 +120,12 @@ Low level configuration options for `iexec` SDK, see
 [iexec SDK documentation IExecConfigOptions](https://github.com/iExecBlockchainComputing/iexec-sdk/blob/master/docs/interfaces/internal_.IExecConfigOptions.md)
 for more details.
 
-```js
+```ts twoslash
+import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
 const dataProtector = new IExecDataProtector(web3Provider, {
   iexecOptions: { smsURL: 'https://sms.scone-prod.v8-bellecour.iex.ec' }, // [!code focus]
 });

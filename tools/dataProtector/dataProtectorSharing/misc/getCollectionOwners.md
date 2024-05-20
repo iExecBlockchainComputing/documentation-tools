@@ -10,7 +10,16 @@ Results are ordered by `CollectionOwner.id` asc.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const collectionOwners = await dataProtectorSharing.getCollectionOwners({
   limit: 100,
 });
@@ -30,7 +39,16 @@ _default_: `100`
 
 Value between `1` and `1000`.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const collectionOwners = await dataProtectorSharing.getCollectionOwners({
   limit: 100, // [!code focus]
 });

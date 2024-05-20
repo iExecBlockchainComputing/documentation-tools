@@ -8,7 +8,16 @@ Results are ordered by `creationTimestamp` desc.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedData =
   await dataProtectorSharing.getProtectedDataInCollections();
 ```
@@ -23,7 +32,16 @@ import { type GetProtectedDataInCollectionsParams } from '@iexec/dataprotector';
 
 `AddressOrENS | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const oneProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     protectedData: '0x123abc...', // [!code focus]
@@ -34,7 +52,16 @@ const oneProtectedData =
 
 `number | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedDataByCollection =
   await dataProtectorSharing.getProtectedDataInCollections({
     collectionId: 12, // [!code focus]
@@ -45,7 +72,16 @@ const protectedDataByCollection =
 
 `AddressOrENS | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedDataByOwner =
   await dataProtectorSharing.getProtectedDataInCollections({
     collectionOwner: '0x123...', // [!code focus]
@@ -56,7 +92,16 @@ const protectedDataByOwner =
 
 `number | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const latestProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
@@ -67,7 +112,16 @@ const latestProtectedData =
 
 `boolean | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const rentableProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     isRentable: true, // [!code focus]
@@ -78,7 +132,16 @@ const rentableProtectedData =
 
 `boolean | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedDataForSale =
   await dataProtectorSharing.getProtectedDataInCollections({
     isForSale: true, // [!code focus]
@@ -92,7 +155,16 @@ const protectedDataForSale =
 Used to filter protected data that are either for sale, renting or part of a
 subscription.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedDataForSale =
   await dataProtectorSharing.getProtectedDataInCollections({
     isDistributed: true, // [!code focus]
@@ -103,7 +175,16 @@ const protectedDataForSale =
 
 `number | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   collectionId: 12,
   page: 3, // [!code focus]
@@ -117,7 +198,16 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 Value between `10` and `1000`.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   collectionId: 12,
   page: 3,

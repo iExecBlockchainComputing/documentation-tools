@@ -4,8 +4,17 @@ Method to remove a protected data from your subscription.
 
 ## Usage
 
-```js
-const { success } =
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const { txHash } =
   await dataProtectorSharing.removeProtectedDataFromSubscription({
     protectedData: '0x123abc...',
   });
@@ -21,6 +30,15 @@ const { success } =
 ## Parameters
 
 ```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 import { type RemoveProtectedDataFromSubscriptionParams } from '@iexec/dataprotector';
 ```
 
@@ -30,8 +48,17 @@ import { type RemoveProtectedDataFromSubscriptionParams } from '@iexec/dataprote
 
 Address of the protected data you'd like to remove from subscription.
 
-```js
-const { success } =
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const { txHash } =
   await dataProtectorSharing.removeProtectedDataFromSubscription({
     protectedData: '0x123abc...', // [!code focus]
   });

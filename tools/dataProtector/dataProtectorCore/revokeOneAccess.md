@@ -11,8 +11,14 @@ The `revokeOneAccess` method requires a `grantedAccess` object as an input
 parameter. This object is retrieved from the
 [`getGrantedAccess`](./getGrantedAccess.md) method.
 
-```js
-const revokeAccess = await dataProtector.revokeOneAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const revokeAccess = await dataProtectorCore.revokeOneAccess({
   apprestrict: '0xea...',
   dataset: '0xA0C...',
   datasetprice: '0',
@@ -38,8 +44,14 @@ import { type GrantedAccess } from '@iexec/dataprotector';
 This is the complete `granted access` object retrieved from an invocation of
 `fetchGrantedAccess`.
 
-```js
-const revokeAccess = await dataProtector.revokeOneAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const revokeAccess = await dataProtectorCore.revokeOneAccess({
   apprestrict: '0xea...', // [!code focus]
   dataset: '0xA0C...', // [!code focus]
   datasetprice: '0', // [!code focus]

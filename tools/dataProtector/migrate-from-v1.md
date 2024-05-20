@@ -68,8 +68,14 @@ data protection process. This change simplifies the API and enhances flexibility
 in handling the protection process status updates.
 
 <!-- prettier-ignore-start -->
-```js
-const protectedData = await dataProtector.protectData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail',
   data: {
     email: 'example@gmail.com',
@@ -90,8 +96,14 @@ developers to receive feedback about the revocation status of the process,
 providing more control and better handling of the process.
 
 <!-- prettier-ignore-start -->
-```js
-const allAccessRevoked = await dataProtector.revokeAllAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const allAccessRevoked = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   onStatusUpdate: ({ title, isDone }) => { // [!code ++]
     console.log(title, isDone); // [!code ++]

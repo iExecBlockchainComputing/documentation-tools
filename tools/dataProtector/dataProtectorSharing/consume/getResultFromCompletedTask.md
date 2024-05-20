@@ -4,7 +4,16 @@ Method to get the result of a completed task.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...',
@@ -23,7 +32,16 @@ import { type GetResultFromCompletedTaskParams } from '@iexec/dataprotector';
 
 Address of the task ID data you'd like to get the result from.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...', // [!code focus]
@@ -37,7 +55,16 @@ const completedTaskResult =
 Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...',

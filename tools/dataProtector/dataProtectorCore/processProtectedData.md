@@ -11,8 +11,14 @@ application.
 
 ## Usage
 
-```js
-const taskid = await dataProtector.processProtectedData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0xC2E...',
   maxPrice: 10,
@@ -38,8 +44,14 @@ import { type ProcessProtectedDataParams } from '@iexec/dataprotector';
 The ETH address or Ethereum Name Service (ENS) reference for the protected data
 you wish the `app` to process.
 
-```js
-const taskid = await dataProtector.processProtectedData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...', // [!code focus]
   app: '0xC2E...',
 });
@@ -52,8 +64,14 @@ const taskid = await dataProtector.processProtectedData({
 The ETH address or Ethereum Name Service (ENS) address for the iExec application
 to process the protected data.
 
-```js
-const taskid = await dataProtector.processProtectedData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0xC2E...', // [!code focus]
 });
@@ -67,8 +85,14 @@ The maximum price (in nRLC) that a requester is willing to pay for each task
 related to processing the protected data. It is the sum of the application
 price, dataset price, and workerpool price per task.
 
-```js
-const taskid = await dataProtector.processProtectedData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0xC2E...',
   maxPrice: 10, // [!code focus]
@@ -81,8 +105,14 @@ const taskid = await dataProtector.processProtectedData({
 
 Set of execution arguments for the application.
 
-```js
-const taskid = await dataProtector.processProtectedData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0xC2E...',
   args: 'arg1 arg2', // [!code focus]
@@ -103,8 +133,14 @@ arguments passed this way are visible in plain text using the
 
 A set of URLs representing the input files required for application execution.
 
-```js
-const taskid = await dataProtector.processProtectedData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0xC2E...',
   inputFiles: ['https://example.com/file1', 'https://example.com/file2'], // [!code focus]
@@ -124,8 +160,14 @@ variables. For more details, see
 [Access requester secrets](https://protocol.docs.iex.ec/for-developers/confidential-computing/access-confidential-assets/requester-secrets).
 
 <!-- prettier-ignore-start -->
-```js
-const taskid = await dataProtector.processProtectedData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0xC2E...',
   maxPrice: 10,
@@ -154,8 +196,14 @@ default workerpool for running confidential computations on the iExec platform.
 
 :::
 
-```js
-const taskid = await dataProtector.processProtectedData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0xC2E...',
   workerpool: '0xA5d...', // [!code focus]

@@ -10,8 +10,17 @@ protected data.
 
 ## Usage
 
-```js
-const { txHash } = await dataProtectorSharing.subscribe({
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC
   duration: 60 * 60 * 24 * 2, // 172,800 sec = 2 days
@@ -46,7 +55,16 @@ import { type SubscribeToCollectionParams } from '@iexec/dataprotector';
 
 Collection ID to which you'd like to subscribe.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12, // [!code focus]
   price: 1, // 1 nRLC
@@ -62,7 +80,16 @@ Price of the rental for the protected data that you expect to rent. This
 parameter ensures that you will not be front-run by the owner of the protected
 data. The unit is in nano RLC (nRLC).
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC // [!code focus]
@@ -78,7 +105,16 @@ Duration of the rental for the protected data that you expect to rent. This
 parameter ensures that you will not be front-run by the owner of the protected
 data. The unit is in seconds.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC

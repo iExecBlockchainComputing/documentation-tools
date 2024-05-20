@@ -4,7 +4,16 @@ Method to get all distribution params for a protected data.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
   protectedData: '0x123abc...',
 });
@@ -22,7 +31,16 @@ import { type GetProtectedDataPricingParams } from '@iexec/dataprotector';
 
 Address of the protected data you'd like to get the pricing params for.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
   protectedData: '0x123abc...', // [!code focus]
 });

@@ -4,7 +4,16 @@ Method to get all collections for a specific user.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const userCollections = await dataProtectorSharing.getCollectionsByOwner({
   owner: '0xa0c15e...',
 });
@@ -20,7 +29,16 @@ import { type GetCollectionsByOwnerParams } from '@iexec/dataprotector';
 
 `AddressOrENS`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const userCollections = await dataProtectorSharing.getCollectionsByOwner({
   owner: '0xa0c15e...', // [!code focus]
 });
@@ -32,7 +50,16 @@ const userCollections = await dataProtectorSharing.getCollectionsByOwner({
 
 _default_: `false`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const userCollectionsWithAllProtectedData =
   await dataProtectorSharing.getCollectionsByOwner({
     owner: '0xa0c15e...',

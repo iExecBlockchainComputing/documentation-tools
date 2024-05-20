@@ -4,8 +4,17 @@ Method to remove a protected data for sale.
 
 ## Usage
 
-```js
-const notForSaleAymoreResult =
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const notForSaleAnymoreResult =
   await dataProtectorSharing.removeProtectedDataForSale({
     protectedData: '0x123abc...',
   });
@@ -23,8 +32,17 @@ import { type RemoveProtectedDataForSaleParams } from '@iexec/dataprotector';
 
 Address of the protected data that you'd like to remove for sale.
 
-```js
-const notForSaleAymoreResult =
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const notForSaleAnymoreResult =
   await dataProtectorSharing.removeProtectedDataForSale({
     protectedData: '0x123abc...', // [!code focus]
   });
