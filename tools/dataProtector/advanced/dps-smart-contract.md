@@ -13,7 +13,7 @@ You can find the Solidity code here:
 
 ## DataProtectorSharing
 
-Contract module which provides a mechanism for managing and sharing protected
+This is a contract that provides a mechanism for managing and sharing protected
 data through collections, subscriptions, rentals, and sales. This contract
 extends several functionalities from OpenZeppelin libraries and incorporates
 access control, token handling, and order management.
