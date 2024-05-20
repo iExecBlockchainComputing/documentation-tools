@@ -61,7 +61,7 @@ const web3Provider = window.ethereum;
 const web3mail = new IExecWeb3mail(web3Provider);
 ```
 
-```ts twoslash twoslash [NodeJS]
+```ts twoslash [NodeJS]
 import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
 // get web3 provider from a private key
