@@ -9,7 +9,16 @@ terms, or to keep it for yourself.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,
@@ -19,6 +28,15 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 ## Parameters
 
 ```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 import { type BuyProtectedDataParams } from '@iexec/dataprotector';
 ```
 
@@ -28,7 +46,16 @@ import { type BuyProtectedDataParams } from '@iexec/dataprotector';
 
 Address of the protected data you'd like to buy.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...', // [!code focus]
   price: 1,
@@ -43,7 +70,16 @@ Price of the protected data that you expect to buy. This parameter ensures that
 you will not be front-run by the owner of the protected data. The unit is in
 nano RLC (nRLC).
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1, // [!code focus]
@@ -62,12 +98,21 @@ transferred. If you use this param the `addOnlyAppWhitelist` is mandatory
 because you must specify which `addOnlyAppWhitelist` will be able to consume
 your protected data.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,
   addToCollectionId: 12, // [!code focus]
-  appAddress: '0xdef456...',
+  addOnlyAppWhitelist: '0xdef456...',
 });
 ```
 
@@ -78,12 +123,21 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,
   addToCollectionId: 12,
-  appAddress: '0xdef456...', // [!code focus]
+  addOnlyAppWhitelist: '0xdef456...', // [!code focus]
 });
 ```
 

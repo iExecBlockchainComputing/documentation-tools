@@ -4,7 +4,16 @@ Method to set subscription parameters for a given collection of yours.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
@@ -23,7 +32,16 @@ import { type SetSubscriptionParams } from '@iexec/dataprotector';
 
 Collection ID to which you'd like to set the subscription params.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12, // [!code focus]
@@ -37,7 +55,16 @@ const setSubscriptionParamsResult =
 The price in nano RLC (nRLC) it's going to cost a subscriber to access your
 collection.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
@@ -50,7 +77,16 @@ const setSubscriptionParamsResult =
 
 The duration (in seconds) for a period of subscription.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,

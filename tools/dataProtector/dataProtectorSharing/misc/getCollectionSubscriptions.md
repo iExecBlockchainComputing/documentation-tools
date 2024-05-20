@@ -7,7 +7,16 @@ Method to get all subscriptions for:
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const collectionActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     collectionId: 9,
@@ -24,7 +33,16 @@ import { type GetCollectionSubscriptionsParams } from '@iexec/dataprotector';
 
 `AddressOrENS | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const userActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     subscriberAddress: '0x246bdf...', // [!code focus]
@@ -35,7 +53,16 @@ const userActiveSubscriptions =
 
 `number | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const collectionActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     collectionId: 9, // [!code focus]
@@ -48,7 +75,16 @@ const collectionActiveSubscriptions =
 
 _default_: `false`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const userRentals = await dataProtectorSharing.getCollectionSubscriptions({
   subscriberAddress: '0x246bdf...',
   includePastSubscriptions: true, // [!code focus]
