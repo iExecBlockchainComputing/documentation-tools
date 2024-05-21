@@ -13,12 +13,12 @@ the information securely.
 ## Overview
 
 This deserializer is built on the
-[Borsh technical specification](https://borsh.io/). We developed this JavaScript
+[Borsch technical specification](https://borsh.io/). We developed this JavaScript
 library to simplify deserialization in your iDapp built with JavaScript.
 
 ::: warning
 
-If you want to build your iDapp in another language, you should follow the Borsh
+If you want to build your iDapp in another language, you should follow the Borsch
 serialization specification and reimplement it in your chosen language such as
 Python, Rust, Go, etc.
 
