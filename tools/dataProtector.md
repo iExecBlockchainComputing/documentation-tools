@@ -32,15 +32,17 @@ securely, fostering innovation and collaboration in the digital realm.
 With `DataProtector Core`, you can **grant access** to your protected data **to
 a specific user**.
 
-- You need to know the user's Ethereum address.
-- You'll have to sign a transaction at the moment you grant the access.
-- You define a number of times the user can access the data.
+- You define the number of times the user can access the data.
+- You should choose an iDapp (iExec TEE Dapp) that will be able to process your
+  protected data.
+- You'll have to sign a transaction at the moment you grant access to the user
+  and the iDapp (iExec TEE Dapp).
 
 With `DataProtector Sharing`, you can **distribute** your protected data to **a
 wider audience**.
 
 - You don't need to know the user's Ethereum address.
-- You don't need to sign a transaction at the moment of distribution (but the
-  user who wants to access your content will).
+- You define a period of time and a price for which the user can access the
+  data.
 - Any user can access your content as long as they comply with your distribution
   and monetization choices.
