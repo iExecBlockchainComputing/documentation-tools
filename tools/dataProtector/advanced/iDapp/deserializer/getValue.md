@@ -66,7 +66,3 @@ const value1 = await deserializer.getValue(
 ## Return value
 
 The recovered original value.
-
-### file
-
-`BooleanSchemaFilter<T>     | NumberSchemaFilter<T>     | BigintSchemaFilter<T>     | StringSchemaFilter<T>     | BinarySchemaFilter<T>`
