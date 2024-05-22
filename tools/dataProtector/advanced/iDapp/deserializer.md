@@ -2,8 +2,8 @@
 
 If you want to build your own iDapp (iExec TEE Dapp), you may need to access
 protected data that your wallet and iDapp are authorized to use. To achieve
-this, you must deserialize the content of the protected data to match the
-serialization format used for this data.
+this, you must deserialize the content of the protected data with the expected
+data schema.
 
 To simplify this process, you can use our lightweight SDK,
 `IExecDataProtectorDeserializer`, in your iDapp. This SDK streamlines the
