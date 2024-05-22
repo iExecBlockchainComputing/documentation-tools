@@ -65,7 +65,7 @@ const value1 = await deserializer.getValue(
 
 ## Return value
 
-The deserialize file.
+The recovered original value.
 
 ### file
 
