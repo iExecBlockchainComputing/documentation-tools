@@ -194,8 +194,8 @@ The following data types are automatically detected:
 
 - Scalars
   - `bool`
-  - `f64` (javascript `number`)
-  - `i128` (javascript `bigint` up to 128 bits)
+  - `f64` (JavaScript `number`)
+  - `i128` (JavaScript `bigint` up to 128 bits)
   - `string`
 - Binary:
   - `application/octet-stream`
@@ -233,10 +233,14 @@ details on the transaction using the [iExec explorer](https://explorer.iex.ec).
 
 ### zipFile
 
-`string`
+`Uint8Array`
 
-This is a binary representation of the data stored in the `protectedData`. This
-is intended as debug data and we will remove this in a future SDK release.
+Under the hood, your protected data will be **compressed as a zip file**. In
+this zip file, you'll find back all of your protected fields, each field being
+serialized with a tool called `borsh`. You can find more details here:
+[deserializer](../advanced/iDapp/deserializer).
+
+This is mainly returned for debug purpose.
 
 ### encryptionKey
 
