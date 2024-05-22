@@ -26,7 +26,6 @@ import { IExecDataProtectorDeserializer } from '@iexec/dataprotector-deserialize
 
 The path of the value inside the protected data that you want to deserialize.
 
-<!-- prettier-ignore-start -->
 ```ts twoslash [NodeJS]
 import { IExecDataProtectorDeserializer } from '@iexec/dataprotector-deserializer';
 
@@ -34,22 +33,20 @@ const deserializer = new IExecDataProtectorDeserializer();
 // ---cut---
 
 const value1 = await deserializer.getValue(
-    'path.to.value1', // [!code focus]
-    'bool'
-    );
+  'path.to.value1', // [!code focus]
+  'bool'
+);
 ```
-<!-- prettier-ignore-end -->
 
 ### type
 
 `string`
 
-Type of the desired data. The supported types are :
+Type of the desired data. The supported types are:
 
 - `bool` | `f64` | `i128` | `bigint` | `string` | `Uint8Array` | `boolean`
   (legacy schema) | `number` (legacy schema)
 
-<!-- prettier-ignore-start -->
 ```ts twoslash [NodeJS]
 import { IExecDataProtectorDeserializer } from '@iexec/dataprotector-deserializer';
 
@@ -57,11 +54,10 @@ const deserializer = new IExecDataProtectorDeserializer();
 // ---cut---
 
 const value1 = await deserializer.getValue(
-    'path.to.value1', 
-    'bool' // [!code focus]
-    );
+  'path.to.value1',
+  'bool' // [!code focus]
+);
 ```
-<!-- prettier-ignore-end -->
 
 ## Return value
 

@@ -13,23 +13,22 @@ the information securely.
 ## Overview
 
 This deserializer is built on the
-[Borsch technical specification](https://borsh.io/). We developed this
-JavaScript library to simplify deserialization in your iDapp built with
-JavaScript.
+[Borsh technical specification](https://borsh.io/). We developed this JavaScript
+library to simplify deserialization in your iDapp built with JavaScript.
 
 ::: warning
 
-If you want to build your iDapp in another language, you need how to deserialize
-a protected data.
+If you want to build your iDapp in another language, you need to know how to
+deserialize a protected data.
 
-Under the hood, protected data are zip files replicating the tree structure of
-the original data object. Each value is stored in a dedicated file, binary
+Under the hood, protected data are **zip files** replicating the tree structure
+of the original data object. Each value is stored in a dedicated file, binary
 values are stored as is while boolean, numbers, and strings are serialized with
 borsh.
 
 To access a value from a protected data, your app will need to unzip the iExec
-dataset file at `$IEXEC_IN/$IEXEC_DATASET_FILENAME` then for `'bool'`, `'f64'`,
-`'i128'`, or `'string'` types use the Borsch deserialization specification to
+dataset file at `$IEXEC_IN/$IEXEC_DATASET_FILENAME`. Then for `'bool'`, `'f64'`,
+`'i128'` or `'string'` types, use the Borsh deserialization specification to
 recover the original value. Borsh has
 [implementations in various languages](https://github.com/near/borsh#implementations),
 check your favorite one.
