@@ -224,6 +224,10 @@ export function getSidebar() {
                 link: '/tools/dataProtector/advanced/advanced-configuration',
               },
               {
+                text: 'Sharing smart contract',
+                link: '/tools/dataProtector/advanced/dps-smart-contract',
+              },
+              {
                 text: 'Apps whitelist',
                 link: '/tools/dataProtector/advanced/appsWhitelist',
                 collapsed: true,
@@ -243,8 +247,22 @@ export function getSidebar() {
                 ],
               },
               {
-                text: 'Sharing smart contract',
-                link: '/tools/dataProtector/advanced/dps-smart-contract',
+                text: 'iDapp',
+                link: '/tools/dataProtector/advanced/iDapp',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'DataProtector Deserializer',
+                    link: '/tools/dataProtector/advanced/iDapp/deserializer',
+                    collapsed: true,
+                    items: [
+                      {
+                        text: 'getValue',
+                        link: '/tools/dataProtector/advanced/iDapp/deserializer/getValue',
+                      },
+                    ],
+                  },
+                ],
               },
             ],
           },
