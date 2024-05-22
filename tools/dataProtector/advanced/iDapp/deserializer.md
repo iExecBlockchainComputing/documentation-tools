@@ -5,8 +5,8 @@ protected data that your wallet and iDapp are authorized to use. To achieve
 this, you must deserialize the content of the protected data with the expected
 data schema.
 
-To simplify this process, you can use our lightweight SDK,
-`IExecDataProtectorDeserializer`, in your iDapp. This SDK streamlines the
+To simplify this process, you can use our lightweight utility package,
+`@iexec/dataprotector-deserializer`, in your iDapp. This package streamlines the
 deserialization of protected data, making it easy for you to access and utilize
 the information securely.
 
