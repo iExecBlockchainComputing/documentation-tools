@@ -24,7 +24,7 @@ import { IExecDataProtectorDeserializer } from '@iexec/dataprotector-deserialize
 
 `string`
 
-The path of the file inside the protected data that you want to deserialize.
+The path of the value inside the protected data that you want to deserialize.
 
 <!-- prettier-ignore-start -->
 ```ts twoslash [NodeJS]
