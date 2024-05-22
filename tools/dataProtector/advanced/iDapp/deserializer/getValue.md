@@ -1,6 +1,6 @@
 # getValue
 
-Method to deserialize the
+Method to deserialize a value given a provided type. 
 
 ## Usage
 
