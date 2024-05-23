@@ -26,6 +26,14 @@ const completedTaskResult =
 import { type GetResultFromCompletedTaskParams } from '@iexec/dataprotector';
 ```
 
+### path
+
+`string | undefined`
+
+Under the hood, a protected data is a zip file. With this `path` parameter, you
+can specify the file you're interested in. The zip file will be uncompressed for
+you, and only the desired file will be given as the `result`.
+
 ### taskId
 
 `AddressOrEN`
@@ -81,8 +89,8 @@ const completedTaskResult =
 import { type GetResultFromCompletedTaskResponse } from '@iexec/dataprotector';
 ```
 
-### contentAsObjectURL
+### result
 
-`string`
+`ArrayBuffer`
 
-The actual content of the protected file, wrapped in an `ObjectURL`.
+The actual content of the protected file.

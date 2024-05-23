@@ -213,10 +213,21 @@ const taskid = await dataProtectorCore.processProtectedData({
 ## Return value
 
 ```ts twoslash
-import { type ProcessProtectedDataParams } from '@iexec/dataprotector';
+import { type ProcessProtectedDataResponse } from '@iexec/dataprotector';
 ```
 
-This method returns a single value as the result, a `taskId`.
+### txHash
+
+`string`
+
+The ID of the transaction that happened on iExec's side chain. You may view
+details on the transaction using the [iExec explorer](https://explorer.iex.ec).
+
+### dealId
+
+`string`
+
+Identifies the specific deal associated with this transaction.
 
 ### taskId
 
@@ -225,3 +236,9 @@ This method returns a single value as the result, a `taskId`.
 A unique identifier associated with a task currently running on the iExec
 Bellecour side chain. You may monitor task execution with the
 [iExec blockchain explorer](https://explorer.iex.ec).
+
+### result
+
+`ArrayBuffer`
+
+The actual content of the protected file.

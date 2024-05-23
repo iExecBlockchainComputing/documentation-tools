@@ -47,8 +47,9 @@ dApp:
 <hr />
 <br />
 
-In the context of Content Creator usecase-demo, the iExec TEE dApp is very
-simple:
+In the context of
+[Content Creator usecase-demo](/overview/useCaseDemo/contentCreator.html), the
+iExec TEE dApp is very simple:
 
 1. Download the protected data from IPFS. It expects to find a property named
    `file` in the protected data.

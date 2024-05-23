@@ -8,10 +8,10 @@ This method does a few things under the hood:
 - Push the public key to iExec SMS (Secret Management Service) (For more info,
   see
   [iExec Protocol documentation](https://protocol.docs.iex.ec/for-developers/confidential-computing/access-confidential-assets#secret-management-service-sms))
-- Wait for the consuming task to be executed by a worker. The TEE app being
-  executed is the one given with the `app` parameter. The TEE app will get the
-  protected data from IPFS, encrypt it with the public key generated in the
-  first step, and re-upload it to IPFS.
+- Wait for the consuming task to be executed by a worker. The iExec TEE dApp
+  being executed is the one given with the `app` parameter. The iExec TEE dApp
+  will get the protected data from IPFS, encrypt it with the public key
+  generated in the first step, and re-upload it to IPFS.
 - Retrieve the encrypted data from IPFS and decrypt it with the private key
   generated in the first step.
 
@@ -75,8 +75,8 @@ const consumeProtectedDataResult =
 
 `AddressOrENS`
 
-Address or ENS of the app that will be used to consume the protected data. This
-app is the one that runs within an iExec worker.
+Address or ENS of the iExec TEE dApp that will be used to consume the protected
+data. This iExec TEE dApp is the one that runs within an iExec worker.
 
 ```ts twoslash
 import {
@@ -97,7 +97,7 @@ const consumeProtectedDataResult =
 
 ::: tip
 
-For this `app` parameter you can use the following iExec TEE dApp:
+For this `app` parameter you can use the following iExec TEE app:
 
 ```
 0xF248000F0E99e9203FdBE509019f008F9c169705
@@ -150,6 +150,67 @@ default workerpool for running confidential computations on the iExec platform.
 
 :::
 
+### pemPublicKey
+
+`string | undefined`
+
+If you have previously called `consumeProtectedData()` and saved the returned
+public key, you can reuse it in further calls.
+
+Alternatively, you can generate a RSA keypair on your own.
+
+If a public key is provided, its corresponding private key needs also to be
+provided.
+
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const consumeProtectedDataResult =
+  await dataProtectorSharing.consumeProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    pemPublicKey: '-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----', // [!code focus]
+  });
+```
+
+### pemPrivateKey
+
+`string | undefined`
+
+If you have previously called `consumeProtectedData()` and saved the returned
+private key, you can reuse it in further calls.
+
+Alternatively, you can generate a RSA keypair on your own.
+
+If a private key is provided, its corresponding public key needs also to be
+provided.
+
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const consumeProtectedDataResult =
+  await dataProtectorSharing.consumeProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    pemPrivateKey:
+      '-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----',
+  });
+```
+
 ### onStatusUpdate
 
 `OnStatusUpdateFn<ConsumeProtectedDataStatuses> | undefined`
@@ -178,6 +239,17 @@ const consumeProtectedDataResult =
 ```
 <!-- prettier-ignore-end -->
 
+You can expect this callback function to be called with the following titles:
+
+```
+'FETCH_WORKERPOOL_ORDERBOOK'
+'PUSH_ENCRYPTION_KEY'
+'CONSUME_ORDER_REQUESTED'
+'CONSUME_TASK'
+'CONSUME_RESULT_DOWNLOAD'
+'CONSUME_RESULT_DECRYPT'
+```
+
 ## Return value
 
 ```ts twoslash
@@ -202,8 +274,8 @@ Identifies the specific deal associated with this transaction.
 
 Identifies the specific task associated with the deal.
 
-### contentAsObjectURL
+### result
 
-`string`
+`ArrayBuffer`
 
-The actual content of the protected file, wrapped in an `ObjectURL`.
+The actual content of the protected file.
