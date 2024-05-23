@@ -152,8 +152,8 @@ export function getSidebar() {
                     link: '/tools/dataProtector/dataProtectorSharing/subscription/setProtectedDataToSubscription',
                   },
                   {
-                    text: 'subscribe',
-                    link: '/tools/dataProtector/dataProtectorSharing/subscription/subscribe',
+                    text: 'subscribeToCollection',
+                    link: '/tools/dataProtector/dataProtectorSharing/subscription/subscribeToCollection',
                   },
                   {
                     text: 'removeProtectedDataFromSubscription',

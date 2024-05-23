@@ -1,4 +1,4 @@
-# subscribe
+# subscribeToCollection
 
 Method to subscribe to a collection.
 
