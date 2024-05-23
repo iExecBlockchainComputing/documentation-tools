@@ -207,7 +207,7 @@ const consumeProtectedDataResult =
     protectedData: '0x123abc...',
     app: '0x456def...',
     pemPrivateKey:
-      '-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----',
+      '-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----', // [!code focus]
   });
 ```
 
