@@ -34,10 +34,6 @@ export function getSidebar() {
             link: '/tools/dataProtector/getting-started',
           },
           {
-            text: 'Migrate from v1 to v2',
-            link: '/tools/dataProtector/migrate-from-v1',
-          },
-          {
             text: 'DataProtector Core',
             link: '/tools/dataProtector/dataProtectorCore',
             collapsed: true,
@@ -265,6 +261,10 @@ export function getSidebar() {
                 ],
               },
             ],
+          },
+          {
+            text: 'Migrate from v1 to v2',
+            link: '/tools/dataProtector/migrate-from-v1',
           },
           {
             text: 'v1 documentation',
