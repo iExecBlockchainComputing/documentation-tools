@@ -152,7 +152,7 @@ You can expect this callback function to be called with the following titles:
 'ADD_PROTECTED_DATA_TO_COLLECTION';
 ```
 
-Once with `isDone:false`, and then with `isDone:true`
+Once with `isDone: false`, and then with `isDone: true`
 
 ## Return value
 

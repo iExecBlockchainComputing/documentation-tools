@@ -125,7 +125,7 @@ You can expect this callback function to be called with the following titles:
 'REVOKE_ONE_ACCESS';
 ```
 
-Once with `isDone:false`, and then with `isDone:true`
+Once with `isDone: false`, and then with `isDone: true`
 
 ## Result
 

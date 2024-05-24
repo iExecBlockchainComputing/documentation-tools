@@ -225,7 +225,7 @@ You can expect this callback function to be called with the following titles:
 'PUBLISH_DATASET_ORDER';
 ```
 
-Once with `isDone:false`, and then with `isDone:true`
+Once with `isDone: false`, and then with `isDone: true`
 
 ## Return value
 

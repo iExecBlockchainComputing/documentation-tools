@@ -163,7 +163,7 @@ You can expect this callback function to be called with the following titles:
 'PUSH_SECRET_TO_SMS';
 ```
 
-Once with `isDone: false`, and then with `isDone: true`.
+Once with `isDone: false`, and then with `isDone: true`
 
 ## Return value
 

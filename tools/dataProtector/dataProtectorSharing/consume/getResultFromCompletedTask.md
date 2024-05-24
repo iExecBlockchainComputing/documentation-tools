@@ -135,7 +135,7 @@ You can expect this callback function to be called with the following titles:
 'CONSUME_RESULT_DECRYPT';
 ```
 
-Once with `isDone:false`, and then with `isDone:true`
+Once with `isDone: false`, and then with `isDone: true`
 
 ## Return value
 
