@@ -145,43 +145,14 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 ```
 <!-- prettier-ignore-end -->
 
-You can expect this callback function to be called four times:
+You can expect this callback function to be called with the following titles:
 
-1️⃣
-
-```json
-{
-  "title": "APPROVE_COLLECTION_CONTRACT",
-  "isDone": false
-}
+```ts
+'APPROVE_COLLECTION_CONTRACT';
+'ADD_PROTECTED_DATA_TO_COLLECTION';
 ```
 
-2️⃣
-
-```json
-{
-  "title": "APPROVE_COLLECTION_CONTRACT",
-  "isDone": true
-}
-```
-
-3️⃣
-
-```json
-{
-  "title": "ADD_PROTECTED_DATA_TO_COLLECTION",
-  "isDone": false
-}
-```
-
-4️⃣
-
-```json
-{
-  "title": "ADD_PROTECTED_DATA_TO_COLLECTION",
-  "isDone": true
-}
-```
+Once with `isDone:false`, and then with `isDone:true`
 
 ## Return value
 

@@ -210,6 +210,45 @@ const taskid = await dataProtectorCore.processProtectedData({
 });
 ```
 
+### onStatusUpdate
+
+`OnStatusUpdateFn<ProcessProtectedDataStatuses> | undefined`
+
+Callback function to be notified at intermediate steps.
+
+<!-- prettier-ignore-start -->
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const taskid = await dataProtectorCore.processProtectedData({
+  protectedData: '0x123abc...',
+  app: '0xC2E...',
+  onStatusUpdate: ({ title, isDone }) => { // [!code focus]
+    console.log(title, isDone); // [!code focus]
+  }, // [!code focus]
+});
+```
+<!-- prettier-ignore-end -->
+
+You can expect this callback function to be called with the following titles:
+
+```ts
+'FETCH_PROTECTED_DATA_ORDERBOOK';
+'FETCH_APP_ORDERBOOK';
+'FETCH_WORKERPOOL_ORDERBOOK';
+'PUSH_REQUESTER_SECRET';
+'REQUEST_TO_PROCESS_PROTECTED_DATA';
+'CONSUME_TASK';
+'CONSUME_RESULT_DOWNLOAD';
+'CONSUME_RESULT_DECRYPT';
+```
+
+Once with `isDone:false`, and then with `isDone:true`
+
 ## Return value
 
 ```ts twoslash

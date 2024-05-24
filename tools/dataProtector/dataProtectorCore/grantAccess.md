@@ -218,43 +218,14 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 ```
 <!-- prettier-ignore-end -->
 
-You can expect this callback function to be called four times:
+You can expect this callback function to be called with the following titles:
 
-1️⃣
-
-```json
-{
-  "title": "CREATE_DATASET_ORDER",
-  "isDone": false
-}
+```ts
+'CREATE_DATASET_ORDER';
+'PUBLISH_DATASET_ORDER';
 ```
 
-2️⃣
-
-```json
-{
-  "title": "CREATE_DATASET_ORDER",
-  "isDone": true
-}
-```
-
-3️⃣
-
-```json
-{
-  "title": "PUBLISH_DATASET_ORDER",
-  "isDone": false
-}
-```
-
-4️⃣
-
-```json
-{
-  "title": "PUBLISH_DATASET_ORDER",
-  "isDone": true
-}
-```
+Once with `isDone:false`, and then with `isDone:true`
 
 ## Return value
 

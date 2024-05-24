@@ -153,14 +153,14 @@ const protectedData = await dataProtectorCore.protectData({
 
 You can expect this callback function to be called with the following titles:
 
-```
-'EXTRACT_DATA_SCHEMA'
-'CREATE_ZIP_FILE'
-'CREATE_ENCRYPTION_KEY'
-'ENCRYPT_FILE'
-'UPLOAD_ENCRYPTED_FILE'
-'DEPLOY_PROTECTED_DATA'
-'PUSH_SECRET_TO_SMS'
+```ts
+'EXTRACT_DATA_SCHEMA';
+'CREATE_ZIP_FILE';
+'CREATE_ENCRYPTION_KEY';
+'ENCRYPT_FILE';
+'UPLOAD_ENCRYPTED_FILE';
+'DEPLOY_PROTECTED_DATA';
+'PUSH_SECRET_TO_SMS';
 ```
 
 Once with `isDone: false`, and then with `isDone: true`.
