@@ -118,6 +118,15 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 ```
 <!-- prettier-ignore-end -->
 
+You can expect this callback function to be called with the following titles:
+
+```ts
+'RETRIEVE_ALL_GRANTED_ACCESS';
+'REVOKE_ONE_ACCESS';
+```
+
+Once with `isDone:false`, and then with `isDone:true`
+
 ## Result
 
 ```ts twoslash

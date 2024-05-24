@@ -128,6 +128,15 @@ const completedTaskResult =
 ```
 <!-- prettier-ignore-end -->
 
+You can expect this callback function to be called with the following titles:
+
+```ts
+'CONSUME_RESULT_DOWNLOAD';
+'CONSUME_RESULT_DECRYPT';
+```
+
+Once with `isDone:false`, and then with `isDone:true`
+
 ## Return value
 
 ```ts twoslash
