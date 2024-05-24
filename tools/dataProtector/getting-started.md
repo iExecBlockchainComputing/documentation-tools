@@ -190,9 +190,9 @@ import { IExecDataProtector } from '@iexec/dataprotector';
 const dataProtector = new IExecDataProtector();
 
 // Access to read-only core methods
-const dataProtectorCore = dataProtector.core; 
+const dataProtectorCore = dataProtector.core;
 // Access to read-only sharing methods
-const dataProtectorSharing = dataProtector.sharing; 
+const dataProtectorSharing = dataProtector.sharing;
 ```
 
 :::
