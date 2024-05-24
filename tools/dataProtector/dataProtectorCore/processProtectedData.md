@@ -18,17 +18,18 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
-  protectedData: '0x123abc...',
-  app: '0xC2E...',
-  maxPrice: 10,
-  args: 'arg1 arg2',
-  inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
-  secrets: {
-    1: 'secret1',
-    2: 'secret2',
-  },
-});
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    maxPrice: 10,
+    args: 'arg1 arg2',
+    inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
+    secrets: {
+      1: 'secret1',
+      2: 'secret2',
+    },
+  });
 ```
 
 ## Parameters
@@ -51,10 +52,11 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
-  protectedData: '0x123abc...', // [!code focus]
-  app: '0xC2E...',
-});
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...', // [!code focus]
+    app: '0x456def...',
+  });
 ```
 
 ### app {#app-param}
@@ -71,10 +73,11 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
-  protectedData: '0x123abc...',
-  app: '0xC2E...', // [!code focus]
-});
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...', // [!code focus]
+  });
 ```
 
 ### maxPrice
@@ -92,11 +95,12 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
-  protectedData: '0x123abc...',
-  app: '0xC2E...',
-  maxPrice: 10, // [!code focus]
-});
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    maxPrice: 10, // [!code focus]
+  });
 ```
 
 ### args
@@ -112,11 +116,12 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
-  protectedData: '0x123abc...',
-  app: '0xC2E...',
-  args: 'arg1 arg2', // [!code focus]
-});
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    args: 'arg1 arg2', // [!code focus]
+  });
 ```
 
 ::: danger
@@ -140,11 +145,12 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
-  protectedData: '0x123abc...',
-  app: '0xC2E...',
-  inputFiles: ['https://example.com/file1', 'https://example.com/file2'], // [!code focus]
-});
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    inputFiles: ['https://example.com/file1', 'https://example.com/file2'], // [!code focus]
+  });
 ```
 
 ### secrets
@@ -167,9 +173,9 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
+const processProtectedDataResponse = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
-  app: '0xC2E...',
+  app: '0x456def...',
   maxPrice: 10,
   secrets: { // [!code focus]
     1: 'secret1', // [!code focus]
@@ -203,11 +209,12 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
-  protectedData: '0x123abc...',
-  app: '0xC2E...',
-  workerpool: '0xA5d...', // [!code focus]
-});
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    workerpool: '0xA5d...', // [!code focus]
+  });
 ```
 
 ### onStatusUpdate
@@ -224,9 +231,9 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 
-const taskid = await dataProtectorCore.processProtectedData({
+const processProtectedDataResponse = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
-  app: '0xC2E...',
+  app: '0x456def...',
   onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]
   }, // [!code focus]
@@ -247,7 +254,7 @@ You can expect this callback function to be called with the following titles:
 'CONSUME_RESULT_DECRYPT';
 ```
 
-Once with `isDone:false`, and then with `isDone:true`
+Once with `isDone: false`, and then with `isDone: true`
 
 ## Return value
 
