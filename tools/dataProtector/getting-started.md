@@ -157,6 +157,46 @@ const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 
 :::
 
+#### Instantiate without a Web3 provider
+
+For projects that only require read functions, you can instantiate the SDK
+without a Web3 provider.
+
+::: code-group
+
+```ts twoslash [Singleton Modules]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
+import {
+  IExecDataProtectorSharing,
+  IExecDataProtectorCore,
+} from '@iexec/dataprotector';
+
+// Instantiate only the Core module for read-only core methods
+const dataProtectorCore = new IExecDataProtectorCore();
+// Instantiate only the Sharing module for read-only sharing methods
+const dataProtectorSharing = new IExecDataProtectorSharing();
+```
+
+```ts twoslash [Umbrella Module]
+import { IExecDataProtector } from '@iexec/dataprotector';
+
+// Instantiate using the umbrella module for read-only functions
+const dataProtector = new IExecDataProtector();
+
+// Access to read-only core methods
+const dataProtectorCore = dataProtector.core; 
+// Access to read-only sharing methods
+const dataProtectorSharing = dataProtector.sharing; 
+```
+
+:::
+
 #### Advanced configuration
 
 To add optional parameters, see
