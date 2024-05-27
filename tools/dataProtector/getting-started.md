@@ -18,7 +18,7 @@ system:
 ::: code-group
 
 ```sh [npm]
-npm install @iexec/dataprotector@beta
+npm install @iexec/dataprotector@beta --save-exact
 ```
 
 ```sh [yarn]
