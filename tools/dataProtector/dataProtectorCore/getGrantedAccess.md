@@ -35,7 +35,7 @@ authorization grants. It's a representation of ethereum address or ENS name
 (Ethereum Name Service)
 
 **Type:** `AddressOrENS`, `any`, `undefined`  
-**Required:** True  
+**Required:** `True`  
 
 **Usage example:**
 ```js
@@ -51,7 +51,7 @@ specified application. It's a representation of ethereum address or ENS name
 (Ethereum Name Service)
 
 **Type:** `AddressOrENS`, `any`, `undefined`  
-**Required:** False
+**Required:** `False`
 
 **Usage example:**
 ```js
@@ -79,17 +79,13 @@ specified user. It's a string representation of ethereum address or ENS name
 (Ethereum Name Service)
 
 **Type:** `AddressOrENS`, `any`, `undefined`  
-**Required:** False
+**Required:** `False`
 
 **Usage example:**
 ```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...', // [!code focus]
   page: 1,
-  pageSize: 100,
-});
 ```
 
 ### page
@@ -100,7 +96,7 @@ you can also specify the `pageSize` parameter to control the number of records
 per page. By default, when no page number is specified, the system returns the
 first page (page 0) containing `20` elements.
 
-**Type:** `Number`, `undefined`  
+**Type:** `Number`  
 **Required:** `False`  
 **Default:** `0`
 
@@ -117,7 +113,7 @@ Specifies the number of records to include in each page of the result set. This
 is used in conjunction with the optional `page` parameter to limit the size of
 each page.
 
-**Type:** `Number`, `undefined`  
+**Type:** `Number`  
 **Required:** `False`  
 **Default:** `0`  
 **Range:** `[10...1000]`
