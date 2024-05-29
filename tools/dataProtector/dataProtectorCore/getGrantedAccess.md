@@ -30,38 +30,34 @@ import { type GetGrantedAccessParams } from '@iexec/dataprotector';
 
 ### protectedData
 
-`AddressOrENS | any | undefined`
-
 Address of the protected data object for which you are querying access
 authorization grants. It's a representation of ethereum address or ENS name
 (Ethereum Name Service)
 
+**Type:** `AddressOrENS`, `any`, `undefined`  
+**Required:** True  
+
+**Usage example:**
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789cba...',
-  page: 1,
-  pageSize: 100,
-});
 ```
 
 ### authorizedApp
-
-`AddressOrENS | any | undefined`
 
 Optional filter to restrict the results to include only authorizations for the
 specified application. It's a representation of ethereum address or ENS name
 (Ethereum Name Service)
 
+**Type:** `AddressOrENS`, `any`, `undefined`  
+**Required:** False
+
+**Usage example:**
 ```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789cba...',
-  page: 1,
-  pageSize: 100,
-});
 ```
 
 ::: tip
@@ -78,12 +74,14 @@ explicitly granted access to that application address.
 
 ### authorizedUser
 
-`AddressOrENS | any | undefined`
-
 Optional filter to restrict the results to include only authorizations for the
 specified user. It's a string representation of ethereum address or ENS name
 (Ethereum Name Service)
 
+**Type:** `AddressOrENS`, `any`, `undefined`  
+**Required:** False
+
+**Usage example:**
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...',
@@ -96,43 +94,36 @@ const listGrantedAccess = await dataProtector.getGrantedAccess({
 
 ### page
 
-`number | undefined`
-
-_default_: `0`
-
 Specifies the page number of the result set to return. Pages are zero-based
 indexed, with the default value being `0`, indicating the first page. If used,
 you can also specify the `pageSize` parameter to control the number of records
 per page. By default, when no page number is specified, the system returns the
 first page (page 0) containing `20` elements.
 
+**Type:** `Number`, `undefined`  
+**Required:** `False`  
+**Default:** `0`
+
+**Usage example:**
 ```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: '0x123abc...',
-  authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
   page: 1, // [!code focus]
   pageSize: 100,
-});
 ```
 
 ### pageSize
-
-`number | undefined`
-
-_default_: `20`
-
-Value between `10` and `1000`.
 
 Specifies the number of records to include in each page of the result set. This
 is used in conjunction with the optional `page` parameter to limit the size of
 each page.
 
+**Type:** `Number`, `undefined`  
+**Required:** `False`  
+**Default:** `0`  
+**Range:** `[10...1000]`
+
+**Usage example:**
 ```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
-  protectedData: '0x123abc...',
-  authorizedApp: '0x456def...',
-  authorizedUser: '0x789cba...',
   page: 1,
   pageSize: 100, // [!code focus]
 });
