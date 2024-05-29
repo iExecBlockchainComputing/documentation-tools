@@ -41,9 +41,10 @@ authorization grants. It's a representation of ethereum address or ENS name
 (Ethereum Name Service)
 
 **Type:** `AddressOrENS`, `any`, `undefined`  
-**Required:** `True`  
+**Required:** `True`
 
 **Usage example:**
+
 ```js
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...', // [!code focus]
@@ -60,6 +61,7 @@ specified application. It's a representation of ethereum address or ENS name
 **Required:** `False`
 
 **Usage example:**
+
 ```js
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
@@ -88,6 +90,7 @@ specified user. It's a string representation of ethereum address or ENS name
 **Required:** `False`
 
 **Usage example:**
+
 ```js
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...', // [!code focus]
@@ -107,6 +110,7 @@ first page (page 0) containing `20` elements.
 **Default:** `0`
 
 **Usage example:**
+
 ```js
   authorizedUser: '0x789cba...',
   page: 1, // [!code focus]
@@ -125,6 +129,7 @@ each page.
 **Range:** `[10...1000]`
 
 **Usage example:**
+
 ```js
   page: 1,
   pageSize: 100, // [!code focus]
