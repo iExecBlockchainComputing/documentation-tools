@@ -19,6 +19,11 @@ steps:
     commands:
       - npm run check-format
 
+  - name: Check that it builds
+    image: node:20
+    commands:
+      - npm run build
+
   - name: Vercel deploy to prod
     image: node:20
     environment:
@@ -27,9 +32,9 @@ steps:
       VERCEL_TOKEN:
         from_secret: vercel-token
     commands:
-      - npm install --global vercel@canary
+      - npm install --global vercel@34.1.7
       - vercel pull --yes --environment=production --scope i-exec --token $VERCEL_TOKEN
-      - SET_SUBPATH_FOR_PROD=true VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --prod --scope i-exec --token $VERCEL_TOKEN
+      - VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --prod --scope i-exec --token $VERCEL_TOKEN
       - vercel deploy --prod --prebuilt --scope i-exec --token $VERCEL_TOKEN
 
 ---
@@ -58,6 +63,11 @@ steps:
     commands:
       - npm run check-format
 
+  - name: Check that it builds
+    image: node:20
+    commands:
+      - npm run build
+
   - name: Vercel deploy to preview
     image: node:20
     environment:
@@ -66,7 +76,7 @@ steps:
       VERCEL_TOKEN:
         from_secret: vercel-token
     commands:
-      - npm install --global vercel@canary
+      - npm install --global vercel@34.1.7
       - vercel pull --yes --environment=preview --scope i-exec --token $VERCEL_TOKEN
-      - SET_SUBPATH_FOR_PROD=true VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --scope i-exec --token $VERCEL_TOKEN
+      - VITE_APP_COMMIT=${DRONE_COMMIT} vercel build --scope i-exec --token $VERCEL_TOKEN
       - vercel deploy --prebuilt --scope i-exec --token $VERCEL_TOKEN

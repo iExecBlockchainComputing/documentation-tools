@@ -7,7 +7,16 @@ Method to get all rentals for:
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
   protectedData: '0x123abc...',
 });
@@ -23,7 +32,16 @@ import { type GetRentalsParams } from '@iexec/dataprotector';
 
 `AddressOrENS | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const userActiveRentals = await dataProtectorSharing.getRentals({
   renterAddress: '0x246bdf...', // [!code focus]
 });
@@ -33,7 +51,16 @@ const userActiveRentals = await dataProtectorSharing.getRentals({
 
 `AddressOrENS | undefined`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
   protectedData: '0x123abc...', // [!code focus]
 });
@@ -45,7 +72,16 @@ const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
 
 _default_: `false`
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const userRentals = await dataProtectorSharing.getRentals({
   renterAddress: '0x246bdf...',
   includePastRentals: true, // [!code focus]
@@ -56,4 +92,10 @@ const userRentals = await dataProtectorSharing.getRentals({
 
 ```ts twoslash
 import { type GetRentalsResponse } from '@iexec/dataprotector';
+
+// Child types
+import type { ProtectedDataRental } from '@iexec/dataprotector';
 ```
+
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sdk/blob/c83e30e6ce8b55ecf8a35ecb4eb1014cd4ecefe9/packages/sdk/src/lib/types/sharingTypes.ts" target="_blank">See
+Type ↗️</a>

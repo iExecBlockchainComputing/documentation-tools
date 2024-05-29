@@ -16,7 +16,16 @@ having rented the protected data could no longer consume it.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...',
@@ -36,7 +45,16 @@ import { type AddAppToAppWhitelistParams } from '@iexec/dataprotector';
 
 Address of the `addOnlyAppWhitelist` in which you want to add an app.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...', // [!code focus]
@@ -44,13 +62,22 @@ const isAddedToAddAppToAddOnlyAppWhitelist =
   });
 ```
 
-### app
+### app {#app-param}
 
 `AddressOrENS`
 
 Address of app that you want to add to the `addOnlyAppWhitelist`.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...',

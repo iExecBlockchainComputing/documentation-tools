@@ -4,11 +4,11 @@ The `IExecWeb3mail` constructor accepts configuration options object. As these
 options are very specific, you won't need to use them for a standard usage of
 `@iexec/web3mail`.
 
-```js
-new IExecWeb3mail(ethProvider, options);
-```
+## Parameters
 
-## Options
+```ts twoslash
+import { type Web3MailConfigOptions } from '@iexec/web3mail';
+```
 
 ### dappAddressOrENS
 
@@ -18,13 +18,18 @@ dapp.
 If not provided, the default ENS `web3mail.apps.iexec.eth` pointing to the
 latest version of the web3mail dapp provided by iExec will be used.
 
-```js
-new IExecWeb3mail(ethProvider, {
-  dappAddressOrENS: 'web3mail.apps.iexec.eth',
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
+const web3mail = new IExecWeb3mail(web3Provider, {
+  dappAddressOrENS: 'web3mail.apps.iexec.eth', // [!code focus]
 });
 ```
 
-### addOnlyAppWhitelistAddress
+### dappWhitelistAddress
 
 The Ethereum contract address for the web3mail dapps whitelist contract. By
 granting access to a whitelist, email address owners ensure their email is still
@@ -33,9 +38,14 @@ available to consumers even after a new version of web3mail dapp gets released.
 If not provided, the default whitelist smart contract address provided by iExec
 will be used.
 
-```js
-new IExecWeb3mail(ethProvider, {
-  addOnlyAppWhitelistAddress: '0x781482C39CcE25546583EaC4957Fb7Bf04C277D2',
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
+const web3mail = new IExecWeb3mail(web3Provider, {
+  dappWhitelistAddress: '0x123abc...', // [!code focus]
 });
 ```
 
@@ -46,10 +56,15 @@ The subgraph URL for querying data.
 If not provided, the default data protector subgraph provided by iExec will be
 used.
 
-```js
-new IExecWeb3mail(ethProvider, {
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
+const web3mail = new IExecWeb3mail(web3Provider, {
   dataProtectorSubgraph:
-    'https://thegraph-product.iex.ec/subgraphs/name/bellecour/dataprotector',
+    'https://thegraph-product.iex.ec/subgraphs/name/bellecour/dataprotector', // [!code focus]
 });
 ```
 
@@ -60,9 +75,14 @@ own IPFS node to upload content.
 
 If not provided, the default IPFS node provided by iExec will be used.
 
-```js
-new IExecWeb3mail(ethProvider, {
-  ipfsNode: 'https://ipfs-upload.v8-bellecour.iex.ec',
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
+const web3mail = new IExecWeb3mail(web3Provider, {
+  ipfsNode: 'https://ipfs-upload.v8-bellecour.iex.ec', // [!code focus]
 });
 ```
 
@@ -74,9 +94,14 @@ own IPFS node for content downloads.
 
 If not provided, the default IPFS gateway provided by iExec will be used.
 
-```js
-new ipfsGateway(ethProvider, {
-  ipfsGateway: 'https://ipfs-gateway.v8-bellecour.iex.ec',
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+// ---cut---
+
+const web3mail = new IExecWeb3mail(web3Provider, {
+  ipfsGateway: 'https://ipfs-gateway.v8-bellecour.iex.ec', // [!code focus]
 });
 ```
 

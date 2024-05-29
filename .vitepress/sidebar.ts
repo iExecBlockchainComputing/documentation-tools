@@ -25,17 +25,13 @@ export function getSidebar() {
         ],
       },
       {
-        text: '🔐 &nbsp;DataProtector',
+        text: '🔐 &nbsp;DataProtector <span class="VPBadge warning" style="margin-left: 8px; margin-bottom: -1px; transform: translateY(-1px);">beta</span>',
         link: '/tools/dataProtector',
         collapsed: false,
         items: [
           {
             text: 'Getting Started',
             link: '/tools/dataProtector/getting-started',
-          },
-          {
-            text: 'Migrate from v1 to v2',
-            link: '/tools/dataProtector/migrate-from-v1',
           },
           {
             text: 'DataProtector Core',
@@ -156,8 +152,8 @@ export function getSidebar() {
                     link: '/tools/dataProtector/dataProtectorSharing/subscription/setProtectedDataToSubscription',
                   },
                   {
-                    text: 'subscribe',
-                    link: '/tools/dataProtector/dataProtectorSharing/subscription/subscribe',
+                    text: 'subscribeToCollection',
+                    link: '/tools/dataProtector/dataProtectorSharing/subscription/subscribeToCollection',
                   },
                   {
                     text: 'removeProtectedDataFromSubscription',
@@ -220,6 +216,14 @@ export function getSidebar() {
             collapsed: true,
             items: [
               {
+                text: 'Advanced Configuration',
+                link: '/tools/dataProtector/advanced/advanced-configuration',
+              },
+              {
+                text: 'Sharing smart contract',
+                link: '/tools/dataProtector/advanced/dps-smart-contract',
+              },
+              {
                 text: 'Apps whitelist',
                 link: '/tools/dataProtector/advanced/appsWhitelist',
                 collapsed: true,
@@ -238,7 +242,33 @@ export function getSidebar() {
                   },
                 ],
               },
+              {
+                text: 'iDapp',
+                link: '/tools/dataProtector/advanced/iDapp',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'DataProtector Deserializer',
+                    link: '/tools/dataProtector/advanced/iDapp/deserializer',
+                    collapsed: true,
+                    items: [
+                      {
+                        text: 'getValue',
+                        link: '/tools/dataProtector/advanced/iDapp/deserializer/getValue',
+                      },
+                    ],
+                  },
+                ],
+              },
             ],
+          },
+          {
+            text: 'Migrate from v1 to v2',
+            link: '/tools/dataProtector/migrate-from-v1',
+          },
+          {
+            text: 'v1 documentation',
+            link: 'https://tools.docs.iex.ec/tools/dataprotector',
           },
         ],
       },

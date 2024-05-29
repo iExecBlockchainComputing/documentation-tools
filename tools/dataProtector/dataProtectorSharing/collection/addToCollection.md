@@ -10,10 +10,20 @@ Under the hood, this method performs two actions:
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedData: '0x123abc...',
   collectionId: 12,
+  addOnlyAppWhitelist: '0x541abc...',
 });
 ```
 
@@ -29,10 +39,20 @@ import { type AddToCollectionParams } from '@iexec/dataprotector';
 
 Collection ID to which you'd like to add the protected data.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12, // [!code focus]
   protectedData: '0x123abc...',
+  addOnlyAppWhitelist: '0x541abc...',
 });
 ```
 
@@ -42,10 +62,20 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 
 Address of the protected data you'd like to add to your collection.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...', // [!code focus]
+  addOnlyAppWhitelist: '0x541abc...',
 });
 ```
 
@@ -55,12 +85,21 @@ to instantiate DataProtector SDK.
 
 ### addOnlyAppWhitelist
 
-`AddressOrENS | undefined`
+`AddressOrENS`
 
 Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...',
@@ -71,9 +110,10 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 ::: tip
 
 For this `addOnlyAppWhitelist`, you are free to use
-`0x1099844c74f6a2be20dbe1aa2afb3a1d29421aed`.
+`0x334dc0bb08fb32a4e9917197e5e626de4b6b9b87`.
 
-For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
+For more details on how to create and manage appsWhitelist, see
+[Apps whitelist](../../advanced/appsWhitelist.md).
 
 :::
 
@@ -84,10 +124,20 @@ For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
 Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedData: '0x123abc...',
   collectionId: 12,
+  addOnlyAppWhitelist: '0xba46d6...',
   onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]
   }, // [!code focus]
@@ -95,43 +145,14 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 ```
 <!-- prettier-ignore-end -->
 
-You can expect this callback function to be called four times:
+You can expect this callback function to be called with the following titles:
 
-1️⃣
-
-```json
-{
-  "title": "APPROVE_COLLECTION_CONTRACT",
-  "isDone": false
-}
+```ts
+'APPROVE_COLLECTION_CONTRACT';
+'ADD_PROTECTED_DATA_TO_COLLECTION';
 ```
 
-2️⃣
-
-```json
-{
-  "title": "APPROVE_COLLECTION_CONTRACT",
-  "isDone": true
-}
-```
-
-3️⃣
-
-```json
-{
-  "title": "ADD_PROTECTED_DATA_TO_COLLECTION",
-  "isDone": false
-}
-```
-
-4️⃣
-
-```json
-{
-  "title": "ADD_PROTECTED_DATA_TO_COLLECTION",
-  "isDone": true
-}
-```
+Once with `isDone: false`, and then with `isDone: true`
 
 ## Return value
 

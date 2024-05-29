@@ -8,7 +8,16 @@ rentals.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
     protectedData: '0x123abc...',
@@ -29,7 +38,16 @@ import { type SetProtectedDataToRentingParams } from '@iexec/dataprotector';
 
 Address of the protected data you'd like to set renting parameters.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
     protectedData: '0x123abc...', // [!code focus]
@@ -45,7 +63,16 @@ const setForRentingResult =
 The price in nano RLC (nRLC) you ask from someone who wants to rent the
 protected data.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
     protectedData: '0x123abc...',
@@ -60,7 +87,16 @@ const setForRentingResult =
 
 The duration of the rental in seconds.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
     protectedData: '0x123abc...',

@@ -7,11 +7,14 @@ access for all users and applications.
 
 ## Usage
 
-This method is asynchronous and requires use of the JavaScript observable
-pattern.
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
-```js
-const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -30,8 +33,14 @@ import { type RevokeAllAccessParams } from '@iexec/dataprotector';
 
 The address of the `protectedData` subject to access revocation.
 
-```js
-const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -40,13 +49,21 @@ const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
 
 ### authorizedApp
 
-`AddressOrENS | any | undefined`
+`AddressOrENS | 'any' | undefined`
+
+_default_: `any`
 
 The application address to be removed from the authorization list for the
 specified `protectedData`.
 
-```js
-const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789cba...',
@@ -55,13 +72,21 @@ const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
 
 ### authorizedUser
 
-`AddressOrENS | any | undefined`
+`AddressOrENS | 'any' | undefined`
+
+_default_: `any`
 
 The user address to be removed from the authorization list for the specified
 `protectedData`.
 
-```js
-const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...', // [!code focus]
@@ -75,8 +100,14 @@ const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
 Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
-```js
-const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
@@ -86,6 +117,15 @@ const revokeAllAccessObservable = await dataProtector.revokeAllAccess({
 });
 ```
 <!-- prettier-ignore-end -->
+
+You can expect this callback function to be called with the following titles:
+
+```ts
+'RETRIEVE_ALL_GRANTED_ACCESS';
+'REVOKE_ONE_ACCESS';
+```
+
+Once with `isDone: false`, and then with `isDone: true`
 
 ## Result
 

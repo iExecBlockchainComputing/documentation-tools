@@ -4,7 +4,16 @@ Method to get the result of a completed task.
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...',
@@ -23,10 +32,72 @@ import { type GetResultFromCompletedTaskParams } from '@iexec/dataprotector';
 
 Address of the task ID data you'd like to get the result from.
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...', // [!code focus]
+  });
+```
+
+### path
+
+`string | undefined`
+
+Under the hood, a protected data is a zip file. With this `path` parameter, you
+can specify the file you're interested in. The zip file will be uncompressed for
+you, and only the desired file will be given as the `result`.
+
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const completedTaskResult =
+  await dataProtectorSharing.getResultFromCompletedTask({
+    taskId: '0x7ac398...',
+    path: 'content', // [!code focus]
+  });
+```
+
+### pemPrivateKey
+
+`string | undefined`
+
+If you have previously saved or generated a RSA keypair, you can reuse it in
+further calls.
+
+It needs to be the private key corresponding to the public key initially used to
+encrypt the protected data.
+
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const completedTaskResult =
+  await dataProtectorSharing.getResultFromCompletedTask({
+    taskId: '0x7ac398...',
+    pemPrivateKey:
+      '-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----', // [!code focus]
   });
 ```
 
@@ -37,7 +108,16 @@ const completedTaskResult =
 Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...',
@@ -48,14 +128,23 @@ const completedTaskResult =
 ```
 <!-- prettier-ignore-end -->
 
+You can expect this callback function to be called with the following titles:
+
+```ts
+'CONSUME_RESULT_DOWNLOAD';
+'CONSUME_RESULT_DECRYPT';
+```
+
+Once with `isDone: false`, and then with `isDone: true`
+
 ## Return value
 
 ```ts twoslash
 import { type GetResultFromCompletedTaskResponse } from '@iexec/dataprotector';
 ```
 
-### contentAsObjectURL
+### result
 
-`string`
+`ArrayBuffer`
 
-The actual content of the protected file, wrapped in an `ObjectURL`.
+The actual content of the protected file.

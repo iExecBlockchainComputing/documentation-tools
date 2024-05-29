@@ -12,8 +12,14 @@ The request object is a JSON `GetGrantedAccessParams` object. Each address in
 the object is a string representation of an ethereum address or ENS name
 (Ethereum Name Service) reference.
 
-```js
-const listGrantedAccess = await dataProtector.getGrantedAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',

@@ -46,7 +46,14 @@ working project
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
 import { IExecWeb3mail } from '@iexec/web3mail';
 
 const web3Provider = window.ethereum;
@@ -54,12 +61,11 @@ const web3Provider = window.ethereum;
 const web3mail = new IExecWeb3mail(web3Provider);
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
-const { PRIVATE_KEY } = process.env;
 // get web3 provider from a private key
-const web3Provider = getWeb3Provider(PRIVATE_KEY);
+const web3Provider = getWeb3Provider('YOUR_PRIVATE_KEY');
 // instantiate
 const web3mail = new IExecWeb3mail(web3Provider);
 ```

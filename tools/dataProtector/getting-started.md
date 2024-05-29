@@ -1,6 +1,6 @@
 # Getting Started
 
-[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FiExecBlockchainComputing%2Fdataprotector-sdk%2Fmain%2Fpackages%2Fsdk%2Fpackage.json&query=%24.version&label=version&color=green)](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/sdk)
+[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FiExecBlockchainComputing%2Fdataprotector-sdk%2Fv2%2Fpackages%2Fsdk%2Fpackage.json&query=%24.version&label=version&color=green)](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/sdk)
 
 ## Overview
 
@@ -18,19 +18,19 @@ system:
 ::: code-group
 
 ```sh [npm]
-npm install @iexec/dataprotector
+npm install @iexec/dataprotector@beta --save-exact
 ```
 
 ```sh [yarn]
-yarn add @iexec/dataprotector
+yarn add @iexec/dataprotector@beta
 ```
 
 ```sh [pnpm]
-pnpm add @iexec/dataprotector
+pnpm add @iexec/dataprotector@beta
 ```
 
 ```sh [bun]
-bun add @iexec/dataprotector
+bun add @iexec/dataprotector@beta
 ```
 
 :::
@@ -55,7 +55,14 @@ and sharing functions.
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
 import { IExecDataProtector } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -66,12 +73,11 @@ const dataProtectorCore = dataProtector.core;
 const dataProtectorSharing = dataProtector.sharing;
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
 
-const { PRIVATE_KEY } = process.env;
 // Get Web3 provider from a private key
-const web3Provider = getWeb3Provider(PRIVATE_KEY);
+const web3Provider = getWeb3Provider('YOUR_PRIVATE_KEY');
 
 // Instantiate using the umbrella module for full functionality
 const dataProtector = new IExecDataProtector(web3Provider);
@@ -88,7 +94,14 @@ For projects focusing solely on core data protection functions.
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -96,12 +109,11 @@ const web3Provider = window.ethereum;
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
-const { PRIVATE_KEY } = process.env;
 // Get Web3 provider from a private key
-const web3Provider = getWeb3Provider(PRIVATE_KEY);
+const web3Provider = getWeb3Provider('YOUR_PRIVATE_KEY');
 
 // Instantiate only the Core module
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
@@ -115,7 +127,14 @@ For projects that need access management functions specifically.
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
 import { IExecDataProtectorSharing } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -123,18 +142,62 @@ const web3Provider = window.ethereum;
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import {
   IExecDataProtectorSharing,
   getWeb3Provider,
 } from '@iexec/dataprotector';
 
-const { PRIVATE_KEY } = process.env;
 // Get Web3 provider from a private key
-const web3Provider = getWeb3Provider(PRIVATE_KEY);
+const web3Provider = getWeb3Provider('YOUR_PRIVATE_KEY');
 
 // Instantiate only the Sharing module
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 ```
 
 :::
+
+#### Instantiate without a Web3 provider
+
+For projects that only require read functions, you can instantiate the SDK
+without a Web3 provider.
+
+::: code-group
+
+```ts twoslash [Singleton Modules]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+
+import {
+  IExecDataProtectorSharing,
+  IExecDataProtectorCore,
+} from '@iexec/dataprotector';
+
+// Instantiate only the Core module for read-only core methods
+const dataProtectorCore = new IExecDataProtectorCore();
+// Instantiate only the Sharing module for read-only sharing methods
+const dataProtectorSharing = new IExecDataProtectorSharing();
+```
+
+```ts twoslash [Umbrella Module]
+import { IExecDataProtector } from '@iexec/dataprotector';
+
+// Instantiate using the umbrella module for read-only functions
+const dataProtector = new IExecDataProtector();
+
+// Access to read-only core methods
+const dataProtectorCore = dataProtector.core;
+// Access to read-only sharing methods
+const dataProtectorSharing = dataProtector.sharing;
+```
+
+:::
+
+#### Advanced configuration
+
+To add optional parameters, see
+[advanced configuration](./advanced/advanced-configuration.md).

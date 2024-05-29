@@ -6,7 +6,16 @@ caller of the `createAddOnlyAppWhitelist` method, but as the
 
 ## Usage
 
-```js
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.createAddOnlyAppWhitelist();
 ```

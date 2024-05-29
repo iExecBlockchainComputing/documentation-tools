@@ -1,6 +1,9 @@
-# setSubscriptionParams
+# setProtectedDataRentingParams
 
-Method to set subscription parameters for a given collection of yours.
+Method to update a protected data renting params.
+
+If the protected data is not yet available for renting, it will be set for
+renting.
 
 ## Usage
 
@@ -14,10 +17,10 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
 
-const setSubscriptionParamsResult =
-  await dataProtectorSharing.setSubscriptionParams({
-    collectionId: 12,
-    price: 2, // 2 nRLC
+const setForRentingResult =
+  await dataProtectorSharing.setProtectedDataRentingParams({
+    protectedData: '0x123abc...',
+    price: 1, // 1 nRLC
     duration: 60 * 60 * 24 * 30, // 30 days
   });
 ```
@@ -25,12 +28,14 @@ const setSubscriptionParamsResult =
 ## Parameters
 
 ```ts twoslash
-import { type SetSubscriptionParams } from '@iexec/dataprotector';
+import { type SetProtectedDataRentingParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### protectedData
 
-Collection ID to which you'd like to set the subscription params.
+`AddressOrENS`
+
+Address of the protected data you'd like to set renting parameters.
 
 ```ts twoslash
 import {
@@ -42,18 +47,20 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
 
-const setSubscriptionParamsResult =
-  await dataProtectorSharing.setSubscriptionParams({
-    collectionId: 12, // [!code focus]
-    price: 2, // 2 nRLC
+const setForRentingResult =
+  await dataProtectorSharing.setProtectedDataRentingParams({
+    protectedData: '0x123abc...', // [!code focus]
+    price: 1, // 1 nRLC
     duration: 60 * 60 * 24 * 30, // 30 days
   });
 ```
 
 ### price
 
-The price in nano RLC (nRLC) it's going to cost a subscriber to access your
-collection.
+`number`
+
+The price in nano RLC (nRLC) you ask from someone who wants to rent the
+protected data.
 
 ```ts twoslash
 import {
@@ -65,17 +72,19 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
 
-const setSubscriptionParamsResult =
-  await dataProtectorSharing.setSubscriptionParams({
-    collectionId: 12,
-    price: 2, // 2 nRLC // [!code focus]
+const setForRentingResult =
+  await dataProtectorSharing.setProtectedDataRentingParams({
+    protectedData: '0x123abc...',
+    price: 1, // 1 nRLC // [!code focus]
     duration: 60 * 60 * 24 * 30, // 30 days
   });
 ```
 
 ### duration
 
-The duration (in seconds) for a period of subscription.
+`number`
+
+The duration of the rental in seconds.
 
 ```ts twoslash
 import {
@@ -87,10 +96,10 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
 
-const setSubscriptionParamsResult =
-  await dataProtectorSharing.setSubscriptionParams({
-    collectionId: 12,
-    price: 2, // 2 nRLC
+const setForRentingResult =
+  await dataProtectorSharing.setProtectedDataRentingParams({
+    protectedData: '0x123abc...',
+    price: 1, // 1 nRLC
     duration: 60 * 60 * 24 * 30, // 30 days // [!code focus]
   });
 ```

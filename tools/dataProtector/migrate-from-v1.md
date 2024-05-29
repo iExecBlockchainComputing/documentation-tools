@@ -1,14 +1,14 @@
-# Migrate from v1 to v2
+# Migrate from v1 to v2 <span style="margin-left: 12px; position: absolute; top: -2px;"><Badge type="warning" text="beta" /></span>
 
 ::: tip
 
 This page concerns projects created with DataProtector prior or equal to version
-0.5.1
+1.0.0
 
 :::
 
 ```sh
-npm install @iexec/dataprotector@latest
+npm install @iexec/dataprotector@beta --save-exact
 ```
 
 ## Constructor
@@ -23,10 +23,10 @@ property to use core methods. Newer versions allow to use extended methods using
 the _dataProtectorSharing_ property.
 
 ```js
-// 0.5.1 and before
+// 1.0.0 and before
 const dataProtector = new IExecDataProtector(web3Provider); // [!code --]
 
-// AFTER 0.5.1
+// AFTER 2.0.0
 // with Umbrella Module
 const dataProtector = new IExecDataProtector(web3Provider).dataProtector; // [!code ++]
 // Or with Core Module
@@ -68,8 +68,14 @@ data protection process. This change simplifies the API and enhances flexibility
 in handling the protection process status updates.
 
 <!-- prettier-ignore-start -->
-```js
-const protectedData = await dataProtector.protectData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail',
   data: {
     email: 'example@gmail.com',
@@ -90,8 +96,14 @@ developers to receive feedback about the revocation status of the process,
 providing more control and better handling of the process.
 
 <!-- prettier-ignore-start -->
-```js
-const allAccessRevoked = await dataProtector.revokeAllAccess({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const allAccessRevoked = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   onStatusUpdate: ({ title, isDone }) => { // [!code ++]
     console.log(title, isDone); // [!code ++]
@@ -108,3 +120,22 @@ methods allows for real-time status updates, making the data protection and
 access revocation processes more interactive and manageable.
 
 :::
+
+## Protected Data Schema
+
+The serialization of the data protected by `protectData()` has been changed to
+support a wider range of numbers, and extend the support for processing
+protected data in non-JS-based applications.
+
+The new serialization mechanism is based on the [borsh](https://borsh.io/)
+specification.
+
+Consequently, the data schemas associated with protected data have changed.
+
+| data type | v1 data schema                                  | v2 data schema                                 |
+| --------- | ----------------------------------------------- | ---------------------------------------------- |
+| boolean   | `"boolean"`                                     | `"bool"`                                       |
+| number    | `"number"` </br> restricted to JS safe integers | `"f64"`                                        |
+| bigint    | not supported                                   | `"i128"` </br> restricted to 128 bits integers |
+| string    | `"string"`                                      | `"string"`                                     |
+| binary    | detected mime type                              | detected mime type                             |

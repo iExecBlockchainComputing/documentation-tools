@@ -7,7 +7,13 @@ address for the `protectedData` containing their email address.
 
 ## Usage
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const contactsList = await web3mail.fetchUserContacts({
   userAddress: '0xF048eF3d7E3B33A465E0599E641BB29421f7Df92',
 });
@@ -25,7 +31,13 @@ import { type FetchUserContactsParams } from '@iexec/web3mail';
 
 The entity for which you wish to obtain the list of contacts.
 
-```js
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
 const contactsList = await web3mail.fetchUserContacts({
   userAddress: '0xF048eF3d7E3B33A465E0599E641BB29421f7Df92', // [!code focus]
 });

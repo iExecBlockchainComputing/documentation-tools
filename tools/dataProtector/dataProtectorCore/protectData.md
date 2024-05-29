@@ -2,10 +2,11 @@
 
 The iExec tool suite supports deployment of applications where the user of the
 application has complete and total control over access to their data. This
-ensures privacy and security when invoking these applications. Through use of
-the `protectData` method, a user may encrypt and secure any type of data.
-Encryption occurs on the client side, supporting the user's control over their
-data.
+ensures privacy and security when invoking these applications.
+
+Through use of the `protectData` method, a user may encrypt and secure any type
+of data. Encryption occurs on the client side, supporting the user's control
+over their data.
 
 ## Usage
 
@@ -14,8 +15,14 @@ name to identify the data.
 
 An email address, for example, may be submitted as:
 
-```js
-const protectedData = await dataProtector.protectData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const protectedData = await dataProtectorCore.protectData({
   data: {
     email: 'example@gmail.com',
   },
@@ -25,8 +32,14 @@ const protectedData = await dataProtector.protectData({
 Your object may contain any number of custom keys. The following example
 illustrates protection of multiple categories of data within one object:
 
-```js
-const protectedData = await dataProtector.protectData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const protectedData = await dataProtectorCore.protectData({
   data: {
     email: 'example@gmail.com',
     SMTPserver: {
@@ -51,8 +64,14 @@ This is the actual data the user is protecting, provided as a JSON object with
 any number of custom keys. The data is encrypted and stored as an NFT.
 
 <!-- prettier-ignore-start -->
-```js
-const protectedData = await dataProtector.protectData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const protectedData = await dataProtectorCore.protectData({
   data: { // [!code focus]
     email: 'example@gmail.com', // [!code focus]
   }, // [!code focus]
@@ -65,7 +84,10 @@ const protectedData = await dataProtector.protectData({
 If you'd like to **protect a file**, you first need to convert it to some kind
 of buffer. To do so, you can use `createArrayBufferFromFile`.
 
-```js
+```ts twoslash
+const file: File = new File([], 'emptyFile.txt');
+// ---cut---
+
 import { createArrayBufferFromFile } from '@iexec/dataprotector';
 
 const fileAsArrayBuffer = await createArrayBufferFromFile(file);
@@ -77,11 +99,19 @@ const fileAsArrayBuffer = await createArrayBufferFromFile(file);
 
 `string | undefined`
 
+_default_: `Untitled`
+
 Allows providing a descriptive name for the protected data. This is considered
 public metadata, describing the protected data.
 
-```js
-const protectedData = await dataProtector.protectData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail', // [!code focus]
   data: {
     email: 'example@gmail.com',
@@ -91,8 +121,7 @@ const protectedData = await dataProtector.protectData({
 
 ::: tip
 
-The name is public and not encrypted. If you don't pass a name to your protected
-data we will automatically define it as "Untitled".
+The name is public and not encrypted.
 
 :::
 
@@ -103,8 +132,14 @@ data we will automatically define it as "Untitled".
 Callback function to be notified at intermediate steps.
 
 <!-- prettier-ignore-start -->
-```js
-const protectedData = await dataProtector.protectData({
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail',
   data: {
     email: 'example@gmail.com',
@@ -116,6 +151,20 @@ const protectedData = await dataProtector.protectData({
 ```
 <!-- prettier-ignore-end -->
 
+You can expect this callback function to be called with the following titles:
+
+```ts
+'EXTRACT_DATA_SCHEMA';
+'CREATE_ZIP_FILE';
+'CREATE_ENCRYPTION_KEY';
+'ENCRYPT_FILE';
+'UPLOAD_ENCRYPTED_FILE';
+'DEPLOY_PROTECTED_DATA';
+'PUSH_SECRET_TO_SMS';
+```
+
+Once with `isDone: false`, and then with `isDone: true`
+
 ## Return value
 
 ```ts twoslash
@@ -125,9 +174,7 @@ import type {
 } from '@iexec/dataprotector';
 ```
 
-The `protectData` method returns the following fields, either as a JSON object
-or as individual fields depending on whether you use the promise or observable
-pattern respectively.
+The `protectData` method returns the following fields, as a JSON object.
 
 ### name
 
@@ -160,8 +207,9 @@ are automatically detected and listed in the schema.
 The following data types are automatically detected:
 
 - Scalars
-  - `boolean`
-  - `number`
+  - `bool`
+  - `f64` (JavaScript `number`)
+  - `i128` (JavaScript `bigint` up to 128 bits)
   - `string`
 - Binary:
   - `application/octet-stream`
@@ -199,10 +247,14 @@ details on the transaction using the [iExec explorer](https://explorer.iex.ec).
 
 ### zipFile
 
-`string`
+`Uint8Array`
 
-This is a binary representation of the data stored in the `protectedData`. This
-is intended as debug data and we will remove this in a future SDK release.
+Under the hood, your protected data will be **compressed as a zip file**. In
+this zip file, you'll find back all of your protected fields, each field being
+serialized with a tool called `borsh`. You can find more details here:
+[deserializer](../advanced/iDapp/deserializer).
+
+This is mainly returned for debug purpose.
 
 ### encryptionKey
 
@@ -212,9 +264,22 @@ The encryption key generated by the client to encrypt the data. This key is for
 your own usage. You will not have to share it in the context of the iExec
 protocol or developer tools.
 
+Under the hood, it is a symmetric AES-256 key.
+
 ::: tip
 
 The zip file generated is a `Uint8Array`, so if you want to handle the binary
 data or download it consider adding a zip extension to it.
 
 :::
+
+## Created protected data
+
+To further check your data was correctly created, you can inspect it on the
+[iExec explorer](https://explorer.iex.ec/).
+
+<a href="https://explorer.iex.ec/" target="_blank" rel="noreferrer" style="display: inline-block">
+  <img src="/assets/explorer-dataset-example.png" alt="iExec explorer - Dataset example">
+</a>
+
+The `Multiaddr` field is the URL on IPFS of your encrypted data.

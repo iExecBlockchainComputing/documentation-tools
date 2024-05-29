@@ -11,7 +11,7 @@ monetization.
   💡 &nbsp;What we do
 </a>
 
-<a href="./overview/use-case-demo" class="link-for-home">
+<a href="./overview/useCaseDemo" class="link-for-home">
   📽 &nbsp;Use case demo
 </a>
 
