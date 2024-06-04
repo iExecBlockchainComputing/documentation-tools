@@ -95,6 +95,51 @@ const fileAsArrayBuffer = await createArrayBufferFromFile(file);
 
 :::
 
+::: tip
+
+If you want to **protect an `Array`**, you must represent it as a
+`Record<string, any>`. To do so, you can use the `reduceArray` method
+implemented in this example.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const reduceArray = (array: Array<any>): Record<string, any> =>
+  array.reduce((accumulator, current, i) => {
+    accumulator[i] = current;
+    return accumulator;
+  }, {});
+
+const emailsArray = [
+  'example@gmail.com',
+  'example@my-company.com',
+  'example@example.com',
+];
+
+const protectedData = await dataProtectorCore.protectData({
+  data: {
+    emails: reduceArray(emailsArray),
+  },
+});
+
+/**
+ * protectedData.schema:
+ * {
+ *   emails: {
+ *     0: 'string',
+ *     1: 'string',
+ *     2: 'string'
+ *   }
+ * }
+ */
+```
+
+:::
+
 ### name
 
 `string | undefined`
