@@ -22,6 +22,28 @@ export function getSidebar() {
               },
             ],
           },
+          {
+            text: '👋&nbsp;&nbsp; Hello World',
+            collapsed: true,
+            items: [
+              {
+                text: 'Introduction',
+                link: '/overview/helloWorld/introduction',
+              },
+              {
+                text: 'Protect and manage data',
+                link: '/overview/helloWorld/protectAndManageData',
+              },
+              {
+                text: 'Consume data',
+                link: '/overview/helloWorld/consumeData',
+              },
+              {
+                text: 'Monetize your data',
+                link: '/overview/helloWorld/monetizeYourData',
+              },
+            ],
+          },
         ],
       },
       {
