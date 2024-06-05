@@ -74,7 +74,7 @@ Oracle Factory : updateOracle()
 
 The
 [voucher module](https://github.com/iExecBlockchainComputing/iexec-sdk/blob/master/docs/classes/IExecVoucherModule.md)
-describes methods to manage sponsored ------ in the account module.
+describes methods to manage sponsored computations in the account module.
 
 In the context of iExec tools, the essential methods are:
 
@@ -89,4 +89,9 @@ met.
 
 :::
 
-To learn more about how vouchers work, visit the [voucher](.voucher.md) page.
+In order for a user to use a voucher, the following conditions must be met :
+
+- The user has a voucher
+- The user's voucher is approved to complete payment on behalf of the user
+  (approve method in the account module)
+- The user's voucher authorizes the user to ----

@@ -23,7 +23,7 @@ export function getSidebar() {
             ],
           },
           {
-            text: '💰&nbsp;&nbsp;Monetization Concepts',
+            text: '💰&nbsp;&nbsp;Monetization',
             collapsed: true,
             link: '/overview/monetizationConcepts',
             items: [

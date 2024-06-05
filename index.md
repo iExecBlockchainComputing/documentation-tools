@@ -16,7 +16,7 @@ monetization.
 </a>
 
 <a href="./overview/MonetizationConcepts" class="link-for-home">
-  💰 &nbsp;Monetization Concepts
+  💰 &nbsp;Monetization
 </a>
 
 ## Our tools
