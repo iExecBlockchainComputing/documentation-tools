@@ -23,13 +23,17 @@ export function getSidebar() {
             ],
           },
           {
-            text: '📖&nbsp;&nbsp;Key Concepts',
+            text: '💰&nbsp;&nbsp;Monetization Concepts',
             collapsed: true,
-            link: '/overview/keyConcepts',
+            link: '/overview/monetizationConcepts',
             items: [
               {
                 text: 'Pricing Model',
-                link: '/overview/keyConcepts/pricingModel',
+                link: '/overview/monetizationConcepts/pricingModel',
+              },
+              {
+                text: 'Means of Payment',
+                link: '/overview/monetizationConcepts/meansOfPayment',
               },
             ],
           },

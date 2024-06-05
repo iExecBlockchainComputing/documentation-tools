@@ -3,7 +3,7 @@
 ::: tip
 
 This method involves asset monetization. To learn more, visit
-[pricing model](../../../overview/keyConcepts/pricingModel.md).
+[pricing model](../../../overview/monetizationConcepts/pricingModel.md).
 
 :::
 

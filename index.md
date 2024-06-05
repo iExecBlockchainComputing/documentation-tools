@@ -15,8 +15,8 @@ monetization.
   📽 &nbsp;Use case demo
 </a>
 
-<a href="./overview/keyConcepts" class="link-for-home">
-  📖 &nbsp;Key concepts
+<a href="./overview/MonetizationConcepts" class="link-for-home">
+  💰 &nbsp;Monetization Concepts
 </a>
 
 ## Our tools
