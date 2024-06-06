@@ -45,7 +45,7 @@ authorization grants. It's a representation of ethereum address or ENS name
 
 **Usage example:**
 
-```js
+```ts twoslash
 const listGrantedAccess = await dataProtector.getGrantedAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
@@ -62,7 +62,7 @@ specified application. It's a representation of ethereum address or ENS name
 
 **Usage example:**
 
-```js
+```ts twoslash
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789cba...',
@@ -91,7 +91,7 @@ specified user. It's a string representation of ethereum address or ENS name
 
 **Usage example:**
 
-```js
+```ts twoslash
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...', // [!code focus]
   page: 1,
@@ -111,7 +111,7 @@ first page (page 0) containing `20` elements.
 
 **Usage example:**
 
-```js
+```ts twoslash
   authorizedUser: '0x789cba...',
   page: 1, // [!code focus]
   pageSize: 100,
@@ -130,7 +130,7 @@ each page.
 
 **Usage example:**
 
-```js
+```ts twoslash
   page: 1,
   pageSize: 100, // [!code focus]
 });

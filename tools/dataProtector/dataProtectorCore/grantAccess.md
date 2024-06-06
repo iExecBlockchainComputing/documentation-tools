@@ -36,27 +36,20 @@ import { type GrantAccessParams } from '@iexec/dataprotector';
 
 ### protectedData
 
-`AddressOrENS`
-
 The ethereum address of the protected data supplied by the user.
 
+**Type:** `AddressOrENS`  
+**Required:** `True`  
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789cba...',
-});
 ```
 
 ### authorizedApp
-
-`AddressOrENS`
 
 The address of the application you wish to authorize to process the
 `protectedData` within a secure execution environment. You may specify either a
@@ -67,18 +60,16 @@ This smart contract aggregates multiple application versions. This allows you to
 introduce new versions of your application without needing to grant access for
 the `protectedData` each time you do so.
 
+**Type:** `AddressOrENS`  
+**Required:** `True`
+
+**Usage example:**
+
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789cba...',
-});
 ```
 
 ::: tip
@@ -99,21 +90,16 @@ access once. The ETH address for this whitelist is
 
 ### authorizedUser
 
-`AddressOrENS`
-
 The address of the user you wish to authorize to use the `protectedData`. Note
 that these users may not view or manipulate the data. This only grants
 permission for the user to submit the data to an iExec application.
 
+**Type:** `AddressOrENS`  
+**Required:** `True`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const grantedAccess = await dataProtectorCore.grantAccess({
-  protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...', // [!code focus]
 });
@@ -128,10 +114,6 @@ You may authorize all users to use the protected data by setting this to
 
 ### pricePerAccess
 
-`number | undefined`
-
-_default_: `1`
-
 Specifies the usage fee in nano RLC (nRLC) associated with each access of the
 data. It represents the cost incurred for each individual interaction with
 application.
@@ -143,16 +125,13 @@ parameter).
 
 The fee is paid to the owner of the protected data.
 
+**Type:** `Number`  
+**Required:** `False`  
+**Default:** `1`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const grantedAccess = await dataProtectorCore.grantAccess({
-  protectedData: '0x123abc...',
-  authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
   pricePerAccess: 3, // [!code focus]
   numberOfAccess: 10,
@@ -170,24 +149,16 @@ When provided, `pricePerAccess` must be a non-negative integer value.
 
 ### numberOfAccess
 
-`number | undefined`
-
-_default_: `1`
-
 Allows restricting the number of times the protected data may be processed and
 used.
 
+**Type:** `Number`  
+**Required:** `False`  
+**Default:** `1`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const grantedAccess = await dataProtectorCore.grantAccess({
-  protectedData: '0x123abc...',
-  authorizedApp: '0x456def...',
-  authorizedUser: '0x789cba...',
   pricePerAccess: 3,
   numberOfAccess: 10, // [!code focus]
 });
@@ -199,17 +170,13 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 
 Callback function to be notified at intermediate steps.
 
+**Type:** `OnStatusUpdateFn<GrantAccessStatuses>`  
+**Required:** `False` 
+
+**Usage example:**
+
 <!-- prettier-ignore-start -->
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const grantedAccess = await dataProtectorCore.grantAccess({
-  protectedData: '0x123abc...',
-  authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
   onStatusUpdate: ({ title, isDone }) => { // [!code focus]
     console.log(title, isDone); // [!code focus]

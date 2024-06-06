@@ -39,34 +39,25 @@ import { type GrantedAccess } from '@iexec/dataprotector';
 
 ### grantedAccess
 
-`GrantedAccess`
+This is the complete [`GrantedAccess`](../types.md#grantedaccess) object retrieved from an invocation of
+[`getGrantedAccess`](./getGrantedAccess.md).
 
-This is the complete `granted access` object retrieved from an invocation of
-`fetchGrantedAccess`.
+**Type:** `GrantedAccess`  
+**Required:** `True`
+
+**Usage example:**
 
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
 const revokeAccess = await dataProtectorCore.revokeOneAccess({
-  apprestrict: '0xea...', // [!code focus]
-  dataset: '0xA0C...', // [!code focus]
-  datasetprice: '0', // [!code focus]
-  requesterrestrict: '0xecb..', // [!code focus]
-  salt: '0x0147...', // [!code focus]
-  sign: '0xc22c1...', // [!code focus]
-  tag: '0x0000000000000000000000000000000000000000000000000000000000000003', // [!code focus]
-  volume: '1', // [!code focus]
-  workerpoolrestrict: '0x000...', // [!code focus]
+  ...  // GrantedAccess object
 });
 ```
 
+**See also:**
+
 ::: warning
 
-The tag must always be set to
+You must always set the `tag` property to
 `0x0000000000000000000000000000000000000000000000000000000000000003`. This
 specific value indicates that the order is for a confidential asset (a protected
 data).

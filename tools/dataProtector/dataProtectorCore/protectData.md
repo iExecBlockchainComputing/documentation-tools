@@ -58,19 +58,16 @@ import { type ProtectDataParams } from '@iexec/dataprotector';
 
 ### data
 
-`DataObject`
-
 This is the actual data the user is protecting, provided as a JSON object with
 any number of custom keys. The data is encrypted and stored as an NFT.
 
+**Type:** `DataObject`  
+**Required:** `True`
+
+**Usage example:**
+
 <!-- prettier-ignore-start -->
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: { // [!code focus]
     email: 'example@gmail.com', // [!code focus]
@@ -85,9 +82,6 @@ If you'd like to **protect a file**, you first need to convert it to some kind
 of buffer. To do so, you can use `createArrayBufferFromFile`.
 
 ```ts twoslash
-const file: File = new File([], 'emptyFile.txt');
-// ---cut---
-
 import { createArrayBufferFromFile } from '@iexec/dataprotector';
 
 const fileAsArrayBuffer = await createArrayBufferFromFile(file);
@@ -97,26 +91,19 @@ const fileAsArrayBuffer = await createArrayBufferFromFile(file);
 
 ### name
 
-`string | undefined`
-
-_default_: `Untitled`
-
 Allows providing a descriptive name for the protected data. This is considered
 public metadata, describing the protected data.
 
+**Type:** `String`  
+**Required:** `False`  
+**Default:** `Untitled`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail', // [!code focus]
   data: {
-    email: 'example@gmail.com',
-  },
-});
 ```
 
 ::: tip
@@ -127,22 +114,15 @@ The name is public and not encrypted.
 
 ### onStatusUpdate
 
-`OnStatusUpdateFn<ProtectDataStatuses> | undefined`
-
 Callback function to be notified at intermediate steps.
+
+**Type:** `OnStatusUpdateFn<ProcessProtectedDataStatuses>`  
+**Required:** `False`
+
+**Usage example:**
 
 <!-- prettier-ignore-start -->
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const protectedData = await dataProtectorCore.protectData({
-  name: 'myEmail',
-  data: {
-    email: 'example@gmail.com',
   },
   onStatusUpdate: ({ title, isDone }) => {// [!code focus]
     console.log(title, isDone); // [!code focus]

@@ -34,19 +34,15 @@ import { type TransferParams } from '@iexec/dataprotector';
 
 ### protectedData
 
-`AddressOrENS`
-
 ETH address of the `protectedData` owned by you which is to be transferred to a
 new owner.
 
+**Type:** `AddressOrENS`  
+**Required:** `True`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const transferResponse = await dataProtectorCore.transferOwnership({
   protectedData: '0x123abc...',
   newOwner: '0xc5e9f4...', // [!code focus]
 });
@@ -54,18 +50,14 @@ const transferResponse = await dataProtectorCore.transferOwnership({
 
 ### newOwner
 
-`AddressOrENS`
-
 ETH address for the new owner for the `protectedData`.
 
+**Type:** `AddressOrENS`  
+**Required:** `True`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const transferResponse = await dataProtectorCore.transferOwnership({
   protectedData: '0x123abc...',
   newOwner: '0xc5e9f4...', // [!code focus]
 });

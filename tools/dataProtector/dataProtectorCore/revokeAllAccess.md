@@ -29,65 +29,48 @@ import { type RevokeAllAccessParams } from '@iexec/dataprotector';
 
 ### protectedData
 
-`AddressOrENS`
-
 The address of the `protectedData` subject to access revocation.
 
+**Type:** `AddressOrENS`  
+**Required:** `True`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
 const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
-  authorizedUser: '0x789cba...',
-});
 ```
 
 ### authorizedApp
 
-`AddressOrENS | 'any' | undefined`
-
-_default_: `any`
-
 The application address to be removed from the authorization list for the
 specified `protectedData`.
 
+**Type:** `AddressOrENS`  
+**Required:** `False`  
+**Default:** `any`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
   authorizedUser: '0x789cba...',
-});
 ```
 
 ### authorizedUser
 
-`AddressOrENS | 'any' | undefined`
-
-_default_: `any`
-
 The user address to be removed from the authorization list for the specified
 `protectedData`.
 
+**Type:** `AddressOrENS`  
+**Required:** `False`  
+**Default:** `any`
+
+**Usage example:**
+
 ```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-
-const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
-  protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...', // [!code focus]
 });
@@ -95,9 +78,12 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 
 ### onStatusUpdate
 
-`OnStatusUpdateFn<RevokeAllAccessStatuses> | undefined`
-
 Callback function to be notified at intermediate steps.
+
+**Type:** `OnStatusUpdateFn<ProcessProtectedDataStatuses>`  
+**Required:** `False`
+
+**Usage example:**
 
 <!-- prettier-ignore-start -->
 ```ts twoslash
