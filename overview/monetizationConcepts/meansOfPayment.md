@@ -21,15 +21,6 @@ transfer funds between Ethereum mainnet and the iExec Sidechain.
 **checkBalances** : displays the native chain balance and RLC tokens of a
 specified wallet.
 
-The token balances displayed the wallet module allow for the payment of these
-methods:
-
-|         Tool          |                                              Method                                              |
-| :-------------------: | :----------------------------------------------------------------------------------------------: |
-| DataProtector Sharing |  [buyProtectedData](../../tools/dataProtector/dataProtectorSharing/selling/buyProtectedData.md)  |
-| DataProtector Sharing | [rentProtectedData](../../tools/dataProtector/dataProtectorSharing/renting/rentProtectedData.md) |
-| DataProtector Sharing |      [subscribe](../../tools/dataProtector/dataProtectorSharing/subscription/subscribe.md)       |
-
 ## Account module
 
 The
@@ -63,6 +54,9 @@ methods:
 | :-------------------: | :----------------------------------------------------------------------------------------------------: |
 |     DataProtector     |      [processProtectedData](../../tools/dataProtector/dataProtectorCore/processProtectedData.md)       |
 | DataProtector Sharing | [consumeProtectedData](../../tools/dataProtector/dataProtectorSharing/consume/consumeProtectedData.md) |
+| DataProtector Sharing |     [buyProtectedData](../../tools/dataProtector/dataProtectorSharing/selling/buyProtectedData.md)     |
+| DataProtector Sharing |    [rentProtectedData](../../tools/dataProtector/dataProtectorSharing/renting/rentProtectedData.md)    |
+| DataProtector Sharing |         [subscribe](../../tools/dataProtector/dataProtectorSharing/subscription/subscribe.md)          |
 |       Web3Mail        |                         [sendEmail](../../tools/web3mail/methods/sendEmail.md)                         |
 |    Oracle Factory     |                       [updateOracle](../../tools/oracleFactory/updateOracle.md)                        |
 
@@ -82,6 +76,5 @@ same methods in the account module, as long as the following conditions are be
 met :
 
 - The user has a voucher
-- The user's voucher is approved to complete payment on behalf of the user
-  (approve method in the account module)
-- The user's voucher authorizes ---
+- The user's voucher is approved to spend the user's account balance to complete
+  payment on their behalf (approve method in the account module)

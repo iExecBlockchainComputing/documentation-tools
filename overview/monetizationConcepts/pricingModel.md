@@ -57,6 +57,6 @@ applications or computing power.
 | :-----------: | :----------------------------------------------------------------------------------------------------: | :--------------------------------------: | :-----------------------------------------------: |
 | DataProtector |     [buyProtectedData](../../tools/dataProtector/dataProtectorSharing/selling/buyProtectedData.md)     |                   data                   |                       price                       |
 | DataProtector |      [processProtectedData](../../tools/dataProtector/dataProtectorCore/processProtectedData.md)       | data<br> computing power<br> application |                     maxPrice                      |
-| DataProtector | [consumeProtectedData](../../tools/dataProtector/dataProtectorSharing/consume/consumeProtectedData.md) | data<br> computing power<br> application |                         -                         |
+| DataProtector | [consumeProtectedData](../../tools/dataProtector/dataProtectorSharing/consume/consumeProtectedData.md) |             computing power              |                         -                         |
 |   Web3Mail    |                         [sendEmail](../../tools/web3mail/methods/sendEmail.md)                         | data<br> computing power<br> application | dataMaxPrice<br>workerpoolMaxPrice<br>appMaxPrice |
 | OracleFactory |                       [updateOracle](../../tools/oracleFactory/updateOracle.md)                        | data<br> computing power<br> application |                         -                         |
