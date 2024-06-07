@@ -16,7 +16,7 @@
     "vitepress": "^1.1.4"
   },
   "dependencies": {
-    "@iexec/dataprotector": "^2.0.0-beta.2",
+    "@iexec/dataprotector": "^2.0.0-beta.3",
     "@iexec/dataprotector-deserializer": "^0.1.0",
     "@iexec/iexec-oracle-factory-wrapper": "^2.1.0",
     "@iexec/web3mail": "^0.6.0",

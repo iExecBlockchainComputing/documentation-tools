@@ -5,7 +5,7 @@ In order to consume a protected data, an iExec TEE dApp needs to be provided.
 ::: tip
 
 **TEE** stands for Trusted Execution Environment. Find more details here:
-https://protocol.docs.iex.ec/help/glossary#trusted-execution-environment-tee
+<https://protocol.docs.iex.ec/help/glossary#trusted-execution-environment-tee>
 
 :::
 
@@ -26,7 +26,7 @@ The story goes as follow:
 For this `addOnlyAppWhitelist`, you are free to use:
 
 ```
-0x334dc0bb08fb32a4e9917197e5e626de4b6b9b87
+0x256bcd881c33bdf9df952f2a0148f27d439f2e64
 ```
 
 that contains apps created for the purpose of
@@ -34,13 +34,13 @@ that contains apps created for the purpose of
 This apps whitelist is managed by iExec.
 
 You can explore this apps whitelist on
-[https://blockscout-bellecour.iex.ec/](https://blockscout-bellecour.iex.ec/address/0x334dc0bb08fb32a4e9917197e5e626de4b6b9b87).
+[https://blockscout-bellecour.iex.ec/](https://blockscout-bellecour.iex.ec/address/0x256bcd881c33bdf9df952f2a0148f27d439f2e64).
 
 For the `consumeProtectedData()` method, you can use the following iExec TEE
 dApp:
 
 ```
-0xF248000F0E99e9203FdBE509019f008F9c169705
+0x1cb7D4F3FFa203F211e57357D759321C6CE49921
 ```
 
 <br />

@@ -100,7 +100,7 @@ const consumeProtectedDataResult =
 For this `app` parameter you can use the following iExec TEE app:
 
 ```
-0xF248000F0E99e9203FdBE509019f008F9c169705
+0x1cb7D4F3FFa203F211e57357D759321C6CE49921
 ```
 
 For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
