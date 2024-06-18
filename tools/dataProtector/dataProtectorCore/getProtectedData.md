@@ -121,7 +121,8 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 
 ### pageSize
 
-**Type:** `number` **Default:** `20`  
+**Type:** `number`  
+**Default:** `20`  
 **Range:** `[10...1000]`
 
 Specifies the number of records in each page of the result set. This is used in

@@ -59,7 +59,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### app {#app-param} <RequiredYesBadge />
+### app <RequiredYesBadge /> {#app-param}
 
 **Type:** `AddressOrENS`
 
@@ -187,8 +187,8 @@ const processProtectedDataResponse = await dataProtectorCore.processProtectedDat
 
 ### workerpool
 
-**Type:** `AddressOrENS | 'any'` **Default:**
-`prod-v8-bellecour.main.pools.iexec.eth`
+**Type:** `AddressOrENS | 'any'`  
+**Default:** `prod-v8-bellecour.main.pools.iexec.eth`
 
 The ETH address or Ethereum Name Service (ENS) address for the iExec workerpool.
 It's the confidential computer on which the iExec application will run.
