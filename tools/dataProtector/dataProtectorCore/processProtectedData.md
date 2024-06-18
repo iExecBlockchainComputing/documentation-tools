@@ -38,9 +38,9 @@ const processProtectedDataResponse =
 import { type ProcessProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredYesBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The ETH address or Ethereum Name Service (ENS) reference for the protected data
 you wish the `app` to process.
@@ -59,9 +59,9 @@ const processProtectedDataResponse =
   });
 ```
 
-### app {#app-param}
+### app {#app-param} <RequiredYesBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The ETH address or Ethereum Name Service (ENS) address for the iExec application
 to process the protected data.
@@ -82,7 +82,7 @@ const processProtectedDataResponse =
 
 ### maxPrice
 
-`number | undefined`
+**Type:** `number`
 
 The maximum price (in nRLC) that a requester is willing to pay for each task
 related to processing the protected data. It is the sum of the application
@@ -105,7 +105,7 @@ const processProtectedDataResponse =
 
 ### args
 
-`string | undefined`
+**Type:** `string`
 
 Set of execution arguments for the application.
 
@@ -134,7 +134,7 @@ arguments passed this way are visible in plain text using the
 
 ### inputFiles
 
-`string[] | undefined`
+**Type:** `string[]`
 
 A set of URLs representing the input files required for application execution.
 
@@ -155,7 +155,7 @@ const processProtectedDataResponse =
 
 ### secrets
 
-`Record<number, string> | undefined`
+**Type:** `Record<number, string>`
 
 A set of requester secrets necessary for the application's execution. This is
 represented as a mapping of numerical identifiers to corresponding secrets
@@ -187,9 +187,8 @@ const processProtectedDataResponse = await dataProtectorCore.processProtectedDat
 
 ### workerpool
 
-`AddressOrENS | 'any' | undefined`
-
-_default_: `prod-v8-bellecour.main.pools.iexec.eth`
+**Type:** `AddressOrENS | 'any'` **Default:**
+`prod-v8-bellecour.main.pools.iexec.eth`
 
 The ETH address or Ethereum Name Service (ENS) address for the iExec workerpool.
 It's the confidential computer on which the iExec application will run.
@@ -219,7 +218,7 @@ const processProtectedDataResponse =
 
 ### onStatusUpdate
 
-`OnStatusUpdateFn<ProcessProtectedDataStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<ProcessProtectedDataStatuses>`
 
 Callback function to be notified at intermediate steps.
 
