@@ -129,7 +129,7 @@ You may authorize all users to use the protected data by setting this to
 ### pricePerAccess
 
 **Type:** `number`  
-**Default:** `1`  
+**Default:** `1`
 
 Specifies the usage fee in nano RLC (nRLC) associated with each access of the
 data. It represents the cost incurred for each individual interaction with
