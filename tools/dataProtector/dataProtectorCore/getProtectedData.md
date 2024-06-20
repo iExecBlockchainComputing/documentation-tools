@@ -150,4 +150,4 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 import { type ProtectedData } from '@iexec/dataprotector';
 ```
 
-[`ProtectedData[]`](../types.md#protecteddata)
+See [`ProtectedData`](../types.md#protecteddata)

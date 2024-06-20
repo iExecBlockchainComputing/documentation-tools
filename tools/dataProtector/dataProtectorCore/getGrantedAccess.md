@@ -180,7 +180,7 @@ previously granted authorization for access.
 
 ### count
 
-`number`
+**Type:** `number`
 
 An integer value indicating the number of results returned by this method. This
 is of particular note when using paging as the number of records returned may be
@@ -188,4 +188,6 @@ smaller than the page size.
 
 ### grantedAccess
 
-See [`GrantedAccess[]`](../types.md#grantedaccess)
+**Type:** GrantedAccess
+
+See [`GrantedAccess`](../types.md#grantedaccess)
