@@ -117,7 +117,7 @@ const dataProtector = new IExecDataProtector(web3Provider, {
 ### iexecOptions
 
 Low level configuration options for `iexec` SDK, see
-[iexec SDK documentation IExecConfigOptions](https://github.com/iExecBlockchainComputing/iexec-sdk/blob/master/docs/interfaces/internal_.IExecConfigOptions.md)
+[iexec SDK documentation IExecConfigOptions](https://github.com/iExecBlockchainComputing/iexec-sdk/blob/master/docs/interfaces/IExecConfigOptions.md)
 for more details.
 
 ```ts twoslash

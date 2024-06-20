@@ -71,6 +71,32 @@ const consumeProtectedDataResult =
   });
 ```
 
+### maxPrice
+
+`number | undefined`
+
+The maximum price (in nRLC) that a requester is willing to pay for each task
+related to consuming the protected data. It is the sum of the application price,
+dataset price, and workerpool price per task.
+
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const consumeProtectedDataResult =
+  await dataProtectorSharing.consumeProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    maxPrice: 10, // [!code focus]
+  });
+```
+
 ### app {#app-param}
 
 `AddressOrENS`
@@ -100,7 +126,7 @@ const consumeProtectedDataResult =
 For this `app` parameter you can use the following iExec TEE app:
 
 ```
-0xF248000F0E99e9203FdBE509019f008F9c169705
+0x1cb7D4F3FFa203F211e57357D759321C6CE49921
 ```
 
 For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
