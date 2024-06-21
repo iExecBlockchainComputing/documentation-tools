@@ -19,7 +19,7 @@ for all 4 chapters.
 Through a use case, we'll introduce you to the **iExec stack** and its main key
 components.
 
-### **Chapter 2:** DataProtector - How to Protect Your Data
+### **Chapter 2:** How to Protect Your Data with our developer tool
 
 We'll show you how to protect your data with our superhero **DataProtector**.
 
