@@ -41,7 +41,7 @@ application, a little surprise awaits you! 🌟 What could it be? Only one way t
 find out! …okay, you can click directly on Secret Chapter, but it’s not as fun
 😉
 
-## **OMFG so many new words !!! Please a glossary**
+## 😬 **OMFG so many new words !!! Please a glossary**
 
 In this journey, we'll use some specific terms related to confidential computing
 or other concepts. open a new tab and keep it open Here 😉 Here is our shiny
