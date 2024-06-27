@@ -45,7 +45,7 @@ In this journey, we'll use some specific terms related to confidential computing
 or other concepts. Open a new tab and keep it open here 😉 Here is our shiny
 glossary: [glossary](https://protocol.docs.iex.ec/help/glossary)
 
-## 🔗 **Usefull links**
+## 🔗 **Useful links**
 
 - [iExec Documentation](https://docs.iex.ec/)
 - [iExec Protocol documentation](https://protocol.docs.iex.ec/)
