@@ -28,7 +28,7 @@ export function getSidebar() {
             items: [
               {
                 text: 'Introduction',
-                link: '/overview/helloWorld/introduction',
+                link: '/overview/helloWorld/hello',
               },
               {
                 text: 'Key Concepts',

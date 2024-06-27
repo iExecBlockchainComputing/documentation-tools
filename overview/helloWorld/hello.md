@@ -1,4 +1,4 @@
-## 👋 Hello (2 mins)
+# 👋 Hello (2 mins)
 
 Hey there, and welcome to our Hello World Journey! I'm Martin, DevRel at iExec,
 and I'm thrilled to guide you through the exciting world of confidential
