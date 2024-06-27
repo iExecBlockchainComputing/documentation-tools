@@ -1,7 +1,7 @@
 # 🧐 iExec Overview (8 mins)
 
-Great intro is done, now let's dive into the key concepts. What are the
-foundational bricks of the iExec stack?
+Great, intro is done, now let's dive into the key concepts. What are the main
+components of the iExec stack?
 
 ## 👷 The user case
 
@@ -34,18 +34,18 @@ with our smart contract called POCO (Proof of Contribution). This smart contract
 acts as a band leader, creating synergy between the power of confidential
 computing and the transparency/immutability of the blockchain.
 
-> Wow! Wow! Wow! **Key Word alert!!!** When you see this 🚨, it means that we've
-> introduced a new concept that needs to be explained, and there we talk about
-> smart contracts, TEE and confidential conputing, that's a lot.
+> Wow! Wow! **Key Word alert!!!** When you'll see this 🚨, it means that we've
+> introduced a new concept that needs to be explained, and right now we talk
+> about smart contracts, TEE and cofidential computing, that's a lot.
 
 🚨 **Smart Contract** : A smart contract is a piece of code on the blockchain
 that automatically performs tasks and enforces agreements without needing a
 middleman.
 
-🚨**TEE** : Think of TEEs as secure zones in a computing environment where your
-sensitive data can be processed safely, without being stored, see or altered by
-anyone even if the data are computed on a malicious computer far, far away in
-the galaxy
+🚨**TEE** : Think of TEEs (Trusted Execution Environment) as secure zones in a
+computing environment where your sensitive data can be processed safely, without
+being stored, see or altered by anyone even if the data are computed on a
+malicious computer far, far away in the galaxy (decentralized network)
 
 🚨**Confidential computing** : We need a dedicated section (spoiler alert, just
 below) for confidential computing, as it is one of the key features powered by
@@ -94,7 +94,7 @@ and..drum roll again.. (this hello world become a music festival 😄) the
 > complexity of confidential computing and blockchain** in our developer tools,
 > these tools are SDK so it's a kind of plug and play installation.
 
-But today we gonna focus on one of them, the superhero **DataProtector**.
+Today we gonna focus on one of them, the superhero **DataProtector**.
 
 **DataProtector** Utilizes end-to-end encryption and advanced confidential
 computing technology to ensure the protection and confidentiality of your data,
@@ -140,5 +140,5 @@ your **users** Dapps with privacy-focused features in no time. Happy coding!
 ## 💫The Next steps
 
 In the next chapter, we’ll dive into **The Developer’s Tool: DataProtector**.
-and check how we can protect and manage data with it. AMAZING Grab a cup of
+and check how we can protect and manage data with it. AMAZING! Grab a cup of
 coffee and see you in the next chapter
