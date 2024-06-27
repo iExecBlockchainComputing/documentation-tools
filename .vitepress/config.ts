@@ -33,6 +33,7 @@ export default defineConfig({
         items: [
           { text: 'DataProtector', link: '/tools/dataProtector' },
           { text: 'Web3Mail', link: '/tools/web3mail' },
+          { text: 'Web3Telegram', link: '/tools/web3telegram' },
           { text: 'Oracle Factory', link: '/tools/oracleFactory' },
         ],
       },
