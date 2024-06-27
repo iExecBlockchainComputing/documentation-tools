@@ -31,6 +31,10 @@ export function getSidebar() {
                 link: '/overview/helloWorld/introduction',
               },
               {
+                text: 'Key Concepts',
+                link: '/overview/helloWorld/keyConcepts',
+              },
+              {
                 text: 'Protect and manage data',
                 link: '/overview/helloWorld/protectAndManageData',
               },
