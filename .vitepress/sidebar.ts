@@ -35,8 +35,8 @@ export function getSidebar() {
                 link: '/overview/helloWorld/keyConcepts',
               },
               {
-                text: 'Protect and manage data',
-                link: '/overview/helloWorld/protectAndManageData',
+                text: 'iDapp Tuto',
+                link: '/overview/helloWorld/iDappTuto',
               },
               {
                 text: 'Consume data',
