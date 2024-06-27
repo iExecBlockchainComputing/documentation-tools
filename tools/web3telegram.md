@@ -1,4 +1,4 @@
-# ✉ Web3Telegral
+# ✉ Web3Telegram
 
 Le meilleur devtool 🔎 :ocean:
 

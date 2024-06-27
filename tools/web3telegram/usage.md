@@ -1,7 +1,5 @@
 # Usage
 
-Here machin machin
-
 ## Create your protected data
 
 To create a Telegram protected data:
