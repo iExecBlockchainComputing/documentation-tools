@@ -43,7 +43,11 @@ Tadaada that's it!
 
 ## 🧩 Let's create a protected Data
 
-Here is the protected data demo
+<script setup>
+import WagmiLoginButton from '../../components/WagmiLoginButton.vue'
+</script>
+
+<WagmiLoginButton />
 
 ## 🧩 Under the hood
 
