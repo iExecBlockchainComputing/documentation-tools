@@ -1,4 +1,4 @@
-# 🧐 iExec Overview (8 mins)
+# 🧐 iExec Overview (6 mins)
 
 Great, intro is done, now let's dive into the key concepts. What are the main
 components of the iExec stack?

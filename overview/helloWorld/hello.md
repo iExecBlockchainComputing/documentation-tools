@@ -45,6 +45,16 @@ In this journey, we'll use some specific terms related to confidential computing
 or other concepts. Open a new tab and keep it open here 😉 Here is our shiny
 glossary: [glossary](https://protocol.docs.iex.ec/help/glossary)
 
+## ⚒️ **Prerequisites**
+
+Here is what you will need to complete this "Hello World" Journey
+
+- An Ethereum wallet for the chapter two, you can create one
+  [here](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?utm_source=google.com&pli=1)
+  with Metamask
+-
+- A cup of coffee ☕️
+
 ## 🔗 **Useful links**
 
 - [iExec Documentation](https://docs.iex.ec/)
