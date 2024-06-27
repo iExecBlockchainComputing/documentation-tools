@@ -15,6 +15,8 @@ import { publicProvider } from 'wagmi/providers/public';
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
 import { bellecour } from '../utils/walletConnection'; // Adjust the path if necessary
 
+console.log('bellecour', import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID);
+
 // Wagmi Client initialization
 if (!import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID) {
   throw new Error(
