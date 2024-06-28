@@ -109,6 +109,7 @@ const web3Provider = ref(null);
 const isWalletConnected = ref(false);
 const protectedData = ref(null);
 const authorizedApp = ref('');
+const contentToProtect = ref('');
 const isLoadingProtect = ref(false);
 const isLoadingGrant = ref(false);
 const protectError = ref(null);
@@ -122,12 +123,13 @@ const onWalletConnected = (provider) => {
 const protectData = async () => {
   try {
     if (!web3Provider.value) throw new Error('Wallet not connected');
+    if (!contentToProtect.value) throw new Error('Content is empty');
     isLoadingProtect.value = true;
     protectError.value = null;
     const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
     protectedData.value = await dataProtectorCore.protectData({
       data: {
-        email: 'example@gmail.com',
+        content: contentToProtect.value,
       },
     });
   } catch (error) {
@@ -161,12 +163,16 @@ const grantAccess = async () => {
 
 Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
 
-Create Your Protected Data: <button @click="protectData"
-:disabled="!isWalletConnected || isLoadingProtect">
-{{ isLoadingProtect ? 'Processing...' : 'Protect Data' }} </button>
+<div class="form-container">
+  <input v-model="contentToProtect" placeholder="Enter content to protect" />
+  <button @click="protectData" :disabled="!isWalletConnected || isLoadingProtect">
+    {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
+  </button>
+  <div v-if="protectError" class="error">{{ protectError }}</div>
+</div>
 
-<div v-if="protectError" class="error">{{ protectError }}</div>
 <div v-if="protectedData">
+  <h2>Protected Data Address:</h2>
   <p>{{ protectedData.address }}</p>
 </div>
 
