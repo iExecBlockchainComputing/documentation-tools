@@ -1,73 +1,231 @@
-# 🛡️Protect and manage data
+# Build Your iDapp
 
-Ok just for a quick reminder, we are following the journey of a scientist who
-wants to protect, compute or monetize his climate data. In the previous chapter,
-we introduced the iExec stack and its main key components. Now, we will show you
-how to protect your data with our superhero **DataProtector**.
+This guide will help you set up, test, run, and deploy your iDapp using the
+`idapp-cli` tool. Follow the instructions carefully for a smooth development
+experience.
 
-## 🧩 DataProtector
+## Prerequisites
 
-DataProtector is our main developer tool cause it allow to create the
-fundationals bricks the protected data, protected data that can be used in an
-iExec application.
+Before getting started, ensure that you have the following installed on your
+system:
 
-- **Data Privacy and Security** : Utilizes end-to-end encryption to ensure the
-  protection and confidentiality of your data, leveraging advanced confidential
-  computing technology.
+- [**Node.js**](https://nodejs.org/en/) version 18 or higher
+- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 
-- **Dynamic Access and Monetization Management** : Allow users to manage access,
-  enabling flexible control and monetization of data assets.
+## Installation
 
-- **Seamless dApp Integration** : Features an SDK for easy integration into a
-  DApp, enhancing functionality and user experience.
+First, you need to install the `idapp-cli` package. Open your terminal and run
+the following command:
 
-We will provide everything you need to know in this "Hello World" to get started
-with DataProtector, but if you jump straight to the code and integrate it into
-you Dapp, you can find the full documentation
-[here](https://beta.tools.docs.iex.ec/tools/dataProtector.html) or follow this
-reallllly complex set up below 😁 please pick some code snippets in our
-[CodeSandbox](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true)
-
-For instance protect a data is as simple as :
-
-```typescript
-const provider = await connector.getProvider();
-const dataProtector = new IExecDataProtector(provider);
-const { address: protectedDataAddress } = await dataProtector.protectData({
-  data,
-  name,
-});
+```sh
+npm install @iexec/idapp-cli
 ```
 
-Tadaada that's it!
+## Initialize Framework
 
-## 🧩 Let's create a protected Data
+To initialize the working directory for developing your iDapp, use the
+`idapp init` command. This command sets up the necessary project structure and
+files.
+
+```sh
+idapp init
+```
+
+You will be prompted with the following message:
+
+```sh
+ ___ ____    _    ____  ____
+ |_ _|  _ \  / \  |  _ \|  _ \
+  | || | | |/ _ \ | |_) | |_) |
+  | || |_| / ___ \|  __/|  __/
+ |___|____/_/   \_\_|   |_|
+
+? A new project will be created in the current directory. Do you want to continue? Yes
+? What is the name of your project? develop-my-idapp
+? Which language do you want to use to build your iDapp? JavaScript
+? Would you like to access a protected data inside your iDapp? (Y/n)
+```
+
+:::tip
+
+Answer `n` to the question
+`? Would you like to access protected data inside your iDapp?`. We will cover
+integrating protected data into your iDapp later.
+
+:::
+
+## Test Your iDapp
+
+To test your iDapp, use the `idapp test` command. This command runs your iDapp
+to ensure that your application is functioning correctly.
+
+### Using Parameters
+
+You can pass input parameters to your iDapp using the `--param` option. This
+allows you to provide necessary inputs during runtime.
+
+```sh
+idapp test --param <your-input>
+```
+
+### Using Docker
+
+For a more realistic environment, you can run your iDapp using Docker. This
+helps in creating an environment that closely mimics production settings.
+
+```sh
+idapp run --docker
+```
+
+## Deploy Your iDapp
+
+Deploy your iDapp on the iExec protocol.
+
+```sh
+idapp deploy
+```
+
+Now you can run your application using:
+
+```sh
+idapp run <your-idapp-address>
+```
+
+If you want, you can integrate protected data into your iDapp to process private
+data. To do that, you need to start this tutorial again and answer `y` to the
+question `? Would you like to access protected data inside your iDapp?`.
+
+## 🧩 Let's Create Protected Data
+
+To create protected data, you need to connect your wallet and create the
+protected data using the provided buttons.
 
 <script setup>
-import MetamaskButton from '../../components/MetamaskButton.vue'
+import { ref } from 'vue';
+import { IExecDataProtectorCore } from '@iexec/dataprotector';
+import MetamaskButton from '../../components/MetamaskButton.vue';
+
+const web3Provider = ref(null);
+const isWalletConnected = ref(false);
+const protectedData = ref(null);
+const authorizedApp = ref('');
+const isLoadingProtect = ref(false);
+const isLoadingGrant = ref(false);
+const protectError = ref(null);
+const grantError = ref(null);
+
+const onWalletConnected = (provider) => {
+  web3Provider.value = provider;
+  isWalletConnected.value = true;
+};
+
+const protectData = async () => {
+  try {
+    if (!web3Provider.value) throw new Error('Wallet not connected');
+    isLoadingProtect.value = true;
+    protectError.value = null;
+    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
+    protectedData.value = await dataProtectorCore.protectData({
+      data: {
+        email: 'example@gmail.com',
+      },
+    });
+  } catch (error) {
+    protectError.value = error.message;
+    console.error('Error protecting data:', error);
+  } finally {
+    isLoadingProtect.value = false;
+  }
+};
+
+const grantAccess = async () => {
+  try {
+    if (!web3Provider.value || !protectedData.value) throw new Error('Missing data');
+    isLoadingGrant.value = true;
+    grantError.value = null;
+    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
+    const grantedAccess = await dataProtectorCore.grantAccess({
+      protectedData: protectedData.value.address,
+      authorizedApp: authorizedApp.value,
+      authorizedUser: '0x0000000000000000000000000000000000000000',
+    });
+    console.log('Access granted:', grantedAccess);
+  } catch (error) {
+    grantError.value = error.message;
+    console.error('Error granting access:', error);
+  } finally {
+    isLoadingGrant.value = false;
+  }
+};
 </script>
 
-<MetamaskButton />
+Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
 
-## 🧩 Under the hood
+Create Your Protected Data: <button @click="protectData"
+:disabled="!isWalletConnected || isLoadingProtect">
+{{ isLoadingProtect ? 'Processing...' : 'Protect Data' }} </button>
 
-It's always better to understand the car engine before driving it, right? So
-let's take a look under the hood and see what happened when you clicked on the
-button **Protect Data**.
+<div v-if="protectError" class="error">{{ protectError }}</div>
+<div v-if="protectedData">
+  <p>{{ protectedData.address }}</p>
+</div>
 
-![alt text](/assets/hello-world/dataprotector.png)
+## 🧩 Grant Access to Your iDapp
 
-Ok let's explain step by step
+Authorize your iDapp to access your protected data using the button below.
 
-1. The DataProtector SDK was called.
-2. The data was encrypted with a symmetric key.
-3. The encrypted data was stored on public decentralized storage (IPFS).
-4. The symmetric key was stored in a secure enclave (TEE).
-5. The DataProtector smart contract was called to create the protected data
-   ownership on the blockchain.
-6. The protected data address was returned to you, linking it to your wallet
-   address.
+<div class="form-container">
+  <input v-model="authorizedApp" placeholder="Enter authorized app address" />
+  <button @click="grantAccess" :disabled="isLoadingGrant">
+    {{ isLoadingGrant ? 'Processing...' : 'Grant Access' }}
+  </button>
+  <div v-if="grantError" class="error">{{ grantError }}</div>
+</div>
 
-## 🧩 OK Great i have a protected Data..and what now ?
+<style scoped>
+button {
+  background-color: #fcd15a;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
-Now that you have a protected data, you can use it in an iExec application.
+button:hover {
+  background-color: #e3b94d;
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.form-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #fcd15a;
+}
+
+.error {
+  color: white;
+  background-color: red;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+</style>
