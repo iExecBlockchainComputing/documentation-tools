@@ -28,27 +28,27 @@ export function getSidebar() {
             items: [
               {
                 text: 'Introduction',
-                link: '/overview/helloWorld/hello',
+                link: '/overview/helloWorld/1-hello',
               },
               {
                 text: 'Key Concepts',
-                link: '/overview/helloWorld/keyConcepts',
+                link: '/overview/helloWorld/2-keyConcepts',
+              },
+              {
+                text: 'iExec Application',
+                link: '/overview/helloWorld/3-iexecApplication',
               },
               {
                 text: 'Protect and manage data',
-                link: '/overview/helloWorld/protectAndManageData',
-              },
-              {
-                text: 'iDapp Tuto',
-                link: '/overview/helloWorld/iDappTuto',
-              },
-              {
-                text: 'Consume data',
-                link: '/overview/helloWorld/consumeData',
+                link: '/overview/helloWorld/4-protectAndManageData',
               },
               {
                 text: 'Monetize your data',
-                link: '/overview/helloWorld/monetizeYourData',
+                link: '/overview/helloWorld/5-monetizeYourData',
+              },
+              {
+                text: 'Surprise!',
+                link: '/overview/helloWorld/6-suprise',
               },
             ],
           },

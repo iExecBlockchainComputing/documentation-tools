@@ -10,14 +10,13 @@ decompose each component of the stack and explain how they interact with each
 other.
 
 **Imagine** you're a research scientist with a valuable dataset on climate
-change that you want to monetize or apply algorithms to while ensuring it
-remains secure. You need a **technology** (iExec Stack 😉) and a **tool** to
-protect and manage access to your data. By using an iExec-powered application,
-you can securely upload your dataset and set terms for access. Other researchers
-or organizations can subscribe to or rent your data for their studies. The
-application processes data requests within a secure environment, ensuring your
-raw data remains protected. This way, you can monetize your data by allowing
-controlled, secure access, ensuring its integrity and privacy.
+change that you want to apply algorithms to or even monetize while ensuring it
+remains secure and confidential.. You need a **technology** for the confidential
+computation and a **tool** to protect and manage access to your data.
+
+It's where iExec comes in! We provide a **protocol** and **developer tools**
+that allow you to compute, protect, manage, and monetize your data in a secure
+and decentralized environment.
 
 Let’s decompose and deep dive in each puzzle piece
 
@@ -34,9 +33,10 @@ with our smart contract called POCO (Proof of Contribution). This smart contract
 acts as a band leader, creating synergy between the power of confidential
 computing and the transparency/immutability of the blockchain.
 
-> Wow! Wow! **Key Word alert!!!** When you'll see this 🚨, it means that we've
-> introduced a new concept that needs to be explained, and right now we talk
-> about smart contracts, TEE and cofidential computing, that's a lot.
+<div style="background-color:rgba(216,240,2501);padding:10px; margin: 10px 0px 10px; border-radius:5px; color:black">
+Wow! Wow! <span style="font-weight: bold">Key Word alert!!!</span> When you'll see this 🚨, it means that we've
+introduced a new concept that needs to be explained.
+</div>
 
 🚨 **Smart Contract** : A smart contract is a piece of code on the blockchain
 that automatically performs tasks and enforces agreements without needing a
@@ -77,10 +77,10 @@ One of the coolest features of our dev tools is that they allow you to monetize
 your digital assets. For example, if you have a bunch of sensitive climate data,
 you can monetize it by lending it for computing or selling it directly.
 
-> Okay, I think it's time to reveal the name of the tool that will enable all
-> the key features mentioned above. Drum roll, please.... **DATAPROTECTOR**.
-
-It's a perfect transition to the next section ..our developer tools.
+<div style="background-color:rgba(216,240,2501);padding:10px; margin: 10px 0px 10px; border-radius:10px; color:black">
+Okay, I think it's time to reveal the name of the tool that will enable all
+the key features mentioned above. Drum roll, please.... <span style="font-weight: bold">DATAPROTECTOR</span>.
+</div>
 
 ## 🧩 The Developer tools
 
@@ -106,36 +106,16 @@ encrypt climate data, set terms for access, and monetize your data by allowing
 access to user like researchers or organizations and **iExec application** can
 then compute your data in a secure environment.
 
-🚨 **iExec application** : The iExec app is a serverless Web3 application that
-runs on an iExec worker node, which is part of a decentralized compute
-infrastructure, with TEE (Trusted Execution Environment) support for enhanced
-security and confidentiality
+🚨 **iExec application** : An iExec application is an application that running
+in a TEE and is able to compute some data and return the result and a total
+confidential and private way without
 
-Ok great but how our scientist can integrate all of this in his DApp? Let's
-discover this in the next section
+## 🧩 The iExec Application
 
-## 🧩 The Dapp integration
-
-Decentralized confidential computing might sound complex, but we've worked hard
-to make it simple and accessible through our developer tools. Our tools capture
-the essence and power of confidential computing and blockchain technology,
-abstracting away the complexity. With just a quick **npm/yarn/pnpm install**,
-our scientist can integrate these powerful features in his Dapp and then be able
-to protect, manage and monetize sensitive data (and you don’t need to be a
-full-stack Web3 developer, that’s amzing).
-
-Here’s an easy-to-follow recipe:
-
-1. **Start with Your App**: Use an existing app or scaffold a new one.
-2. **Install the Developer Tool**: Run the installation command.
-3. **Import and Create an Instance**: Import the tool into your file and create
-   a new instance.
-4. **Call the Methods You Need**: Use the methods provided by the tool.
-5. **That's It!**: You’re done!
-
-Don't just take my word for it—check out our code sandbox! We have ready-to-use
-code snippets that you can try out. With these steps, you’ll be able to offer
-your **users** Dapps with privacy-focused features in no time. Happy coding!
+The iExec application is the last piece of the puzzle. It's the application that
+will run in the TEE and compute your data in a secure environment. Think of it
+as a secure vault where your data is processed, ensuring that only the results
+are accessible while the raw data remains protected and confidential.
 
 ## 💫The Next steps
 

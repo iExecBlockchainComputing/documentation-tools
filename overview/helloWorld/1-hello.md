@@ -10,7 +10,7 @@ click on the highlighted words if you want to dive deeper into specific topics.
 
 As your cool guide, I'll sum up what we'll learn during this quick journey. You
 can definitely achieve this during a hackathon—it takes approximately 30 minutes
-for all 4 chapters.
+for all 5 chapters.
 
 ## 🤓 What will you learn during this journey?
 
@@ -19,13 +19,15 @@ for all 4 chapters.
 Through a use case, we'll introduce you to the **iExec stack** and its main key
 components.
 
-### **Chapter 2:** How to Protect Your Data with our developer tool
+### **Chapter 2:** iExec Application
 
-We'll show you how to protect your data with our superhero **DataProtector**.
+You will learn how to build, deploy, and run an application in a trusted
+execution environment.
 
-### **Chapter 3:** How to Use Your Protected Data in an iExec Application
+### **Chapter 3:** How to Protect Your Data with our developer tool
 
-We'll show you how to use your protected data in an **iExec application**.
+We'll show you how to protect and compute your data with our
+superhero **DataProtector**.
 
 ### **Chapter 4:** Exploring Advanced Data Monetization Features
 
@@ -52,14 +54,4 @@ Here is what you will need to complete this "Hello World" Journey
 - An Ethereum wallet for the chapter two, you can create one
   [here](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?utm_source=google.com&pli=1)
   with Metamask
--
 - A cup of coffee ☕️
-
-## 🔗 **Useful links**
-
-- [iExec Documentation](https://docs.iex.ec/)
-- [iExec Protocol documentation](https://protocol.docs.iex.ec/)
-- [iExec DevTools documentation](https://tools.docs.iex.ec/)
-- [iExec Website](https://iex.ec/)
-- [iExec GitHub](https://github.com/iExecBlockchainComputing)
-- [iExec Twitter](https://twitter.com/iEx_ec)

@@ -1,9 +1,9 @@
 # 🛡️Protect and manage data
 
-Ok just for a quick reminder, we are following the journey of a scientist who
-wants to protect, compute or monetize his climate data. In the previous chapter,
-we introduced the iExec stack and its main key components. Now, we will show you
-how to protect your data with our superhero **DataProtector**.
+Okay, if you’re here, it means you’ve just created and deployed your first iExec
+application. I think you’re now at the step where you need your data to be
+computed securely. That’s why we created DataProtector, a tool that will help
+you protect and manage your data in a secure way.
 
 ## 🧩 DataProtector
 
@@ -68,6 +68,29 @@ Ok let's explain step by step
 6. The protected data address was returned to you, linking it to your wallet
    address.
 
-## 🧩 OK Great i have a protected Data..and what now ?
+## 🧩 The Dapp integration
+
+Decentralized confidential computing might sound complex, but we've worked hard
+to make it simple and accessible through our developer tools. Our tools capture
+the essence and power of confidential computing and blockchain technology,
+abstracting away the complexity. With just a quick **npm/yarn/pnpm install**,
+our scientist can integrate these powerful features in his Dapp and then be able
+to protect, manage and monetize sensitive data (and you don’t need to be a
+full-stack Web3 developer, that’s amzing).
+
+Here’s an easy-to-follow recipe:
+
+1. **Start with Your App**: Use an existing app or scaffold a new one.
+2. **Install the Developer Tool**: Run the installation command.
+3. **Import and Create an Instance**: Import the tool into your file and create
+   a new instance.
+4. **Call the Methods You Need**: Use the methods provided by the tool.
+5. **That's It!**: You’re done!
+
+Don't just take my word for it—check out our code sandbox! We have ready-to-use
+code snippets that you can try out. With these steps, you’ll be able to offer
+your **users** Dapps with privacy-focused features in no time. Happy coding!
+
+## 🧩 OK Great i have a protected Data..Let's go back on our iExec Apllication console
 
 Now that you have a protected data, you can use it in an iExec application.
