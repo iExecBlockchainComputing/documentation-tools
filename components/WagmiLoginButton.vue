@@ -1,21 +1,15 @@
 <!-- WagmiLoginButton.vue -->
 <template>
-  <div>
-    <button @click="connectWallet">Connect Wallet</button>
-  </div>
+  <template>
+    <w3m-button />
+  </template>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useConnect, useAccount, WagmiConfig } from 'wagmi';
-import { createWeb3Modal } from '@web3modal/wagmi/react';
-import { walletConnectProvider, EIP6963Connector } from '@web3modal/wagmi';
-import { createConfig, configureChains } from 'wagmi';
-import { publicProvider } from 'wagmi/providers/public';
-import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
 import { bellecour } from '../utils/walletConnection'; // Adjust the path if necessary
-
-console.log('bellecour', import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID);
+import { createWeb3Modal } from '@web3modal/wagmi';
+import { reconnect, http, createConfig } from '@wagmi/core';
+import { walletConnect } from '@wagmi/connectors';
 
 // Wagmi Client initialization
 if (!import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID) {
@@ -26,53 +20,28 @@ if (!import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID) {
 
 const projectId = import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID!;
 
-const { chains, publicClient } = configureChains(
-  [bellecour],
-  [walletConnectProvider({ projectId }), publicProvider()]
-);
-
 const metadata = {
-  name: 'Web3Modal',
-  description: 'Web3Modal Example',
+  name: 'iexec-doc',
+  description: 'iExec doc for web3modal Example',
   url: 'https://web3modal.com',
   icons: ['https://avatars.githubusercontent.com/u/37784886'],
 };
 
-const wagmiConfig = createConfig({
-  autoConnect: true,
-  connectors: [
-    new WalletConnectConnector({
-      chains,
-      options: { projectId, showQrModal: false, metadata },
-    }),
-    // Needed to detect Metamask
-    new EIP6963Connector({ chains }),
-  ],
-  publicClient,
+const config = createConfig({
+  chains: [bellecour],
+  transports: {
+    [bellecour.id]: http('https://bellecour.iex.ec'),
+  },
+  connectors: [walletConnect({ projectId, metadata, showQrModal: false })],
 });
 
-// Create modal
-createWeb3Modal({ wagmiConfig, projectId, chains, defaultChain: bellecour });
-
-const { connect } = useConnect({
-  connector: new WalletConnectConnector({
-    chains,
-    options: {
-      projectId,
-      showQrModal: true,
-    },
-  }),
+reconnect(config);
+// 3. Create modal
+createWeb3Modal({
+  wagmiConfig: config,
+  projectId,
+  defaultChain: bellecour,
 });
-
-const { isConnected } = useAccount();
-
-const connectWallet = async () => {
-  try {
-    await connect();
-  } catch (error) {
-    console.error('Failed to connect wallet:', error);
-  }
-};
 </script>
 
 <style scoped>

@@ -39,6 +39,10 @@ export function getSidebar() {
                 link: '/overview/helloWorld/protectAndManageData',
               },
               {
+                text: 'iDapp Tuto',
+                link: '/overview/helloWorld/iDappTuto',
+              },
+              {
                 text: 'Consume data',
                 link: '/overview/helloWorld/consumeData',
               },
