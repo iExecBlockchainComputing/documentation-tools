@@ -11,6 +11,7 @@ system:
 
 - [**Node.js**](https://nodejs.org/en/) version 18 or higher
 - [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
+- [**DockerHub**](https://hub.docker.com/) account
 
 ## Installation
 
@@ -95,10 +96,10 @@ If you want, you can integrate protected data into your iDapp to process private
 data. To do that, you need to start this tutorial again and answer `y` to the
 question `? Would you like to access protected data inside your iDapp?`.
 
-## 🧩 Let's Create Protected Data
+<!-- ## 🧩 Let's Create Protected Data
 
 To create protected data, you need to connect your wallet and create the
-protected data using the provided buttons.
+protected data using the provided buttons. -->
 
 <script setup>
 import { ref } from 'vue';
@@ -120,25 +121,25 @@ const onWalletConnected = (provider) => {
   isWalletConnected.value = true;
 };
 
-const protectData = async () => {
-  try {
-    if (!web3Provider.value) throw new Error('Wallet not connected');
-    if (!contentToProtect.value) throw new Error('Content is empty');
-    isLoadingProtect.value = true;
-    protectError.value = null;
-    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
-    protectedData.value = await dataProtectorCore.protectData({
-      data: {
-        content: contentToProtect.value,
-      },
-    });
-  } catch (error) {
-    protectError.value = error.message;
-    console.error('Error protecting data:', error);
-  } finally {
-    isLoadingProtect.value = false;
-  }
-};
+// const protectData = async () => {
+//   try {
+//     if (!web3Provider.value) throw new Error('Wallet not connected');
+//     if (!contentToProtect.value) throw new Error('Content is empty');
+//     isLoadingProtect.value = true;
+//     protectError.value = null;
+//     const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
+//     protectedData.value = await dataProtectorCore.protectData({
+//       data: {
+//         content: contentToProtect.value,
+//       },
+//     });
+//   } catch (error) {
+//     protectError.value = error.message;
+//     console.error('Error protecting data:', error);
+//   } finally {
+//     isLoadingProtect.value = false;
+//   }
+// };
 
 const grantAccess = async () => {
   try {
@@ -161,9 +162,7 @@ const grantAccess = async () => {
 };
 </script>
 
-Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
-
-<div class="form-container">
+<!-- <div class="form-container">
   <input v-model="contentToProtect" placeholder="Enter content to protect" />
   <button @click="protectData" :disabled="!isWalletConnected || isLoadingProtect">
     {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
@@ -174,9 +173,11 @@ Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
 <div v-if="protectedData">
   <h2>Protected Data Address:</h2>
   <p>{{ protectedData.address }}</p>
-</div>
+</div> -->
 
 ## 🧩 Grant Access to Your iDapp
+
+Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
 
 Authorize your iDapp to access your protected data using the button below.
 

@@ -1,4 +1,4 @@
-# 🛡️Protect and manage data
+# 🛡️Protect and manage data (4 min)
 
 Okay, we talked about confidential computing, data protection, and privacy. Now
 it's time to put all of this into practice. In this chapter, we'll show you how
@@ -85,7 +85,7 @@ Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
 
 <div v-if="protectedData">
   <h2>Cool you've got your first protected Data</h2>
-  <p>Please copy paste the address for the next chapter..psss the address is stored in local storage if you want to delete it</p>
+  <p>Please copy and paste the address for the next chapter (it's stored in local storage if you want to delete it).</p>
   <p>{{ protectedData.address }}</p>
 </div>
 
@@ -137,16 +137,13 @@ input:focus {
 }
 </style>
 
-## 🧩 Under the hood
+## 🧩 What happened Under the hood
 
-We will provide everything you need to know in this "Hello World" to get started
-with DataProtector, but if you jump straight to the code and integrate it into
-you Dapp, you can find the full documentation
-[here](https://beta.tools.docs.iex.ec/tools/dataProtector.html) or follow this
-reallllly complex set up below 😁 please pick some code snippets in our
-[CodeSandbox](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true)
-
-For instance protect a data is as simple as :
+You won't believe how easy it is to protect your data with DataProtector. Just a
+few lines of code, and you're done! you can find the code snippet
+[here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true),
+but basically you just need to call the protectData method from the
+DataProtector SDK.
 
 ```typescript
 const provider = await connector.getProvider();
@@ -157,11 +154,8 @@ const { address: protectedDataAddress } = await dataProtector.protectData({
 });
 ```
 
-Tadaada that's it!
-
-It's always better to understand the car engine before driving it, right? So
-let's take a look under the hood and see what happened when you clicked on the
-button **Protect Data**.
+Here's a quick overview of what happened when you clicked the **Protect Data**
+button:
 
 ![alt text](/assets/hello-world/dataprotector.png)
 
@@ -199,6 +193,24 @@ Don't just take my word for it—check out our code sandbox! We have ready-to-us
 code snippets that you can try out. With these steps, you’ll be able to offer
 your **users** Dapps with privacy-focused features in no time. Happy coding!
 
-## 🧩 OK Great i have a protected Data..Let's go back on our iExec Apllication console
+## 🧩 On it's own, a protected data is useless
 
-Now that you have a protected data, you can use it in an iExec application.
+Yes you read it right, a protected data is useless on its own, it's like a
+locked safe, you need to grant access to someone to be able to use it. In the
+next chapter, we'll show you how to grant access to your protected data to an
+iExec application and a user. Stay tuned!
+
+## 🧩 Keys takeway
+
+- **DataProtector** is a developer tool that ensures data protection and
+  confidentiality, allowing dynamic access and monetization management.
+- **Protected Data** is created by DataProtector and can be used in an iExec
+  application.
+- **Protected Data** is encrypted with a symmetric key and stored on IPFS.
+- **Protected Data** ownership is stored on the blockchain.
+
+## 💫The Next steps
+
+In the next chapter, we’ll dive into **Compute Data** and check how we can
+build, deploy and run an iExec application and process your protected data.
+AMAZING! Grab a cup of tee and let's go!
