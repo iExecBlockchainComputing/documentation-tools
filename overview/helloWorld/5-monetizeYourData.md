@@ -1,9 +1,8 @@
 # Monetize Your Data
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu rhoncus dolor.
-Duis aliquet arcu convallis pretium dapibus. Suspendisse potenti. Nulla vel
-luctus elit. Vivamus luctus odio risus, ut tincidunt velit consequat nec.
-Suspendisse id risus pharetra, luctus felis sed, tristique mauris. Fusce sit
-amet consequat velit. Sed finibus accumsan dapibus. Suspendisse viverra nibh
-cursus lobortis tempor. In non velit sit amet arcu posuere suscipit mattis sed
-velit. Aliquam erat volutpat. Curabitur nec tempus turpis.
+One of the coolest features of our dev tools is that they allow you to monetize
+your digital assets. For example, if you have a bunch of sensitive climate data,
+you can monetize it by lending it for computing or selling it directly.
+
+Here we will show you how to monetize your data using the the monetization
+add-on of the DataProtector SDK.
