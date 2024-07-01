@@ -33,10 +33,12 @@ with our smart contract called POCO (Proof of Contribution). This smart contract
 acts as a band leader, creating synergy between the power of confidential
 computing and the transparency/immutability of the blockchain.
 
-<div style="background-color:rgba(216,240,2501);padding:10px; margin: 10px 0px 10px; border-radius:5px; color:black">
-Wow! Wow! <span style="font-weight: bold">Key Word alert!!!</span> When you'll see this 🚨, it means that we've
+:::info
+
+Wow! Wow! **Key Word alert!!!** When you'll see this 🚨, it means that we've
 introduced a new concept that needs to be explained.
-</div>
+
+:::
 
 🚨 **Smart Contract** : A smart contract is a piece of code on the blockchain
 that automatically performs tasks and enforces agreements without needing a
@@ -77,10 +79,12 @@ One of the coolest features of our dev tools is that they allow you to monetize
 your digital assets. For example, if you have a bunch of sensitive climate data,
 you can monetize it by lending it for computing or selling it directly.
 
-<div style="background-color:rgba(216,240,2501);padding:10px; margin: 10px 0px 10px; border-radius:10px; color:black">
-Okay, I think it's time to reveal the name of the tool that will enable all
-the key features mentioned above. Drum roll, please.... <span style="font-weight: bold">DATAPROTECTOR</span>.
-</div>
+::: info
+
+Okay, I think it's time to reveal the name of the tool that will enable all the
+key features mentioned above. Drum roll, please.... **DATAPROTECTOR**.
+
+:::
 
 ## 🧩 The Developer tools
 

@@ -31,8 +31,8 @@ export function getSidebar() {
                 link: '/overview/helloWorld/1-hello',
               },
               {
-                text: 'Key Concepts',
-                link: '/overview/helloWorld/2-keyConcepts',
+                text: 'Overview',
+                link: '/overview/helloWorld/2-overview',
               },
               {
                 text: 'iExec Application',

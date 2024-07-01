@@ -43,12 +43,6 @@ Tadaada that's it!
 
 ## 🧩 Let's create a protected Data
 
-<script setup>
-import MetamaskButton from '../../components/MetamaskButton.vue'
-</script>
-
-<MetamaskButton />
-
 ## 🧩 Under the hood
 
 It's always better to understand the car engine before driving it, right? So
