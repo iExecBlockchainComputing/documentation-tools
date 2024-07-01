@@ -35,12 +35,12 @@ export function getSidebar() {
                 link: '/overview/helloWorld/2-overview',
               },
               {
-                text: 'iExec Application',
-                link: '/overview/helloWorld/3-iexecApplication',
+                text: 'Protect and manage data',
+                link: '/overview/helloWorld/3-protectAndManageData',
               },
               {
-                text: 'Protect and manage data',
-                link: '/overview/helloWorld/4-protectAndManageData',
+                text: 'iExec Application',
+                link: '/overview/helloWorld/4-iexecApplication',
               },
               {
                 text: 'Monetize your data',

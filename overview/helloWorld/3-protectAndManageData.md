@@ -1,14 +1,13 @@
 # 🛡️Protect and manage data
 
-Okay, if you’re here, it means you’ve just created and deployed your first iExec
-application. I think you’re now at the step where you need your data to be
-computed securely. That’s why we created DataProtector, a tool that will help
-you protect and manage your data in a secure way.
+Okay, we talked about confidential computing, data protection, and privacy. Now
+it's time to put all of this into practice. In this chapter, we'll show you how
+to protect and manage your data with our developer tool, **DataProtector**.
 
 ## 🧩 DataProtector
 
-DataProtector is our main developer tool cause it allow to create the
-fundationals bricks the protected data, protected data that can be used in an
+DataProtector is one of the most important of our tools, it enable the creation
+to create of protected data, protected data that can be used by a user in an
 iExec application.
 
 - **Data Privacy and Security** : Utilizes end-to-end encryption to ensure the
@@ -20,6 +19,125 @@ iExec application.
 
 - **Seamless dApp Integration** : Features an SDK for easy integration into a
   DApp, enhancing functionality and user experience.
+
+## 🧩 Let's create a protected Data
+
+<script setup>
+import { ref, watch } from 'vue';
+import { IExecDataProtectorCore } from '@iexec/dataprotector';
+import MetamaskButton from '../../components/MetamaskButton.vue';
+
+const web3Provider = ref(null);
+const isWalletConnected = ref(false);
+const protectedData = ref(localStorage.getItem('protectedDataAddress') ? { address: localStorage.getItem('protectedDataAddress') } : null);
+const authorizedApp = ref('');
+const contentToProtect = ref('');
+const isLoadingProtect = ref(false);
+const isLoadingGrant = ref(false);
+const protectError = ref(null);
+const grantError = ref(null);
+
+
+const onWalletConnected = (provider) => {
+  web3Provider.value = provider;
+  isWalletConnected.value = true;
+};
+
+const protectData = async () => {
+  try {
+    if (!web3Provider.value) throw new Error('Wallet not connected');
+    if (!contentToProtect.value) throw new Error('Content is empty');
+    isLoadingProtect.value = true;
+    protectError.value = null;
+    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
+    protectedData.value = await dataProtectorCore.protectData({
+      data: {
+        content: contentToProtect.value,
+      },
+    });
+  } catch (error) {
+    protectError.value = error.message;
+    console.error('Error protecting data:', error);
+  } finally {
+    isLoadingProtect.value = false;
+  }
+};
+
+// Watch the protectedData and save the address to local storage
+watch(protectedData, (newValue) => {
+  if (newValue) {
+    localStorage.setItem('protectedDataAddress', newValue.address);
+  }
+});
+
+
+</script>
+
+Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
+
+<div class="form-container">
+  <input v-model="contentToProtect" placeholder="Enter content to protect" />
+  <button @click="protectData" :disabled="!isWalletConnected || isLoadingProtect">
+    {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
+  </button>
+  <div v-if="protectError" class="error">{{ protectError }}</div>
+</div>
+
+<div v-if="protectedData">
+  <h2>Cool you've got your first protected Data</h2>
+  <p>Please copy paste the address for the next chapter..psss the address is stored in local storage if you want to delete it</p>
+  <p>{{ protectedData.address }}</p>
+</div>
+
+<style scoped>
+button {
+  background-color: #fcd15a;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e3b94d;
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.form-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #fcd15a;
+}
+
+.error {
+  color: white;
+  background-color: red;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+</style>
+
+## 🧩 Under the hood
 
 We will provide everything you need to know in this "Hello World" to get started
 with DataProtector, but if you jump straight to the code and integrate it into
@@ -40,10 +158,6 @@ const { address: protectedDataAddress } = await dataProtector.protectData({
 ```
 
 Tadaada that's it!
-
-## 🧩 Let's create a protected Data
-
-## 🧩 Under the hood
 
 It's always better to understand the car engine before driving it, right? So
 let's take a look under the hood and see what happened when you clicked on the

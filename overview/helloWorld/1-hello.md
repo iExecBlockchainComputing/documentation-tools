@@ -19,17 +19,16 @@ for all 5 chapters.
 Through a use case, we'll introduce you to the **iExec stack** and its main key
 components.
 
-### **Chapter 2:** iExec Application
+### **Chapter 2:** Your Data, Your Rules
 
-You will learn how to build, deploy, and run an application in a trusted
-execution environment.
+You'll learn how to protect and manage your data with our developer tool.
 
-### **Chapter 3:** How to Protect Your Data with our developer tool
+### **Chapter 3:** Compute Data
 
-We'll show you how to protect and compute your data with our
-superhero **DataProtector**.
+We'll show you how to build, deploy and run an iExec application and process
+your protected data.
 
-### **Chapter 4:** Exploring Advanced Data Monetization Features
+### **Chapter 4:** Monetize Your Data
 
 We'll show you all the monetization features you can use with your protected
 data.
@@ -54,4 +53,7 @@ Here is what you will need to complete this "Hello World" Journey
 - An Ethereum wallet for the chapter two, you can create one
   [here](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?utm_source=google.com&pli=1)
   with Metamask
-- A cup of coffee ☕️
+- A code editor (VSCode, Sublime Text, etc.)
+- Node.js installed on your machine (18 or higher)
+- A Dockerhub account
+- A cup of coffee ☕️(optional but recommended)
