@@ -52,8 +52,9 @@ const protectData = async () => {
     const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
     protectedData.value = await dataProtectorCore.protectData({
       data: {
-        content: contentToProtect.value,
+        content: contentToProtect.value,  
       },
+      name: 'helloworld',
     });
   } catch (error) {
     protectError.value = error.message;
