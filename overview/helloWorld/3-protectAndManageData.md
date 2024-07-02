@@ -37,7 +37,6 @@ const isLoadingGrant = ref(false);
 const protectError = ref(null);
 const grantError = ref(null);
 
-
 const onWalletConnected = (provider) => {
   web3Provider.value = provider;
   isWalletConnected.value = true;
@@ -49,7 +48,11 @@ const protectData = async () => {
     if (!contentToProtect.value) throw new Error('Content is empty');
     isLoadingProtect.value = true;
     protectError.value = null;
-    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
+    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value,{
+    iexecOptions: {
+      smsURL: "https://sms.scone-debug.v8-bellecour.iex.ec",
+    },
+  });
     protectedData.value = await dataProtectorCore.protectData({
       data: {
         content: contentToProtect.value,  
@@ -70,7 +73,6 @@ watch(protectedData, (newValue) => {
     localStorage.setItem('protectedDataAddress', newValue.address);
   }
 });
-
 
 </script>
 
