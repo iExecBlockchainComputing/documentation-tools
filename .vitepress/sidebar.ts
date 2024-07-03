@@ -330,10 +330,10 @@ export function getSidebar() {
                 text: 'fetchUserContacts',
                 link: '/tools/web3telegram/methods/fetchUserContacts',
               },
-              // {
-              //   text: 'sendEmail',
-              //   link: '/tools/web3mail/methods/sendEmail',
-              // },
+              {
+                text: 'sendTelegram',
+                link: '/tools/web3telegram/methods/sendTelegram',
+              },
             ],
           },
           {
