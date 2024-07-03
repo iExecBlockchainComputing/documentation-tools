@@ -1,4 +1,4 @@
-name: preview-ci
+name: preview-hello-world
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -7,7 +7,7 @@ env:
 on:
   push:
     branches:
-      - v2-greg
+      - v2-hello-world
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -30,10 +30,7 @@ jobs:
           npm -v
           npm ci --no-fund
 
-      - name: Check Prettier
-        run: npm run check-format
-
-      - name: Vercel deploy to preview-greg
+      - name: Vercel deploy to preview-hello-world
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
