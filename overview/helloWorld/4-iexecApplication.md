@@ -137,6 +137,8 @@ const grantAccess = async () => {
     isLoadingGrant.value = true;
     grantError.value = null;
     const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
+    console.log('dataProtectorCore', dataProtectorCore);
+  
 
      console.log('protectedData.value.address', protectedData.value.address);
      console.log('authorizedApp.value', authorizedApp.value);
