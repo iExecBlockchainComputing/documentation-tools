@@ -5,26 +5,14 @@
   </div>
 
   <div class="form-container">
-    <input
-      v-model="contentToProtect"
-      placeholder="Enter some text to protect"
-    />
+    <input v-model="authorizedApp" placeholder="Enter authorized app address" />
     <button
-      :disabled="!isWalletConnected || isLoadingProtect"
-      @click="protectData"
+      :disabled="!isWalletConnected || isLoadingGrant"
+      @click="grantAccess"
     >
-      {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
+      {{ isLoadingGrant ? 'Processing...' : 'Grant Access' }}
     </button>
-    <div v-if="protectError" class="error">{{ protectError }}</div>
-  </div>
-
-  <div v-if="protectedData">
-    <h2>Cool you've got your first protected Data</h2>
-    <p>
-      Please copy and paste the address for the next chapter (it's stored in
-      local storage if you want to delete it).
-    </p>
-    <p>{{ protectedData.address }}</p>
+    <div v-if="grantError" class="error">{{ grantError }}</div>
   </div>
 </template>
 
@@ -35,50 +23,60 @@ import MetamaskButton from './MetamaskButton.vue';
 
 const web3Provider = ref(null);
 const isWalletConnected = ref(false);
-const protectedData = ref(
-  localStorage.getItem('protectedDataAddress')
+const protectedData = ref(null);
+const authorizedApp = ref('');
+const isLoadingGrant = ref(false);
+const grantError = ref(null);
+
+if (typeof window !== 'undefined') {
+  protectedData.value = localStorage.getItem('protectedDataAddress')
     ? { address: localStorage.getItem('protectedDataAddress') }
-    : null
-);
-const contentToProtect = ref('');
-const isLoadingProtect = ref(false);
-const protectError = ref(null);
+    : null;
+}
 
 const onWalletConnected = (provider) => {
   web3Provider.value = provider;
   isWalletConnected.value = true;
 };
 
-async function protectData() {
+const grantAccess = async () => {
   try {
     if (!web3Provider.value) {
       throw new Error('Wallet not connected');
     }
-    if (!contentToProtect.value) {
-      throw new Error('Content is empty');
+    if (!protectedData?.value?.address) {
+      throw new Error(
+        'Missing protected data address. Go back to the previous page and protect something.'
+      );
     }
-    isLoadingProtect.value = true;
-    protectError.value = null;
+    isLoadingGrant.value = true;
+    grantError.value = null;
     const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value, {
       iexecOptions: {
         smsURL: 'https://sms.scone-debug.v8-bellecour.iex.ec',
       },
     });
-    protectedData.value = await dataProtectorCore.protectData({
-      data: {
-        email: contentToProtect.value,
-      },
-      name: 'helloWorld',
-    });
 
-    localStorage.setItem('protectedDataAddress', protectedData.value.address);
+    console.log('protectedData :', protectedData?.value?.address);
+    console.log('authorizedApp :', authorizedApp.value);
+    console.log(
+      'authorizedUser : ',
+      '0x0000000000000000000000000000000000000000'
+    );
+
+    const grantedAccess = await dataProtectorCore.grantAccess({
+      protectedData: protectedData?.value?.address,
+      authorizedApp: authorizedApp.value,
+      authorizedUser: '0x0000000000000000000000000000000000000000',
+    });
+    console.log('Access granted:', grantedAccess);
   } catch (error) {
-    protectError.value = error.message;
-    console.error('Error protecting data:', error);
+    grantError.value = error.message;
+    console.error('Error granting access:', error);
   } finally {
-    isLoadingProtect.value = false;
+    isLoadingGrant.value = false;
   }
-}
+};
 </script>
 
 <style scoped>

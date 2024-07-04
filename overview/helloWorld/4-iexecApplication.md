@@ -1,3 +1,7 @@
+<script setup>
+import GrantAccess from '../../components/GrantAccess.vue';
+</script>
+
 # Build Your iDapp
 
 This guide will help you set up, test, run, and deploy your iDapp using the
@@ -105,66 +109,6 @@ If you want, you can integrate protected data into your iDapp to process private
 data. To do that, you need to start this tutorial again and answer `y` to the
 question `? Would you like to access protected data inside your iDapp?`.
 
-<!-- ## 🧩 Let's Create Protected Data
-
-To create protected data, you need to connect your wallet and create the
-protected data using the provided buttons. -->
-
-<script setup>
-import { ref, onMounted } from 'vue';
-import { IExecDataProtectorCore } from '@iexec/dataprotector';
-import MetamaskButton from '../../components/MetamaskButton.vue';
-
-const web3Provider = ref(null);
-const isWalletConnected = ref(false);
-const protectedData = ref(null);
-const authorizedApp = ref('');
-const contentToProtect = ref('');
-const isLoadingProtect = ref(false);
-const isLoadingGrant = ref(false);
-const protectError = ref(null);
-const grantError = ref(null);
-
-
-if (typeof window !== 'undefined') {
-  protectedData.value = localStorage.getItem('protectedDataAddress') ? { address: localStorage.getItem('protectedDataAddress') } : null;
-}
-
-const onWalletConnected = (provider) => {
-  web3Provider.value = provider;
-  isWalletConnected.value = true;
-};
-
-const grantAccess = async () => {
-  try {
-    if (!web3Provider.value || !protectedData?.value?.address) throw new Error('Missing data');
-    isLoadingGrant.value = true;
-    grantError.value = null;
-    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value,{
-      iexecOptions: {
-        smsURL: "https://sms.scone-debug.v8-bellecour.iex.ec",
-      }
-    });
-
-    console.log('protectedData :', protectedData?.value?.address);
-    console.log('authorizedApp :', authorizedApp.value);
-    console.log('authorizedUser : ', '0x0000000000000000000000000000000000000000');
-
-    const grantedAccess = await dataProtectorCore.grantAccess({
-      protectedData: protectedData?.value?.address,
-      authorizedApp: authorizedApp.value,
-      authorizedUser: '0x0000000000000000000000000000000000000000',
-    });
-    console.log('Access granted:', grantedAccess);
-  } catch (error) {
-    grantError.value = error.message;
-    console.error('Error granting access:', error);
-  } finally {
-    isLoadingGrant.value = false;
-  }
-};
-</script>
-
 ## 🧩 Grant Access to Your iDapp
 
 What do you mean by "grant access"?, you may ask. Well, it's simple. When you
@@ -178,60 +122,4 @@ below.here is a simple diagram to explain the process:
 
 ![alt text](/assets/hello-world/process.png)
 
-Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
-
-<div class="form-container">
-  <input v-model="authorizedApp" placeholder="Enter authorized app address" />
-  <button @click="grantAccess" :disabled="isLoadingGrant">
-    {{ isLoadingGrant ? 'Processing...' : 'Grant Access' }}
-  </button>
-  <div v-if="grantError" class="error">{{ grantError }}</div>
-</div>
-
-<style scoped>
-button {
-  background-color: #fcd15a;
-  color: white;
-  padding: 8px 16px;
-  font-size: 14px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #e3b94d;
-}
-
-button:disabled {
-  background-color: #888;
-  cursor: not-allowed;
-}
-
-.form-container {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input {
-  padding: 8px 16px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-}
-
-input:focus {
-  border-color: #fcd15a;
-}
-
-.error {
-  color: white;
-  background-color: red;
-  padding: 8px;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-</style>
+<GrantAccess />
