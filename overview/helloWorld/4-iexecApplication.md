@@ -125,25 +125,25 @@ const onWalletConnected = (provider) => {
   isWalletConnected.value = true;
 };
 
-// const protectData = async () => {
-//   try {
-//     if (!web3Provider.value) throw new Error('Wallet not connected');
-//     if (!contentToProtect.value) throw new Error('Content is empty');
-//     isLoadingProtect.value = true;
-//     protectError.value = null;
-//     const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
-//     protectedData.value = await dataProtectorCore.protectData({
-//       data: {
-//         content: contentToProtect.value,
-//       },
-//     });
-//   } catch (error) {
-//     protectError.value = error.message;
-//     console.error('Error protecting data:', error);
-//   } finally {
-//     isLoadingProtect.value = false;
-//   }
-// };
+const protectData = async () => {
+  try {
+    if (!web3Provider.value) throw new Error('Wallet not connected');
+    if (!contentToProtect.value) throw new Error('Content is empty');
+    isLoadingProtect.value = true;
+    protectError.value = null;
+    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
+    protectedData.value = await dataProtectorCore.protectData({
+      data: {
+        content: contentToProtect.value,
+      },
+    });
+  } catch (error) {
+    protectError.value = error.message;
+    console.error('Error protecting data:', error);
+  } finally {
+    isLoadingProtect.value = false;
+  }
+};
 
 const grantAccess = async () => {
   try {
