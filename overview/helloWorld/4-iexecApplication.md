@@ -120,30 +120,29 @@ const isLoadingGrant = ref(false);
 const protectError = ref(null);
 const grantError = ref(null);
 
-console.log('protectedData', protectedData.value.address);
 const onWalletConnected = (provider) => {
   web3Provider.value = provider;
   isWalletConnected.value = true;
 };
 
-
-
 const grantAccess = async () => {
 
   try {
-    if (!web3Provider.value || !protectedData.value.address) throw new Error('Missing data');
+    if (!web3Provider.value || !protectedData?.value?.address) throw new Error('Missing data');
     isLoadingGrant.value = true;
     grantError.value = null;
-    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
-    console.log('dataProtectorCore', dataProtectorCore);
+    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value,{
+      iexecOptions: {
+        smsURL: "https://sms.scone-debug.v8-bellecour.iex.ec",
+      }
+    });
   
-
-     console.log('protectedData.value.address', protectedData.value.address);
-     console.log('authorizedApp.value', authorizedApp.value);
-     console.log('authorizedUser', '0x')
+     console.log('protectedData :', protectedData?.value?.address);
+     console.log('authorizedApp :', authorizedApp.value);
+     console.log('authorizedUser : ', '0x0000000000000000000000000000000000000000')
 
     const grantedAccess = await dataProtectorCore.grantAccess({
-      protectedData: protectedData.value.address,
+      protectedData: protectedData?.value?.address,
       authorizedApp: authorizedApp.value,
       authorizedUser: '0x0000000000000000000000000000000000000000',
     });
@@ -156,19 +155,6 @@ const grantAccess = async () => {
   }
 };
 </script>
-
-<!-- <div class="form-container">
-  <input v-model="contentToProtect" placeholder="Enter content to protect" />
-  <button @click="protectData" :disabled="!isWalletConnected || isLoadingProtect">
-    {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
-  </button>
-  <div v-if="protectError" class="error">{{ protectError }}</div>
-</div>
-
-<div v-if="protectedData">
-  <h2>Protected Data Address:</h2>
-  <p>{{ protectedData.address }}</p>
-</div> -->
 
 ## 🧩 Grant Access to Your iDapp
 
