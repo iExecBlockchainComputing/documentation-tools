@@ -2,7 +2,9 @@
 import ProtectData from '../../components/ProtectData.vue';
 </script>
 
-# 🛡️Protect and manage data (6 min)
+# 🛡️Protect and manage data
+
+> Reading 🕒 6 mins
 
 We talked about **iExec Protocol**, **confidential computing**, **Privacy**. The
 link between all of this is **Data**, more specifically **Protected Data**.

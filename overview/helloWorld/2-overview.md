@@ -1,4 +1,6 @@
-# 🧐 iExec Overview (4 mins)
+# 🧐 iExec Overview
+
+> Reading 🕒 4 mins
 
 Great, intro is done, now let's dive into the key concepts. What are the main
 components of the iExec stack?
@@ -96,4 +98,4 @@ our **Developer’s Tools**.
 
 They capture the essence and power of confidential computing and blockchain
 technology, abstracting away the complexity. Drum roll 🥁 ... the devtool we are
-going to discover is **DataProtector**.
+going to discover is **DataProtector**.🚀

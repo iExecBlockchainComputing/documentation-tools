@@ -1,10 +1,12 @@
-<script setup>
-import GrantAccess from '../../components/GrantAccess.vue';
-</script>
+# Build Your iExec App
 
-# Build Your iDapp
+> Reading 🕒 10 mins
 
-This guide will help you set up, test, run, and deploy your iDapp using the
+That's it! You've protected your data and now you're ready to build your iExec
+App, application that can run in a trusted execution environment (TEE) and
+process protected data.
+
+This guide will help you set up, test, run, and deploy your iExec App using the
 `idapp-cli` tool. Follow the instructions carefully for a smooth development
 experience.
 
@@ -109,17 +111,24 @@ If you want, you can integrate protected data into your iDapp to process private
 data. To do that, you need to start this tutorial again and answer `y` to the
 question `? Would you like to access protected data inside your iDapp?`.
 
-## 🧩 Grant Access to Your iDapp
+In a few minutes, you will have your iExec App able to run in a trusted
+execution environment and process protected data that's amzing right?
 
-What do you mean by "grant access"?, you may ask. Well, it's simple. When you
-protect your data, you can authorize users and specific applications to access
-it. This is where you grant access to your iDapp. Like that an authorized user
-will be able to use an authorized app to access your protected data and compute
-it.
+## 🧩 Keys takeway
 
-Authorize your iExec Application to access your protected data using the button
-below.here is a simple diagram to explain the process:
+- **iExec App** is an application that can run in a trusted execution
+  environment (TEE) and process protected data.
+- **idapp-cli** is a command-line tool that helps you build, test, and deploy
+  your iExec App.
+- **Docker** is a tool that allows you to run your iExec App in a containerized
+  environment.
+- **Protected Data** can be integrated into your iExec App to process private
+  data.
+- **iExec App** can be deployed on the iExec protocol to run in a trusted
+  execution environment.
 
-![alt text](/assets/hello-world/process.png)
+## 💫 Next steps
 
-<GrantAccess />
+We have **protected data**, and we have an **iExec App**. What's next? Now we
+need to authorize our **iExec App** and a **user** to access our protected data.
+Let's do it in the next chapter.🚀

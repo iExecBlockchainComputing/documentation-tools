@@ -39,12 +39,12 @@ export function getSidebar() {
                 link: '/overview/helloWorld/3-protectData',
               },
               {
-                text: 'iExec Application',
-                link: '/overview/helloWorld/4-iexecApplication',
+                text: 'Use protected data',
+                link: '/overview/helloWorld/4-useProtectedData',
               },
               {
-                text: 'Monetize your data',
-                link: '/overview/helloWorld/5-monetizeYourData',
+                text: 'Manage data access',
+                link: '/overview/helloWorld/5-manageDataAccess',
               },
               {
                 text: 'Surprise!',
