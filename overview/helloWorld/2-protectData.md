@@ -45,7 +45,7 @@ few lines of code, and you're done!
 
 you can find the code snippet
 [here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true),
-but basically you just need to call the protectData method from the
+but basically you just need to call the `protectData` method from the
 **DataProtector SDK**.
 
 ```typescript
