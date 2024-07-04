@@ -34,7 +34,7 @@ idapp init
 
 You will be prompted with the following message:
 
-```sh
+```
  ___ ____    _    ____  ____
  |_ _|  _ \  / \  |  _ \|  _ \
   | || | | |/ _ \ | |_) | |_) |
@@ -49,16 +49,19 @@ You will be prompted with the following message:
 
 :::tip
 
-Answer `n` to the question
+Answer `no` to the last question
 `? Would you like to access protected data inside your iDapp?`. We will cover
 integrating protected data into your iDapp later.
 
 :::
 
+A new folder was created, it contains a very simple Node.js application, with
+the main code being located in `app.js`.
+
 ## Test Your iDapp
 
-To test your iDapp, use the `idapp test` command. This command runs your iDapp
-to ensure that your application is functioning correctly.
+To test your iDapp, use the `idapp test` command. This command will invoke your
+locally installed Node.js and run the `app.js` file.
 
 ### Using Parameters
 
@@ -71,8 +74,9 @@ idapp test --param <your-input>
 
 ### Using Docker
 
-For a more realistic environment, you can run your iDapp using Docker. This
-helps in creating an environment that closely mimics production settings.
+In the end, an iDapp will be run by an iExec worker which needs a Docker image
+as input. So for a more realistic test, you can run your iDapp using your local
+Docker daemon.
 
 ```sh
 idapp run --docker

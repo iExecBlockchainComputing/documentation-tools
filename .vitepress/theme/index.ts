@@ -5,7 +5,7 @@ import type { EnhanceAppContext } from 'vitepress';
 
 import './style.css';
 
-import WagmiLoginButton from '../../components/WagmiLoginButton.vue'; // Adjust the path if necessary
+import WagmiLoginButton from '../../components/WagmiLoginButton.vue';
 
 export default {
   extends: Theme,
