@@ -7,8 +7,8 @@ App, application that can run in a trusted execution environment (TEE) and
 process protected data.
 
 This guide will help you set up, test, run, and deploy your iExec App using the
-`idapp-cli` tool. Follow the instructions carefully for a smooth development
-experience.
+[`idapp-cli`](https://github.com/iExecBlockchainComputing/idapp/blob/main/cli/README.md)
+tool. Follow the instructions carefully for a smooth development experience.
 
 ## Prerequisites
 
