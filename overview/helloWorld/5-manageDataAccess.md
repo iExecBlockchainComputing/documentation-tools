@@ -57,10 +57,26 @@ As you can see in the code snippet, we used three parameters:
 
 You're now ready to run your iExec Application and process your protected data.
 By running the command below, you will be able to run your iExec Application in
-a trusted execution environment and process your protected data.
+a trusted execution environment and process the protected data.
 
 ```sh
 idapp run <my-idapp-address> [--protectedData <protectedData-address>] [--debug | --prod]
 ```
 
 Tadada! 🎉
+
+## 🧩 Monetize you data
+
+We just finished the first episode of our journey, and you're now able to
+integrate DataProtector SDK into you dApp, protect your data, grant access to
+users and iExec Applications, and compute your data. But what if you want to
+monetize your data?
+
+The DataProtector SDK has a monetization feature that allows you to set a price
+for your data access. You can even create protected data collections and set up
+renting or subscription plans.
+
+If you are too impatient to wait for the next chapter, you can check out the
+[DataProtector Sharing](http://localhost:5173/tools/dataProtector/dataProtectorSharing.html)
+and a live use case called
+[Content Creator](https://demo.iex.ec/content-creator/).
