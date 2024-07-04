@@ -112,7 +112,7 @@ import MetamaskButton from '../../components/MetamaskButton.vue';
 
 const web3Provider = ref(null);
 const isWalletConnected = ref(false);
-const protectedData = ref(null);
+const protectedData = ref(localStorage.getItem('protectedDataAddress') ? { address: localStorage.getItem('protectedDataAddress') } : null);
 const authorizedApp = ref('');
 const contentToProtect = ref('');
 const isLoadingProtect = ref(false);
@@ -120,37 +120,28 @@ const isLoadingGrant = ref(false);
 const protectError = ref(null);
 const grantError = ref(null);
 
+console.log('protectedData', protectedData.value.address);
 const onWalletConnected = (provider) => {
   web3Provider.value = provider;
   isWalletConnected.value = true;
 };
 
-const protectData = async () => {
-  try {
-    if (!web3Provider.value) throw new Error('Wallet not connected');
-    if (!contentToProtect.value) throw new Error('Content is empty');
-    isLoadingProtect.value = true;
-    protectError.value = null;
-    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
-    protectedData.value = await dataProtectorCore.protectData({
-      data: {
-        content: contentToProtect.value,
-      },
-    });
-  } catch (error) {
-    protectError.value = error.message;
-    console.error('Error protecting data:', error);
-  } finally {
-    isLoadingProtect.value = false;
-  }
-};
+
+
+
 
 const grantAccess = async () => {
+
   try {
-    if (!web3Provider.value || !protectedData.value) throw new Error('Missing data');
+    if (!web3Provider.value || !protectedData.value.address) throw new Error('Missing data');
     isLoadingGrant.value = true;
     grantError.value = null;
     const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
+
+     console.log('protectedData.value.address', protectedData.value.address);
+     console.log('authorizedApp.value', authorizedApp.value);
+     console.log('authorizedUser', '0x')
+
     const grantedAccess = await dataProtectorCore.grantAccess({
       protectedData: protectedData.value.address,
       authorizedApp: authorizedApp.value,
