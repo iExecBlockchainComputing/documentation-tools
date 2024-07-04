@@ -11,7 +11,9 @@ system:
 
 - [**Node.js**](https://nodejs.org/en/) version 18 or higher
 - [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
-- [**DockerHub**](https://hub.docker.com/) account
+- [**Docker**](https://hub.docker.com/) have docker on your computer
+- [**DockerHub**](https://docs.docker.com/engine/install/) have a dockerhub
+  account
 
 ## Installation
 
@@ -19,7 +21,10 @@ First, you need to install the `idapp-cli` package. Open your terminal and run
 the following command:
 
 ```sh
-npm install @iexec/idapp-cli
+git clone https://github.com/iExecBlockchainComputing/idapp.git
+cd idapp/cli
+npm ci
+npm i -g .
 ```
 
 ## Initialize Framework
