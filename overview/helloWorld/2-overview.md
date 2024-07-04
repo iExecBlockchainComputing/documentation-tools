@@ -33,20 +33,18 @@ with our smart contract called POCO (Proof of Contribution). This smart contract
 acts as a band leader, creating synergy between the power of confidential
 computing and the transparency/immutability of the blockchain.
 
-:::tip Wow Key Word alert! When you'll see this 🚨,
+:::tip 🚨
 
-it means that we've introduced a new concept that needs to be explained.
-
-🚨 **Smart Contract** : A smart contract is a piece of code on the blockchain
-that automatically performs tasks and enforces agreements without needing a
+**Smart Contract** : A smart contract is a piece of code on the blockchain that
+automatically performs tasks and enforces agreements without needing a
 middleman.
 
-🚨**TEE** : Think of TEEs (Trusted Execution Environment) as secure zones in a
+**TEE** : Think of TEEs (Trusted Execution Environment) as secure zones in a
 computing environment where your sensitive data can be processed safely, without
 being stored, see or altered by anyone even if the data are computed on a
 malicious computer far, far away in the galaxy (decentralized network)
 
-🚨**Confidential computing** : We need a dedicated section (spoiler alert, just
+**Confidential computing** : We need a dedicated section (spoiler alert, just
 below) for confidential computing, as it is one of the key features powered by
 our protocol.
 
