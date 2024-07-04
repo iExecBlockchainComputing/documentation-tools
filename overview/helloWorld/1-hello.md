@@ -14,36 +14,32 @@ minutes for all 5 chapters**.
 
 ## 🤓 What will you learn during this journey?
 
-### **1 -** iExec Stack Overview
-
-Through a use case, we'll introduce you to the **iExec stack** and its main key
-components.
-
-### **2 -** Your Data, Your Rules
-
-You'll learn how to protect and manage your data with our developer tool.
-
-### **3 -** Compute Data
-
-We'll show you how to build, deploy and run an iExec application and process
-your protected data.
-
-### **4 -** Monetize Your Data
-
-We'll show you all the monetization features you can use with your protected
-data.
-
-### **Secret Chapter:** Pssst...
-
-If you’ve made it through every chapter, protected your data, and run an iExec
-application, a little surprise awaits you! 🌟 What could it be? Only one way to
-find out! …okay, you can click directly on Secret Chapter, but it’s not as fun
-😉
-
-## 😬 OMG so many new words!
-
-In this journey, we'll use some specific terms related to confidential computing
-or other concepts.
+<div class="grid helloLink">
+  <a href="./stack-overview" class="card helloLink">
+    <h3>📚 1 - iExec Stack Overview</h3>
+    <p>Introduce the iExec stack and its main components through a use case.</p>
+  </a>
+  
+  <a href="./data-protection" class="card">
+    <h3>🔒 2 - Your Data, Your Rules</h3>
+    <p>Learn how to protect and manage your data with our developer tools.</p>
+  </a>
+  
+  <a href="./compute-data" class="card">
+    <h3>💻 3 - Compute Data</h3>
+    <p>Build, deploy, and run an iExec application to process your protected data.</p>
+  </a>
+  
+  <a href="./monetize-data" class="card">
+    <h3>💰 4 - Monetize Your Data</h3>
+    <p>Explore monetization features for your protected data.</p>
+  </a>
+  
+  <a href="./secret-chapter" class="card">
+    <h3>🌟 Secret Chapter: Pssst...</h3>
+    <p>Complete all chapters for a surprise! What could it be?</p>
+  </a>
+</div>
 
 ::: tip If you see this 🚨
 
@@ -64,3 +60,40 @@ Here is what you will need to complete this "Hello World" Journey
 - [**Node.js**](https://nodejs.org/en/) version 18 or higher
 - [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 - [**DockerHub**](https://hub.docker.com/) account
+
+<style>
+a {
+  text-decoration: none;
+  color: #0070f3;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card h3, .card p {
+  color: rgba(60, 60, 67);
+  text-decoration: none;
+}
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.vp-doc a{
+  text-decoration: none;
+}
+
+</style>
