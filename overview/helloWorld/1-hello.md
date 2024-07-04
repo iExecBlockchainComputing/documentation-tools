@@ -14,8 +14,8 @@ minutes for all 5 chapters**.
 
 ## 🤓 What will you learn during this journey?
 
-<div class="grid helloLink">
-  <a href="./stack-overview" class="card helloLink">
+<div class="grid">
+  <a href="./stack-overview" class="card">
     <h3>📚 1 - iExec Stack Overview</h3>
     <p>Introduce the iExec stack and its main components through a use case.</p>
   </a>
@@ -87,6 +87,11 @@ a {
   color: rgba(60, 60, 67);
   text-decoration: none;
 }
+
+.card, p {
+  font-size: 16px;
+}
+
 .card:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
