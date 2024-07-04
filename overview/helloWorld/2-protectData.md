@@ -2,7 +2,7 @@
 import ProtectData from '../../components/ProtectData.vue';
 </script>
 
-# 🛡️Protect and manage data
+# 🛡️Let's protect data
 
 > Reading 🕒 6 mins
 
