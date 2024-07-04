@@ -35,8 +35,8 @@ export function getSidebar() {
                 link: '/overview/helloWorld/2-overview',
               },
               {
-                text: 'Protect and manage data',
-                link: '/overview/helloWorld/3-protectAndManageData',
+                text: 'Protect data',
+                link: '/overview/helloWorld/3-protectData',
               },
               {
                 text: 'iExec Application',
