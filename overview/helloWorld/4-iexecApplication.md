@@ -111,13 +111,13 @@ To create protected data, you need to connect your wallet and create the
 protected data using the provided buttons. -->
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
 import MetamaskButton from '../../components/MetamaskButton.vue';
 
 const web3Provider = ref(null);
 const isWalletConnected = ref(false);
-const protectedData = ref(localStorage.getItem('protectedDataAddress') ? { address: localStorage.getItem('protectedDataAddress') } : null);
+const protectedData = ref(null);
 const authorizedApp = ref('');
 const contentToProtect = ref('');
 const isLoadingProtect = ref(false);
@@ -125,13 +125,17 @@ const isLoadingGrant = ref(false);
 const protectError = ref(null);
 const grantError = ref(null);
 
+
+if (typeof window !== 'undefined') {
+  protectedData.value = localStorage.getItem('protectedDataAddress') ? { address: localStorage.getItem('protectedDataAddress') } : null;
+}
+
 const onWalletConnected = (provider) => {
   web3Provider.value = provider;
   isWalletConnected.value = true;
 };
 
 const grantAccess = async () => {
-
   try {
     if (!web3Provider.value || !protectedData?.value?.address) throw new Error('Missing data');
     isLoadingGrant.value = true;
@@ -141,10 +145,10 @@ const grantAccess = async () => {
         smsURL: "https://sms.scone-debug.v8-bellecour.iex.ec",
       }
     });
-  
-     console.log('protectedData :', protectedData?.value?.address);
-     console.log('authorizedApp :', authorizedApp.value);
-     console.log('authorizedUser : ', '0x0000000000000000000000000000000000000000')
+
+    console.log('protectedData :', protectedData?.value?.address);
+    console.log('authorizedApp :', authorizedApp.value);
+    console.log('authorizedUser : ', '0x0000000000000000000000000000000000000000');
 
     const grantedAccess = await dataProtectorCore.grantAccess({
       protectedData: protectedData?.value?.address,
