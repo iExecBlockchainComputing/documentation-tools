@@ -34,7 +34,7 @@ idapp init
 
 You will be prompted with the following message:
 
-```sh
+```
  ___ ____    _    ____  ____
  |_ _|  _ \  / \  |  _ \|  _ \
   | || | | |/ _ \ | |_) | |_) |
