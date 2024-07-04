@@ -55,9 +55,9 @@ const protectData = async () => {
   });
     protectedData.value = await dataProtectorCore.protectData({
       data: {
-        content: contentToProtect.value,  
+        email: contentToProtect.value,  
       },
-      name: 'helloworld',
+      name: 'helloWorld',
     });
   } catch (error) {
     protectError.value = error.message;
