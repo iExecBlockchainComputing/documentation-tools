@@ -45,7 +45,7 @@ find out! …okay, you can click directly on Secret Chapter, but it’s not as f
 In this journey, we'll use some specific terms related to confidential computing
 or other concepts.
 
-::: tip If you see this 🚨,
+::: tip If you see this 🚨
 
 it means that we've introduced a new concept that needs to be explained.
 
