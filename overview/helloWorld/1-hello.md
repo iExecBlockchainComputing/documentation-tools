@@ -40,7 +40,7 @@ application, a little surprise awaits you! 🌟 What could it be? Only one way t
 find out! …okay, you can click directly on Secret Chapter, but it’s not as fun
 😉
 
-## 😬 OMFG so many new words!
+## 😬 OMG so many new words!
 
 In this journey, we'll use some specific terms related to confidential computing
 or other concepts.
