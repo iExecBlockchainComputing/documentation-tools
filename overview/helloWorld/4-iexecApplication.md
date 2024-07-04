@@ -128,8 +128,6 @@ const onWalletConnected = (provider) => {
 
 
 
-
-
 const grantAccess = async () => {
 
   try {
