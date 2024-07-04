@@ -6,11 +6,12 @@ computing and data privacy.
 
 I'm a developer too, and I know you're probably eager to jump straight into the
 code. Trust me, I'll keep it short and focus on the main concepts. Feel free to
-click on the highlighted words if you want to dive deeper into specific topics.
+click on the highlighted words if you'd like to dive deeper into specific
+topics.
 
-As your cool guide, I'll sum up what we'll learn during this quick journey. You
-can definitely achieve this during a hackathon—it takes approximately **30
-minutes for all 5 chapters**.
+As your guide, I'll sum up what we'll learn during this quick journey.. You can
+definitely achieve this during a hackathon—it takes approximately **30 minutes
+for all 5 chapters**.
 
 ## 🤓 What will you learn during this journey?
 
@@ -54,7 +55,7 @@ you want to jump ahead in the full glossary right now, you can check out
 Here is what you will need to complete this "Hello World" Journey
 
 - [An Ethereum wallet](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?utm_source=google.com&pli=1)
-  with Metamask
+  with MetaMask
 - [A code editor](https://code.visualstudio.com/) (VSCode, Sublime Text, etc.)
 - [**Node.js**](https://nodejs.org/en/) version 18 or higher
 - [**NPM**](https://docs.npmjs.com/) (Node.js package manager)

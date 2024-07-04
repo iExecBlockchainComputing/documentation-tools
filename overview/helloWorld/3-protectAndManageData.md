@@ -4,15 +4,23 @@ import ProtectData from '../../components/ProtectData.vue';
 
 # 🛡️Protect and manage data (4 min)
 
-Okay, we talked about confidential computing, data protection, and privacy. Now
-it's time to put all of this into practice. In this chapter, we'll show you how
-to protect and manage your data with our developer tool, **DataProtector**.
+We talked about **iExec Protocol**, **confidential computing**, **Privacy**. The
+link between all of this is **Data**, more specifically **Protected Data**.
+
+But what is **Protected Data**, it's any kind of data that is securely encrypted
+and processed, ensuring it remains confidential and protected from unauthorized
+access during its entire lifecycle
+
+Now it's time to put all of this into practice. In this chapter, we'll show you
+how to protect and manage your data with our developer tool, **DataProtector**.
 
 ## 🧩 DataProtector
 
-DataProtector is one of the most important of our tools, it enable the creation
-to create of protected data, protected data that can be used by a user in an
-iExec application.
+DataProtector is a devtools built on top of our protocol, it streamlines the
+decentralized confidential computing process, making it easy for developers to
+protect, manage and monetize their data.
+
+Here are some of the key features of DataProtector:
 
 - **Data Privacy and Security** : Utilizes end-to-end encryption to ensure the
   protection and confidentiality of your data, leveraging advanced confidential
