@@ -1,3 +1,7 @@
+<script setup>
+import ProtectData from '../../components/ProtectData.vue';
+</script>
+
 # 🛡️Protect and manage data (4 min)
 
 Okay, we talked about confidential computing, data protection, and privacy. Now
@@ -22,123 +26,7 @@ iExec application.
 
 ## 🧩 Let's create a protected Data
 
-<script setup>
-import { ref, watch } from 'vue';
-import { IExecDataProtectorCore } from '@iexec/dataprotector';
-import MetamaskButton from '../../components/MetamaskButton.vue';
-
-const web3Provider = ref(null);
-const isWalletConnected = ref(false);
-const protectedData = ref(localStorage.getItem('protectedDataAddress') ? { address: localStorage.getItem('protectedDataAddress') } : null);
-const authorizedApp = ref('');
-const contentToProtect = ref('');
-const isLoadingProtect = ref(false);
-const isLoadingGrant = ref(false);
-const protectError = ref(null);
-const grantError = ref(null);
-
-const onWalletConnected = (provider) => {
-  web3Provider.value = provider;
-  isWalletConnected.value = true;
-};
-
-const protectData = async () => {
-  try {
-    if (!web3Provider.value) throw new Error('Wallet not connected');
-    if (!contentToProtect.value) throw new Error('Content is empty');
-    isLoadingProtect.value = true;
-    protectError.value = null;
-    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value,{
-    iexecOptions: {
-      smsURL: "https://sms.scone-debug.v8-bellecour.iex.ec",
-    },
-  });
-    protectedData.value = await dataProtectorCore.protectData({
-      data: {
-        email: contentToProtect.value,  
-      },
-      name: 'helloWorld',
-    });
-  } catch (error) {
-    protectError.value = error.message;
-    console.error('Error protecting data:', error);
-  } finally {
-    isLoadingProtect.value = false;
-  }
-};
-
-// Watch the protectedData and save the address to local storage
-watch(protectedData, (newValue) => {
-  if (newValue) {
-    localStorage.setItem('protectedDataAddress', newValue.address);
-  }
-});
-
-</script>
-
-Connect Your Wallet: <MetamaskButton @connected="onWalletConnected" />
-
-<div class="form-container">
-  <input v-model="contentToProtect" placeholder="Enter content to protect" />
-  <button @click="protectData" :disabled="!isWalletConnected || isLoadingProtect">
-    {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
-  </button>
-  <div v-if="protectError" class="error">{{ protectError }}</div>
-</div>
-
-<div v-if="protectedData">
-  <h2>Cool you've got your first protected Data</h2>
-  <p>Please copy and paste the address for the next chapter (it's stored in local storage if you want to delete it).</p>
-  <p>{{ protectedData.address }}</p>
-</div>
-
-<style scoped>
-button {
-  background-color: #fcd15a;
-  color: white;
-  padding: 8px 16px;
-  font-size: 14px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #e3b94d;
-}
-
-button:disabled {
-  background-color: #888;
-  cursor: not-allowed;
-}
-
-.form-container {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input {
-  padding: 8px 16px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-}
-
-input:focus {
-  border-color: #fcd15a;
-}
-
-.error {
-  color: white;
-  background-color: red;
-  padding: 8px;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-</style>
+<ProtectData />
 
 ## 🧩 What happened Under the hood
 

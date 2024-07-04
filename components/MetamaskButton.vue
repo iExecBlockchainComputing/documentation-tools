@@ -57,25 +57,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 8px 16px;
-  font-size: 14px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-button:disabled {
-  background-color: #888;
-  cursor: not-allowed;
-}
-</style>

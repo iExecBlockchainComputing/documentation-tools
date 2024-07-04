@@ -5,12 +5,9 @@ import type { EnhanceAppContext } from 'vitepress';
 
 import './style.css';
 
-import WagmiLoginButton from '../../components/WagmiLoginButton.vue';
-
 export default {
   extends: Theme,
   enhanceApp({ app }: EnhanceAppContext) {
     app.use(TwoslashFloatingVue as any);
-    app.component('WagmiLoginButton', WagmiLoginButton);
   },
 };
