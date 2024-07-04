@@ -28,27 +28,27 @@ export function getSidebar() {
             items: [
               {
                 text: 'Introduction',
-                link: '/overview/helloWorld/1-hello',
+                link: '/overview/helloWorld/0-hello',
               },
               {
                 text: 'Overview',
-                link: '/overview/helloWorld/2-overview',
+                link: '/overview/helloWorld/1-overview',
               },
               {
                 text: 'Protect data',
-                link: '/overview/helloWorld/3-protectData',
+                link: '/overview/helloWorld/2-protectData',
               },
               {
                 text: 'Use protected data',
-                link: '/overview/helloWorld/4-useProtectedData',
+                link: '/overview/helloWorld/3-useProtectedData',
               },
               {
                 text: 'Manage data access',
-                link: '/overview/helloWorld/5-manageDataAccess',
+                link: '/overview/helloWorld/4-manageDataAccess',
               },
               {
                 text: 'Surprise!',
-                link: '/overview/helloWorld/6-suprise',
+                link: '/overview/helloWorld/5-suprise',
               },
             ],
           },

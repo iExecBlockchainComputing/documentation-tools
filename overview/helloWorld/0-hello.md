@@ -18,27 +18,27 @@ for all 5 chapters**.
 ## 🤓 What will you learn during this journey?
 
 <div class="grid">
-  <a href="./stack-overview" class="card">
+  <a href="./1-overview" class="card">
     <h3>📚 1 - iExec Stack Overview</h3>
     <p>Introduce the iExec stack and its main components through a use case.</p>
   </a>
   
-  <a href="./data-protection" class="card">
-    <h3>🔒 2 - Your Data, Your Rules</h3>
-    <p>Learn how to protect and manage your data with our developer tools.</p>
+  <a href="./2-protectData" class="card">
+    <h3>🔒 2 - Protect Data</h3>
+    <p>Learn how to protect your data with our developer tool.</p>
   </a>
   
-  <a href="./compute-data" class="card">
-    <h3>💻 3 - Compute Data</h3>
+  <a href="./3-useProtectedData" class="card">
+    <h3>💻 3 - Use Protected Data</h3>
     <p>Build, deploy, and run an iExec application to process your protected data.</p>
   </a>
   
-  <a href="./monetize-data" class="card">
-    <h3>💰 4 - Monetize Your Data</h3>
-    <p>Explore monetization features for your protected data.</p>
+  <a href="./4-manageDataAccess" class="card">
+    <h3>💰 4 - Manage Data access</h3>
+    <p>Grant access to your protected data to users and iExec applications.</p>
   </a>
   
-  <a href="./secret-chapter" class="card">
+  <a href="./5-suprise" class="card">
     <h3>🌟 Secret Chapter: Pssst...</h3>
     <p>Complete all chapters for a surprise! What could it be?</p>
   </a>
