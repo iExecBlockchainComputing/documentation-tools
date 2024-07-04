@@ -20,6 +20,7 @@ system:
 - [**Docker**](https://hub.docker.com/) have docker on your computer
 - [**DockerHub**](https://docs.docker.com/engine/install/) have a dockerhub
   account
+- **A private key** from your Ethereum wallet (e.g., MetaMask)
 
 ## Installation
 
@@ -113,6 +114,13 @@ question `? Would you like to access protected data inside your iDapp?`.
 
 In a few minutes, you will have your iExec App able to run in a trusted
 execution environment and process protected data that's amzing right?
+
+::: tip iExec App Address
+
+At the end of this tutorial, you will have the **iExec App address**. don't
+forget to save it for the next chapter. ![alt text](/assets/hello-world/app.png)
+
+:::
 
 ## 🧩 Keys takeway
 
