@@ -4,7 +4,7 @@ import GrantAccess from '../../components/GrantAccess.vue';
 
 # Manage Data Access
 
-> Reading 🕒 4 mins
+> Reading 🕒 6 mins
 
 What do you mean by **grant access**?, you may ask. Well, it's simple. When you
 protect your data, you can authorize users and specific applications to access

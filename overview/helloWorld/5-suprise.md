@@ -1,5 +1,7 @@
 # 🎉 Surprise! 🎉
 
+> Reading 🕒 4 mins
+
 Congrats on making it this far! If you've successfully protect a Data with
 DataProtector and deployed an iExec application.
 
