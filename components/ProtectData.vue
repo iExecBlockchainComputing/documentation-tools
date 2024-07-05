@@ -22,6 +22,17 @@
     <div class="icon-container">
       <i class="checkmark-icon">✓</i>
     </div>
+    <p class="link-text">
+      You can check it
+      <a
+        :href="
+          'https://explorer.iex.ec/bellecour/dataset/' + protectedData.address
+        "
+      >
+        here
+      </a>
+    </p>
+
     <h2>Your data has been protected!</h2>
     <p class="address-label">Your protected data address:</p>
     <p class="address">{{ protectedData.address }}</p>
