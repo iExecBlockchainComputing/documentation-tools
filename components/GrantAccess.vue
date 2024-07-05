@@ -13,6 +13,18 @@
       {{ isLoadingGrant ? 'Processing...' : 'Grant Access' }}
     </button>
     <div v-if="grantError" class="error">{{ grantError }}</div>
+    <div v-if="grantedAccess" class="protected-data-container">
+      <div class="icon-container">
+        <i class="checkmark-icon">✓</i>
+      </div>
+
+      <p class="protected-title">
+        Access has been granted to you and the iExec Application
+      </p>
+      <p class="address-label">
+        You can now use the protected data with the iExec App
+      </p>
+    </div>
   </div>
 </template>
 
