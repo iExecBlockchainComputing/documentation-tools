@@ -33,7 +33,7 @@
       </a>
     </p>
 
-    <h2>Your data has been protected!</h2>
+    <p class="protected-title">Your data has been protected!</p>
     <p class="address-label">Your protected data address:</p>
     <p class="address">{{ protectedData.address }}</p>
   </div>
@@ -162,9 +162,10 @@ input:focus {
   font-size: 18px;
 }
 
-h2 {
+.protected-title {
   color: #4caf50;
   margin-bottom: 10px;
+  font-size: 28px;
 }
 
 .link-text {
