@@ -165,13 +165,6 @@ without a Web3 provider.
 ::: code-group
 
 ```ts twoslash [Singleton Modules]
-declare global {
-  interface Window {
-    ethereum: any;
-  }
-}
-// ---cut---
-
 import {
   IExecDataProtectorSharing,
   IExecDataProtectorCore,

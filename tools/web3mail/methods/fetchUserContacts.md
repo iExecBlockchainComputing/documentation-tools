@@ -15,7 +15,7 @@ const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
 
 const contactsList = await web3mail.fetchUserContacts({
-  userAddress: '0xF048eF3d7E3B33A465E0599E641BB29421f7Df92',
+  userAddress: '0xF048...',
 });
 ```
 
@@ -27,7 +27,7 @@ import { type FetchUserContactsParams } from '@iexec/web3mail';
 
 ### userAddress
 
-`Address`
+`Address | undefined`
 
 The entity for which you wish to obtain the list of contacts.
 
@@ -39,7 +39,35 @@ const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
 
 const contactsList = await web3mail.fetchUserContacts({
-  userAddress: '0xF048eF3d7E3B33A465E0599E641BB29421f7Df92', // [!code focus]
+  userAddress: '0xF048...', // [!code focus]
+});
+```
+
+### isUserStrict
+
+`boolean`
+
+This parameter enables fetching contacts that grant access exclusively to the
+user and no one else.
+
+:::tip
+
+When someone grants access, you can choose to grant access to a specific
+individual (a wallet) or to any users
+(`0x0000000000000000000000000000000000000000`).
+
+:::
+
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
+const contactsList = await web3mail.fetchUserContacts({
+  userAddress: '0xF048...',
+  isUserStrict: true, // [!code focus]
 });
 ```
 
