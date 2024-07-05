@@ -5,10 +5,13 @@
 Congrats on making it this far! If you've successfully protect a Data with
 DataProtector and deployed an iExec application.
 
-It's time to celebrate. Claim your OG NFT using the link below to show off your
-achievement. Plus, you're now eligible for our special raffle exclusively for
-early testers of the Hello World journey. Don’t forget to claim your NFT to join
-in the fun and stand a chance to win!
+It's time to celebrate, the last step to do is :
+
+- Claim your OG NFT using the link below to show off your achievement.
+- Fill in the feedabck form to help us improve the journey.
+
+You're now eligible for our special raffle 300$ exclusively for early testers of
+the Hello World journey.
 
 <div style="text-align: center; margin: 50px 0;">
   <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCH72tgLK1" style="
