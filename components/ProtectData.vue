@@ -18,13 +18,13 @@
     <div v-if="protectError" class="error">{{ protectError }}</div>
   </div>
 
-  <div v-if="protectedData">
-    <h2>Cool you've got your first protected Data</h2>
-    <p>
-      Please copy and paste the address for the next chapter (it's stored in
-      local storage if you want to delete it).
-    </p>
-    <p>{{ protectedData.address }}</p>
+  <div v-if="protectedData" class="protected-data-container">
+    <div class="icon-container">
+      <i class="checkmark-icon">✓</i>
+    </div>
+    <h2>Your data has been protected!</h2>
+    <p class="address-label">Your protected data address:</p>
+    <p class="address">{{ protectedData.address }}</p>
   </div>
 </template>
 
@@ -126,5 +126,55 @@ input:focus {
   padding: 8px;
   margin-top: 10px;
   border-radius: 5px;
+}
+
+.protected-data-container {
+  background-color: #e8f5e9;
+  margin-top: 50px !important;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.icon-container {
+  margin-bottom: 10px;
+}
+
+.checkmark-icon {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+h2 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.link-text {
+  margin-bottom: 15px;
+}
+
+.link-text a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.address-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.address {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+  word-break: break-all;
 }
 </style>
