@@ -8,7 +8,7 @@ DataProtector and deployed an iExec application.
 It's time to celebrate, the last step to do is :
 
 - Claim your OG NFT using the link below to show off your achievement.
-- Fill in the feedabck form to help us improve the journey.
+- Fill in the feedback form to help us improve the journey.
 
 You're now eligible for our special raffle 300$ exclusively for early testers of
 the Hello World journey.
