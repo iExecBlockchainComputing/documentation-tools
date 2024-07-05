@@ -100,7 +100,7 @@ a {
 }
 
 .vp-doc a{
-  text-decoration: none ;
+  text-decoration: none !important;
 }
 
 </style>
