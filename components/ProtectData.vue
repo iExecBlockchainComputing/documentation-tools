@@ -135,7 +135,7 @@ input:focus {
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
