@@ -55,15 +55,14 @@ As you can see in the code snippet, we used three parameters:
 
 ## 🧩 Drum rolls, please! 🥁
 
-You're now ready to run your iExec Application and process your protected data.
-By running the command below, you will be able to run your iExec Application in
-a trusted execution environment and process the protected data.
+You're now ready to run your iExec Application and process your protected data
+in a trusted execution environment by running the command below.
 
 ```sh
 idapp run <my-idapp-address> [--protectedData <protectedData-address>] [--debug | --prod]
 ```
 
-Tadada! 🎉
+Tadada! 🎉, Congratulations you've done it
 
 ## 🧩 Monetize you data
 
