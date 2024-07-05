@@ -110,7 +110,7 @@ paper if you don't have a pen you won't be able to write on it.
 But we need a special pen able to process the protected data, we need an **iExec
 Application**.
 
-:::tip 🚨**iExec Application**
+:::tip 🚨**iExec Application** (we will use the iDapp too in this tutorial)
 
 An iExec application is an application that can run in a trusted execution
 environment (TEE) and process protected data. It takes the protected data as
