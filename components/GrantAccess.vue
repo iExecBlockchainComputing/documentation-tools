@@ -17,13 +17,28 @@
       <div class="icon-container">
         <i class="checkmark-icon">✓</i>
       </div>
-
-      <p class="protected-title">
+      <p class="granted-title">
         Access has been granted to you and the iExec Application
       </p>
-      <p class="address-label">
-        You can now use the protected data with the iExec App
+      <p>You can now use the protected data with the iExec App.</p>
+
+      <p><strong>Protected data:</strong> {{ protectedData.address }}</p>
+      <p><strong>Authorized iExec App:</strong> {{ authorizedApp }}</p>
+      <p>
+        <strong
+          >Authorized user (it means that everybody is allow to use this
+          protected data):</strong
+        >
+        {{ '0x0000000000000000000000000000000000000000' }}
       </p>
+      <p>
+        <strong
+          >Dataset Price (oohh interesting it means that we could set a price to
+          the protected data):</strong
+        >
+        {{ grantedAccess.datasetprice }}
+      </p>
+      <!-- Add more fields as necessary -->
     </div>
   </div>
 </template>
@@ -39,6 +54,7 @@ const protectedData = ref(null);
 const authorizedApp = ref('');
 const isLoadingGrant = ref(false);
 const grantError = ref(null);
+const grantedAccess = ref(null); // Reactive variable to store the granted access data
 
 if (typeof window !== 'undefined') {
   protectedData.value = localStorage.getItem('protectedDataAddress')
@@ -76,12 +92,13 @@ const grantAccess = async () => {
       '0x0000000000000000000000000000000000000000'
     );
 
-    const grantedAccess = await dataProtectorCore.grantAccess({
+    const grantedAccessResult = await dataProtectorCore.grantAccess({
       protectedData: protectedData?.value?.address,
       authorizedApp: authorizedApp.value,
       authorizedUser: '0x0000000000000000000000000000000000000000',
     });
-    console.log('Access granted:', grantedAccess);
+    console.log('Access granted:', grantedAccessResult);
+    grantedAccess.value = grantedAccessResult; // Store the result in the reactive variable
   } catch (error) {
     grantError.value = error.message;
     console.error('Error granting access:', error);
@@ -136,5 +153,56 @@ input:focus {
   padding: 8px;
   margin-top: 10px;
   border-radius: 5px;
+}
+
+.protected-data-container {
+  background-color: #e8f5e9;
+  margin-top: 50px !important;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.icon-container {
+  margin-bottom: 10px;
+}
+
+.checkmark-icon {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.granted-title {
+  color: #4caf50;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.link-text {
+  margin-bottom: 15px;
+}
+
+.link-text a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.address-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.address {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+  word-break: break-all;
 }
 </style>
