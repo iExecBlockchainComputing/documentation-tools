@@ -47,7 +47,7 @@ const contactsList = await web3mail.fetchUserContacts({
 
 `boolean`
 
-This parameter enables fetching contacts that grant access exclusively to the
+This parameter enables fetching contacts who granted access exclusively to the
 user and no one else.
 
 :::tip
