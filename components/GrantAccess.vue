@@ -4,6 +4,8 @@
     <MetamaskButton @connected="onWalletConnected" />
   </div>
 
+  <!-- test deploy -->
+
   <div class="form-container">
     <input v-model="authorizedApp" placeholder="Enter authorized app address" />
     <button
