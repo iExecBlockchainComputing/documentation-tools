@@ -53,7 +53,7 @@ user and no one else.
 :::tip
 
 When someone grants access, you can choose to grant access to a specific
-individual (a wallet) or to any users
+user (a wallet) or to any user
 (`0x0000000000000000000000000000000000000000`).
 
 :::
