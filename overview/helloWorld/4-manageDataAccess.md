@@ -77,6 +77,6 @@ for your data access. You can even create protected data collections and set up
 renting or subscription plans.
 
 If you are too impatient to wait for the next chapter, you can check out the
-[DataProtector Sharing](http://localhost:5173/tools/dataProtector/dataProtectorSharing.html)
+[DataProtector Sharing](https://beta.tools.docs.iex.ec/tools/dataProtector/dataProtectorSharing.html)
 and a live use case called
 [Content Creator](https://demo.iex.ec/content-creator/).
