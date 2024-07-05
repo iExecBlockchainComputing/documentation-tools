@@ -27,7 +27,7 @@ import { type FetchMyContactsParams } from '@iexec/web3mail';
 
 `boolean | undefined`
 
-This parameter enables fetching contacts that granted access exclusively to the
+This parameter enables fetching contacts who granted access exclusively to the
 user and no one else.
 
 :::tip
