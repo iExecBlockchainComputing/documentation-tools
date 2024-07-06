@@ -2,11 +2,11 @@
 
 > Reading 🕒 10 mins
 
-That's it! You've protected your data and now you're ready to build your iExec
-App, application that can run in a trusted execution environment (TEE) and
+That's it! You've protected your data and now you're ready to **build your iExec
+App**, an application that will run in a trusted execution environment (TEE) and
 process protected data.
 
-This guide will help you set up, test, run, and deploy your iExec App using the
+This guide will help you set up, test, deploy and run your iExec App using the
 [`idapp-cli`](https://github.com/iExecBlockchainComputing/idapp/blob/main/cli/README.md)
 tool. Follow the instructions carefully for a smooth development experience.
 
@@ -17,10 +17,12 @@ system:
 
 - [**Node.js**](https://nodejs.org/en/) version 18 or higher
 - [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
-- [**Docker**](https://hub.docker.com/) have docker on your computer
-- [**DockerHub**](https://docs.docker.com/engine/install/) have a dockerhub
-  account
-- **A private key** from your Ethereum wallet (e.g., MetaMask)
+- [**Docker**](https://hub.docker.com/)
+
+And also:
+
+- A [**DockerHub**](https://docs.docker.com/engine/install/) account
+- **A private key** from an Ethereum wallet (e.g., MetaMask)
 
 ## Installation
 
@@ -30,8 +32,8 @@ the following command:
 ```sh
 git clone https://github.com/iExecBlockchainComputing/idapp.git
 cd idapp/cli
-npm ci
-npm i -g .
+npm install
+npm install -g .
 ```
 
 ## Initialize Framework
@@ -59,7 +61,7 @@ You will be prompted with the following message:
 ? Would you like to access a protected data inside your iDapp? (Y/n)
 ```
 
-:::tip
+::: tip
 
 Answer `no` to the last question
 `? Would you like to access protected data inside your iDapp?`. We will cover
@@ -122,21 +124,21 @@ forget to save it for the next chapter. ![alt text](/assets/hello-world/app.png)
 
 :::
 
-## 🧩 Keys takeway
+## 🧩 Key takeaways
 
-- **iExec App** is an application that can run in a trusted execution
+- An **iExec App** is an application that can run in a trusted execution
   environment (TEE) and process protected data.
-- **idapp-cli** is a command-line tool that helps you build, test, and deploy
-  your iExec App.
+- The **iDapp CLI** is a command-line tool that helps you build, test, and
+  deploy your iExec App.
 - **Docker** is a tool that allows you to run your iExec App in a containerized
   environment.
 - **Protected Data** can be integrated into your iExec App to process private
   data.
-- **iExec App** can be deployed on the iExec protocol to run in a trusted
+- **iExec Apps** can be deployed on the iExec protocol to run in a trusted
   execution environment.
 
 ## 💫 Next steps
 
-We have **protected data**, and we have an **iExec App**. What's next? Now we
-need to authorize our **iExec App** and a **user** to access our protected data.
-Let's do it in the next chapter.🚀
+We have one **protected data**, and we have an **iExec App**. What's next? We
+will need to authorize our **iExec App** and a **user** to access our protected
+data. Let's do it in the next chapter.🚀

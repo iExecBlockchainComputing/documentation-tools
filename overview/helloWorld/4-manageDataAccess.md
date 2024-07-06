@@ -17,12 +17,12 @@ Here is a simple diagram to explain the process:
 
 ![alt text](/assets/hello-world/process.png)
 
-1. **Protect Data** : You protect your data using the DataProtector SDK.
-2. **Grant Access** : You authorize a user (wallet address) to access your
+1. **Protect Data**: You protect your data using DataProtector SDK.
+2. **Grant Access**: You authorize a user (wallet address) to access your
    protected data.
-3. **Grant Access** : You authorize your iExec Application to access your
+3. **Grant Access**: You authorize your iExec Application to access your
    protected data.
-4. **Compute Data** : The authorized user can now run your iExec Application to
+4. **Compute Data**: The authorized user can now run your iExec Application to
    process your protected data.
 
 ## 🧩 Let's grant access
@@ -38,28 +38,28 @@ the user.
 
 ```typescript
 const grantedAccess = await dataProtectorCore.grantAccess({
-  protectedData: protectedData?.value?.address,
-  authorizedApp: authorizedApp.value,
+  protectedData: protectedData.address,
+  authorizedApp: authorizedApp.address,
   authorizedUser: '0x0000000000000000000000000000000000000000',
 });
 ```
 
 As you can see in the code snippet, we used three parameters:
 
-- `protectedData` : The address of the protected data (we stored it in local
+- `protectedData`: The address of the protected data (we stored it in local
   storage during the protect data process).
-- `authorizedApp` : The address of the iExec App you want to authorize; it means
+- `authorizedApp`: The address of the iExec App you want to authorize; it means
   the iExec App address you saved at the end of the last chapter.
-- `authorizedUser` : The wallet address of the user you want to authorize, by
+- `authorizedUser`: The wallet address of the user you want to authorize, by
   default it's the 0x, it means that you authorize all users.
 
-## 🧩 Drum rolls, please! 🥁
+## 🧩 Drum roll, please! 🥁
 
 You're now ready to run your iExec Application and process your protected data
-in a trusted execution environment by running the command below.
+in a trusted execution environment, by running the command below:
 
 ```sh
-idapp run <my-idapp-address> [--protectedData <protectedData-address>] [--debug | --prod]
+idapp run <my-idapp-address> --protectedData <protectedData-address> --debug
 ```
 
 Tadada! 🎉, Congratulations you've done it
@@ -71,11 +71,11 @@ integrate DataProtector SDK into you dApp, protect your data, grant access to
 users and iExec Applications, and compute your data. But what if you want to
 monetize your data?
 
-The DataProtector SDK has a monetization feature that allows you to set a price
-for your data access. You can even create protected data collections and set up
+DataProtector SDK has a monetization feature that allows you to set a price for
+your data access. You can even create protected data collections and set up
 renting or subscription plans.
 
-If you are too impatient to wait for the next chapter, you can check out the
+If you are too impatient to wait for the next chapter, you can check out
 [DataProtector Sharing](https://beta.tools.docs.iex.ec/tools/dataProtector/dataProtectorSharing.html)
 and a live use case called
 [Content Creator](https://demo.iex.ec/content-creator/).

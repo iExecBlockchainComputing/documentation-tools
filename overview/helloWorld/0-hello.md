@@ -86,7 +86,7 @@ a {
 }
 
 .card h3, .card p {
-  color: rgba(60, 60, 67);
+  color: rgb(60, 60, 67);
   text-decoration: none;
 }
 

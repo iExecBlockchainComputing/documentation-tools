@@ -17,7 +17,7 @@ confidential. You need a **technology** for the confidential computation and a
 **tool** to protect and manage access to your data.
 
 It's where iExec comes in! We provide a **protocol** and **developer tools**
-that allow you to :
+that allow you to:
 
 - Protect
 - Manage
@@ -41,7 +41,7 @@ contract acts as a band leader, creating **synergy** between the power of
 **confidential computing** and the **transparency & immutability of the
 blockchain**.
 
-:::tip 🚨**Smart Contract**
+::: tip 🚨**Smart Contract**
 
 A smart contract is a piece of code on the blockchain that automatically
 performs tasks and enforces agreements without needing a middleman.
@@ -82,7 +82,7 @@ One of the coolest features is that our technology allows you to monetize your
 digital assets. For example, if you have a bunch of sensitive data, you can
 monetize it by lending it for computing or selling it directly.
 
-## 🧩 Keys takeway
+## 🧩 Key takeaways
 
 - **iExec Protocol** is the foundation of our stack, combining TEE and
   blockchain to enable confidential computing and data management.

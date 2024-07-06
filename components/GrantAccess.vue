@@ -1,23 +1,21 @@
 <template>
   Connect Your Wallet:
-  <div style="display: inline-block; margin-left: 4px">
+  <div class="ml-2 inline-block">
     <MetamaskButton @connected="onWalletConnected" />
   </div>
 
-  <!-- test deploy -->
-
   <div class="form-container">
     <input v-model="authorizedApp" placeholder="Enter authorized app address" />
-    <button
+    <Button
       :disabled="!isWalletConnected || isLoadingGrant"
       @click="grantAccess"
     >
       {{ isLoadingGrant ? 'Processing...' : 'Grant Access' }}
-    </button>
+    </Button>
     <div v-if="grantError" class="error">{{ grantError }}</div>
     <div v-if="grantedAccess" class="protected-data-container">
-      <div class="icon-container">
-        <i class="checkmark-icon">✓</i>
+      <div class="inline-block rounded-full bg-success p-1.5 text-white">
+        <Icon icon="mdi:check" height="24" />
       </div>
       <p class="granted-title">
         Access has been granted to you and the iExec Application
@@ -40,14 +38,15 @@
         >
         {{ grantedAccess.datasetprice }}
       </p>
-      <!-- Add more fields as necessary -->
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { Icon } from '@iconify/vue';
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
+import Button from './ui/Button.vue';
 import MetamaskButton from './MetamaskButton.vue';
 
 const web3Provider = ref(null);
@@ -87,13 +86,6 @@ const grantAccess = async () => {
       },
     });
 
-    console.log('protectedData :', protectedData?.value?.address);
-    console.log('authorizedApp :', authorizedApp.value);
-    console.log(
-      'authorizedUser : ',
-      '0x0000000000000000000000000000000000000000'
-    );
-
     const grantedAccessResult = await dataProtectorCore.grantAccess({
       protectedData: protectedData?.value?.address,
       authorizedApp: authorizedApp.value,
@@ -111,25 +103,6 @@ const grantAccess = async () => {
 </script>
 
 <style scoped>
-button {
-  background-color: #fcd15a;
-  color: white;
-  padding: 8px 16px;
-  font-size: 14px;
-  border: none;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #e3b94d;
-}
-
-button:disabled {
-  background-color: #888;
-  cursor: not-allowed;
-}
-
 .form-container {
   margin-top: 20px;
   display: flex;
@@ -168,43 +141,9 @@ input:focus {
   margin: 0 auto;
 }
 
-.icon-container {
-  margin-bottom: 10px;
-}
-
-.checkmark-icon {
-  background-color: #4caf50;
-  color: white;
-  border-radius: 50%;
-  padding: 5px 10px;
-  font-size: 18px;
-}
-
 .granted-title {
   color: #4caf50;
   margin-bottom: 10px;
   font-size: 20px;
-}
-
-.link-text {
-  margin-bottom: 15px;
-}
-
-.link-text a {
-  color: #4caf50;
-  text-decoration: none;
-}
-
-.address-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.address {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  padding: 10px;
-  word-break: break-all;
 }
 </style>

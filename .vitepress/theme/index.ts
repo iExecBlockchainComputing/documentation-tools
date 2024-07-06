@@ -4,6 +4,7 @@ import '@shikijs/vitepress-twoslash/style.css';
 import type { EnhanceAppContext } from 'vitepress';
 
 import './style.css';
+import './tailwind-output.css';
 
 export default {
   extends: Theme,

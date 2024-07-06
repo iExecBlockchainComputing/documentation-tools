@@ -24,21 +24,21 @@ to protect, manage and monetize their data.
 
 Here are some of the key features of DataProtector:
 
-- **Data Privacy and Security** : Utilizes end-to-end encryption to ensure the
+- **Data Privacy and Security**: Utilizes end-to-end encryption to ensure the
   protection and confidentiality of your data, leveraging advanced confidential
   computing technology.
 
-- **Dynamic Access and Monetization Management** : Allow users to manage access,
+- **Dynamic Access and Monetization Management**: Allow users to manage access,
   enabling flexible control and monetization of data assets.
 
-- **Seamless dApp Integration** : Features an SDK for easy integration into a
+- **Seamless dApp Integration**: Features an SDK for easy integration into a
   DApp, enhancing functionality and user experience.
 
 ## 🧩 Let's create a protected Data
 
 <ProtectData />
 
-## 🧩 What happened Under the hood
+## 🧩 What happened under the hood
 
 You won't believe how easy it is to protect your data with DataProtector. Just a
 few lines of code, and you're done!
@@ -62,9 +62,9 @@ button:
 
 ![alt text](/assets/hello-world/dataprotector.png)
 
-:::info Ok let's explain step by step
+::: info Ok let's explain step by step
 
-1. The DataProtector SDK was called.
+1. DataProtector SDK was called.
 2. The data was encrypted with a symmetric key.
 3. The encrypted data was stored on public decentralized storage (IPFS).
 4. The symmetric key was stored in a secure enclave (TEE).
@@ -73,7 +73,7 @@ button:
 6. The protected data address was returned to you, linking it to your wallet
    address.
 
-   :::
+:::
 
 ## 🧩 How use it in your dApp
 
@@ -110,7 +110,7 @@ paper if you don't have a pen you won't be able to write on it.
 But we need a special pen able to process the protected data, we need an **iExec
 Application**.
 
-:::tip 🚨**iExec Application** (we will use the iDapp too in this tutorial)
+::: tip 🚨**iExec Application** (we will use the iDapp too in this tutorial)
 
 An iExec application is an application that can run in a trusted execution
 environment (TEE) and process protected data. It takes the protected data as
@@ -119,18 +119,18 @@ be any kind of algorithm, machine learning model, or data processing task.
 
 :::
 
-## 🧩 Keys takeway
+## 🧩 Key takeaways
 
 - **DataProtector** is a developer tool that ensures data protection and
   confidentiality, allowing dynamic access and monetization management.
-- **Protected Data** is created by DataProtector and can be used in an iExec
+- **Protected Data** are created by DataProtector and can be used in an iExec
   application.
-- **Protected Data** is encrypted with a symmetric key and stored on
+- Protected Data are **encrypted** with a symmetric key and stored on a
   decentralized storage.
-- **Protected Data** ownership is stored on the blockchain and linked to the
+- Protected Data **ownership** is stored on the blockchain and linked to the
   user's wallet.
 
-## 💫The Next steps
+## 💫 The Next steps
 
 In the next chapter, we will show you how to build, deploy, and run an iExec
 application to process your protected data. Let's go! 🚀
