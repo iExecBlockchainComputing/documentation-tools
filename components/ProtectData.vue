@@ -97,6 +97,7 @@ async function protectData() {
     });
     console.log('createdProtectedData', createdProtectedData);
 
+    protectedDataAddress.value = createdProtectedData.address;
     localStorage.setItem('protectedDataAddress', createdProtectedData.address);
   } catch (error) {
     protectError.value = error.message;
