@@ -9,10 +9,12 @@ It's time to celebrate, the last step to do is:
 
 - Complete the quest using the button below to show off your achievement (we
   will just check if you created a Protected Data and an iExec application)
+- Claim your iExec OG NFT, specially minted for early testers of the Hello World
+  journey.
 - Fill in the feedback form to help us improve the journey.
 
-You're now eligible for our special raffle $300 exclusively for early testers of
-the Hello World journey.
+You're now eligible for our special raffle 3 x $100 exclusively for early
+testers of the Hello World journey.
 
 <div class="grid">
 

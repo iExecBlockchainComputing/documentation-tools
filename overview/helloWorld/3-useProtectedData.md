@@ -1,4 +1,4 @@
-# Build Your iExec App
+# Use protected data
 
 > Reading 🕒 10 mins
 
@@ -130,8 +130,6 @@ forget to save it for the next chapter. ![alt text](/assets/hello-world/app.png)
   environment (TEE) and process protected data.
 - The **iDapp CLI** is a command-line tool that helps you build, test, and
   deploy your iExec App.
-- **Docker** is a tool that allows you to run your iExec App in a containerized
-  environment.
 - **Protected Data** can be integrated into your iExec App to process private
   data.
 - **iExec Apps** can be deployed on the iExec protocol to run in a trusted

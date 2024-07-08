@@ -50,8 +50,8 @@ As you can see in the code snippet, we used three parameters:
   storage during the protect data process).
 - `authorizedApp`: The address of the iExec App you want to authorize; it means
   the iExec App address you saved at the end of the last chapter.
-- `authorizedUser`: The wallet address of the user you want to authorize, by
-  default it's the 0x, it means that you authorize all users.
+- `authorizedUser`: The wallet address of the user you want to authorize, in
+  this example we added 0x, which means that you authorize all users.
 
 ## 🧩 Drum roll, please! 🥁
 
