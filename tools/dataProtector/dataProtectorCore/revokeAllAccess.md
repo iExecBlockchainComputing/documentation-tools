@@ -75,8 +75,8 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 `AddressOrENS | undefined`
 
 The user address to be removed from the authorization list for the specified
-`protectedData`. If no address is specified, it will return the granted
-access that authorized any user address (equivalent to
+`protectedData`. If no address is specified, it will return the granted access
+that authorized any user address (equivalent to
 `0x0000000000000000000000000000000000000000`).
 
 ```ts twoslash
