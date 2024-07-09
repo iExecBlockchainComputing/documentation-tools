@@ -22,7 +22,8 @@ system:
 And also:
 
 - A [**DockerHub**](https://docs.docker.com/engine/install/) account
-- **A private key** from an Ethereum wallet (e.g., MetaMask)
+- **A private key** from an Ethereum wallet (e.g., MetaMask, we need it to run
+  the `idapp run` command)
 
 ## Installation
 
@@ -43,6 +44,8 @@ To initialize the working directory for developing your iDapp, use the
 files.
 
 ```sh
+mkdrir demo
+cd demo
 idapp init
 ```
 
@@ -98,7 +101,8 @@ idapp run --docker
 
 ## Deploy Your iDapp
 
-Deploy your iDapp on the iExec protocol.
+Deploy your iDapp on the iExec protocol. You need to have you docker deamon
+running to build the docker image.
 
 ```sh
 idapp deploy
