@@ -15,6 +15,13 @@ tool. Follow the instructions carefully for a smooth development experience.
 Before getting started, ensure that you have the following installed on your
 system:
 
+::: info
+
+Every password or private key you use in this tutorial is stored locally on your
+machine and is not shared with anyone.
+
+:::
+
 - [**Node.js**](https://nodejs.org/en/) version 18 or higher
 - [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
 - [**Docker**](https://hub.docker.com/)
