@@ -48,7 +48,7 @@ To initialize the working directory for developing your iDapp, use the
 files.
 
 ```sh
-mkdrir demo
+mkdir demo
 cd demo
 idapp init
 ```
