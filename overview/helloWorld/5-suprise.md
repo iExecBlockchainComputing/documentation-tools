@@ -19,7 +19,7 @@ testers of the Hello World journey.
 <div class="grid">
 
 <div style="text-align: center; margin: 50px 0;">
-  <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCH72tgLK1" style="
+  <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer" style="
     background-color: #0070f3; 
     color: white; 
     padding: 10px 20px; 
