@@ -1,5 +1,11 @@
 # Usage
 
+Try the demo of Web3telegram : 
+
+<a href="https://demo.iex.ec/pem" target="_blank" rel="noreferrer" class="link-as-block">
+ ⚡Use case demo⚡ 
+</a>
+
 ## Create your protected data
 
 To create a Telegram protected data:
