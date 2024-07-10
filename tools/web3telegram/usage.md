@@ -10,6 +10,11 @@ To create a Telegram protected data:
 
 - Name your protected data for easy identification.
 
+After creating your protected data, it's important to initiate a conversation
+with the bot. This action authorizes the bot to send messages within that
+specific conversation. Without this step, you will be unable to receive
+messages.
+
 ## Authorizing Users
 
 To authorize users to send you messages using the bot:
@@ -21,14 +26,9 @@ To authorize users to send you messages using the bot:
 - Define the user's Ethereum address and specify how many Telegram messages they
   can send you.
 
-After creating your protected data, it's important to initiate a conversation
-with the bot. This action authorizes the bot to send messages within that
-specific conversation. Without this step, you will be unable to receive
-messages.
-
 ## How to get your chat ID
 
-To retrieve your chat ID, send a message to the bot @getmyid_bot.
+To retrieve your chat ID, send a message to the bot @getmyid_bot on Telegram.
 
 ![bot-id](/get-my-id-bot.png)
 

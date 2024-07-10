@@ -1,6 +1,6 @@
 # Getting Started
 
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/web3mail-sdk?color=green)](https://github.com/iExecBlockchainComputing/web3mail-sdk)
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/web3mail-sdk?color=green)](https://github.com/iExecBlockchainComputing/web3telegram)
 
 ## Overview
 
@@ -53,20 +53,20 @@ declare global {
 }
 // ---cut---
 
-import { IExecWeb3mail } from '@iexec/web3mail';
+import { IExecWeb3telegram } from '@iexec/web3telegram';
 
 const web3Provider = window.ethereum;
 // instantiate
-const web3mail = new IExecWeb3mail(web3Provider);
+const web3telegram = new IExecWeb3telegram(web3Provider);
 ```
 
 ```ts twoslash [NodeJS]
-import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+import { IExecWeb3telegram, getWeb3Provider } from '@iexec/web3telegram';
 
 // get web3 provider from a private key
 const web3Provider = getWeb3Provider('YOUR_PRIVATE_KEY');
 // instantiate
-const web3mail = new IExecWeb3mail(web3Provider);
+const web3telegram = new IExecWeb3telegram(web3Provider);
 ```
 
 :::
