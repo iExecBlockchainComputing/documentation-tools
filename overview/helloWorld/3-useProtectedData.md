@@ -100,7 +100,7 @@ as input. So for a more realistic test, you can run your iDapp using your local
 Docker daemon.
 
 ```sh
-idapp run --docker
+idapp test --docker
 ```
 
 ## Deploy Your iDapp
