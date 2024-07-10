@@ -26,12 +26,3 @@ Apps using the Web3Telegram tool can:
   username
 - grant users complete control over which entities are authorized to use their
   chat ID to send them communications
-
-The Web3Telegram tool currently supports the following methods:
-
-- **fetchMyContacts** — retrieve a list of Ethereum addresses whose owners have
-  authorized you to message them on telegram
-- **fetchUserContacts** — retrieve a list of Ethereum addresses whose owners
-  have authorized a given entity to message them on telegram
-- **sendTelegram** — send a telegram message to a user knowing only the Ethereum
-  address for the `protectedData` containing their chat ID address
