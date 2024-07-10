@@ -39,9 +39,6 @@ the following command:
 
 ```sh
 npm install -g idapp-cli
-cd idapp/cli
-npm install
-npm install -g .
 ```
 
 ## Initialize Framework
