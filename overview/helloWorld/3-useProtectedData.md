@@ -38,7 +38,7 @@ First, you need to install the `idapp-cli` package. Open your terminal and run
 the following command:
 
 ```sh
-git clone https://github.com/iExecBlockchainComputing/idapp.git
+npm install -g idapp-cli
 cd idapp/cli
 npm install
 npm install -g .
