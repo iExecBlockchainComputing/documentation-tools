@@ -177,6 +177,9 @@ _default_: `1`
 Allows restricting the number of times the protected data may be processed and
 used.
 
+It is not technically possible to set an unlimited number of accesses, but you
+can set `numberOfAccess` to `10000` for example.
+
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 

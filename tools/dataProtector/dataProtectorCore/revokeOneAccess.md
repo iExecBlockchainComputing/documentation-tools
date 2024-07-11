@@ -5,6 +5,9 @@ This method allows revoking a specific access authorization from a
 [getGrantedAccess](getGrantedAccess.md) method, which provides a list of all
 authorizations on single `protectedData` entity.
 
+As this will generate a blockchain transaction, expect it to take a least 5sec
+(a block time)
+
 ## Usage
 
 The `revokeOneAccess` method requires a `grantedAccess` object as an input
