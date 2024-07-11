@@ -118,6 +118,30 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 });
 ```
 
+### isUserStrict
+
+`boolean`
+
+Optional filter to restrict the results to include only authorizations for the
+specified user. Authorizations made for `any` user are not returned.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
+  protectedData: '0x123abc...',
+  authorizedApp: '0x456def...',
+  authorizedUser: '0x789cba...',
+  isUserStrict: true, // [!code focus]
+  page: 1,
+  pageSize: 100,
+});
+```
+
 ### page
 
 `number | undefined`
