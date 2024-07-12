@@ -86,11 +86,11 @@ locally installed Node.js and run the `app.js` file.
 
 ### Using Parameters
 
-You can pass input parameters to your iDapp using the `--param` option. This
+You can pass input parameters to your iDapp using the `--params` option. This
 allows you to provide necessary inputs during runtime.
 
 ```sh
-idapp test --param <your-input>
+idapp test --params <your-input>
 ```
 
 ### Using Docker
