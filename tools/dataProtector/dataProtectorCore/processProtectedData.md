@@ -217,7 +217,7 @@ const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
     app: '0x456def...',
-    workerpool: '0xA5d...', // [!code focus]
+    workerpool: '0xa5de76...', // [!code focus]
   });
 ```
 
