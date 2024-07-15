@@ -55,10 +55,6 @@ const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...', // [!code focus]
-  authorizedApp: '0x456def...',
-  authorizedUser: '0x789cba...',
-  page: 1,
-  pageSize: 100,
 });
 ```
 
