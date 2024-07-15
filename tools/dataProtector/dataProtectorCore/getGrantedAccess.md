@@ -36,11 +36,13 @@ import { type GetGrantedAccessParams } from '@iexec/dataprotector';
 
 ### protectedData
 
-`AddressOrENS | 'any' | undefined`
+`AddressOrENS | undefined`
 
 Address of the protected data object for which you are querying access
 authorization grants. It's a representation of ethereum address or ENS name
-(Ethereum Name Service)
+(Ethereum Name Service). If no address is specified, it will return the granted
+access for any protected data address (equivalent to
+`0x0000000000000000000000000000000000000000`)
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -60,11 +62,13 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 
 ### authorizedApp
 
-`AddressOrENS | 'any' | undefined`
+`AddressOrENS | undefined`
 
 Optional filter to restrict the results to include only authorizations for the
 specified application. It's a representation of ethereum address or ENS name
-(Ethereum Name Service)
+(Ethereum Name Service). If no address is specified, it will return the granted
+access that authorized any application (equivalent to
+`0x0000000000000000000000000000000000000000`)
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -96,11 +100,13 @@ explicitly granted access to that application address.
 
 ### authorizedUser
 
-`AddressOrENS | 'any' | undefined`
+`AddressOrENS | undefined`
 
 Optional filter to restrict the results to include only authorizations for the
 specified user. It's a string representation of ethereum address or ENS name
-(Ethereum Name Service)
+(Ethereum Name Service). If no address is specified, it will return the granted
+access for that authorized any user address (equivalent to
+`0x0000000000000000000000000000000000000000`).
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';

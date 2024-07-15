@@ -16,7 +16,7 @@ Ethereum API</a>.
 const updateOracleRes = factory
   .updateOracle({
     cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
-    workerpool: '0x0e7...',
+    workerpool: '0xa5de76...',
     targetBlockchains: ['134', '137'],
   })
   .subscribe({
@@ -63,7 +63,7 @@ Content ID of the Oracle that needs to be updated.
 const updateOracleRes = factory
   .updateOracle({
     cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit', // [!code focus]
-    workerpool: '0x0e7...',
+    workerpool: '0xa5de76...',
     targetBlockchains: ['134', '137'],
   })
   .subscribe({
@@ -87,7 +87,7 @@ Address of the workerpool that should perform the update.
 const updateOracleRes = factory
   .updateOracle({
     cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
-    workerpool: '0x0e7...', // [!code focus]
+    workerpool: '0xa5de76...', // [!code focus]
     targetBlockchains: ['134', '137'],
   })
   .subscribe({
@@ -120,7 +120,7 @@ Array of target blockchain IDs where the oracle is deployed. 137 for polygon,
 const updateOracleRes = factory
   .updateOracle({
     cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
-    workerpool: '0x0e7...',
+    workerpool: '0xa5de76...',
     targetBlockchains: ['134', '137'], // [!code focus]
   })
   .subscribe({
