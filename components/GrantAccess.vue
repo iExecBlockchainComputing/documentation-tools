@@ -13,31 +13,54 @@
       {{ isLoadingGrant ? 'Processing...' : 'Grant Access' }}
     </Button>
     <div v-if="grantError" class="error">{{ grantError }}</div>
-    <div v-if="grantedAccess" class="protected-data-container">
-      <div class="inline-block rounded-full bg-success p-1.5 text-white">
-        <Icon icon="mdi:check" height="24" />
-      </div>
-      <p class="granted-title">
+    <div
+      v-if="grantedAccess"
+      class="protected-data-container text-on-bg-success"
+    >
+      <div
+        class="flex items-center justify-center gap-x-2 text-2xl text-success"
+      >
+        <div class="inline-block rounded-full bg-success p-1.5 text-white">
+          <Icon icon="mdi:check" height="24" />
+        </div>
         Access has been granted to you and the iExec Application
-      </p>
+      </div>
+
       <p>You can now use the protected data with the iExec App.</p>
 
-      <p><strong>Protected data:</strong> {{ protectedData.address }}</p>
-      <p><strong>Authorized iExec App:</strong> {{ authorizedApp }}</p>
-      <p>
-        <strong
-          >Authorized user (it means that everybody is allow to use this
-          protected data):</strong
-        >
-        {{ '0x0000000000000000000000000000000000000000' }}
-      </p>
-      <p>
-        <strong
-          >Dataset Price (oohh interesting it means that we could set a price to
-          the protected data):</strong
-        >
-        {{ grantedAccess.datasetprice }}
-      </p>
+      <div>
+        <strong>Protected data:</strong>
+        <div class="white-block-for-address">
+          {{ protectedData.address }}
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <strong>Authorized iExec App:</strong>
+        <div class="white-block-for-address">{{ authorizedApp }}</div>
+      </div>
+
+      <div class="mt-4">
+        <strong> Authorized user </strong
+        ><span class="text-sm"
+          >(The Zero address means that everybody is allowed to use this
+          protected data)</span
+        >:
+        <div class="white-block-for-address">
+          {{ '0x0000000000000000000000000000000000000000' }}
+        </div>
+      </div>
+
+      <div class="mb-2 mt-4">
+        <strong> Dataset Price </strong>
+        <span class="text-sm"
+          >(oohh interesting it means that we could set a price to the protected
+          data)</span
+        >:
+        <div class="white-block-for-address">
+          {{ grantedAccess.datasetprice }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -55,7 +78,7 @@ const protectedData = ref(null);
 const authorizedApp = ref('');
 const isLoadingGrant = ref(false);
 const grantError = ref(null);
-const grantedAccess = ref(null); // Reactive variable to store the granted access data
+const grantedAccess = ref(true); // Reactive variable to store the granted access data
 
 if (typeof window !== 'undefined') {
   protectedData.value = localStorage.getItem('protectedDataAddress')
@@ -139,11 +162,5 @@ input:focus {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
-}
-
-.granted-title {
-  color: #4caf50;
-  margin-bottom: 10px;
-  font-size: 20px;
 }
 </style>

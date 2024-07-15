@@ -29,7 +29,7 @@
       Your data has been protected!
     </div>
     <p class="address-label mt-2">Your protected data address:</p>
-    <p class="address">{{ protectedDataAddress }}</p>
+    <p class="white-block-for-address">{{ protectedDataAddress }}</p>
     <p>
       You can check it on
       <a
@@ -149,13 +149,5 @@ input:focus {
 .address-label {
   font-weight: bold;
   margin-bottom: 5px;
-}
-
-.address {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  padding: 10px;
-  word-break: break-all;
 }
 </style>
