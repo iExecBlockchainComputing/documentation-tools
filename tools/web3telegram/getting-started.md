@@ -1,6 +1,6 @@
 # Getting Started
 
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/web3mail-sdk?color=green)](https://github.com/iExecBlockchainComputing/web3telegram)
+// Add web3telegram-sdk version here, once published
 
 ## Overview
 
@@ -52,7 +52,6 @@ declare global {
   }
 }
 // ---cut---
-
 import { IExecWeb3telegram } from '@iexec/web3telegram';
 
 const web3Provider = window.ethereum;

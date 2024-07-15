@@ -17,6 +17,38 @@ const web3mail = new IExecWeb3mail(web3Provider);
 const contactsList = await web3mail.fetchMyContacts();
 ```
 
+## Parameters
+
+```ts twoslash
+import { type FetchMyContactsParams } from '@iexec/web3mail';
+```
+
+### isUserStrict
+
+`boolean | undefined`
+
+This parameter enables fetching contacts who granted access exclusively to the
+user and no one else.
+
+:::tip
+
+When someone grants access, you can choose to grant access to a specific user (a
+wallet) or to any user (`0x0000000000000000000000000000000000000000`).
+
+:::
+
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+
+const contactsList = await web3mail.fetchMyContacts({
+  isUserStrict: true, // [!code focus]
+});
+```
+
 ## Return value
 
 The result object contains a list of `contact` objects. Each `contact`
