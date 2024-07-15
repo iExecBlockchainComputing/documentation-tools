@@ -42,8 +42,6 @@ const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 
 const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...', // [!code focus]
-  authorizedApp: '0x456def...',
-  authorizedUser: '0x789cba...',
 });
 ```
 
@@ -52,9 +50,8 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 `AddressOrENS | undefined`
 
 The application address to be removed from the authorization list for the
-specified `protectedData`. If no address is specified, it will return the
-granted access that authorized any app address (equivalent to
-`0x0000000000000000000000000000000000000000`).
+specified `protectedData`. If no address is specified, it will revoke all access
+from the protected data, regardless of the app.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -75,9 +72,8 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 `AddressOrENS | undefined`
 
 The user address to be removed from the authorization list for the specified
-`protectedData`. If no address is specified, it will return the granted access
-that authorized any user address (equivalent to
-`0x0000000000000000000000000000000000000000`).
+`protectedData`. If no address is specified, it will revoke all access from the
+protected data, regardless of the authorized user.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
