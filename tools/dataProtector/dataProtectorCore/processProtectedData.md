@@ -200,7 +200,7 @@ iExec currently offers a production workerpool located at the Ethereum Name
 Service (ENS) address `prod-v8-bellecour.main.pools.iexec.eth`. This is the
 default workerpool for running confidential computations on the iExec platform.
 
-If you do not specify a workerpool preference,
+If you don't specify a workerpool preference,
 0x0000000000000000000000000000000000000000 represents any randomly available
 workerpool.
 
