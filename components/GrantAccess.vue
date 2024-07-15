@@ -78,7 +78,7 @@ const protectedData = ref(null);
 const authorizedApp = ref('');
 const isLoadingGrant = ref(false);
 const grantError = ref(null);
-const grantedAccess = ref(true); // Reactive variable to store the granted access data
+const grantedAccess = ref(null); // Reactive variable to store the granted access data
 
 if (typeof window !== 'undefined') {
   protectedData.value = localStorage.getItem('protectedDataAddress')
