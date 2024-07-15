@@ -54,6 +54,27 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...', // [!code focus]
+    senderName: 'Arthur',
+  telegramContent: 'My telegram message content',
+});
+```
+
+### senderName
+
+`string`
+
+The name of the telegram message sender.
+
+```ts twoslash
+import { IExecWeb3telegram, getWeb3Provider } from '@iexec/web3telegram';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3telegram = new IExecWeb3telegram(web3Provider);
+// ---cut---
+
+const sendTelegram = await web3telegram.sendTelegram({
+  protectedData: '0x123abc...',
+  senderName: 'Arthur',// [!code focus]
   telegramContent: 'My telegram message content',
 });
 ```
@@ -76,6 +97,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...',
+  senderName: 'Arthur',
   telegramContent: 'My telegram message content', // [!code focus]
 });
 ```
@@ -96,6 +118,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...',
+  senderName: 'Arthur',
   telegramContent: 'My telegram message content',
   label: 'some-cutom-id', // [!code focus]
 });
@@ -118,6 +141,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...',
+  senderName: 'Arthur',
   telegramContent: 'My telegram message content',
   workerpoolAddressOrEns: 'prod-v8-bellecour.main.pools.iexec.eth', // [!code focus]
 });
@@ -150,6 +174,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...',
+  senderName: 'Arthur',
   telegramContent: 'My telegram message content',
   dataMaxPrice: 42, // [!code focus]
 });
@@ -173,6 +198,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...',
+  senderName: 'Arthur',
   telegramContent: 'My telegram message content',
   appMaxPrice: 42, // [!code focus]
 });
@@ -196,6 +222,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...',
+  senderName: 'Arthur',
   telegramContent: 'My telegram message content',
   workerpoolMaxPrice: 42, // [!code focus]
 });
