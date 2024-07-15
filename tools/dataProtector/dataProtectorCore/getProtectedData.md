@@ -38,7 +38,7 @@ import { type GetProtectedDataParams } from '@iexec/dataprotector';
 
 ### requiredSchema
 
-`DataSchema | undefined`
+**Type:** `SearchableDataSchema`
 
 Provides a list of protected data objects matching this schema.
 
@@ -60,7 +60,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 
 ### owner
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 Provides a list of protected data objects owned by the user with this ETH
 address.
@@ -79,10 +79,10 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 
 ### createdAfterTimestamp
 
-`number | undefined`
+**Type:** `number`
 
 Provides a list of protected data objects created after this timestamp value.
-The provided value should be in seconde.
+The provided value should be in seconds.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -99,7 +99,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 
 ### page
 
-`number | undefined`
+**Type:** `number`
 
 Specifies the results page to return. The default for this is `0` which returns
 all results. Pages are indexed starting at page 1. If using this field you may
@@ -121,11 +121,9 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 
 ### pageSize
 
-`number | undefined`
-
-_default_: `20`
-
-Value between `10` and `1000`.
+**Type:** `number`  
+**Default:** `20`  
+**Range:** `[10...1000]`
 
 Specifies the number of records in each page of the result set. This is used in
 conjunction with the optional `page` parameter to constrain the size of the
@@ -152,4 +150,4 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 import { type ProtectedData } from '@iexec/dataprotector';
 ```
 
-[`ProtectedData[]`](../types.md#protecteddata)
+See [`ProtectedData`](../types.md#protecteddata)

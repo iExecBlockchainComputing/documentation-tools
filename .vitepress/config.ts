@@ -1,6 +1,9 @@
 import { defineConfig } from 'vitepress';
-import { getSidebar } from './sidebar';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
+import { getSidebar } from './sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -64,5 +67,18 @@ export default defineConfig({
     //   pattern:
     //     'https://github.com/iExecBlockchainComputing/documentation-tools/edit/feature/migrate-to-vitepress/:path',
     // },
+  },
+  vite: {
+    plugins: [
+      AutoImport({
+        include: [/\.vue$/, /\.md$/],
+        resolvers: [ElementPlusResolver({ ssr: true })],
+      }),
+      Components({
+        dirs: ['components'],
+        include: [/\.vue$/, /\.md$/],
+        resolvers: [ElementPlusResolver({ ssr: true })],
+      }),
+    ],
   },
 });

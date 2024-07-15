@@ -34,9 +34,9 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 import { type GrantAccessParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredYesBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The ethereum address of the protected data supplied by the user.
 
@@ -54,9 +54,9 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 });
 ```
 
-### authorizedApp
+### authorizedApp <RequiredYesBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The address of the application you wish to authorize to process the
 `protectedData` within a secure execution environment. You may specify either a
@@ -97,9 +97,9 @@ access once. The ETH address for this whitelist is
 
 :::
 
-### authorizedUser
+### authorizedUser <RequiredYesBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The address of the user you wish to authorize to use the `protectedData`. Note
 that these users may not view or manipulate the data. This only grants
@@ -128,9 +128,8 @@ You may authorize all users to use the protected data by setting this to
 
 ### pricePerAccess
 
-`number | undefined`
-
-_default_: `1`
+**Type:** `number`  
+**Default:** `1`
 
 Specifies the usage fee in nano RLC (nRLC) associated with each access of the
 data. It represents the cost incurred for each individual interaction with
@@ -170,9 +169,8 @@ When provided, `pricePerAccess` must be a non-negative integer value.
 
 ### numberOfAccess
 
-`number | undefined`
-
-_default_: `1`
+**Type:** `number`  
+**Default:** `1`
 
 Allows restricting the number of times the protected data may be processed and
 used.

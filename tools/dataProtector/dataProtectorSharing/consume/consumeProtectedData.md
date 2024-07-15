@@ -48,9 +48,9 @@ You need to either have:
 import { type ConsumeProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredYesBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to visualize.
 
@@ -71,35 +71,9 @@ const consumeProtectedDataResult =
   });
 ```
 
-### maxPrice
+### app <RequiredYesBadge /> {#app-param}
 
-`number | undefined`
-
-The maximum price (in nRLC) that a requester is willing to pay for each task
-related to consuming the protected data. It is the sum of the application price,
-dataset price, and workerpool price per task.
-
-```ts twoslash
-import {
-  IExecDataProtectorSharing,
-  getWeb3Provider,
-} from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const consumeProtectedDataResult =
-  await dataProtectorSharing.consumeProtectedData({
-    protectedData: '0x123abc...',
-    app: '0x456def...',
-    maxPrice: 10, // [!code focus]
-  });
-```
-
-### app {#app-param}
-
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address or ENS of the iExec TEE dApp that will be used to consume the protected
 data. This iExec TEE dApp is the one that runs within an iExec worker.
@@ -144,11 +118,10 @@ For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
 
 ### workerpool
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`  
+**Default:** `prod-v8-bellecour.main.pools.iexec.eth`
 
 Address or ENS of the workerpool.
-
-_default_: `prod-v8-bellecour.main.pools.iexec.eth`
 
 ```ts twoslash
 import {
@@ -176,9 +149,36 @@ default workerpool for running confidential computations on the iExec platform.
 
 :::
 
+### maxPrice
+
+**Type:** `number`  
+**Default:** `0`
+
+The maximum price (in nRLC) that a requester is willing to pay for each task
+related to consuming the protected data. It is the sum of the application price,
+dataset price, and workerpool price per task.
+
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+
+const consumeProtectedDataResult =
+  await dataProtectorSharing.consumeProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    maxPrice: 10, // [!code focus]
+  });
+```
+
 ### pemPublicKey
 
-`string | undefined`
+**Type:** `string`
 
 If you have previously called `consumeProtectedData()` and saved the returned
 public key, you can reuse it in further calls.
@@ -208,7 +208,7 @@ const consumeProtectedDataResult =
 
 ### pemPrivateKey
 
-`string | undefined`
+**Type:** `string`
 
 If you have previously called `consumeProtectedData()` and saved the returned
 private key, you can reuse it in further calls.
@@ -239,7 +239,7 @@ const consumeProtectedDataResult =
 
 ### onStatusUpdate
 
-`OnStatusUpdateFn<ConsumeProtectedDataStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<ConsumeProtectedDataStatuses>`
 
 Callback function to be notified at intermediate steps.
 
