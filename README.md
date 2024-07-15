@@ -49,4 +49,5 @@ for input parameters:
 - `newOwner`: '0xc5e9f4...',
 - `renterAddress`: '0x246bdf...'
 - `subscriberAddress`: '0x246bdf...'
+- `workerpool`: '0xa5de76...'
 - `taskId`: '0x7ac398...'
