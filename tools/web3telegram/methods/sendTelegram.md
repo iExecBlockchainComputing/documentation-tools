@@ -54,7 +54,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...', // [!code focus]
-    senderName: 'Arthur',
+  senderName: 'Arthur',
   telegramContent: 'My telegram message content',
 });
 ```
@@ -74,7 +74,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 
 const sendTelegram = await web3telegram.sendTelegram({
   protectedData: '0x123abc...',
-  senderName: 'Arthur',// [!code focus]
+  senderName: 'Arthur', // [!code focus]
   telegramContent: 'My telegram message content',
 });
 ```
