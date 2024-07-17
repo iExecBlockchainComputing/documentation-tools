@@ -310,7 +310,7 @@ export function getSidebar() {
         ],
       },
       {
-        text: '🐳&nbsp;&nbsp;Web3telegram',
+        text: '💬&nbsp;&nbsp;Web3telegram',
         link: '/tools/web3telegram',
         collapsed: false,
         items: [

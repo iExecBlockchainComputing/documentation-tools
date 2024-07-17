@@ -1,4 +1,4 @@
-# ✉ Web3Telegram
+# :speech_balloon: Web3Telegram
 
 Web3Telegram offers a secure method to manage telegram communications via the
 blockchain. This mechanism helps protect the personal information of the

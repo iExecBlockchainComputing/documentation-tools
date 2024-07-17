@@ -26,7 +26,7 @@ monetization.
 </a>
 
 <a href="./tools/web3telegram" class="link-for-home">
-  🐳 &nbsp;Web3Telegram
+  💬 &nbsp;Web3Telegram
 </a>
 
 <a href="./tools/oracleFactory" class="link-for-home">
