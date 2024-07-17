@@ -1,5 +1,12 @@
 # processProtectedData
 
+::: tip
+
+This method involves asset monetization. To learn more, visit
+[pricing model](../../../overview/monetizationConcepts/pricingModel.md).
+
+:::
+
 Allows processing a protected dataset through use of a specified iExec
 application.
 

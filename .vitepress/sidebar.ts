@@ -22,6 +22,21 @@ export function getSidebar() {
               },
             ],
           },
+          {
+            text: '💰&nbsp;&nbsp;Monetization',
+            collapsed: true,
+            link: '/overview/monetizationConcepts',
+            items: [
+              {
+                text: 'Pricing Model',
+                link: '/overview/monetizationConcepts/pricingModel',
+              },
+              {
+                text: 'Means of Payment',
+                link: '/overview/monetizationConcepts/meansOfPayment',
+              },
+            ],
+          },
         ],
       },
       {

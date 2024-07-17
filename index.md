@@ -15,6 +15,10 @@ monetization.
   📽 &nbsp;Use case demo
 </a>
 
+<a href="./overview/MonetizationConcepts" class="link-for-home">
+  💰 &nbsp;Monetization
+</a>
+
 ## Our tools
 
 <a href="./tools/dataProtector" class="link-for-home">
