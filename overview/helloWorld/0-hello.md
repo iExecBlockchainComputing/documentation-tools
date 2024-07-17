@@ -44,9 +44,9 @@ for all 5 chapters**.
   </a>
 </div>
 
-::: tip If you see this 🚨
+::: tip If you see this 🚨it means
 
-it means that we've introduced a new concept that needs to be explained. Or if
+That we've introduced a new concept that needs to be explained. Or if
 you want to jump ahead in the full glossary right now, you can check out
 [here](https://protocol.docs.iex.ec/help/glossary)
 
