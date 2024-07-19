@@ -20,7 +20,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -53,7 +52,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...', // [!code focus]
   emailSubject: 'My email subject',
@@ -76,7 +74,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject', // [!code focus]
@@ -101,7 +98,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -124,7 +120,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -151,7 +146,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -173,7 +167,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -196,7 +189,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -229,7 +221,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -253,7 +244,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
@@ -277,7 +267,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',

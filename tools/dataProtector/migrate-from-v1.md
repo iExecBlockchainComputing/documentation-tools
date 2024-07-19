@@ -74,7 +74,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail',
   data: {
@@ -102,7 +101,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const allAccessRevoked = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   onStatusUpdate: ({ title, isDone }) => { // [!code ++]

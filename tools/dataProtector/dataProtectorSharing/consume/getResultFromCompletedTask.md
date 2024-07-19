@@ -13,7 +13,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...',
@@ -41,7 +40,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...', // [!code focus]
@@ -65,7 +63,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...',
@@ -92,7 +89,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...',
@@ -117,7 +113,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const completedTaskResult =
   await dataProtectorSharing.getResultFromCompletedTask({
     taskId: '0x7ac398...',

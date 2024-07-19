@@ -13,7 +13,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const contactsList = await web3mail.fetchUserContacts({
   userAddress: '0xF048...',
 });
@@ -37,7 +36,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const contactsList = await web3mail.fetchUserContacts({
   userAddress: '0xF048...', // [!code focus]
 });
@@ -63,7 +61,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
-
 const contactsList = await web3mail.fetchUserContacts({
   userAddress: '0xF048...',
   isUserStrict: true, // [!code focus]

@@ -13,7 +13,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const allAppOnlyAppWhitelistAvailable =
   await dataProtectorSharing.getUserAddOnlyAppWhitelist();
 ```
@@ -39,7 +38,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const allUserAddOnlyAppWhitelist =
   await dataProtectorSharing.getUserAddOnlyAppWhitelist({
     user: '0x123abc...', // [!code focus]

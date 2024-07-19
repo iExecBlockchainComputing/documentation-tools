@@ -16,7 +16,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.removeCollection({
   collectionId: 15,
 });
@@ -49,7 +48,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.removeCollection({
   collectionId: 15, // [!code focus]
 });

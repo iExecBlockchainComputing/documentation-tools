@@ -25,7 +25,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...',
@@ -54,7 +53,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...', // [!code focus]
@@ -77,7 +75,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...',

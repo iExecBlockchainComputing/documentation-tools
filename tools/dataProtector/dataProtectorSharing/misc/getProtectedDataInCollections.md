@@ -16,9 +16,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedData =
+// ---cut---const protectedData =
   await dataProtectorSharing.getProtectedDataInCollections();
 ```
 
@@ -40,9 +38,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const oneProtectedData =
+// ---cut---const oneProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     protectedData: '0x123abc...', // [!code focus]
   });
@@ -60,9 +56,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedDataByCollection =
+// ---cut---const protectedDataByCollection =
   await dataProtectorSharing.getProtectedDataInCollections({
     collectionId: 12, // [!code focus]
   });
@@ -80,9 +74,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedDataByOwner =
+// ---cut---const protectedDataByOwner =
   await dataProtectorSharing.getProtectedDataInCollections({
     collectionOwner: '0x123...', // [!code focus]
   });
@@ -100,9 +92,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const latestProtectedData =
+// ---cut---const latestProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
   });
@@ -120,9 +110,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const rentableProtectedData =
+// ---cut---const rentableProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     isRentable: true, // [!code focus]
   });
@@ -140,9 +128,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedDataForSale =
+// ---cut---const protectedDataForSale =
   await dataProtectorSharing.getProtectedDataInCollections({
     isForSale: true, // [!code focus]
   });
@@ -163,9 +149,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedDataForSale =
+// ---cut---const protectedDataForSale =
   await dataProtectorSharing.getProtectedDataInCollections({
     isDistributed: true, // [!code focus]
   });
@@ -183,9 +167,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
+// ---cut---const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   collectionId: 12,
   page: 3, // [!code focus]
   pageSize: 25,
@@ -206,9 +188,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
+// ---cut---const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   collectionId: 12,
   page: 3,
   pageSize: 25, // [!code focus]

@@ -13,7 +13,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
@@ -41,7 +40,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12, // [!code focus]
@@ -64,7 +62,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
@@ -86,7 +83,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,

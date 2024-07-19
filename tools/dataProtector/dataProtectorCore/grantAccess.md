@@ -15,7 +15,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -46,7 +45,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
@@ -73,7 +71,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
@@ -111,7 +108,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -148,7 +144,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -184,7 +179,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -207,7 +201,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',

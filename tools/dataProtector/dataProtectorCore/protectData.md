@@ -21,7 +21,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: {
     email: 'example@gmail.com',
@@ -38,7 +37,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: {
     email: 'example@gmail.com',
@@ -70,7 +68,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: { // [!code focus]
     email: 'example@gmail.com', // [!code focus]
@@ -87,7 +84,6 @@ of buffer. To do so, you can use `createArrayBufferFromFile`.
 ```ts twoslash
 const file: File = new File([], 'emptyFile.txt');
 // ---cut---
-
 import { createArrayBufferFromFile } from '@iexec/dataprotector';
 
 const fileAsArrayBuffer = await createArrayBufferFromFile(file);
@@ -107,7 +103,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const reduceArray = (array: Array<any>): Record<string, any> =>
   array.reduce((accumulator, current, i) => {
     accumulator[i] = current;
@@ -155,7 +150,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail', // [!code focus]
   data: {
@@ -183,7 +177,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail',
   data: {

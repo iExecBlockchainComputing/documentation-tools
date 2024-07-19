@@ -18,7 +18,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,
@@ -36,7 +35,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 import { type BuyProtectedDataParams } from '@iexec/dataprotector';
 ```
 
@@ -55,7 +53,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...', // [!code focus]
   price: 1,
@@ -79,7 +76,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1, // [!code focus]
@@ -107,7 +103,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,
@@ -132,7 +127,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,

@@ -18,7 +18,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -51,7 +50,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...', // [!code focus]
 });
@@ -74,7 +72,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   authorizedApp: '0x456def...', // [!code focus]
 });
@@ -109,7 +106,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   authorizedUser: '0x789cba...', // [!code focus]
 });
@@ -134,7 +130,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   page: 1, // [!code focus]
@@ -160,7 +155,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   page: 1,

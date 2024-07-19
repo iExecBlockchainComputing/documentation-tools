@@ -53,7 +53,6 @@ declare global {
   }
 }
 // ---cut---
-
 import { IExecWeb3mail } from '@iexec/web3mail';
 
 const web3Provider = window.ethereum;

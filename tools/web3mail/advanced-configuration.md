@@ -23,7 +23,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const web3mail = new IExecWeb3mail(web3Provider, {
   dappAddressOrENS: 'web3mail.apps.iexec.eth', // [!code focus]
 });
@@ -43,7 +42,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const web3mail = new IExecWeb3mail(web3Provider, {
   dappWhitelistAddress: '0x123abc...', // [!code focus]
 });
@@ -61,7 +59,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const web3mail = new IExecWeb3mail(web3Provider, {
   dataProtectorSubgraph:
     'https://thegraph-product.iex.ec/subgraphs/name/bellecour/dataprotector', // [!code focus]
@@ -80,7 +77,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const web3mail = new IExecWeb3mail(web3Provider, {
   ipfsNode: 'https://ipfs-upload.v8-bellecour.iex.ec', // [!code focus]
 });
@@ -99,7 +95,6 @@ import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const web3mail = new IExecWeb3mail(web3Provider, {
   ipfsGateway: 'https://ipfs-gateway.v8-bellecour.iex.ec', // [!code focus]
 });

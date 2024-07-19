@@ -19,7 +19,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedData: '0x123abc...',
   collectionId: 12,
@@ -48,7 +47,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12, // [!code focus]
   protectedData: '0x123abc...',
@@ -71,7 +69,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...', // [!code focus]
@@ -99,7 +96,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...',
@@ -133,7 +129,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedData: '0x123abc...',
   collectionId: 12,

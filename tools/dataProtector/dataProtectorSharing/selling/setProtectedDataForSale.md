@@ -17,7 +17,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
   protectedData: '0x123abc...',
   price: 2, // 2 nRLC
@@ -45,7 +44,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
   protectedData: '0x123abc...', // [!code focus]
   price: 2, // 2 nRLC
@@ -68,7 +66,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
   protectedData: '0x123abc...',
   price: 2, // 2 nRLC // [!code focus]

@@ -15,9 +15,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
+// ---cut---const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
   protectedData: '0x123abc...',
 });
 ```
@@ -40,9 +38,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const userActiveRentals = await dataProtectorSharing.getRentals({
+// ---cut---const userActiveRentals = await dataProtectorSharing.getRentals({
   renterAddress: '0x246bdf...', // [!code focus]
 });
 ```
@@ -59,9 +55,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
+// ---cut---const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
   protectedData: '0x123abc...', // [!code focus]
 });
 ```
@@ -80,9 +74,7 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---
-
-const userRentals = await dataProtectorSharing.getRentals({
+// ---cut---const userRentals = await dataProtectorSharing.getRentals({
   renterAddress: '0x246bdf...',
   includePastRentals: true, // [!code focus]
 });

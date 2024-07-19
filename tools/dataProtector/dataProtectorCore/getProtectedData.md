@@ -21,7 +21,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   requiredSchema: {
@@ -49,7 +48,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   requiredSchema: { // [!code focus]
     email: 'string', // [!code focus]
@@ -71,7 +69,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...', // [!code focus]
 });
@@ -90,7 +87,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT // [!code focus]
@@ -111,7 +107,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT
@@ -135,7 +130,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT

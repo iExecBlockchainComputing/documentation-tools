@@ -62,7 +62,6 @@ declare global {
   }
 }
 // ---cut---
-
 import { IExecDataProtector } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -101,7 +100,6 @@ declare global {
   }
 }
 // ---cut---
-
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -134,7 +132,6 @@ declare global {
   }
 }
 // ---cut---
-
 import { IExecDataProtectorSharing } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;

@@ -19,7 +19,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC
@@ -64,7 +63,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12, // [!code focus]
   price: 1, // 1 nRLC
@@ -89,7 +87,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC // [!code focus]
@@ -114,7 +111,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC

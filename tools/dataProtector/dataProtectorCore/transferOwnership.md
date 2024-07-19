@@ -19,7 +19,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const transferResponse = await dataProtectorCore.transferOwnership({
   protectedData: '0x123abc...',
   newOwner: '0xc5e9f4...',
@@ -45,7 +44,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const transferResponse = await dataProtectorCore.transferOwnership({
   protectedData: '0x123abc...',
   newOwner: '0xc5e9f4...', // [!code focus]
@@ -64,7 +62,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const transferResponse = await dataProtectorCore.transferOwnership({
   protectedData: '0x123abc...',
   newOwner: '0xc5e9f4...', // [!code focus]
