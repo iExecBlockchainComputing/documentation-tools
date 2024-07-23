@@ -12,7 +12,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
+// ---cut---
+const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
   protectedData: '0x123abc...',
 });
 ```
@@ -37,7 +38,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
+// ---cut---
+const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
   protectedData: '0x123abc...', // [!code focus]
 });
 ```

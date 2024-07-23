@@ -18,7 +18,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const collectionOwners = await dataProtectorSharing.getCollectionOwners({
+// ---cut---
+const collectionOwners = await dataProtectorSharing.getCollectionOwners({
   limit: 100,
 });
 ```
@@ -45,7 +46,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const collectionOwners = await dataProtectorSharing.getCollectionOwners({
+// ---cut---
+const collectionOwners = await dataProtectorSharing.getCollectionOwners({
   limit: 100, // [!code focus]
 });
 ```

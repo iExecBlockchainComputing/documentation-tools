@@ -15,7 +15,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const collectionActiveSubscriptions =
+// ---cut---
+const collectionActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     collectionId: 9,
   });
@@ -39,7 +40,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const userActiveSubscriptions =
+// ---cut---
+const userActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     subscriberAddress: '0x246bdf...', // [!code focus]
   });
@@ -57,7 +59,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const collectionActiveSubscriptions =
+// ---cut---
+const collectionActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     collectionId: 9, // [!code focus]
   });
@@ -77,7 +80,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const userRentals = await dataProtectorSharing.getCollectionSubscriptions({
+// ---cut---
+const userRentals = await dataProtectorSharing.getCollectionSubscriptions({
   subscriberAddress: '0x246bdf...',
   includePastSubscriptions: true, // [!code focus]
 });

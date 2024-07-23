@@ -12,7 +12,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const userCollections = await dataProtectorSharing.getCollectionsByOwner({
+// ---cut---
+const userCollections = await dataProtectorSharing.getCollectionsByOwner({
   owner: '0xa0c15e...',
 });
 ```
@@ -35,7 +36,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const userCollections = await dataProtectorSharing.getCollectionsByOwner({
+// ---cut---
+const userCollections = await dataProtectorSharing.getCollectionsByOwner({
   owner: '0xa0c15e...', // [!code focus]
 });
 ```
@@ -54,7 +56,8 @@ import {
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
-// ---cut---const userCollectionsWithAllProtectedData =
+// ---cut---
+const userCollectionsWithAllProtectedData =
   await dataProtectorSharing.getCollectionsByOwner({
     owner: '0xa0c15e...',
     includeHiddenProtectedDatas: true, // [!code focus]
