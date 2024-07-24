@@ -77,6 +77,29 @@ const processProtectedDataResponse =
   });
 ```
 
+### userWhitelist
+
+**Type:** `Address | undefined`
+
+If access to the protected data is granted to a group of users via a whitelist
+contract, you must use the userWhitelist parameter. The value should be the
+whitelist contract address that has access to the protected data.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...', // [!code focus]
+    app: '0x456def...',
+    userWhitelist: '0x656def...',
+  });
+```
+
 ### maxPrice
 
 **Type:** `number`
