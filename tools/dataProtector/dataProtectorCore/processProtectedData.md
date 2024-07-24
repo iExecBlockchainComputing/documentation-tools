@@ -37,7 +37,7 @@ const processProtectedDataResponse =
 import { type ProcessProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData <RequiredYesBadge />
+### protectedData <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -57,7 +57,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### app <RequiredYesBadge /> {#app-param}
+### app <RequiredBadge /> {#app-param}
 
 **Type:** `AddressOrENS`
 
@@ -77,7 +77,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### userWhitelist
+### userWhitelist <OptionalBadge />
 
 **Type:** `Address | undefined`
 
@@ -100,7 +100,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### maxPrice
+### maxPrice <OptionalBadge />
 
 **Type:** `number`
 
@@ -122,7 +122,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### args
+### args <OptionalBadge />
 
 **Type:** `string`
 
@@ -150,7 +150,7 @@ arguments passed this way are visible in plain text using the
 
 :::
 
-### inputFiles
+### inputFiles <OptionalBadge />
 
 **Type:** `string[]`
 
@@ -170,7 +170,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### secrets
+### secrets <OptionalBadge />
 
 **Type:** `Record<number, string>`
 
@@ -201,7 +201,7 @@ const processProtectedDataResponse = await dataProtectorCore.processProtectedDat
 ```
 <!-- prettier-ignore-end -->
 
-### workerpool
+### workerpool <OptionalBadge />
 
 **Type:** `AddressOrENS | 'any'`  
 **Default:** `prod-v8-bellecour.main.pools.iexec.eth`
@@ -235,7 +235,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
 **Type:** `OnStatusUpdateFn<ProcessProtectedDataStatuses>`
 

@@ -33,7 +33,7 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 import { type GetGrantedAccessParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <OptionalBadge />
 
 **Type:** `AddressOrENS`
 
@@ -55,7 +55,7 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 });
 ```
 
-### authorizedApp
+### authorizedApp <OptionalBadge />
 
 **Type:** `AddressOrENS`
 
@@ -89,7 +89,7 @@ explicitly granted access to that application address.
 
 :::
 
-### authorizedUser
+### authorizedUser <OptionalBadge />
 
 **Type:** `AddressOrENS`
 
@@ -111,7 +111,7 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 });
 ```
 
-### page
+### page <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `0`
@@ -137,7 +137,7 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 });
 ```
 
-### pageSize
+### pageSize <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `20`  

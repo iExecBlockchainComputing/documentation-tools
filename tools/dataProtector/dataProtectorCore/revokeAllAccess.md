@@ -26,9 +26,9 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 import { type RevokeAllAccessParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The address of the `protectedData` subject to access revocation.
 
@@ -43,9 +43,9 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 });
 ```
 
-### authorizedApp
+### authorizedApp <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 The application address to be removed from the authorization list for the
 specified `protectedData`. If no address is specified, it will revoke all access
@@ -64,9 +64,9 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 });
 ```
 
-### authorizedUser
+### authorizedUser <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 The user address to be removed from the authorization list for the specified
 `protectedData`. If no address is specified, it will revoke all access from the
@@ -85,9 +85,9 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<RevokeAllAccessStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<RevokeAllAccessStatuses>`
 
 Callback function to be notified at intermediate steps.
 

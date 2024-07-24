@@ -33,7 +33,7 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 import { type GrantAccessParams } from '@iexec/dataprotector';
 ```
 
-### protectedData <RequiredYesBadge />
+### protectedData <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -52,7 +52,7 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 });
 ```
 
-### authorizedApp <RequiredYesBadge />
+### authorizedApp <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -94,7 +94,7 @@ access once. The ETH address for this whitelist is
 
 :::
 
-### authorizedUser <RequiredYesBadge />
+### authorizedUser <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -122,10 +122,10 @@ You may authorize all users to use the protected data by setting this to
 
 :::
 
-### pricePerAccess
+### pricePerAccess <OptionalBadge />
 
 **Type:** `number`  
-**Default:** `1`
+**Default:** `0`
 
 Specifies the usage fee in nano RLC (nRLC) associated with each access of the
 data. It represents the cost incurred for each individual interaction with
@@ -162,7 +162,7 @@ When provided, `pricePerAccess` must be a non-negative integer value.
 
 :::
 
-### numberOfAccess
+### numberOfAccess <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `1`
@@ -188,9 +188,9 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<GrantAccessStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<GrantAccessStatuses>`
 
 Callback function to be notified at intermediate steps.
 

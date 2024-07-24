@@ -47,7 +47,7 @@ You need to either have:
 import { type ConsumeProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData <RequiredYesBadge />
+### protectedData <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -69,7 +69,7 @@ const consumeProtectedDataResult =
   });
 ```
 
-### app <RequiredYesBadge /> {#app-param}
+### app <RequiredBadge /> {#app-param}
 
 **Type:** `AddressOrENS`
 
@@ -113,7 +113,7 @@ For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
 
 :::
 
-### path
+### path <OptionalBadge />
 
 **Type:** `string`
 
@@ -138,7 +138,7 @@ const consumeProtectedDataResult =
   });
 ```
 
-### workerpool
+### workerpool <OptionalBadge />
 
 **Type:** `AddressOrENS`  
 **Default:** `prod-v8-bellecour.main.pools.iexec.eth`
@@ -170,7 +170,7 @@ default workerpool for running confidential computations on the iExec platform.
 
 :::
 
-### maxPrice
+### maxPrice <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `0`
@@ -196,7 +196,7 @@ const consumeProtectedDataResult =
   });
 ```
 
-### pemPublicKey
+### pemPublicKey <OptionalBadge />
 
 **Type:** `string`
 
@@ -225,7 +225,7 @@ const consumeProtectedDataResult =
   });
 ```
 
-### pemPrivateKey
+### pemPrivateKey <OptionalBadge />
 
 **Type:** `string`
 
@@ -255,7 +255,7 @@ const consumeProtectedDataResult =
   });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
 **Type:** `OnStatusUpdateFn<ConsumeProtectedDataStatuses>`
 

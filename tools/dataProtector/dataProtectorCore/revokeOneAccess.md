@@ -39,9 +39,9 @@ const revokeAccess = await dataProtectorCore.revokeOneAccess({
 import { type GrantedAccess } from '@iexec/dataprotector';
 ```
 
-### grantedAccess
+### grantedAccess <RequiredBadge />
 
-`GrantedAccess`
+**Type:** `GrantedAccess`
 
 This is the complete `granted access` object retrieved from an invocation of
 `fetchGrantedAccess`.
