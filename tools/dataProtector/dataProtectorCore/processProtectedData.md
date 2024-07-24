@@ -94,9 +94,9 @@ const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
-    protectedData: '0x123abc...', // [!code focus]
+    protectedData: '0x123abc...',
     app: '0x456def...',
-    userWhitelist: '0x656def...',
+    userWhitelist: '0x656def...', // [!code focus]
   });
 ```
 
