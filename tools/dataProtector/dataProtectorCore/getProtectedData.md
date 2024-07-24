@@ -35,7 +35,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 import { type GetProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### requiredSchema
+### requiredSchema <OptionalBadge />
 
 **Type:** `SearchableDataSchema`
 
@@ -56,7 +56,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 ```
 <!-- prettier-ignore-end -->
 
-### owner
+### owner <OptionalBadge />
 
 **Type:** `AddressOrENS`
 
@@ -74,7 +74,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 });
 ```
 
-### createdAfterTimestamp
+### createdAfterTimestamp <OptionalBadge />
 
 **Type:** `number`
 
@@ -93,7 +93,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 });
 ```
 
-### page
+### page <OptionalBadge />
 
 **Type:** `number`
 
@@ -114,7 +114,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 });
 ```
 
-### pageSize
+### pageSize <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `20`  

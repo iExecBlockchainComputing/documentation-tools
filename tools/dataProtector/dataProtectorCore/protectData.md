@@ -54,9 +54,9 @@ const protectedData = await dataProtectorCore.protectData({
 import { type ProtectDataParams } from '@iexec/dataprotector';
 ```
 
-### data
+### data <RequiredBadge />
 
-`DataObject`
+**Type:** `DataObject`
 
 This is the actual data the user is protecting, provided as a JSON object with
 any number of custom keys. The data is encrypted and stored as an NFT.
@@ -135,11 +135,10 @@ const protectedData = await dataProtectorCore.protectData({
 
 :::
 
-### name
+### name <OptionalBadge />
 
-`string | undefined`
-
-_default_: `Untitled`
+**Type:** `string`  
+**Default:** `''`
 
 Allows providing a descriptive name for the protected data. This is considered
 public metadata, describing the protected data.
@@ -164,9 +163,9 @@ The name is public and not encrypted.
 
 :::
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<ProtectDataStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<ProtectDataStatuses>`
 
 Callback function to be notified at intermediate steps.
 
