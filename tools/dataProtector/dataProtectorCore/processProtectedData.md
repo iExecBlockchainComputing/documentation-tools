@@ -82,7 +82,7 @@ const processProtectedDataResponse =
 **Type:** `Address`
 
 If access to the protected data is granted to a group of users via a whitelist
-contract, you must use the userWhitelist parameter. The value should be the
+contract, you must use this `userWhitelist` parameter. The value should be the
 whitelist contract address that has access to the protected data.
 
 ```ts twoslash
