@@ -18,19 +18,19 @@ system:
 ::: code-group
 
 ```sh [npm]
-npm install @iexec/dataprotector@beta --save-exact
+npm install @iexec/dataprotector --save-exact
 ```
 
 ```sh [yarn]
-yarn add @iexec/dataprotector@beta
+yarn add @iexec/dataprotector
 ```
 
 ```sh [pnpm]
-pnpm add @iexec/dataprotector@beta
+pnpm add @iexec/dataprotector
 ```
 
 ```sh [bun]
-bun add @iexec/dataprotector@beta
+bun add @iexec/dataprotector
 ```
 
 :::
