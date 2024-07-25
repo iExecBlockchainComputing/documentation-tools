@@ -109,7 +109,7 @@ For this `addOnlyAppWhitelist`, you are free to use
 `0x256bcd881c33bdf9df952f2a0148f27d439f2e64`.
 
 For more details on how to create and manage appsWhitelist, see
-[Apps whitelist](../../advanced/appsWhitelist.md).
+[Apps whitelist](../../advanced/apps-whitelist).
 
 :::
 

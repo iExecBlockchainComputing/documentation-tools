@@ -86,7 +86,7 @@ const rentResult = await dataProtectorSharing.rentProtectedData({
 ::: tip
 
 To get the renting price of the given protected data, you can use
-[getProtectedDataPricingParams](../misc/getProtectedDataPricingParams.md).
+[getProtectedDataPricingParams](../read/getProtectedDataPricingParams.md).
 
 :::
 
@@ -117,7 +117,7 @@ const rentResult = await dataProtectorSharing.rentProtectedData({
 ::: tip
 
 To get the renting duration of the given protected data, you can use
-[getProtectedDataPricingParams](../misc/getProtectedDataPricingParams.md).
+[getProtectedDataPricingParams](../read/getProtectedDataPricingParams.md).
 
 :::
 

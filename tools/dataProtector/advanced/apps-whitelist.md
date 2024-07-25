@@ -30,7 +30,7 @@ For this `addOnlyAppWhitelist`, you are free to use:
 ```
 
 that contains apps created for the purpose of
-[Content Creator usecase-demo](../../../overview/useCaseDemo/contentCreator.md).
+[Content Creator usecase-demo](../../../overview/use-case-demo/content-creator.md).
 This apps whitelist is managed by iExec.
 
 You can explore this apps whitelist on
@@ -48,7 +48,7 @@ dApp:
 <br />
 
 In the context of
-[Content Creator usecase-demo](/overview/useCaseDemo/contentCreator.html), the
+[Content Creator usecase-demo](/overview/use-case-demo/content-creator.html), the
 iExec TEE dApp is very simple:
 
 1. Download the protected data from IPFS. It expects to find a property named

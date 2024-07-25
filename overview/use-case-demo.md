@@ -6,7 +6,7 @@ applications to ensure data **privacy** and **ownership** while sharing and
 **monetizing computing resources**.
 
 These examples combine our tools in different ways. For example, the
-[privacy enhancing marketing](./useCaseDemo/privacyEnhancingMarketing.md) use
+[privacy enhancing marketing](./use-case-demo/privacy-enhancing-marketing.md) use
 case uses the Web3Mail tool to send directed marketing communications to a
 user's email address. It employs the DataProtector tool to hide the user's email
 address and personal information. Aspects of the DataProtector tool also allow
@@ -32,7 +32,7 @@ know they're interacting with distributed applications or the blockchain.
 They'll interact with your platform as always and you can provide them a greater
 assurance of privacy and control over their information.
 
-The [content creator](./useCaseDemo/contentCreator.md) use case, powered by our
+The [content creator](./use-case-demo/content-creator.md) use case, powered by our
 DataProtector API, gives a clean example of how our tools can integrate with
 your application. This use case showcases how a user can create and share
 content and use smart contracts to earn compensation when their content is

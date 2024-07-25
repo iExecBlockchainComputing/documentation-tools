@@ -9,6 +9,7 @@ import { getSidebar } from './sidebar';
 export default defineConfig({
   title: 'iExec tools',
   description: 'iExec documentation for dev tools',
+  cleanUrls: true, // Remove the trailing .html from URLs
   lastUpdated: true,
   markdown: {
     codeTransformers: [transformerTwoslash()],
@@ -37,13 +38,13 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Overview', link: '/overview/whatWeDo' },
+      { text: 'Overview', link: '/overview/what-we-do' },
       {
         text: 'Tools',
         items: [
           { text: 'DataProtector', link: '/tools/dataProtector' },
           { text: 'Web3Mail', link: '/tools/web3mail' },
-          { text: 'Oracle Factory', link: '/tools/oracleFactory' },
+          { text: 'Oracle Factory', link: '/tools/oracle-factory' },
         ],
       },
       { text: 'Contact Us', link: '/help/contact-us' },
