@@ -79,7 +79,7 @@ const processProtectedDataResponse =
 
 ### userWhitelist <OptionalBadge />
 
-**Type:** `Address | undefined`
+**Type:** `Address`
 
 If access to the protected data is granted to a group of users via a whitelist
 contract, you must use the userWhitelist parameter. The value should be the
