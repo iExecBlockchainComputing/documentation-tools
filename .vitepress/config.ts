@@ -9,6 +9,7 @@ import { getSidebar } from './sidebar';
 export default defineConfig({
   title: 'iExec tools',
   description: 'iExec documentation for dev tools',
+  cleanUrls: true, // Remove the trailing .html from URLs
   lastUpdated: true,
   markdown: {
     codeTransformers: [transformerTwoslash()],
@@ -26,17 +27,24 @@ export default defineConfig({
         href: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap',
       },
     ],
+    [
+      'script',
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-10RGBF003J',
+      },
+    ],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Overview', link: '/overview/whatWeDo' },
+      { text: 'Overview', link: '/overview/what-we-do' },
       {
         text: 'Tools',
         items: [
           { text: 'DataProtector', link: '/tools/dataProtector' },
           { text: 'Web3Mail', link: '/tools/web3mail' },
-          { text: 'Oracle Factory', link: '/tools/oracleFactory' },
+          { text: 'Oracle Factory', link: '/tools/oracle-factory' },
         ],
       },
       { text: 'Contact Us', link: '/help/contact-us' },

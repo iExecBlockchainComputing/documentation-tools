@@ -143,7 +143,7 @@ purpose of Content Creator usecase-demo. This `addOnlyAppWhitelist` is managed
 by iExec.
 
 For more details on how to create and manage appsWhitelist, see
-[Apps whitelist](../../advanced/appsWhitelist.md).
+[Apps whitelist](../../advanced/apps-whitelist).
 
 :::
 
