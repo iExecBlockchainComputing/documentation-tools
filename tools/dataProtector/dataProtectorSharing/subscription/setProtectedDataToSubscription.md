@@ -28,9 +28,9 @@ const setToSubscriptionResult =
 import { type SetProtectedDataToSubscriptionParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to be part of your subscription.
 

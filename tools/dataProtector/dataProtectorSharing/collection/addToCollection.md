@@ -32,9 +32,9 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 import { type AddToCollectionParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### collectionId <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Collection ID to which you'd like to add the protected data.
 
@@ -54,9 +54,9 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 });
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to add to your collection.
 
@@ -80,9 +80,9 @@ Before any smart contract interaction, the existence of the protected data will
 be checked, as well as the ownership: it should be the wallet address you used
 to instantiate DataProtector SDK.
 
-### addOnlyAppWhitelist
+### addOnlyAppWhitelist <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.
@@ -113,9 +113,9 @@ For more details on how to create and manage appsWhitelist, see
 
 :::
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<AddToCollectionStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<AddToCollectionStatuses>`
 
 Callback function to be notified at intermediate steps.
 

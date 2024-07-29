@@ -29,9 +29,9 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 import { type SetProtectedDataForSaleParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data that you'd like to set for sale.
 
@@ -50,9 +50,9 @@ const setForSaleResult = await dataProtectorSharing.setProtectedDataForSale({
 });
 ```
 
-### price
+### price <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 The price in nano RLC (nRLC) you ask from someone who wants to buy the protected
 data.

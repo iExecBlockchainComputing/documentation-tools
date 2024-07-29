@@ -19,9 +19,7 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-const collectionOwners = await dataProtectorSharing.getCollectionOwners({
-  limit: 100,
-});
+const collectionOwners = await dataProtectorSharing.getCollectionOwners();
 ```
 
 ## Parameters
@@ -30,13 +28,11 @@ const collectionOwners = await dataProtectorSharing.getCollectionOwners({
 import { type GetCollectionOwnersParams } from '@iexec/dataprotector';
 ```
 
-### limit
+### limit <OptionalBadge />
 
-`number | undefined`
-
-_default_: `100`
-
-Value between `1` and `1000`.
+**Type:** `number`  
+**Default:** `100`  
+**Range:** `[1...1000]`
 
 ```ts twoslash
 import {

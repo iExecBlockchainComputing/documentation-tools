@@ -23,9 +23,9 @@ const allAppOnlyAppWhitelistAvailable =
 import { type GetUserAppWhitelistParams } from '@iexec/dataprotector';
 ```
 
-### user
+### user <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 Address or ENS of the user that manages the `AddAppToAddOnlyAppWhitelist`
 

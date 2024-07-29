@@ -27,7 +27,9 @@ const setSubscriptionParamsResult =
 import { type SetSubscriptionParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### collectionId <RequiredBadge />
+
+**Type:** `number`
 
 Collection ID to which you'd like to set the subscription params.
 
@@ -48,7 +50,9 @@ const setSubscriptionParamsResult =
   });
 ```
 
-### price
+### price <RequiredBadge />
+
+**Type:** `number`
 
 The price in nano RLC (nRLC) it's going to cost a subscriber to access your
 collection.
@@ -70,7 +74,9 @@ const setSubscriptionParamsResult =
   });
 ```
 
-### duration
+### duration <RequiredBadge />
+
+**Type:** `number`
 
 The duration (in seconds) for a period of subscription.
 

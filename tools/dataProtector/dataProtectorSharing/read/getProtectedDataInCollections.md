@@ -27,9 +27,9 @@ const protectedData =
 import { type GetProtectedDataInCollectionsParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -46,9 +46,9 @@ const oneProtectedData =
   });
 ```
 
-### collectionId
+### collectionId <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 ```ts twoslash
 import {
@@ -65,9 +65,9 @@ const protectedDataByCollection =
   });
 ```
 
-### collectionOwner
+### collectionOwner <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -84,9 +84,9 @@ const protectedDataByOwner =
   });
 ```
 
-### createdAfterTimestamp
+### createdAfterTimestamp <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 ```ts twoslash
 import {
@@ -103,9 +103,9 @@ const latestProtectedData =
   });
 ```
 
-### isRentable
+### isRentable <OptionalBadge />
 
-`boolean | undefined`
+**Type:** `boolean`
 
 ```ts twoslash
 import {
@@ -122,9 +122,9 @@ const rentableProtectedData =
   });
 ```
 
-### isForSale
+### isForSale <OptionalBadge />
 
-`boolean | undefined`
+**Type:** `boolean`
 
 ```ts twoslash
 import {
@@ -141,9 +141,9 @@ const protectedDataForSale =
   });
 ```
 
-### isDistributed
+### isDistributed <OptionalBadge />
 
-`boolean | undefined`
+**Type:** `boolean`
 
 Used to filter protected data that are either for sale, renting or part of a
 subscription.
@@ -163,9 +163,9 @@ const protectedDataForSale =
   });
 ```
 
-### page
+### page <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 ```ts twoslash
 import {
@@ -183,11 +183,10 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 });
 ```
 
-### pageSize
+### pageSize <OptionalBadge />
 
-`number | undefined`
-
-Value between `10` and `1000`.
+**Type:** `number`
+**Range:** `[10...1000]`
 
 ```ts twoslash
 import {

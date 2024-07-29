@@ -40,9 +40,9 @@ const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 import { type RemoveProtectedDataFromSubscriptionParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to remove from subscription.
 

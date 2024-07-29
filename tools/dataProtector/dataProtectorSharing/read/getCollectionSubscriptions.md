@@ -28,9 +28,9 @@ const collectionActiveSubscriptions =
 import { type GetCollectionSubscriptionsParams } from '@iexec/dataprotector';
 ```
 
-### subscriberAddress
+### subscriberAddress <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -47,9 +47,9 @@ const userActiveSubscriptions =
   });
 ```
 
-### collectionId
+### collectionId <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 ```ts twoslash
 import {
@@ -66,11 +66,10 @@ const collectionActiveSubscriptions =
   });
 ```
 
-### includePastSubscriptions
+### includePastSubscriptions <OptionalBadge />
 
-`boolean | undefined`
-
-_default_: `false`
+**Type:** `boolean`  
+**Default:** `false`
 
 ```ts twoslash
 import {

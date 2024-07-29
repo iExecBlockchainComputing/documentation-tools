@@ -37,9 +37,9 @@ error.
 import { type RentProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address or ENS of the protected data that you'd like rent.
 
@@ -59,9 +59,9 @@ const rentResult = await dataProtectorSharing.rentProtectedData({
 });
 ```
 
-### price
+### price <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Price of the rental for the protected data that you expect to rent. This
 parameter ensures that you will not be front-run by the owner of the protected
@@ -90,9 +90,9 @@ To get the renting price of the given protected data, you can use
 
 :::
 
-### duration
+### duration <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Duration of the rental for the protected data that you expect to rent. This
 parameter ensures that you will not be front-run by the owner of the protected

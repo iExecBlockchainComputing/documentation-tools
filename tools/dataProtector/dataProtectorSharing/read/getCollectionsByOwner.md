@@ -24,9 +24,9 @@ const userCollections = await dataProtectorSharing.getCollectionsByOwner({
 import { type GetCollectionsByOwnerParams } from '@iexec/dataprotector';
 ```
 
-### owner
+### owner <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -42,11 +42,10 @@ const userCollections = await dataProtectorSharing.getCollectionsByOwner({
 });
 ```
 
-### includeHiddenProtectedDatas
+### includeHiddenProtectedDatas <OptionalBadge />
 
-`boolean | undefined`
-
-_default_: `false`
+**Type:** `boolean`  
+**Default:** `false`
 
 ```ts twoslash
 import {

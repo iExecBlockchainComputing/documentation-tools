@@ -27,9 +27,9 @@ const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
 import { type GetRentalsParams } from '@iexec/dataprotector';
 ```
 
-### renterAddress
+### renterAddress <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -45,9 +45,9 @@ const userActiveRentals = await dataProtectorSharing.getRentals({
 });
 ```
 
-### protectedData
+### protectedData <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -63,11 +63,10 @@ const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
 });
 ```
 
-### includePastRentals
+### includePastRentals <OptionalBadge />
 
-`boolean | undefined`
-
-_default_: `false`
+**Type:** `boolean`  
+**Default:** `false`
 
 ```ts twoslash
 import {

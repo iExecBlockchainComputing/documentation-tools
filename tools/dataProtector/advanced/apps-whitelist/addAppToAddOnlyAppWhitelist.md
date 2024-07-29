@@ -38,9 +38,9 @@ const isAddedToAddAppToAddOnlyAppWhitelist =
 import { type AddAppToAppWhitelistParams } from '@iexec/dataprotector';
 ```
 
-### addOnlyAppWhitelist
+### addOnlyAppWhitelist <RequiredBadge />
 
-`Address`
+**Type:** `Address`
 
 Address of the `addOnlyAppWhitelist` in which you want to add an app.
 
@@ -60,9 +60,9 @@ const isAddedToAddAppToAddOnlyAppWhitelist =
   });
 ```
 
-### app {#app-param}
+### app <RequiredBadge /> {#app-param}
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of app that you want to add to the `addOnlyAppWhitelist`.
 

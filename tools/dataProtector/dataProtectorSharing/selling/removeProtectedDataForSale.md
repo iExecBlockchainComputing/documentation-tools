@@ -25,9 +25,9 @@ const notForSaleAnymoreResult =
 import { type RemoveProtectedDataForSaleParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data that you'd like to remove for sale.
 

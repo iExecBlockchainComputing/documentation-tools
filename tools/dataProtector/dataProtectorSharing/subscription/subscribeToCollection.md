@@ -48,9 +48,9 @@ error.
 import { type SubscribeToCollectionParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### collectionId <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Collection ID to which you'd like to subscribe.
 
@@ -70,9 +70,9 @@ const { txHash } = await dataProtectorSharing.subscribeToCollection({
 });
 ```
 
-### price
+### price <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Price of the rental for the protected data that you expect to rent. This
 parameter ensures that you will not be front-run by the owner of the protected
@@ -94,9 +94,9 @@ const { txHash } = await dataProtectorSharing.subscribeToCollection({
 });
 ```
 
-### duration
+### duration <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Duration of the rental for the protected data that you expect to rent. This
 parameter ensures that you will not be front-run by the owner of the protected

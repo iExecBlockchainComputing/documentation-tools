@@ -31,11 +31,11 @@ const setForRentingResult =
 import { type SetProtectedDataToRentingParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
-Address of the protected data you'd like to set renting parameters.
+Address of the protected data you'd like to set renting parameters for.
 
 ```ts twoslash
 import {
@@ -54,9 +54,9 @@ const setForRentingResult =
   });
 ```
 
-### price
+### price <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 The price in nano RLC (nRLC) you ask from someone who wants to rent the
 protected data.
@@ -78,9 +78,9 @@ const setForRentingResult =
   });
 ```
 
-### duration
+### duration <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 The duration of the rental in seconds.
 

@@ -25,9 +25,9 @@ const completedTaskResult =
 import { type GetResultFromCompletedTaskParams } from '@iexec/dataprotector';
 ```
 
-### taskId
+### taskId <RequiredBadge />
 
-`AddressOrEN`
+**Type:** `Address`
 
 Address of the task ID data you'd like to get the result from.
 
@@ -46,9 +46,9 @@ const completedTaskResult =
   });
 ```
 
-### path
+### path <OptionalBadge />
 
-`string | undefined`
+**Type:** `string`
 
 Under the hood, a protected data is a zip file. With this `path` parameter, you
 can specify the file you're interested in. The zip file will be uncompressed for
@@ -70,9 +70,9 @@ const completedTaskResult =
   });
 ```
 
-### pemPrivateKey
+### pemPrivateKey <OptionalBadge />
 
-`string | undefined`
+**Type:** `string`
 
 If you have previously saved or generated a RSA keypair, you can reuse it in
 further calls.
@@ -97,9 +97,9 @@ const completedTaskResult =
   });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<ConsumeProtectedDataStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<ConsumeProtectedDataStatuses>`
 
 Callback function to be notified at intermediate steps.
 

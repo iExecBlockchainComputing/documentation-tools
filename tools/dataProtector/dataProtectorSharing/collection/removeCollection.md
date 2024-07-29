@@ -33,9 +33,9 @@ const { txHash } = await dataProtectorSharing.removeCollection({
 import { type RemoveCollectionParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### collectionId <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 The collection ID of the collection you want to remove.
 

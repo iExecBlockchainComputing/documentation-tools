@@ -38,9 +38,9 @@ const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 import { type BuyProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to buy.
 
@@ -59,9 +59,9 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 });
 ```
 
-### price
+### price <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Price of the protected data that you expect to buy. This parameter ensures that
 you will not be front-run by the owner of the protected data. The unit is in
@@ -82,9 +82,9 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 });
 ```
 
-### addToCollectionId
+### addToCollectionId <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 Collection ID to which you'd like to transfer the ownership of the protected
 data.  
@@ -111,9 +111,9 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 });
 ```
 
-### addOnlyAppWhitelist
+### addOnlyAppWhitelist <OptionalBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.

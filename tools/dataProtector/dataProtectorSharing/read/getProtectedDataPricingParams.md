@@ -24,9 +24,9 @@ const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
 import { type GetProtectedDataPricingParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to get the pricing params for.
 
