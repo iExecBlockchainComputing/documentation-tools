@@ -9,7 +9,8 @@ import { getSidebar } from './sidebar';
 export default defineConfig({
   title: 'iExec tools',
   description: 'iExec documentation for dev tools',
-  cleanUrls: true, // Remove the trailing .html from URLs
+  // Remove the trailing .html from URLs. Also needs the same option in vercel.json
+  cleanUrls: true,
   lastUpdated: true,
   markdown: {
     codeTransformers: [transformerTwoslash()],
