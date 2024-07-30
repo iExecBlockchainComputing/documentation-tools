@@ -185,7 +185,7 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 
 ### pageSize <OptionalBadge />
 
-**Type:** `number`
+**Type:** `number`  
 **Range:** `[10...1000]`
 
 ```ts twoslash
