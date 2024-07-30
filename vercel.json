@@ -1,8 +1,8 @@
 {
   "redirects": [
     {
-      "source": "/dataprotector/:path*",
-      "destination": "/dataProtector/:path*"
+      "source": "/tools/dataprotector/:path*",
+      "destination": "/tools/dataProtector/:path*"
     }
   ]
 }
