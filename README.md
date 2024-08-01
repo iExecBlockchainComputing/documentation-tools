@@ -1,7 +1,7 @@
 # iExec Tools documentation
 
 This is the source repository of the
-[iExec tools documentation](https://beta.tools.docs.iex.ec)
+[iExec tools documentation](https://tools.docs.iex.ec)
 
 ## Contributing
 
@@ -9,9 +9,9 @@ To keep the contribution process smooth, please read this small guide.
 
 ### Fork
 
-Fork the `v2` branch
+Fork the repo and be sure to be on `main` branch
 
-[![fork-button](/fork-button.png)](https://github.com/iExecBlockchainComputing/documentation-tools/fork)
+[![fork-button](./public/fork-button.png)](https://github.com/iExecBlockchainComputing/documentation-tools/fork)
 
 ### Contribute
 
@@ -22,13 +22,7 @@ Push your changes to your forked branch.
 
 ### PR time
 
-Open a pull request from your forked branch to the `v2` branch.
-
-A preview of your changes will be rendered on a preview environment.
-
-![PR-preview](/PR-preview.png)
-
-Click on the "Details" link to access the preview.
+Open a pull request from your forked branch to our `main` branch.
 
 > _**Tips:**_  
 > You can open a draft pull request and set it to "Ready for review" once you
