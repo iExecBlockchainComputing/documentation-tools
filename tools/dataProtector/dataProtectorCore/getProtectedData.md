@@ -21,7 +21,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   requiredSchema: {
@@ -36,7 +35,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 import { type GetProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### requiredSchema
+### requiredSchema <OptionalBadge />
 
 **Type:** `SearchableDataSchema`
 
@@ -49,7 +48,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   requiredSchema: { // [!code focus]
     email: 'string', // [!code focus]
@@ -58,7 +56,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 ```
 <!-- prettier-ignore-end -->
 
-### owner
+### owner <OptionalBadge />
 
 **Type:** `AddressOrENS`
 
@@ -71,13 +69,12 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...', // [!code focus]
 });
 ```
 
-### createdAfterTimestamp
+### createdAfterTimestamp <OptionalBadge />
 
 **Type:** `number`
 
@@ -90,14 +87,13 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT // [!code focus]
 });
 ```
 
-### page
+### page <OptionalBadge />
 
 **Type:** `number`
 
@@ -111,7 +107,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT
@@ -119,7 +114,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 });
 ```
 
-### pageSize
+### pageSize <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `20`  
@@ -135,7 +130,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT

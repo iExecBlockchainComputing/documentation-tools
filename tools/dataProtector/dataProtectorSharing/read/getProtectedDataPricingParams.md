@@ -13,7 +13,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
   protectedData: '0x123abc...',
 });
@@ -25,9 +24,9 @@ const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
 import { type GetProtectedDataPricingParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to get the pricing params for.
 
@@ -40,7 +39,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
   protectedData: '0x123abc...', // [!code focus]
 });

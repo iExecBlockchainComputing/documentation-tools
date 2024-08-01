@@ -21,7 +21,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: {
     email: 'example@gmail.com',
@@ -38,7 +37,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: {
     email: 'example@gmail.com',
@@ -56,9 +54,9 @@ const protectedData = await dataProtectorCore.protectData({
 import { type ProtectDataParams } from '@iexec/dataprotector';
 ```
 
-### data
+### data <RequiredBadge />
 
-`DataObject`
+**Type:** `DataObject`
 
 This is the actual data the user is protecting, provided as a JSON object with
 any number of custom keys. The data is encrypted and stored as an NFT.
@@ -70,7 +68,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: { // [!code focus]
     email: 'example@gmail.com', // [!code focus]
@@ -87,7 +84,6 @@ of buffer. To do so, you can use `createArrayBufferFromFile`.
 ```ts twoslash
 const file: File = new File([], 'emptyFile.txt');
 // ---cut---
-
 import { createArrayBufferFromFile } from '@iexec/dataprotector';
 
 const fileAsArrayBuffer = await createArrayBufferFromFile(file);
@@ -107,7 +103,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const reduceArray = (array: Array<any>): Record<string, any> =>
   array.reduce((accumulator, current, i) => {
     accumulator[i] = current;
@@ -140,11 +135,10 @@ const protectedData = await dataProtectorCore.protectData({
 
 :::
 
-### name
+### name <OptionalBadge />
 
-`string | undefined`
-
-_default_: `Untitled`
+**Type:** `string`  
+**Default:** `''`
 
 Allows providing a descriptive name for the protected data. This is considered
 public metadata, describing the protected data.
@@ -155,7 +149,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail', // [!code focus]
   data: {
@@ -170,9 +163,9 @@ The name is public and not encrypted.
 
 :::
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<ProtectDataStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<ProtectDataStatuses>`
 
 Callback function to be notified at intermediate steps.
 
@@ -183,7 +176,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail',
   data: {

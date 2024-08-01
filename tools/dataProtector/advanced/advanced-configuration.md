@@ -27,7 +27,6 @@ import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const dataProtector = new IExecDataProtector(web3Provider, {
   dataprotectorContractAddress: '0x123abc...', // [!code focus]
 });
@@ -46,7 +45,6 @@ import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const dataProtector = new IExecDataProtector(web3Provider, {
   sharingContractAddress: '0x123abc...', // [!code focus]
 });
@@ -66,7 +64,6 @@ import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const dataProtector = new IExecDataProtector(web3Provider, {
   subgraphUrl:
     'https://thegraph-product.iex.ec/subgraphs/name/bellecour/dataprotector', // [!code focus]
@@ -87,7 +84,6 @@ import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const dataProtector = new IExecDataProtector(web3Provider, {
   ipfsNode: 'https://ipfs-upload.v8-bellecour.iex.ec', // [!code focus]
 });
@@ -108,7 +104,6 @@ import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const dataProtector = new IExecDataProtector(web3Provider, {
   ipfsGateway: 'https://ipfs-gateway.v8-bellecour.iex.ec', // [!code focus]
 });
@@ -125,7 +120,6 @@ import { IExecDataProtector, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-
 const dataProtector = new IExecDataProtector(web3Provider, {
   iexecOptions: { smsURL: 'https://sms.scone-prod.v8-bellecour.iex.ec' }, // [!code focus]
 });

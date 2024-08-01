@@ -5,7 +5,7 @@ import { VPBadge } from 'vitepress/theme';
 <template>
   <VPBadge
     type="tip"
-    text="required"
-    style="background-color: var(--vp-c-yellow-soft); margin-top: 1px"
+    text="Optional"
+    style="background-color: var(--vp-c-gray-soft); margin-top: 1px"
   />
 </template>

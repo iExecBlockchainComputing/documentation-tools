@@ -13,7 +13,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const userCollections = await dataProtectorSharing.getCollectionsByOwner({
   owner: '0xa0c15e...',
 });
@@ -25,9 +24,9 @@ const userCollections = await dataProtectorSharing.getCollectionsByOwner({
 import { type GetCollectionsByOwnerParams } from '@iexec/dataprotector';
 ```
 
-### owner
+### owner <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -38,17 +37,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const userCollections = await dataProtectorSharing.getCollectionsByOwner({
   owner: '0xa0c15e...', // [!code focus]
 });
 ```
 
-### includeHiddenProtectedDatas
+### includeHiddenProtectedDatas <OptionalBadge />
 
-`boolean | undefined`
-
-_default_: `false`
+**Type:** `boolean`  
+**Default:** `false`
 
 ```ts twoslash
 import {
@@ -59,7 +56,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const userCollectionsWithAllProtectedData =
   await dataProtectorSharing.getCollectionsByOwner({
     owner: '0xa0c15e...',

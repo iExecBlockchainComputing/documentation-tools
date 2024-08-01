@@ -19,7 +19,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedData: '0x123abc...',
   collectionId: 12,
@@ -33,9 +32,9 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 import { type AddToCollectionParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### collectionId <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Collection ID to which you'd like to add the protected data.
 
@@ -48,7 +47,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12, // [!code focus]
   protectedData: '0x123abc...',
@@ -56,9 +54,9 @@ const { txHash } = await dataProtectorSharing.addToCollection({
 });
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to add to your collection.
 
@@ -71,7 +69,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...', // [!code focus]
@@ -83,9 +80,9 @@ Before any smart contract interaction, the existence of the protected data will
 be checked, as well as the ownership: it should be the wallet address you used
 to instantiate DataProtector SDK.
 
-### addOnlyAppWhitelist
+### addOnlyAppWhitelist <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.
@@ -99,7 +96,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   collectionId: 12,
   protectedData: '0x123abc...',
@@ -113,13 +109,13 @@ For this `addOnlyAppWhitelist`, you are free to use
 `0x256bcd881c33bdf9df952f2a0148f27d439f2e64`.
 
 For more details on how to create and manage appsWhitelist, see
-[Apps whitelist](../../advanced/appsWhitelist.md).
+[Apps whitelist](../../advanced/apps-whitelist).
 
 :::
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<AddToCollectionStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<AddToCollectionStatuses>`
 
 Callback function to be notified at intermediate steps.
 
@@ -133,7 +129,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.addToCollection({
   protectedData: '0x123abc...',
   collectionId: 12,

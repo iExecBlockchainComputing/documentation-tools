@@ -17,7 +17,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -38,7 +37,7 @@ const processProtectedDataResponse =
 import { type ProcessProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData <RequiredYesBadge />
+### protectedData <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -51,7 +50,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...', // [!code focus]
@@ -59,7 +57,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### app <RequiredYesBadge /> {#app-param}
+### app <RequiredBadge /> {#app-param}
 
 **Type:** `AddressOrENS`
 
@@ -72,7 +70,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -80,7 +77,29 @@ const processProtectedDataResponse =
   });
 ```
 
-### maxPrice
+### userWhitelist <OptionalBadge />
+
+**Type:** `Address`
+
+If access to the protected data is granted to a group of users via a whitelist
+contract, you must use this `userWhitelist` parameter. The value should be the
+whitelist contract address that has access to the protected data.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    userWhitelist: '0x656def...', // [!code focus]
+  });
+```
+
+### maxPrice <OptionalBadge />
 
 **Type:** `number`
 
@@ -94,7 +113,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -103,7 +121,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### args
+### args <OptionalBadge />
 
 **Type:** `string`
 
@@ -115,7 +133,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -132,7 +149,7 @@ arguments passed this way are visible in plain text using the
 
 :::
 
-### inputFiles
+### inputFiles <OptionalBadge />
 
 **Type:** `string[]`
 
@@ -144,7 +161,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -153,7 +169,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### secrets
+### secrets <OptionalBadge />
 
 **Type:** `Record<number, string>`
 
@@ -172,7 +188,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0x456def...',
@@ -185,7 +200,7 @@ const processProtectedDataResponse = await dataProtectorCore.processProtectedDat
 ```
 <!-- prettier-ignore-end -->
 
-### workerpool
+### workerpool <OptionalBadge />
 
 **Type:** `AddressOrENS | 'any'`  
 **Default:** `prod-v8-bellecour.main.pools.iexec.eth`
@@ -211,7 +226,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -220,7 +234,7 @@ const processProtectedDataResponse =
   });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
 **Type:** `OnStatusUpdateFn<ProcessProtectedDataStatuses>`
 
@@ -233,7 +247,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0x456def...',

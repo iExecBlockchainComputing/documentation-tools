@@ -16,7 +16,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.removeCollection({
   collectionId: 15,
 });
@@ -34,9 +33,9 @@ const { txHash } = await dataProtectorSharing.removeCollection({
 import { type RemoveCollectionParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### collectionId <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 The collection ID of the collection you want to remove.
 
@@ -49,7 +48,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.removeCollection({
   collectionId: 15, // [!code focus]
 });

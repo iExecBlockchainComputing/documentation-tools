@@ -18,7 +18,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -34,7 +33,7 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 import { type GetGrantedAccessParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <OptionalBadge />
 
 **Type:** `AddressOrENS`
 
@@ -51,13 +50,12 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...', // [!code focus]
 });
 ```
 
-### authorizedApp
+### authorizedApp <OptionalBadge />
 
 **Type:** `AddressOrENS`
 
@@ -74,7 +72,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   authorizedApp: '0x456def...', // [!code focus]
 });
@@ -92,7 +89,7 @@ explicitly granted access to that application address.
 
 :::
 
-### authorizedUser
+### authorizedUser <OptionalBadge />
 
 **Type:** `AddressOrENS`
 
@@ -109,13 +106,12 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   authorizedUser: '0x789cba...', // [!code focus]
 });
 ```
 
-### page
+### page <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `0`
@@ -134,7 +130,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   page: 1, // [!code focus]
@@ -142,7 +137,7 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 });
 ```
 
-### pageSize
+### pageSize <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `20`  
@@ -160,7 +155,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   protectedData: '0x123abc...',
   page: 1,

@@ -17,7 +17,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
     protectedData: '0x123abc...',
@@ -32,11 +31,11 @@ const setForRentingResult =
 import { type SetProtectedDataToRentingParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
-Address of the protected data you'd like to set renting parameters.
+Address of the protected data you'd like to set renting parameters for.
 
 ```ts twoslash
 import {
@@ -47,7 +46,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
     protectedData: '0x123abc...', // [!code focus]
@@ -56,9 +54,9 @@ const setForRentingResult =
   });
 ```
 
-### price
+### price <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 The price in nano RLC (nRLC) you ask from someone who wants to rent the
 protected data.
@@ -72,7 +70,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
     protectedData: '0x123abc...',
@@ -81,9 +78,9 @@ const setForRentingResult =
   });
 ```
 
-### duration
+### duration <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 The duration of the rental in seconds.
 
@@ -96,7 +93,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setForRentingResult =
   await dataProtectorSharing.setProtectedDataToRenting({
     protectedData: '0x123abc...',

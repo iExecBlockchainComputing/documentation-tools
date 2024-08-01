@@ -15,7 +15,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -34,7 +33,7 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 import { type GrantAccessParams } from '@iexec/dataprotector';
 ```
 
-### protectedData <RequiredYesBadge />
+### protectedData <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -46,7 +45,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...', // [!code focus]
   authorizedApp: '0x456def...',
@@ -54,7 +52,7 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 });
 ```
 
-### authorizedApp <RequiredYesBadge />
+### authorizedApp <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -73,7 +71,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
@@ -89,15 +86,15 @@ data.
 iExec uses the ENS `web3mail.apps.iexec.eth` for the latest version of the
 Web3Mail decentralized application.
 
-iExec also maintains a whitelist for the Web3Mail decentralized application.
-Granting access to this whitelist allows use of an email `protectedData` with
-all versions of the Web3Mail application, ensuring you only have to grant this
-access once. The ETH address for this whitelist is
+iExec also maintains a whitelist for current and past versions of Web3Mail
+dApps. Granting access to this whitelist allows use of an email `protectedData`
+with all versions of the Web3Mail application, ensuring you only have to grant
+this access once. The ETH address for this whitelist is
 **0x781482C39CcE25546583EaC4957Fb7Bf04C277D2**.
 
 :::
 
-### authorizedUser <RequiredYesBadge />
+### authorizedUser <RequiredBadge />
 
 **Type:** `AddressOrENS`
 
@@ -111,7 +108,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -126,10 +122,10 @@ You may authorize all users to use the protected data by setting this to
 
 :::
 
-### pricePerAccess
+### pricePerAccess <OptionalBadge />
 
 **Type:** `number`  
-**Default:** `1`
+**Default:** `0`
 
 Specifies the usage fee in nano RLC (nRLC) associated with each access of the
 data. It represents the cost incurred for each individual interaction with
@@ -148,7 +144,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -167,7 +162,7 @@ When provided, `pricePerAccess` must be a non-negative integer value.
 
 :::
 
-### numberOfAccess
+### numberOfAccess <OptionalBadge />
 
 **Type:** `number`  
 **Default:** `1`
@@ -184,7 +179,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -194,9 +188,9 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<GrantAccessStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<GrantAccessStatuses>`
 
 Callback function to be notified at intermediate steps.
 
@@ -207,7 +201,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
