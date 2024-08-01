@@ -266,10 +266,6 @@ export function getSidebar() {
             text: 'Migrate from v1 to v2',
             link: '/tools/dataProtector/migrate-from-v1',
           },
-          {
-            text: 'v1 documentation',
-            link: 'https://tools.docs.iex.ec/tools/dataprotector',
-          },
         ],
       },
       {
