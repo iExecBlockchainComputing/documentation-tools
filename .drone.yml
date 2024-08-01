@@ -4,7 +4,7 @@ name: main-ci
 
 trigger:
   event: push
-  branch: v2
+  branch: main
 
 steps:
   - name: npm install
