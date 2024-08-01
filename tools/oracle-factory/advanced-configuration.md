@@ -13,10 +13,10 @@ new IExecOracleFactory(ethProvider, options);
 ### oracleApp
 
 The Ethereum contract address or ENS (Ethereum Name Service) for the generic
-oracle dapp.
+oracle dApp.
 
 If not provided, the default ENS `oracle-factory.apps.iexec.eth` pointing to the
-latest version of the dapp provided by iExec will be used.
+latest version of the dApp provided by iExec will be used.
 
 ```js
 new IExecOracleFactory(ethProvider, {

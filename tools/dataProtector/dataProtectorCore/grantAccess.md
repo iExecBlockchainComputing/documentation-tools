@@ -86,10 +86,10 @@ data.
 iExec uses the ENS `web3mail.apps.iexec.eth` for the latest version of the
 Web3Mail decentralized application.
 
-iExec also maintains a whitelist for the Web3Mail decentralized application.
-Granting access to this whitelist allows use of an email `protectedData` with
-all versions of the Web3Mail application, ensuring you only have to grant this
-access once. The ETH address for this whitelist is
+iExec also maintains a whitelist for current and past versions of Web3Mail
+dApps. Granting access to this whitelist allows use of an email `protectedData`
+with all versions of the Web3Mail application, ensuring you only have to grant
+this access once. The ETH address for this whitelist is
 **0x781482C39CcE25546583EaC4957Fb7Bf04C277D2**.
 
 :::
