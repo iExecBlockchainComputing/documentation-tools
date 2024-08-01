@@ -25,6 +25,10 @@ monetization.
   ✉ &nbsp;Web3Mail
 </a>
 
+<a href="./tools/web3telegram" class="link-for-home">
+  💬 &nbsp;Web3Telegram
+</a>
+
 <a href="./tools/oracle-factory" class="link-for-home">
   🧙 &nbsp;Oracle Factory
 </a>

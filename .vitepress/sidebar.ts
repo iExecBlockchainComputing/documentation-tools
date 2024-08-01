@@ -306,6 +306,39 @@ export function getSidebar() {
         ],
       },
       {
+        text: '💬&nbsp;&nbsp;Web3telegram',
+        link: '/tools/web3telegram',
+        collapsed: false,
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/tools/web3telegram/getting-started',
+          },
+          {
+            text: 'Methods',
+            collapsed: true,
+            items: [
+              {
+                text: 'fetchMyContacts',
+                link: '/tools/web3telegram/methods/fetchMyContacts',
+              },
+              {
+                text: 'fetchUserContacts',
+                link: '/tools/web3telegram/methods/fetchUserContacts',
+              },
+              {
+                text: 'sendTelegram',
+                link: '/tools/web3telegram/methods/sendTelegram',
+              },
+            ],
+          },
+          {
+            text: 'Usage',
+            link: '/tools/web3telegram/usage',
+          },
+        ],
+      },
+      {
         text: '🧙&nbsp;&nbsp;Oracle Factory',
         link: '/tools/oracle-factory',
         collapsed: false,
