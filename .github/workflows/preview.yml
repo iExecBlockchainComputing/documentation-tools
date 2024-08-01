@@ -6,8 +6,8 @@ env:
 
 on:
   push:
-    branches:
-      - v2-greg
+    branches-ignore:
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -33,9 +33,9 @@ jobs:
       - name: Check Prettier
         run: npm run check-format
 
-      - name: Vercel deploy to preview-greg
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      - name: Vercel deploy to preview
         run: |
-          chmod +x ./deployDomain.sh
-          ./deployDomain.sh
+          npm install --global vercel@latest
+          vercel pull --yes --scope i-exec --token=${{ secrets.VERCEL_TOKEN }}
+          vercel build --scope i-exec --token=${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prebuilt --scope i-exec --token=${{ secrets.VERCEL_TOKEN }}
