@@ -309,21 +309,27 @@ try {
 
 ### Protected data schema error
 
-Obviously to be able to send an email to a protected data, it needs to contain an email address.
+Obviously to be able to send an email to a protected data, it needs to contain
+an email address.
 
-Prior to sending an email, we'll check if the given protected data contains in its schema:
+Prior to sending an email, we'll check if the given protected data contains in
+its schema:
+
 ```json5
 { id: 'email:string' }
 ```
 
 If not, you'll get an `Error` with a message of:
+
 ```
 This protected data does not contain "email:string" in its schema.
 ```
 
 ### iExec protocol errors
 
-In case the iExec stack is to blame, we'll make it clear and you'll get a specific `WorkflowError`:
+In case the iExec stack is to blame, we'll make it clear and you'll get a
+specific `WorkflowError`:
+
 ```json5
 {
   message: "A service in the iExec protocol appears to be unavailable. You can retry later or contact iExec's technical support for help.",
