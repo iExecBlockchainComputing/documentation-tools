@@ -276,3 +276,69 @@ import { type SendEmailResponse } from '@iexec/web3mail';
 This uniquely identifies the email task on the iExec side chain. You can view
 the status of the `sendEmail` method by monitoring the task on the
 [iExec Explorer](https://explorer.iex.ec/bellecour).
+
+## Error handling
+
+### Validation errors
+
+We use [yup](https://github.com/jquense/yup) to validate input parameters.
+
+In case one is not valid, you'll get **a yup ValidationError**.
+
+Example to check received Validation errors:
+
+```ts
+import { ValidationError } from '@iexec/web3mail';
+
+try {
+  await web3mail.sendEmail({
+    protectedData,
+    senderName: 'ab',
+    emailSubject,
+    emailContent,
+  });
+} catch (err) {
+  console.error(err.message); // "senderName must be at least 3 characters"
+
+  // Or list all validation errors:
+  if (err instanceof ValidationError) {
+    console.error('Validation errors:', (err as ValidationError).errors);
+  }
+}
+```
+
+### Protected data schema error
+
+Obviously to be able to send an email to a protected data, it needs to contain an email address.
+
+Prior to sending an email, we'll check if the given protected data contains in its schema:
+```json5
+{ id: 'email:string' }
+```
+
+If not, you'll get an `Error` with a message of:
+```
+This protected data does not contain "email:string" in its schema.
+```
+
+### iExec protocol errors
+
+In case the iExec stack is to blame, we'll make it clear and you'll get a specific `WorkflowError`:
+```json5
+{
+  message: "A service in the iExec protocol appears to be unavailable. You can retry later or contact iExec's technical support for help.",
+  errorCause: <Original error>,
+  isProtocolError: true,
+}
+```
+
+### Workflow errors
+
+For any other errors, you'll get a Workflow error.
+
+```json5
+{
+  message: 'Failed to sendEmail',
+  errorCause: <Original error>,
+}
+```
