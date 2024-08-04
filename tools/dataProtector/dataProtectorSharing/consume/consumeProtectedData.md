@@ -100,7 +100,9 @@ For this `app` parameter you can use the following iExec TEE app:
 0x1cb7D4F3FFa203F211e57357D759321C6CE49921
 ```
 
-For more details, see [Apps whitelist](../../advanced/apps-whitelist).
+⚠️ Please note: This application and its whitelist can only be used within the
+dataProtectorSharing module, as it is owned by the sharingContract. For more
+details, see [Apps whitelist](../../advanced/apps-whitelist).
 
 :::
 
