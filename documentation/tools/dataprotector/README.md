@@ -1,17 +1,25 @@
 # 🔐 DataProtector
 
-DataProtector offers developers methods to create apps that give users unparalleled ownership and privacy over their data.&#x20;
+{% hint style="info" %}
+We have recently released **a new version** of the DataProtector SDK.<br/>
+Check out the [latest documentation](https://beta.tools.docs.iex.ec/tools/dataProtector.html) 🎉
+{% endhint %}
 
-Through DataProtector, users may allow iExec apps to use their data without ever revealing the data itself. This revolutionary approach to data management relies on:
+The DataProtector tool allows application developers to provide users with unparalleled ownership over their data. End users gain the ability to invoke iExec apps without ever exposing their data to any other party. They gain complete privacy of personally identifiable information (PII) or other sensitive classes of data. 
 
-* end-to-end encryption backed by a confidential computing technology that prevents iExec apps from accessing users’ unencrypted data
-* smart contracts that manage iExec apps’ rights to use users’ encrypted data
+This approach to data management relies on:
 
-DataProtector bundles 6 methods:
+* end-to-end encryption of data with access controlled entirely by the owner of the data
+* confidential computing technology that ensures only authorized apps are permitted access to a user's data
+* smart contracts to manage an iExec application's permissions for a user's encrypted data
 
-* **protectData**—that safeguards any data. It takes responsibility for encrypting the data and recording ownership on a smart contract
-* **grantAccess**—that authorizes an app to use users’ data without ever revealing the data itself
-* **revokeAllAccessObservable**—that revokes all iExec apps' access to users’ data
-* **revokeOneAccess**—that revokes an app's access to users’ data
-* **fetchProtectedData**—that retrieves data protected by DataProtector
-* **fetchGrantedAccess**—that provides the list of authorization with associated iExec apps and users to use existing protected data
+The DataProtector SDK encompasses the following suite of methods:
+
+* **protectData**—safeguards data by encrypting it and recording ownership as an NFT
+* **grantAccess**—authorizes an application to process a user's data without exposing the data to any external system or user review
+* **revokeAllAccessObservable**—removes all access granted to any iExec applications or user for a `protectedData` object
+* **revokeOneAccess**—removes a specific access previously granted on a `protectedData`
+* **fetchProtectedData**—retrieve a list of all protected data for one owner and/or data schema
+* **fetchGrantedAccess**—retrieve a list of all authorized users and applications for a `protectedData` object containing a user's data
+* **processProtectedData**—process a `protectedData` object containing a user's data with a specified iExec application
+* **transferOwnership**—transfer a protectedData object to a new owner

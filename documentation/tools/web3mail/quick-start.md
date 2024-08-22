@@ -60,15 +60,15 @@ bun add @iexec/web3mail
 {% endtab %}
 {% endtabs %}
 
-**This package is an ESM package. Your project needs to be ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
+**This package is an ESM package. Your project needs to use ESM too.** [**Read more**](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)**.**
 
-If you use it with Webpack, you need the latest Webpack version and ensure you configure it correctly for ESM.
+When deployed with WebPack, the Web3Mail tool requires WebPack version 5 or greater. You can refer to our [sample WebPack project](https://github.com/iExecBlockchainComputing/web3mail-sdk/tree/main/demo/browser-webpack) for more information.
 
 ### **2.4. Instantiate SDK**
 
 {% tabs %}
 {% tab title="Browser" %}
-Instantiate the SDK in your front-end project:
+Instantiate the SDK in your frontend project:
 
 #### 2.4.1. Basic Instantiation
 
@@ -83,7 +83,7 @@ const web3mail = new IExecWeb3mail(web3Provider);
 {% endtab %}
 
 {% tab title="NodeJS" %}
-Instantiate the SDK in your back-end project:
+Instantiate the SDK in your backend project:
 
 #### 2.4.1. Basic Instantiation
 
