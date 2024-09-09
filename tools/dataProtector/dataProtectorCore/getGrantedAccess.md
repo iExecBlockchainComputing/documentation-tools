@@ -131,8 +131,6 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
   authorizedApp: '0x456def...',
   authorizedUser: '0x789cba...',
   isUserStrict: true, // [!code focus]
-  page: 1,
-  pageSize: 100,
 });
 ```
 
