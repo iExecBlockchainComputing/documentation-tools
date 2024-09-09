@@ -21,7 +21,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   requiredSchema: {
@@ -36,9 +35,9 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 import { type GetProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### requiredSchema
+### requiredSchema <OptionalBadge />
 
-`DataSchema | undefined`
+**Type:** `SearchableDataSchema`
 
 Provides a list of protected data objects matching this schema.
 
@@ -49,7 +48,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   requiredSchema: { // [!code focus]
     email: 'string', // [!code focus]
@@ -58,9 +56,9 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 ```
 <!-- prettier-ignore-end -->
 
-### owner
+### owner <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 Provides a list of protected data objects owned by the user with this ETH
 address.
@@ -71,18 +69,17 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...', // [!code focus]
 });
 ```
 
-### createdAfterTimestamp
+### createdAfterTimestamp <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 Provides a list of protected data objects created after this timestamp value.
-The provided value should be in seconde.
+The provided value should be in seconds.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -90,16 +87,15 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT // [!code focus]
 });
 ```
 
-### page
+### page <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 Specifies the results page to return. The default for this is `0` which returns
 all results. Pages are indexed starting at page 1. If using this field you may
@@ -111,7 +107,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT
@@ -119,13 +114,11 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 });
 ```
 
-### pageSize
+### pageSize <OptionalBadge />
 
-`number | undefined`
-
-_default_: `20`
-
-Value between `10` and `1000`.
+**Type:** `number`  
+**Default:** `20`  
+**Range:** `[10...1000]`
 
 Specifies the number of records in each page of the result set. This is used in
 conjunction with the optional `page` parameter to constrain the size of the
@@ -137,7 +130,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const listProtectedData = await dataProtectorCore.getProtectedData({
   owner: '0xa0c15e...',
   createdAfterTimestamp: 1710257612, // March 12, 2024 15:33:32 GMT
@@ -152,4 +144,4 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 import { type ProtectedData } from '@iexec/dataprotector';
 ```
 
-[`ProtectedData[]`](../types.md#protecteddata)
+See [`ProtectedData`](../types.md#protecteddata)

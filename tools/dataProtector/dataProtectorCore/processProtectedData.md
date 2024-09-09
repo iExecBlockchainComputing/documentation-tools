@@ -17,7 +17,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -38,9 +37,9 @@ const processProtectedDataResponse =
 import { type ProcessProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The ETH address or Ethereum Name Service (ENS) reference for the protected data
 you wish the `app` to process.
@@ -51,7 +50,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...', // [!code focus]
@@ -59,9 +57,9 @@ const processProtectedDataResponse =
   });
 ```
 
-### app {#app-param}
+### app <RequiredBadge /> {#app-param}
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The ETH address or Ethereum Name Service (ENS) address for the iExec application
 to process the protected data.
@@ -72,7 +70,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -80,9 +77,31 @@ const processProtectedDataResponse =
   });
 ```
 
-### maxPrice
+### userWhitelist <OptionalBadge />
 
-`number | undefined`
+**Type:** `Address`
+
+If access to the protected data is granted to a group of users via a whitelist
+contract, you must use this `userWhitelist` parameter. The value should be the
+whitelist contract address that has access to the protected data.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    userWhitelist: '0x656def...', // [!code focus]
+  });
+```
+
+### maxPrice <OptionalBadge />
+
+**Type:** `number`
 
 The maximum price (in nRLC) that a requester is willing to pay for each task
 related to processing the protected data. It is the sum of the application
@@ -94,7 +113,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -103,9 +121,9 @@ const processProtectedDataResponse =
   });
 ```
 
-### args
+### args <OptionalBadge />
 
-`string | undefined`
+**Type:** `string`
 
 Set of execution arguments for the application.
 
@@ -115,7 +133,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -132,9 +149,9 @@ arguments passed this way are visible in plain text using the
 
 :::
 
-### inputFiles
+### inputFiles <OptionalBadge />
 
-`string[] | undefined`
+**Type:** `string[]`
 
 A set of URLs representing the input files required for application execution.
 
@@ -144,7 +161,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
@@ -153,9 +169,9 @@ const processProtectedDataResponse =
   });
 ```
 
-### secrets
+### secrets <OptionalBadge />
 
-`Record<number, string> | undefined`
+**Type:** `Record<number, string>`
 
 A set of requester secrets necessary for the application's execution. This is
 represented as a mapping of numerical identifiers to corresponding secrets
@@ -172,7 +188,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0x456def...',
@@ -185,11 +200,10 @@ const processProtectedDataResponse = await dataProtectorCore.processProtectedDat
 ```
 <!-- prettier-ignore-end -->
 
-### workerpool
+### workerpool <OptionalBadge />
 
-`AddressOrENS | 'any' | undefined`
-
-_default_: `prod-v8-bellecour.main.pools.iexec.eth`
+**Type:** `AddressOrENS | 'any'`  
+**Default:** `prod-v8-bellecour.main.pools.iexec.eth`
 
 The ETH address or Ethereum Name Service (ENS) address for the iExec workerpool.
 It's the confidential computer on which the iExec application will run.
@@ -200,6 +214,10 @@ iExec currently offers a production workerpool located at the Ethereum Name
 Service (ENS) address `prod-v8-bellecour.main.pools.iexec.eth`. This is the
 default workerpool for running confidential computations on the iExec platform.
 
+If you don't specify a workerpool preference,
+0x0000000000000000000000000000000000000000 represents any randomly available
+workerpool.
+
 :::
 
 ```ts twoslash
@@ -208,18 +226,17 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
     app: '0x456def...',
-    workerpool: '0xA5d...', // [!code focus]
+    workerpool: '0xa5de76...', // [!code focus]
   });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<ProcessProtectedDataStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<ProcessProtectedDataStatuses>`
 
 Callback function to be notified at intermediate steps.
 
@@ -230,7 +247,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const processProtectedDataResponse = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0x456def...',

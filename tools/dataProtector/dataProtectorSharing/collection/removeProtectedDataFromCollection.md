@@ -17,7 +17,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
   {
     protectedData: '0x123abc...',
@@ -38,9 +37,9 @@ const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
 import { type RemoveFromCollectionParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to remove from your collection.
 
@@ -53,7 +52,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.removeProtectedDataFromCollection(
   {
     protectedData: '0x123abc...', // [!code focus]

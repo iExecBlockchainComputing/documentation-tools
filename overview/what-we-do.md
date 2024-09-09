@@ -59,8 +59,8 @@ support their needs for confidentiality and security.
 
 **Use Cases**
 
-- [Privacy Enhanced Marketing](./useCaseDemo/privacyEnhancingMarketing.md)
-- [Content Creator](./useCaseDemo/contentCreator.md)
+- [Privacy Enhanced Marketing](./use-case-demo/privacy-enhancing-marketing.md)
+- [Content Creator](./use-case-demo/content-creator.md)
 
 _\*digital estate represents every digital asset that you own and can create
 value from. This can be from an email address to an entire application._

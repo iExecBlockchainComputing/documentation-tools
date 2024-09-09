@@ -20,7 +20,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAccess = await dataProtectorCore.revokeOneAccess({
   apprestrict: '0xea...',
   dataset: '0xA0C...',
@@ -40,9 +39,9 @@ const revokeAccess = await dataProtectorCore.revokeOneAccess({
 import { type GrantedAccess } from '@iexec/dataprotector';
 ```
 
-### grantedAccess
+### grantedAccess <RequiredBadge />
 
-`GrantedAccess`
+**Type:** `GrantedAccess`
 
 This is the complete `granted access` object retrieved from an invocation of
 `fetchGrantedAccess`.
@@ -53,7 +52,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAccess = await dataProtectorCore.revokeOneAccess({
   apprestrict: '0xea...', // [!code focus]
   dataset: '0xA0C...', // [!code focus]
