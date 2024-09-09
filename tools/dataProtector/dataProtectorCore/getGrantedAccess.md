@@ -114,7 +114,7 @@ const listGrantedAccess = await dataProtectorCore.getGrantedAccess({
 ### isUserStrict <OptionalBadge />
 
 **Type:** `boolean`  
-**Default:** `true`
+**Default:** `false`
 
 Optional filter to restrict the results to include only authorizations for the
 specified user. Authorizations made for `any` user are not returned.
