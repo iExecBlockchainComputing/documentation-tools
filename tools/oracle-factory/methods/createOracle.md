@@ -12,7 +12,12 @@ Ethereum price in USD:
 <a href="https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd">CoinGecko
 Ethereum API</a>.
 
-```js
+```ts twoslash
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
 const createOracleRes = factory
   .createOracle({
     url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
@@ -71,7 +76,12 @@ import { type RawParams } from '@iexec/iexec-oracle-factory-wrapper';
 
 The API URL to fetch data from.
 
-```js
+```ts twoslash
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
 const createOracleRes = factory
   .createOracle({
     url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', // [!code focus]
@@ -102,7 +112,12 @@ const createOracleRes = factory
 
 The HTTP method to use when making the API request (e.g., "GET").
 
-```js
+```ts twoslash
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
 const createOracleRes = factory
   .createOracle({
     url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
@@ -134,7 +149,12 @@ const createOracleRes = factory
 Any headers required for the API request.
 
 <!-- prettier-ignore-start -->
-```js
+```ts twoslash
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
 const createOracleRes = factory.createOracle({
   url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
   method: 'GET',
@@ -164,7 +184,12 @@ const createOracleRes = factory.createOracle({
 
 The type of data to be returned (e.g., "number").
 
-```js
+```ts twoslash
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
 const createOracleRes = factory
   .createOracle({
     url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
@@ -195,7 +220,12 @@ const createOracleRes = factory
 
 The JSON path to extract the data from the API response.
 
-```js
+```ts twoslash
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
 const createOracleRes = factory
   .createOracle({
     url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
@@ -226,7 +256,12 @@ const createOracleRes = factory
 
 API key if required by the data source.
 
-```js
+```ts twoslash
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
 const createOracleRes = factory
   .createOracle({
     url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
@@ -253,9 +288,15 @@ const createOracleRes = factory
 
 ## Return value
 
-```ts twoslash
-// @errors: 2305
-import { type CreateOracleMessage } from '@iexec/iexec-oracle-factory-wrapper';
-```
-
 `Observable<CreateOracleMessage>`
+
+```ts twoslash
+import type {
+  CreateOracleMessage,
+  //
+  DeployDatasetMessage,
+  CreateParamSetMessage,
+  ComputeOracleIDMessage,
+  UploadParamSetMessage,
+} from '@iexec/iexec-oracle-factory-wrapper';
+```
