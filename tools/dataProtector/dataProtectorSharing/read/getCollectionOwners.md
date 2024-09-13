@@ -2,7 +2,8 @@
 
 Method to get all collection owners.
 
-Results of `CollectionOwner.collections` are ordered by `collections.creationTimestamp` desc.
+Results of `CollectionOwner.collections` are ordered by
+`collections.creationTimestamp` desc.
 
 ## Usage
 
