@@ -44,8 +44,6 @@ createOracleObservable.subscribe({
 });
 ```
 
-                                   |
-
 ## Parameters
 
 ```ts twoslash
