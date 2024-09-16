@@ -18,51 +18,33 @@ const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const createOracleRes = factory
-  .createOracle({
-    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-    method: 'GET',
-    headers: {
-      authorization: '%API_KEY%',
-    },
-    dataType: 'number',
-    JSONPath: '$.ethereum.usd',
-    apiKey: 'MY_TEST_API_KEY',
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle Creation Completed');
-    },
-  });
+// create an observable
+const createOracleObservable = factory.createOracle({
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
+});
+
+// subscribe to the observable and start the workflow
+createOracleObservable.subscribe({
+  next: (data) => {
+    console.log('next', data);
+  },
+  error: (error) => {
+    console.log('error', error);
+  },
+  complete: () => {
+    console.log('Oracle Creation Completed');
+  },
+});
 ```
 
-## Return values during creation process
-
-These are the possible events iExec may send to the subscriber:
-
-| message                              | sent                 | additional entries                          |
-| ------------------------------------ | -------------------- | ------------------------------------------- |
-| ENCRYPTION_KEY_CREATED               | once if using apiKey | key: String                                 |
-| FILE_ENCRYPTED                       | once if using apiKey | encryptedFile: Buffer<br/> checksum: String |
-| ENCRYPTED_FILE_UPLOADED              | once if using apiKey | cid: String<br/> multiaddr: String          |
-| DATASET_DEPLOYMENT_SIGN_TX_REQUEST   | once if using apiKey |                                             |
-| DATASET_DEPLOYMENT_SUCCESS           | once if using apiKey | address: String<br/> txHash: String         |
-| PUSH_SECRET_TO_SMS_SIGN_REQUEST      | once if using apiKey |                                             |
-| PUSH_SECRET_TO_SMS_SUCCESS           | once if using apiKey |                                             |
-| DATASET_ORDER_SIGNATURE_SIGN_REQUEST | once if using apiKey | order: Object                               |
-| DATASET_ORDER_SIGNATURE_SUCCESS      | once if using apiKey | order: Object                               |
-| DATASET_ORDER_PUBLISH_SIGN_REQUEST   | once if using apiKey | order: Object                               |
-| DATASET_ORDER_PUBLISH_SUCCESS        | once if using apiKey | orderHash: String                           |
-| PARAM_SET_CREATED                    | once                 | paramSet: String                            |
-| ORACLE_ID_COMPUTED                   | once                 | oracleId: String                            |
-| PARAM_SET_UPLOADED                   | once                 | cid: String                                 |
-| COMPLETED                            | once                 |                                             |
+                                   |
 
 ## Parameters
 
@@ -82,28 +64,16 @@ const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const createOracleRes = factory
-  .createOracle({
-    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', // [!code focus]
-    method: 'GET',
-    headers: {
-      authorization: '%API_KEY%',
-    },
-    dataType: 'number',
-    JSONPath: '$.ethereum.usd',
-    apiKey: 'MY_TEST_API_KEY',
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle Creation Completed');
-    },
-  });
+const createOracleObservable = factory.createOracle({
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', // [!code focus]
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
+});
 ```
 
 ### method
@@ -118,28 +88,16 @@ const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const createOracleRes = factory
-  .createOracle({
-    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-    method: 'GET', // [!code focus]
-    headers: {
-      authorization: '%API_KEY%',
-    },
-    dataType: 'number',
-    JSONPath: '$.ethereum.usd',
-    apiKey: 'MY_TEST_API_KEY',
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle Creation Completed');
-    },
-  });
+const createOracleObservable = factory.createOracle({
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET', // [!code focus]
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
+});
 ```
 
 ### headers
@@ -155,7 +113,7 @@ const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const createOracleRes = factory.createOracle({
+const createOracleObservable = factory.createOracle({
   url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
   method: 'GET',
   headers: { // [!code focus]
@@ -164,17 +122,7 @@ const createOracleRes = factory.createOracle({
   dataType: 'number',
   JSONPath: '$.ethereum.usd',
   apiKey: 'MY_TEST_API_KEY',
-}).subscribe({
-  next: (data) => {
-    console.log("next", data);
-  },
-  error: (error) => {
-    console.log("error", error);
-  },
-  complete: () => {
-    console.log("Oracle Creation Completed");
-  },
-});
+})
 ```
 <!-- prettier-ignore-end -->
 
@@ -190,28 +138,16 @@ const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const createOracleRes = factory
-  .createOracle({
-    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-    method: 'GET',
-    headers: {
-      authorization: '%API_KEY%',
-    },
-    dataType: 'number', // [!code focus]
-    JSONPath: '$.ethereum.usd',
-    apiKey: 'MY_TEST_API_KEY',
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle Creation Completed');
-    },
-  });
+const createOracleObservable = factory.createOracle({
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number', // [!code focus]
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
+});
 ```
 
 ### JSONPath
@@ -226,28 +162,16 @@ const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const createOracleRes = factory
-  .createOracle({
-    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-    method: 'GET',
-    headers: {
-      authorization: '%API_KEY%',
-    },
-    dataType: 'number',
-    JSONPath: '$.ethereum.usd', // [!code focus]
-    apiKey: 'MY_TEST_API_KEY',
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle Creation Completed');
-    },
-  });
+const createOracleObservable = factory.createOracle({
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd', // [!code focus]
+  apiKey: 'MY_TEST_API_KEY',
+});
 ```
 
 ### apiKey
@@ -256,34 +180,26 @@ const createOracleRes = factory
 
 API key if required by the data source.
 
+The `apiKey` is protected an injected when an oracle is updated. `%API_KEY%` is
+used as a placeholder for the `apiKey` value in oracle public parameters url and
+headers.
+
 ```ts twoslash
 import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
 const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const createOracleRes = factory
-  .createOracle({
-    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-    method: 'GET',
-    headers: {
-      authorization: '%API_KEY%',
-    },
-    dataType: 'number',
-    JSONPath: '$.ethereum.usd',
-    apiKey: 'MY_TEST_API_KEY', // [!code focus]
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle Creation Completed');
-    },
-  });
+const createOracleObservable = factory.createOracle({
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY', // [!code focus]
+});
 ```
 
 ## Return value
@@ -292,11 +208,77 @@ const createOracleRes = factory
 
 ```ts twoslash
 import type {
-  CreateOracleMessage,
-  //
-  DeployDatasetMessage,
-  CreateParamSetMessage,
-  ComputeOracleIDMessage,
-  UploadParamSetMessage,
+  CreateOracleMessage, // any `data` the `next(data)` handler can receive
+
+  // all `data` types
+  ApiKeyEncryptionKeyCreatedMessage, // encryption key for `apiKey` value created
+  ApiKeyEncryptedMessage, // `apiKey` value encrypted
+  ApiKeyUploadedMessage, // `apiKey` encrypted value uploaded on IPFS
+  ApiKeyDatasetDeployRequestMessage, // requests the user to sign the API key's dataset deployment tx
+  ApiKeyDatasetDeploySuccessMessage, // API key's dataset deployed
+  ApiKeyPushSecretRequestMessage, // requests the user to push the encryption key in the SMS
+  ApiKeyPushSecretSuccessMessage, // encryption key pushed
+  ApiKeySignOrderRequestMessage, // requests the user to sign the dataset order
+  ApiKeySignOrderSuccessMessage, // dataset order signed
+  ApiKeyPublishOrderRequestMessage, // requests the user to publish the dataset order
+  ApiKeyPublishOrderSuccessMessage, // dataset order published
+  ParamSetCreatedMessage, // ParamSet created from inputs
+  OracleIDComputedMessage, // OracleId computed from ParamSet
+  ParamSetUploadedMessage, // ParamSet uploaded on IPFS
 } from '@iexec/iexec-oracle-factory-wrapper';
 ```
+
+::: tip
+
+Nothing happens before `subscribe()` is called on the returned observable.
+
+You can provide custom `next`, `complete` and `error` callback methods to
+`subscribe`
+
+```ts twoslash
+import {
+  IExecOracleFactory,
+  Observable,
+  ObservableNext,
+  ObservableComplete,
+  ObservableError,
+  CreateOracleMessage,
+} from '@iexec/iexec-oracle-factory-wrapper';
+
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+const createOracleObservable = factory.createOracle({
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  method: 'GET',
+  headers: {
+    authorization: '%API_KEY%',
+  },
+  dataType: 'number',
+  JSONPath: '$.ethereum.usd',
+  apiKey: 'MY_TEST_API_KEY',
+});
+// ---cut---
+// method to call when the workflow goes to a new step
+const nextCallback: ObservableNext<CreateOracleMessage> = (data) => {
+  // your logic
+};
+
+// method to call when the workflow completes successfully
+const completeCallback: ObservableComplete = () => {
+  // your logic
+};
+
+// method to call when the workflow fails
+const errorCallback: ObservableError = (error: Error) => {
+  // your logic
+};
+
+createOracleObservable.subscribe({
+  next: nextCallback,
+  complete: completeCallback,
+  error: errorCallback,
+});
+```
+
+:::

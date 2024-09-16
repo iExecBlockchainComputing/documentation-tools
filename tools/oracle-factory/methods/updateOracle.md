@@ -167,7 +167,7 @@ const updateOracleObservable = factory.updateOracle(
 
 ```ts twoslash
 import type {
-  UpdateOracleMessage, // any the `data` the `next(data)` handler can receive
+  UpdateOracleMessage, // any `data` the `next(data)` handler can receive
 
   // all `data` types
   EnsureParamsMessage, // check ParamSet can be found on IPFS
