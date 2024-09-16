@@ -89,7 +89,7 @@ const updateOracleObservable = factory.updateOracle(
 );
 ```
 
-Content ID of the Oracle that needs to be updated.
+- ParamSet CID of the Oracle to update.
 
 ```ts twoslash
 import {
