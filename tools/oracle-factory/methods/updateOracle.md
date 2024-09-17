@@ -65,6 +65,7 @@ updateOracleObservable.subscribe({
 
 - ParamSet of the Oracle to update.
 
+<!-- prettier-ignore-start -->
 ```ts twoslash
 import {
   IExecOracleFactory,
@@ -74,7 +75,7 @@ const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const paramSet: ParamSet = {
+const paramSet: ParamSet = { //[!code focus]
   JSONPath: "$['ethereum']['usd']", // [!code focus]
   body: '', // [!code focus]
   dataType: 'number', // [!code focus]
@@ -82,12 +83,13 @@ const paramSet: ParamSet = {
   headers: {}, // [!code focus]
   method: 'GET', // [!code focus]
   url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', // [!code focus]
-};
+}; // [!code focus]
 
 const updateOracleObservable = factory.updateOracle(
   paramSet // [!code focus]
 );
 ```
+<!-- prettier-ignore-end -->
 
 - ParamSet CID of the Oracle to update.
 

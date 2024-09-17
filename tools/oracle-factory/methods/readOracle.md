@@ -54,6 +54,7 @@ import type { ReadOracleParams } from '@iexec/iexec-oracle-factory-wrapper';
 
 - ParamSet of the Oracle to be read.
 
+<!-- prettier-ignore-start -->
 ```ts twoslash
 import {
   IExecOracleFactory,
@@ -63,8 +64,7 @@ const web3Provider = {} as any;
 const readerOrFactory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-// [!code focus]
-const paramSet: ParamSet = {
+const paramSet: ParamSet = { // [!code focus]
   method: 'GET', // [!code focus]
   url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', // [!code focus]
   headers: { authorization: '%API_KEY%' }, // [!code focus]
@@ -78,6 +78,7 @@ const readOracleRes = await readerOrFactory.readOracle(
   paramSet // [!code focus]
 );
 ```
+<!-- prettier-ignore-end -->
 
 - ParamSet CID of the Oracle to be read.
 
@@ -126,11 +127,12 @@ const readOracleRes = await readerOrFactory.readOracle(
 
 When reading an oracle from its OracleID, the dataType must be specified.
 
+<!-- prettier-ignore-start -->
 ```ts twoslash
 import {
   IExecOracleFactory,
   OracleID,
-  DataType
+  DataType,
 } from '@iexec/iexec-oracle-factory-wrapper';
 const web3Provider = {} as any;
 const readerOrFactory = new IExecOracleFactory(web3Provider);
@@ -138,15 +140,16 @@ const readerOrFactory = new IExecOracleFactory(web3Provider);
 // ---cut---
 const oracleId: OracleID =
   '0xf0f370ad33d1e3e8e2d8df7197c40f62b5bc403553b103858359687491234491';
-const dataType: DataType = "number"
+const dataType: DataType = 'number';
 
 const readOracleRes = await readerOrFactory.readOracle(
-  oracleId, // [!code focus]
+  oracleId,
   { // [!code focus]
     dataType, // [!code focus]
   } // [!code focus]
 );
 ```
+<!-- prettier-ignore-end -->
 
 ## Return value
 
