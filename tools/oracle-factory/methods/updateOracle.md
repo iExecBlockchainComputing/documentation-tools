@@ -75,7 +75,7 @@ const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const paramSet: ParamSet = { //[!code focus]
+const paramSet: ParamSet = { // [!code focus]
   JSONPath: "$['ethereum']['usd']", // [!code focus]
   body: '', // [!code focus]
   dataType: 'number', // [!code focus]
