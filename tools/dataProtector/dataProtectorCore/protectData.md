@@ -334,5 +334,3 @@ To further check your data was correctly created, you can inspect it on the
 <a href="https://explorer.iex.ec/" target="_blank" rel="noreferrer" style="display: inline-block">
   <img src="/assets/explorer-dataset-example.png" alt="iExec explorer - Dataset example">
 </a>
-
-The `Multiaddr` field is the URL on IPFS of your encrypted data.
