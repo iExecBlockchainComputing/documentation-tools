@@ -310,6 +310,12 @@ data or download it consider adding a zip extension to it.
 
 :::
 
+### multiaddr
+
+`string`
+
+The IPFS link
+
 ## Created protected data
 
 To further check your data was correctly created, you can inspect it on the
