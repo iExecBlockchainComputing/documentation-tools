@@ -37,7 +37,7 @@ method.
 import type { ReadOracleParams } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
-### paramSet or paramSetCid or oracleId
+### paramSet or paramSetCid or oracleId <RequiredBadge />
 
 ::: tip
 

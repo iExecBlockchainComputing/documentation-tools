@@ -51,7 +51,7 @@ updateOracleObservable.subscribe({
 
 ## Parameters
 
-### paramSet or paramSetCid
+### paramSet or paramSetCid <RequiredBadge />
 
 ::: tip
 

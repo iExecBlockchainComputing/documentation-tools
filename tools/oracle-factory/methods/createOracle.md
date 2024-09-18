@@ -50,7 +50,7 @@ createOracleObservable.subscribe({
 import { type RawParams } from '@iexec/iexec-oracle-factory-wrapper';
 ```
 
-### url
+### url <RequiredBadge />
 
 `string`
 
@@ -74,7 +74,7 @@ const createOracleObservable = factory.createOracle({
 });
 ```
 
-### method
+### method <RequiredBadge />
 
 `'GET' | 'POST' | 'PUT' | 'DELETE'`
 
@@ -124,7 +124,7 @@ const createOracleObservable = factory.createOracle({
 ```
 <!-- prettier-ignore-end -->
 
-### dataType
+### dataType <RequiredBadge />
 
 `DataType`
 
@@ -148,7 +148,7 @@ const createOracleObservable = factory.createOracle({
 });
 ```
 
-### JSONPath
+### JSONPath <RequiredBadge />
 
 `string`
 
