@@ -125,7 +125,6 @@ Supported blockchains:
 | mainnet         | 1       |
 | bellecour       | 134     |
 | polygon         | 137     |
-| mumbai          | 80001   |
 
 ## Sandbox
 
