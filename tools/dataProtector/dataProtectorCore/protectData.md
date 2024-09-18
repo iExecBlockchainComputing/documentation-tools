@@ -314,7 +314,17 @@ data or download it consider adding a zip extension to it.
 
 `string`
 
-The IPFS link
+The multiaddr field is the IPFS path of your encrypted data.
+
+::: tip
+
+You can access your encrypted IPFS data with the link:
+
+`https://ipfs-gateway.v8-bellecour.iex.ec/ipfs/abc123...`
+
+`abc123...` is the second part of the returned string `/p2p/abc123...`
+
+:::
 
 ## Created protected data
 
