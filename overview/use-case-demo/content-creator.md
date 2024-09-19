@@ -19,6 +19,6 @@ This is a fairly complete app that aims to demonstrate some of the features from
 
 **GitHub repository:**
 
-<a href="https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/v2/packages/demo/usecase-demo" target="_blank" rel="noreferrer" class="link-as-block">
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/demo/usecase-demo" target="_blank" rel="noreferrer" class="link-as-block">
   <Icon icon="mdi:github" height="24" /> DataProtector use case demo
 </a>
