@@ -312,7 +312,7 @@ data or download it consider adding a zip extension to it.
 
 ### multiaddr
 
-`string`
+`string` | `undefined`
 
 The multiaddr field is the IPFS path of your encrypted data.
 
