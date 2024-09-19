@@ -91,8 +91,8 @@ const web3Provider = {} as any;
 const readerOrFactory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const paramSetCid: ParamSetCID =
-  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit';
+const paramSetCid: ParamSetCID = // [!code focus]
+  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit'; // [!code focus]
 
 const readOracleRes = await readerOrFactory.readOracle(
   paramSetCid // [!code focus]
@@ -110,8 +110,8 @@ const web3Provider = {} as any;
 const readerOrFactory = new IExecOracleFactory(web3Provider);
 
 // ---cut---
-const oracleId: OracleID =
-  '0xf0f370ad33d1e3e8e2d8df7197c40f62b5bc403553b103858359687491234491';
+const oracleId: OracleID = // [!code focus]
+  '0xf0f370ad33d1e3e8e2d8df7197c40f62b5bc403553b103858359687491234491'; // [!code focus]
 
 const readOracleRes = await readerOrFactory.readOracle(
   oracleId, // [!code focus]
