@@ -8,7 +8,7 @@ optional parameters when invoking this method.
 ::: tip
 
 A data schema is the metadata describing the contents of the protected data
-object. The schema is returned as part of the [protectedData](protectData.md)
+object. The schema is returned as part of the [protectData](protectData.md)
 method invocation.
 
 :::
