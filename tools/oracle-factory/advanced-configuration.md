@@ -4,7 +4,15 @@ The `IExecOracleFactory` constructor accepts configuration options object. As
 these options are very specific, you won't need to use them for a standard usage
 of `@iexec/iexec-oracle-factory-wrapper`.
 
-```js
+```ts twoslash
+import {
+  IExecOracleFactory,
+  OracleFactoryOptions,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const ethProvider = {} as any;
+const options = {} as OracleFactoryOptions;
+
+// ---cut---
 new IExecOracleFactory(ethProvider, options);
 ```
 
@@ -18,7 +26,14 @@ oracle dApp.
 If not provided, the default ENS `oracle-factory.apps.iexec.eth` pointing to the
 latest version of the dApp provided by iExec will be used.
 
-```js
+```ts twoslash
+import {
+  IExecOracleFactory,
+  OracleFactoryOptions,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const ethProvider = {} as any;
+
+// ---cut---
 new IExecOracleFactory(ethProvider, {
   oracleApp: 'oracle-factory.apps.iexec.eth',
 });
@@ -32,7 +47,14 @@ to.
 If not provided, the default smart contract address provided by iExec will be
 used.
 
-```js
+```ts twoslash
+import {
+  IExecOracleFactory,
+  OracleFactoryOptions,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const ethProvider = {} as any;
+
+// ---cut---
 new IExecOracleFactory(ethProvider, {
   oracleContract: '0x781482C39CcE25546583EaC4957Fb7Bf04C277D2',
 });
@@ -45,7 +67,14 @@ own IPFS node to upload content.
 
 If not provided, the default IPFS node provided by iExec will be used.
 
-```js
+```ts twoslash
+import {
+  IExecOracleFactory,
+  OracleFactoryOptions,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const ethProvider = {} as any;
+
+// ---cut---
 new IExecOracleFactory(ethProvider, {
   ipfsNode: 'https://ipfs-upload.v8-bellecour.iex.ec',
 });
@@ -59,7 +88,14 @@ own IPFS node for content downloads.
 
 If not provided, the default IPFS gateway provided by iExec will be used.
 
-```js
+```ts twoslash
+import {
+  IExecOracleFactory,
+  OracleFactoryOptions,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const ethProvider = {} as any;
+
+// ---cut---
 new IExecOracleFactory(ethProvider, {
   ipfsGateway: 'https://ipfs-gateway.v8-bellecour.iex.ec',
 });
@@ -70,3 +106,17 @@ new IExecOracleFactory(ethProvider, {
 Low level configuration options for `iexec` SDK, see
 [iexec SDK documentation IExecConfigOptions](https://github.com/iExecBlockchainComputing/iexec-sdk/blob/master/docs/interfaces/IExecConfigOptions.md)
 for more details.
+
+```ts twoslash
+import {
+  IExecOracleFactory,
+  OracleFactoryOptions,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const ethProvider = {} as any;
+const iexecOptions = {};
+
+// ---cut---
+new IExecOracleFactory(ethProvider, {
+  iexecOptions,
+});
+```

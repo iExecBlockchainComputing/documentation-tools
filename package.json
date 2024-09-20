@@ -20,7 +20,7 @@
   "dependencies": {
     "@iexec/dataprotector": "^2.0.0-beta.7",
     "@iexec/dataprotector-deserializer": "^0.1.0",
-    "@iexec/iexec-oracle-factory-wrapper": "^2.1.0",
+    "@iexec/iexec-oracle-factory-wrapper": "^2.2.0",
     "@iexec/web3mail": "^1.0.2",
     "vue": "^3.4.21"
   }
