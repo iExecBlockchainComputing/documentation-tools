@@ -72,10 +72,10 @@ export default defineConfig({
       },
     },
     // TODO: See if we keep that, and if so witch to 'main' branch
-    // editLink: {
-    //   pattern:
-    //     'https://github.com/iExecBlockchainComputing/documentation-tools/edit/feature/migrate-to-vitepress/:path',
-    // },
+    editLink: {
+      pattern:
+        'https://github.com/iExecBlockchainComputing/documentation-tools/blob/main/:path',
+    },
   },
   vite: {
     plugins: [
