@@ -35,7 +35,7 @@ jobs:
       - name: Check Prettier
         run: npm run check-format
 
-      - name: Vercel deploy to preview
+      - name: Vercel deploy to prod
         run: |
           npm install --global vercel@latest
           vercel pull --yes --environment=production --scope i-exec --token=${{ secrets.VERCEL_TOKEN }}
