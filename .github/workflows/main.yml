@@ -1,4 +1,4 @@
-name: preview-ci
+name: main-ci
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
