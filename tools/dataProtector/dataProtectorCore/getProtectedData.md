@@ -34,6 +34,24 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 import { type GetProtectedDataParams } from '@iexec/dataprotector';
 ```
 
+### protectedDataAddress <OptionalBadge />
+
+**Type:** `AddressOrENS`
+
+Returns the protected data associated with this address.  
+Returns an empty array if the protected data is not found.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const oneProtectedData = await dataProtectorCore.getProtectedData({
+  protectedDataAddress: '0x123abc...', // [!code focus]
+});
+```
+
 ### requiredSchema <OptionalBadge />
 
 **Type:** `SearchableDataSchema`
