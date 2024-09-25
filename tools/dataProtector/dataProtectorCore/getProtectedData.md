@@ -112,11 +112,12 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 
 ### page <OptionalBadge />
 
-**Type:** `number`
+**Type:** `number`  
+**Default:** `0`
 
-Specifies the results page to return. The default for this is `0` which returns
-all results. Pages are indexed starting at page 1. If using this field you may
-also specify a `pageSize` to control the size of the results.
+Specifies the results page to return. Pages are indexed starting at page 0. If
+using this field you may also specify a `pageSize` to control the size of the
+results.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -134,7 +135,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 ### pageSize <OptionalBadge />
 
 **Type:** `number`  
-**Default:** `20`  
+**Default:** `1000`  
 **Range:** `[10...1000]`
 
 Specifies the number of records in each page of the result set. This is used in
