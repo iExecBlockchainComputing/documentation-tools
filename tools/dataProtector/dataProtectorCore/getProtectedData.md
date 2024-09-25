@@ -74,6 +74,25 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 ```
 <!-- prettier-ignore-end -->
 
+It's also possible to provide a list of accepted types for one schema field:
+
+<!-- prettier-ignore-start -->
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const listProtectedData = await dataProtectorCore.getProtectedData({
+  requiredSchema: { // [!code focus]
+    picture: ['image/png', 'image/jpeg'], // [!code focus]
+  }, // [!code focus]
+});
+```
+<!-- prettier-ignore-end -->
+
+Available types are listed [here](./protectData#schema).
+
 ### owner <OptionalBadge />
 
 **Type:** `AddressOrENS`
