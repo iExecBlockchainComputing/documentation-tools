@@ -1,8 +1,9 @@
 # getProtectedData
 
 This method allows the user to retrieve all protected data for a given owner,
-data schema, or both. You must include at least one of the optional parameters
-when invoking this method.
+data schema, or both.
+
+Results are ordered by `creationTimestamp` desc.
 
 ::: tip
 
