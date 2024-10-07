@@ -57,8 +57,8 @@ updateOracleObservable.subscribe({
 
 - The oracle `ParamSet` describes the parameters used to feed the oracle.
 
-- Any different `ParamSet` has a unique `ParamSetCid` which is the Content ID of
-  the document on IPFS. With a `ParamSetCid` anyone can retrieve the `ParamSet`
+- Any different `ParamSet` has a unique `ParamSetCID` which is the Content ID of
+  the document on IPFS. With a `ParamSetCID` anyone can retrieve the `ParamSet`
   from IPFS.
 
 :::

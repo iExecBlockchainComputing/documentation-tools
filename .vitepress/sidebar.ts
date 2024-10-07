@@ -333,6 +333,20 @@ export function getSidebar() {
             ],
           },
           {
+            text: 'Utils',
+            collapsed: true,
+            items: [
+              // {
+              //   text: 'testRawParams',
+              //   link: '/tools/oracle-factory/utils/testRawParams',
+              // },
+              {
+                text: 'computeOracleID',
+                link: '/tools/oracle-factory/utils/computeOracleID',
+              },
+            ],
+          },
+          {
             text: 'Advanced Configuration',
             link: '/tools/oracle-factory/advanced-configuration',
           },

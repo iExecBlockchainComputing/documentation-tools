@@ -43,11 +43,11 @@ import type { ReadOracleParams } from '@iexec/iexec-oracle-factory-wrapper';
 
 - The oracle `ParamSet` describes the parameters used to feed the oracle.
 
-- Any different `ParamSet` has a unique `ParamSetCid` which is the Content ID of
-  the document on IPFS. With a `ParamSetCid` anyone can retrieve the `ParamSet`
+- Any different `ParamSet` has a unique `ParamSetCID` which is the Content ID of
+  the document on IPFS. With a `ParamSetCID` anyone can retrieve the `ParamSet`
   from IPFS.
 
-- The `OracleId` is the blockchain hash of the `ParamSet` it is used to store
+- The `OracleID` is the blockchain hash of the `ParamSet` it is used to store
   and read the value of an oracle on the Oracle contract.
 
 :::

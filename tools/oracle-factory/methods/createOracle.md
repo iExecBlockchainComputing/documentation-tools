@@ -221,7 +221,7 @@ import type {
   ApiKeyPublishOrderRequestMessage, // requests the user to publish the dataset order
   ApiKeyPublishOrderSuccessMessage, // dataset order published
   ParamSetCreatedMessage, // ParamSet created from inputs
-  OracleIDComputedMessage, // OracleId computed from ParamSet
+  OracleIDComputedMessage, // OracleID computed from ParamSet
   ParamSetUploadedMessage, // ParamSet uploaded on IPFS
 } from '@iexec/iexec-oracle-factory-wrapper';
 ```
