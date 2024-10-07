@@ -73,9 +73,9 @@ in the [oracle contract](#oraclecontract), this must contain the
 [oracle app](#oracleapp)
 
 If not provided, the default whitelist contract at
-[0x26472b355849B409769545A8595fe97846a8F0C9](https://blockscout-bellecour.iex.ec/address/0x26472b355849B409769545A8595fe97846a8F0C9)containing
-currently supported versions of generic oracle dApp provided by iExec will be
-used.
+[0x26472b355849B409769545A8595fe97846a8F0C9](https://blockscout-bellecour.iex.ec/address/0x26472b355849B409769545A8595fe97846a8F0C9)
+containing currently supported versions of generic oracle dApp provided by iExec
+will be used.
 
 ```ts twoslash
 import {
