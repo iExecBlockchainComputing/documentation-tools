@@ -20,7 +20,7 @@ new IExecOracleFactory(ethProvider, options);
 
 ### oracleContract
 
-You can also customize which oracle smart contract is being used to save oracles
+You can customize which oracle smart contract is being used to save oracles
 values to and read oracles value from.
 
 If not provided, the default oracle smart contract `VerifiedResultOracle` at
@@ -87,6 +87,39 @@ const ethProvider = {} as any;
 // ---cut---
 new IExecOracleFactory(ethProvider, {
   oracleAppWhitelist: '0x26472b355849B409769545A8595fe97846a8F0C9',
+});
+```
+
+### workerpool
+
+The Ethereum contract address or ENS (Ethereum Name Service) of the workerpool
+to use for running the dApp.
+
+The workerpool must be listed in the authorized workerpools by the
+[oracle contract](#oraclecontract)
+
+If not provided, the default workerpool
+[`prod-v8-bellecour.main.pools.iexec.eth`](https://explorer.iex.ec/bellecour/search/prod-v8-bellecour.main.pools.iexec.eth)
+will be used.
+
+::: tip
+
+For learning purpose, the learn workerpool
+[`prod-v8-learn.main.pools.iexec.eth`](https://explorer.iex.ec/bellecour/search/prod-v8-learn.main.pools.iexec.eth)
+providing free computing power can be used.
+
+:::
+
+```ts twoslash
+import {
+  IExecOracleFactory,
+  OracleFactoryOptions,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const ethProvider = {} as any;
+
+// ---cut---
+new IExecOracleFactory(ethProvider, {
+  workerpool: 'prod-v8-bellecour.main.pools.iexec.eth',
 });
 ```
 
