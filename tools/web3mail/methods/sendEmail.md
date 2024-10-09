@@ -293,7 +293,7 @@ import { ValidationError } from '@iexec/web3mail';
 try {
   await web3mail.sendEmail({
     protectedData,
-    senderName: 'ab',
+    senderName: 'ab', // Bad input
     emailSubject,
     emailContent,
   });
@@ -307,22 +307,18 @@ try {
 }
 ```
 
-### Protected data schema error
+### Email schema error
 
-Obviously to be able to send an email to a protected data, it needs to contain
-an email address.
+To be able to send an email to a protected data, it needs to contain, well, an
+email address.
 
-Prior to sending an email, we'll check if the given protected data contains in
-its schema:
+If not, you'll get a `WorkflowError` in the form of:
 
 ```json5
-{ id: 'email:string' }
-```
-
-If not, you'll get an `Error` with a message of:
-
-```
-This protected data does not contain "email:string" in its schema.
+{
+  message: 'Failed to sendEmail',
+  errorCause: Error('This protected data does not contain "email:string" in its schema.')
+}
 ```
 
 ### iExec protocol errors
@@ -334,17 +330,17 @@ specific `WorkflowError`:
 {
   message: "A service in the iExec protocol appears to be unavailable. You can retry later or contact iExec's technical support for help.",
   errorCause: <Original error>,
-  isProtocolError: true,
+  isProtocolError: true
 }
 ```
 
 ### Workflow errors
 
-For any other errors, you'll get a Workflow error.
+For any other errors, you'll get a `WorkflowError` error in the form of:
 
 ```json5
 {
   message: 'Failed to sendEmail',
-  errorCause: <Original error>,
+  errorCause: <Original error>
 }
 ```
