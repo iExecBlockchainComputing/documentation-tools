@@ -38,6 +38,7 @@ for input parameters:
 - `protectedDataAddress`: '0x123abc...',
 - `authorizedApp`: '0x456def...',
 - `authorizedUser`: '0x789cba...',
+- `userAddress`: '0x789cba...',
 - `appWhitelist`: '0xba46d6...',
 - `owner`: '0xa0c15e...',
 - `newOwner`: '0xc5e9f4...',

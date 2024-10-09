@@ -14,7 +14,7 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
 const contactsList = await web3mail.fetchUserContacts({
-  userAddress: '0xF048...',
+  userAddress: '0x789cba...',
 });
 ```
 
@@ -24,7 +24,7 @@ const contactsList = await web3mail.fetchUserContacts({
 import { type FetchUserContactsParams } from '@iexec/web3mail';
 ```
 
-### userAddress <OptionalBadge />
+### userAddress <RequiredBadge />
 
 **Type:** `Address`
 
@@ -37,7 +37,7 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
 const contactsList = await web3mail.fetchUserContacts({
-  userAddress: '0xF048...', // [!code focus]
+  userAddress: '0x789cba...', // [!code focus]
 });
 ```
 
@@ -62,7 +62,7 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 // ---cut---
 const contactsList = await web3mail.fetchUserContacts({
-  userAddress: '0xF048...',
+  userAddress: '0x789cba...',
   isUserStrict: true, // [!code focus]
 });
 ```
