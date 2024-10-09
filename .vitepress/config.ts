@@ -1,3 +1,4 @@
+import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -51,7 +52,13 @@ export default defineConfig({
       { text: 'Contact Us', link: '/help/contact-us' },
       { text: 'Protocol', link: 'https://protocol.docs.iex.ec/' },
     ],
-    outline: [2, 3],
+
+    // Nav Table of Content on the right
+    aside: true,
+    outline: {
+      level: [2, 3],
+    },
+
     search: {
       provider: 'local',
     },
@@ -71,7 +78,6 @@ export default defineConfig({
         dateStyle: 'medium',
       },
     },
-    // TODO: See if we keep that, and if so witch to 'main' branch
     editLink: {
       pattern:
         'https://github.com/iExecBlockchainComputing/documentation-tools/blob/main/:path',
@@ -89,5 +95,15 @@ export default defineConfig({
         resolvers: [ElementPlusResolver({ ssr: true })],
       }),
     ],
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPDocOutlineItem\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/CustomVPDocOutlineItem.vue', import.meta.url)
+          ),
+        },
+      ],
+    },
   },
 });
