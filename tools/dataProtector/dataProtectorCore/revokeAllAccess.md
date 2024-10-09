@@ -5,6 +5,14 @@ You may optionally specify application or user addresses for revocation. If you
 do not specify either of these optional values, this method will revoke all
 access for all users and applications.
 
+You must be the owner of the protected data.
+
+Under the hood, all granted access will be retrieved and be revoked one by one.
+If by any chance there were **more than 20 granted access** to be revoked, you
+would need to call this `revokeAllAccess()` method more than once for all
+granted access to be actually revoked. Use `getGrantedAccess()` to ensure it is
+all done.
+
 ## Usage
 
 ```ts twoslash

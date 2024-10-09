@@ -1,4 +1,4 @@
-name: preview-ci
+name: main-ci
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -6,7 +6,7 @@ env:
 
 on:
   push:
-    branches-ignore:
+    branches:
       - main
     paths-ignore:
       - 'README.md'
@@ -44,9 +44,9 @@ jobs:
             echo "vercel_token=${{ secrets.VERCEL_TOKEN }}" >> $GITHUB_OUTPUT
           fi
 
-      - name: Vercel deploy to preview
+      - name: Vercel deploy to prod
         run: |
           npm install --global vercel@latest
-          vercel pull --yes --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
-          vercel build --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
-          vercel deploy --prebuilt --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
+          vercel pull --yes --environment=production --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
+          VITE_APP_COMMIT=${{ github.sha }} vercel build --prod --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
+          vercel deploy --prod --prebuilt --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}

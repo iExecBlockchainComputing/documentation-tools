@@ -310,6 +310,22 @@ data or download it consider adding a zip extension to it.
 
 :::
 
+### multiaddr
+
+`string` | `undefined`
+
+The multiaddr field is the IPFS path of your encrypted data.
+
+::: tip
+
+You can access your encrypted IPFS data with the link:
+
+`https://ipfs-gateway.v8-bellecour.iex.ec/ipfs/abc123...`
+
+`abc123...` is the second part of the returned string `/p2p/abc123...`
+
+:::
+
 ## Created protected data
 
 To further check your data was correctly created, you can inspect it on the
@@ -318,5 +334,3 @@ To further check your data was correctly created, you can inspect it on the
 <a href="https://explorer.iex.ec/" target="_blank" rel="noreferrer" style="display: inline-block">
   <img src="/assets/explorer-dataset-example.png" alt="iExec explorer - Dataset example">
 </a>
-
-The `Multiaddr` field is the URL on IPFS of your encrypted data.

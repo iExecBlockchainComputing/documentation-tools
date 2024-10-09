@@ -2,11 +2,8 @@
 
 Method to get all collection owners.
 
-Results are ordered by `CollectionOwner.id` asc.
-
-<Badge type="tip" text="Soon" /> Results will be ordered by
-
-<p style="margin-top: 0"><code>CollectionOwner.collections.creationTimestamp</code> desc.</p>
+Results of `CollectionOwner.collections` are ordered by
+`collections.creationTimestamp` desc.
 
 ## Usage
 
@@ -19,7 +16,7 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-const collectionOwners = await dataProtectorSharing.getCollectionOwners({});
+const collectionOwners = await dataProtectorSharing.getCollectionOwners();
 ```
 
 ## Parameters

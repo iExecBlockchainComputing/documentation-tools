@@ -1,3 +1,7 @@
+<script setup>
+import { Icon } from '@iconify/vue';
+</script>
+
 # consumeProtectedData
 
 Method to consume a protected data, ie. visualize it or download it.
@@ -94,11 +98,16 @@ const consumeProtectedDataResult =
 
 ::: tip
 
-For this `app` parameter you can use the following iExec TEE app:
+For this `app` parameter you can use the "Protected data delivery TEE dApp":
 
 ```
 0x1cb7D4F3FFa203F211e57357D759321C6CE49921
 ```
+
+<div style="display: inline-block; vertical-align: text-top; margin-top: -1px; margin-right: 5px;">
+  <Icon icon="mdi:warning-box" height="20" />
+</div>Please note: This application can only be used <strong>within the
+dataProtectorSharing module</strong>, as it is owned by the DataProtector Sharing smart contract.
 
 For more details, see [Apps whitelist](../../advanced/apps-whitelist).
 

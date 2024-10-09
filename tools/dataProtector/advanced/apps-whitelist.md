@@ -42,6 +42,14 @@ this iExec TEE dApp is simple:
 
 3. Re-upload the encrypted data to IPFS and return the URL.
 
+::: warning
+
+Please note: This application and its whitelist can only be used **within the
+dataProtectorSharing module**, as it is owned by the DataProtector Sharing smart
+contract.
+
+:::
+
 ### Whitelist
 
 **Whitelist address:** `0x256bcd881c33bdf9df952f2a0148f27d439f2e64`

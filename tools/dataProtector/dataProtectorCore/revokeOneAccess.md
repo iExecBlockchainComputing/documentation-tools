@@ -6,7 +6,7 @@ This method allows revoking a specific access authorization from a
 authorizations on single `protectedData` entity.
 
 As this will generate a blockchain transaction, expect it to take a least 5sec
-(a block time)
+(a block time).
 
 ## Usage
 
@@ -44,7 +44,7 @@ import { type GrantedAccess } from '@iexec/dataprotector';
 **Type:** `GrantedAccess`
 
 This is the complete `granted access` object retrieved from an invocation of
-`fetchGrantedAccess`.
+`getGrantedAccess`.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
