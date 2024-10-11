@@ -25,7 +25,7 @@ DataProtector Core module contains the following set of methods:
 - **grantAccess** — authorize an application to process a user's data without
   exposing the data to any external system or user review
 - **getGrantedAccess** — retrieve a list of all authorized users and
-  applications for a `protectedData` object containing a user's data
+  applications for a protected data
 - **revokeOneAccess** — remove a specific access previously granted on a
   protected data
 - **revokeAllAccess** — remove all access granted to any iExec applications or
