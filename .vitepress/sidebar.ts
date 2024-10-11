@@ -39,24 +39,24 @@ export function getSidebar() {
             collapsed: true,
             items: [
               {
-                text: 'getGrantedAccess',
-                link: '/tools/dataProtector/dataProtectorCore/getGrantedAccess',
+                text: 'protectData',
+                link: '/tools/dataProtector/dataProtectorCore/protectData',
               },
               {
                 text: 'getProtectedData',
                 link: '/tools/dataProtector/dataProtectorCore/getProtectedData',
               },
               {
+                text: 'transferOwnership',
+                link: '/tools/dataProtector/dataProtectorCore/transferOwnership',
+              },
+              {
                 text: 'grantAccess',
                 link: '/tools/dataProtector/dataProtectorCore/grantAccess',
               },
               {
-                text: 'processProtectedData',
-                link: '/tools/dataProtector/dataProtectorCore/processProtectedData',
-              },
-              {
-                text: 'protectData',
-                link: '/tools/dataProtector/dataProtectorCore/protectData',
+                text: 'getGrantedAccess',
+                link: '/tools/dataProtector/dataProtectorCore/getGrantedAccess',
               },
               {
                 text: 'revokeOneAccess',
@@ -67,8 +67,8 @@ export function getSidebar() {
                 link: '/tools/dataProtector/dataProtectorCore/revokeAllAccess',
               },
               {
-                text: 'transferOwnership',
-                link: '/tools/dataProtector/dataProtectorCore/transferOwnership',
+                text: 'processProtectedData',
+                link: '/tools/dataProtector/dataProtectorCore/processProtectedData',
               },
             ],
           },
