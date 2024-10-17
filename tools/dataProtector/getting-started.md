@@ -191,3 +191,29 @@ const dataProtectorSharing = dataProtector.sharing;
 
 To add optional parameters, see
 [advanced configuration](./advanced/advanced-configuration.md).
+
+## Sandbox
+
+### Core methods
+
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main" target="_blank" rel="noreferrer" class="link-as-block" style="margin-top: 16px">
+  ⚡ &nbsp;Code Sandbox
+</a>
+
+Corresponding GitHub repository:
+
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
+  🔎 &nbsp;GitHub repository sandbox
+</a>
+
+### Sharing methods
+
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sharing-sandbox/main" target="_blank" rel="noreferrer" class="link-as-block" style="margin-top: 16px">
+  ⚡ &nbsp;Code Sandbox
+</a>
+
+Corresponding GitHub repository:
+
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sharing-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
+  🔎 &nbsp;GitHub repository sandbox
+</a>

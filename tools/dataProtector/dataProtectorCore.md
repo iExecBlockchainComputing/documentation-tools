@@ -32,15 +32,3 @@ DataProtector Core module contains the following set of methods:
   user for a protected data
 - **processProtectedData** — process a protected data with a specified iExec
   application
-
-## Sandbox
-
-<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true" target="_blank" rel="noreferrer" class="link-as-block">
-  ⚡ &nbsp;Code Sandbox
-</a>
-
-Corresponding GitHub repository:
-
-<a href="https://github.com/iExecBlockchainComputing/dataprotector-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
-  🔎 &nbsp;GitHub repository sandbox
-</a>
