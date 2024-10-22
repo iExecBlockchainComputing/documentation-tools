@@ -22,6 +22,20 @@ export function getSidebar() {
               },
             ],
           },
+          {
+            text: 'Guide',
+            collapsed: true,
+            items: [
+              {
+                text: 'How to Access computing power',
+                link: '/overview/guide/computing-power',
+              },
+              {
+                text: 'How to Pay with web3mail',
+                link: '/overview/guide/pay-with-web3mail',
+              },
+            ],
+          },
         ],
       },
       {

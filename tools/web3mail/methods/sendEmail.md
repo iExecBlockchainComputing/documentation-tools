@@ -97,6 +97,37 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
+### useVoucher <OptionalBadge />
+
+**Type:** `boolean`  
+**Default:** `false`
+
+This optional param allows you to pay for the deal using your voucher. Make sure
+that your voucher is held by your connected wallet.
+
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+const sendEmail = await web3mail.sendEmail({
+  protectedData: '0x123abc...',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
+  useVoucher: true, // [!code focus]
+});
+```
+
+::: tip
+
+If your voucher doesn't have enough xRLC to cover the deal, the SDK will
+automatically get the required amount to your iExec account. Ensure that your
+voucher is authorized to access your iExec account and that your account has
+sufficient funds for this transfer to proceed.
+
+:::
+
 ### contentType <OptionalBadge />
 
 **Type:** `text/plain` or `text/html`  
