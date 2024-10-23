@@ -38,7 +38,7 @@ benefits.
 
 ### Vouchers
 
-[Learn more about vouchers](link landing page) (TODO)
+[Learn more about vouchers](https://www.iex.ec/voucher)
 
 Vouchers can be thought of as prepaid credits that grant access to iExec's
 resources without requiring upfront xRLC spending. They are particularly useful
