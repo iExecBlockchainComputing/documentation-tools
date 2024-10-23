@@ -65,9 +65,17 @@ deduct the remaining amount from your account.
 Set the `useVoucher` parameter to `true` when using Web3Mail’s `sendEmail`
 function to pay with a voucher:
 
-```javascript
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
 const sendEmail = await web3mail.sendEmail({
-  useVoucher: true,
+  protectedData: '0x123abc...',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
+  useVoucher: true, // [!code focus]
 });
 ```
 
@@ -102,12 +110,19 @@ address), follow these steps:
 5. **Execute `sendEmail`**: Set the `useVoucher` parameter to `false` when using
    Web3Mail’s `sendEmail` function to pay with xRLC:
 
-   ```javascript
-   const sendEmail = await web3mail.sendEmail({
-     ...,
-     useVoucher: false,
-   });
-   ```
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+const sendEmail = await web3mail.sendEmail({
+  protectedData: '0x123abc...',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
+  useVoucher: true, // [!code focus]
+});
+```
 
 6. **Withdraw sRLC (If Desired)**: Convert sRLC back to xRLC and withdraw to
    your wallet using:

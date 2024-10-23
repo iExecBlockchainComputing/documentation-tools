@@ -118,7 +118,7 @@ const updateOracleObservable = factory.updateOracle(
 This optional param allows you to pay for the deal using your voucher. Make sure
 that your voucher is held by your connected wallet.
 
-```ts twoslash
+```ts
 import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
 const web3Provider = {} as any;
 const factory = new IExecOracleFactory(web3Provider);
