@@ -39,7 +39,7 @@ for all 5 chapters**.
   </a>
   
   <a href="./5-suprise" class="card">
-    <h3>🌟 Secret Chapter: Pssssst...</h3>
+    <h3>🌟 Secret Chapter: Psst...</h3>
     <p>Complete all chapters for a surprise! What could it be?</p>
   </a>
 </div>
