@@ -11,17 +11,17 @@
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.2",
-    "@shikijs/vitepress-twoslash": "^1.2.0",
-    "prettier": "^3.2.5",
-    "unplugin-auto-import": "^0.17.6",
-    "unplugin-vue-components": "^0.27.0",
-    "vitepress": "^1.4.0"
+    "@shikijs/vitepress-twoslash": "^1.22.0",
+    "prettier": "^3.3.3",
+    "unplugin-auto-import": "^0.18.3",
+    "unplugin-vue-components": "^0.27.4",
+    "vitepress": "^1.4.1"
   },
   "dependencies": {
     "@iexec/dataprotector": "^2.0.0-beta.10",
     "@iexec/dataprotector-deserializer": "^0.1.0",
-    "@iexec/iexec-oracle-factory-wrapper": "^2.3.0",
-    "@iexec/web3mail": "^1.0.2",
-    "vue": "^3.4.21"
+    "@iexec/iexec-oracle-factory-wrapper": "^2.3.1",
+    "@iexec/web3mail": "^1.1.0",
+    "vue": "^3.5.12"
   }
 }
