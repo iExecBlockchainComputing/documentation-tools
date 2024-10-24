@@ -1,4 +1,4 @@
-# How Accessing iExec Computing Power
+# How to access computing power
 
 ::: tip Important
 
@@ -25,7 +25,7 @@ Below are examples using our devtools:
   emails and protecting user privacy. The `sendEmail` function requires
   computing power to encrypt and send messages securely.
 
-## How to pay for Computing Power
+## How to pay for computing power
 
 Builders using iExec’s resources incur a cost for accessing computing power.
 Payment options include:
@@ -62,13 +62,13 @@ address, this cost must be covered separately using xRLC.
 
 :::
 
-#### Voucher Management
+#### Voucher management
 
 - **Claim vouchers** for the "BUILD" or "EARN" stages.
 - **Top up vouchers** when your balance is low.
 - **Monitor your voucher balance** and usage history.
 
-#### Additional Resources
+#### Additional resources
 
 - Access the **iExec Academy** and documentation for further learning.
 
@@ -82,7 +82,7 @@ via the iExec Bridge. Once deposited into your iExec account, xRLC becomes
 **sRLC** (staked RLC), which the protocol manages to automatically handle
 payments for computing power.
 
-#### Token Types Explained
+#### Token types explained
 
 - **RLC**: iExec’s native cryptocurrency, purchasable from exchanges to convert
   into xRLC.

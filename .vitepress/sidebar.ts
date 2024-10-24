@@ -27,11 +27,11 @@ export function getSidebar() {
             collapsed: true,
             items: [
               {
-                text: 'How to Access computing power',
+                text: 'How to access computing power',
                 link: '/overview/guide/computing-power',
               },
               {
-                text: 'How to Pay with web3mail',
+                text: 'How to pay with web3mail',
                 link: '/overview/guide/pay-with-web3mail',
               },
             ],

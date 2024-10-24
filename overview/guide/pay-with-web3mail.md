@@ -9,45 +9,45 @@ This section provides a detailed guide on using **Web3Mail**, highlighting steps
 involved in accessing and paying for its computing power using both vouchers and
 xRLC.
 
-## Prepare Your Development Environment
+## Prepare your development environment
 
 ### Prerequisites
 
 - Install the iExec SDK in your JS/TS project:
 
-  ```sh
-  npm install iexec
-  ```
+```sh
+npm install iexec
+```
 
 - Instantiate the iExec SDK (see documentation at
   [iexec-sdk/docs/README.md](https://github.com/iExecBlockchainComputing/iexec-sdk/blob/master/docs/README.md)):
 
-  ```javascript
-  import { IExec } from 'iexec';
-  // connect injected provider
-  const iexec = new IExec({ ethProvider: window.ethereum });
-  ```
+```javascript
+import { IExec } from 'iexec';
+// connect injected provider
+const iexec = new IExec({ ethProvider: window.ethereum });
+```
 
-## Choose Your Payment Method
+## Choose your payment method
 
 Web3Mail offers two payment options for covering computational costs:
 **Vouchers** and **xRLC**.
 
-### Using Vouchers for Web3Mail
+### Using vouchers for Web3Mail
 
-#### Obtain a Voucher
+#### Obtain a voucher
 
 - Acquire vouchers through the **iExec Builder Dashboard** or the dedicated
   **Discord channel**.
 - **Voucher in Build**: Allows the execution of the Web3Mail iExec-app up to 200
   times, ideal for testing and development.
-- **Voucher in Earn**: Supports up to 1000 executions of the Web3Mail iExec-app,
-  suited for applications ready for deployment.
+- **Voucher in Earn**: Supports up to 1,000 executions of the Web3Mail
+  iExec-app, suited for applications ready for deployment.
 
 > **Note**: You may need assistance in obtaining and using vouchers. Please
 > contact the iExec support team for guidance.
 
-#### Check Your Voucher Balance
+#### Check your voucher balance
 
 Use the command below to check your balance:
 
@@ -55,14 +55,14 @@ Use the command below to check your balance:
 iexec.account.show();
 ```
 
-#### Grant Allowance (If Necessary)
+#### Grant allowance (if necessary)
 
 If the voucher balance is insufficient, authorize the voucher smart contract to
 deduct the remaining amount from your account.
 
-#### Execute Web3Mail's `sendEmail` Function
+#### Execute Web3Mail's `sendEmail` function
 
-Set the `useVoucher` parameter to `true` when using Web3Mail’s `sendEmail`
+Set the `useVoucher` parameter to `true` when using Web3Mail's `sendEmail`
 function to pay with a voucher:
 
 ```ts twoslash
@@ -99,32 +99,32 @@ address), follow these steps:
    iexec.account.deposit(xRLC_amount);
    ```
 
-   This converts xRLC into sRLC, used as proof of funds for task execution.
+This converts xRLC into sRLC, used as proof of funds for task execution.
 
-4. **Check sRLC Balance**: Use the command below to check your balance:
+4. **Check sRLC balance**: Use the command below to check your balance:
 
    ```javascript
    iexec.account.show();
    ```
 
 5. **Execute `sendEmail`**: Set the `useVoucher` parameter to `false` when using
-   Web3Mail’s `sendEmail` function to pay with xRLC:
+   Web3Mail's `sendEmail` function to pay with xRLC:
 
-```ts twoslash
-import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+   ```ts twoslash
+   import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const web3mail = new IExecWeb3mail(web3Provider);
-// ---cut---
-const sendEmail = await web3mail.sendEmail({
-  protectedData: '0x123abc...',
-  emailSubject: 'My email subject',
-  emailContent: 'My email content',
-  useVoucher: true, // [!code focus]
-});
-```
+   const web3Provider = getWeb3Provider('PRIVATE_KEY');
+   const web3mail = new IExecWeb3mail(web3Provider);
+   // ---cut---
+   const sendEmail = await web3mail.sendEmail({
+     protectedData: '0x123abc...',
+     emailSubject: 'My email subject',
+     emailContent: 'My email content',
+     useVoucher: true, // [!code focus]
+   });
+   ```
 
-6. **Withdraw sRLC (If Desired)**: Convert sRLC back to xRLC and withdraw to
+6. **Withdraw sRLC (if desired)**: Convert sRLC back to xRLC and withdraw to
    your wallet using:
 
    ```javascript
