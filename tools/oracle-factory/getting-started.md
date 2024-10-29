@@ -128,7 +128,7 @@ Supported blockchains:
 
 ## Sandbox
 
-<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/oracle-factory-sandbox/main?file=%2Fsrc%2Findex.js&embed=1" target="_blank" rel="noreferrer" class="link-as-block">
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/oracle-factory-sandbox/main" target="_blank" rel="noreferrer" class="link-as-block">
   ⚡ &nbsp;Code Sandbox
 </a>
 
