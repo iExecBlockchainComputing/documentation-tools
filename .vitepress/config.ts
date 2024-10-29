@@ -13,6 +13,7 @@ export default defineConfig({
   // Remove the trailing .html from URLs. Also needs the same option in vercel.json
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,
   markdown: {
     codeTransformers: [transformerTwoslash()],
     theme: {
