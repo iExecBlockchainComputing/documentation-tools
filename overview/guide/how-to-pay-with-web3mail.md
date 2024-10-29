@@ -22,6 +22,10 @@ and **xRLC**, detailing the steps for each method.
 
 ### Step 2: Use the Builder Dashboard
 
+<a href="https://builder.iex.ec/" target="_blank" rel="noreferrer" style="display: inline-block; margin-top: 20px">
+  <img src="/assets/builder-dashboard.png" alt="Builder dashboard screenshot">
+</a>
+
 The iExec Builder Dashboard is a comprehensive tool for managing vouchers and
 resources, providing an intuitive interface for:
 
@@ -30,6 +34,8 @@ resources, providing an intuitive interface for:
 - **Top-Up Vouchers**: Future updates will allow direct top-ups via the
   dashboard. Currently, builders are redirected to Discord.
 - **Checking Voucher Balance**: Track your voucher balance and usage history.
+
+[🧙🏼 Go here](https://builder.iex.ec/)
 
 ### Step 3: Grant Allowance (If Necessary)
 
@@ -88,7 +94,17 @@ Obtain RLC tokens from a supported cryptocurrency exchange.
 ### Convert to xRLC
 
 Use the iExec Bridge to convert your RLC into xRLC for use on iExec's sidechain.
-The conversion uses the lock & mint/burn & unlock mechanism.
+The bridging operation follows the lock & mint / burn & unlock principle. When
+sending tokens from Mainnet to Bellecour, the bridge locks the initial amount on
+the source chain and mints the equivalent on the destination chain. When going
+in the other direction, it burns tokens on the Sidechain and unlocks the same
+amount on Mainnet. The bridged asset is called xRLC on Bellecour.
+
+Users can send tokens from the Ethereum Mainnet to the iExec Sidechain or
+vice-versa using the Account Manager
+([iExec Explorer](https://explorer.iex.ec/bellecour) or
+[POA Bridge UI](https://bridge-bellecour.iex.ec/)) available across all iExec
+products.
 
 ### Deposit xRLC
 

@@ -46,10 +46,15 @@ the builder's development stage, it allows for:
 
 ## iExec development journey - From BUILD to EARN
 
-| Stage     | Description      | Voucher Price | Dev Tool & Unit Price | Number of Executions | Support                      | Expiration Time | Builder Mentorship | TEE Tech Guidance |
-| --------- | ---------------- | ------------- | --------------------- | -------------------- | ---------------------------- | --------------- | ------------------ | ----------------- |
-| **BUILD** | Start building   | $USD 20       | Web3mail \| 0.1 USD   | Up to 200            | Response Time - 8h, CET Time | 30 days         | Ideation           | Included          |
-| **EARN**  | Go to Production | $USD 100      | Web3mail \| 0.1 USD   | Up to 1,000          | Response Time - 4h, CET Time | 6 months        | GTM Partner        | Included          |
+| Description           | BUILD                                                     | EARN                                                      |
+| --------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| Voucher Price         | $USD 20                                                   | $USD 100                                                  |
+| Dev Tool & Unit Price | Web3mail / 0.1 USD                                        | Web3mail / 0.1 USD                                        |
+| Number of executions  | Up to 200                                                 | Up to 1,000                                               |
+| Support               | Response Time - 8h <br> Business Hours <br> CET Time Zone | Response Time - 4h <br> Business Hours <br> CET Time Zone |
+| Expiration Time       | 30 days                                                   | 6 months                                                  |
+| Builder Mentorship    | Ideation                                                  | GTM Partner                                               |
+| TEE Tech Guidance     | Included                                                  | Included                                                  |
 
 This table summarizes the **iExec Voucher** journey from BUILD to EARN stages,
 with a focus on execution volumes, support timelines, and mentorship access.

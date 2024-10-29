@@ -27,12 +27,12 @@ export function getSidebar() {
             collapsed: true,
             items: [
               {
-                text: 'How to pay with Web3mail',
-                link: '/overview/guide/how-to-pay-with-web3mail',
-              },
-              {
                 text: 'Pricing Considerations',
                 link: '/overview/guide/pricing-considerations',
+              },
+              {
+                text: 'How to pay with Web3mail',
+                link: '/overview/guide/how-to-pay-with-web3mail',
               },
             ],
           },
