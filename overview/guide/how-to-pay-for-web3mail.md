@@ -1,4 +1,4 @@
-# Web3Mail Devtools Documentation
+# How to pay for Web3mail
 
 Web3Mail devtools offer secure, blockchain-based communication by encrypting
 emails and protecting user privacy.
@@ -16,8 +16,8 @@ and **xRLC**, detailing the steps for each method.
 - **Acquire Vouchers**: Obtain vouchers through the
   [iExec Builder Dashboard](<(https://builder.iex.ec/)>). Note that the number
   of Web3Mail executions and the expiration time of each voucher is restricted
-  based on its validity period. Refer to pricing documentation for more
-  information.
+  based on its validity period. Refer to
+  [pricing documentation](https://www.iex.ec/voucher) for more information.
 - **Support**: For specific limitations related to your voucher, please contact
   iExec Support.
 
