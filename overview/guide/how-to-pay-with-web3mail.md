@@ -13,10 +13,11 @@ and **xRLC**, detailing the steps for each method.
 
 ### Step 1: Obtain a Voucher
 
-- **Acquire Vouchers**: Obtain vouchers through the iExec Builder Dashboard.
-  Note that the number of Web3Mail executions and the expiration time of each
-  voucher is restricted based on its validity period. Refer to pricing
-  documentation for more information.
+- **Acquire Vouchers**: Obtain vouchers through the
+  [iExec Builder Dashboard](<(https://builder.iex.ec/)>). Note that the number
+  of Web3Mail executions and the expiration time of each voucher is restricted
+  based on its validity period. Refer to pricing documentation for more
+  information.
 - **Support**: For specific limitations related to your voucher, please contact
   iExec Support.
 
