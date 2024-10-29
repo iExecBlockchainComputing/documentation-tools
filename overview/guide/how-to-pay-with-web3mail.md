@@ -71,10 +71,9 @@ To manage RLC tokens, developers must use the iExec SDK, which offers all the
 necessary tools for interacting with the iExec platform. This includes
 depositing, withdrawing, and checking balances of RLC and xRLC
 
-- \*\*In your JS/TS project npm install iexec
-- \*\* Instantiate the iExec SDK (see doc
-  <https://github.com/iExecBlockchainComputing/iexec-sdk/blob/master/docs/README.md#quick-start>
-  )
+- In your JS/TS project npm install iexec
+- Instantiate the iExec SDK (see the
+  [doc](https://github.com/iExecBlockchainComputing/iexec-sdk/blob/master/docs/README.md#quick-start))
 
 ```javascript
 import { IExec } from 'iexec';
