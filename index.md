@@ -15,10 +15,6 @@ monetization.
   📽 &nbsp;Use case demo
 </a>
 
-<a href="./overview/pricing-considerations" class="link-for-home">
-  💰 &nbsp;Pricing considerations
-</a>
-
 <a href="./overview/how-to-pay-for-web3mail" class="link-for-home">
   🔧 &nbsp;How to pay for web3mail
 </a>

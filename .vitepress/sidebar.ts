@@ -22,12 +22,12 @@ export function getSidebar() {
               },
             ],
           },
+          // {
+          //   text: '💰&nbsp;&nbsp;Pricing Considerations',
+          //   link: '/overview/pricing-considerations',
+          // },
           {
-            text: '💰 Pricing Considerations',
-            link: '/overview/pricing-considerations',
-          },
-          {
-            text: '🔧 How to Pay for Web3mail',
+            text: '🔧&nbsp;&nbsp;How to Pay for Web3mail',
             link: '/overview/how-to-pay-for-web3mail',
           },
         ],
