@@ -22,6 +22,14 @@ export function getSidebar() {
               },
             ],
           },
+          {
+            text: '💰 Pricing Considerations',
+            link: '/overview/pricing-considerations',
+          },
+          {
+            text: '🔧 How to Pay for Web3mail',
+            link: '/overview/how-to-pay-for-web3mail',
+          },
         ],
       },
       {

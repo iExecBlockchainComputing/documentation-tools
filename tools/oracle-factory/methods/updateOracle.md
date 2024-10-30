@@ -110,7 +110,46 @@ const updateOracleObservable = factory.updateOracle(
 );
 ```
 
-### workerpool
+### useVoucher <OptionalBadge />
+
+**Type:** `boolean`  
+**Default:** `false`
+
+This optional param allows you to pay for the deal using your voucher. Make sure
+that your voucher is held by your connected wallet.
+
+```ts
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
+const updateOracleObservable = factory.updateOracle(
+  {
+    JSONPath: "$['ethereum']['usd']",
+    body: '',
+    dataType: 'number',
+    dataset: '0x0000000000000000000000000000000000000000',
+    headers: {},
+    method: 'GET',
+    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  },
+  {
+    useVoucher: true, // [!code focus]
+  }
+);
+```
+
+::: tip
+
+If your voucher doesn't have enough xRLC to cover the deal, the SDK will
+automatically get the required amount to your iExec account. Ensure that your
+voucher is authorized to access your iExec account and that your account has
+sufficient funds for this transfer to proceed.
+
+:::
+
+### workerpool <OptionalBadge />
 
 Address of the workerpool that should perform the update.
 
@@ -140,7 +179,7 @@ default workerpool for running confidential computations on the iExec platform.
 
 :::
 
-### targetBlockchains
+### targetBlockchains <OptionalBadge />
 
 Array of target blockchain chainId where the oracle is deployed. 1 for Ethereum
 mainnet, 137 for Polygon mainnet.

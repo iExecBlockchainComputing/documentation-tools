@@ -1,16 +1,24 @@
 # sendEmail
 
-This method allows an authorized entity to send an email message to a User
+This method allows an authorized entity to send an email message to a user
 without needing to know their email address.
 
 The recipient email address is stored in a `protectedData` entity. The user
-receiving email must explicitly authorize you to send them email communications
-and permission must be granted for the `Web3Mail` tool to use the
+receiving the email must explicitly authorize you to send them email
+communications and permission must be granted for the `Web3Mail` tool to use the
 `protectedData` entity containing their email address. This is best done by
 granting authorization to the Web3Mail app whitelist
 `0x781482C39CcE25546583EaC4957Fb7Bf04C277D2` as `authorizedApp`. Refer to the
 [Data Protector `grantAccess`](../../dataProtector/dataProtectorCore/grantAccess.md)
 documentation for more details.
+
+::: tip
+
+For executing the `sendEmail` method with a voucher or xRLC, refer to the
+dedicated section in the documentation under
+"[How to Pay for web3mail](../../../overview/how-to-pay-for-web3mail)".
+
+:::
 
 ## Usage
 
@@ -96,6 +104,37 @@ const sendEmail = await web3mail.sendEmail({
   emailContent: 'My email content', // [!code focus]
 });
 ```
+
+### useVoucher <OptionalBadge />
+
+**Type:** `boolean`  
+**Default:** `false`
+
+This optional param allows you to pay for the deal using your voucher. Make sure
+that your voucher is held by your connected wallet.
+
+```ts twoslash
+import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3mail = new IExecWeb3mail(web3Provider);
+// ---cut---
+const sendEmail = await web3mail.sendEmail({
+  protectedData: '0x123abc...',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
+  useVoucher: true, // [!code focus]
+});
+```
+
+::: tip
+
+If your voucher doesn't have enough xRLC to cover the deal, the SDK will
+automatically get the required amount to your iExec account. Ensure that your
+voucher is authorized to access your iExec account and that your account has
+sufficient funds for this transfer to proceed.
+
+:::
 
 ### contentType <OptionalBadge />
 
