@@ -1,7 +1,7 @@
 # How to pay for Web3mail
 
-Web3Mail devtools offer secure, blockchain-based communication by encrypting
-emails and protecting user privacy.
+[Web3Mail](../tools/web3mail) devtool offers secure, blockchain-based
+communication by encrypting emails and protecting user privacy.
 
 The `sendEmail` function uses confidential computing power to encrypt and send
 messages, ensuring secure and decentralized email exchanges.
