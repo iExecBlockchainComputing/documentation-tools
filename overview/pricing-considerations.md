@@ -13,7 +13,7 @@ effectively forecast and manage their business needs.
 
 ## Premium support
 
-The iExec Voucher serves as both a payment method and access to iExec’s
+The iExec Voucher serves as both a payment method and access to iExec's
 development support, known as **Premium Support**. This includes:
 
 - **Technical Assistance (TEE Tech Guidance)** from the Customer Support team.

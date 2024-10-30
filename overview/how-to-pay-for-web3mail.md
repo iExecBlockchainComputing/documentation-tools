@@ -1,6 +1,6 @@
 # How to pay for Web3mail
 
-[Web3Mail](../tools/web3mail) devtool offers secure, blockchain-based
+[Web3Mail](../tools/web3mail) dev tool offers secure, blockchain-based
 communication by encrypting emails and protecting user privacy.
 
 The `sendEmail` function uses confidential computing power to encrypt and send
@@ -14,7 +14,7 @@ and **xRLC**, detailing the steps for each method.
 ### Step 1: Obtain a Voucher
 
 - **Acquire Vouchers**: Obtain vouchers through the
-  [iExec Builder Dashboard](<(https://builder.iex.ec)>). Note that the number of
+  [iExec Builder Dashboard](https://builder.iex.ec/). Note that the number of
   Web3Mail executions and the expiration time of each voucher is restricted
   based on its validity period. Refer to
   [pricing documentation](https://www.iex.ec/voucher) for more information.
@@ -36,19 +36,19 @@ resources, providing an intuitive interface for:
   dashboard. Currently, builders are redirected to Discord.
 - **Checking Voucher Balance**: Track your voucher balance and usage history.
 
-[🧙🏼 Go here](https://builder.iex.ec/)
+🧙🏼 [Go here](https://builder.iex.ec/)
 
 ### Step 3: Grant Allowance (If Necessary)
 
 Use `iexec.account.approve(voucherAddress)` to authorize the voucher smart
 contract to debit your account if the voucher balance is insufficient. This
-ensures that if the voucher alone doesn’t cover the execution cost, the
+ensures that if the voucher alone doesn't cover the execution cost, the
 remaining balance is automatically deducted from your account.
 
 For additional information on using xRLC for fallback payment in Web3Mail, refer
 to the **Using xRLC with Web3Mail** section.
 
-### Step 4: Execute Web3Mail’s sendEmail Function
+### Step 4: Execute Web3Mail's sendEmail Function
 
 When using a voucher for payment, set the `useVoucher` parameter to `true`:
 
@@ -66,7 +66,7 @@ const sendEmail = await web3mail.sendEmail({
 });
 ```
 
-## Using xRlc for Web3Mail
+## Using xRlC for Web3Mail
 
 If you choose to use xRLC to cover the computational cost of Web3Mail (or if you
 need to cover data access costs such as retrieving the recipient's email
@@ -127,8 +127,8 @@ iexec.account.show();
 
 ### Execute sendEmail
 
-Set the useVoucher parameter to false when using Web3Mail’s sendEmail function
-to pay with xRLC:
+Set the `useVoucher` parameter to `false` when using Web3Mail's sendEmail
+function to pay with xRLC:
 
 ```ts twoslash
 import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
@@ -140,7 +140,7 @@ const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...',
   emailSubject: 'My email subject',
   emailContent: 'My email content',
-  useVoucher: true, // [!code focus]
+  useVoucher: false, // [!code focus]
 });
 ```
 
