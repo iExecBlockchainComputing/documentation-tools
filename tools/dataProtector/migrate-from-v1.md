@@ -8,7 +8,7 @@ This page concerns projects created with DataProtector prior or equal to version
 :::
 
 ```sh
-npm install @iexec/dataprotector@latest --save-exact
+npm install @iexec/dataprotector@latest
 ```
 
 ## Constructor
