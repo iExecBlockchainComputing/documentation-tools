@@ -1,6 +1,6 @@
 # 👋 Hello
 
-> Reading 🕒 2 mins
+> Reading 🕒 2 mins (thius hello world will be modify)
 
 Hey there, and welcome to our Hello World Journey! I'm Martin, DevRel at iExec,
 and I'm thrilled to guide you through the exciting world of confidential
