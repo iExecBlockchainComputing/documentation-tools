@@ -46,8 +46,8 @@ for all 5 chapters**.
 
 ::: tip If you see this 🚨it means
 
-That we've introduced a new concept that needs to be explained. Or if
-you want to jump ahead in the full glossary right now, you can check out
+That we've introduced a new concept that needs to be explained. Or if you want
+to jump ahead in the full glossary right now, you can check out
 [here](https://protocol.docs.iex.ec/help/glossary)
 
 :::

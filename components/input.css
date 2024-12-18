@@ -31,5 +31,5 @@
 }
 
 .white-block-for-address {
-  @apply mt-1 text-sm rounded border border-neutral-200 bg-white px-2 py-2 break-all;
+  @apply mt-1 break-all rounded border border-neutral-200 bg-white px-2 py-2 text-sm;
 }
