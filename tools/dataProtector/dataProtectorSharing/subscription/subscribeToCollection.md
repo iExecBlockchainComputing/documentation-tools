@@ -19,7 +19,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC
@@ -49,9 +48,9 @@ error.
 import { type SubscribeToCollectionParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### collectionId <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Collection ID to which you'd like to subscribe.
 
@@ -64,7 +63,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12, // [!code focus]
   price: 1, // 1 nRLC
@@ -72,9 +70,9 @@ const { txHash } = await dataProtectorSharing.subscribeToCollection({
 });
 ```
 
-### price
+### price <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Price of the rental for the protected data that you expect to rent. This
 parameter ensures that you will not be front-run by the owner of the protected
@@ -89,7 +87,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC // [!code focus]
@@ -97,9 +94,9 @@ const { txHash } = await dataProtectorSharing.subscribeToCollection({
 });
 ```
 
-### duration
+### duration <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Duration of the rental for the protected data that you expect to rent. This
 parameter ensures that you will not be front-run by the owner of the protected
@@ -114,7 +111,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.subscribeToCollection({
   collectionId: 12,
   price: 1, // 1 nRLC

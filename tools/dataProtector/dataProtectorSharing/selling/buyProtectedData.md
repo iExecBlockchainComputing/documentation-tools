@@ -18,7 +18,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,
@@ -36,13 +35,12 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 import { type BuyProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to buy.
 
@@ -55,16 +53,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...', // [!code focus]
   price: 1,
 });
 ```
 
-### price
+### price <RequiredBadge />
 
-`number`
+**Type:** `number`
 
 Price of the protected data that you expect to buy. This parameter ensures that
 you will not be front-run by the owner of the protected data. The unit is in
@@ -79,16 +76,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1, // [!code focus]
 });
 ```
 
-### addToCollectionId
+### addToCollectionId <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 Collection ID to which you'd like to transfer the ownership of the protected
 data.  
@@ -107,7 +103,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,
@@ -116,9 +111,9 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 });
 ```
 
-### addOnlyAppWhitelist
+### addOnlyAppWhitelist <OptionalBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the whitelist smart contract that contains applications allowed to
 consume the protected data.
@@ -132,7 +127,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const { txHash } = await dataProtectorSharing.buyProtectedData({
   protectedData: '0x123abc...',
   price: 1,
@@ -144,12 +138,12 @@ const { txHash } = await dataProtectorSharing.buyProtectedData({
 ::: tip
 
 For this `addOnlyAppWhitelist`, you are free to use
-`0x334dc0bb08fb32a4e9917197e5e626de4b6b9b87` that contains apps created for the
+`0x256bcd881c33bdf9df952f2a0148f27d439f2e64` that contains apps created for the
 purpose of Content Creator usecase-demo. This `addOnlyAppWhitelist` is managed
 by iExec.
 
 For more details on how to create and manage appsWhitelist, see
-[Apps whitelist](../../advanced/appsWhitelist.md).
+[Apps whitelist](../../advanced/apps-whitelist).
 
 :::
 

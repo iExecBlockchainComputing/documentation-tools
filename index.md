@@ -7,12 +7,16 @@ monetization.
 
 ## Overview
 
-<a href="./overview/whatWeDo" class="link-for-home">
+<a href="./overview/what-we-do" class="link-for-home">
   💡 &nbsp;What we do
 </a>
 
-<a href="./overview/useCaseDemo" class="link-for-home">
+<a href="./overview/use-case-demo" class="link-for-home">
   📽 &nbsp;Use case demo
+</a>
+
+<a href="./overview/how-to-pay-for-web3mail" class="link-for-home">
+  🔧 &nbsp;How to pay for web3mail
 </a>
 
 ## Our tools
@@ -25,7 +29,7 @@ monetization.
   ✉ &nbsp;Web3Mail
 </a>
 
-<a href="./tools/oracleFactory" class="link-for-home">
+<a href="./tools/oracle-factory" class="link-for-home">
   🧙 &nbsp;Oracle Factory
 </a>
 

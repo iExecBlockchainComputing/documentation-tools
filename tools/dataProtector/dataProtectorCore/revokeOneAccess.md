@@ -5,6 +5,9 @@ This method allows revoking a specific access authorization from a
 [getGrantedAccess](getGrantedAccess.md) method, which provides a list of all
 authorizations on single `protectedData` entity.
 
+As this will generate a blockchain transaction, expect it to take a least 5sec
+(a block time).
+
 ## Usage
 
 The `revokeOneAccess` method requires a `grantedAccess` object as an input
@@ -17,7 +20,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAccess = await dataProtectorCore.revokeOneAccess({
   apprestrict: '0xea...',
   dataset: '0xA0C...',
@@ -37,12 +39,12 @@ const revokeAccess = await dataProtectorCore.revokeOneAccess({
 import { type GrantedAccess } from '@iexec/dataprotector';
 ```
 
-### grantedAccess
+### grantedAccess <RequiredBadge />
 
-`GrantedAccess`
+**Type:** `GrantedAccess`
 
 This is the complete `granted access` object retrieved from an invocation of
-`fetchGrantedAccess`.
+`getGrantedAccess`.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -50,7 +52,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAccess = await dataProtectorCore.revokeOneAccess({
   apprestrict: '0xea...', // [!code focus]
   dataset: '0xA0C...', // [!code focus]

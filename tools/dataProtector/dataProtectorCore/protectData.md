@@ -21,7 +21,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: {
     email: 'example@gmail.com',
@@ -38,7 +37,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: {
     email: 'example@gmail.com',
@@ -56,9 +54,9 @@ const protectedData = await dataProtectorCore.protectData({
 import { type ProtectDataParams } from '@iexec/dataprotector';
 ```
 
-### data
+### data <RequiredBadge />
 
-`DataObject`
+**Type:** `DataObject`
 
 This is the actual data the user is protecting, provided as a JSON object with
 any number of custom keys. The data is encrypted and stored as an NFT.
@@ -70,7 +68,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   data: { // [!code focus]
     email: 'example@gmail.com', // [!code focus]
@@ -87,7 +84,6 @@ of buffer. To do so, you can use `createArrayBufferFromFile`.
 ```ts twoslash
 const file: File = new File([], 'emptyFile.txt');
 // ---cut---
-
 import { createArrayBufferFromFile } from '@iexec/dataprotector';
 
 const fileAsArrayBuffer = await createArrayBufferFromFile(file);
@@ -95,11 +91,54 @@ const fileAsArrayBuffer = await createArrayBufferFromFile(file);
 
 :::
 
-### name
+::: tip
 
-`string | undefined`
+If you want to **protect an `Array`**, you must represent it as a
+`Record<string, any>`. To do so, you can use the `reduceArray` method
+implemented in this example.
 
-_default_: `Untitled`
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const reduceArray = (array: Array<any>): Record<string, any> =>
+  array.reduce((accumulator, current, i) => {
+    accumulator[i] = current;
+    return accumulator;
+  }, {});
+
+const emailsArray = [
+  'example@gmail.com',
+  'example@my-company.com',
+  'example@example.com',
+];
+
+const protectedData = await dataProtectorCore.protectData({
+  data: {
+    emails: reduceArray(emailsArray),
+  },
+});
+
+/**
+ * protectedData.schema:
+ * {
+ *   emails: {
+ *     0: 'string',
+ *     1: 'string',
+ *     2: 'string'
+ *   }
+ * }
+ */
+```
+
+:::
+
+### name <OptionalBadge />
+
+**Type:** `string`  
+**Default:** `''`
 
 Allows providing a descriptive name for the protected data. This is considered
 public metadata, describing the protected data.
@@ -110,7 +149,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail', // [!code focus]
   data: {
@@ -125,9 +163,9 @@ The name is public and not encrypted.
 
 :::
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<ProtectDataStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<ProtectDataStatuses>`
 
 Callback function to be notified at intermediate steps.
 
@@ -138,7 +176,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorCore.protectData({
   name: 'myEmail',
   data: {
@@ -273,6 +310,22 @@ data or download it consider adding a zip extension to it.
 
 :::
 
+### multiaddr
+
+`string` | `undefined`
+
+The multiaddr field is the IPFS path of your encrypted data.
+
+::: tip
+
+You can access your encrypted IPFS data with the link:
+
+`https://ipfs-gateway.v8-bellecour.iex.ec/ipfs/abc123...`
+
+`abc123...` is the second part of the returned string `/p2p/abc123...`
+
+:::
+
 ## Created protected data
 
 To further check your data was correctly created, you can inspect it on the
@@ -281,5 +334,3 @@ To further check your data was correctly created, you can inspect it on the
 <a href="https://explorer.iex.ec/" target="_blank" rel="noreferrer" style="display: inline-block">
   <img src="/assets/explorer-dataset-example.png" alt="iExec explorer - Dataset example">
 </a>
-
-The `Multiaddr` field is the URL on IPFS of your encrypted data.

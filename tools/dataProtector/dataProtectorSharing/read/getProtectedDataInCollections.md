@@ -17,7 +17,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedData =
   await dataProtectorSharing.getProtectedDataInCollections();
 ```
@@ -28,9 +27,9 @@ const protectedData =
 import { type GetProtectedDataInCollectionsParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -41,16 +40,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const oneProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     protectedData: '0x123abc...', // [!code focus]
   });
 ```
 
-### collectionId
+### collectionId <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 ```ts twoslash
 import {
@@ -61,16 +59,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedDataByCollection =
   await dataProtectorSharing.getProtectedDataInCollections({
     collectionId: 12, // [!code focus]
   });
 ```
 
-### collectionOwner
+### collectionOwner <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -81,16 +78,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedDataByOwner =
   await dataProtectorSharing.getProtectedDataInCollections({
     collectionOwner: '0x123...', // [!code focus]
   });
 ```
 
-### createdAfterTimestamp
+### createdAfterTimestamp <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 ```ts twoslash
 import {
@@ -101,16 +97,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const latestProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     createdAfterTimestamp: 1707237580, // Feb 6th, 2024 16:39:40 GMT // [!code focus]
   });
 ```
 
-### isRentable
+### isRentable <OptionalBadge />
 
-`boolean | undefined`
+**Type:** `boolean`
 
 ```ts twoslash
 import {
@@ -121,16 +116,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const rentableProtectedData =
   await dataProtectorSharing.getProtectedDataInCollections({
     isRentable: true, // [!code focus]
   });
 ```
 
-### isForSale
+### isForSale <OptionalBadge />
 
-`boolean | undefined`
+**Type:** `boolean`
 
 ```ts twoslash
 import {
@@ -141,16 +135,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedDataForSale =
   await dataProtectorSharing.getProtectedDataInCollections({
     isForSale: true, // [!code focus]
   });
 ```
 
-### isDistributed
+### isDistributed <OptionalBadge />
 
-`boolean | undefined`
+**Type:** `boolean`
 
 Used to filter protected data that are either for sale, renting or part of a
 subscription.
@@ -164,16 +157,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedDataForSale =
   await dataProtectorSharing.getProtectedDataInCollections({
     isDistributed: true, // [!code focus]
   });
 ```
 
-### page
+### page <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 ```ts twoslash
 import {
@@ -184,7 +176,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   collectionId: 12,
   page: 3, // [!code focus]
@@ -192,11 +183,10 @@ const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
 });
 ```
 
-### pageSize
+### pageSize <OptionalBadge />
 
-`number | undefined`
-
-Value between `10` and `1000`.
+**Type:** `number`  
+**Range:** `[10...1000]`
 
 ```ts twoslash
 import {
@@ -207,7 +197,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedData = await dataProtectorSharing.getProtectedDataInCollections({
   collectionId: 12,
   page: 3,

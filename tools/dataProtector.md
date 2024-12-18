@@ -3,14 +3,6 @@
 DataProtector **simplifies secure data management**, offering users essential
 tools for protecting, managing, and sharing their data effectively.
 
-::: tip
-
-You are currently viewing the documentation for DataProtector **v2**.<br/>You
-can find the documentation for v1
-[here](https://tools.docs.iex.ec/tools/dataprotector).
-
-:::
-
 ## DataProtector Core
 
 As the foundational component of DataProtector, DataProtector Core provides

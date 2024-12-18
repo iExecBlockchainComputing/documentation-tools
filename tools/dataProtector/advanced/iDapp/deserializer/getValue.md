@@ -9,7 +9,6 @@ import { IExecDataProtectorDeserializer } from '@iexec/dataprotector-deserialize
 
 const deserializer = new IExecDataProtectorDeserializer();
 // ---cut---
-
 const value1 = await deserializer.getValue('path.to.value1', 'bool');
 const value2 = await deserializer.getValue('path.to.value2', 'string');
 ```
@@ -31,7 +30,6 @@ import { IExecDataProtectorDeserializer } from '@iexec/dataprotector-deserialize
 
 const deserializer = new IExecDataProtectorDeserializer();
 // ---cut---
-
 const value1 = await deserializer.getValue(
   'path.to.value1', // [!code focus]
   'bool'
@@ -52,7 +50,6 @@ import { IExecDataProtectorDeserializer } from '@iexec/dataprotector-deserialize
 
 const deserializer = new IExecDataProtectorDeserializer();
 // ---cut---
-
 const value1 = await deserializer.getValue(
   'path.to.value1',
   'bool' // [!code focus]

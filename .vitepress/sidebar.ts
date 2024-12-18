@@ -6,21 +6,29 @@ export function getSidebar() {
       {
         text: 'OVERVIEW',
         items: [
-          { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/whatWeDo' },
+          { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/what-we-do' },
           {
             text: '📽&nbsp;&nbsp;Use Case Demo',
             collapsed: true,
-            link: '/overview/useCaseDemo',
+            link: '/overview/use-case-demo',
             items: [
               {
                 text: 'Privacy Enhancing Marketing',
-                link: '/overview/useCaseDemo/privacyEnhancingMarketing',
+                link: '/overview/use-case-demo/privacy-enhancing-marketing',
               },
               {
                 text: 'Content Creator',
-                link: '/overview/useCaseDemo/contentCreator',
+                link: '/overview/use-case-demo/content-creator',
               },
             ],
+          },
+          // {
+          //   text: '💰&nbsp;&nbsp;Pricing Considerations',
+          //   link: '/overview/pricing-considerations',
+          // },
+          {
+            text: '🔧&nbsp;&nbsp;How to Pay for Web3mail',
+            link: '/overview/how-to-pay-for-web3mail',
           },
           {
             text: '👋&nbsp;&nbsp; Hello World',
@@ -69,24 +77,24 @@ export function getSidebar() {
             collapsed: true,
             items: [
               {
-                text: 'getGrantedAccess',
-                link: '/tools/dataProtector/dataProtectorCore/getGrantedAccess',
+                text: 'protectData',
+                link: '/tools/dataProtector/dataProtectorCore/protectData',
               },
               {
                 text: 'getProtectedData',
                 link: '/tools/dataProtector/dataProtectorCore/getProtectedData',
               },
               {
+                text: 'transferOwnership',
+                link: '/tools/dataProtector/dataProtectorCore/transferOwnership',
+              },
+              {
                 text: 'grantAccess',
                 link: '/tools/dataProtector/dataProtectorCore/grantAccess',
               },
               {
-                text: 'processProtectedData',
-                link: '/tools/dataProtector/dataProtectorCore/processProtectedData',
-              },
-              {
-                text: 'protectData',
-                link: '/tools/dataProtector/dataProtectorCore/protectData',
+                text: 'getGrantedAccess',
+                link: '/tools/dataProtector/dataProtectorCore/getGrantedAccess',
               },
               {
                 text: 'revokeOneAccess',
@@ -97,8 +105,8 @@ export function getSidebar() {
                 link: '/tools/dataProtector/dataProtectorCore/revokeAllAccess',
               },
               {
-                text: 'transferOwnership',
-                link: '/tools/dataProtector/dataProtectorCore/transferOwnership',
+                text: 'processProtectedData',
+                link: '/tools/dataProtector/dataProtectorCore/processProtectedData',
               },
             ],
           },
@@ -211,27 +219,27 @@ export function getSidebar() {
                 items: [
                   {
                     text: 'getProtectedDataInCollections',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataInCollections',
+                    link: '/tools/dataProtector/dataProtectorSharing/read/getProtectedDataInCollections',
                   },
                   {
                     text: 'getProtectedDataPricingParams',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getProtectedDataPricingParams',
+                    link: '/tools/dataProtector/dataProtectorSharing/read/getProtectedDataPricingParams',
                   },
                   {
                     text: 'getCollectionOwners',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionOwners',
+                    link: '/tools/dataProtector/dataProtectorSharing/read/getCollectionOwners',
                   },
                   {
                     text: 'getCollectionsByOwner',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionsByOwner',
+                    link: '/tools/dataProtector/dataProtectorSharing/read/getCollectionsByOwner',
                   },
                   {
                     text: 'getCollectionSubscriptions',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getCollectionSubscriptions',
+                    link: '/tools/dataProtector/dataProtectorSharing/read/getCollectionSubscriptions',
                   },
                   {
                     text: 'getRentals',
-                    link: '/tools/dataProtector/dataProtectorSharing/misc/getRentals',
+                    link: '/tools/dataProtector/dataProtectorSharing/read/getRentals',
                   },
                 ],
               },
@@ -255,20 +263,20 @@ export function getSidebar() {
               },
               {
                 text: 'Apps whitelist',
-                link: '/tools/dataProtector/advanced/appsWhitelist',
+                link: '/tools/dataProtector/advanced/apps-whitelist',
                 collapsed: true,
                 items: [
                   {
                     text: 'createAddOnlyAppWhitelist',
-                    link: '/tools/dataProtector/advanced/appsWhitelist/createAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/advanced/apps-whitelist/createAddOnlyAppWhitelist',
                   },
                   {
                     text: 'addAppToAddOnlyAppWhitelist',
-                    link: '/tools/dataProtector/advanced/appsWhitelist/addAppToAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/advanced/apps-whitelist/addAppToAddOnlyAppWhitelist',
                   },
                   {
                     text: 'getUserAddOnlyAppWhitelist',
-                    link: '/tools/dataProtector/advanced/appsWhitelist/getUserAddOnlyAppWhitelist',
+                    link: '/tools/dataProtector/advanced/apps-whitelist/getUserAddOnlyAppWhitelist',
                   },
                 ],
               },
@@ -295,10 +303,6 @@ export function getSidebar() {
           {
             text: 'Migrate from v1 to v2',
             link: '/tools/dataProtector/migrate-from-v1',
-          },
-          {
-            text: 'v1 documentation',
-            link: 'https://tools.docs.iex.ec/tools/dataprotector',
           },
         ],
       },
@@ -341,12 +345,12 @@ export function getSidebar() {
       },
       {
         text: '🧙&nbsp;&nbsp;Oracle Factory',
-        link: '/tools/oracleFactory',
+        link: '/tools/oracle-factory',
         collapsed: false,
         items: [
           {
             text: 'Getting Started',
-            link: '/tools/oracleFactory/getting-started',
+            link: '/tools/oracle-factory/getting-started',
           },
           {
             text: 'Methods',
@@ -354,21 +358,21 @@ export function getSidebar() {
             items: [
               {
                 text: 'createOracle',
-                link: '/tools/oracleFactory/createOracle',
+                link: '/tools/oracle-factory/methods/createOracle',
               },
               {
                 text: 'readOracle',
-                link: '/tools/oracleFactory/readOracle',
+                link: '/tools/oracle-factory/methods/readOracle',
               },
               {
                 text: 'updateOracle',
-                link: '/tools/oracleFactory/updateOracle',
+                link: '/tools/oracle-factory/methods/updateOracle',
               },
             ],
           },
           {
             text: 'Advanced Configuration',
-            link: '/tools/oracleFactory/advanced-configuration',
+            link: '/tools/oracle-factory/advanced-configuration',
           },
         ],
       },

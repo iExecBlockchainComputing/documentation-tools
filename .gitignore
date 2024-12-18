@@ -1,4 +1,10 @@
 **/.vitepress/cache
 **/.vitepress/dist
 node_modules
+auto-imports.d.ts
+components.d.ts
+
+#mac
+.DS_Store
+
 .env

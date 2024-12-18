@@ -25,7 +25,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...',
@@ -39,9 +38,9 @@ const isAddedToAddAppToAddOnlyAppWhitelist =
 import { type AddAppToAppWhitelistParams } from '@iexec/dataprotector';
 ```
 
-### addOnlyAppWhitelist
+### addOnlyAppWhitelist <RequiredBadge />
 
-`Address`
+**Type:** `Address`
 
 Address of the `addOnlyAppWhitelist` in which you want to add an app.
 
@@ -54,7 +53,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...', // [!code focus]
@@ -62,9 +60,9 @@ const isAddedToAddAppToAddOnlyAppWhitelist =
   });
 ```
 
-### app {#app-param}
+### app <RequiredBadge /> {#app-param}
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of app that you want to add to the `addOnlyAppWhitelist`.
 
@@ -77,7 +75,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const isAddedToAddAppToAddOnlyAppWhitelist =
   await dataProtectorSharing.addAppToAddOnlyAppWhitelist({
     addOnlyAppWhitelist: '0x123abc...',

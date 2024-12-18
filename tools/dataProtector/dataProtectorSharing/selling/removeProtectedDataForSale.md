@@ -13,7 +13,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const notForSaleAnymoreResult =
   await dataProtectorSharing.removeProtectedDataForSale({
     protectedData: '0x123abc...',
@@ -26,9 +25,9 @@ const notForSaleAnymoreResult =
 import { type RemoveProtectedDataForSaleParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data that you'd like to remove for sale.
 
@@ -41,7 +40,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const notForSaleAnymoreResult =
   await dataProtectorSharing.removeProtectedDataForSale({
     protectedData: '0x123abc...', // [!code focus]
