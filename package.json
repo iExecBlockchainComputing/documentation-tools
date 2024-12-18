@@ -30,6 +30,8 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.4",
+    "unplugin-auto-import": "^0.19.0",
+    "unplugin-vue-components": "^0.28.0",
     "vitepress": "^1.1.4"
   }
 }
