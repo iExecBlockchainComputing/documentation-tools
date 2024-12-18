@@ -3,6 +3,14 @@
 This is the source repository of the
 [iExec tools documentation](https://tools.docs.iex.ec)
 
+## Run app
+
+```
+npm install
+npm run tailwind:watch  (keep it running)
+npm run dev
+```
+
 ## Contributing
 
 To keep the contribution process smooth, please read this small guide.

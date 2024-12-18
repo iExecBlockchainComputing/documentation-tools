@@ -30,6 +30,36 @@ export function getSidebar() {
             text: '🔧&nbsp;&nbsp;How to Pay for Web3mail',
             link: '/overview/how-to-pay-for-web3mail',
           },
+          {
+            text: '👋&nbsp;&nbsp; Hello World',
+            collapsed: true,
+            items: [
+              {
+                text: 'Introduction',
+                link: '/overview/helloWorld/0-hello',
+              },
+              {
+                text: 'iExec Overview',
+                link: '/overview/helloWorld/1-overview',
+              },
+              {
+                text: 'Protect data',
+                link: '/overview/helloWorld/2-protectData',
+              },
+              {
+                text: 'Use protected data',
+                link: '/overview/helloWorld/3-useProtectedData',
+              },
+              {
+                text: 'Manage data access',
+                link: '/overview/helloWorld/4-manageDataAccess',
+              },
+              {
+                text: 'Surprise!',
+                link: '/overview/helloWorld/5-suprise',
+              },
+            ],
+          },
         ],
       },
       {
