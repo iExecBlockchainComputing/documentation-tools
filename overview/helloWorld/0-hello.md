@@ -111,7 +111,7 @@ Before you begin, make sure you have:
   --background-light: #f7f9fc;
   --text-primary: #1a1a1a;
   --text-secondary: #666;
-  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   --card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   --border-radius: 6px;
   --transition: all 0.3s ease;
@@ -133,6 +133,7 @@ Before you begin, make sure you have:
 
 .hero-time {
   margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
