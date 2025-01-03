@@ -100,7 +100,7 @@ Before you begin, make sure you have:
 </div>
 
 <div class="help-note">
-  <p>Need help setting up? Join our <a target="_blank" href="https://discord.gg/iexec">Discord Community</a> for support!</p>
+  <p>Need help setting up or got some questoions? Join our <a target="_blank" href="https://discord.gg/iexec">Discord Community</a> for support!</p>
 </div>
 
 <style>
@@ -113,7 +113,7 @@ Before you begin, make sure you have:
   --text-secondary: #666;
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  --border-radius: 12px;
+  --border-radius: 6px;
   --transition: all 0.3s ease;
 }
 
@@ -128,6 +128,7 @@ Before you begin, make sure you have:
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
+  border-top:none;
 }
 
 .hero-time {
