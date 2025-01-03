@@ -2,37 +2,30 @@
 
 > Reading 🕒 2 mins
 
-Hey there, and welcome to our Hello World Journey! I'm Martin, DevRel at iExec,
-and I'm thrilled to guide you through the exciting world of confidential
-computing and data privacy.
+Welcome to the iExec Hello World Journey! This guide will introduce you to the 
+fundamentals of confidential computing and data privacy using the iExec platform.
 
-I'm a developer too, and I know you're probably eager to jump straight into the
-code. Trust me, I'll keep it short and focus on the main concepts. Feel free to
-click on the highlighted words if you'd like to dive deeper into specific
-topics.
-
-As your guide, I'll sum up what we'll learn during this quick journey.. You can
-definitely achieve this during a hackathon—it takes approximately **30 minutes
-for all 5 chapters**.
+This journey provides a comprehensive introduction to iExec's core features and
+can be completed in approximately **30 minutes** across 5 focused chapters.
 
 ## 🤓 What will you learn during this journey?
 
 <div class="grid">
   <a href="./1-overview" class="card">
-    <h3>📚 1 - iExec Stack Overview</h3>
-    <p>Introduce the iExec stack and its main components through a use case.</p>
+    <h3>📚 1 - iExec  Overview</h3>
+    <p>Introduce the iExec technologiues and its main components</p>
+  </a>
+
+  <a href="./3-useProtectedData" class="card">
+    <h3>💻 3 - Use Protected Data</h3>
+    <p>Build, deploy, and run an iExec application to process your protected data.</p>
   </a>
   
   <a href="./2-protectData" class="card">
     <h3>🔒 2 - Protect Data</h3>
     <p>Learn how to protect your data with our developer tool.</p>
   </a>
-  
-  <a href="./3-useProtectedData" class="card">
-    <h3>💻 3 - Use Protected Data</h3>
-    <p>Build, deploy, and run an iExec application to process your protected data.</p>
-  </a>
-  
+    
   <a href="./4-manageDataAccess" class="card">
     <h3>💰 4 - Manage Data access</h3>
     <p>Grant access to your protected data to users and iExec applications.</p>
