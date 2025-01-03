@@ -100,7 +100,7 @@ Before you begin, make sure you have:
 </div>
 
 <div class="help-note">
-  <p>Need help setting up or got some questoions? Join our <a target="_blank" href="https://discord.gg/iexec">Discord Community</a> for support!</p>
+  <p>Need help setting up or got some questions? Join our <a target="_blank" href="https://discord.gg/iexec">Discord Community</a> for support!</p>
 </div>
 
 <style>
