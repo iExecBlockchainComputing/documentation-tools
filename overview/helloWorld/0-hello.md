@@ -1,60 +1,57 @@
-# 👋 Hello
+# Getting Started with iExec
 
-> Reading 🕒 2 mins
+> Estimated reading time: 2 minutes
 
 Welcome to the iExec Hello World Journey! This guide will introduce you to the 
 fundamentals of confidential computing and data privacy using the iExec platform.
 
-This journey provides a comprehensive introduction to iExec's core features and
-can be completed in approximately **30 minutes** across 5 focused chapters.
+This technical walkthrough covers iExec's core functionalities and can be completed in approximately **30 minutes**, structured across 5 focused modules.
 
-## 🤓 What will you learn during this journey?
+## Technical Learning Objectives
 
 <div class="grid">
   <a href="./1-overview" class="card">
-    <h3>📚 1 - iExec  Overview</h3>
-    <p>Introduce the iExec technologiues and its main components</p>
+    <h3>📚 1. Platform Architecture</h3>
+    <p>Deep dive into iExec's technical infrastructure and core technologies</p>
+  </a>
+
+  <a href="./2-protectData" class="card">
+    <h3>🔒 2. Data Protection Implementation</h3>
+    <p>Implement enterprise-grade data protection using our developer toolkit</p>
   </a>
 
   <a href="./3-useProtectedData" class="card">
-    <h3>💻 3 - Use Protected Data</h3>
-    <p>Build, deploy, and run an iExec application to process your protected data.</p>
-  </a>
-  
-  <a href="./2-protectData" class="card">
-    <h3>🔒 2 - Protect Data</h3>
-    <p>Learn how to protect your data with our developer tool.</p>
+    <h3>💻 3. Protected Data Integration</h3>
+    <p>Build, deploy, and execute applications with protected data processing capabilities</p>
   </a>
     
   <a href="./4-manageDataAccess" class="card">
-    <h3>💰 4 - Manage Data access</h3>
-    <p>Grant access to your protected data to users and iExec applications.</p>
+    <h3>🔑 4. Access Control Management</h3>
+    <p>Implement granular access control for protected data across users and applications</p>
   </a>
   
   <a href="./5-suprise" class="card">
-    <h3>🌟 Secret Chapter: Pssssssst...</h3>
-    <p>Complete all chapters for a surprise! What could it be?</p>
+    <h3>⚡ Advanced Implementation</h3>
+    <p>Unlock advanced features upon completion of core modules</p>
   </a>
 </div>
 
-::: tip If you see this 🚨it means
+::: tip Technical Documentation Note
 
-That we've introduced a new concept that needs to be explained. Or if
-you want to jump ahead in the full glossary right now, you can check out
-[here](https://protocol.docs.iex.ec/help/glossary)
+Sections marked with 🚨 indicate critical technical concepts. For comprehensive
+reference, consult our [Technical Glossary](https://protocol.docs.iex.ec/help/glossary).
 
 :::
 
-## ⚒️ **Prerequisites**
+## Technical Requirements
 
-Here is what you will need to complete this "Hello World" Journey
+The following development environment setup is required:
 
-- [An Ethereum wallet](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?utm_source=google.com&pli=1)
-  with MetaMask
-- [A code editor](https://code.visualstudio.com/) (VSCode, Sublime Text, etc.)
-- [**Node.js**](https://nodejs.org/en/) version 18 or higher
-- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
-- [**DockerHub**](https://hub.docker.com/) account
+- **Web3 Integration**: [MetaMask](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) for Ethereum wallet functionality
+- **Development Environment**: Modern IDE (VSCode recommended)
+- **Runtime Environment**: [Node.js](https://nodejs.org/) v18+
+- **Package Management**: [NPM](https://docs.npmjs.com/)
+- **Container Registry**: Active [DockerHub](https://hub.docker.com/) account
 
 <style>
 a {
@@ -72,6 +69,7 @@ a {
   border-radius: 8px;
   padding: 16px;
   background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card h3 {
@@ -95,5 +93,4 @@ a {
 .vp-doc a{
   text-decoration: none !important;
 }
-
 </style>
