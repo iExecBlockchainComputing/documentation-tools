@@ -1,96 +1,159 @@
-# Getting Started with iExec
+# Welcome to iExec! 👋
 
 > Estimated reading time: 2 minutes
 
 Welcome to the iExec Hello World Journey! This guide will introduce you to the 
-fundamentals of confidential computing and data privacy using the iExec platform.
+fundamentals of iExec technologies and how they work together.
 
-This technical walkthrough covers iExec's core functionalities and can be completed in approximately **30 minutes**, structured across 5 focused modules.
+You can complete this hands-on journey in about **30 minutes** - perfect for a coffee break! ☕
 
-## Technical Learning Objectives
+## What You'll Learn
 
 <div class="grid">
   <a href="./1-overview" class="card">
-    <h3>📚 1. Platform Architecture</h3>
-    <p>Deep dive into iExec's technical infrastructure and core technologies</p>
+    <h3>📚 1 - iExec  Overview</h3>
+    <p>Introduce the iExec technologies and what it solves</p>
   </a>
 
   <a href="./2-protectData" class="card">
-    <h3>🔒 2. Data Protection Implementation</h3>
-    <p>Implement enterprise-grade data protection using our developer toolkit</p>
+    <h3>🔒 2. Protect Your Data</h3>
+    <p>Learn how to keep your data safe using our developer tools</p>
   </a>
 
   <a href="./3-useProtectedData" class="card">
-    <h3>💻 3. Protected Data Integration</h3>
-    <p>Build, deploy, and execute applications with protected data processing capabilities</p>
+    <h3>💻 3. Work with Protected Data</h3>
+    <p>Build and run your first iExec application using protected data</p>
   </a>
     
   <a href="./4-manageDataAccess" class="card">
-    <h3>🔑 4. Access Control Management</h3>
-    <p>Implement granular access control for protected data across users and applications</p>
+    <h3>🔑 4. Control Data Access</h3>
+    <p>Choose who can use your data and how they can use it</p>
   </a>
   
   <a href="./5-suprise" class="card">
-    <h3>⚡ Advanced Implementation</h3>
-    <p>Unlock advanced features upon completion of core modules</p>
+    <h3>✨ Bonus Chapter</h3>
+    <p>Complete the journey to unlock some cool advanced features!</p>
   </a>
 </div>
 
-::: tip Technical Documentation Note
-
-Sections marked with 🚨 indicate critical technical concepts. For comprehensive
-reference, consult our [Technical Glossary](https://protocol.docs.iex.ec/help/glossary).
-
+::: tip 🚨 Hint
+Look out for the 🚨 symbol - it means we're introducing something new! 
+Want to learn more? Check out our full [Glossary](https://protocol.docs.iex.ec/help/glossary).
 :::
 
-## Technical Requirements
+## What You'll Need
 
-The following development environment setup is required:
+Before we start, make sure you have:
 
-- **Web3 Integration**: [MetaMask](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) for Ethereum wallet functionality
-- **Development Environment**: Modern IDE (VSCode recommended)
-- **Runtime Environment**: [Node.js](https://nodejs.org/) v18+
-- **Package Management**: [NPM](https://docs.npmjs.com/)
-- **Container Registry**: Active [DockerHub](https://hub.docker.com/) account
+- A [MetaMask](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) wallet to interact with the blockchain
+- Your favorite code editor (we like VSCode, but any will do!)
+- [Node.js](https://nodejs.org/en/) version 18 or newer
+- [NPM](https://docs.npmjs.com/) for managing packages
+- A [DockerHub](https://hub.docker.com/) account
+
+Don't worry if you don't have all of these - you can join our [Discord](https://discord.gg/iexec) and we'll help.
 
 <style>
+:root {
+  --primary-color: #0070f3;
+  --hover-color: #0051b3;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --card-hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  --card-border: 1px solid #e0e0e0;
+  --card-radius: 6px;
+  --transition-speed: 0.3s;
+}
+
 a {
   text-decoration: none;
-  color: #0070f3;
+  color: var(--primary-color);
+  transition: color var(--transition-speed) ease;
 }
+
+a:hover {
+  color: var(--hover-color);
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 12px 0;
 }
 
 .card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 16px;
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 20px;
   background-color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-speed) ease;
+}
+
+.card:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
 }
 
 .card h3 {
   margin-top: 0;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  font-size: 1.25rem;
 }
 
-.card h3, .card p {
-  color: rgb(60, 60, 67);
-  text-decoration: none;
+.card p {
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.card, p {
-  font-size: 16px;
-}
-
-.card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.vp-doc a{
+.vp-doc a {
   text-decoration: none !important;
 }
+
+.hint {
+  background-color: #f8f9fb;
+  border-radius: var(--card-radius);
+  padding: 16px 24px;
+  margin: 24px 0;
+  border-left: 4px solid var(--primary-color);
+  color: #476582;
+  position: relative;
+}
+
+.hint::before {
+  content: '💡';
+  position: absolute;
+  top: 12px;
+  left: -12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: var(--card-shadow);
+}
+
 </style>
