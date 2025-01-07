@@ -104,20 +104,20 @@ Before you begin, make sure you have:
 
 <style>
 :root {
-  --primary-color: #0070f3;
-  --secondary-color: #0051b3;
-  --accent-color: #00a3ff;
-  --background-light: #f7f9fc;
-  --text-primary: #1a1a1a;
-  --text-secondary: #666;
-  --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  --card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --primary-color: #FCD15A;
+  --secondary-color: #1D1D24;
+  --accent-color: #CE2C68;
+  --background-light: #F5F5F5;
+  --text-primary: #1D1D24;
+  --text-secondary: #5D5D69;
+  --card-shadow: 0 2px 6px rgba(29, 29, 36, 0.1);
+  --card-hover-shadow: 0 8px 24px rgba(29, 29, 36, 0.15);
   --border-radius: 6px;
   --transition: all 0.3s ease;
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(135deg, #FCD15A, #FFAD4D);
   border-radius: var(--border-radius);
   padding: 0rem 2rem;
   color: white;
@@ -153,7 +153,7 @@ Before you begin, make sure you have:
 }
 
 .journey-card {
-  background: white;
+  background: var(--vp-c-bg-soft);
   border-radius: var(--border-radius);
   padding: 1.5rem;
   box-shadow: var(--card-shadow);
@@ -161,7 +161,7 @@ Before you begin, make sure you have:
   display: flex;
   gap: 1rem;
   text-decoration: none !important;
-  color: var(--text-primary);
+  color: var(--vp-c-text-1);
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -181,7 +181,7 @@ Before you begin, make sure you have:
 
 .card-content h3 {
   margin: 0 0 0.5rem 0;
-  color: var(--primary-color);
+  color: var(--vp-c-text-1);
   text-decoration: none !important;
   font-size: 1.1rem;
   line-height: 1.3;
@@ -190,7 +190,7 @@ Before you begin, make sure you have:
 .card-content p {
   text-decoration: none !important;
   margin: 0;
-  color: rgb(60, 60, 67);
+  color: var(--vp-c-text-2);
   font-size: 0.95rem;
 }
 
@@ -201,7 +201,7 @@ Before you begin, make sure you have:
   left: 0;
   width: 100%;
   height: 4px;
-  background: var(--primary-color);
+  background: #FCD15A;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -228,14 +228,14 @@ Before you begin, make sure you have:
 .time-estimate {
   display: inline-block;
   font-size: 0.9rem;
-  color: var(--text-secondary);
-  background: var(--background-light);
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
 }
 
 .special {
-  background: linear-gradient(135deg, #ff6b6b, #feca57);
+  background: linear-gradient(135deg, #CE2C68, #3F0D3F);
   color: white;
 }
 
@@ -311,7 +311,7 @@ Before you begin, make sure you have:
 }
 
 .special::before {
-  background: linear-gradient(135deg, #ff6b6b, #feca57);
+  background: linear-gradient(135deg, #CE2C68, #3F0D3F);
 }
 
 .special h3 {
@@ -357,17 +357,17 @@ Before you begin, make sure you have:
 .req-title {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--vp-c-text-1);
 }
 
 .requirement-item p {
   margin: 0;
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--vp-c-text-2);
 }
 
 .requirement-item a {
-  color: var(--primary-color);
+  color: #CE2C68;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -378,7 +378,7 @@ Before you begin, make sure you have:
 
 .help-note {
   margin-top: 2rem;
-  background: var(--background-light);
+  background: var(--vp-c-bg-soft);
   border-radius: var(--border-radius);
   padding: 0.75rem 1rem;
 }
@@ -387,10 +387,11 @@ Before you begin, make sure you have:
   margin: 0;
   font-size: 0.9rem;
   text-align: center;
+  color: var(--vp-c-text-2);
 }
 
 .help-note a {
-  color: var(--primary-color);
+  color: var(--vp-c-brand);
   text-decoration: none;
   font-weight: 500;
 }
