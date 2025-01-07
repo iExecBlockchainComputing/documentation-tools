@@ -228,10 +228,10 @@ Before you begin, make sure you have:
 .time-estimate {
   display: inline-block;
   font-size: 0.9rem;
-  color: var(--vp-c-text-2);
+  color: var(--vp-c-text-4);
   background: var(--vp-c-bg-soft);
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
+  /* padding: 0.25rem 0.75rem; */
+  /* border-radius: 12px; */
 }
 
 .special {
