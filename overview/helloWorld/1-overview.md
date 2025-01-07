@@ -1,101 +1,293 @@
 # 🧐 iExec Overview
 
-> Reading 🕒 4 mins
+> Reading time 🕒 3 mins
 
-Great, intro is done, now let's dive into the key concepts. What are the main
-components of the iExec stack?
+<div class="hero">
+  <div class="hero-content">
+    <p>Let's explore how iExec can help you build privacy-preserving applications and manage sensitive data securely.</p>
+  </div>
+</div>
 
-## 👷 The user case
+## 👨‍💻 Understanding the Use Case
 
-First step is to introduce you to the iExec stack through a use case. We'll then
-decompose each component of the stack and explain how they interact with each
-other.
+<p>Imagine you're building a decentralized application (dApp) that needs to handle sensitive user data. For example:</p>
+<div class="use-case-card">
+  <div class="examples-list">
+    <div class="example-item">
+      <span class="example-icon">🏥</span>
+      <span>A healthcare app processing patient records</span>
+    </div>
+    <div class="example-item">
+      <span class="example-icon">💰</span>
+      <span>A financial app handling transaction data</span>
+    </div>
+    <div class="example-item">
+      <span class="example-icon">🔬</span>
+      <span>A research platform working with private datasets</span>
+    </div>
+  </div>
 
-**Imagine** you're a research scientist with a valuable dataset that you want to
-apply algorithms to or even monetize while ensuring it remains secure and
-confidential. You need a **technology** for the confidential computation and a
-**tool** to protect and manage access to your data.
+  <div class="requirements-list">
+    <p>You need a way to:</p>
+    <div class="requirement-item">
+      <span class="req-icon">🔒</span>
+      <span>Keep the data confidential</span>
+    </div>
+    <div class="requirement-item">
+      <span class="req-icon">🎮</span>
+      <span>Control who can access it</span>
+    </div>
+    <div class="requirement-item">
+      <span class="req-icon">⚡</span>
+      <span>Process it securely</span>
+    </div>
+    <div class="requirement-item">
+      <span class="req-icon">💎</span>
+      <span>Potentially monetize it</span>
+    </div>
+  </div>
+</div>
 
-It's where iExec comes in! We provide a **protocol** and **developer tools**
-that allow you to:
+<div class="solution-note">
+  <p>This is where iExec comes in! We provide developer tools that make it easy to integrate privacy-preserving features into your applications.</p>
+</div>
 
-- Protect
-- Manage
-- Monetize
-- Compute the data
+## 🔍 Anatomy of a Privacy-Preserving dApp
 
-We are **revolutionizing** the way data is handled within the **Web3 ecosystem**
-by combining **the power of confidential computing and blockchain**.
+<div class="anatomy-grid">
+  <div class="anatomy-card">
+    <div class="card-header">
+      <span class="card-icon">🛡️</span>
+      <h3>Data Protection Layer</h3>
+    </div>
+    <ul>
+      <li>Secure data encryption</li>
+      <li>Access control management</li>
+      <li>Permission handling</li>
+    </ul>
+  </div>
 
-## 🧩 The Protocol
+  <div class="anatomy-card">
+    <div class="card-header">
+      <span class="card-icon">🔐</span>
+      <h3>Confidential Computing</h3>
+    </div>
+    <ul>
+      <li>Process sensitive data while keeping it encrypted</li>
+      <li>Run computations without exposing the data</li>
+      <li>Ensure data privacy throughout its lifecycle</li>
+    </ul>
+  </div>
 
-Let's start by understanding the first puzzle piece of our stack, the
-fundational bricks... (epic violin starts playing) :
+  <div class="anatomy-card">
+    <div class="card-header">
+      <span class="card-icon">⛓️</span>
+      <h3>Web3 Integration</h3>
+    </div>
+    <ul>
+      <li>Blockchain-based access management</li>
+      <li>Decentralized storage solutions</li>
+      <li>Transparent transaction handling</li>
+    </ul>
+  </div>
+</div>
 
-[**The iExec protocol**](https://protocol.docs.iex.ec/)
+## 🎯 Key Features
 
-It's a mix between an **off-chain** part with the **TEE (Trusted Execution
-Environment, which allows data to be processed securely)** and an **on-chain**
-part with our **smart contract** called POCO (Proof of Contribution). This smart
-contract acts as a band leader, creating **synergy** between the power of
-**confidential computing** and the **transparency & immutability of the
-blockchain**.
+<div class="features-grid">
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-icon">🔒</span>
+      <h3>Confidential Computing</h3>
+    </div>
+    <p>Process sensitive data securely without exposing it to any external parties - not even the application owners or infrastructure providers.</p>
+  </div>
 
-::: tip 🚨**Smart Contract**
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-icon">🎮</span>
+      <h3>Privacy and User Control</h3>
+    </div>
+    <p>Give users complete control over their data:</p>
+    <ul>
+      <li>Who can access it</li>
+      <li>How it's used</li>
+      <li>When permissions are granted or revoked</li>
+    </ul>
+  </div>
 
-A smart contract is a piece of code on the blockchain that automatically
-performs tasks and enforces agreements without needing a middleman.
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-icon">💰</span>
+      <h3>Data Monetization</h3>
+    </div>
+    <p>Enable new business models:</p>
+    <ul>
+      <li>Monetize datasets securely</li>
+      <li>Create data marketplaces</li>
+      <li>Establish pay-per-use models</li>
+    </ul>
+  </div>
+</div>
 
-🚨**TEE (Trusted Execution Environment)**
+## 🚀 Getting Started
 
-Think of TEEs as secure zones in a computing environment where your sensitive
-data can be processed safely, without being stored, see or altered by anyone
-even if the data are computed on a malicious computer far, far away in the
-galaxy, the magic that happens inside the TEE is called **confidential
-computing**.
+<div class="getting-started-card">
+  <p>In the following chapters, we'll show you how to:</p>
+  
+  <div class="steps-list">
+    <div class="step-item">
+      <span class="step-number">1</span>
+      <span>Protect sensitive data using DataProtector</span>
+    </div>
+    <div class="step-item">
+      <span class="step-number">2</span>
+      <span>Build applications that work with protected data</span>
+    </div>
+    <div class="step-item">
+      <span class="step-number">3</span>
+      <span>Manage data access and permissions</span>
+    </div>
+  </div>
 
-:::
+  <div class="cta-wrapper">
+    <p>Ready to start building? Let's dive into protecting your first piece of data!</p>
+  </div>
+</div>
 
-## 🧩 The Key Features
+<style>
+:root {
+  --primary-color: #FCD15A;
+  --secondary-color: #1D1D24;
+  --accent-color: #CE2C68;
+  --background-light: #F5F5F5;
+  --card-shadow: 0 2px 6px rgba(29, 29, 36, 0.1);
+  --card-hover-shadow: 0 8px 24px rgba(29, 29, 36, 0.15);
+  --border-radius: 6px;
+  --transition: all 0.3s ease;
+}
 
-The **iExec protocol** unlock some amazing features like:
+.hero {
+  background: linear-gradient(135deg, #FCD15A, #FFAD4D);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  color: white;
+ 
+}
 
-### 🔑 Confidential Computing
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-Confidential computing ensures that your sensitive data remains private and
-secure during processing (more technical details about confidential computing
-with
-[Intel SGX Enclave](https://www.intel.com/content/dam/develop/external/us/en/documents/overview-of-intel-sgx-enclave-637284.pdf)).
-This is crucial because it allows you to run computations on sensitive data,
-without exposing it to any external threats.
+.hero p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
 
-### 🔑 Privacy and User Choice
+.use-case-card, .anatomy-card, .feature-card, .getting-started-card {
+  background: var(--vp-c-bg-soft);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
 
-iExec puts **control** back in your hands. With iExec, you decide what data is
-shared, with whom, and for what purpose. As an environmental scientist, you can
-securely compute or share your findings and datasets with collaborators without
-worrying about unauthorized access.
+.examples-list, .requirements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
 
-### 🔑 Monetize Your data
+.example-item, .requirement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 
-One of the coolest features is that our technology allows you to monetize your
-digital assets. For example, if you have a bunch of sensitive data, you can
-monetize it by lending it for computing or selling it directly.
+.example-icon, .req-icon {
+  font-size: 1.25rem;
+}
 
-## 🧩 Key takeaways
+.solution-note {
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
 
-- **iExec Protocol** is the foundation of our stack, combining TEE and
-  blockchain to enable confidential computing and data management.
-- **Confidential computing** is the magic that happens inside the TEE, ensuring
-  that your sensitive data remains private and secure during processing.
+.anatomy-grid, .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
 
-## 💫The Next steps
+.card-header, .feature-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
 
-Quick wrap up: Our protocol, composed of **TEE and Blockchain**, enables key
-features such as **confidential computing, data management, and monetization**
-and, teasing you with the next chapter, built on top of the protocol, we have
-our **Developer’s Tools**.
+.card-icon, .feature-icon {
+  font-size: 1.5rem;
+}
 
-They capture the essence and power of confidential computing and blockchain
-technology, abstracting away the complexity. Drum roll 🥁 ... the devtool we are
-going to discover is **DataProtector**.🚀
+.card-header h3, .feature-header h3 {
+  margin: 0;
+  color: var(--vp-c-text-1);
+}
+
+ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin: 0.25rem 0;
+  color: var(--vp-c-text-2);
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.step-number {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.cta-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .anatomy-grid, .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.anatomy-card, .feature-card {
+  border: 1px solid var(--vp-c-divider);
+}
+</style>
