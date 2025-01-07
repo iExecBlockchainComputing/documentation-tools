@@ -2,6 +2,7 @@
 **/.vitepress/dist
 node_modules
 .env
+**/.vscode/*
 auto-imports.d.ts
 components.d.ts
 
