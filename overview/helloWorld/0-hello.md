@@ -72,7 +72,6 @@
   </a>
 </div>
 
-
 ## Getting Started
 
 Before you begin, make sure you have:
