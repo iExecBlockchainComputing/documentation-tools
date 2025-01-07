@@ -16,7 +16,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const collectionActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     collectionId: 9,
@@ -29,9 +28,9 @@ const collectionActiveSubscriptions =
 import { type GetCollectionSubscriptionsParams } from '@iexec/dataprotector';
 ```
 
-### subscriberAddress
+### subscriberAddress <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -42,16 +41,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const userActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     subscriberAddress: '0x246bdf...', // [!code focus]
   });
 ```
 
-### collectionId
+### collectionId <OptionalBadge />
 
-`number | undefined`
+**Type:** `number`
 
 ```ts twoslash
 import {
@@ -62,18 +60,16 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const collectionActiveSubscriptions =
   await dataProtectorSharing.getCollectionSubscriptions({
     collectionId: 9, // [!code focus]
   });
 ```
 
-### includePastSubscriptions
+### includePastSubscriptions <OptionalBadge />
 
-`boolean | undefined`
-
-_default_: `false`
+**Type:** `boolean`  
+**Default:** `false`
 
 ```ts twoslash
 import {
@@ -84,7 +80,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const userRentals = await dataProtectorSharing.getCollectionSubscriptions({
   subscriberAddress: '0x246bdf...',
   includePastSubscriptions: true, // [!code focus]

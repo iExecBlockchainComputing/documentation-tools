@@ -1,6 +1,6 @@
 # Getting Started
 
-[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FiExecBlockchainComputing%2Fdataprotector-sdk%2Fv2%2Fpackages%2Fsdk%2Fpackage.json&query=%24.version&label=version&color=green)](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/sdk)
+[![GitHub package.json version (branch)](https://img.shields.io/badge/npm-2.0.0--beta-green)](https://www.npmjs.com/package/@iexec/dataprotector/v/beta)
 
 ## Overview
 
@@ -18,19 +18,19 @@ system:
 ::: code-group
 
 ```sh [npm]
-npm install @iexec/dataprotector@beta --save-exact
+npm install @iexec/dataprotector
 ```
 
 ```sh [yarn]
-yarn add @iexec/dataprotector@beta
+yarn add @iexec/dataprotector
 ```
 
 ```sh [pnpm]
-pnpm add @iexec/dataprotector@beta
+pnpm add @iexec/dataprotector
 ```
 
 ```sh [bun]
-bun add @iexec/dataprotector@beta
+bun add @iexec/dataprotector
 ```
 
 :::
@@ -62,7 +62,6 @@ declare global {
   }
 }
 // ---cut---
-
 import { IExecDataProtector } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -101,7 +100,6 @@ declare global {
   }
 }
 // ---cut---
-
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -134,7 +132,6 @@ declare global {
   }
 }
 // ---cut---
-
 import { IExecDataProtectorSharing } from '@iexec/dataprotector';
 
 const web3Provider = window.ethereum;
@@ -165,13 +162,6 @@ without a Web3 provider.
 ::: code-group
 
 ```ts twoslash [Singleton Modules]
-declare global {
-  interface Window {
-    ethereum: any;
-  }
-}
-// ---cut---
-
 import {
   IExecDataProtectorSharing,
   IExecDataProtectorCore,
@@ -201,3 +191,29 @@ const dataProtectorSharing = dataProtector.sharing;
 
 To add optional parameters, see
 [advanced configuration](./advanced/advanced-configuration.md).
+
+## Sandbox
+
+### Core methods
+
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main" target="_blank" rel="noreferrer" class="link-as-block" style="margin-top: 16px">
+  ⚡ &nbsp;Code Sandbox
+</a>
+
+Corresponding GitHub repository:
+
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
+  🔎 &nbsp;GitHub repository sandbox
+</a>
+
+### Sharing methods
+
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sharing-sandbox/main" target="_blank" rel="noreferrer" class="link-as-block" style="margin-top: 16px">
+  ⚡ &nbsp;Code Sandbox
+</a>
+
+Corresponding GitHub repository:
+
+<a href="https://github.com/iExecBlockchainComputing/dataprotector-sharing-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
+  🔎 &nbsp;GitHub repository sandbox
+</a>

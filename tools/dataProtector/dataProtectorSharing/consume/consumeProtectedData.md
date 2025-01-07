@@ -1,3 +1,7 @@
+<script setup>
+import { Icon } from '@iconify/vue';
+</script>
+
 # consumeProtectedData
 
 Method to consume a protected data, ie. visualize it or download it.
@@ -26,7 +30,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
@@ -48,9 +51,9 @@ You need to either have:
 import { type ConsumeProtectedDataParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address of the protected data you'd like to visualize.
 
@@ -63,7 +66,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...', // [!code focus]
@@ -71,9 +73,9 @@ const consumeProtectedDataResult =
   });
 ```
 
-### app {#app-param}
+### app <RequiredBadge /> {#app-param}
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 Address or ENS of the iExec TEE dApp that will be used to consume the protected
 data. This iExec TEE dApp is the one that runs within an iExec worker.
@@ -87,7 +89,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
@@ -97,13 +98,18 @@ const consumeProtectedDataResult =
 
 ::: tip
 
-For this `app` parameter you can use the following iExec TEE app:
+For this `app` parameter you can use the "Protected data delivery TEE dApp":
 
 ```
-0xF248000F0E99e9203FdBE509019f008F9c169705
+0x1cb7D4F3FFa203F211e57357D759321C6CE49921
 ```
 
-For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
+<div style="display: inline-block; vertical-align: text-top; margin-top: -1px; margin-right: 5px;">
+  <Icon icon="mdi:warning-box" height="20" />
+</div>Please note: This application can only be used <strong>within the
+dataProtectorSharing module</strong>, as it is owned by the DataProtector Sharing smart contract.
+
+For more details, see [Apps whitelist](../../advanced/apps-whitelist).
 
 :::
 
@@ -112,17 +118,17 @@ For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
 If you want to provide **your own TEE dApp**, you will need to create a
 whitelist that contains your app.
 
-For more details, see [Apps whitelist](../../advanced/appsWhitelist.md).
+For more details, see [Apps whitelist](../../advanced/apps-whitelist).
 
 :::
 
-### workerpool
+### path <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `string`
 
-Address or ENS of the workerpool.
-
-_default_: `prod-v8-bellecour.main.pools.iexec.eth`
+Under the hood, a protected data is a zip file. With this `path` parameter, you
+can specify the file you're interested in. The zip file will be uncompressed for
+you, and only the desired file will be given as the `result`.
 
 ```ts twoslash
 import {
@@ -133,7 +139,30 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
+const consumeProtectedDataResult =
+  await dataProtectorSharing.consumeProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    path: 'my-content', // [!code focus]
+  });
+```
 
+### workerpool <OptionalBadge />
+
+**Type:** `AddressOrENS`  
+**Default:** `prod-v8-bellecour.main.pools.iexec.eth`
+
+Address or ENS of the workerpool.
+
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
@@ -150,9 +179,35 @@ default workerpool for running confidential computations on the iExec platform.
 
 :::
 
-### pemPublicKey
+### maxPrice <OptionalBadge />
 
-`string | undefined`
+**Type:** `number`  
+**Default:** `0`
+
+The maximum price (in nRLC) that a requester is willing to pay for each task
+related to consuming the protected data. It is the sum of the application price,
+dataset price, and workerpool price per task.
+
+```ts twoslash
+import {
+  IExecDataProtectorSharing,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+// ---cut---
+const consumeProtectedDataResult =
+  await dataProtectorSharing.consumeProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    maxPrice: 10, // [!code focus]
+  });
+```
+
+### pemPublicKey <OptionalBadge />
+
+**Type:** `string`
 
 If you have previously called `consumeProtectedData()` and saved the returned
 public key, you can reuse it in further calls.
@@ -171,7 +226,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
@@ -180,9 +234,9 @@ const consumeProtectedDataResult =
   });
 ```
 
-### pemPrivateKey
+### pemPrivateKey <OptionalBadge />
 
-`string | undefined`
+**Type:** `string`
 
 If you have previously called `consumeProtectedData()` and saved the returned
 private key, you can reuse it in further calls.
@@ -201,7 +255,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',
@@ -211,9 +264,9 @@ const consumeProtectedDataResult =
   });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<ConsumeProtectedDataStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<ConsumeProtectedDataStatuses>`
 
 Callback function to be notified at intermediate steps.
 
@@ -227,7 +280,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const consumeProtectedDataResult =
   await dataProtectorSharing.consumeProtectedData({
     protectedData: '0x123abc...',

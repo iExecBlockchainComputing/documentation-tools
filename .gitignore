@@ -2,3 +2,8 @@
 **/.vitepress/dist
 node_modules
 .env
+auto-imports.d.ts
+components.d.ts
+
+#mac
+.DS_Store

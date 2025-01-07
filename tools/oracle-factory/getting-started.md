@@ -60,7 +60,13 @@ Import and initialize the Oracle Factory SDK in your application.
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
 import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
 
 const web3Provider = window.ethereum;
@@ -68,7 +74,7 @@ const web3Provider = window.ethereum;
 const factory = new IExecOracleFactory(web3Provider);
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import { IExecOracleFactory, utils } from '@iexec/iexec-oracle-factory-wrapper';
 
 const { PRIVATE_KEY } = process.env;
@@ -89,14 +95,14 @@ your application.
 
 ::: code-group
 
-```js [Browser]
+```ts twoslash [Browser]
 import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
 
 // instantiate
 const mainnetBlockchainReader = new IExecOracleReader('mainnet');
 ```
 
-```js [NodeJS]
+```ts twoslash [NodeJS]
 import { IExecOracleReader } from '@iexec/iexec-oracle-factory-wrapper';
 
 // instantiate
@@ -119,11 +125,10 @@ Supported blockchains:
 | mainnet         | 1       |
 | bellecour       | 134     |
 | polygon         | 137     |
-| mumbai          | 80001   |
 
 ## Sandbox
 
-<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/oracle-factory-sandbox/main?file=%2Fsrc%2Findex.js&embed=1" target="_blank" rel="noreferrer" class="link-as-block">
+<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/oracle-factory-sandbox/main" target="_blank" rel="noreferrer" class="link-as-block">
   ⚡ &nbsp;Code Sandbox
 </a>
 

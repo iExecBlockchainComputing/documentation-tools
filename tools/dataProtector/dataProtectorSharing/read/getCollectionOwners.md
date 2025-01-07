@@ -1,6 +1,9 @@
-# getProtectedDataPricingParams
+# getCollectionOwners
 
-Method to get all distribution params for a protected data.
+Method to get all collection owners.
+
+Results of `CollectionOwner.collections` are ordered by
+`collections.creationTimestamp` desc.
 
 ## Usage
 
@@ -13,23 +16,20 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
-const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
-  protectedData: '0x123abc...',
-});
+const collectionOwners = await dataProtectorSharing.getCollectionOwners();
 ```
 
 ## Parameters
 
 ```ts twoslash
-import { type GetProtectedDataPricingParams } from '@iexec/dataprotector';
+import { type GetCollectionOwnersParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### limit <OptionalBadge />
 
-`AddressOrENS`
-
-Address of the protected data you'd like to get the pricing params for.
+**Type:** `number`  
+**Default:** `100`  
+**Range:** `[1...1000]`
 
 ```ts twoslash
 import {
@@ -40,20 +40,24 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
-const pricingParams = await dataProtectorSharing.getProtectedDataPricingParams({
-  protectedData: '0x123abc...', // [!code focus]
+const collectionOwners = await dataProtectorSharing.getCollectionOwners({
+  limit: 100, // [!code focus]
 });
 ```
 
 ## Return value
 
 ```ts twoslash
-import type { GetProtectedDataPricingParamsResponse } from '@iexec/dataprotector';
+import type { GetCollectionOwnersResponse } from '@iexec/dataprotector';
 
 // Child types
-import type { SubscriptionParams, RentingParams } from '@iexec/dataprotector';
+import type { CollectionOwner, SubscriptionParams } from '@iexec/dataprotector';
 ```
 
 <a href="https://github.com/iExecBlockchainComputing/dataprotector-sdk/blob/c83e30e6ce8b55ecf8a35ecb4eb1014cd4ecefe9/packages/sdk/src/lib/types/sharingTypes.ts" target="_blank">See
 Type ↗️</a>
+
+### hasActiveSubscription
+
+`true` if you (logged-in user) have an active subscription to one of the
+collections.

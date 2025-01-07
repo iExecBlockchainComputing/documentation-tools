@@ -5,6 +5,14 @@ You may optionally specify application or user addresses for revocation. If you
 do not specify either of these optional values, this method will revoke all
 access for all users and applications.
 
+You must be the owner of the protected data.
+
+Under the hood, all granted access will be retrieved and be revoked one by one.
+If by any chance there were **more than 20 granted access** to be revoked, you
+would need to call this `revokeAllAccess()` method more than once for all
+granted access to be actually revoked. Use `getGrantedAccess()` to ensure it is
+all done.
+
 ## Usage
 
 ```ts twoslash
@@ -13,7 +21,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -27,9 +34,9 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 import { type RevokeAllAccessParams } from '@iexec/dataprotector';
 ```
 
-### protectedData
+### protectedData <RequiredBadge />
 
-`AddressOrENS`
+**Type:** `AddressOrENS`
 
 The address of the `protectedData` subject to access revocation.
 
@@ -39,22 +46,18 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...', // [!code focus]
-  authorizedApp: '0x456def...',
-  authorizedUser: '0x789cba...',
 });
 ```
 
-### authorizedApp
+### authorizedApp <OptionalBadge />
 
-`AddressOrENS | 'any' | undefined`
-
-_default_: `any`
+**Type:** `AddressOrENS`
 
 The application address to be removed from the authorization list for the
-specified `protectedData`.
+specified `protectedData`. If no address is specified, it will revoke all access
+from the protected data, regardless of the app.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -62,7 +65,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...', // [!code focus]
@@ -70,14 +72,13 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 });
 ```
 
-### authorizedUser
+### authorizedUser <OptionalBadge />
 
-`AddressOrENS | 'any' | undefined`
-
-_default_: `any`
+**Type:** `AddressOrENS`
 
 The user address to be removed from the authorization list for the specified
-`protectedData`.
+`protectedData`. If no address is specified, it will revoke all access from the
+protected data, regardless of the authorized user.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -85,7 +86,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',
@@ -93,9 +93,9 @@ const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
 });
 ```
 
-### onStatusUpdate
+### onStatusUpdate <OptionalBadge />
 
-`OnStatusUpdateFn<RevokeAllAccessStatuses> | undefined`
+**Type:** `OnStatusUpdateFn<RevokeAllAccessStatuses>`
 
 Callback function to be notified at intermediate steps.
 
@@ -106,7 +106,6 @@ import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-
 const revokeAllAccessResult = await dataProtectorCore.revokeAllAccess({
   protectedData: '0x123abc...',
   authorizedApp: '0x456def...',

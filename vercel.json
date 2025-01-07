@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/tools/dataprotector/:path*",
+      "destination": "/tools/dataProtector/:path*"
+    }
+  ]
+}

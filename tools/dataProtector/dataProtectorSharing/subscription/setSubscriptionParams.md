@@ -13,7 +13,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
@@ -28,7 +27,9 @@ const setSubscriptionParamsResult =
 import { type SetSubscriptionParams } from '@iexec/dataprotector';
 ```
 
-### collectionId
+### collectionId <RequiredBadge />
+
+**Type:** `number`
 
 Collection ID to which you'd like to set the subscription params.
 
@@ -41,7 +42,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12, // [!code focus]
@@ -50,7 +50,9 @@ const setSubscriptionParamsResult =
   });
 ```
 
-### price
+### price <RequiredBadge />
+
+**Type:** `number`
 
 The price in nano RLC (nRLC) it's going to cost a subscriber to access your
 collection.
@@ -64,7 +66,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,
@@ -73,7 +74,9 @@ const setSubscriptionParamsResult =
   });
 ```
 
-### duration
+### duration <RequiredBadge />
+
+**Type:** `number`
 
 The duration (in seconds) for a period of subscription.
 
@@ -86,7 +89,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const setSubscriptionParamsResult =
   await dataProtectorSharing.setSubscriptionParams({
     collectionId: 12,

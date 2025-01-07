@@ -16,7 +16,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
   protectedData: '0x123abc...',
 });
@@ -28,9 +27,9 @@ const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
 import { type GetRentalsParams } from '@iexec/dataprotector';
 ```
 
-### renterAddress
+### renterAddress <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -41,15 +40,14 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const userActiveRentals = await dataProtectorSharing.getRentals({
   renterAddress: '0x246bdf...', // [!code focus]
 });
 ```
 
-### protectedData
+### protectedData <OptionalBadge />
 
-`AddressOrENS | undefined`
+**Type:** `AddressOrENS`
 
 ```ts twoslash
 import {
@@ -60,17 +58,15 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const protectedDataActiveRentals = await dataProtectorSharing.getRentals({
   protectedData: '0x123abc...', // [!code focus]
 });
 ```
 
-### includePastRentals
+### includePastRentals <OptionalBadge />
 
-`boolean | undefined`
-
-_default_: `false`
+**Type:** `boolean`  
+**Default:** `false`
 
 ```ts twoslash
 import {
@@ -81,7 +77,6 @@ import {
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
 // ---cut---
-
 const userRentals = await dataProtectorSharing.getRentals({
   renterAddress: '0x246bdf...',
   includePastRentals: true, // [!code focus]

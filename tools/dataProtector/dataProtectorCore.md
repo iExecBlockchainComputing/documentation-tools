@@ -17,30 +17,18 @@ This approach to data management relies on:
 
 DataProtector Core module contains the following set of methods:
 
-- **getGrantedAccess** — retrieve a list of all authorized users and
-  applications for a `protectedData` object containing a user's data
-- **getProtectedData** — retrieve a list of all protected data for one owner
-  and/or data schema
-- **grantAccess** — authorize an application to process a user's data without
-  exposing the data to any external system or user review
-- **processProtectedData** — process a `protectedData` object containing a
-  user's data with a specified iExec application
 - **protectData** — safeguard data by encrypting it and recording ownership as
   an NFT
+- **getProtectedData** — retrieve a list of all protected data for one owner
+  and/or data schema
+- **transferOwnership** — transfer a protected data to a new owner
+- **grantAccess** — authorize an application to process a user's data without
+  exposing the data to any external system or user review
+- **getGrantedAccess** — retrieve a list of all authorized users and
+  applications for a protected data
 - **revokeOneAccess** — remove a specific access previously granted on a
-  `protectedData`
+  protected data
 - **revokeAllAccess** — remove all access granted to any iExec applications or
-  user for a `protectedData` object
-- **transferOwnership** — transfer a protectedData object to a new owner
-
-## Sandbox
-
-<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true" target="_blank" rel="noreferrer" class="link-as-block">
-  ⚡ &nbsp;Code Sandbox
-</a>
-
-Corresponding GitHub repository:
-
-<a href="https://github.com/iExecBlockchainComputing/dataprotector-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
-  🔎 &nbsp;GitHub repository sandbox
-</a>
+  user for a protected data
+- **processProtectedData** — process a protected data with a specified iExec
+  application

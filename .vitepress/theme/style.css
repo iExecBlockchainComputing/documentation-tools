@@ -28,7 +28,7 @@
 }
 
 /* Force dark header even if light theme */
-header {
+header .VPNavBar {
   --vp-c-bg: #161618;
   --vp-c-text-1: white;
   --vp-c-text-3: rgba(235, 235, 245, 0.38);

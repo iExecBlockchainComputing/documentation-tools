@@ -55,17 +55,3 @@ additional activity from the data owner. This has several key benefits
   distribution, only the consumer of the data signs their transaction
 - The data owner doesn't manage access, the Data Sharing smart contract
   automatically enforces the distribution and monetization choices
-
-## Sandbox
-
-You can experiment with the DataProtector Sharing tool here:
-
-<a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sharing-sandbox/main" target="_blank" rel="noreferrer" class="link-as-block">
-  ⚡ &nbsp;Code Sandbox
-</a>
-
-The source code for the sandbox is on the iExec GitHub repository here:
-
-<a href="https://github.com/iExecBlockchainComputing/dataprotector-sharing-sandbox" target="_blank" rel="noreferrer" class="link-as-block">
-  🔎 &nbsp;GitHub repository sandbox
-</a>
