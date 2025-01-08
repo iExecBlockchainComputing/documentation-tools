@@ -8,9 +8,9 @@
   </div>
 </div>
 
-## 👨‍💻 Understanding the Use Case
+## 👨‍💻 What Problem Does iExec Solve?
 
-<p>Imagine you're building a decentralized application (dApp) that needs to handle sensitive user data. For example:</p>
+<p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle sensitive user data </strong>. For example:</p>
 <div class="use-case-card">
   <div class="examples-list">
     <div class="example-item">
@@ -25,10 +25,14 @@
       <span class="example-icon">🔬</span>
       <span>A research platform working with private datasets</span>
     </div>
+    <div class="example-item">
+      <span class="example-icon">🤖</span>
+      <span>An AI model training on sensitive data</span>
+    </div>
   </div>
 
   <div class="requirements-list">
-    <p>You need a way to:</p>
+    <p><strong>You'll need a way to:</strong></p>
     <div class="requirement-item">
       <span class="req-icon">🔒</span>
       <span>Keep the data confidential</span>
@@ -49,8 +53,35 @@
 </div>
 
 <div class="solution-note">
-  <p>This is where iExec comes in! We provide developer tools that make it easy to integrate privacy-preserving features into your applications.</p>
+  <p><strong>This is where iExec comes in! We provide developer tools that make it easy to integrate privacy-preserving features into your applications.</strong></p>
 </div>
+
+### 🔒 The Two Key Elements
+
+To build privacy-preserving applications with iExec, you'll need two fundamental
+elements that work together seamlessly. These elements form the foundation of
+any confidential computing solution on our platform:
+
+#### 1. Protected Data
+
+- Your sensitive data is encrypted and stored safely
+- Only you control who can access it
+- Perfect for private information like research data, business analytics, or
+  personal records
+
+#### 2. iExec Apps
+
+- Special applications that can work with your protected data
+- Run in secure environments (called TEEs) that keep
+
+### 🤝 How They Work Together
+
+Think of it like a secure room:
+
+- Your protected data can only be "opened" inside this room
+- Only approved apps can enter the room
+- Everything that happens inside stays private
+- You control who gets access
 
 ## 🔍 Anatomy of a Privacy-Preserving dApp
 
@@ -212,9 +243,8 @@
 
 .solution-note {
   border-radius: var(--border-radius);
-  padding: 1rem;
+
   margin: 1.5rem 0;
-  text-align: center;
 }
 
 .anatomy-grid, .features-grid {
