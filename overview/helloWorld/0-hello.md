@@ -178,7 +178,7 @@ Before you begin, make sure you have:
 }
 
 .card-content h3 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 !important;
   color: var(--vp-c-text-1);
   font-size: 1.1rem;
   line-height: 1.3;

@@ -340,7 +340,7 @@ When Alice wants to process her protected data:
 }
 
 .card-icon, .feature-icon {
-  font-size: 1.5rem;
+  font-size: 2 rem;
 }
 
 .card-header h3, .feature-header h3 {
