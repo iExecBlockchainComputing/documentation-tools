@@ -360,13 +360,13 @@ Before you begin, make sure you have:
 
 .requirement-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   text-align: left;
 }
 
 .req-title {
+  flex: 1;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--vp-c-text-1);
@@ -382,6 +382,7 @@ Before you begin, make sure you have:
   color: #CE2C68;
   text-decoration: none;
   font-size: 0.9rem;
+  margin-left: auto;
 }
 
 .requirement-item a:hover {

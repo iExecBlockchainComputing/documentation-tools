@@ -8,9 +8,9 @@
   </div>
 </div>
 
-## 👨‍💻 What Problem Does iExec Solve?
+## 👨‍💻 Building Privacy-First dApps with iExec
 
-<p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle sensitive user data </strong>. For example:</p>
+<p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle (share or compute) sensitive user data </strong>. For example:</p>
 <div class="use-case-card">
   <div class="examples-list">
     <div class="example-item">
@@ -39,7 +39,7 @@
     </div>
     <div class="requirement-item">
       <span class="req-icon">🎮</span>
-      <span>Control who can access it</span>
+      <span>Control who can access it (or buy)</span>
     </div>
     <div class="requirement-item">
       <span class="req-icon">⚡</span>
@@ -53,14 +53,23 @@
 </div>
 
 <div class="solution-note">
-  <p><strong>This is where iExec comes in! We provide developer tools that make it easy to integrate privacy-preserving features into your applications.</strong></p>
+  <p>This is where <span class="highlight">iExec</span> comes in! We provide <span class="highlight">developer tools</span> that make it easy to integrate <span class="highlight">privacy-preserving features</span> into your applications.</p>
 </div>
 
-### 🔒 The Two Key Elements
+## 👷 What Problem Does iExec Solve?
 
-To build privacy-preserving applications with iExec, you'll need two fundamental
-elements that work together seamlessly. These elements form the foundation of
-any confidential computing solution on our platform:
+Unlike traditional security, iExec **protects and encrypts your data**
+throughout its entire lifecycle - during storage, transfer, and even while being
+processed by applications.
+
+Our technology allows users to **control** the **ownership**,
+**confidentiality** and **monetization** of their data and digital assets.
+
+### 🔒 The Three Key Elements
+
+To build **privacy-preserving applications** with iExec, you'll need three
+**fundamental elements** that work together seamlessly. These elements form the
+**foundation** of any **confidential computing** solution on our platform:
 
 #### 1. Protected Data
 
@@ -72,16 +81,27 @@ any confidential computing solution on our platform:
 #### 2. iExec Apps
 
 - Special applications that can work with your protected data
-- Run in secure environments (called TEEs) that keep
+- Run in secure environments (called TEEs) that keep your data private
+- Process data without exposing sensitive information
 
-### 🤝 How They Work Together
+#### 3. Blockchain Layer
 
-Think of it like a secure room:
+- Enables tokenization of data
+- Regain ownership of your data
+- Provides transparent governance rules for data access
+
+<div class="solution-note">
+  <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight">DeCC</span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
+</div>
+
+### 🤝 How They Work Together (explained to your grandma)
+
+Think of it like a secure room with a special notebook:
 
 - Your protected data can only be "opened" inside this room
-- Only approved apps can enter the room
+- Only approved iExec App can enter the room
 - Everything that happens inside stays private
-- You control who gets access
+- You control who gets access with rules written in an immutable notebook
 
 ## 🔍 Anatomy of a Privacy-Preserving dApp
 
@@ -242,9 +262,22 @@ Think of it like a secure room:
 }
 
 .solution-note {
+  background: linear-gradient(135deg, rgba(206, 44, 104, 0.1), rgba(206, 44, 104, 0.05));
   border-radius: var(--border-radius);
-
+  padding: 1.5rem;
   margin: 1.5rem 0;
+  border-left: 4px solid #CE2C68;
+}
+
+.solution-note p {
+  margin: 0;
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+}
+
+.solution-note .highlight {
+  color: #CE2C68;
+  font-weight: 600;
 }
 
 .anatomy-grid, .features-grid {
