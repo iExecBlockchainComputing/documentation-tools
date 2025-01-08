@@ -2,7 +2,7 @@
 
 > Estimated reading time: 2 minutes
 
-<div class="hero">
+<div class="hero-intro">
   <div class="hero-content">
     <h2>Start Your Web3 Privacy Journey</h2>
     <p>Welcome to the iExec Hello World Journey! This interactive guide will introduce you to the fundamentals of iExec technologies and how they work together to enable privacy-preserving computation.</p>
@@ -116,7 +116,7 @@ Before you begin, make sure you have:
   --transition: all 0.3s ease;
 }
 
-.hero {
+.hero-intro {
   background: linear-gradient(135deg, #FCD15A, #FFAD4D);
   border-radius: var(--border-radius);
   padding: 0rem 2rem;
