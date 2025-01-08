@@ -263,6 +263,7 @@ When Alice wants to process her protected data:
   --transition: all 0.3s ease;
 }
 
+
 .hero {
   background: linear-gradient(135deg, #FCD15A, #FFAD4D);
   border-radius: var(--border-radius);
@@ -333,7 +334,7 @@ When Alice wants to process her protected data:
 
 .card-header, .feature-header {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
@@ -343,7 +344,7 @@ When Alice wants to process her protected data:
 }
 
 .card-header h3, .feature-header h3 {
-  margin: 0;
+  margin: 0 !important;
   color: var(--vp-c-text-1);
 }
 
