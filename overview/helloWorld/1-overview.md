@@ -1,6 +1,6 @@
 # 🧐 iExec Overview
 
-> Reading time 🕒 3 mins
+> Reading time 🕒 4 mins
 
 <div class="hero">
   <div class="hero-content">
@@ -74,7 +74,7 @@ To build **privacy-preserving applications** with iExec, you'll need three
 #### 1. Protected Data
 
 - Your sensitive data is encrypted and stored safely
-- Only you control who can access it
+- Only you control when and who can access it
 - Perfect for private information like research data, business analytics, or
   personal records
 
@@ -103,108 +103,66 @@ Think of it like a secure room with a special notebook:
 - Everything that happens inside stays private
 - You control who gets access with rules written in an immutable notebook
 
-## 🔍 Anatomy of a Privacy-Preserving dApp
+## 🔍 Building Your First Privacy-Preserving dApp (DRAFT)
 
-<div class="anatomy-grid">
-  <div class="anatomy-card">
-    <div class="card-header">
-      <span class="card-icon">🛡️</span>
-      <h3>Data Protection Layer</h3>
-    </div>
-    <ul>
-      <li>Secure data encryption</li>
-      <li>Access control management</li>
-      <li>Permission handling</li>
-    </ul>
-  </div>
+Let's follow Alice and Bob's journey to understand how to build with iExec.
+Their story illustrates the three main steps of building privacy-preserving
+applications:
 
-  <div class="anatomy-card">
-    <div class="card-header">
-      <span class="card-icon">🔐</span>
-      <h3>Confidential Computing</h3>
-    </div>
-    <ul>
-      <li>Process sensitive data while keeping it encrypted</li>
-      <li>Run computations without exposing the data</li>
-      <li>Ensure data privacy throughout its lifecycle</li>
-    </ul>
-  </div>
+### 1. Alice Protects Her Data 🔒
 
-  <div class="anatomy-card">
-    <div class="card-header">
-      <span class="card-icon">⛓️</span>
-      <h3>Web3 Integration</h3>
-    </div>
-    <ul>
-      <li>Blockchain-based access management</li>
-      <li>Decentralized storage solutions</li>
-      <li>Transparent transaction handling</li>
-    </ul>
-  </div>
+Alice has sensitive data she wants to process securely. She'll encrypt her data,
+define who can access it and deploy it to secure storage (IPFS).
+
+### 2. Bob Creates a Confidential App 💻
+
+Bob is a developer who builds applications that can process protected data.
+He'll develop his app, deploy it in a secure environment (TEE), and make it
+available on iExec.
+
+### 3. Secure Collaboration 🤝
+
+Alice discovers Bob's app and decides to use it. She grants the app access to
+her protected data, and Bob's app processes it securely in a TEE. The results
+are delivered confidentially to Alice.
+
+<div class="solution-note">
+  <p>In the next chapters, we'll follow Alice and Bob's journey step by step, starting with how Alice can <span class="highlight">protect her sensitive data</span> and then how Bob can <span class="highlight">build and deploy a confidential app</span> to process it.</p>
 </div>
 
-## 🎯 Key Features
-
-<div class="features-grid">
-  <div class="feature-card">
-    <div class="feature-header">
-      <span class="feature-icon">🔒</span>
-      <h3>Confidential Computing</h3>
-    </div>
-    <p>Process sensitive data securely without exposing it to any external parties - not even the application owners or infrastructure providers.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="feature-header">
-      <span class="feature-icon">🎮</span>
-      <h3>Privacy and User Control</h3>
-    </div>
-    <p>Give users complete control over their data:</p>
-    <ul>
-      <li>Who can access it</li>
-      <li>How it's used</li>
-      <li>When permissions are granted or revoked</li>
-    </ul>
-  </div>
-
-  <div class="feature-card">
-    <div class="feature-header">
-      <span class="feature-icon">💰</span>
-      <h3>Data Monetization</h3>
-    </div>
-    <p>Enable new business models:</p>
-    <ul>
-      <li>Monetize datasets securely</li>
-      <li>Create data marketplaces</li>
-      <li>Establish pay-per-use models</li>
-    </ul>
-  </div>
-</div>
-
-## 🚀 Getting Started
+## 🎯 Key Takeaways
 
 <div class="getting-started-card">
-  <p>In the following chapters, we'll show you how to:</p>
+  <p>In this chapter, we covered the core concepts of iExec:</p>
   
   <div class="steps-list">
     <div class="step-item">
-      <span class="step-number">1</span>
-      <span>Protect sensitive data using DataProtector</span>
+      <span>🔒</span>
+      <span>Three key elements: Protected Data, iExec Apps & Blockchain enable privacy-preserving dApps</span>
     </div>
     <div class="step-item">
-      <span class="step-number">2</span>
-      <span>Build applications that work with protected data</span>
+      <span>🔐</span>
+      <span>End-to-end data encryption during storage, transfer & processing</span>
     </div>
     <div class="step-item">
-      <span class="step-number">3</span>
-      <span>Manage data access and permissions</span>
+      <span>🤝</span>
+      <span>Full user control over data ownership & monetization</span>
+    </div>
+    <div class="step-item">
+      <span>💡</span>
+      <span>Secure TEE environments for confidential computing</span>
+    </div>
+    <div class="step-item">
+      <span>⛓️</span>
+      <span>Blockchain for transparent governance & data tokenization</span>
     </div>
   </div>
 
-  <div class="cta-wrapper">
-    <p>Ready to start building? Let's dive into protecting your first piece of data!</p>
-  </div>
 </div>
+
+<div class="cta-wrapper">
+    <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data!</p>
+  </div>
 
 <style>
 :root {
@@ -212,6 +170,8 @@ Think of it like a secure room with a special notebook:
   --secondary-color: #1D1D24;
   --accent-color: #CE2C68;
   --background-light: #F5F5F5;
+  --text-primary: #1D1D24;
+  --text-secondary: #5D5D69;
   --card-shadow: 0 2px 6px rgba(29, 29, 36, 0.1);
   --card-hover-shadow: 0 8px 24px rgba(29, 29, 36, 0.15);
   --border-radius: 6px;
@@ -223,7 +183,6 @@ Think of it like a secure room with a special notebook:
   border-radius: var(--border-radius);
   padding: 2rem;
   color: white;
- 
 }
 
 .hero-content {
@@ -345,12 +304,16 @@ li {
 }
 
 @media (max-width: 768px) {
-  .anatomy-grid, .features-grid {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .journey-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.anatomy-card, .feature-card {
-  border: 1px solid var(--vp-c-divider);
+  
+  .requirements-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

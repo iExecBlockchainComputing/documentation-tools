@@ -20,7 +20,7 @@
     <div class="card-icon">📚</div>
     <div class="card-content">
       <h3>1 - iExec Overview</h3>
-      <p>Discover how iExec technologies work and the problems they solve</p>
+      <p>Discover how iExec technologies work and the problems it solve</p>
       <div class="time-wrapper">
         <span class="time-estimate">5 min read</span>
       </div>
@@ -42,7 +42,7 @@
     <div class="card-icon">💻</div>
     <div class="card-content">
       <h3>3. Work with Protected Data</h3>
-      <p>Build and run your first confidential computing application</p>
+      <p>Build and run your first iExec App</p>
       <div class="time-wrapper">
         <span class="time-estimate">10 min read</span>
       </div>
@@ -78,13 +78,13 @@ Before you begin, make sure you have:
 
 <div class="requirements-list">
   <div class="requirement-item">
-    <div class="req-title">🦊 MetaMask Wallet</div>
-    <a target="_blank" href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">Download →</a>
+    <div class="req-title">🦊 Ethereum Wallet</div>
+    <a target="_blank" href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">Metamask Download →</a>
   </div>
   
   <div class="requirement-item">
     <div class="req-title">💻 Code Editor</div>
-    <p>VSCode recommended</p>
+    <a target="_blank" href="https://code.visualstudio.com/"> Download →</a>
   </div>
   
   <div class="requirement-item">
@@ -112,31 +112,21 @@ Before you begin, make sure you have:
   --text-secondary: #5D5D69;
   --card-shadow: 0 2px 6px rgba(29, 29, 36, 0.1);
   --card-hover-shadow: 0 8px 24px rgba(29, 29, 36, 0.15);
-  --primary-color: #FCD15A;
-  --secondary-color: #1D1D24;
-  --accent-color: #CE2C68;
-  --background-light: #F5F5F5;
-  --text-primary: #1D1D24;
-  --text-secondary: #5D5D69;
-  --card-shadow: 0 2px 6px rgba(29, 29, 36, 0.1);
-  --card-hover-shadow: 0 8px 24px rgba(29, 29, 36, 0.15);
   --border-radius: 6px;
   --transition: all 0.3s ease;
 }
 
 .hero {
   background: linear-gradient(135deg, #FCD15A, #FFAD4D);
-  background: linear-gradient(135deg, #FCD15A, #FFAD4D);
   border-radius: var(--border-radius);
   padding: 0rem 2rem;
   color: white;
-
 }
 
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
-  border-top:none;
+  border-top: none;
 }
 
 .hero-time {
@@ -163,7 +153,6 @@ Before you begin, make sure you have:
 
 .journey-card {
   background: var(--vp-c-bg-soft);
-  background: var(--vp-c-bg-soft);
   border-radius: var(--border-radius);
   padding: 1.5rem;
   box-shadow: var(--card-shadow);
@@ -182,7 +171,6 @@ Before you begin, make sure you have:
 }
 
 .card-content {
-  text-decoration: none !important;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -192,14 +180,11 @@ Before you begin, make sure you have:
 .card-content h3 {
   margin: 0 0 0.5rem 0;
   color: var(--vp-c-text-1);
-  color: var(--vp-c-text-1);
-  text-decoration: none !important;
   font-size: 1.1rem;
   line-height: 1.3;
 }
 
 .card-content p {
-  text-decoration: none !important;
   margin: 0;
   color: var(--vp-c-text-2);
   font-size: 0.95rem;
@@ -212,8 +197,7 @@ Before you begin, make sure you have:
   left: 0;
   width: 100%;
   height: 4px;
-  background: #FCD15A;
-  background: #FCD15A;
+  background: var(--primary-color);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -242,8 +226,6 @@ Before you begin, make sure you have:
   font-size: 0.9rem;
   color: var(--vp-c-text-4);
   background: var(--vp-c-bg-soft);
-  /* padding: 0.25rem 0.75rem; */
-  /* border-radius: 12px; */
 }
 
 .special {
@@ -253,101 +235,10 @@ Before you begin, make sure you have:
 
 .special h3, .special p, .special .time-estimate {
   color: white;
-  text-decoration: none !important;
-}
-
-.info-box {
-  background: var(--background-light);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  display: flex;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.info-icon {
-  font-size: 2rem;
-}
-
-.requirements-section {
-  background: white;
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  box-shadow: var(--card-shadow);
-}
-
-.requirements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.requirement-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.tool-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.help-box {
-  background: var(--background-light);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.glossary-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.glossary-link:hover {
-  text-decoration: underline;
-}
-
-.surprise-badge {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  display: inline-block;
 }
 
 .special::before {
   background: linear-gradient(135deg, #CE2C68, #3F0D3F);
-}
-
-.special h3 {
-  color: white;
-  text-decoration: none !important;
-}
-
-.special p, .special .time-estimate {
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none !important;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 2rem 1rem;
-  }
-  
-  .journey-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .requirements-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .requirements-list {
@@ -379,7 +270,7 @@ Before you begin, make sure you have:
 }
 
 .requirement-item a {
-  color: #CE2C68;
+  color: var(--accent-color);
   text-decoration: none;
   font-size: 0.9rem;
   margin-left: auto;
@@ -392,7 +283,6 @@ Before you begin, make sure you have:
 .help-note {
   margin-top: 2rem;
   background: var(--vp-c-bg-soft);
-  background: var(--vp-c-bg-soft);
   border-radius: var(--border-radius);
   padding: 0.75rem 1rem;
 }
@@ -402,17 +292,25 @@ Before you begin, make sure you have:
   font-size: 0.9rem;
   text-align: center;
   color: var(--vp-c-text-2);
-  color: var(--vp-c-text-2);
 }
 
 .help-note a {
-  color: var(--vp-c-brand);
-  color: var(--vp-c-brand);
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
 }
 
 .help-note a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
