@@ -3,19 +3,21 @@
 > Reading time 🕒 5 mins
 
 <div class="hero">
-  <div class="hero-content">
-    <p>Let's explore how iExec can help you build privacy-preserving applications and manage sensitive data securely.</p>
+  <div class="hero-content hero-overview">
+    <h2>Let's start with the basics</h2>
+     <p>Let's explore how iExec can help you build privacy-preserving applications and manage sensitive data securely.</p>
   </div>
+
 </div>
 
 ## 👨‍💻 Building privacy-first dApps with iExec
 
-<p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle (share or compute) sensitive user data </strong>. For example:</p>
+<p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle sensitive user data </strong>, for example:</p>
 <div class="use-case-card">
   <div class="examples-list">
     <div class="example-item">
       <span class="example-icon">🏥</span>
-      <span>A healthcare app processing patient records</span>
+      <span>A healthcare app processing confidential patient records</span>
     </div>
     <div class="example-item">
       <span class="example-icon">💰</span>
@@ -39,7 +41,7 @@
     </div>
     <div class="requirement-item">
       <span class="req-icon">🎮</span>
-      <span>Control who can access it (or buy)</span>
+      <span>Control who can access it</span>
     </div>
     <div class="requirement-item">
       <span class="req-icon">⚡</span>
@@ -56,33 +58,35 @@
   <p>This is where <span class="highlight">iExec</span> comes in! We provide <span class="highlight">developer tools</span> that make it easy to integrate <span class="highlight">privacy-preserving features</span> into your applications.</p>
 </div>
 
-## 👷 What problem does iExec solve?
+## 👷 What do we solve?
 
-Unlike traditional security, iExec **protects and encrypts your data**
-throughout its entire lifecycle - during storage, transfer, and even while being
-processed by applications.
+Unlike traditional security, iExec protects and encrypts your data throughout
+its entire lifecycle, during storage, transfer, **and even while being processed
+by applications.**
 
-Our technology allows users to **control** the **ownership**,
-**confidentiality**, and **monetization** of their data and digital assets.
+<div class="solution-note">
+  <p>Our technology allows users to control the <span class="highlight">ownership</span>,
+<span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets.</p>
+</div>
 
 ### 🔒 The three key elements
 
 iExec combines three fundamental elements that work together seamlessly:
 
-#### 1. Protected data with DataProtector
+#### 1. Protect your data with our devtool DataProtector
 
 - Your sensitive data is encrypted and stored safely
 - Only you control when and who can access it
 - Perfect for private information like research data, business analytics, or
   personal records
 
-#### 2. iExec apps running in secure environment
+#### 2. Compute data with iExec apps running in secure environment
 
 - Special applications that can work with protected data
 - Run in secure environments (called TEEs) that keep your data private
 - Process data without exposing sensitive information
 
-#### 3. Behind the scenes: blockchain layer
+#### 3. Set the rules with the blockchain layer
 
 - Enables tokenization of data
 - Regain ownership of your data
@@ -92,14 +96,17 @@ iExec combines three fundamental elements that work together seamlessly:
   <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight">DeCC</span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
 </div>
 
-### 🤝 How they work together (explained to your grandma)
+### 🤝 Why we talk about privacy (explained to your grandma)
 
-Think of it like a secure room with a special notebook:
+Imagine a secure room (called a TEE Where confidential computing happens) where
+all activities remain completely safe and private, like a bank vault for data.
 
-- Your protected data can only be "opened" inside this room
-- Only approved iExec Apps can enter the room
-- Everything that happens inside stays private
-- You control who gets access with rules written in an immutable notebook
+The protect data you you created with DataProtector can only be accessed inside
+this secure room. Only approved iExec Apps can enter and work with your data
+there.
+
+You stay in control writing rules in an immutable notebook that determine who
+can access your data and when. your data and when.
 
 ## 🔍 Building your first privacy-preserving dApp
 
@@ -111,9 +118,9 @@ applications:
 Bob is building a decentralized application that leverages iExec's technology.
 His platform consists of:
 
-- A user-friendly frontend interface (using React)
+- A user-friendly frontend interface
 - Built-in DataProtector features for securing user data and managing access
-- An iExec App that can process protected data (apply algorithms, share data,
+- An iExec App that can process protected data (apply algorithms, sharing,
   monetize it, etc.)
 
 ### 2. Meet Alice: the dApp user 👩‍💼
@@ -122,7 +129,8 @@ When using Bob's platform, Alice can:
 
 - Protect her data using the platform's DataProtector feature
 - Maintain full control over who can access her protected data
-- Authorize specific iExec Apps to compute her data in a secure environment
+- Authorize specific iExec Apps and persons like Bob to use her data in a secure
+  environment
 
 Depending on the dApp's use case, Alice could:
 
@@ -132,15 +140,6 @@ Depending on the dApp's use case, Alice could:
 - Ask questions to AI models about her data and get answers confidentially
 
 And many other use cases...
-
-### 3. The privacy-first collaboration 🤝
-
-When Alice wants to process her protected data:
-
-1. She authorizes Bob's platform to handle her data
-2. She grants permission to specific iExec Apps
-3. The data is processed securely in TEE environments
-4. Results are delivered confidentially to Alice
 
 ### 💡 Possible use cases
 
@@ -250,43 +249,15 @@ When Alice wants to process her protected data:
 </div>
 
 <style>
-:root {
-  --primary-color: #FCD15A;
-  --secondary-color: #1D1D24;
-  --accent-color: #CE2C68;
-  --background-light: #F5F5F5;
-  --text-primary: #1D1D24;
-  --text-secondary: #5D5D69;
-  --card-shadow: 0 2px 6px rgba(29, 29, 36, 0.1);
-  --card-hover-shadow: 0 8px 24px rgba(29, 29, 36, 0.15);
-  --border-radius: 6px;
-  --transition: all 0.3s ease;
-}
 
-
-.hero {
-  background: linear-gradient(135deg, #FCD15A, #FFAD4D);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  color: white;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero p {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.5;
+.hero-overview {
+  padding: 0rem 0rem 1.5rem 0rem;
 }
 
 .use-case-card, .anatomy-card, .feature-card, .getting-started-card {
   background: var(--vp-c-bg-soft);
   border-radius: var(--border-radius);
   padding: 1.5rem;
-
 }
 
 .examples-list, .requirements-list {
@@ -339,9 +310,6 @@ When Alice wants to process her protected data:
   margin-bottom: 1rem;
 }
 
-.card-icon, .feature-icon {
-  font-size: 2 rem;
-}
 
 .card-header h3, .feature-header h3 {
   margin: 0 !important;
@@ -389,17 +357,5 @@ li {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 2rem 1rem;
-  }
-  
-  .journey-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .requirements-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 </style>

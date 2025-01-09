@@ -2,13 +2,13 @@
 
 > Estimated reading time: 2 minutes
 
-<div class="hero-intro">
+<div class="hero">
   <div class="hero-content">
     <h2>Start Your Web3 Privacy Journey</h2>
-    <p>Welcome to the iExec Hello World Journey! This interactive guide will introduce you to the fundamentals of iExec technologies and how they work together to enable privacy-preserving computation.</p>
+    <p>Welcome to the iExec Hello World Journey! This interactive guide will introduce you to the fundamentals of iExec technologies and how you can use them to build a privacy-preserving dApp.</p>
     <div class="hero-time">
-      <span class="time-badge">☕ 30 minutes</span>
-      <p>Perfect for a coffee break!</p>
+      <span class="time-badge">☕ 30 minutes journey</span>
+      <p>Perfect for hackathon :)</p>
     </div>
   </div>
 </div>
@@ -42,7 +42,7 @@
     <div class="card-icon">💻</div>
     <div class="card-content">
       <h3>3. Work with Protected Data</h3>
-      <p>Build and run your first iExec App</p>
+      <p>Build and run your first iExec App to work with protected data</p>
       <div class="time-wrapper">
         <span class="time-estimate">10 min read</span>
       </div>
@@ -53,7 +53,7 @@
     <div class="card-icon">🔑</div>
     <div class="card-content">
       <h3>4. Control Data Access</h3>
-      <p>Master data access management and permissions</p>
+      <p>Master data access management, permissions and monetization</p>
       <div class="time-wrapper">
         <span class="time-estimate">7 min read</span>
       </div>
@@ -64,7 +64,7 @@
     <div class="card-icon">✨</div>
     <div class="card-content">
       <h3>Bonus Chapter</h3>
-      <p>Unlock advanced features and special content!</p>
+      <p>Finish the journey with a surprise bonus chapter!</p>
       <div class="time-wrapper">
         <span class="surprise-badge">Special Content</span>
       </div>
@@ -116,7 +116,7 @@ Before you begin, make sure you have:
   --transition: all 0.3s ease;
 }
 
-.hero-intro {
+.hero {
   background: linear-gradient(135deg, #FCD15A, #FFAD4D);
   border-radius: var(--border-radius);
   padding: 0rem 2rem;
@@ -126,7 +126,7 @@ Before you begin, make sure you have:
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
-  border-top: none;
+
 }
 
 .hero-time {
@@ -185,7 +185,7 @@ Before you begin, make sure you have:
 }
 
 .card-content p {
-  margin: 0;
+  margin: 1rem 0;
   color: var(--vp-c-text-2);
   font-size: 0.95rem;
 }
@@ -212,7 +212,7 @@ Before you begin, make sure you have:
   transform: scaleX(1);
 }
 
-.card-icon {
+.card-icon, .feature-icon  {
   font-size: 2rem;
 }
 
@@ -310,6 +310,10 @@ Before you begin, make sure you have:
   }
   
   .journey-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .requirements-grid {
     grid-template-columns: 1fr;
   }
 }
