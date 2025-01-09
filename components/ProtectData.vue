@@ -1,48 +1,65 @@
 <template>
-  Connect Your Wallet:
-  <div class="ml-2 inline-block">
-    <MetamaskButton @connected="onWalletConnected" />
-  </div>
-
-  <div class="form-container">
-    <input
-      v-model="contentToProtect"
-      placeholder="Enter some text to protect"
-    />
-    <Button
-      :disabled="!isWalletConnected || isLoadingProtect"
-      @click="protectData"
-    >
-      {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
-    </Button>
-    <div v-if="protectError" class="error">{{ protectError }}</div>
-  </div>
-
-  <div
-    v-if="protectedDataAddress"
-    class="protected-data-container border border-success text-on-bg-success"
-  >
-    <div class="flex items-center justify-center gap-x-2 text-2xl text-success">
-      <div class="inline-block rounded-full bg-success p-1.5 text-white">
-        <Icon icon="mdi:check" height="24" />
+  <div class="protect-data-container">
+    <div class="wallet-section">
+      Connect Your Wallet:
+      <div class="ml-2 inline-block">
+        <MetamaskButton @connected="onWalletConnected" />
       </div>
-      Your data has been protected!
     </div>
-    <p class="address-label mt-2">Your protected data address:</p>
-    <p class="white-block-for-address">{{ protectedDataAddress }}</p>
-    <p>
-      You can check it on
-      <a
-        :href="
-          'https://explorer.iex.ec/bellecour/dataset/' + protectedDataAddress
-        "
-        class="!text-success !no-underline hover:!underline"
-        target="_blank"
-        rel="noopener noreferrer"
+
+    <div class="form-container">
+      <input
+        v-model="contentToProtect"
+        placeholder="Enter some text to protect"
+        :disabled="!isWalletConnected"
+      />
+      <Button
+        :disabled="!isWalletConnected || isLoadingProtect"
+        @click="protectData"
+        class="protect-button"
       >
-        the iExec explorer
-      </a>
-    </p>
+        {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
+      </Button>
+      <div v-if="protectError" class="error-note">{{ protectError }}</div>
+    </div>
+
+    <div v-if="protectedDataAddress" class="success-note">
+      <div class="success-header">
+        <div class="success-icon">
+          <Icon icon="mdi:check" height="24" />
+        </div>
+        Your data has been protected!
+      </div>
+      <p class="address-label">Your protected data address:</p>
+      <div class="address-container">{{ protectedDataAddress }}</div>
+      <p class="explorer-link">
+        You can check it on
+        <a
+          :href="
+            'https://explorer.iex.ec/bellecour/dataset/' + protectedDataAddress
+          "
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          the iExec explorer
+        </a>
+      </p>
+      <p class="explorer-link">
+        Or view your encrypted data on
+        <a
+          :href="'https://ipfs.io/ipfs/' + protectedDataIpfsAddress"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          IPFS
+        </a>
+        <br />
+        <span class="encrypted-note">
+          😊 Ohh damn: you can download the data on IPFS but you can't see the
+          content 🔒
+        </span>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -56,6 +73,7 @@ import MetamaskButton from './MetamaskButton.vue';
 const web3Provider = ref(null);
 const isWalletConnected = ref(false);
 const protectedDataAddress = ref('');
+const protectedDataIpfsAddress = ref('');
 const contentToProtect = ref('');
 const isLoadingProtect = ref(false);
 const protectError = ref(null);
@@ -64,8 +82,14 @@ if (typeof window !== 'undefined') {
   const savedProtectedDataAddress = localStorage.getItem(
     'protectedDataAddress'
   );
+  const savedProtectedDataIpfsAddress = localStorage.getItem(
+    'protectedDataIpfsAddress'
+  );
   if (savedProtectedDataAddress) {
     protectedDataAddress.value = savedProtectedDataAddress;
+  }
+  if (savedProtectedDataIpfsAddress) {
+    protectedDataIpfsAddress.value = savedProtectedDataIpfsAddress;
   }
 }
 
@@ -97,8 +121,12 @@ async function protectData() {
     });
     console.log('createdProtectedData', createdProtectedData);
 
+    const ipfsCid = createdProtectedData.multiaddr.split('/').pop();
+
     protectedDataAddress.value = createdProtectedData.address;
+    protectedDataIpfsAddress.value = ipfsCid;
     localStorage.setItem('protectedDataAddress', createdProtectedData.address);
+    localStorage.setItem('protectedDataIpfsAddress', ipfsCid);
   } catch (error) {
     protectError.value = error.message;
     console.error('Error protecting data:', error);
@@ -109,45 +137,140 @@ async function protectData() {
 </script>
 
 <style scoped>
+.protect-data-container {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.wallet-section {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+}
+
 .form-container {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  width: 100%;
 }
 
 input {
-  padding: 8px 16px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--border-radius);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  transition: var(--transition);
 }
 
 input:focus {
-  border-color: #fcd15a;
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(252, 209, 90, 0.1);
 }
 
-.error {
-  color: white;
-  background-color: red;
-  padding: 8px;
-  margin-top: 10px;
-  border-radius: 5px;
+input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
-.protected-data-container {
-  background-color: #e8f5e9;
-  margin-top: 50px !important;
-  border-radius: 8px;
-  padding: 20px;
+.protect-button {
+  width: 100%;
+}
+
+.error-note {
+  background: rgba(255, 59, 48, 0.1);
+  color: rgb(255, 59, 48);
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  border-left: 4px solid rgb(255, 59, 48);
+}
+
+.success-note {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 199, 89, 0.1),
+    rgba(52, 199, 89, 0.05)
+  );
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+  margin-top: 2rem;
+  border-left: 4px solid rgb(52, 199, 89);
+}
+
+.success-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  color: rgb(52, 199, 89);
+  font-weight: 500;
+}
+
+.success-icon {
+  background: rgb(52, 199, 89);
+  color: white;
+  border-radius: 50%;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .address-label {
-  font-weight: bold;
-  margin-bottom: 5px;
+  margin: 1rem 0 0.5rem;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+}
+
+.address-container {
+  background: var(--vp-c-bg-soft);
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  word-break: break-all;
+}
+
+.explorer-link {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.explorer-link:first-of-type {
+  margin-top: 1rem;
+}
+
+.explorer-link a {
+  color: rgb(52, 199, 89);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.explorer-link a:hover {
+  text-decoration: underline;
+}
+
+.encrypted-note {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .protect-data-container {
+    margin: 1rem 0;
+  }
 }
 </style>

@@ -2,51 +2,60 @@
 import ProtectData from '../../components/ProtectData.vue';
 </script>
 
-# 🛡️Let's protect data
+# 🛡️ Let's protect data
 
-> Reading 🕒 6 mins
+> Reading time: 6 minutes
 
-We talked about **iExec Protocol**, **confidential computing**, **Privacy**. The
-link between all of this is **Data**, more specifically **Protected Data**.
+<div class="hero">
+  <div class="hero-content hero-overview">
+    <h2>Time to get practical</h2>
+    <p>Let's follow Alice as she learns how to protect her data using DataProtector, our developer tool for protecting data creation and management.</p>
+  </div>
+</div>
 
-But what is **Protected Data**, (breath in) it's any kind of data that is
-securely encrypted and processed, ensuring it remains confidential and protected
-from unauthorized access during its entire lifecycle (breath out).
+<div class="solution-note">
+  <p><strong>Protected Data</strong> is encrypted data that remains confidential throughout its entire lifecycle - during storage, transfer and processing.</p>
+</div>
 
-Now it's time to put all of this into practice. In this chapter, we'll show you
-how to protect and manage your data with our developer tool, **DataProtector**.
+## 🧩 Meet DataProtector
 
-## 🧩 DataProtector
-
-DataProtector is a developer tool built on top of our protocol, it streamlines
+DataProtector is a developer tool built on top of our technology. It streamlines
 the decentralized confidential computing process, making it easy for developers
 to protect, manage and monetize their data.
 
-Here are some of the key features of DataProtector:
+Here are the key features:
 
-- **Data Privacy and Security**: Utilizes end-to-end encryption to ensure the
-  protection and confidentiality of your data, leveraging advanced confidential
-  computing technology.
+<div class="features-list">
+  <div class="feature-item">
+    <span class="feature-title">🔐 Data Privacy and Security</span>
+    <p>Utilizes end-to-end encryption to ensure protection and confidentiality, leveraging advanced confidential computing technology.</p>
+  </div>
 
-- **Dynamic Access and Monetization Management**: Allow users to manage access,
-  enabling flexible control and monetization of data assets.
+  <div class="feature-item">
+    <span class="feature-title">🎮 Dynamic Access Management</span>
+    <p>Allows users to manage access, enabling flexible control and monetization of data assets.</p>
+  </div>
 
-- **Seamless dApp Integration**: Features an SDK for easy integration into a
-  DApp, enhancing functionality and user experience.
+  <div class="feature-item">
+    <span class="feature-title">🔌 Seamless dApp Integration</span>
+    <p>Features an SDK for easy integration into your DApp, enhancing functionality and user experience.</p>
+  </div>
+</div>
 
-## 🧩 Let's create a protected Data
+## 🧩 Let's create protected data
 
 <ProtectData />
 
-## 🧩 What happened under the hood
+## 🧩 What happens under the hood
 
-You won't believe how easy it is to protect your data with DataProtector. Just a
-few lines of code, and you're done!
+<div class="code-note">
+  <p>You won't believe how easy it is to protect your data with DataProtector. Just a few lines of code, and you're done!</p>
+</div>
 
-you can find the code snippet
+You can find the code snippet
 [here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true),
 but basically you just need to call the `protectData` method from the
-**DataProtector SDK**.
+**DataProtector SDK**:
 
 ```typescript
 const provider = await connector.getProvider();
@@ -62,75 +71,195 @@ button:
 
 ![alt text](/assets/hello-world/dataprotector.png)
 
-::: info Ok let's explain step by step
+<div class="process-steps">
+  <div class="step">
+    <span class="step-number">1</span>
+    <span>DataProtector SDK was called</span>
+  </div>
+  <div class="step">
+    <span class="step-number">2</span>
+    <span>Data was encrypted with a symmetric key</span>
+  </div>
+  <div class="step">
+    <span class="step-number">3</span>
+    <span>Encrypted data was stored on IPFS</span>
+  </div>
+  <div class="step">
+    <span class="step-number">4</span>
+    <span>Symmetric key was stored in a secure enclave (TEE)</span>
+  </div>
+  <div class="step">
+    <span class="step-number">5</span>
+    <span>Smart contract created the protected data ownership</span>
+  </div>
+  <div class="step">
+    <span class="step-number">6</span>
+    <span>Protected data address was returned to you</span>
+  </div>
+</div>
 
-1. DataProtector SDK was called.
-2. The data was encrypted with a symmetric key.
-3. The encrypted data was stored on public decentralized storage (IPFS).
-4. The symmetric key was stored in a secure enclave (TEE).
-5. The DataProtector smart contract was called to create the protected data
-   ownership on the blockchain.
-6. The protected data address was returned to you, linking it to your wallet
-   address.
+## 🧩 Using it in your dApp
 
-:::
+Decentralized confidential computing might sound complex, but we've made it
+simple through our developer tools.
 
-## 🧩 How use it in your dApp
+<div class="integration-steps">
+  <div class="step-item">
+    <span class="step-title">1. Start with Your dApp</span>
+    <p>Use an existing dApp or scaffold a new one</p>
+  </div>
+  <div class="step-item">
+    <span class="step-title">2. Install the Developer Tool</span>
+    <p>Run <a href="https://www.npmjs.com/package/@iexec/dataprotector">npm install @iexec/dataprotector</a></p>
+  </div>
+  <div class="step-item">
+    <span class="step-title">3. Import and Initialize</span>
+    <p>Import the tool and create a new instance</p>
+  </div>
+  <div class="step-item">
+    <span class="step-title">4. Start Using</span>
+    <p>Call the methods you need - that's it!</p>
+  </div>
+</div>
 
-Decentralized confidential computing might sound complex, but we've worked hard
-to make it simple and accessible through our developer tools.
+<div class="solution-note">
+  <p>Check out our <a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7">code sandbox</a> for ready-to-use examples!</p>
+</div>
 
-With just a quick
-[**npm/yarn/pnpm install**](https://www.npmjs.com/package/@iexec/dataprotector),
-our scientist can integrate these powerful features in his dApp and then be able
-to protect, manage and monetize sensitive data and **cerise sur le gateau** you
-don’t need to be a full-stack Web3 developer, that’s amazing.
+## 🧩 Protected data needs iExec Apps
 
-Here’s an easy-to-follow recipe:
+Yes, you read it right - a protected data is useless **on its own**. Think of it
+like a paper: if you don't have a pen, you won't be able to write on it.
 
-1. **Start with Your dApp**: Use an existing dApp or scaffold a new one.
-2. **Install the Developer Tool**: Run the installation
-   [**command**](https://www.npmjs.com/package/@iexec/dataprotector).
-3. **Import and Create an Instance**: Import the tool into your file and create
-   a new instance.
-4. **Call the Methods You Need**: Use the methods provided by the tool.
-5. **That's It!**: You’re done!
-
-Don't just take my word for it—check out our
-[code sandbox!](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true)
-We have ready-to-use code snippets that you can try out. With these steps,
-you’ll be able to offer your **users** Dapps with privacy-focused features in no
-time. Happy coding!
-
-## 🧩 Protected data is useless
-
-Yes you read it right, a protected data is useless **on its own**, it's like a
-paper if you don't have a pen you won't be able to write on it.
-
-But we need a special pen able to process the protected data, we need an **iExec
+We need a special pen able to process the protected data: an **iExec
 Application**.
 
-::: tip 🚨**iExec Application** (we will use the iDapp too in this tutorial)
-
-An iExec application is an application that can run in a trusted execution
-environment (TEE) and process protected data. It takes the protected data as
-input and returns a result after confidential computation. The computation can
-be any kind of algorithm, machine learning model, or data processing task.
-
-:::
+<div class="info-note">
+  <p><strong>🚨 iExec Application</strong> (we'll use iDapp too in this tutorial)</p>
+  <p>An iExec application runs in a trusted execution environment (TEE) and processes protected data. It takes protected data as input and returns results after confidential computation. The computation can be any kind of algorithm, machine learning model, or data processing task.</p>
+</div>
 
 ## 🧩 Key takeaways
 
-- **DataProtector** is a developer tool that ensures data protection and
-  confidentiality, allowing dynamic access and monetization management.
-- **Protected Data** are created by DataProtector and can be used in an iExec
-  application.
-- Protected Data are **encrypted** with a symmetric key and stored on a
-  decentralized storage.
-- Protected Data **ownership** is stored on the blockchain and linked to the
-  user's wallet.
+<div class="takeaways-list">
+  <div class="takeaway-item">
+    <span>🔒</span>
+    <p><strong>DataProtector</strong> ensures data protection and confidentiality</p>
+  </div>
+  <div class="takeaway-item">
+    <span>📦</span>
+    <p><strong>Protected Data</strong> are encrypted and stored on decentralized storage</p>
+  </div>
+  <div class="takeaway-item">
+    <span>⛓️</span>
+    <p><strong>Ownership</strong> is stored on the blockchain and linked to your wallet</p>
+  </div>
+  <div class="takeaway-item">
+    <span>🔌</span>
+    <p><strong>Integration</strong> is simple with our developer tools</p>
+  </div>
+</div>
 
-## 💫 The Next steps
+<div class="cta-wrapper">
+  <p>In the next chapter, we'll show you how to build, deploy, and run an iExec application to process your protected data. Let's go! 🚀</p>
+</div>
 
-In the next chapter, we will show you how to build, deploy, and run an iExec
-application to process your protected data. Let's go! 🚀
+<style>
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feature-title {
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  font-size: 1.1rem;
+}
+
+.code-note {
+  background: var(--vp-c-bg-soft);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.step-number {
+  background: var(--accent-color);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.integration-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.step-title {
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+}
+
+.info-note {
+  background: var(--vp-c-bg-soft);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.takeaways-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.takeaway-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.takeaway-item span {
+  font-size: 1.25rem;
+}
+
+.takeaway-item p {
+  margin: 0;
+}
+</style>

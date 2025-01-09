@@ -245,7 +245,7 @@ And many other use cases...
 </div>
 
 <div class="cta-wrapper">
-  <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data! with Alice!</p>
+  <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data!</p>
 </div>
 
 <style>
