@@ -1,13 +1,13 @@
-# Welcome to iExec! 👋
+# 👋 Welcome to iExec!
 
-> Estimated reading time: 2 minutes
+> Reading time 🕒 2 mins
 
 <div class="hero">
-  <div class="hero-content">
+  <div >
     <h2>Start Your Web3 Privacy Journey</h2>
     <p>Welcome to the iExec Hello World Journey! This interactive guide will introduce you to the fundamentals of iExec technologies and how you can use them to build a privacy-preserving dApp.</p>
     <div class="hero-time">
-      <span class="time-badge">☕ 30 minutes journey</span>
+      <span class="hero-time-badge ">☕ 30 minutes journey</span>
       <p>Perfect for hackathon :)</p>
     </div>
   </div>
@@ -103,6 +103,7 @@ Before you begin, make sure you have:
 </div>
 
 <style>
+/* Global style */
 :root {
   --primary-color: #FCD15A;
   --secondary-color: #1D1D24;
@@ -116,34 +117,31 @@ Before you begin, make sure you have:
   --transition: all 0.3s ease;
 }
 
+/* Hero */
 .hero {
   background: linear-gradient(135deg, #FCD15A, #FFAD4D);
   border-radius: var(--border-radius);
-  padding: 0rem 2rem;
+  padding: 0rem 2rem 1rem 2rem;
   color: white;
-}
-
-.hero-content {
   max-width: 800px;
   margin: 0 auto;
-
 }
 
 .hero-time {
   margin-top: 1.5rem;
-  padding-bottom: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.time-badge {
+.hero-time-badge {
   background: rgba(255, 255, 255, 0.2);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 500;
 }
 
+/* Card grid */
 .journey-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -212,7 +210,7 @@ Before you begin, make sure you have:
   transform: scaleX(1);
 }
 
-.card-icon, .feature-icon  {
+.card-icon {
   font-size: 2rem;
 }
 
@@ -228,6 +226,7 @@ Before you begin, make sure you have:
   background: var(--vp-c-bg-soft);
 }
 
+/* Special card */
 .special {
   background: linear-gradient(135deg, #CE2C68, #3F0D3F);
   color: white;
@@ -241,6 +240,7 @@ Before you begin, make sure you have:
   background: linear-gradient(135deg, #CE2C68, #3F0D3F);
 }
 
+/* Requirements list */
 .requirements-list {
   display: flex;
   flex-direction: column;
@@ -270,7 +270,6 @@ Before you begin, make sure you have:
 }
 
 .requirement-item a {
-  color: var(--accent-color);
   text-decoration: none;
   font-size: 0.9rem;
   margin-left: auto;
@@ -280,6 +279,7 @@ Before you begin, make sure you have:
   text-decoration: underline;
 }
 
+/* Help note */
 .help-note {
   margin-top: 2rem;
   background: var(--vp-c-bg-soft);
@@ -295,7 +295,6 @@ Before you begin, make sure you have:
 }
 
 .help-note a {
-  color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
 }
@@ -304,17 +303,69 @@ Before you begin, make sure you have:
   text-decoration: underline;
 }
 
+.takeaways-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.takeaway-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.takeaway-item span {
+  font-size: 1.25rem;
+}
+
+.takeaway-item p {
+  margin: 0;
+}
+
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.step-number {
+  background: var(--accent-color);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+
+
+/* Media queries */
 @media (max-width: 768px) {
-  .hero {
-    padding: 2rem 1rem;
-  }
+
   
   .journey-grid {
     grid-template-columns: 1fr;
   }
-  
-  .requirements-grid {
-    grid-template-columns: 1fr;
+
+  .hero > h2 {
+    margin-top: 0rem !important;
+    padding-top: 0rem !important;
+    border-top: none !important;
   }
 }
 </style>

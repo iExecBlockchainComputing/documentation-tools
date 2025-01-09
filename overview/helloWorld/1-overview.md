@@ -3,7 +3,7 @@
 > Reading time 🕒 5 mins
 
 <div class="hero">
-  <div class="hero-content hero-overview">
+  <div class="hero-content">
     <h2>Let's start with the basics</h2>
      <p>Let's explore how iExec can help you build privacy-preserving applications and manage sensitive data securely.</p>
   </div>
@@ -217,49 +217,43 @@ And many other use cases...
 
 ## 🎯 Key takeaways
 
-<div class="getting-started-card">
-  <p>In this chapter, we covered the core concepts of iExec:</p>
-  
-  <div class="steps-list">
-    <div class="step-item">
-      <span>🔒</span>
-      <span>Protected Data: Encrypt and control access to sensitive information</span>
-    </div>
-    <div class="step-item">
-      <span>💻</span>
-      <span>iExec Apps: Special applications that can process protected data securely</span>
-    </div>
-    <div class="step-item">
-      <span>🔐</span>
-      <span>Confidential Computing: Process data privately in secure environments</span>
-    </div>
-    <div class="step-item">
-      <span>🤝</span>
-      <span>Privacy-First Collaboration: Secure data sharing and processing between users</span>
-    </div>
-    <div class="step-item">
-      <span>💡</span>
-      <span>Real-World Applications: From healthcare to AI, enabling private data processing across industries</span>
-    </div>
+<div class="takeaways-list">
+<p>In this chapter, we covered the core concepts of iExec:</p>
+  <div class="takeaway-item">
+    <span>🔒</span>
+    <p><strong>Protected Data:</strong> Encrypt and control access to sensitive information</p>
+  </div>
+  <div class="takeaway-item">
+    <span>📦</span>
+    <p><strong>iExec Apps:</strong>Special applications that can process protected data</p>
+  </div>
+  <div class="takeaway-item">
+    <span>⛓️</span>
+    <p><strong>Confidential Computing:</strong>Process data privately in secure environments</p>
+  </div>
+  <div class="takeaway-item">
+    <span>🔌</span>
+    <p><strong>Privacy-First Collaboration:</strong> From healthcare to AI, enabling private data processing across industries</p>
+  </div>
+  <div class="takeaway-item">
+    <span>💡</span>
+    <p><strong>Real-World Applications:</strong> From healthcare to AI, enabling private data processing across industries</p>
   </div>
 </div>
 
-<div class="cta-wrapper">
-  <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data!</p>
+<div class="help-note">
+  <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data! with Alice!</p>
 </div>
 
 <style>
-
-.hero-overview {
-  padding: 0rem 0rem 1.5rem 0rem;
-}
-
-.use-case-card, .anatomy-card, .feature-card, .getting-started-card {
+/* Use case and feature cards */
+.use-case-card, .feature-card {
   background: var(--vp-c-bg-soft);
   border-radius: var(--border-radius);
   padding: 1.5rem;
 }
 
+/* Lists */
 .examples-list, .requirements-list {
   display: flex;
   flex-direction: column;
@@ -277,6 +271,7 @@ And many other use cases...
   font-size: 1.25rem;
 }
 
+/* Solution note */
 .solution-note {
   background: linear-gradient(135deg, rgba(206, 44, 104, 0.1), rgba(206, 44, 104, 0.05));
   border-radius: var(--border-radius);
@@ -296,26 +291,27 @@ And many other use cases...
   font-weight: 600;
 }
 
-.anatomy-grid, .features-grid {
+/* Features grid */
+.features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
 
-.card-header, .feature-header {
+.feature-header {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
 
-
-.card-header h3, .feature-header h3 {
+.feature-header h3 {
   margin: 0 !important;
   color: var(--vp-c-text-1);
 }
 
+/* Lists */
 ul {
   margin: 0.5rem 0;
   padding-left: 1.25rem;
@@ -326,36 +322,10 @@ li {
   color: var(--vp-c-text-2);
 }
 
-.steps-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-.step-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.step-number {
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-}
-
 .cta-wrapper {
   text-align: center;
   margin-top: 1.5rem;
   font-weight: 500;
 }
-
 
 </style>
