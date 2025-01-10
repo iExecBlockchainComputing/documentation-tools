@@ -17,7 +17,7 @@ This guide will help you set up, test, deploy and run your iExec App using the
 [`iapp-cli`](https://github.com/iExecBlockchainComputing/iapp/tree/main/cli)
 tool. Follow the instructions carefully for a smooth development experience.
 
-## Prerequisites
+## 📋 Prerequisites
 
 Before getting started, ensure you have the following:
 
@@ -52,7 +52,7 @@ Before getting started, ensure you have the following:
   <p>Don't worry! Every password or private key you use in this tutorial is stored locally on your machine and is not shared with anyone., you need it to run the <code>iapp run</code> command</p>
 </div>
 
-## Installation
+## 💾 Installation
 
 First, you need to install the `iapp-cli` package. Open your terminal and run:
 
@@ -60,7 +60,7 @@ First, you need to install the `iapp-cli` package. Open your terminal and run:
 npm install -g iapp-cli
 ```
 
-## Initialize Framework
+## 🛠️ Initialize Framework
 
 To initialize the working directory for developing your iApp, use the
 `iapp init` command. This command sets up the necessary project structure and
@@ -94,12 +94,12 @@ You will be prompted with the following message:
 A new folder was created, it contains a very simple Node.js application, with
 the main code being located in `app.js`.
 
-## Test Your iApp
+## 🧪 Test Your iApp
 
 To test your iApp, use the `iapp test` command. This command will invoke your
 locally installed Node.js and run the `app.js` file.
 
-### Using Arguments
+### 🧩 Using Arguments
 
 You can pass arguments to your iApp using the `--args` option. This allows you
 to provide necessary inputs during runtime.
@@ -117,7 +117,7 @@ to specify the data to be used.
 iapp test --protectedData default
 ```
 
-## Deploy Your iApp
+## 🚀 Deploy Your iApp
 
 Deploy your iApp on the iExec protocol. You need to have your Docker daemon
 running to build the Docker image.
@@ -155,7 +155,7 @@ iapp deploy
   <p>Make sure to save your <span class="highlight">iExec App address</span> after deployment - you'll need it later!</p>
 </div>
 
-## Run Your iApp
+## 🏃 Run Your iApp
 
 Now you can run your application:
 
