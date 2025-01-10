@@ -35,7 +35,7 @@
 ## 🎁 Claim Your Voucher
 
 <div >
-  <p>Claim your <b>$50 voucher</b> and start using <b>iExec's confidential computing technology</b> for free! This voucher will allow you to <b>process protected data</b> and run <b>computations in secure environments</b> at no cost. 🎁</p>
+  <p>Claim your <strong >$50 voucher</strong > and start using <strong>iExec's confidential computing technology</strong> for free! This voucher will allow you to <strong>process protected data</strong> and run <strong>computations in secure environments</strong> at no cost. 🎁</p>
 </div>
 
 <div class="button-group-voucher">
