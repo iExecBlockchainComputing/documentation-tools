@@ -5,7 +5,7 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Let's start with the basics</h2>
-     <p>Let's explore how iExec can help you build privacy-preserving applications and manage sensitive data securely.</p>
+     <p>Let's explore how iExec can help you build privacy-preserving applications and securely manage sensitive data.</p>
   </div>
 
 </div>
@@ -55,18 +55,18 @@
 </div>
 
 <div class="solution-note">
-  <p>This is where <span class="highlight">iExec</span> comes in! We provide <span class="highlight">developer tools</span> that make it easy to integrate <span class="highlight">privacy-preserving features</span> into your applications.</p>
+  <p>This is where <span class="highlight">iExec</span> comes in! We provide tools to easily add <span class="highlight">privacy features</span> to your applications.</p>
 </div>
 
 ## 👷 What do we solve?
 
 Unlike traditional security, iExec protects and encrypts your data throughout
-its entire lifecycle, during storage, transfer, **and even while being processed
+its entire lifecycle, during storage, transfer, and even while **being processed
 by applications.**
 
 <div class="solution-note">
   <p>Our technology allows users to control the <span class="highlight">ownership</span>,
-<span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets.</p>
+<span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets within the <span class="highlight">Web3</span> ecosystem.</p>
 </div>
 
 ### 🔒 The three key elements

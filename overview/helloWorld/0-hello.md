@@ -5,7 +5,7 @@
 <div class="hero">
   <div >
     <h2>Start Your Web3 Privacy Journey</h2>
-    <p>Welcome to the iExec Hello World Journey! This interactive guide will introduce you to the fundamentals of iExec technologies and how you can use them to build a privacy-preserving dApp.</p>
+    <p>And learn how to build privacy-preserving dApps with iExec in this interactive guide.</p>
     <div class="hero-time">
       <span class="hero-time-badge ">☕ 30 minutes journey</span>
       <p>Perfect for hackathon :)</p>
@@ -53,7 +53,7 @@
     <div class="card-icon">🔑</div>
     <div class="card-content">
       <h3>4. Control Data Access</h3>
-      <p>Master data access management, permissions and monetization</p>
+      <p>Learn advanced data access management, permissions and monetization</p>
       <div class="time-wrapper">
         <span class="time-estimate">7 min read</span>
       </div>
