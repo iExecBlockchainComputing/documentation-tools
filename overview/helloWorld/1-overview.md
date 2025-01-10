@@ -73,27 +73,29 @@ by applications.**
 
 iExec combines three fundamental elements that work together seamlessly:
 
-#### 1. Protect your data with our devtool DataProtector
+#### 1. iApp: iExec apps for secure data processing
 
-- Your sensitive data is encrypted and stored safely
-- Only you control when and who can access it
-- Perfect for private information like research data, business analytics, or
-  personal records
-
-#### 2. Compute data with iExec apps running in secure environment
-
-- Special applications that can work with protected data
+- Special applications that can process various types of inputs such as
+  protected data
 - Run in secure environments (called TEEs) that keep your data private
 - Process data without exposing sensitive information
 
-#### 3. Set the rules with the blockchain layer
+#### 2. Protected data: Protect sensitive data with DataProtector
+
+- Your sensitive data is encrypted and stored safely
+- Only you control when and who can access it
+- Works seamlessly with iExec apps in TEEs
+- Perfect for private information like research data, business analytics, or
+  personal records
+
+#### 3. Bockchain: Set the rules with the blockchain layer
 
 - Enables tokenization of data
 - Regain ownership of your data
 - Provides transparent governance rules for data access
 
 <div class="solution-note">
-  <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight">DeCC</span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
+  <p>We've pioneered DeCC merging blockchain technology with confidential computing. We bring privacy and security to the next level in web3 ecosystems</p>
 </div>
 
 ### 🤝 Why we talk about privacy (explained to your grandma)
@@ -119,15 +121,16 @@ Bob is building a decentralized application that leverages iExec's technology.
 His platform consists of:
 
 - A user-friendly frontend interface
-- Built-in DataProtector features for securing user data and managing access
-- An iExec App that can process protected data (apply algorithms, sharing,
-  monetize it, etc.)
+- Bob will use DataProtector feature, it let end-user create and manage
+  protected data.
+- An iApp that can process protected data (apply algorithms, sharing, monetize
+  it, etc.)
 
 ### 2. Meet Alice: the dApp user 👩‍💼
 
 When using Bob's platform, Alice can:
 
-- Protect her data using the platform's DataProtector feature
+- Create protected data using DataProtector feature
 - Maintain full control over who can access her protected data
 - Authorize specific iExec Apps and persons like Bob to use her data in a secure
   environment
@@ -144,18 +147,7 @@ And many other use cases...
 ### 💡 Possible use cases
 
 <div class="features-grid">
-  <div class="feature-card">
-    <div class="feature-header">
-      <span class="feature-icon">🏥</span>
-      <h3>Healthcare</h3>
-    </div>
-    <ul>
-      <li>Process patient records privately</li>
-      <li>Run medical analyses while preserving patient confidentiality</li>
-    </ul>
-  </div>
-
-  <div class="feature-card">
+    <div class="feature-card">
     <div class="feature-header">
       <span class="feature-icon">💰</span>
       <h3>Finance</h3>
@@ -207,6 +199,16 @@ And many other use cases...
     <ul>
       <li>Protect player data and game assets</li>
       <li>Process in-game transactions securely</li>
+    </ul>
+  </div>
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-icon">🏥</span>
+      <h3>Healthcare</h3>
+    </div>
+    <ul>
+      <li>Process patient records privately</li>
+      <li>Run medical analyses while preserving patient confidentiality</li>
     </ul>
   </div>
 </div>
