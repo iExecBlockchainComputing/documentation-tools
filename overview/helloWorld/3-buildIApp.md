@@ -79,11 +79,13 @@ the main code being located in `app.js`.
 
 ## Test Your iApp
 
-To test your iApp, use the `iapp test` command. This command will invoke your locally installed Node.js and run the `app.js` file.
+To test your iApp, use the `iapp test` command. This command will invoke your
+locally installed Node.js and run the `app.js` file.
 
 ### Using Arguments
 
-You can pass arguments to your iApp using the `--args` option. This allows you to provide necessary inputs during runtime.
+You can pass arguments to your iApp using the `--args` option. This allows you
+to provide necessary inputs during runtime.
 
 ```sh
 iapp test --args your-name
@@ -91,7 +93,8 @@ iapp test --args your-name
 
 ### Using Protected Data
 
-If your iApp requires protected data, you can use the `--protectedData` option to specify the data to be used.
+If your iApp requires protected data, you can use the `--protectedData` option
+to specify the data to be used.
 
 ```sh
 iapp test --protectedData default
@@ -99,11 +102,13 @@ iapp test --protectedData default
 
 ## Deploy Your iApp
 
-Deploy your iApp on the iExec protocol. You need to have your Docker daemon running to build the Docker image.
+Deploy your iApp on the iExec protocol. You need to have your Docker daemon
+running to build the Docker image.
 
 Before deploying, you need to create a personal access token on Docker Hub:
 
-1. Go to your Docker Hub account: [Docker Hub Security Settings](https://hub.docker.com/settings/security)
+1. Go to your Docker Hub account:
+   [Docker Hub Security Settings](https://hub.docker.com/settings/security)
 2. Click on "Personal access tokens"
 3. Click on "Generate new token"
 4. Name it for instance "Test iExec iApp CLI"
@@ -135,8 +140,8 @@ iapp run <my-iapp-address>
 
 - An **iExec App** is an application that can run in a trusted execution
   environment (TEE) and process protected data.
-- The **iApp CLI** is a command-line tool that helps you build, test, and
-  deploy your iExec App.
+- The **iApp CLI** is a command-line tool that helps you build, test, and deploy
+  your iExec App.
 - **Protected Data** can be integrated into your iExec App to process private
   data.
 - **iExec Apps** can be deployed on the iExec protocol to run in a trusted

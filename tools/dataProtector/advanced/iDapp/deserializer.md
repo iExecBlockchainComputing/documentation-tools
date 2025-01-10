@@ -1,9 +1,9 @@
 # DataProtector Deserializer
 
 If you want to build your own iApp (iExec TEE Dapp), you may need to access
-protected data that your wallet and iApp are authorized to use. To achieve
-this, you must deserialize the content of the protected data with the expected
-data schema.
+protected data that your wallet and iApp are authorized to use. To achieve this,
+you must deserialize the content of the protected data with the expected data
+schema.
 
 To simplify this process, you can use our lightweight utility package,
 `@iexec/dataprotector-deserializer`, in your iApp. This package streamlines the

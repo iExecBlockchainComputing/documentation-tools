@@ -1,7 +1,7 @@
 # iApp
 
-Building your own iApp is essential if you want to utilize our development
-tools to their full potential.
+Building your own iApp is essential if you want to utilize our development tools
+to their full potential.
 
 ### What is an iApp?
 
