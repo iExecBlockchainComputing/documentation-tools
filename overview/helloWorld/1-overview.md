@@ -73,29 +73,27 @@ by applications.**
 
 iExec combines three fundamental elements that work together seamlessly:
 
-#### 1. iApp: iExec apps for secure data processing
-
-- Special applications that can process various types of inputs such as
-  protected data
-- Run in secure environments (called TEEs) that keep your data private
-- Process data without exposing sensitive information
-
-#### 2. Protected data: Protect sensitive data with DataProtector
+#### 1. Protect your data with our devtool DataProtector
 
 - Your sensitive data is encrypted and stored safely
 - Only you control when and who can access it
-- Works seamlessly with iExec apps in TEEs
 - Perfect for private information like research data, business analytics, or
   personal records
 
-#### 3. Bockchain: Set the rules with the blockchain layer
+#### 2. Compute data with iExec apps running in secure environment
+
+- Special applications that can work with protected data
+- Run in secure environments (called TEEs) that keep your data private
+- Process data without exposing sensitive information
+
+#### 3. Set the rules with the blockchain layer
 
 - Enables tokenization of data
 - Regain ownership of your data
 - Provides transparent governance rules for data access
 
 <div class="solution-note">
-  <p>We've pioneered DeCC merging blockchain technology with confidential computing. We bring privacy and security to the next level in web3 ecosystems</p>
+  <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight">DeCC</span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
 </div>
 
 ### 🤝 Why we talk about privacy (explained to your grandma)
@@ -121,16 +119,15 @@ Bob is building a decentralized application that leverages iExec's technology.
 His platform consists of:
 
 - A user-friendly frontend interface
-- Bob will use DataProtector feature, it let end-user create and manage
-  protected data.
-- An iApp that can process protected data (apply algorithms, sharing, monetize
-  it, etc.)
+- Built-in DataProtector features for securing user data and managing access
+- An iExec App that can process protected data (apply algorithms, sharing,
+  monetize it, etc.)
 
 ### 2. Meet Alice: the dApp user 👩‍💼
 
 When using Bob's platform, Alice can:
 
-- Create protected data using DataProtector feature
+- Protect her data using the platform's DataProtector feature
 - Maintain full control over who can access her protected data
 - Authorize specific iExec Apps and persons like Bob to use her data in a secure
   environment
@@ -147,7 +144,18 @@ And many other use cases...
 ### 💡 Possible use cases
 
 <div class="features-grid">
-    <div class="feature-card">
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-icon">🏥</span>
+      <h3>Healthcare</h3>
+    </div>
+    <ul>
+      <li>Process patient records privately</li>
+      <li>Run medical analyses while preserving patient confidentiality</li>
+    </ul>
+  </div>
+
+  <div class="feature-card">
     <div class="feature-header">
       <span class="feature-icon">💰</span>
       <h3>Finance</h3>
@@ -201,16 +209,6 @@ And many other use cases...
       <li>Process in-game transactions securely</li>
     </ul>
   </div>
-  <div class="feature-card">
-    <div class="feature-header">
-      <span class="feature-icon">🏥</span>
-      <h3>Healthcare</h3>
-    </div>
-    <ul>
-      <li>Process patient records privately</li>
-      <li>Run medical analyses while preserving patient confidentiality</li>
-    </ul>
-  </div>
 </div>
 
 <div class="solution-note">
@@ -248,86 +246,6 @@ And many other use cases...
 </div>
 
 <style>
-/* Use case and feature cards */
-.use-case-card, .feature-card {
-  background: var(--vp-c-bg-soft);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-}
 
-/* Lists */
-.examples-list, .requirements-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin: 1rem 0;
-}
-
-.example-item, .requirement-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.example-icon, .req-icon {
-  font-size: 1.25rem;
-}
-
-/* Solution note */
-.solution-note {
-  background: linear-gradient(135deg, rgba(206, 44, 104, 0.1), rgba(206, 44, 104, 0.05));
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-left: 4px solid #CE2C68;
-}
-
-.solution-note p {
-  margin: 0;
-  color: var(--vp-c-text-1);
-  font-weight: 500;
-}
-
-.solution-note .highlight {
-  color: #CE2C68;
-  font-weight: 600;
-}
-
-/* Features grid */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.feature-header {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.feature-header h3 {
-  margin: 0 !important;
-  color: var(--vp-c-text-1);
-}
-
-/* Lists */
-ul {
-  margin: 0.5rem 0;
-  padding-left: 1.25rem;
-}
-
-li {
-  margin: 0.25rem 0;
-  color: var(--vp-c-text-2);
-}
-
-.cta-wrapper {
-  text-align: center;
-  margin-top: 1.5rem;
-  font-weight: 500;
-}
 
 </style>

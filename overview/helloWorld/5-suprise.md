@@ -80,44 +80,5 @@
 
 <style>
 
-.req-title-suprise {
-  flex: 1;
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  font-weight: 450;
-  color: var(--vp-c-text-1);
-}
 
-.yellow-button {
-    height: 2.75rem;
-    padding: 0.5rem 1.25rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    border-radius: 8px;
-    background: #fcd15a;
-    color: #1e1e1e !important;
-    border: none !important;
-    text-decoration: none !important;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.yellow-button:hover {
-  background-color: #FFA500;
-  transform: scale(1.05);
-}
-
-.button-group {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin: 30px 0;
-}
-
-.button-group-voucher {
-  display: flex;
-  gap: 20px;
-  justify-content: left;
-  margin: 30px 0;
-}
 </style>
