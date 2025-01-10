@@ -59,7 +59,7 @@ You're now ready to run your iExec Application and process your protected data
 in a trusted execution environment, by running the command below:
 
 ```sh
-idapp run <my-idapp-address> --protectedData <protectedData-address> --debug
+idapp run <my-idapp-address> --protectedData <protectedData-address>
 ```
 
 Tadada! 🎉, Congratulations you've done it

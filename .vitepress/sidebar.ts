@@ -47,8 +47,8 @@ export function getSidebar() {
                 link: '/overview/helloWorld/2-protectData',
               },
               {
-                text: 'Use protected data',
-                link: '/overview/helloWorld/3-useProtectedData',
+                text: 'Build iApp',
+                link: '/overview/helloWorld/3-buildIApp',
               },
               {
                 text: 'Manage data access',
