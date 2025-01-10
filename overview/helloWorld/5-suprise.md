@@ -13,17 +13,17 @@
 
 <div class="requirements-list">
   <div class="requirement-item">
-    <div class="req-title-suprise">📦 Complete the quest to verify your achievements</div>
+    <div class="req-title-suprise">🏆 Complete the quest to verify your achievements</div>
     <a target="_blank" href="https://nodejs.org/en/">COMPLETE →</a>
   </div>
 
   <div class="requirement-item">
-    <div class="req-title-suprise">📦 Claim your exclusive iExec OG NFT</div>
+    <div class="req-title-suprise">🎨 Claim your exclusive iExec OG NFT</div>
     <a target="_blank" href="https://www.npmjs.com/get-npm">CLAIM →</a>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title-suprise">🐳 Share your feedback to help us improve</div>
+    <div class="req-title-suprise">📝 Share your feedback to help us improve</div>
     <a target="_blank" href="https://hub.docker.com/">SHARE →</a>
   </div>
 </div>
