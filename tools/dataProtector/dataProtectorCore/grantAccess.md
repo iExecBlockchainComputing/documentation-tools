@@ -173,10 +173,6 @@ used.
 It is not technically possible to set an unlimited number of accesses, but you
 can set `numberOfAccess` to `10000` for example.
 
-<!-- #### Important Notes:
-If you try to process the protected data more times than specified in `numberOfAccess`, you will encounter a **"no dataset orders"** error.  
-- This error occurs because the access limit has been reached.
-- To avoid confusion, ensure the `numberOfAccess` is properly set when calling the `grantAccess` method.   -->
 ::: info Important Notes:
 If you try to process the protected data more times than specified in `numberOfAccess`, you will encounter a **"no dataset orders"** error. 
 
