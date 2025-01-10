@@ -1,57 +1,108 @@
 # 🎉 Surprise! 🎉
 
-> Reading 🕒 4 mins
+> Reading time 🕒 4 mins
 
-Congrats on making it this far! You have successfully protected data with
-DataProtector and deployed an iExec application.
-
-It's time to celebrate, the last step to do is:
-
-- Complete the quest using the button below to show off your achievement (we
-  will just check if you created a Protected Data and an iExec application)
-- Claim your iExec OG NFT, specially minted for early testers of the Hello World
-  journey.
-- Fill in the feedback form to help us improve the journey.
-
-You're now eligible for our special raffle 3 x $100 exclusively for early
-testers of the Hello World journey.
-
-<div class="grid">
-
-<div style="text-align: center; margin: 50px 0;">
-  <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer" style="
-    background-color: #0070f3; 
-    color: white; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  " onmouseover="this.style.backgroundColor='#005bb5';" onmouseout="this.style.backgroundColor='#0070f3';" target="_blank">
-    Complete the quest
-  </a>
+<div class="hero">
+  <div class="hero-content">
+    <h2>Congratulations!</h2>
+    <p>You've successfully completed the Hello World journey and mastered the basics of iExec!</p>
+  </div>
 </div>
 
-<div style="text-align: center; margin: 50px 0;">
-  <a href="https://iexecblockchaintech.typeform.com/to/FOcNP9l0" style="
-    background-color: #0070f3; 
-    color: white; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  " onmouseover="this.style.backgroundColor='#005bb5';" onmouseout="this.style.backgroundColor='#0070f3';" target="_blank">
+<div class="solution-note">
+  <p>You've learned how to protect data, deploy iExec applications, and manage data access. Now it's time to claim your rewards! 🏆</p>
+</div>
+
+## 🏁 Final Steps
+
+<div class="process-steps">
+  <div class="step">
+    <span class="step-number">1</span>
+    <span>Complete the quest to verify your achievements</span>
+  </div>
+  <div class="step">
+    <span class="step-number">2</span>
+    <span>Claim your exclusive iExec OG NFT</span>
+  </div>
+  <div class="step">
+    <span class="step-number">3</span>
+    <span>Share your feedback to help us improve</span>
+  </div>
+</div>
+
+<div class="solution-note">
+  <p>Early testers like you are eligible for our special raffle: 3 x $100! 🎁</p>
+</div>
+
+## 🎁 Claim Your Rewards
+
+<div class="button-group">
+  <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer" class="yellow-button" target="_blank">
+    Complete the quest
+  </a>
+
+  <a href="https://iexecblockchaintech.typeform.com/to/FOcNP9l0" class="yellow-button" target="_blank">
     Fill the feedback form
   </a>
 </div>
 
+## 🎯 Key takeaways
+
+<div class="key-takeaways">
+  <div class="takeaway-item">
+    <span class="takeaway-icon">🔒</span>
+    <div class="takeaway-content">
+      <strong>Data Protection:</strong> You can now protect sensitive data using DataProtector SDK
+    </div>
+  </div>
+  <div class="takeaway-item">
+    <span class="takeaway-icon">🛠️</span>
+    <div class="takeaway-content">
+      <strong>iExec Apps:</strong> You've learned to build and deploy secure applications
+    </div>
+  </div>
+  <div class="takeaway-item">
+    <span class="takeaway-icon">🔐</span>
+    <div class="takeaway-content">
+      <strong>Access Control:</strong> You can manage who accesses your protected data
+    </div>
+  </div>
+  <div class="takeaway-item">
+    <span class="takeaway-icon">💰</span>
+    <div class="takeaway-content">
+      <strong>Next Steps:</strong> Explore data monetization and advanced features
+    </div>
+  </div>
+</div>
+
+<div class="help-note">
+  <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
 </div>
 
 <style>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.yellow-button {
+    height: 2.75rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    background: #fcd15a;
+    color: #1e1e1e !important;
+    border: none !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.yellow-button:hover {
+  background-color: #FFA500;
+  transform: scale(1.05);
+}
+
+.button-group {
+  display: flex;
   gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
 }
 </style>
