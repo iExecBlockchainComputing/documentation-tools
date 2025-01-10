@@ -5,45 +5,44 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Congratulations!</h2>
-    <p>You've successfully completed the Hello World journey and mastered the basics of iExec!</p>
+    <p>You've successfully completed the Hello World journey and learned how to protect data, deploy iExec applications, and manage data access. Now it's time to claim your rewards! 🏆</p>
   </div>
-</div>
-
-<div class="solution-note">
-  <p>You've learned how to protect data, deploy iExec applications, and manage data access. Now it's time to claim your rewards! 🏆</p>
 </div>
 
 ## 🏁 Final Steps
 
-<div class="process-steps">
-  <div class="step">
-    <span class="step-number">1</span>
-    <span>Complete the quest to verify your achievements</span>
+<div class="requirements-list">
+  <div class="requirement-item">
+    <div class="req-title-suprise">📦 Complete the quest to verify your achievements</div>
+    <a target="_blank" href="https://nodejs.org/en/">COMPLETE →</a>
   </div>
-  <div class="step">
-    <span class="step-number">2</span>
-    <span>Claim your exclusive iExec OG NFT</span>
+
+  <div class="requirement-item">
+    <div class="req-title-suprise">📦 Claim your exclusive iExec OG NFT</div>
+    <a target="_blank" href="https://www.npmjs.com/get-npm">CLAIM →</a>
   </div>
-  <div class="step">
-    <span class="step-number">3</span>
-    <span>Share your feedback to help us improve</span>
+  
+  <div class="requirement-item">
+    <div class="req-title-suprise">🐳 Share your feedback to help us improve</div>
+    <a target="_blank" href="https://hub.docker.com/">SHARE →</a>
   </div>
 </div>
 
 <div class="solution-note">
-  <p>Early testers like you are eligible for our special raffle: 3 x $100! 🎁</p>
+  <p>Early testers like you are eligible for our special <span class="highlight">raffle: 3 x $100! 🎁 every month!</span></p>
 </div>
 
-## 🎁 Claim Your Rewards
+## 🎁 Claim Your Voucher
 
-<div class="button-group">
+<div >
+  <p>Claim your <b>$50 voucher</b> and start using <b>iExec's confidential computing technology</b> for free! This voucher will allow you to <b>process protected data</b> and run <b>computations in secure environments</b> at no cost. 🎁</p>
+</div>
+
+<div class="button-group-voucher">
   <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer" class="yellow-button" target="_blank">
-    Complete the quest
+    Claim your $50 voucher
   </a>
 
-  <a href="https://iexecblockchaintech.typeform.com/to/FOcNP9l0" class="yellow-button" target="_blank">
-    Fill the feedback form
-  </a>
 </div>
 
 ## 🎯 Key takeaways
@@ -80,6 +79,15 @@
 </div>
 
 <style>
+
+.req-title-suprise {
+  flex: 1;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 450;
+  color: var(--vp-c-text-1);
+}
+
 .yellow-button {
     height: 2.75rem;
     padding: 0.5rem 1.25rem;
@@ -103,6 +111,13 @@
   display: flex;
   gap: 20px;
   justify-content: center;
+  margin: 30px 0;
+}
+
+.button-group-voucher {
+  display: flex;
+  gap: 20px;
+  justify-content: left;
   margin: 30px 0;
 }
 </style>
