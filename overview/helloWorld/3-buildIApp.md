@@ -2,9 +2,16 @@
 
 > Reading time 🕒 10 mins
 
-That's it! You've protected your data and now you're ready to **build your iExec
-App**, an application that will run in a trusted execution environment (TEE) and
-process protected data.
+<div class="hero">
+  <div class="hero-content">
+    <h2>Time to build!</h2>
+    <p>Let's build an iExec App that can process protected data in a secure environment.</p>
+  </div>
+</div>
+
+<div class="solution-note">
+  <p>An <span class="highlight">iExec App</span> runs in a trusted execution environment (TEE) and processes protected data. Think of it as a special application that can work with encrypted information while keeping it secure.</p>
+</div>
 
 This guide will help you set up, test, deploy and run your iExec App using the
 [`iapp-cli`](https://github.com/iExecBlockchainComputing/iapp/tree/main/cli)
@@ -12,30 +19,42 @@ tool. Follow the instructions carefully for a smooth development experience.
 
 ## Prerequisites
 
-Before getting started, ensure that you have the following installed on your
-system:
+Before getting started, ensure you have the following:
 
-::: info
+<div class="requirements-list">
+  <div class="requirement-item">
+    <div class="req-title">📦 Node.js v18+</div>
+    <a target="_blank" href="https://nodejs.org/en/">Download →</a>
+  </div>
 
-Every password or private key you use in this tutorial is stored locally on your
-machine and is not shared with anyone.
+  <div class="requirement-item">
+    <div class="req-title">📦 NPM</div>
+    <a target="_blank" href="https://www.npmjs.com/get-npm">Download →</a>
+  </div>
+  
+  <div class="requirement-item">
+    <div class="req-title">🐳 Docker Account</div>
+    <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
+  </div>
 
-:::
+  <div class="requirement-item">
+    <div class="req-title">🐳 Docker Hub Account</div>
+    <a target="_blank" href="  ">Sign Up →</a>
+  </div>
+  
+  <div class="requirement-item">
+    <div class="req-title">🔑 Private Key</div>
+    <span>From your Ethereum wallet (e.g., MetaMask)</span>
+  </div>
+</div>
 
-- [**Node.js**](https://nodejs.org/en/) version 18 or higher
-- [**NPM**](https://docs.npmjs.com/) (Node.js package manager)
-- [**Docker**](https://hub.docker.com/)
-
-And also:
-
-- A [**DockerHub**](https://docs.docker.com/engine/install/) account
-- **A private key** from an Ethereum wallet (e.g., MetaMask, we need it to run
-  the `iapp run` command)
+<div class="solution-note">
+  <p>Don't worry! Every password or private key you use in this tutorial is stored locally on your machine and is not shared with anyone., you need it to run the <code>iapp run</code> command</p>
+</div>
 
 ## Installation
 
-First, you need to install the `iapp-cli` package. Open your terminal and run
-the following command:
+First, you need to install the `iapp-cli` package. Open your terminal and run:
 
 ```sh
 npm install -g iapp-cli
@@ -68,11 +87,9 @@ You will be prompted with the following message:
     Advanced
 ```
 
-::: tip
-
-We recommend selecting "Hello World" to quickly discover how iApp works
-
-:::
+<div class="solution-note">
+  <p>We recommend selecting <span class="highlight">"Hello World"</span> to quickly discover how iApp works!</p>
+</div>
 
 A new folder was created, it contains a very simple Node.js application, with
 the main code being located in `app.js`.
@@ -105,15 +122,28 @@ iapp test --protectedData default
 Deploy your iApp on the iExec protocol. You need to have your Docker daemon
 running to build the Docker image.
 
-Before deploying, you need to create a personal access token on Docker Hub:
-
-1. Go to your Docker Hub account:
-   [Docker Hub Security Settings](https://hub.docker.com/settings/security)
-2. Click on "Personal access tokens"
-3. Click on "Generate new token"
-4. Name it for instance "Test iExec iApp CLI"
-5. Select "Read & Write" access permissions
-6. Don't forget to save your personal access token
+<div class="process-steps">
+  <div class="step">
+    <span class="step-number">1</span>
+    <span>Go to <a href="https://hub.docker.com/settings/security" target="_blank">Docker Hub Security Settings</a></span>
+  </div>
+  <div class="step">
+    <span class="step-number">2</span>
+    <span>Click "Personal access tokens" → "Generate new token"</span>
+  </div>
+  <div class="step">
+    <span class="step-number">3</span>
+    <span>Name it "Test iExec iApp CLI"</span>
+  </div>
+  <div class="step">
+    <span class="step-number">4</span>
+    <span>Select "Read & Write" permissions</span>
+  </div>
+  <div class="step">
+    <span class="step-number">5</span>
+    <span>Save your token securely</span>
+  </div>
+</div>
 
 Once you have your token, you can deploy your iApp using the following command:
 
@@ -121,34 +151,47 @@ Once you have your token, you can deploy your iApp using the following command:
 iapp deploy
 ```
 
-::: tip iExec App Address
-
-At the end of this command, you will have the **iExec App address**, don't
-forget to save it.
-
-:::
+<div class="solution-note">
+  <p>Make sure to save your <span class="highlight">iExec App address</span> after deployment - you'll need it later!</p>
+</div>
 
 ## Run Your iApp
 
-Now you can run your application using:
+Now you can run your application:
 
 ```sh
 iapp run <my-iapp-address>
 ```
 
-## 🧩 Key takeaways
+## 🎯 Key takeaways
 
-- An **iExec App** is an application that can run in a trusted execution
-  environment (TEE) and process protected data.
-- The **iApp CLI** is a command-line tool that helps you build, test, and deploy
-  your iExec App.
-- **Protected Data** can be integrated into your iExec App to process private
-  data.
-- **iExec Apps** can be deployed on the iExec protocol to run in a trusted
-  execution environment.
+<div class="key-takeaways">
+  <div class="takeaway-item">
+    <span class="takeaway-icon">🔒</span>
+    <div class="takeaway-content">
+      <strong>iExec Apps:</strong> Special applications that run in TEEs to process protected data
+    </div>
+  </div>
+  <div class="takeaway-item">
+    <span class="takeaway-icon">🛠️</span>
+    <div class="takeaway-content">
+      <strong>iApp CLI:</strong> Command-line tool for building, testing, and deploying iExec Apps
+    </div>
+  </div>
+  <div class="takeaway-item">
+    <span class="takeaway-icon">🔐</span>
+    <div class="takeaway-content">
+      <strong>Protected Data:</strong> Can be integrated and processed securely in your iExec App
+    </div>
+  </div>
+  <div class="takeaway-item">
+    <span class="takeaway-icon">⛓️</span>
+    <div class="takeaway-content">
+      <strong>Deployment:</strong> Apps are deployed on iExec protocol to run in trusted environments
+    </div>
+  </div>
+</div>
 
-## 💫 Next steps
-
-We have one **protected data**, and we have an **iExec App**. What's next? We
-will need to authorize our **iExec App** and a **user** to access our protected
-data. Let's do it in the next chapter.🚀
+<div class="help-note">
+  <p>Next up: We'll learn how to authorize our iExec App and users to access protected data! 🚀</p>
+</div>
