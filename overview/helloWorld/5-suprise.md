@@ -29,7 +29,7 @@
 </div>
 
 <div class="solution-note">
-  <p>Early testers like you are eligible for our special <span class="highlight">raffle: 3 x $100! 🎁 every month!</span></p>
+  <p>Early testers like you are eligible for our special <span class="highlight">raffle: 3 x $100! 🎁 every month!</span>, you can follow the winner dashboard to see the winners <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer">HERE</a></p>
 </div>
 
 ## 🎁 Claim Your Voucher
