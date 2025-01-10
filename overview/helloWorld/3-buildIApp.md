@@ -1,6 +1,6 @@
-# Build iApp
+# 🛠️ Build your iApp
 
-> Reading 🕒 10 mins
+> Reading time 🕒 10 mins
 
 That's it! You've protected your data and now you're ready to **build your iExec
 App**, an application that will run in a trusted execution environment (TEE) and
