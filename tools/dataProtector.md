@@ -25,10 +25,10 @@ With `DataProtector Core`, you can **grant access** to your protected data **to
 a specific user**.
 
 - You define the number of times the user can access the data.
-- You should choose an iDapp (iExec TEE Dapp) that will be able to process your
+- You should choose an iApp (iExec TEE Dapp) that will be able to process your
   protected data.
 - You'll have to sign a transaction at the moment you grant access to the user
-  and the iDapp (iExec TEE Dapp).
+  and the iApp (iExec TEE Dapp).
 
 With `DataProtector Sharing`, you can **distribute** your protected data to **a
 wider audience**.

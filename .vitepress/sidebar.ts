@@ -281,18 +281,18 @@ export function getSidebar() {
                 ],
               },
               {
-                text: 'iDapp',
-                link: '/tools/dataProtector/advanced/iDapp',
+                text: 'iApp',
+                link: '/tools/dataProtector/advanced/iApp',
                 collapsed: true,
                 items: [
                   {
                     text: 'DataProtector Deserializer',
-                    link: '/tools/dataProtector/advanced/iDapp/deserializer',
+                    link: '/tools/dataProtector/advanced/iApp/deserializer',
                     collapsed: true,
                     items: [
                       {
                         text: 'getValue',
-                        link: '/tools/dataProtector/advanced/iDapp/deserializer/getValue',
+                        link: '/tools/dataProtector/advanced/iApp/deserializer/getValue',
                       },
                     ],
                   },
