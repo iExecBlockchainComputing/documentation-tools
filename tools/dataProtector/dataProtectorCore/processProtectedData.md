@@ -296,11 +296,22 @@ Identifies the specific deal associated with this transaction.
 `string`
 
 A unique identifier associated with a task currently running on the iExec
-Bellecour side chain. You may monitor task execution with the
+Bellecour side chain. You can monitor task execution using the
 [iExec blockchain explorer](https://explorer.iex.ec).
 
 ### result
 
 `ArrayBuffer`
 
-The actual content of the protected file.
+The result is a ZIP file containing at least one mandatory file:
+
+- computed.json: This file contains metadata about the computation performed by
+  the application.
+- additional files may be included depending on the dapp used.
+
+::: info
+
+In the case of the Content Creator, the ZIP file will also include a file named
+content, which corresponds to the protected data processed during the task.
+
+:::
