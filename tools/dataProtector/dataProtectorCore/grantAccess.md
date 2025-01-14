@@ -177,7 +177,7 @@ can set `numberOfAccess` to `10000` for example.
 than specified in `numberOfAccess`, you will encounter a **"no dataset orders"**
 error.
 
-To avoid confusion, ensure the `numberOfAccess` is properly set when calling the
+To prevent this error, ensure the `numberOfAccess` is properly set when calling the
 `grantAccess` method.  
 :::
 
