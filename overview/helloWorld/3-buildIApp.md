@@ -57,7 +57,7 @@ Before getting started, ensure you have the following:
 First, you need to install the `iapp-cli` package. Open your terminal and run:
 
 ```sh
-npm install -g iapp-cli
+npm i -g @iexec/iapp-maker
 ```
 
 ## 🛠️ Initialize Framework
