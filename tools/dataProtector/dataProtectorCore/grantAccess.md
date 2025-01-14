@@ -173,6 +173,14 @@ used.
 It is not technically possible to set an unlimited number of accesses, but you
 can set `numberOfAccess` to `10000` for example.
 
+::: info Important Notes: If you attempt to process the protected data more
+times than specified in `numberOfAccess`, you will encounter a **"no dataset
+orders"** error.
+
+To prevent this error, ensure the `numberOfAccess` is properly set when calling
+the `grantAccess` method.  
+:::
+
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
