@@ -41,7 +41,7 @@
   <a href="./3-useProtectedData" class="journey-card">
     <div class="card-icon">💻</div>
     <div class="card-content">
-      <h3>3. Work with Protected Data</h3>
+      <h3>3. Build your iApp</h3>
       <p>Build and run your first iExec App to work with protected data</p>
       <div class="time-wrapper">
         <span class="time-estimate">10 min read</span>
