@@ -305,13 +305,14 @@ Bellecour side chain. You can monitor task execution using the
 
 The result is a ZIP file containing at least one mandatory file:
 
-- computed.json: This file contains metadata about the computation performed by
-  the application.
+- **computed.json**: This file contains metadata about the computation performed
+  by the application.
 - additional files may be included depending on the dapp used.
 
 ::: info
 
-In the case of the Content Creator, the ZIP file will also include a file named
-content, which corresponds to the protected data processed during the task.
+In the case of the **Content Creator Delivery DApp**, the ZIP file will also
+include a file named **content**, which corresponds to the protected data
+processed during the task.
 
 :::
