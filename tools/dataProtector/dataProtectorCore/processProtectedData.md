@@ -299,6 +299,15 @@ A unique identifier associated with a task currently running on the iExec
 Bellecour side chain. You can monitor task execution using the
 [iExec blockchain explorer](https://explorer.iex.ec).
 
+::: tip
+
+The
+[getResultFromCompletedTask()](../dataProtectorSharing/consume/getResultFromCompletedTask.md)
+function allows you to retrieve the result of a completed task using its
+`taskId`.
+
+:::
+
 ### result
 
 `ArrayBuffer`
