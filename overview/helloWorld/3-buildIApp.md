@@ -63,7 +63,11 @@ npm i -g @iexec/iapp-maker
 You can check if the installation was successful by running:
 
 ```sh
+#checking the version
 iapp --version
+
+#checking the available commands
+iapp --help
 ```
 
 ## 🛠️ Initialize Framework
@@ -93,31 +97,81 @@ You will be prompted with the following message:
     Advanced
 ```
 
-<div class="solution-note">
-  <p>We recommend selecting <span class="highlight">"Hello World"</span> to quickly discover how iApp works!</p>
+<div class="process-steps">
+  <div class="step">
+    <span class="step-number">1</span>
+    <span>Pick a name for your project</span>
+  </div>
 </div>
 
-A new folder was created, it contains a very simple Node.js application, with
-the main code being located in `app.js`.
+```sh
+✔ What's your project name? (A folder with this name will be created) ...
+
+```
+
+<div class="process-steps">
+  <div class="step">
+    <span class="step-number">2</span>
+    <span>Select the type of project you want to init</span>
+  </div>
+</div>
+
+<div class="solution-note">
+  <p>We recommend selecting <span class="highlight">"Hello World"</span> to quickly discover how iApp works! use <span class="highlight">advanced</span> only if your are familiar with iExec.</p>
+</div>
+
+```sh
+✔ JavaScript app setup complete.
+✔ Generated ethereum wallet (0xD4A28d.........................)
+
+```
+
+- The javascript environment is set up and
+
+- An ethereum wallet have been created (We use it to sign the iApp creation
+  onchain).
+
+- A new folder has been created, it contains a very simple Node.js application,
+  with the main code being located in `app.js`.
 
 ## 🧪 Test Your iApp
 
-To test your iApp, use the `iapp test` command. This command will invoke your
-locally installed Node.js and run the `app.js` file.
+To test your iApp, run the `iapp test` command. It uses your local Node.js to
+execute the `app.js` file.
+
+<div class="solution-note">
+  <p>- If you have <code>Error: Docker deamon is not accessible</code> Make sure Docker is installed and running.</p>
+  <br>
+  <p>- If you have <code>Error: Falied to locate iApp project root</code> error:  Ensure you are in your project folder before proceeding.</p>
+</div>
+
+You can see the output of the computation by saying yes to the question:
+
+```sh
+? Would you like to see the result? (View ./output/) (Y/n)
+```
 
 ### 🧩 Using Arguments
 
 You can pass arguments to your iApp using the `--args` option. This allows you
-to provide necessary inputs during runtime.
+to provide necessary inputs during runtime (you can use your name for example).
 
 ```sh
 iapp test --args your-name
 ```
 
-### Using Protected Data
+<div class="solution-note">
+  <p>You can always check the <code>src/app.js</code> file to see how the arguments are used.</p>
+</div>
 
-If your iApp requires protected data, you can use the `--protectedData` option
-to specify the data to be used.
+### 🔒 Using Protected Data
+
+If your iApp requires protected data, you can use a `--protectedData` option to
+specify the data to be used.
+
+<div class="solution-note">
+  <p>For the demo we use the default protected data but you can use your own protected data as soon as the app is deployed.</p>
+</div>
 
 ```sh
 iapp test --protectedData default
@@ -139,7 +193,7 @@ running to build the Docker image.
   </div>
   <div class="step">
     <span class="step-number">3</span>
-    <span>Name it "Test iExec iApp CLI"</span>
+    <span>Name it "Test iExec iApp CLI" (expiration date is optional)</span>
   </div>
   <div class="step">
     <span class="step-number">4</span>
@@ -147,13 +201,14 @@ running to build the Docker image.
   </div>
   <div class="step">
     <span class="step-number">5</span>
-    <span>Save your token securely</span>
+    <span>Save your token securely and your username</span>
   </div>
 </div>
 
 Once you have your token, you can deploy your iApp using the following command:
 
 ```sh
+# you need your username and the access token (it can take a few minutes to deploy)
 iapp deploy
 ```
 
@@ -169,9 +224,21 @@ Now you can run your application:
 iapp run <my-iapp-address>
 ```
 
+A few processes will take place, like worker pool setup, App Order, Request
+Order, sconification, etc.
+
+But simply put, we take the iApp and wrap it in a special framework that lets it
+run securely in a Trusted Execution Environment (TEE) for confidential
+computing. if you wanna deep dive in it you can check the protocol documentation
+[here](https://protocol.docs.iex.ec/).
+
+<div class="solution-note-blue">
+  <p>🎉 Congratulations! You've successfully deployed and runyour first iApp on iExec. This is a significant milestone - your application is now ready to securely process confidential data in a trusted environment.</p>
+</div>
+
 ## 🎯 Key takeaways
 
-<div class="key-takeaways">
+<div class="takeaways-list">
   <div class="takeaway-item">
     <span class="takeaway-icon">🔒</span>
     <div class="takeaway-content">
@@ -199,5 +266,5 @@ iapp run <my-iapp-address>
 </div>
 
 <div class="solution-note-green">
-  <p>Next up: We'll learn how to authorize our iApp and users to access protected data! 🚀</p>
+  <p>Next up: Alice will learn how to authorize the iApp and Bob to access and use her protected data!  🚀</p>
 </div>

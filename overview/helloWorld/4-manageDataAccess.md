@@ -14,7 +14,7 @@ import GrantAccess from '../../components/GrantAccess.vue';
 </div>
 
 <div class="solution-note">
-  <p>When you protect your data, you can authorize specific <span class="highlight">users</span> and <span class="highlight">applications</span> to access it. This means an authorized user will be able to use an authorized iExec Application to compute your protected data.</p>
+  <p>When you protect your data, you can authorize specific <span class="highlight">users</span> and <span class="highlight">applications</span> to access it. This means an authorized user will be able to use an authorized iApp to compute your protected data.</p>
 </div>
 
 ## The Authorization Flow
@@ -34,7 +34,7 @@ Here is a simple diagram to explain the process:
   </div>
   <div class="step">
     <span class="step-number">3</span>
-    <span>Authorize your iExec Application to access your data</span>
+    <span>Authorize the iExec Application to access your data</span>
   </div>
   <div class="step">
     <span class="step-number">4</span>
