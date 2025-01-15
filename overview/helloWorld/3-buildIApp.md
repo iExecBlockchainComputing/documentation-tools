@@ -10,10 +10,10 @@
 </div>
 
 <div class="solution-note">
-  <p>An <span class="highlight">iExec App</span> runs in a trusted execution environment (TEE) and processes protected data. Think of it as a special application that can work with encrypted information while keeping it secure.</p>
+<p>An iExec App (iApp) runs in a Trusted Execution Environment (TEE), it can process data in a secure environment.</p>
 </div>
 
-This guide will help you set up, test, deploy and run your iExec App using the
+This guide will help you set up, test, deploy and run your iApp using the
 [`iapp-cli`](https://github.com/iExecBlockchainComputing/iapp/tree/main/cli)
 tool. Follow the instructions carefully for a smooth development experience.
 
@@ -33,31 +33,37 @@ Before getting started, ensure you have the following:
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">🐳 Docker Account</div>
-    <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
+    <div class="req-title">🐳 Docker</div>
+    <a target="_blank" href="https://www.docker.com/">Download →</a>
   </div>
 
   <div class="requirement-item">
     <div class="req-title">🐳 Docker Hub Account</div>
-    <a target="_blank" href="  ">Sign Up →</a>
+    <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
   </div>
   
   <div class="requirement-item">
     <div class="req-title">🔑 Private Key</div>
-    <span>From your Ethereum wallet (e.g., MetaMask)</span>
+    <a target="_blank" href="https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/">From your Ethereum wallet (e.g., MetaMask)</a>
   </div>
 </div>
 
 <div class="solution-note">
-  <p>Don't worry! Every password or private key you use in this tutorial is stored locally on your machine and is not shared with anyone., you need it to run the <code>iapp run</code> command</p>
+  <p>Don't worry! All passwords and private keys used in this tutorial stay on your machine and aren’t shared with anyone. You’ll only need them to run the <code>iApp run</code> command.</p>
 </div>
 
-## 💾 Installation
+## 💾 Installation (win / mac / linux)
 
 First, you need to install the `iapp-cli` package. Open your terminal and run:
 
 ```sh
 npm i -g @iexec/iapp-maker
+```
+
+You can check if the installation was successful by running:
+
+```sh
+iapp --version
 ```
 
 ## 🛠️ Initialize Framework
@@ -152,7 +158,7 @@ iapp deploy
 ```
 
 <div class="solution-note">
-  <p>Make sure to save your <span class="highlight">iExec App address</span> after deployment - you'll need it later!</p>
+  <p>Make sure to save your <span class="highlight">iApp address</span> after deployment - you'll need it later!</p>
 </div>
 
 ## 🏃 Run Your iApp
@@ -169,19 +175,19 @@ iapp run <my-iapp-address>
   <div class="takeaway-item">
     <span class="takeaway-icon">🔒</span>
     <div class="takeaway-content">
-      <strong>iExec Apps:</strong> Special applications that run in TEEs to process protected data
+      <strong>iApps:</strong> Special applications that run in TEEs to process protected data
     </div>
   </div>
   <div class="takeaway-item">
     <span class="takeaway-icon">🛠️</span>
     <div class="takeaway-content">
-      <strong>iApp CLI:</strong> Command-line tool for building, testing, and deploying iExec Apps
+      <strong>iApp CLI:</strong> Command-line tool for building, testing, and deploying iApps
     </div>
   </div>
   <div class="takeaway-item">
     <span class="takeaway-icon">🔐</span>
     <div class="takeaway-content">
-      <strong>Protected Data:</strong> Can be integrated and processed securely in your iExec App
+      <strong>Protected Data:</strong> Can be integrated and processed securely in your iApp
     </div>
   </div>
   <div class="takeaway-item">
@@ -193,5 +199,5 @@ iapp run <my-iapp-address>
 </div>
 
 <div class="solution-note-green">
-  <p>Next up: We'll learn how to authorize our iExec App and users to access protected data! 🚀</p>
+  <p>Next up: We'll learn how to authorize our iApp and users to access protected data! 🚀</p>
 </div>
