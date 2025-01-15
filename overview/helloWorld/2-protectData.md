@@ -13,7 +13,7 @@ import ProtectData from '../../components/ProtectData.vue';
   </div>
 </div>
 
-<div class="solution-note">
+<div class="solution-note-purple">
   <p><strong>Protected Data</strong> is encrypted data that remains confidential throughout its entire lifecycle - during storage, transfer and processing.</p>
 </div>
 
@@ -50,7 +50,7 @@ You will sign two transactions:
 
 ## 🧩 What happens under the hood
 
-<div class="solution-note">
+<div class="solution-note-purple">
   <p>You won't believe how easy it is to protect your data with DataProtector. Just a few lines of code, and you're done!</p>
 </div>
 
@@ -125,7 +125,7 @@ simple through our developer tools.
     <p>Call the methods you need - that's it!</p>
   </div>
 
-<div class="solution-note">
+<div class="solution-note-purple">
   <p>Check out our <a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7">code sandbox</a> for ready-to-use examples!</p>
 </div>
 

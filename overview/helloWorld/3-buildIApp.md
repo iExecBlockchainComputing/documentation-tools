@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<div class="solution-note">
+<div class="solution-note-purple">
 <p>An iExec App (iApp) runs in a Trusted Execution Environment (TEE), it can process data in a secure environment.</p>
 </div>
 
@@ -48,7 +48,7 @@ Before getting started, ensure you have the following:
   </div>
 </div>
 
-<div class="solution-note">
+<div class="solution-note-purple">
   <p>Don't worry! All passwords and private keys used in this tutorial stay on your machine and aren’t shared with anyone. You’ll only need them to run the <code>iApp run</code> command.</p>
 </div>
 
@@ -160,7 +160,7 @@ to provide necessary inputs during runtime (you can use your name for example).
 iapp test --args your-name
 ```
 
-<div class="solution-note">
+<div class="solution-note-purple">
   <p>You can always check the <code>src/app.js</code> file to see how the arguments are used.</p>
 </div>
 
@@ -169,7 +169,7 @@ iapp test --args your-name
 If your iApp requires protected data, you can use a `--protectedData` option to
 specify the data to be used.
 
-<div class="solution-note">
+<div class="solution-note-purple">
   <p>For the demo we use the default protected data but you can use your own protected data as soon as the app is deployed.</p>
 </div>
 
@@ -212,7 +212,7 @@ Once you have your token, you can deploy your iApp using the following command:
 iapp deploy
 ```
 
-<div class="solution-note">
+<div class="solution-note-purple">
   <p>Make sure to save your <span class="highlight">iApp address</span> after deployment - you'll need it later!</p>
 </div>
 
@@ -232,7 +232,7 @@ run securely in a Trusted Execution Environment (TEE) for confidential
 computing. if you wanna deep dive in it you can check the protocol documentation
 [here](https://protocol.docs.iex.ec/).
 
-<div class="solution-note-blue">
+<div class="solution-note-green">
   <p>🎉 Congratulations! You've successfully deployed and runyour first iApp on iExec. This is a significant milestone - your application is now ready to securely process confidential data in a trusted environment.</p>
 </div>
 

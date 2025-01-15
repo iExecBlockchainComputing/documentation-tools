@@ -277,6 +277,29 @@
 
 /* Solution note */
 
+.solution-note-purple {
+  background: linear-gradient(
+    135deg,
+    rgba(156, 39, 176, 0.1),
+    rgba(156, 39, 176, 0.05)
+  );
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #9c27b0;
+}
+
+.solution-note-purple p {
+  margin: 0;
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+}
+
+.solution-note-purple .highlight {
+  color: #9c27b0;
+  font-weight: 600;
+}
+
 .solution-note-blue {
   background: linear-gradient(
     135deg,
