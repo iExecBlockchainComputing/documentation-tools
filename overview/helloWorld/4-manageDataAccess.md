@@ -111,6 +111,6 @@ DataProtector SDK has a monetization feature that allows you to set a price for
 your data access. You can even create protected data collections and set up
 renting or subscription plans.
 
-<div class="help-note">
-  <p>Can't wait to learn more? Check out <a href="https://beta.tools.docs.iex.ec/tools/dataProtector/dataProtectorSharing.html" target="_blank">DataProtector Sharing</a> and see it in action in the <a href="https://demo.iex.ec/content-creator/" target="_blank">Content Creator demo</a>!</p>
+<div class="solution-note-green">
+    <p>Can't wait to learn more? Check out <a href="https://beta.tools.docs.iex.ec/tools/dataProtector/dataProtectorSharing.html" target="_blank">DataProtector Sharing</a> and see it in action in the <a href="https://demo.iex.ec/content-creator/" target="_blank">Content Creator demo</a>!</p>
 </div>
