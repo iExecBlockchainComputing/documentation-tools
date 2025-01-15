@@ -276,6 +276,29 @@
 }
 
 /* Solution note */
+.solution-note-green {
+  background: linear-gradient(
+    135deg,
+    rgba(76, 175, 80, 0.1),
+    rgba(76, 175, 80, 0.05)
+  );
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #4caf50;
+}
+
+.solution-note-green p {
+  margin: 0;
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+}
+
+.solution-note-green .highlight {
+  color: #4caf50;
+  font-weight: 600;
+}
+
 .solution-note {
   background: linear-gradient(
     135deg,

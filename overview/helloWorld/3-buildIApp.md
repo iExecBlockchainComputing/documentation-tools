@@ -192,6 +192,6 @@ iapp run <my-iapp-address>
   </div>
 </div>
 
-<div class="help-note">
+<div class="solution-note-green">
   <p>Next up: We'll learn how to authorize our iExec App and users to access protected data! 🚀</p>
 </div>

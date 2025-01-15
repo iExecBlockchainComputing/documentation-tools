@@ -9,7 +9,7 @@ import ProtectData from '../../components/ProtectData.vue';
 <div class="hero">
   <div class="hero-content hero-overview">
     <h2>Time to get practical</h2>
-    <p>Let's follow Alice as she learns how to protect her data using DataProtector, our developer tool for protecting data creation and management.</p>
+    <p>Let's follow Alice as she learns how to protect her data using DataProtector on the Bob's dApp, our developer tool for protecting data creation and management.</p>
   </div>
 </div>
 
@@ -19,13 +19,13 @@ import ProtectData from '../../components/ProtectData.vue';
 
 ## 🧩 DataProtector, key features
 
-DataProtector is a developer tool built on top of our technology. It streamlines
-the decentralized confidential computing process, making it easy for developers
-to protect, manage and monetize their data.
+DataProtector is a developer tool built on top of our technology. It helps
+developers easily add data protection, management, and monetization features to
+their dApps.
 
 <div >
   <p>🔐 <strong>Data Privacy and Security</strong></p>
-  <p>Utilizes end-to-end encryption to ensure protection and confidentiality, leveraging advanced confidential computing technology.</p>
+  <p>Utilizes end-to-end encryption and decentralized storage (<a href="https://ipfs.tech/" target="_blank">IPFS</a>) to ensure protection and confidentiality, leveraging advanced confidential computing technology.</p>
 </div>
 
 <div>
@@ -42,6 +42,12 @@ to protect, manage and monetize their data.
 
 <ProtectData />
 
+You will sign two transactions:
+
+1. A transaction to create the protected data
+2. A transaction to push the symmetric key we used to encrypt the data in a
+   secure environment (TEE)
+
 ## 🧩 What happens under the hood
 
 <div class="solution-note">
@@ -49,9 +55,12 @@ to protect, manage and monetize their data.
 </div>
 
 You can find the code snippet
-[here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true),
-but basically you just need to call the `protectData` method from the
-**DataProtector SDK**:
+[here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true)
+(App.tsx - line 59), simply call the protectData method from the **DataProtector
+SDK** with two arguments.
+
+- The data to protect
+- The name of the protected data
 
 ```typescript
 const provider = await connector.getProvider();
@@ -70,27 +79,27 @@ button:
 <div class="process-steps">
   <div class="step">
     <span class="step-number">1</span>
-    <span>DataProtector SDK was called</span>
+    <span>We called the DataProtector SDK</span>
   </div>
   <div class="step">
     <span class="step-number">2</span>
-    <span>Data was encrypted with a symmetric key</span>
+    <span>We encrypted the data with a symmetric key</span>
   </div>
   <div class="step">
     <span class="step-number">3</span>
-    <span>Encrypted data was stored on IPFS</span>
+    <span>We stored the encrypted data on IPFS</span>
   </div>
   <div class="step">
     <span class="step-number">4</span>
-    <span>Symmetric key was stored in a secure enclave (TEE)</span>
+    <span>We stored the symmetric key in a secure enclave (TEE)</span>
   </div>
   <div class="step">
     <span class="step-number">5</span>
-    <span>Smart contract created the protected data ownership</span>
+    <span>DataProtector smart contract is requested to create the data ownership (NFT).</span>
   </div>
   <div class="step">
     <span class="step-number">6</span>
-    <span>Protected data address was returned to you</span>
+    <span>We returned the protected data address to you</span>
   </div>
 </div>
 
@@ -125,7 +134,7 @@ simple through our developer tools.
 <div class="takeaways-list">
   <div class="takeaway-item">
     <span>🔒</span>
-    <p><strong>DataProtector</strong> ensures data protection and confidentiality</p>
+    <p><strong>DataProtector</strong> ensures data protection, management, and confidentiality</p>
   </div>
   <div class="takeaway-item">
     <span>📦</span>
@@ -141,6 +150,6 @@ simple through our developer tools.
   </div>
 </div>
 
-<div class="cta-wrapper">
+<div class="solution-note-green">
   <p>In the next chapter, we'll show you how to build, deploy, and run an iExec application to process your protected data. Let's go! 🚀</p>
 </div>
