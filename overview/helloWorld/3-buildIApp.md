@@ -44,7 +44,7 @@ Before getting started, ensure you have the following:
   
   <div class="requirement-item">
     <div class="req-title">🔑 Private Key</div>
-    <a target="_blank" href="https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/">From your Ethereum wallet (e.g., MetaMask)</a>
+    <a target="_blank" href="https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/">Only in advanced mode (e.g., MetaMask)</a>
   </div>
 </div>
 
@@ -129,7 +129,7 @@ You will be prompted with the following message:
 - The javascript environment is set up and
 
 - An ethereum wallet have been created (We use it to sign the iApp creation
-  onchain).
+  onchain) you can in advance mode sign with your private key.
 
 - A new folder has been created, it contains a very simple Node.js application,
   with the main code being located in `app.js`.
