@@ -5,7 +5,7 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Congratulations!</h2>
-    <p>You've successfully completed the Hello World journey and learned how to protect data, deploy iExec applications, and manage data access. Now it's time to claim your rewards! 🏆</p>
+    <p>You've successfully completed the Hello World journey and learned how to protect data, deploy iApps, and manage data access. Now it's time to claim your rewards! 🏆</p>
   </div>
 </div>
 

@@ -88,7 +88,7 @@ Before you begin, make sure you have:
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">📦 Node.js v18+</div>
+    <div class="req-title">📦 Node.js v20+</div>
     <a target="_blank" href="https://nodejs.org/en/">Download →</a>
   </div>
   

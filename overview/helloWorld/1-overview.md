@@ -12,7 +12,7 @@
 
 ## 👨‍💻 Why building privacy-first dApps with iExec
 
-<p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle sensitive user data </strong>, for example:</p>
+<p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle sensitive user data</strong>, for example:</p>
 <div class="use-case-card">
   <div class="examples-list">
     <div class="example-item">
@@ -79,7 +79,7 @@ Computing</a></span> technologies.
 
 iExec combines three fundamental elements that work together seamlessly:
 
-#### 1. Protect your data with our devtool [DataProtector](http://localhost:5173/tools/dataProtector/dataProtectorCore)
+#### 1. Protect your data with our devtool [DataProtector](https://tools.docs.iex.ec/tools/dataProtector/getting-started)
 
 - Your sensitive data is encrypted and stored safely
 - Only you control when and who can access it
@@ -111,8 +111,8 @@ With a tool called **DataProtector**, your data becomes **protected** and can
 only be read and processed inside this secure room.
 
 Only approved applications (**iApps**) can enter the room to work with your
-data, and you stay in **control** by setting **unchangeable rules** about who
-can access it and when.
+data, and you stay in **control** by setting **access rules** that only you can
+modify about who can access it and when.
 
 ## 🔍 Building your first privacy-preserving dApp
 

@@ -34,7 +34,7 @@ Here is a simple diagram to explain the process:
   </div>
   <div class="step">
     <span class="step-number">3</span>
-    <span>Authorize the iExec Application to access your data</span>
+    <span>Authorize the iApp to access your data</span>
   </div>
   <div class="step">
     <span class="step-number">4</span>
@@ -50,10 +50,11 @@ Here is a simple diagram to explain the process:
 
 <GrantAccess />
 
-You will sign two transactions:
+You will sign two messages:
 
-1. Grant access to the iApp
-2. You publish a dataset order to the iExec Marketplace
+1. A message granting access to the iApp
+2. An authentication message to post your granted access on a broadcasting
+   service (iExec marketplace)
 
 <!-- <RevokeAccess /> -->
 
@@ -104,7 +105,7 @@ iapp run <my-iapp-address> --protectedData <protectedData-address>
 
 We've completed the first step of the journey! You can now integrate the
 **DataProtector SDK** into your dApp, **secure your data**, **grant access** to
-users and iExec Applications, and **process it safely**.
+users and iApps, and **process it safely**.
 
 But here's where it gets even more exciting...**monetization!**
 

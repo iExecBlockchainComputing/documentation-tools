@@ -42,11 +42,12 @@ their dApps.
 
 <ProtectData />
 
-You will sign two transactions:
+You will sign two things:
 
 1. A transaction to create the protected data
-2. A transaction to push the symmetric key we used to encrypt the data in a
-   secure environment (TEE)
+2. A message signature to prove your identity
+
+<!-- (when transmitting the encryption key to the Secret Management Service (SMS) in the secure environment (TEE) -->
 
 ## 🧩 What happens under the hood
 
@@ -59,7 +60,7 @@ You can find the code snippet
 (App.tsx - line 59), simply call the protectData method from the **DataProtector
 SDK** with two arguments.
 
-- The data to protect
+- The data object to protect (can contain text, files, JSON data etc.)
 - The name of the protected data
 
 ```typescript
@@ -95,7 +96,7 @@ button:
   </div>
   <div class="step">
     <span class="step-number">5</span>
-    <span>DataProtector smart contract is requested to create the data ownership (NFT).</span>
+    <span>The DataProtector smart contract is used to establish data ownership as an NFT.</span>
   </div>
   <div class="step">
     <span class="step-number">6</span>
@@ -103,27 +104,35 @@ button:
   </div>
 </div>
 
-## 🧩 Using it in your dApp
+## 🧩 Using it in your project
 
 Decentralized confidential computing might sound complex, but we've made it
 simple through our developer tools.
 
+<div>
   <div >
-    <p><strong>1. Start with Your dApp</strong></p>
-    <p>Use an existing dApp or scaffold a new one</p>
-  </div>
-  <div >
-    <p><strong>2. Install the Developer Tool</strong></p>
+    <p><strong>1. Install the Developer Tool</strong></p>
     <p>Run <a href="https://www.npmjs.com/package/@iexec/dataprotector">npm install @iexec/dataprotector</a></p>
   </div>
   <div >
-    <p><strong>3. Import and Initialize</strong></p>
-    <p>Import the tool and create a new instance</p>
+    <p><strong>2. Import and Initialize it in your project</strong></p>
+Import the tool
+    
+```typescript
+import { Address, IExecDataProtector } from '@iexec/dataprotector';
+```
+create a new instance and call the methods you need
   </div>
-  <div >
-    <p><strong>4. Start Using</strong></p>
-    <p>Call the methods you need - that's it!</p>
-  </div>
+</div>
+
+```typescript
+const provider = await connector.getProvider();
+const dataProtector = new IExecDataProtector(provider);
+const { address: protectedDataAddress } = await dataProtector.protectData({
+  data,
+  name,
+});
+```
 
 <div class="solution-note-purple">
   <p>Check out our <a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7">code sandbox</a> for ready-to-use examples!</p>
@@ -151,5 +160,5 @@ simple through our developer tools.
 </div>
 
 <div class="solution-note-green">
-  <p>In the next chapter, we'll show you how to build, deploy, and run an iExec application to process your protected data. Let's go! 🚀</p>
+  <p>In the next chapter, we'll show you how to build, deploy, and run an iApp to process your protected data. Let's go! 🚀</p>
 </div>
