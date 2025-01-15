@@ -1,4 +1,4 @@
-# 🎉 Surprise! 🎉
+# 🎉 Bonus chapter! 🎉
 
 > Reading time 🕒 4 mins
 

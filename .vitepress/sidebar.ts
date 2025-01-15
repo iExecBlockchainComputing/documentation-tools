@@ -55,8 +55,8 @@ export function getSidebar() {
                 link: '/overview/helloWorld/4-manageDataAccess',
               },
               {
-                text: 'Surprise!',
-                link: '/overview/helloWorld/5-suprise',
+                text: 'Bonus chapter!',
+                link: '/overview/helloWorld/5-bonusChapter',
               },
             ],
           },

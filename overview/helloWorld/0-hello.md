@@ -5,10 +5,10 @@
 <div class="hero">
   <div >
     <h2>Start Your Web3 Privacy Journey</h2>
-    <p>And learn how to build privacy-preserving dApps with iExec in this interactive guide.</p>
+    <p>And learn how to build privacy-preserving decentralized applications (dApps) with iExec in this interactive guide.</p>
     <div class="hero-time">
       <span class="hero-time-badge ">☕ 30 minutes journey</span>
-      <p>Perfect for hackathon :)</p>
+      <p>Perfect for hackathon 😊</p>
     </div>
   </div>
 </div>
@@ -42,7 +42,7 @@
     <div class="card-icon">💻</div>
     <div class="card-content">
       <h3>3. Build your iApp</h3>
-      <p>Build and run your first iExec App to work with protected data</p>
+      <p>Build and run your first iExec App to work with protected data in a safe environment</p>
       <div class="time-wrapper">
         <span class="time-estimate">10 min read</span>
       </div>
@@ -52,7 +52,7 @@
   <a href="./4-manageDataAccess" class="journey-card">
     <div class="card-icon">🔑</div>
     <div class="card-content">
-      <h3>4. Control Data Access</h3>
+      <h3>4. Manage Data Access</h3>
       <p>Learn advanced data access management, permissions and monetization</p>
       <div class="time-wrapper">
         <span class="time-estimate">7 min read</span>
@@ -99,7 +99,7 @@ Before you begin, make sure you have:
 </div>
 
 <div class="help-note">
-  <p>Need help setting up or got some questions? Join our <a target="_blank" href="https://discord.gg/iexec">Discord Community</a> for support!</p>
+  <p>Need help setting up or got some questions? Join our <a target="_blank" href="https://discord.gg/tJH8YfSB">Discord Community</a> for support!</p>
 </div>
 
 <style>
