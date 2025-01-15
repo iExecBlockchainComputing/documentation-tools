@@ -8,54 +8,29 @@
     </div>
 
     <div class="form-container">
-      <input
-        v-model="authorizedApp"
-        placeholder="Enter authorized app address"
-        :disabled="!isWalletConnected"
-      />
       <Button
-        :disabled="!isWalletConnected || isLoadingGrant"
-        @click="grantAccess"
+        :disabled="!isWalletConnected || isLoadingRevoke"
+        @click="revokeAccess"
         class="protect-button"
       >
-        {{ isLoadingGrant ? 'Processing...' : 'Grant Access' }}
+        {{ isLoadingRevoke ? 'Processing...' : 'Revoke All Access' }}
       </Button>
-      <div v-if="grantError" class="error-note">{{ grantError }}</div>
+      <div v-if="revokeError" class="error-note">{{ revokeError }}</div>
     </div>
 
-    <div v-if="grantedAccess" class="success-note">
+    <div v-if="revokedAccess" class="success-note">
       <div class="success-header">
         <div class="success-icon">
           <Icon icon="mdi:check" height="24" />
         </div>
-        Access has been granted to Bob and the iApp
+        All access has been revoked for this protected data
       </div>
 
       <p class="address-label">Protected data:</p>
       <div class="address-container">{{ protectedData.address }}</div>
 
-      <p class="address-label">Authorized iExec App:</p>
-      <div class="address-container">{{ authorizedApp }}</div>
-
-      <p class="address-label">
-        Authorized user
-        <span class="note-text"
-          >(As we don't have Bob wallet we use the Zero address to grant access
-          to all users for the demo)</span
-        >:
-      </p>
-      <div class="address-container">
-        {{ '0x0000000000000000000000000000000000000000' }}
-      </div>
-
-      <p class="address-label">
-        Dataset Price
-        <span class="note-text"
-          >(oohh interesting it means that we could set a price to the protected
-          data)</span
-        >:
-      </p>
-      <div class="address-container">{{ grantedAccess.datasetprice }}</div>
+      <p class="address-label">Transaction Hash:</p>
+      <div class="address-container">{{ revokedAccess.txHash }}</div>
     </div>
   </div>
 </template>
@@ -70,10 +45,9 @@ import MetamaskButton from './MetamaskButton.vue';
 const web3Provider = ref(null);
 const isWalletConnected = ref(false);
 const protectedData = ref(null);
-const authorizedApp = ref('');
-const isLoadingGrant = ref(false);
-const grantError = ref(null);
-const grantedAccess = ref(null); // Reactive variable to store the granted access data
+const isLoadingRevoke = ref(false);
+const revokeError = ref(null);
+const revokedAccess = ref(null);
 
 if (typeof window !== 'undefined') {
   protectedData.value = localStorage.getItem('protectedDataAddress')
@@ -86,7 +60,7 @@ const onWalletConnected = (provider) => {
   isWalletConnected.value = true;
 };
 
-const grantAccess = async () => {
+const revokeAccess = async () => {
   try {
     if (!web3Provider.value) {
       throw new Error('Wallet not connected');
@@ -96,26 +70,24 @@ const grantAccess = async () => {
         'Missing protected data address. Go back to the previous page and protect something.'
       );
     }
-    isLoadingGrant.value = true;
-    grantError.value = null;
+    isLoadingRevoke.value = true;
+    revokeError.value = null;
     const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value, {
       iexecOptions: {
         smsURL: 'https://sms.scone-debug.v8-bellecour.iex.ec',
       },
     });
 
-    const grantedAccessResult = await dataProtectorCore.grantAccess({
+    const revokedAccessResult = await dataProtectorCore.revokeAllAccess({
       protectedData: protectedData?.value?.address,
-      authorizedApp: authorizedApp.value,
-      authorizedUser: '0x0000000000000000000000000000000000000000',
     });
-    console.log('Access granted:', grantedAccessResult);
-    grantedAccess.value = grantedAccessResult; // Store the result in the reactive variable
+    console.log('Access revoked:', revokedAccessResult);
+    revokedAccess.value = revokedAccessResult;
   } catch (error) {
-    grantError.value = error.message;
-    console.error('Error granting access:', error);
+    revokeError.value = error.message;
+    console.error('Error revoking access:', error);
   } finally {
-    isLoadingGrant.value = false;
+    isLoadingRevoke.value = false;
   }
 };
 </script>
@@ -138,28 +110,6 @@ const grantAccess = async () => {
   gap: 1rem;
   margin: 1.5rem 0;
   width: 100%;
-}
-
-input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 0.95rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: var(--border-radius);
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
-  transition: var(--transition);
-}
-
-input:focus {
-  border-color: var(--primary-color);
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(252, 209, 90, 0.1);
-}
-
-input:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
 }
 
 .protect-button {
@@ -223,12 +173,6 @@ input:disabled {
   font-size: 0.9rem;
   color: var(--vp-c-text-2);
   word-break: break-all;
-}
-
-.note-text {
-  font-size: 0.9rem;
-  color: var(--vp-c-text-2);
-  font-weight: normal;
 }
 
 @media (max-width: 768px) {

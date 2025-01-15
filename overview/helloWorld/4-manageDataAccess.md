@@ -42,7 +42,7 @@ Here is a simple diagram to explain the process:
   </div>
 </div>
 
-## Grant Access to Your Data
+## Grant the iApp Access to Your Data
 
 <div class="solution-note">
   <p>Remember the <span class="highlight">iExec App address</span> you saved from the previous chapter? You'll need it now to grant access to your protected data.</p>
@@ -50,7 +50,14 @@ Here is a simple diagram to explain the process:
 
 <GrantAccess />
 
-Let's look at the code that makes this possible:
+You will sign two transactions:
+
+1. Grant access to the iApp
+2. You publish a dataset order to the iExec Marketplace
+
+<!-- <RevokeAccess /> -->
+
+**Let's look at the code that makes this possible:**
 
 ```typescript
 const grantedAccess = await dataProtectorCore.grantAccess({
@@ -63,7 +70,7 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 <div class="requirements-list">
   <div class="requirement-item">
     <div class="req-title">📄 protectedData</div>
-    <span>The address of your protected data (stored during protection)</span>
+    <span>The protected data address (local storage for the demo)</span>
   </div>
   
   <div class="requirement-item">
@@ -75,6 +82,10 @@ const grantedAccess = await dataProtectorCore.grantAccess({
     <div class="req-title">👤 authorizedUser</div>
     <span>User's wallet address (0x... means all users)</span>
   </div>
+</div>
+
+<div class="solution-note">
+  <p>As we don't have the Bobs wallet address, we'll use the Zero address to grant access to all users.</p>
 </div>
 
 ## Time to Run! 🚀
