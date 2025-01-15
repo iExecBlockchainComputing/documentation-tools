@@ -14,17 +14,12 @@
 <div class="requirements-list">
   <div class="requirement-item">
     <div class="req-title-suprise">🏆 Complete the quest to verify your achievements</div>
-    <a target="_blank" href="https://nodejs.org/en/">COMPLETE →</a>
-  </div>
-
-  <div class="requirement-item">
-    <div class="req-title-suprise">🎨 Claim your exclusive iExec OG NFT</div>
-    <a target="_blank" href="https://www.npmjs.com/get-npm">CLAIM →</a>
+    <a target="_blank" href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer">COMPLETE →</a>
   </div>
   
   <div class="requirement-item">
     <div class="req-title-suprise">📝 Share your feedback to help us improve</div>
-    <a target="_blank" href="https://hub.docker.com/">SHARE →</a>
+    <a target="_blank" href="https://form.typeform.com/to/FOcNP9l0?typeform-source=iexecblockchaintech.typeform.com">SHARE →</a>
   </div>
 </div>
 
@@ -39,7 +34,7 @@
 </div>
 
 <div class="button-group-voucher">
-  <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer" class="yellow-button" target="_blank">
+  <a href="https://discord.com/channels/841605628928458762/1234476404519997470" class="yellow-button" target="_blank">
     Claim your $50 voucher
   </a>
 
@@ -47,7 +42,7 @@
 
 ## 🎯 Key takeaways
 
-<div class="key-takeaways">
+<div class="takeaways-list">
   <div class="takeaway-item">
     <span class="takeaway-icon">🔒</span>
     <div class="takeaway-content">
@@ -74,8 +69,8 @@
   </div>
 </div>
 
-<div class="help-note">
-  <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
+<div class="solution-note-green">
+    <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
 </div>
 
 <style>
