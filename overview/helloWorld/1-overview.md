@@ -5,19 +5,19 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Let's start with the basics</h2>
-     <p>Let's explore how iExec can help you build privacy-preserving applications and securely manage sensitive data.</p>
+     <p>and explore how iExec can help you build privacy-preserving applications and securely manage sensitive data.</p>
   </div>
 
 </div>
 
-## 👨‍💻 Building privacy-first dApps with iExec
+## 👨‍💻 Why building privacy-first dApps with iExec
 
 <p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle sensitive user data </strong>, for example:</p>
 <div class="use-case-card">
   <div class="examples-list">
     <div class="example-item">
-      <span class="example-icon">🏥</span>
-      <span>A healthcare app processing confidential patient records</span>
+      <span class="example-icon">🤖</span>
+      <span>An AI model training on sensitive data</span>
     </div>
     <div class="example-item">
       <span class="example-icon">💰</span>
@@ -28,8 +28,8 @@
       <span>A research platform working with private datasets</span>
     </div>
     <div class="example-item">
-      <span class="example-icon">🤖</span>
-      <span>An AI model training on sensitive data</span>
+      <span class="example-icon">🏥</span>
+      <span>A healthcare app processing confidential patient records</span>
     </div>
   </div>
 
@@ -58,29 +58,35 @@
   <p>This is where <span class="highlight">iExec</span> comes in! We provide tools to easily add <span class="highlight">privacy features</span> to your applications.</p>
 </div>
 
-## 👷 What do we solve?
+## 👷 How do we solve it?
 
 Unlike traditional security, iExec protects and encrypts your data throughout
 its entire lifecycle, during storage, transfer, and even while **being processed
 by applications.**
+
+This is made possible thanks to
+<span class="highlight"><a target="_blank" href="https://protocol.docs.iex.ec/for-developers/confidential-computing/intel-sgx-technology">Trusted
+Execution Environment (TEE)</a></span> and
+<span class="highlight"><a target="_blank" href="https://www.iex.ec/academy/iexec-decentralized-confidential-computing">Confidential
+Computing</a></span> technologies.
 
 <div class="solution-note">
   <p>Our technology allows users to control the <span class="highlight">ownership</span>,
 <span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets within the <span class="highlight">Web3</span> ecosystem.</p>
 </div>
 
-### 🔒 The three key elements
+### 🔒 What are the three key elements?
 
 iExec combines three fundamental elements that work together seamlessly:
 
-#### 1. Protect your data with our devtool DataProtector
+#### 1. Protect your data with our devtool [DataProtector](http://localhost:5173/tools/dataProtector/dataProtectorCore)
 
 - Your sensitive data is encrypted and stored safely
 - Only you control when and who can access it
 - Perfect for private information like research data, business analytics, or
   personal records
 
-#### 2. Compute data with iExec apps running in secure environment
+#### 2. Compute data with iExec apps (iApps) running in secure environment
 
 - Special applications that can work with protected data
 - Run in secure environments (called TEEs) that keep your data private
@@ -93,20 +99,20 @@ iExec combines three fundamental elements that work together seamlessly:
 - Provides transparent governance rules for data access
 
 <div class="solution-note">
-  <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight">DeCC</span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
+  <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight"><a target="_blank" href="https://www.iex.ec/academy/iexec-decentralized-confidential-computing">DeCC</a></span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
 </div>
 
-### 🤝 Why we talk about privacy (explained to your grandma)
+### 👵 DeCC explained to your grandma
 
-Imagine a secure room (called a TEE Where confidential computing happens) where
-all activities remain completely safe and private, like a bank vault for data.
+Imagine a **secure room**, like a private bank vault for data, where everything
+inside stays **safe** and **private**.
 
-The protect data you you created with DataProtector can only be accessed inside
-this secure room. Only approved iExec Apps can enter and work with your data
-there.
+With a tool called **DataProtector**, your data becomes **protected** and can
+only be read and processed inside this secure room.
 
-You stay in control writing rules in an immutable notebook that determine who
-can access your data and when. your data and when.
+Only approved applications (**iApps**) can enter the room to work with your
+data, and you stay in **control** by setting **unchangeable rules** about who
+can access it and when.
 
 ## 🔍 Building your first privacy-preserving dApp
 
@@ -118,10 +124,10 @@ applications:
 Bob is building a decentralized application that leverages iExec's technology.
 His platform consists of:
 
-- A user-friendly frontend interface
-- Built-in DataProtector features for securing user data and managing access
-- An iExec App that can process protected data (apply algorithms, sharing,
-  monetize it, etc.)
+- A user-friendly interface for users.
+- A backend that uses an easy-to-install SDK.
+- Thanks to this SDK, end users can protect their data, manage access, and
+  process it seamlessly.
 
 ### 2. Meet Alice: the dApp user 👩‍💼
 
@@ -221,23 +227,23 @@ And many other use cases...
 <p>In this chapter, we covered the core concepts of iExec:</p>
   <div class="takeaway-item">
     <span>🔒</span>
-    <p><strong>Protected Data:</strong> Encrypt and control access to sensitive information</p>
+    <p><strong>Privacy-First Solution:</strong> iExec provides tools to protect sensitive data throughout its entire lifecycle - storage, transfer, and processing</p>
   </div>
   <div class="takeaway-item">
     <span>📦</span>
-    <p><strong>iExec Apps:</strong>Special applications that can process protected data</p>
+    <p><strong>iExec Apps:</strong> Special applications that can process protected data</p>
   </div>
   <div class="takeaway-item">
     <span>⛓️</span>
-    <p><strong>Confidential Computing:</strong>Process data privately in secure environments</p>
+    <p><strong>Three Core Components:</strong> DataProtector for encryption, iExec Apps for secure processing, and blockchain for access control</p>
   </div>
   <div class="takeaway-item">
     <span>🔌</span>
-    <p><strong>Privacy-First Collaboration:</strong> From healthcare to AI, enabling private data processing across industries</p>
+    <p><strong>Wide Application:</strong> From AI to finance, enabling confidential data processing across various industries</p>
   </div>
   <div class="takeaway-item">
     <span>💡</span>
-    <p><strong>Real-World Applications:</strong> From healthcare to AI, enabling private data processing across industries</p>
+    <p><strong>User Control:</strong> Data owners maintain full control over access, confidentiality, and monetization of their assets</p>
   </div>
 </div>
 
