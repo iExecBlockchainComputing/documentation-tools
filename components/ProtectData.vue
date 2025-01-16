@@ -115,7 +115,7 @@ async function protectData() {
     });
     const createdProtectedData = await dataProtectorCore.protectData({
       data: {
-        email: contentToProtect.value,
+        secretText: contentToProtect.value,
       },
       name: 'helloWorld',
     });
