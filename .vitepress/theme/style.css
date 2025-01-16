@@ -58,7 +58,8 @@ header .title > span {
 
 /* `Code` in links. Primary yellow is too light */
 /* Here especially for the underline color */
-.vp-doc a {
+.vp-doc a,
+.custom-block.info code {
   color: var(--vp-code-color);
 }
 
