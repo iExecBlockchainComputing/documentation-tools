@@ -118,6 +118,10 @@ export function getSidebar() {
                     link: '/tools/dataProtector/dataProtectorSharing/renting/setProtectedDataToRenting',
                   },
                   {
+                    text: 'setProtectedDataRentingParams',
+                    link: '/tools/dataProtector/dataProtectorSharing/renting/setProtectedDataRentingParams',
+                  },
+                  {
                     text: 'rentProtectedData',
                     link: '/tools/dataProtector/dataProtectorSharing/renting/rentProtectedData',
                   },
