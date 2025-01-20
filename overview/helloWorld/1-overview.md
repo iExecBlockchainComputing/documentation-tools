@@ -1,6 +1,6 @@
 # 🧐 iExec overview
 
-> Reading time 🕒 5 mins
+> Reading time 🕒 8 mins
 
 <div class="hero">
   <div class="hero-content">
@@ -21,7 +21,7 @@
     </div>
     <div class="example-item">
       <span class="example-icon">💰</span>
-      <span>A financial app handling transaction data</span>
+      <span>A financial app handling financial data</span>
     </div>
     <div class="example-item">
       <span class="example-icon">🔬</span>
@@ -60,8 +60,8 @@
 
 ## 👷 How do we solve it?
 
-Unlike traditional security, iExec protects your data throughout its entire
-lifecycle, during storage, transfer, and even while **being processed by
+Unlike traditional security solutions, iExec protects your data throughout its
+entire lifecycle, during storage, transfer, and even while **being processed by
 applications.**
 
 This is made possible thanks to
@@ -79,7 +79,7 @@ Computing</a></span> technologies.
 
 iExec combines three fundamental elements that work together seamlessly:
 
-#### 1. Protect your data with our devtool [DataProtector](https://tools.docs.iex.ec/tools/dataProtector/getting-started)
+#### 1. Protect data with our devtool [DataProtector](https://tools.docs.iex.ec/tools/dataProtector/getting-started)
 
 - Your sensitive data is encrypted and stored safely
 - Only you control when and who can access it
@@ -102,7 +102,7 @@ iExec combines three fundamental elements that work together seamlessly:
   <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight"><a target="_blank" href="https://www.iex.ec/academy/iexec-decentralized-confidential-computing">DeCC</a></span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
 </div>
 
-### 👵 DeCC explained to your grandma
+### 🧸 DeCC explained like you're 5
 
 Imagine a **secure room**, like a private bank vault for data, where everything
 inside stays **safe** and **private**.
@@ -125,7 +125,7 @@ Bob is building a decentralized application that leverages iExec's technology.
 His platform consists of:
 
 - A user-friendly interface for users.
-- A backend that uses an easy-to-install SDK.
+- A backend that uses an easy-to-install SDK provided by iExec.
 - Thanks to this SDK, end users can protect their data, manage access, and
   process it seamlessly.
 

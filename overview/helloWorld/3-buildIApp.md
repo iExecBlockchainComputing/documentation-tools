@@ -1,4 +1,4 @@
-# 🛠️ Build your iApp
+# 🛠️ Build and deploy your first iApp
 
 > Reading time 🕒 10 mins
 

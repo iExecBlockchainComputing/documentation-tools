@@ -1,16 +1,27 @@
 <template>
   <div class="protect-data-container">
     <div class="wallet-section">
-      Connect Your Wallet:
+      Connect Your Wallet
+      <a href="https://chainlist.org/?search=bellecour" target="_blank"
+        >(iExec network)</a
+      >:
       <div class="ml-2 inline-block">
         <MetamaskButton @connected="onWalletConnected" />
       </div>
     </div>
 
+    <div class="signing-info">
+      <p>You will sign two things:</p>
+      <ol>
+        <li>A transaction to create the protected data</li>
+        <li>A message signature to prove your identity</li>
+      </ol>
+    </div>
+
     <div class="form-container">
       <input
         v-model="contentToProtect"
-        placeholder="Enter some text to protect"
+        placeholder="Enter a secret message to protect (e.g. 'My private data')"
         :disabled="!isWalletConnected"
       />
       <Button

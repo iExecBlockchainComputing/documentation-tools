@@ -21,7 +21,7 @@ import ProtectData from '../../components/ProtectData.vue';
 
 DataProtector is a developer tool built on top of our technology. It helps
 developers easily add data protection, management, and monetization features to
-their dApps.
+their dApps with these key features:
 
 <div >
   <p>🔐 <strong>Data Privacy and Security</strong></p>
@@ -38,18 +38,17 @@ their dApps.
     <p>Features an SDK for easy integration into your DApp, enhancing functionality and user experience.</p>
 </div>
 
+<div class="solution-note-purple">
+  <p> The DataProtector interacts with iExec's <a href="https://chainlist.org/?search=bellecour" target="_blank">Bellecour sidechain</a>, which is gasless, meaning you can use it completely free without needing any tokens!</p>
+</div>
+
 ## 🧩 Let's create protected data
 
 <ProtectData />
 
-You will sign two things:
-
-1. A transaction to create the protected data
-2. A message signature to prove your identity
-
 <!-- (when transmitting the encryption key to the Secret Management Service (SMS) in the secure environment (TEE) -->
 
-## 🧩 What happens under the hood
+## 🧩 What happened under the hood
 
 <div class="solution-note-purple">
   <p>You won't believe how easy it is to protect your data with DataProtector. Just a few lines of code, and you're done!</p>
@@ -80,27 +79,27 @@ button:
 <div class="process-steps">
   <div class="step">
     <span class="step-number">1</span>
-    <span>We called the DataProtector SDK</span>
+    <span>The DataProtector SDK is called</span>
   </div>
   <div class="step">
     <span class="step-number">2</span>
-    <span>We encrypted the data with a symmetric key</span>
+    <span>The data is encrypted with a symmetric key</span>
   </div>
   <div class="step">
     <span class="step-number">3</span>
-    <span>We stored the encrypted data on IPFS</span>
+    <span>The encrypted data is stored on IPFS</span>
   </div>
   <div class="step">
     <span class="step-number">4</span>
-    <span>We stored the symmetric key in a secure enclave (TEE)</span>
+    <span>The symmetric key is stored in a secure enclave (TEE)</span>
   </div>
   <div class="step">
     <span class="step-number">5</span>
-    <span>The DataProtector smart contract is used to establish data ownership as an NFT.</span>
+    <span>The DataProtector smart contract is used to establish data ownership as an NFT</span>
   </div>
   <div class="step">
     <span class="step-number">6</span>
-    <span>We returned the protected data address to you</span>
+    <span>The protected data address is returned to the user</span>
   </div>
 </div>
 
