@@ -21,7 +21,7 @@
     <div class="form-container">
       <input
         v-model="contentToProtect"
-        placeholder="Enter a secret message to protect (e.g. 'My private data')"
+        placeholder="Enter a secret data to protect (e.g. 'My private data / mail / phone / ...')"
         :disabled="!isWalletConnected"
       />
       <Button

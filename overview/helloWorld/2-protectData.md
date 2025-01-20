@@ -42,7 +42,7 @@ their dApps with these key features:
   <p> DataProtector interacts with iExec's <a href="https://chainlist.org/?search=bellecour" target="_blank">Bellecour sidechain</a>, which is gasless, meaning you can use it completely free without needing any tokens!</p>
 </div>
 
-## 🧩 Let's create protected data
+## 🧩 Let's create a protected data
 
 <ProtectData />
 
@@ -54,10 +54,8 @@ their dApps with these key features:
   <p>You won't believe how easy it is to protect your data with DataProtector. Just a few lines of code, and you're done!</p>
 </div>
 
-You can find the code snippet
-[here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2FApp.tsx&preventWorkspaceRedirect=true)
-(App.tsx - line 59), simply call the protectData method from the **DataProtector
-SDK** with two arguments.
+To use it, simply call the `protectData` method from the **DataProtector SDK**
+with two arguments.
 
 - The data object to protect (can contain text, files, JSON data etc.)
 - The name of the protected data
@@ -71,6 +69,9 @@ const { address: protectedDataAddress } = await dataProtector.protectData({
 });
 ```
 
+For this tutorial, you can try out the code directly in our interactive
+CodeSandbox demo
+[here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2FApp.tsx&preventWorkspaceRedirect=true).
 Here's a quick overview of what happened when you clicked the **Protect Data**
 button:
 
@@ -139,7 +140,7 @@ const { address: protectedDataAddress } = await dataProtector.protectData({
 ```
 
 <div class="solution-note-purple">
-  <p>Check out our <a href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7">code sandbox</a> for ready-to-use examples!</p>
+  <p>Check out our <a target="_blank" href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7">code sandbox</a> for ready-to-use examples!</p>
 </div>
 
 ## 🎯 Key takeaways

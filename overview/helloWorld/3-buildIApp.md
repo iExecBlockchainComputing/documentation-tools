@@ -195,7 +195,7 @@ Deploy your iApp on the iExec protocol.
   </div>
   <div class="step">
     <span class="step-number">2</span>
-    <span>Click "Personal access tokens" → "Generate new token"</span>
+    <span>Click <a href="https://app.docker.com/settings/personal-access-tokens" target="_blank">"Personal access tokens"</a> → "Generate new token"</span>
   </div>
   <div class="step">
     <span class="step-number">3</span>

@@ -55,7 +55,7 @@
 </div>
 
 <div class="solution-note-purple">
-  <p>This is where <span class="highlight">iExec</span> comes in! We provide tools to easily add <span class="highlight">privacy features</span> to your applications.</p>
+  <p>This is where <span class="highlight">iExec</span> comes in! We provide tools to easily add <span class="highlight">privacy</span> and <span class="highlight">monetization</span> features into your dApp.</p>
 </div>
 
 ## 👷 How do we solve it?
@@ -75,7 +75,7 @@ Computing</a></span> technologies.
 <span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets within the <span class="highlight">Web3</span> ecosystem.</p>
 </div>
 
-### 🔒 What are the three key elements?
+## 🔒 What are the three key elements?
 
 iExec combines three fundamental elements that work together seamlessly:
 
@@ -102,7 +102,7 @@ iExec combines three fundamental elements that work together seamlessly:
   <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight"><a target="_blank" href="https://www.iex.ec/academy/iexec-decentralized-confidential-computing">DeCC</a></span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
 </div>
 
-### 🧸 DeCC explained like you're 5
+### 🎮 DeCC explained like you're 5
 
 Imagine a **secure room**, like a private bank vault for data, where everything
 inside stays **safe** and **private**.
@@ -110,9 +110,10 @@ inside stays **safe** and **private**.
 With a tool called **DataProtector**, your data becomes **protected** and can
 only be read and processed inside this secure room.
 
-Only approved applications (**iApps**) can enter the room to work with your
-data, and you stay in **control** by setting **access rules** that only you can
-modify about who can access it and when.
+Special applications called **iApps** (applications built to run in secure
+environments) can enter the room to work with your data. You stay in **control**
+by setting **access rules** that only you can modify about who can access it and
+when.
 
 ## 🔍 Building your first Privacy-preserving dApp
 
@@ -146,7 +147,7 @@ Depending on the dApp's use case, Alice could:
 
 And many other use cases...
 
-### 💡 Possible use cases
+## 💡 Possible use cases
 
 <div class="features-grid">
   <div class="feature-card">
@@ -228,22 +229,23 @@ And many other use cases...
     <span>🔒</span>
     <p><strong>Privacy-preserving Solution:</strong> iExec provides tools to protect sensitive data throughout its entire lifecycle - storage, transfer, and processing</p>
   </div>
+   <div class="takeaway-item">
+    <span>💡</span>
+    <p><strong>User Control:</strong> Data owners maintain full control over access, confidentiality, and monetization of their assets</p>
+  </div>
   <div class="takeaway-item">
     <span>📦</span>
-    <p><strong>iExec Apps:</strong> Special applications that can process protected data</p>
+    <p><strong>iApps (iExec App):</strong> Special applications that can process protected data</p>
   </div>
   <div class="takeaway-item">
     <span>⛓️</span>
-    <p><strong>Three Core Components:</strong> DataProtector for encryption, iExec Apps for secure processing, and blockchain for access control</p>
+    <p><strong>Blockchain:</strong> Enables tokenization of data, regain ownership, and governance rules for data access</p>
   </div>
   <div class="takeaway-item">
     <span>🔌</span>
     <p><strong>Wide Application:</strong> From AI to finance, enabling confidential data processing across various industries</p>
   </div>
-  <div class="takeaway-item">
-    <span>💡</span>
-    <p><strong>User Control:</strong> Data owners maintain full control over access, confidentiality, and monetization of their assets</p>
-  </div>
+ 
 </div>
 
 <div class="solution-note-green">
