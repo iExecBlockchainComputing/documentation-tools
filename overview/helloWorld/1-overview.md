@@ -82,7 +82,7 @@ iExec combines three fundamental elements that work together seamlessly:
 #### 1. Protect data with our devtool [DataProtector](https://tools.docs.iex.ec/tools/dataProtector/getting-started)
 
 - Your sensitive data is encrypted and stored safely
-- Only you control when and who can access it
+- Only you control who can access it and when
 - Perfect for private information like research data, business analytics, or
   personal records
 
@@ -125,8 +125,8 @@ Bob is building a decentralized application that leverages iExec's technology.
 His platform consists of:
 
 - A user-friendly interface for users.
-- A backend that uses an easy-to-install SDK provided by iExec.
-- Thanks to this SDK, end users can protect their data, manage access, and
+- A DataProtector SDK that's easy to integrate into any application.
+- Thanks to DataProtector, end users can protect their data, manage access, and
   process it seamlessly.
 
 ### 2. Meet Alice: the dApp user 👩‍💼
