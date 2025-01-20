@@ -102,7 +102,7 @@ iExec combines three fundamental elements that work together seamlessly:
   <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight"><a target="_blank" href="https://www.iex.ec/academy/iexec-decentralized-confidential-computing">DeCC</a></span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
 </div>
 
-### 🎮 DeCC explained like you're 5
+### 🧸 DeCC explained like you're 5
 
 Imagine a **secure room**, like a private bank vault for data, where everything
 inside stays **safe** and **private**.
