@@ -13,7 +13,7 @@
   </div>
 </div>
 
-## What You'll Learn
+## What you'll learn and build
 
 <div class="journey-grid">
   <a href="./1-overview" class="journey-card">
@@ -72,28 +72,28 @@
   </a>
 </div>
 
-## Getting Started
+## Getting started
 
 Before you begin, make sure you have:
 
 <div class="requirements-list">
   <div class="requirement-item">
-    <div class="req-title">🦊 Ethereum Wallet</div>
+    <div class="req-title">🦊 Ethereum Wallet <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Required to interact with blockchain features, manage your data access permissions, and handle transactions on the iExec platform</span></div></div>
     <a target="_blank" href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">Metamask Download →</a>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">💻 Code Editor</div>
+    <div class="req-title">💻 Code Editor <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">If you want to have a more detailed look at the iAppcode, you can use this editor</span></div></div>
     <a target="_blank" href="https://code.visualstudio.com/"> Download →</a>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">📦 Node.js v20+</div>
+    <div class="req-title">📦 Node.js v20+ <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Required runtime environment for running JavaScript code and managing project dependencies</span></div></div>
     <a target="_blank" href="https://nodejs.org/en/">Download →</a>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">🐳 DockerHub Account</div>
+    <div class="req-title">🐳 DockerHub Account <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Needed to publish and manage your iExec applications in containers for secure deployment</span></div></div>
     <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
   </div>
 </div>
@@ -103,5 +103,63 @@ Before you begin, make sure you have:
 </div>
 
 <style>
+.tooltip-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-left: 4px;
+  cursor: help;
+}
 
+.info-icon {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  color: #666;
+}
+
+.tooltip-container:hover .info-icon {
+  opacity: 1;
+  color: #333;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  width: max-content;
+  max-width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #2a2a2a transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.req-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 </style>

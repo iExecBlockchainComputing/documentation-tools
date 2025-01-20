@@ -60,9 +60,9 @@
 
 ## 👷 How do we solve it?
 
-Unlike traditional security, iExec protects and encrypts your data throughout
-its entire lifecycle, during storage, transfer, and even while **being processed
-by applications.**
+Unlike traditional security, iExec protects your data throughout its entire
+lifecycle, during storage, transfer, and even while **being processed by
+applications.**
 
 This is made possible thanks to
 <span class="highlight"><a target="_blank" href="https://protocol.docs.iex.ec/for-developers/confidential-computing/intel-sgx-technology">Trusted
@@ -133,7 +133,7 @@ His platform consists of:
 
 When using Bob's platform, Alice can:
 
-- Protect her data using the platform's DataProtector feature
+- Protect her data using the Bob's platform's DataProtector feature
 - Maintain full control over who can access her protected data
 - Authorize specific iExec Apps and persons like Bob to use her data in a secure
   environment

@@ -104,7 +104,7 @@ button:
   </div>
 </div>
 
-## 🧩 Using it in your project
+## 🧩 How to install and use DataProtector
 
 Decentralized confidential computing might sound complex, but we've made it
 simple through our developer tools.
@@ -112,7 +112,12 @@ simple through our developer tools.
 <div>
   <div >
     <p><strong>1. Install the Developer Tool</strong></p>
-    <p>Run <a href="https://www.npmjs.com/package/@iexec/dataprotector">npm install @iexec/dataprotector</a></p>
+    <p>Run the install command:</p>
+
+```sh
+npm install @iexec/dataprotector
+```
+
   </div>
   <div >
     <p><strong>2. Import and Initialize it in your project</strong></p>
