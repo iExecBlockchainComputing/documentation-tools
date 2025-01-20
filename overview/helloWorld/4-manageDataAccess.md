@@ -50,12 +50,6 @@ Here is a simple diagram to explain the process:
 
 <GrantAccess />
 
-You will sign two messages:
-
-1. A message granting access to the iApp
-2. An authentication message to post your granted access on a broadcasting
-   service (iExec marketplace)
-
 <!-- <RevokeAccess /> -->
 
 **Let's look at the code that makes this possible:**
@@ -111,8 +105,17 @@ But here's where it gets even more exciting...**monetization!**
 
 Our SDK offers flexible **monetization mechanisms**, allowing you to create
 **protected data collections** and implement advanced models like
-**subscriptions**, **rentals**, or **direct sales**. The choice is yours! you
-can check every details in the
+**subscriptions**, **rentals**, or **direct sales**. The choice is yours!
+
+Want to see it in action? Check out our
+[Content Creator Demo](https://demo.iex.ec/content-creator/) where you can:
+
+- Create and protect your own content
+- Set pricing and access rules
+- Manage subscriptions and rentals
+- Track your earnings
+
+For more technical details, see the
 [DataProtector Sharing](https://beta.tools.docs.iex.ec/tools/dataProtector/dataProtectorSharing.html)
 documentation.
 

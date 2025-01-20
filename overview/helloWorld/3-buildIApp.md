@@ -128,7 +128,7 @@ You will be prompted with the following message:
 
 - A JavaScript iApp project is setup
 
-- An ethereum wallet have been created (we use it to sign the iApp creation
+- An ethereum wallet has been created (we use it to sign the iApp creation
   onchain)
 
   <!-- you can in advance mode sign with your private key. -->

@@ -9,7 +9,7 @@ import ProtectData from '../../components/ProtectData.vue';
 <div class="hero">
   <div class="hero-content hero-overview">
     <h2>Time to get practical</h2>
-    <p>Let's follow Alice as she learns how to protect her data using DataProtector on the Bob's dApp, our developer tool for protecting data creation and management.</p>
+    <p>Let's follow Alice as she learns how to protect her data using DataProtector on Bob's dApp, our developer tool for protecting data creation and management.</p>
   </div>
 </div>
 
@@ -39,7 +39,7 @@ their dApps with these key features:
 </div>
 
 <div class="solution-note-purple">
-  <p> The DataProtector interacts with iExec's <a href="https://chainlist.org/?search=bellecour" target="_blank">Bellecour sidechain</a>, which is gasless, meaning you can use it completely free without needing any tokens!</p>
+  <p> DataProtector interacts with iExec's <a href="https://chainlist.org/?search=bellecour" target="_blank">Bellecour sidechain</a>, which is gasless, meaning you can use it completely free without needing any tokens!</p>
 </div>
 
 ## 🧩 Let's create protected data
@@ -55,7 +55,7 @@ their dApps with these key features:
 </div>
 
 You can find the code snippet
-[here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7&preventWorkspaceRedirect=true)
+[here](https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2FApp.tsx&preventWorkspaceRedirect=true)
 (App.tsx - line 59), simply call the protectData method from the **DataProtector
 SDK** with two arguments.
 
@@ -91,7 +91,7 @@ button:
   </div>
   <div class="step">
     <span class="step-number">4</span>
-    <span>The symmetric key is stored in a secure enclave (TEE)</span>
+    <span>The symmetric key is stored in a secure enclave (TEE) in the Secret Management Service</span>
   </div>
   <div class="step">
     <span class="step-number">5</span>

@@ -5,7 +5,7 @@
 <div class="hero">
   <div >
     <h2>Start Your Web3 Privacy Journey</h2>
-    <p>And learn how to build privacy-preserving decentralized applications (dApps) with iExec in this interactive guide.</p>
+    <p>And learn how to build Privacy-preserving decentralized applications (dApps) with iExec in this interactive guide.</p>
     <div class="hero-time">
       <span class="hero-time-badge ">☕ 30 minutes journey</span>
       <p>Perfect for hackathon 😊</p>

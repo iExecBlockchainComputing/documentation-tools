@@ -2,8 +2,19 @@
   <div class="protect-data-container">
     <div class="wallet-section">
       Connect Your Wallet:
+
       <div class="ml-2 inline-block">
         <MetamaskButton @connected="onWalletConnected" />
+      </div>
+      <div class="message-info">
+        <p>You will sign two messages:</p>
+        <ol>
+          <li>A message granting access to the iApp</li>
+          <li>
+            An authentication message to post your granted access on a
+            broadcasting service (iExec marketplace)
+          </li>
+        </ol>
       </div>
     </div>
 

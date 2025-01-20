@@ -5,12 +5,12 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Let's start with the basics</h2>
-     <p>and explore how iExec can help you build privacy-preserving applications and securely manage sensitive data.</p>
+     <p>and explore how iExec can help you build Privacy-preserving applications and securely manage sensitive data.</p>
   </div>
 
 </div>
 
-## 👨‍💻 Why building privacy-first dApps with iExec
+## 👨‍💻 Why building Privacy-preserving dApps with iExec
 
 <p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle sensitive user data</strong>, for example:</p>
 <div class="use-case-card">
@@ -81,7 +81,7 @@ iExec combines three fundamental elements that work together seamlessly:
 
 #### 1. Protect data with our devtool [DataProtector](https://tools.docs.iex.ec/tools/dataProtector/getting-started)
 
-- Your sensitive data is encrypted and stored safely
+- Encrypt your sensitive data and store it securely on IPFS
 - Only you control who can access it and when
 - Perfect for private information like research data, business analytics, or
   personal records
@@ -114,9 +114,9 @@ Only approved applications (**iApps**) can enter the room to work with your
 data, and you stay in **control** by setting **access rules** that only you can
 modify about who can access it and when.
 
-## 🔍 Building your first privacy-preserving dApp
+## 🔍 Building your first Privacy-preserving dApp
 
-Let's meet Bob and Alice to understand how iExec enables privacy-preserving
+Let's meet Bob and Alice to understand how iExec enables Privacy-preserving
 applications:
 
 ### 1. Meet Bob: the dApp developer 👨‍💻
@@ -142,7 +142,6 @@ Depending on the dApp's use case, Alice could:
 
 - Apply algorithms to her data and get results confidentially
 - Share her data with other users privately (and get paid for it)
-- Train AI models on her data and get predictions confidentially
 - Ask questions to AI models about her data and get answers confidentially
 
 And many other use cases...
@@ -227,7 +226,7 @@ And many other use cases...
 <p>In this chapter, we covered the core concepts of iExec:</p>
   <div class="takeaway-item">
     <span>🔒</span>
-    <p><strong>Privacy-First Solution:</strong> iExec provides tools to protect sensitive data throughout its entire lifecycle - storage, transfer, and processing</p>
+    <p><strong>Privacy-preserving Solution:</strong> iExec provides tools to protect sensitive data throughout its entire lifecycle - storage, transfer, and processing</p>
   </div>
   <div class="takeaway-item">
     <span>📦</span>
