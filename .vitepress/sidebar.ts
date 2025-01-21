@@ -8,29 +8,6 @@ export function getSidebar() {
         items: [
           { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/what-we-do' },
           {
-            text: '📽&nbsp;&nbsp;Use Case Demo',
-            collapsed: true,
-            link: '/overview/use-case-demo',
-            items: [
-              {
-                text: 'Privacy Enhancing Marketing',
-                link: '/overview/use-case-demo/privacy-enhancing-marketing',
-              },
-              {
-                text: 'Content Creator',
-                link: '/overview/use-case-demo/content-creator',
-              },
-            ],
-          },
-          // {
-          //   text: '💰&nbsp;&nbsp;Pricing Considerations',
-          //   link: '/overview/pricing-considerations',
-          // },
-          {
-            text: '🔧&nbsp;&nbsp;How to Pay for Web3mail',
-            link: '/overview/how-to-pay-for-web3mail',
-          },
-          {
             text: '👋&nbsp;&nbsp; Hello World',
             collapsed: true,
             items: [
@@ -59,6 +36,29 @@ export function getSidebar() {
                 link: '/overview/helloWorld/5-bonusChapter',
               },
             ],
+          },
+          {
+            text: '📽&nbsp;&nbsp;Use Case Demo',
+            collapsed: true,
+            link: '/overview/use-case-demo',
+            items: [
+              {
+                text: 'Privacy Enhancing Marketing',
+                link: '/overview/use-case-demo/privacy-enhancing-marketing',
+              },
+              {
+                text: 'Content Creator',
+                link: '/overview/use-case-demo/content-creator',
+              },
+            ],
+          },
+          // {
+          //   text: '💰&nbsp;&nbsp;Pricing Considerations',
+          //   link: '/overview/pricing-considerations',
+          // },
+          {
+            text: '🔧&nbsp;&nbsp;How to Pay for Web3mail',
+            link: '/overview/how-to-pay-for-web3mail',
           },
         ],
       },
