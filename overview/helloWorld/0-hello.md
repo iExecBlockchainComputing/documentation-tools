@@ -91,11 +91,17 @@ Before you begin, make sure you have:
     <div class="req-title">📦 Node.js v20+ <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Required runtime environment for running JavaScript code and managing project dependencies</span></div></div>
     <a target="_blank" href="https://nodejs.org/en/">Download →</a>
   </div>
+   <div class="requirement-item">
+    <div class="req-title">🐳 Docker installed <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Docker is essential for creating isolated containers that package your iExec applications with all dependencies. This ensures consistent and secure execution across different environments, especially in TEEs (Trusted Execution Environments)</span></div></div>
+    <a target="_blank" href="https://docker.com/">Download →</a>
+  </div>
   
   <div class="requirement-item">
     <div class="req-title">🐳 DockerHub Account <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Needed to publish and manage your iExec applications in containers for secure deployment</span></div></div>
     <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
   </div>
+
+
 </div>
 
 <div class="solution-note-green">
