@@ -50,8 +50,6 @@ Here is a simple diagram to explain the process:
 
 <GrantAccess />
 
-<!-- <RevokeAccess /> -->
-
 **Let's look at the code that makes this possible:**
 
 ```typescript
