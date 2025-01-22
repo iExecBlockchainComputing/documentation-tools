@@ -101,7 +101,6 @@ Before you begin, make sure you have:
     <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
   </div>
 
-
 </div>
 
 <div class="solution-note-green">
