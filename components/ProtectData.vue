@@ -78,7 +78,7 @@ import { ref } from 'vue';
 import { Icon } from '@iconify/vue';
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
 import Button from './ui/Button.vue';
-import MetamaskButton from './MetamaskButton.vue';
+import ReownButton from './ReownButton.vue';
 
 const web3Provider = ref(null);
 const isWalletConnected = ref(false);
