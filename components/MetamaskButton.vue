@@ -22,11 +22,10 @@
 import { ref } from 'vue';
 import { createIcon } from '@download/blockies';
 import Button from './ui/Button.vue';
+import { useWallet } from '../composables/useWallet';
 
 const emit = defineEmits(['connected']);
-
-const isConnected = ref(false);
-const walletAddress = ref('');
+const { walletAddress, isConnected } = useWallet();
 const addressIcon = ref('');
 
 async function connectWallet() {

@@ -13,7 +13,7 @@
 
 <div class="requirements-list">
   <div class="requirement-item">
-    <div class="req-title-suprise">🏆 Complete the quest to verify your achievements</div>
+    <div class="req-title-suprise">🏆 Complete the quest and win some $RLC!</div>
     <a target="_blank" href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer">COMPLETE →</a>
   </div>
   
@@ -29,15 +29,23 @@
 
 ## 🎁 Claim Your Voucher
 
-<div >
-  <p>Claim your <strong >$50 voucher</strong > and start using <strong>iExec's confidential computing technology</strong> for free! This voucher will allow you to <strong>process protected data</strong> and run <strong>computations in secure environments</strong> at no cost. 🎁</p>
+<div>
+  <h3>What is a Voucher?</h3>
+  <p>A Voucher is your all-in-one solution for iExec development, credit to use iExec's technology, access to premium support, technical guidance and mentorship to help you build and monetize your projects. 🚀</p>
+  <p>Claim your <strong>$20 voucher</strong> to kickstart your development journey with iExec! You'll get access to confidential computing resources and expert support to build your projects. Learn more about Vouchers at <a href="https://www.iex.ec/voucher" target="_blank">iex.ec/voucher</a> 🎁</p>
+</div>
+
+<div class="coupon-section">
+  <p>Here's your unique coupon code based on your wallet address. You'll need to provide this code when claiming your voucher on Discord:</p>
+  <ClientOnly>
+    <CouponCode />
+  </ClientOnly>
 </div>
 
 <div class="button-group-voucher">
-  <a href="https://discord.com/channels/841605628928458762/1234476404519997470" class="yellow-button" target="_blank">
-    Claim your $50 voucher
+  <a href="https://www.iex.ec/voucher" class="yellow-button" target="_blank">
+    Claim your $20 voucher
   </a>
-
 </div>
 
 ## 🎯 Key takeaways
