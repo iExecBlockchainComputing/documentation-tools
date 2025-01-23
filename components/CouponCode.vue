@@ -4,8 +4,8 @@
       <div class="connect-message">
         <p>
           <b
-            >🔑 Connect your wallet to get your unique coupon code (it will be
-            asked during the voucher claim)</b
+            >🔑 Get your unique coupon code (it will be asked during the voucher
+            claim process)</b
           >
         </p>
       </div>
