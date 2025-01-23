@@ -18,7 +18,6 @@ import { EIP6963ProviderDetail } from '../../utils/injected-wallet-provider/type
 
 import { QueryClient, VueQueryPlugin } from '@tanstack/vue-query';
 
-
 export default {
   extends: Theme,
   enhanceApp({ app }: EnhanceAppContext) {

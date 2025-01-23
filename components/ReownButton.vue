@@ -24,7 +24,6 @@ import { useAppKit } from '@reown/appkit/vue';
 import { useAccount, useDisconnect } from '@wagmi/vue';
 
 const { open } = useAppKit();
-const { disconnectAsync } = useDisconnect();
 const { isConnected, address: walletAddress, connector, status } = useAccount();
 const emit = defineEmits(['connected']);
 
@@ -36,24 +35,13 @@ watch(
   async () => isConnected.value,
   async (newIsConnected) => {
     if (newIsConnected && status.value === 'connected') {
-      // if (!connector || !connector.getProvider) {
-      //   return;
-      // }
-      setTimeout(async () => {
-        console.log('Connected:', status.value, connector);
-        const provider = await connector.getProvider();
-        emit('connected', { provider, walletAddress: walletAddress.value, isConnected: newIsConnected });
-      }, 1000);
+      const provider = await connector.value?.getProvider();
+      emit('connected', {
+        provider,
+        walletAddress: walletAddress.value,
+        isConnected: newIsConnected,
+      });
     }
   }
 );
-
-const logout = async () => {
-  try {
-    await disconnectAsync();
-  } catch (error) {
-    console.error('Failed to logout:', error);
-  } finally {
-  }
-};
 </script>
