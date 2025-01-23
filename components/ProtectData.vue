@@ -7,7 +7,7 @@
       </a>
       :
       <div class="ml-2 inline-block">
-        <MetamaskButton @connected="onWalletConnected" />
+        <ReownButton @connected="onWalletConnected" />
       </div>
     </div>
 
