@@ -10,11 +10,14 @@ import { createAppKit } from '@reown/appkit/vue';
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi';
 import { http, CreateConnectorFn } from '@wagmi/vue';
 import { injected, walletConnect } from 'wagmi/connectors';
+import { WagmiPlugin } from '@wagmi/vue';
 
 import { bellecour } from '../../utils/bellecourChainConfig.ts';
 import { InjectedWalletProvider } from '../../utils/injected-wallet-provider/injected-wallet-provider.ts';
 import { EIP6963ProviderDetail } from '../../utils/injected-wallet-provider/types.ts';
-import { WagmiPlugin } from '@wagmi/vue';
+
+import { QueryClient, VueQueryPlugin } from '@tanstack/vue-query';
+
 
 export default {
   extends: Theme,
@@ -118,5 +121,9 @@ export default {
     });
 
     app.use(WagmiPlugin, { config: wagmiAdapter.wagmiConfig });
+
+    const queryClient = new QueryClient();
+
+    app.use(VueQueryPlugin, { queryClient });
   },
 };
