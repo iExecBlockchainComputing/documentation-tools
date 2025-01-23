@@ -5,7 +5,7 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Let's start with the basics</h2>
-     <p>and explore how iExec can help you build Privacy-preserving applications and securely manage sensitive data.</p>
+    <p>and explore how iExec can help you build Privacy-preserving applications and securely manage sensitive data.</p>
   </div>
 
 </div>
@@ -54,7 +54,7 @@
   </div>
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>This is where <span class="highlight">iExec</span> comes in! We provide tools to easily add <span class="highlight">privacy</span> and <span class="highlight">monetization</span> features into your dApp.</p>
 </div>
 
@@ -70,9 +70,9 @@ Execution Environment (TEE)</a></span> and
 <span class="highlight"><a target="_blank" href="https://www.iex.ec/academy/iexec-decentralized-confidential-computing">Confidential
 Computing</a></span> technologies.
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>Our technology allows users to control the <span class="highlight">ownership</span>,
-<span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets within the <span class="highlight">Web3</span> ecosystem.</p>
+  <span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets within the <span class="highlight">Web3</span> ecosystem.</p>
 </div>
 
 ## 🔒 What are the three key elements?
@@ -98,7 +98,7 @@ iExec combines three fundamental elements that work together seamlessly:
 - Regain ownership of your data
 - Provides transparent governance rules for data access
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>By merging <span class="highlight">blockchain technology</span> with <span class="highlight">confidential computing</span>, we've pioneered <span class="highlight"><a target="_blank" href="https://www.iex.ec/academy/iexec-decentralized-confidential-computing">DeCC</a></span> (Decentralized Confidential Computing) to take <span class="highlight">privacy</span> and <span class="highlight">security</span> to the next level in <span class="highlight">Web3</span> ecosystems.</p>
 </div>
 
@@ -217,7 +217,7 @@ And many other use cases...
   </div>
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>In the next chapters, we'll follow Alice and Bob's journey step by step, starting with how Alice can <span class="highlight">protect her sensitive data</span> and then how Bob can <span class="highlight">build and deploy a confidential app</span> to process it.</p>
 </div>
 
@@ -248,11 +248,6 @@ And many other use cases...
  
 </div>
 
-<div class="solution-note-green">
+<div class="solution-note green">
   <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data! with Alice!</p>
 </div>
-
-<style>
-
-
-</style>

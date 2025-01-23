@@ -3,10 +3,10 @@
     <div v-if="!walletAddress" class="connect-section">
       <div class="connect-message">
         <p>
-          <b
-            >🔑 Get your unique coupon code (it will be asked during the voucher
-            claim process)</b
-          >
+          <b>
+            🔑 Get your unique coupon code (it will be asked during the voucher
+            claim process)
+          </b>
         </p>
       </div>
       <MetamaskButton />

@@ -55,8 +55,8 @@ raffles</strong>, stay tuned for the next one!</p>
   </a>
 </div>
 
-<div class="solution-note-green">
-    <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
+<div class="solution-note green">
+  <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
 </div>
 
 <style>

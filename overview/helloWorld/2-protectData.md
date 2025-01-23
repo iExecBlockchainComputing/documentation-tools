@@ -13,7 +13,7 @@ import ProtectData from '../../components/ProtectData.vue';
   </div>
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p><strong>Protected Data</strong> is encrypted data that remains confidential throughout its entire lifecycle - during storage, transfer and processing.</p>
 </div>
 
@@ -23,7 +23,7 @@ DataProtector is a developer tool built on top of our technology. It helps
 developers easily add data protection, management, and monetization features to
 their dApps with these key features:
 
-<div >
+<div>
   <p>🔐 <strong>Data Privacy and Security</strong></p>
   <p>Utilizes end-to-end encryption and decentralized storage (<a href="https://ipfs.tech/" target="_blank">IPFS</a>) to ensure protection and confidentiality, leveraging advanced confidential computing technology.</p>
 </div>
@@ -38,7 +38,7 @@ their dApps with these key features:
     <p>Features an SDK for easy integration into your DApp, enhancing functionality and user experience.</p>
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p> DataProtector interacts with iExec's <a href="https://chainlist.org/?search=bellecour" target="_blank">Bellecour sidechain</a>, which is gasless, meaning you can use it completely free without needing any tokens!</p>
 </div>
 
@@ -50,7 +50,7 @@ their dApps with these key features:
 
 ## 🧩 What happened under the hood
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>You won't believe how easy it is to protect your data with DataProtector. Just a few lines of code, and you're done!</p>
 </div>
 
@@ -110,7 +110,7 @@ Decentralized confidential computing might sound complex, but we've made it
 simple through our developer tools.
 
 <div>
-  <div >
+  <div>
     <p><strong>1. Install the Developer Tool</strong></p>
     <p>Run the install command:</p>
 
@@ -119,14 +119,16 @@ npm install @iexec/dataprotector
 ```
 
   </div>
-  <div >
+  <div>
     <p><strong>2. Import and Initialize it in your project</strong></p>
-Import the tool
+    Import the tool
     
 ```typescript
 import { Address, IExecDataProtector } from '@iexec/dataprotector';
 ```
-create a new instance and call the methods you need
+
+Create a new instance and call the methods you need
+
   </div>
 </div>
 
@@ -139,7 +141,7 @@ const { address: protectedDataAddress } = await dataProtector.protectData({
 });
 ```
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>Check out our <a target="_blank" href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7">code sandbox</a> for ready-to-use examples!</p>
 </div>
 
@@ -164,6 +166,6 @@ const { address: protectedDataAddress } = await dataProtector.protectData({
   </div>
 </div>
 
-<div class="solution-note-green">
+<div class="solution-note green">
   <p>In the next chapter, we'll show you how to build, deploy, and run an iApp to process your protected data. Let's go! 🚀</p>
 </div>
