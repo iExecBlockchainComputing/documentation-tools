@@ -48,35 +48,6 @@
   </a>
 </div>
 
-## 🎯 Key takeaways
-
-<div class="takeaways-list">
-  <div class="takeaway-item">
-    <span class="takeaway-icon">🔒</span>
-    <div class="takeaway-content">
-      <strong>Data Protection:</strong> You can now protect sensitive data using DataProtector SDK
-    </div>
-  </div>
-  <div class="takeaway-item">
-    <span class="takeaway-icon">🛠️</span>
-    <div class="takeaway-content">
-      <strong>iExec Apps:</strong> You've learned to build and deploy secure applications
-    </div>
-  </div>
-  <div class="takeaway-item">
-    <span class="takeaway-icon">🔐</span>
-    <div class="takeaway-content">
-      <strong>Access Control:</strong> You can manage who accesses your protected data
-    </div>
-  </div>
-  <div class="takeaway-item">
-    <span class="takeaway-icon">💰</span>
-    <div class="takeaway-content">
-      <strong>Next Steps:</strong> Explore data monetization and advanced features
-    </div>
-  </div>
-</div>
-
 <div class="solution-note-green">
     <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
 </div>
