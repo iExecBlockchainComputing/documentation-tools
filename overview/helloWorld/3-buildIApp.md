@@ -219,7 +219,16 @@ iapp deploy
 ```
 
 <div class="solution-note-purple">
-  <p>Make sure to save your <span class="highlight">iApp address</span> after deployment - you'll need it later!</p>
+  <p>📝 Make sure to save your <span class="highlight">iApp address</span> after deployment - you'll need it later!</p>
+  <p>You can find your iApp address in the <code>iexec-app.json</code> file in your project folder.</p>
+  <br>
+  <p>⚠️  If you encounter issues during deployment, verify that Docker has BuildKit enabled and supports AMD64 architecture:</p>
+
+```sh
+docker buildx inspect --bootstrap | grep -i platforms
+```
+
+  <p>The output should include <code>linux/amd64</code> in the list of supported platforms. If not, update to the latest Docker Desktop version which includes these requirements.</p>
 </div>
 
 ## 🏃 Run Your iApp
