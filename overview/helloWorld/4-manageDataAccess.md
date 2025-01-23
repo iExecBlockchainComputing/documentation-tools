@@ -13,7 +13,7 @@ import GrantAccess from '../../components/GrantAccess.vue';
   </div>
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>When you protect your data, you can authorize specific <span class="highlight">users</span> and <span class="highlight">applications</span> to access it. This means an authorized user will be able to use an authorized iApp to compute your protected data.</p>
 </div>
 
@@ -77,7 +77,7 @@ const grantedAccess = await dataProtectorCore.grantAccess({
   </div>
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>As we don't have the Bobs wallet address, we'll use the Zero address to grant access to all users.</p>
 </div>
 
@@ -89,7 +89,7 @@ You're now ready to process your protected data in a trusted environment:
 iapp run <my-iapp-address> --protectedData <protectedData-address>
 ```
 
-<div class="solution-note-green">
+<div class="solution-note green">
   <p>🎉 Congratulations! You've successfully completed the core workflow of protecting and processing data with iExec!</p>
 </div>
 
@@ -117,6 +117,6 @@ For more technical details, see the
 [DataProtector Sharing](https://beta.tools.docs.iex.ec/tools/dataProtector/dataProtectorSharing.html)
 documentation.
 
-<div class="solution-note-green">
+<div class="solution-note green">
     <p>You have one more step to complete the journey! and it's the easy one, let's go to the bonus chapter</p>
 </div>

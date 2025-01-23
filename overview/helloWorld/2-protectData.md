@@ -13,7 +13,7 @@ import ProtectData from '../../components/ProtectData.vue';
   </div>
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p><strong>Protected Data</strong> is encrypted data that remains confidential throughout its entire lifecycle - during storage, transfer and processing.</p>
 </div>
 
@@ -38,7 +38,7 @@ their dApps with these key features:
     <p>Features an SDK for easy integration into your DApp, enhancing functionality and user experience.</p>
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p> DataProtector interacts with iExec's <a href="https://chainlist.org/?search=bellecour" target="_blank">Bellecour sidechain</a>, which is gasless, meaning you can use it completely free without needing any tokens!</p>
 </div>
 
@@ -50,7 +50,7 @@ their dApps with these key features:
 
 ## 🧩 What happened under the hood
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>You won't believe how easy it is to protect your data with DataProtector. Just a few lines of code, and you're done!</p>
 </div>
 
@@ -139,7 +139,7 @@ const { address: protectedDataAddress } = await dataProtector.protectData({
 });
 ```
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>Check out our <a target="_blank" href="https://codesandbox.io/p/github/iExecBlockchainComputing/dataprotector-sandbox/main?file=%2Fsrc%2Fmain.tsx%3A18%2C7">code sandbox</a> for ready-to-use examples!</p>
 </div>
 
@@ -164,6 +164,6 @@ const { address: protectedDataAddress } = await dataProtector.protectData({
   </div>
 </div>
 
-<div class="solution-note-green">
+<div class="solution-note green">
   <p>In the next chapter, we'll show you how to build, deploy, and run an iApp to process your protected data. Let's go! 🚀</p>
 </div>

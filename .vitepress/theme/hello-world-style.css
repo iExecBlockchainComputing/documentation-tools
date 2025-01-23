@@ -281,81 +281,8 @@
 
 /* Solution note */
 
-.solution-note-purple {
-  background: linear-gradient(
-    135deg,
-    rgba(156, 39, 176, 0.1),
-    rgba(156, 39, 176, 0.05)
-  );
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-left: 4px solid #9c27b0;
-}
-
-.solution-note-purple p {
-  margin: 0;
-  color: var(--vp-c-text-1);
-  font-weight: 500;
-}
-
-.solution-note-purple .highlight {
-  color: #9c27b0;
-  font-weight: 600;
-}
-
-.solution-note-blue {
-  background: linear-gradient(
-    135deg,
-    rgba(66, 165, 245, 0.1),
-    rgba(66, 165, 245, 0.05)
-  );
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-left: 4px solid #42a5f5;
-}
-
-.solution-note-blue p {
-  margin: 0;
-  color: var(--vp-c-text-1);
-  font-weight: 500;
-}
-
-.solution-note-blue .highlight {
-  color: #42a5f5;
-  font-weight: 600;
-}
-
-.solution-note-green {
-  background: linear-gradient(
-    135deg,
-    rgba(76, 175, 80, 0.1),
-    rgba(76, 175, 80, 0.05)
-  );
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-left: 4px solid #4caf50;
-}
-
-.solution-note-green p {
-  margin: 0;
-  color: var(--vp-c-text-1);
-  font-weight: 500;
-}
-
-.solution-note-green .highlight {
-  color: #4caf50;
-  font-weight: 600;
-}
-
 .solution-note {
-  background: linear-gradient(
-    135deg,
-    rgba(206, 44, 104, 0.1),
-    rgba(206, 44, 104, 0.05)
-  );
+  background: linear-gradient(135deg, #ce2c681a, #ce2c680d);
   border-radius: var(--border-radius);
   padding: 1.5rem;
   margin: 1.5rem 0;
@@ -367,10 +294,40 @@
   color: var(--vp-c-text-1);
   font-weight: 500;
 }
-
 .solution-note .highlight {
   color: #ce2c68;
   font-weight: 600;
+}
+
+.solution-note.purple .highlight {
+  color: #9c27b0;
+  font-weight: 600;
+}
+
+.solution-note.purple {
+  background: linear-gradient(135deg, #9c27b01a, #9c27b00d);
+  border-left: 4px solid #9c27b0;
+}
+
+.solution-note.purple .highlight {
+  color: #9c27b0;
+}
+
+/* .solution-note-blue {
+  background: linear-gradient(135deg, #42a5f51a, #42a5f50d);
+}
+
+.solution-note-blue .highlight {
+  color: #42a5f5;
+} */
+
+.solution-note.green {
+  background: linear-gradient(135deg, #4caf501a, #4caf500d);
+  border-left: 4px solid #4caf50;
+}
+
+.solution-note.green .highlight {
+  color: #4caf50;
 }
 
 /* Features grid */

@@ -103,7 +103,7 @@ Before you begin, make sure you have:
 
 </div>
 
-<div class="solution-note-green">
+<div class="solution-note green">
   <p>Need help setting up or got some questions? Join our <a target="_blank" href="https://discord.gg/tJH8YfSB">Discord Community</a> for support!</p>
 </div>
 

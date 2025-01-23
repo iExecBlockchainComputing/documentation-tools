@@ -9,8 +9,8 @@
   </div>
 </div>
 
-<div class="solution-note-purple">
-<p>An iApp runs in a Trusted Execution Environment (TEE), it can process data in a secure environment.</p>
+<div class="solution-note purple">
+  <p>An iApp runs in a Trusted Execution Environment (TEE), it can process data in a secure environment.</p>
 </div>
 
 This guide will help you set up, test, deploy and run your iApp using the
@@ -48,7 +48,7 @@ Before getting started, ensure you have the following:
   </div> -->
 </div>
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>Don't worry! All passwords and private keys used in this tutorial stay on your machine and aren’t shared with anyone. You’ll only need them to run the <code>iApp run</code> command.</p>
 </div>
 
@@ -180,7 +180,7 @@ default protectedData mock.
 iapp test --protectedData default
 ```
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>You can check how args and protectedData are processed in <code>	src/app.js</code></p>
 </div>
 
@@ -218,7 +218,7 @@ Once you have your token, you can deploy your iApp using the following command:
 iapp deploy
 ```
 
-<div class="solution-note-purple">
+<div class="solution-note purple">
   <p>📝 Make sure to save your <span class="highlight">iApp address</span> after deployment - you'll need it later!</p>
   <p>You can find your iApp address in the <code>iexec-app.json</code> file in your project folder.</p>
   <br>
@@ -244,7 +244,7 @@ allowing it to run securely in a **Trusted Execution Environment (TEE)** for
 **confidential computing**. If you want to explore further, you can check the
 protocol documentation [here](https://protocol.docs.iex.ec/).
 
-<div class="solution-note-green">
+<div class="solution-note green">
   <p>🎉 Congratulations! You've successfully deployed and run your first iApp on iExec. This is a significant milestone - your application is now ready to securely process confidential data in a trusted environment.</p>
 </div>
 
@@ -277,6 +277,6 @@ protocol documentation [here](https://protocol.docs.iex.ec/).
   </div>
 </div>
 
-<div class="solution-note-green">
+<div class="solution-note green">
   <p>Next up: Alice will learn how to authorize the iApp and Bob to access and use her protected data!  🚀</p>
 </div>
