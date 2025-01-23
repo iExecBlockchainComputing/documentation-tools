@@ -23,7 +23,7 @@ DataProtector is a developer tool built on top of our technology. It helps
 developers easily add data protection, management, and monetization features to
 their dApps with these key features:
 
-<div >
+<div>
   <p>🔐 <strong>Data Privacy and Security</strong></p>
   <p>Utilizes end-to-end encryption and decentralized storage (<a href="https://ipfs.tech/" target="_blank">IPFS</a>) to ensure protection and confidentiality, leveraging advanced confidential computing technology.</p>
 </div>
@@ -110,7 +110,7 @@ Decentralized confidential computing might sound complex, but we've made it
 simple through our developer tools.
 
 <div>
-  <div >
+  <div>
     <p><strong>1. Install the Developer Tool</strong></p>
     <p>Run the install command:</p>
 
@@ -119,14 +119,16 @@ npm install @iexec/dataprotector
 ```
 
   </div>
-  <div >
+  <div>
     <p><strong>2. Import and Initialize it in your project</strong></p>
-Import the tool
+    Import the tool
     
 ```typescript
 import { Address, IExecDataProtector } from '@iexec/dataprotector';
 ```
-create a new instance and call the methods you need
+
+Create a new instance and call the methods you need
+
   </div>
 </div>
 

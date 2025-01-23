@@ -5,7 +5,7 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Let's start with the basics</h2>
-     <p>and explore how iExec can help you build Privacy-preserving applications and securely manage sensitive data.</p>
+    <p>and explore how iExec can help you build Privacy-preserving applications and securely manage sensitive data.</p>
   </div>
 
 </div>
@@ -72,7 +72,7 @@ Computing</a></span> technologies.
 
 <div class="solution-note purple">
   <p>Our technology allows users to control the <span class="highlight">ownership</span>,
-<span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets within the <span class="highlight">Web3</span> ecosystem.</p>
+  <span class="highlight">confidentiality</span>, and <span class="highlight">monetization</span> of their data and digital assets within the <span class="highlight">Web3</span> ecosystem.</p>
 </div>
 
 ## 🔒 What are the three key elements?
@@ -251,8 +251,3 @@ And many other use cases...
 <div class="solution-note green">
   <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data! with Alice!</p>
 </div>
-
-<style>
-
-
-</style>

@@ -50,10 +50,11 @@
 
       <p class="address-label">
         Authorized user
-        <span class="note-text"
-          >(As we don't have Bob wallet we use the Zero address to grant access
-          to all users for the demo)</span
-        >:
+        <span class="note-text">
+          (As we don't have Bob wallet we use the Zero address to grant access
+          to all users for the demo)
+        </span>
+        :
       </p>
       <div class="address-container">
         {{ '0x0000000000000000000000000000000000000000' }}
@@ -61,10 +62,11 @@
 
       <p class="address-label">
         Dataset Price
-        <span class="note-text"
-          >(oohh interesting it means that we could set a price to the protected
-          data)</span
-        >:
+        <span class="note-text">
+          (oohh interesting it means that we could set a price to the protected
+          data)
+        </span>
+        :
       </p>
       <div class="address-container">{{ grantedAccess.datasetprice }}</div>
     </div>

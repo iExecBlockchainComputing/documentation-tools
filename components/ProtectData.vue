@@ -2,9 +2,10 @@
   <div class="protect-data-container">
     <div class="wallet-section">
       Connect Your Wallet
-      <a href="https://chainlist.org/?search=bellecour" target="_blank"
-        >(iExec network)</a
-      >:
+      <a href="https://chainlist.org/?search=bellecour" target="_blank">
+        (iExec network)
+      </a>
+      :
       <div class="ml-2 inline-block">
         <MetamaskButton @connected="onWalletConnected" />
       </div>
@@ -46,9 +47,7 @@
       <p class="explorer-link">
         You can check it on
         <a
-          :href="
-            'https://explorer.iex.ec/bellecour/dataset/' + protectedDataAddress
-          "
+          :href="`https://explorer.iex.ec/bellecour/dataset/${protectedDataAddress}`"
           target="_blank"
           rel="noopener noreferrer"
         >
