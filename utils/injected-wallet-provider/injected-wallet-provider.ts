@@ -23,17 +23,21 @@ export class InjectedWalletProvider extends EventEmitter {
 
   // This method listens for the 'announceProvider' event and processes the provider details announced
   subscribe(): void {
-    window.addEventListener(
-      'eip6963:announceProvider',
-      (event: EIP6963AnnounceProviderEvent) => {
-        this.providerReceived(event.detail);
-      }
-    );
+    if (typeof window !== 'undefined') {
+      window.addEventListener(
+        'eip6963:announceProvider',
+        (event: EIP6963AnnounceProviderEvent) => {
+          this.providerReceived(event.detail);
+        }
+      );
+    }
   }
 
   // This method is used to request wallet providers by firing a 'EIP6963RequestProviderEvent'
   requestProviders(): void {
-    this.providerDetails = [];
-    window.dispatchEvent(new EIP6963RequestProviderEvent());
+    if (typeof window !== 'undefined') {
+      this.providerDetails = [];
+      window.dispatchEvent(new EIP6963RequestProviderEvent());
+    }
   }
 }
