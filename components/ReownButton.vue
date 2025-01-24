@@ -60,7 +60,6 @@ watch(
       const provider = await connector.value?.getProvider();
       emit('connected', {
         provider,
-        walletAddress: walletAddress.value,
         isConnected: newIsConnected,
       });
     }
