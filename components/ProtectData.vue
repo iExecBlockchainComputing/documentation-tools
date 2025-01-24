@@ -114,10 +114,11 @@ const onWalletConnected = (provider) => {
 async function protectData() {
   try {
     if (!web3Provider.value) {
-      web3Provider.value = await connector.value.getProvider();
-      if (!web3Provider.value) {
+      const provider = await connector.value.getProvider();
+      if (!provider) {
         throw new Error('Wallet not connected');
       }
+      web3Provider.value = provider;
     }
     if (!contentToProtect.value) {
       throw new Error('Content is empty');
