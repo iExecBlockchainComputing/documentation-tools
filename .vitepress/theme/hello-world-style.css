@@ -313,13 +313,6 @@
   color: #9c27b0;
 }
 
-/* .solution-note-blue {
-  background: linear-gradient(135deg, #42a5f51a, #42a5f50d);
-}
-
-.solution-note-blue .highlight {
-  color: #42a5f5;
-} */
 
 .solution-note.green {
   background: linear-gradient(135deg, #4caf501a, #4caf500d);
