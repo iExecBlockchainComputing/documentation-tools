@@ -52,7 +52,7 @@ Here is a simple diagram to explain the process:
 
 **Let's look at the code that makes this possible:**
 
-```typescript
+```ts twoslash
 const grantedAccess = await dataProtectorCore.grantAccess({
   protectedData: protectedData.address,
   authorizedApp: authorizedApp.address,
@@ -81,7 +81,7 @@ const grantedAccess = await dataProtectorCore.grantAccess({
   <p>As we don't have the Bobs wallet address, we'll use the Zero address to grant access to all users.</p>
 </div>
 
-## 🏃 Time to Run!
+## 🏃 Time to Run
 
 You're now ready to process your protected data in a trusted environment:
 

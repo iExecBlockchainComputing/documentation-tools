@@ -60,7 +60,7 @@ with two arguments.
 - The data object to protect (can contain text, files, JSON data etc.)
 - The name of the protected data
 
-```typescript
+```ts twoslash
 const provider = await connector.getProvider();
 const dataProtector = new IExecDataProtector(provider);
 const { address: protectedDataAddress } = await dataProtector.protectData({
@@ -122,8 +122,8 @@ npm install @iexec/dataprotector
   <div>
     <p><strong>2. Import and Initialize it in your project</strong></p>
     Import the tool
-    
-```typescript
+
+```ts twoslash
 import { Address, IExecDataProtector } from '@iexec/dataprotector';
 ```
 
@@ -132,7 +132,7 @@ Create a new instance and call the methods you need
   </div>
 </div>
 
-```typescript
+```ts twoslash
 const provider = await connector.getProvider();
 const dataProtector = new IExecDataProtector(provider);
 const { address: protectedDataAddress } = await dataProtector.protectData({
