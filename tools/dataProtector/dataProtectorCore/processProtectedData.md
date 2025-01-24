@@ -306,6 +306,9 @@ The
 function allows you to retrieve the result of a completed task using its
 `taskId`.
 
+Additionally, you can specify a **file path** within the ZIP archive to extract
+a specific file when required.
+
 :::
 
 ### result
