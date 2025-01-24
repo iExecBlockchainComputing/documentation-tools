@@ -22,7 +22,6 @@
     "vitepress": "^1.4.1"
   },
   "dependencies": {
-    "@download/blockies": "^1.0.3",
     "@iexec/dataprotector": "^2.0.0-beta.10",
     "@iexec/dataprotector-deserializer": "^0.1.0",
     "@iexec/iexec-oracle-factory-wrapper": "^2.5.0",
