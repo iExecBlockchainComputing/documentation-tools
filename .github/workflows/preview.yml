@@ -49,4 +49,5 @@ jobs:
           npm install --global vercel@latest
           vercel pull --yes --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
           vercel build --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
-          vercel deploy --prebuilt --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }} --name documentation-tools-${{ github.ref_name }}
+          BRANCH_NAME=$(echo "${{ github.ref_name }}" | sed 's/\//-/g') 
+          vercel deploy --prebuilt --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }} --name documentation-tools-${BRANCH_NAME}
