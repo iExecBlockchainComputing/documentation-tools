@@ -49,17 +49,18 @@ raffles</strong>, stay tuned for the next one!</p>
   </ClientOnly>
 </div>
 
-<div class="button-group-voucher">
+<br>
+
+<button>
   <a href="https://www.iex.ec/voucher" class="yellow-button" target="_blank">
     Claim your $20 voucher
   </a>
-</div>
+</button>
 
 <div class="solution-note green">
   <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
 </div>
 
 <style>
-
 
 </style>

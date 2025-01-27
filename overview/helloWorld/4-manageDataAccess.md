@@ -53,10 +53,7 @@ Here is a simple diagram to explain the process:
 **Let's look at the code that makes this possible:**
 
 ```ts twoslash
-import {
-  IExecDataProtectorCore,
-  getWeb3Provider,
-} from '@iexec/dataprotector';
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);

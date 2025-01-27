@@ -61,10 +61,7 @@ with two arguments.
 - The name of the protected data
 
 ```ts twoslash
-import {
-  IExecDataProtectorCore,
-  getWeb3Provider,
-} from '@iexec/dataprotector';
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
@@ -141,10 +138,7 @@ Create a new instance and call the methods you need
 </div>
 
 ```ts twoslash
-import {
-  IExecDataProtectorCore,
-  getWeb3Provider,
-} from '@iexec/dataprotector';
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
