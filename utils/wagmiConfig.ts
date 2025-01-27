@@ -1,7 +1,7 @@
 import { createAppKit } from '@reown/appkit/vue';
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi';
 import { http, CreateConnectorFn } from '@wagmi/vue';
-import { injected, walletConnect } from 'wagmi/connectors';
+import { injected } from '@wagmi/vue/connectors';
 import { bellecour } from './bellecourChainConfig.ts';
 import { InjectedWalletProvider } from './injected-wallet-provider/injected-wallet-provider.ts';
 import { EIP6963ProviderDetail } from './injected-wallet-provider/types.ts';
@@ -20,7 +20,6 @@ const metadata = {
 
 // Connectors initialization
 const connectors: CreateConnectorFn[] = [];
-connectors.push(walletConnect({ projectId, metadata, showQrModal: false }));
 
 // Injected wallet provider management
 const injectedWalletProvider = new InjectedWalletProvider();
@@ -39,7 +38,6 @@ const preservedId = [
   'io.metamask.flask', // Metamask Flask
   'com.coinbase.wallet', // Coinbase Wallet
   'com.brave.wallet', // Brave Wallet
-  'walletConnect', // WalletConnect
   'io.zerion.wallet', // Zerion
 ];
 
