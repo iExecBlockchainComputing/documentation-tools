@@ -8,7 +8,8 @@ import { EIP6963ProviderDetail } from './injected-wallet-provider/types.ts';
 
 const projectId = import.meta.env.VITE_REOWN_PROJECT_ID;
 
-console.log(import.meta);
+console.log(import.meta.env);
+console.log('Project ID:', import.meta.env.VITE_REOWN_PROJECT_ID);
 
 // WalletConnect metadata
 const metadata = {
