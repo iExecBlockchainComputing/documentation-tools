@@ -14,10 +14,10 @@ export default {
   enhanceApp({ app }: EnhanceAppContext) {
     app.use(TwoslashFloatingVue as any);
 
-    app.use(WagmiPlugin, { config: wagmiAdapter.wagmiConfig });
-
     const queryClient = new QueryClient();
 
     app.use(VueQueryPlugin, { queryClient });
+
+    app.use(WagmiPlugin, { config: wagmiAdapter.wagmiConfig });
   },
 };
