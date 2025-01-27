@@ -26,7 +26,7 @@ raffles</strong>, stay tuned for the next one!</p>
 
 <div>
   <h3>What is a Voucher?</h3>
-  <p>A Voucher is your all-in-one solution for iExec development, credit to use iExec's technology, access to premium support, technical guidance and mentorship to help you build and monetize your projects. 🚀</p>
+  <p>A Voucher is your all-in-one solution for iExec development to use iExec's technology, access to premium support, technical guidance and mentorship to help you build and monetize your projects. 🚀</p>
   <p>Claim your <strong>$20 voucher</strong> to kickstart your development journey with. Wanna learn more about <a href="https://www.iex.ec/voucher" target="_blank">Voucher</a> ? 🎁</p>
 </div>
 
