@@ -4,24 +4,34 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "npm run tailwind:build && vitepress build",
     "preview": "vitepress preview",
-    "check-format": "prettier --check .",
-    "format": "prettier --write ."
+    "check-format": "prettier --ignore-path .gitignore --check .",
+    "format": "prettier --ignore-path .gitignore --write .",
+    "tailwind:build": "npx tailwindcss -i ./components/input.css -o .vitepress/theme/tailwind-output.css",
+    "tailwind:watch": "npm run tailwind:build -- --watch"
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.2",
     "@shikijs/vitepress-twoslash": "^1.22.0",
     "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.4",
     "unplugin-auto-import": "^0.18.3",
     "unplugin-vue-components": "^0.27.4",
     "vitepress": "^1.4.1"
   },
   "dependencies": {
+    "@download/blockies": "^1.0.3",
     "@iexec/dataprotector": "^2.0.0-beta.10",
     "@iexec/dataprotector-deserializer": "^0.1.0",
-    "@iexec/iexec-oracle-factory-wrapper": "^2.3.1",
-    "@iexec/web3mail": "^1.1.0",
+    "@iexec/iexec-oracle-factory-wrapper": "^2.5.0",
+    "@iexec/web3mail": "^1.1.1",
+    "@wagmi/connectors": "^5.0.19",
+    "@wagmi/core": "^2.11.5",
+    "@web3modal/wagmi": "^5.0.3",
+    "dotenv": "^16.4.5",
+    "viem": "^2.16.3",
     "vue": "^3.5.12"
   }
 }

@@ -8,6 +8,36 @@ export function getSidebar() {
         items: [
           { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/what-we-do' },
           {
+            text: '👋&nbsp;&nbsp; Hello World',
+            collapsed: true,
+            items: [
+              {
+                text: 'Introduction',
+                link: '/overview/helloWorld/0-hello',
+              },
+              {
+                text: 'iExec Overview',
+                link: '/overview/helloWorld/1-overview',
+              },
+              {
+                text: 'Protect data',
+                link: '/overview/helloWorld/2-protectData',
+              },
+              {
+                text: 'Build iApp',
+                link: '/overview/helloWorld/3-buildIApp',
+              },
+              {
+                text: 'Manage data access',
+                link: '/overview/helloWorld/4-manageDataAccess',
+              },
+              {
+                text: 'Bonus chapter!',
+                link: '/overview/helloWorld/5-bonusChapter',
+              },
+            ],
+          },
+          {
             text: '📽&nbsp;&nbsp;Use Case Demo',
             collapsed: true,
             link: '/overview/use-case-demo',
@@ -255,18 +285,18 @@ export function getSidebar() {
                 ],
               },
               {
-                text: 'iDapp',
-                link: '/tools/dataProtector/advanced/iDapp',
+                text: 'iApp',
+                link: '/tools/dataProtector/advanced/iApp',
                 collapsed: true,
                 items: [
                   {
                     text: 'DataProtector Deserializer',
-                    link: '/tools/dataProtector/advanced/iDapp/deserializer',
+                    link: '/tools/dataProtector/advanced/iApp/deserializer',
                     collapsed: true,
                     items: [
                       {
                         text: 'getValue',
-                        link: '/tools/dataProtector/advanced/iDapp/deserializer/getValue',
+                        link: '/tools/dataProtector/advanced/iApp/deserializer/getValue',
                       },
                     ],
                   },
