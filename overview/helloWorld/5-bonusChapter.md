@@ -13,18 +13,6 @@
 
 Be among the first to complete the quest and claim your reward
 
-<!-- <div class="requirements-list">
-  <div class="requirement-item">
-    <div class="req-title-suprise">🏆 Complete the quest and win some $RLC!</div>
-    <a target="_blank" href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer">COMPLETE →</a>
-  </div>
-
-  <div class="requirement-item">
-    <div class="req-title-suprise">📝 Share your feedback to help us improve</div>
-    <a target="_blank" href="https://form.typeform.com/to/FOcNP9l0?typeform-source=iexecblockchaintech.typeform.com">SHARE →</a>
-  </div>
-</div> -->
-
 <div class="waiting-gif">
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHp6OHlxcnE1bTlxcmt6enJiNm4zMnphNWJ5bmlkaDZvaGxqaHRhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QhjR3MG9ZFfjB6BtIZ/giphy.gif" alt="Funny waiting animation" width="300" height="300" />
 </div>

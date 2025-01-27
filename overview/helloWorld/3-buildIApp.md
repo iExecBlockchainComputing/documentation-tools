@@ -41,11 +41,6 @@ Before getting started, ensure you have the following:
     <div class="req-title">🐳 Docker Hub Account</div>
     <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
   </div>
-  
-  <!-- <div class="requirement-item">
-    <div class="req-title">🔑 Private Key</div>
-    <a target="_blank" href="https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/">Only in advanced mode (e.g., MetaMask)</a>
-  </div> -->
 </div>
 
 <div class="solution-note purple">
@@ -131,8 +126,6 @@ You will be prompted with the following message:
 - An ethereum wallet has been created (we use it to sign the iApp creation
   onchain)
 
-  <!-- you can in advance mode sign with your private key. -->
-
 - A new folder has been created, it contains a very simple Node.js application,
   with the main code being located in `src/app.js`.
 
@@ -170,7 +163,7 @@ iapp test --args your-name
 ### 🔒 Using Protected Data
 
 You can pass a protectedData that you are authorized to process to your iApp
-using the `	--protectedData` option.
+using the `--protectedData` option.
 
 Since nothing is actually deployed during testing, we use protectedData mocks to
 test the app. Using `--protectedData` default will provide your app with the
@@ -181,7 +174,7 @@ iapp test --protectedData default
 ```
 
 <div class="solution-note purple">
-  <p>You can check how args and protectedData are processed in <code>	src/app.js</code></p>
+  <p>You can check how args and protectedData are processed in <code> src/app.js</code></p>
 </div>
 
 ## 🚀 Deploy Your iApp

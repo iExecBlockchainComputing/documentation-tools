@@ -46,8 +46,6 @@ their dApps with these key features:
 
 <ProtectData />
 
-<!-- (when transmitting the encryption key to the Secret Management Service (SMS) in the secure environment (TEE) -->
-
 ## 🧩 What happened under the hood
 
 <div class="solution-note purple">
