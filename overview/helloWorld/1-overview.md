@@ -10,7 +10,7 @@
 
 </div>
 
-## 👨‍💻 Why building Privacy-preserving dApps with iExec
+## 👨‍💻 Why build Privacy-preserving dApps with iExec
 
 <p>Imagine you're building a decentralized application (dApp) that needs to <strong> handle sensitive user data</strong>, for example:</p>
 <div class="use-case-card">
@@ -152,17 +152,6 @@ And many other use cases...
 <div class="features-grid">
   <div class="feature-card">
     <div class="feature-header">
-      <span class="feature-icon">🏥</span>
-      <h3>Healthcare</h3>
-    </div>
-    <ul>
-      <li>Process patient records privately</li>
-      <li>Run medical analyses while preserving patient confidentiality</li>
-    </ul>
-  </div>
-
-  <div class="feature-card">
-    <div class="feature-header">
       <span class="feature-icon">💰</span>
       <h3>Finance</h3>
     </div>
@@ -213,6 +202,16 @@ And many other use cases...
     <ul>
       <li>Protect player data and game assets</li>
       <li>Process in-game transactions securely</li>
+    </ul>
+  </div>
+  <div class="feature-card">
+    <div class="feature-header">
+      <span class="feature-icon">🏥</span>
+      <h3>Healthcare</h3>
+    </div>
+    <ul>
+      <li>Process patient records privately</li>
+      <li>Run medical analyses while preserving patient confidentiality</li>
     </ul>
   </div>
 </div>

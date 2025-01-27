@@ -14,7 +14,7 @@ import ProtectData from '../../components/ProtectData.vue';
 </div>
 
 <div class="solution-note purple">
-  <p><strong>Protected Data</strong> is encrypted data that remains confidential throughout its entire lifecycle - during storage, transfer and processing.</p>
+  <p><strong>Protected data</strong> is encrypted data that remains confidential throughout its entire lifecycle - during storage, transfer and processing.</p>
 </div>
 
 ## 🧩 DataProtector, key features
@@ -42,7 +42,7 @@ their dApps with these key features:
   <p> DataProtector interacts with iExec's <a href="https://chainlist.org/?search=bellecour" target="_blank">Bellecour sidechain</a>, which is gasless, meaning you can use it completely free without needing any tokens!</p>
 </div>
 
-## 🧩 Let's create a protected data
+## 🧩 Let's create protected data
 
 <ProtectData />
 
@@ -55,7 +55,7 @@ their dApps with these key features:
 To use it, simply call the `protectData` method from the **DataProtector SDK**
 with two arguments.
 
-- The data object to protect (can contain text, files, JSON data etc.)
+- The data object to be protected (can contain text, files, JSON data etc.)
 - The name of the protected data
 
 ```ts twoslash
@@ -162,7 +162,7 @@ const { address: protectedDataAddress } = await dataProtectorCore.protectData({
   </div>
   <div class="takeaway-item">
     <span>📦</span>
-    <p><strong>Protected Data</strong> are encrypted and stored on decentralized storage</p>
+    <p><strong>Protected Data</strong> is encrypted and stored on decentralized storage</p>
   </div>
   <div class="takeaway-item">
     <span>⛓️</span>
