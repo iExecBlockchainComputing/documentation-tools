@@ -192,7 +192,6 @@ input:disabled {
   padding: 0.75rem 1rem;
   border-radius: var(--border-radius);
   font-size: 0.9rem;
-  border-left: 4px solid rgb(255, 59, 48);
 }
 
 .success-note {
@@ -206,7 +205,6 @@ input:disabled {
   padding: 1.5rem;
   text-align: center;
   margin-top: 2rem;
-  border-left: 4px solid rgb(52, 199, 89);
 }
 
 .success-header {

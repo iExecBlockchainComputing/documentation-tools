@@ -6,8 +6,8 @@
     "dev": "vitepress dev",
     "build": "npm run tailwind:build && vitepress build",
     "preview": "vitepress preview",
-    "check-format": "prettier --check .",
-    "format": "prettier --write .",
+    "check-format": "prettier --ignore-path .gitignore --check .",
+    "format": "prettier --ignore-path .gitignore --write .",
     "tailwind:build": "npx tailwindcss -i ./components/input.css -o .vitepress/theme/tailwind-output.css",
     "tailwind:watch": "npm run tailwind:build -- --watch"
   },

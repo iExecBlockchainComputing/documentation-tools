@@ -11,20 +11,27 @@
 
 ## 🏁 Final Steps
 
-<div class="requirements-list">
+Be among the first to complete the quest and claim your reward
+
+<!-- <div class="requirements-list">
   <div class="requirement-item">
     <div class="req-title-suprise">🏆 Complete the quest and win some $RLC!</div>
     <a target="_blank" href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer">COMPLETE →</a>
   </div>
-  
+
   <div class="requirement-item">
     <div class="req-title-suprise">📝 Share your feedback to help us improve</div>
     <a target="_blank" href="https://form.typeform.com/to/FOcNP9l0?typeform-source=iexecblockchaintech.typeform.com">SHARE →</a>
   </div>
+</div> -->
+
+<div class="waiting-gif">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHp6OHlxcnE1bTlxcmt6enJiNm4zMnphNWJ5bmlkaDZvaGxqaHRhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QhjR3MG9ZFfjB6BtIZ/giphy.gif" alt="Funny waiting animation" width="300" height="300" />
 </div>
 
 <div class="solution-note">
-  <p>Early testers like you are eligible for our special <span class="highlight">raffle: 3 x $100! 🎁 every month!</span>, you can follow the winner dashboard to see the winners <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCZfUtkAer">HERE</a></p>
+  <p>As an <strong>early tester</strong>, you'll also have the chance to enter our <strong>exclusive monthly
+raffles</strong>, stay tuned for the next one!</p>
 </div>
 
 ## 🎁 Claim Your Voucher
@@ -42,17 +49,18 @@
   </ClientOnly>
 </div>
 
-<div class="button-group-voucher">
+<br>
+
+<button>
   <a href="https://www.iex.ec/voucher" class="yellow-button" target="_blank">
     Claim your $20 voucher
   </a>
-</div>
+</button>
 
 <div class="solution-note green">
   <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
 </div>
 
 <style>
-
 
 </style>

@@ -286,7 +286,6 @@
   border-radius: var(--border-radius);
   padding: 1.5rem;
   margin: 1.5rem 0;
-  border-left: 4px solid #ce2c68;
 }
 
 .solution-note p {
@@ -306,24 +305,14 @@
 
 .solution-note.purple {
   background: linear-gradient(135deg, #9c27b01a, #9c27b00d);
-  border-left: 4px solid #9c27b0;
 }
 
 .solution-note.purple .highlight {
   color: #9c27b0;
 }
 
-/* .solution-note-blue {
-  background: linear-gradient(135deg, #42a5f51a, #42a5f50d);
-}
-
-.solution-note-blue .highlight {
-  color: #42a5f5;
-} */
-
 .solution-note.green {
   background: linear-gradient(135deg, #4caf501a, #4caf500d);
-  border-left: 4px solid #4caf50;
 }
 
 .solution-note.green .highlight {

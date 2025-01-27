@@ -60,12 +60,17 @@ with two arguments.
 - The data object to protect (can contain text, files, JSON data etc.)
 - The name of the protected data
 
-```typescript
-const provider = await connector.getProvider();
-const dataProtector = new IExecDataProtector(provider);
-const { address: protectedDataAddress } = await dataProtector.protectData({
-  data,
-  name,
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const { address: protectedDataAddress } = await dataProtectorCore.protectData({
+  name: 'myEmail',
+  data: {
+    email: 'example@gmail.com',
+  },
 });
 ```
 
@@ -122,8 +127,8 @@ npm install @iexec/dataprotector
   <div>
     <p><strong>2. Import and Initialize it in your project</strong></p>
     Import the tool
-    
-```typescript
+
+```ts twoslash
 import { Address, IExecDataProtector } from '@iexec/dataprotector';
 ```
 
@@ -132,12 +137,17 @@ Create a new instance and call the methods you need
   </div>
 </div>
 
-```typescript
-const provider = await connector.getProvider();
-const dataProtector = new IExecDataProtector(provider);
-const { address: protectedDataAddress } = await dataProtector.protectData({
-  data,
-  name,
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const { address: protectedDataAddress } = await dataProtectorCore.protectData({
+  name: 'myEmail',
+  data: {
+    email: 'example@gmail.com',
+  },
 });
 ```
 
