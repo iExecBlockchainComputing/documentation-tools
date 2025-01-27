@@ -61,11 +61,19 @@ with two arguments.
 - The name of the protected data
 
 ```ts twoslash
-const provider = await connector.getProvider();
-const dataProtector = new IExecDataProtector(provider);
-const { address: protectedDataAddress } = await dataProtector.protectData({
-  data,
-  name,
+import {
+  IExecDataProtectorCore,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const { address: protectedDataAddress } = await dataProtectorCore.protectData({
+  name: 'myEmail',
+  data: {
+    email: 'example@gmail.com',
+  },
 });
 ```
 
@@ -133,11 +141,19 @@ Create a new instance and call the methods you need
 </div>
 
 ```ts twoslash
-const provider = await connector.getProvider();
-const dataProtector = new IExecDataProtector(provider);
-const { address: protectedDataAddress } = await dataProtector.protectData({
-  data,
-  name,
+import {
+  IExecDataProtectorCore,
+  getWeb3Provider,
+} from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const { address: protectedDataAddress } = await dataProtectorCore.protectData({
+  name: 'myEmail',
+  data: {
+    email: 'example@gmail.com',
+  },
 });
 ```
 
