@@ -10,7 +10,6 @@ const projectId = import.meta.env.VITE_REOWN_PROJECT_ID;
 
 console.log(import.meta);
 
-
 // WalletConnect metadata
 const metadata = {
   name: 'iExec Documentation tools',
