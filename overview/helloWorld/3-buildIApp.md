@@ -41,11 +41,6 @@ Before getting started, ensure you have the following:
     <div class="req-title">🐳 Docker Hub Account</div>
     <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
   </div>
-  
-  <!-- <div class="requirement-item">
-    <div class="req-title">🔑 Private Key</div>
-    <a target="_blank" href="https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/">Only in advanced mode (e.g., MetaMask)</a>
-  </div> -->
 </div>
 
 <div class="solution-note purple">
@@ -130,8 +125,6 @@ You will be prompted with the following message:
 
 - An ethereum wallet has been created (we use it to sign the iApp creation
   onchain)
-
-  <!-- you can in advance mode sign with your private key. -->
 
 - A new folder has been created, it contains a very simple Node.js application,
   with the main code being located in `src/app.js`.
