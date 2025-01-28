@@ -45,6 +45,8 @@ jobs:
           fi
 
       - name: Vercel deploy to preview
+        env:
+          VITE_REOWN_PROJECT_ID: ${{ secrets.VITE_REOWN_PROJECT_ID }}
         run: |
           npm install --global vercel@latest
           vercel pull --yes --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}

@@ -7,7 +7,7 @@
       </a>
       :
       <div class="ml-2 inline-block">
-        <MetamaskButton @connected="onWalletConnected" />
+        <ReownButton @connected="onWalletConnected" />
       </div>
     </div>
 
@@ -78,10 +78,13 @@ import { ref } from 'vue';
 import { Icon } from '@iconify/vue';
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
 import Button from './ui/Button.vue';
-import MetamaskButton from './MetamaskButton.vue';
+import ReownButton from './ReownButton.vue';
+import { useAccount } from '@wagmi/vue';
+
+const { isConnected, connector } = useAccount();
 
 const web3Provider = ref(null);
-const isWalletConnected = ref(false);
+const isWalletConnected = ref(isConnected);
 const protectedDataAddress = ref('');
 const protectedDataIpfsAddress = ref('');
 const contentToProtect = ref('');
@@ -111,7 +114,11 @@ const onWalletConnected = (provider) => {
 async function protectData() {
   try {
     if (!web3Provider.value) {
-      throw new Error('Wallet not connected');
+      const provider = await connector.value.getProvider();
+      if (!provider) {
+        throw new Error('Wallet not connected');
+      }
+      web3Provider.value = provider;
     }
     if (!contentToProtect.value) {
       throw new Error('Content is empty');

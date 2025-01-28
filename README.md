@@ -3,6 +3,17 @@
 This is the source repository of the
 [iExec tools documentation](https://tools.docs.iex.ec)
 
+## Prerequisites
+
+- Node 20
+
+Create a `.env` file see [`.env.template`](.env.template)
+
+```sh
+cp .env.template .env
+# fill in the .env file
+```
+
 ## Run app
 
 ```

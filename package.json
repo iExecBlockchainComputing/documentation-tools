@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
+    "dev": "npm run tailwind:build && vitepress dev",
     "build": "npm run tailwind:build && vitepress build",
     "preview": "vitepress preview",
     "check-format": "prettier --ignore-path .gitignore --check .",
@@ -22,16 +22,16 @@
     "vitepress": "^1.4.1"
   },
   "dependencies": {
-    "@download/blockies": "^1.0.3",
     "@iexec/dataprotector": "^2.0.0-beta.10",
     "@iexec/dataprotector-deserializer": "^0.1.0",
     "@iexec/iexec-oracle-factory-wrapper": "^2.5.0",
     "@iexec/web3mail": "^1.1.1",
-    "@wagmi/connectors": "^5.0.19",
-    "@wagmi/core": "^2.11.5",
-    "@web3modal/wagmi": "^5.0.3",
+    "@reown/appkit": "^1.6.5",
+    "@reown/appkit-adapter-wagmi": "^1.6.5",
+    "@tanstack/vue-query": "^5.64.2",
+    "@wagmi/vue": "^0.1.8",
     "dotenv": "^16.4.5",
-    "viem": "^2.16.3",
+    "viem": "^2.22.12",
     "vue": "^3.5.12"
   }
 }

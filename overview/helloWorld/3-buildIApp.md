@@ -163,7 +163,7 @@ iapp test --args your-name
 ### 🔒 Using Protected Data
 
 You can pass a protectedData that you are authorized to process to your iApp
-using the `	--protectedData` option.
+using the `--protectedData` option.
 
 Since nothing is actually deployed during testing, we use Protected Data mocks
 to test the app. Using `--protectedData` default will provide your app with the
@@ -174,7 +174,7 @@ iapp test --protectedData default
 ```
 
 <div class="solution-note purple">
-  <p>You can check how args and protectedData are processed in <code>	src/app.js</code></p>
+  <p>You can check how args and protectedData are processed in <code> src/app.js</code></p>
 </div>
 
 ## 🚀 Deploy Your iApp

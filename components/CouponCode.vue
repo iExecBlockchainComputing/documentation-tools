@@ -9,7 +9,7 @@
           </b>
         </p>
       </div>
-      <MetamaskButton />
+      <ReownButton />
     </div>
 
     <div v-else class="code-section">
@@ -66,12 +66,13 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import { useWallet } from '../composables/useWallet';
-import MetamaskButton from './MetamaskButton.vue';
+import ReownButton from './ReownButton.vue';
+import { useAccount } from '@wagmi/vue';
+
+const { address: walletAddress } = useAccount();
 
 const copied = ref(false);
 const codeElement = ref(null);
-const { walletAddress } = useWallet();
 
 const couponCode = computed(() => {
   if (!walletAddress.value) return '';
