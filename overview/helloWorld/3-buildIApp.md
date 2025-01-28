@@ -28,7 +28,7 @@ Before getting started, ensure you have the following:
   </div>
 
   <div class="requirement-item">
-    <div class="req-title">📦 NPM</div>
+    <div class="req-title">📦 npm</div>
     <a target="_blank" href="https://www.npmjs.com/get-npm">Download →</a>
   </div>
   
@@ -44,7 +44,7 @@ Before getting started, ensure you have the following:
 </div>
 
 <div class="solution-note purple">
-  <p>Don't worry! All passwords and private keys used in this tutorial stay on your machine and aren’t shared with anyone. You’ll only need them to run the <code>iApp run</code> command.</p>
+  <p>Don't worry! All secrets used in this tutorial stay on your machine and aren’t shared with anyone. You’ll only need them to run the <code>iApp run</code> command.</p>
 </div>
 
 ## 💾 Installation (win / mac / linux)
@@ -112,7 +112,7 @@ You will be prompted with the following message:
 </div>
 
 <div class="solution-note">
-  <p>We recommend selecting <span class="highlight">"Hello World"</span> to quickly discover how iApp works! use <span class="highlight">advanced</span> only if your are familiar with iExec.</p>
+  <p>We recommend selecting <span class="highlight">"Hello World"</span> to quickly discover how iApp works! use <span class="highlight">advanced</span> only if you are familiar with iExec.</p>
 </div>
 
 ```sh
@@ -127,7 +127,7 @@ You will be prompted with the following message:
   onchain)
 
 - A new folder has been created, it contains a very simple Node.js application,
-  with the main code being located in `src/app.js`.
+  with the main code being located in `src/app.js`
 
 ## 🧪 Test Your iApp
 
@@ -140,7 +140,7 @@ iapp test
 It uses your local Node.js to execute the `app.js` file.
 
 <div class="solution-note">
-  <p>- If you have <code>Error: Docker deamon is not accessible</code> Make sure Docker is installed and running.</p>
+  <p>- If you have <code>Error: Docker daemon is not accessible</code> Make sure Docker is installed and running.</p>
   <br>
   <p>- If you have <code>Error: Failed to locate iApp project root</code> error:  Ensure you are in your project folder before proceeding.</p>
 </div>
@@ -165,8 +165,8 @@ iapp test --args your-name
 You can pass a protectedData that you are authorized to process to your iApp
 using the `	--protectedData` option.
 
-Since nothing is actually deployed during testing, we use protectedData mocks to
-test the app. Using `--protectedData` default will provide your app with the
+Since nothing is actually deployed during testing, we use Protected Data mocks
+to test the app. Using `--protectedData` default will provide your app with the
 default protectedData mock.
 
 ```sh
@@ -215,7 +215,7 @@ iapp deploy
   <p>📝 Make sure to save your <span class="highlight">iApp address</span> after deployment - you'll need it later!</p>
   <p>You can find your iApp address in the <code>iexec-app.json</code> file in your project folder.</p>
   <br>
-  <p>⚠️  If you encounter issues during deployment, verify that Docker has BuildKit enabled and supports AMD64 architecture:</p>
+  <p>⚠️  If you encounter issues during deployment, make sure Docker's BuildKit feature is enabled and supports AMD64 architecture:</p>
 
 ```sh
 docker buildx inspect --bootstrap | grep -i platforms
