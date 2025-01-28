@@ -38,14 +38,14 @@ Here is a simple diagram to explain the process:
   </div>
   <div class="step">
     <span class="step-number">4</span>
-    <span>Authorized user can now run your iExec App to process your protected data</span>
+    <span>Authorized user can now run your iApp to process your protected data</span>
   </div>
 </div>
 
 ## 🔓 Grant the iApp Access to Your Data
 
 <div class="solution-note">
-  <p>Remember the <span class="highlight">iExec App address</span> you saved from the previous chapter? You'll need it now to grant access to your protected data.</p>
+  <p>Remember the <span class="highlight">iApp address</span> you saved from the previous chapter? You'll need it now to grant access to your protected data.</p>
 </div>
 
 <GrantAccess />
@@ -73,7 +73,7 @@ const grantedAccess = await dataProtectorCore.grantAccess({
   
   <div class="requirement-item">
     <div class="req-title">💻 authorizedApp</div>
-    <span>The iExec App address you want to authorize</span>
+    <span>The iApp address you want to authorize</span>
   </div>
   
   <div class="requirement-item">
@@ -83,10 +83,10 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 </div>
 
 <div class="solution-note purple">
-  <p>As we don't have the Bobs wallet address, we'll use the Zero address to grant access to all users.</p>
+  <p>As we don't have the Bob's wallet address, we'll use the zero address to grant access to all users.</p>
 </div>
 
-## 🏃 Time to Run
+## 🏃 Time to run
 
 You're now ready to process your protected data in a trusted environment:
 
@@ -98,13 +98,13 @@ iapp run <my-iapp-address> --protectedData <protectedData-address>
   <p>🎉 Congratulations! You've successfully completed the core workflow of protecting and processing data with iExec!</p>
 </div>
 
-## What's Next: Data Monetization
+## What's next: Data Monetization
 
 We've completed the first step of the journey! You can now integrate the
 **DataProtector SDK** into your dApp, **secure your data**, **grant access** to
 users and iApps, and **process it safely**.
 
-But here's where it gets even more exciting...**monetization!**
+But here's where it gets even more exciting... **monetization!**.
 
 Our SDK offers flexible **monetization mechanisms**, allowing you to create
 **protected data collections** and implement advanced models like
@@ -123,5 +123,5 @@ For more technical details, see the
 documentation.
 
 <div class="solution-note green">
-    <p>You have one more step to complete the journey! and it's the easy one, let's go to the bonus chapter</p>
+    <p>You have one more step to complete the journey, and it's the easy one. Let's go to the bonus chapter!</p>
 </div>
