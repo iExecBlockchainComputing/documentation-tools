@@ -28,6 +28,7 @@
         :disabled="!isWalletConnected || isLoadingGrant"
         @click="grantAccess"
         class="protect-button"
+        data-track="grantAccess"
       >
         {{ isLoadingGrant ? 'Processing...' : 'Grant Access' }}
       </Button>
