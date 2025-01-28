@@ -40,8 +40,6 @@ export default {
         connectWallet: 'hw_connectWallet',
         protectData: 'hw_protectData',
         grantAccess: 'hw_grantAccess',
-        // completeQuest: 'hw_completeQuest',
-        // shareFeedback: 'hw_shareFeedback',
         claimVoucher: 'hw_claimVoucher',
       };
 
