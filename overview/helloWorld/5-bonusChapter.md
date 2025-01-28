@@ -1,4 +1,4 @@
-# 🎉 Bonus chapter!
+# 🎉 Bonus chapter
 
 > Reading time 🕒 4 mins
 
@@ -40,7 +40,8 @@ raffles</strong>, stay tuned for the next one!</p>
 <br>
 
 <button>
-  <a href="https://www.iex.ec/voucher" class="yellow-button" target="_blank">
+  <a href="https://www.iex.ec/voucher" class="yellow-button" target="_blank" data-track="claimVoucher"
+>
     Claim your $20 voucher
   </a>
 </button>
