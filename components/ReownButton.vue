@@ -57,12 +57,9 @@ const logout = async () => {
 watch(
   async () => isConnected.value,
   async (newIsConnected) => {
-    if (newIsConnected && status.value === 'connected') {
+    if (status.value === 'connected') {
       const provider = await connector.value?.getProvider();
-      emit('connected', {
-        provider,
-        isConnected: newIsConnected,
-      });
+      emit('connected', provider);
     }
   }
 );
