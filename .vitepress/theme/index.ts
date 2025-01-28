@@ -28,7 +28,7 @@ export default {
     app.use(WagmiPlugin, { config: wagmiAdapter.wagmiConfig });
 
     googleAnalytics({
-      id: 'GTM-PKHWK65',
+      id: 'GTM-P7KSD4T',
     });
 
     if (typeof window !== 'undefined') {
