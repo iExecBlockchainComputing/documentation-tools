@@ -15,7 +15,10 @@
       <p>You will sign two things:</p>
       <ol>
         <li>A transaction to create the protected data</li>
-        <li>A message signature to prove your identity</li>
+        <li>
+          A message signature to prove your identity to the production SMS
+        </li>
+        <li>A message signature to prove your identity to the debug SMS</li>
       </ol>
     </div>
 
@@ -126,16 +129,13 @@ async function protectData() {
     }
     isLoadingProtect.value = true;
     protectError.value = null;
-    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value, {
-      iexecOptions: {
-        smsURL: 'https://sms.scone-debug.v8-bellecour.iex.ec',
-      },
-    });
+    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
     const createdProtectedData = await dataProtectorCore.protectData({
       data: {
         secretText: contentToProtect.value,
       },
       name: 'helloWorld',
+      allowDebug: true,
     });
     console.log('createdProtectedData', createdProtectedData);
 
