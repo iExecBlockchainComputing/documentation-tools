@@ -163,6 +163,34 @@ The name is public and not encrypted.
 
 :::
 
+### allowDebug <OptionalBadge />
+
+**Type:** `boolean`  
+**Default:** `false`
+
+Allow using the protected data in TEE debug apps.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const protectedData = await dataProtectorCore.protectData({
+  name: 'myEmail',
+  data: {
+    email: 'example@gmail.com',
+  },
+  allowDebug: true, // [!code focus]
+});
+```
+
+::: tip
+
+This param is for development only.
+
+:::
+
 ### onStatusUpdate <OptionalBadge />
 
 **Type:** `OnStatusUpdateFn<ProtectDataStatuses>`

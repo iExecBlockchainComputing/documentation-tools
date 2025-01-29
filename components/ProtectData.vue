@@ -136,6 +136,7 @@ async function protectData() {
         secretText: contentToProtect.value,
       },
       name: 'helloWorld',
+      allowDebug: true,
     });
     console.log('createdProtectedData', createdProtectedData);
 
