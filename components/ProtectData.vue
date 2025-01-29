@@ -126,11 +126,7 @@ async function protectData() {
     }
     isLoadingProtect.value = true;
     protectError.value = null;
-    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value, {
-      iexecOptions: {
-        smsURL: 'https://sms.scone-debug.v8-bellecour.iex.ec',
-      },
-    });
+    const dataProtectorCore = new IExecDataProtectorCore(web3Provider.value);
     const createdProtectedData = await dataProtectorCore.protectData({
       data: {
         secretText: contentToProtect.value,
