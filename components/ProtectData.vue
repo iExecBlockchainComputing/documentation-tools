@@ -15,7 +15,10 @@
       <p>You will sign two things:</p>
       <ol>
         <li>A transaction to create the protected data</li>
-        <li>A message signature to prove your identity</li>
+        <li>
+          A message signature to prove your identity to the production SMS
+        </li>
+        <li>A message signature to prove your identity to the debug SMS</li>
       </ol>
     </div>
 
