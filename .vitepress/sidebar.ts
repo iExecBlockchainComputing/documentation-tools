@@ -108,6 +108,10 @@ export function getSidebar() {
                 text: 'processProtectedData',
                 link: '/tools/dataProtector/dataProtectorCore/processProtectedData',
               },
+              {
+                text: 'getResultFromCompletedTask',
+                link: '/tools/dataProtector/dataProtectorCore/getResultFromCompletedTask',
+              },
             ],
           },
           {
@@ -210,10 +214,6 @@ export function getSidebar() {
                   {
                     text: 'consumeProtectedData',
                     link: '/tools/dataProtector/dataProtectorSharing/consume/consumeProtectedData',
-                  },
-                  {
-                    text: 'getResultFromCompletedTask',
-                    link: '/tools/dataProtector/dataProtectorSharing/consume/getResultFromCompletedTask',
                   },
                 ],
               },
