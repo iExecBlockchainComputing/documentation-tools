@@ -9,7 +9,6 @@ import './style.css';
 import './tailwind-output.css';
 import { wagmiAdapter } from '../../utils/wagmiConfig.ts';
 import googleAnalytics from 'vitepress-plugin-google-analytics';
-import { onMounted } from 'vue';
 
 declare global {
   interface Window {
@@ -31,22 +30,6 @@ export default {
     app.use(VueQueryPlugin, { queryClient });
 
     app.use(WagmiPlugin, { config: wagmiAdapter.wagmiConfig });
-
-    onMounted(() => {
-      if (typeof window !== 'undefined') {
-        // Set Axeptio settings
-        window.axeptioSettings = {
-          clientId: '6413111857e4d2a6342cd5c6',
-          cookiesVersion: 'iexec-en',
-        };
-
-        // Inject Axeptio script
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = '//static.axept.io/sdk.js';
-        document.body.appendChild(script);
-      }
-    });
 
     googleAnalytics({
       id: 'GTM-P7KSD4T',
