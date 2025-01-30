@@ -13,6 +13,10 @@ import googleAnalytics from 'vitepress-plugin-google-analytics';
 declare global {
   interface Window {
     dataLayer: any[];
+    axeptioSettings: {
+      clientId: string;
+      cookiesVersion: string;
+    };
   }
 }
 
