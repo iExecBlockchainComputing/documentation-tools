@@ -22,7 +22,7 @@
       <h3>1 - iExec Overview</h3>
       <p>Discover how iExec technologies work and the problems it solves</p>
       <div class="time-wrapper">
-        <span class="time-estimate">5 min read</span>
+        <span class="time-estimate">8 min read</span>
       </div>
     </div>
   </a>
@@ -33,7 +33,7 @@
       <h3>2. Protect Your Data</h3>
       <p>Learn to secure your sensitive data using our developer tools</p>
       <div class="time-wrapper">
-        <span class="time-estimate">8 min read</span>
+        <span class="time-estimate">6 min read</span>
       </div>
     </div>
   </a>
@@ -55,7 +55,7 @@
       <h3>4. Manage Data Access</h3>
       <p>Learn advanced data access management, permissions and monetization</p>
       <div class="time-wrapper">
-        <span class="time-estimate">7 min read</span>
+        <span class="time-estimate">6 min read</span>
       </div>
     </div>
   </a>
