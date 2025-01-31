@@ -32,10 +32,19 @@ export default defineConfig({
     ],
     [
       'script',
-      {
-        async: '',
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-10RGBF003J',
-      },
+      {},
+      `
+      window.axeptioSettings = {
+        clientId: "6413111857e4d2a6342cd5c6",
+        cookiesVersion: "iexec-en",
+      };
+
+      (function(d, s) {
+        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+        e.async = true; e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+      })(document, "script");
+      `,
     ],
   ],
   themeConfig: {
