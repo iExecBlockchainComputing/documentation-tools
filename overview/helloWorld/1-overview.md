@@ -248,5 +248,5 @@ And many other use cases...
 </div>
 
 <div class="solution-note green">
-  <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data! with Alice!</p>
+  <p>Now that you understand the fundamentals, let's dive into protecting your first piece of data! With Alice!</p>
 </div>
