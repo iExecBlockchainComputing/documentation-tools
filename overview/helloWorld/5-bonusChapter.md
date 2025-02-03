@@ -13,7 +13,7 @@
 
 <div style="display: flex; align-items: center; gap: 2rem;">
   <div style="flex: 1;line-height: 2.5" class="p-6 space-y-4 text-lg font-medium text-center">
-    Now that you've completed the Hello World, enter our **raffle** for a chance to win $50 USDC! on the link below 
+    Now that you've completed the Hello World, enter our RAFFLE for a chance to win $50 USDC! on the link below 
     <br>
    <a href="https://app.galxe.com/quest/iExec/GCUFEtp2kt" target="_blank">🎉QUEST🎉</a>
   </div>
