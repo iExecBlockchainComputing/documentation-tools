@@ -11,10 +11,15 @@
 
 ## 🏁 Final steps
 
-Be among the first to complete the quest and claim your reward
-
-<div class="waiting-gif" style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHp6OHlxcnE1bTlxcmt6enJiNm4zMnphNWJ5bmlkaDZvaGxqaHRhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QhjR3MG9ZFfjB6BtIZ/giphy.gif" alt="Funny waiting animation" width="300" height="300" />
+<div style="display: flex; align-items: center; gap: 2rem;">
+  <div style="flex: 1;line-height: 2.5" class="p-6 space-y-4 text-lg font-medium text-center">
+    Now that you've completed the Hello World, enter our **raffle** for a chance to win $50 USDC! on the link below 
+    <br>
+   <a href="https://app.galxe.com/quest/iExec/GCUFEtp2kt" target="_blank">🎉QUEST🎉</a>
+  </div>
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenE3ZW42enUydnl5b2F3ZDcyNHZkdXF6bzFydjl6bmc4MzYydHRweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g9582DNuQppxC/giphy.gif" alt="Funny waiting animation" width="300" height="300" />
+  </div>
 </div>
 
 <div class="solution-note">
