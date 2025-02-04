@@ -16,7 +16,7 @@
 .hero {
   background: linear-gradient(135deg, #fcd15a, #ffad4d);
   border-radius: var(--border-radius);
-  padding: 0rem 2rem 1rem 2rem;
+  padding: 0rem 2rem 1rem;
   color: white;
   max-width: 800px;
   margin: 0 auto;
@@ -326,6 +326,9 @@ li {
 }
 
 .yellow-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 2.75rem;
   padding: 0.5rem 1.25rem;
   font-size: 0.95rem;
@@ -333,15 +336,16 @@ li {
   border-radius: 8px;
   background: #fcd15a;
   color: #1e1e1e !important;
-  border: none !important;
   text-decoration: none !important;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease !important;
 }
 
 .yellow-button:hover {
-  background-color: #ffa500;
-  transform: scale(1.05);
+  background: #ffb74d;
+  transform: translateY(-1px);
+  box-shadow: var(--card-shadow);
 }
 
 /* Media queries */
