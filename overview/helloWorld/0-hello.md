@@ -117,8 +117,8 @@ Before you begin, make sure you have:
 }
 
 .tooltip-container:hover .info-icon {
-    opacity: 1;
-    color: #333;
+  opacity: 1;
+  color: #333;
 }
 
 .tooltip-container .tooltip-text {
