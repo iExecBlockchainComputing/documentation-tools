@@ -1,11 +1,7 @@
 /* Global style */
 :root {
   --primary-color: #fcd15a;
-  --secondary-color: #1d1d24;
   --accent-color: #ce2c68;
-  --background-light: #f5f5f5;
-  --text-primary: #1d1d24;
-  --text-secondary: #5d5d69;
   --card-shadow: 0 2px 6px rgba(29, 29, 36, 0.1);
   --card-hover-shadow: 0 8px 24px rgba(29, 29, 36, 0.15);
   --border-radius: 6px;
