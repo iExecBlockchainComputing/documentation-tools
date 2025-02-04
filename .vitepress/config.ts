@@ -103,6 +103,7 @@ export default defineConfig({
     editLink: {
       pattern:
         'https://github.com/iExecBlockchainComputing/documentation-tools/blob/main/:path',
+      text: 'Suggest changes to this page',
     },
   },
   vite: {
