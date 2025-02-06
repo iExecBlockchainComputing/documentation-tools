@@ -46,6 +46,18 @@ export default defineConfig({
       })(document, "script");
       `,
     ],
+    [
+      'script',
+      {
+        defer: '',
+        src: 'https://widget.mava.app',
+        'widget-version': 'v2',
+        id: 'MavaWebChat',
+        'enable-sdk': 'false',
+        'data-token':
+          '8e4e10aad5750451e8726768e8c639dae54f461beeb176f5ebd687371c9390f2',
+      },
+    ],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -91,6 +103,7 @@ export default defineConfig({
     editLink: {
       pattern:
         'https://github.com/iExecBlockchainComputing/documentation-tools/blob/main/:path',
+      text: 'Suggest changes to this page',
     },
   },
   vite: {

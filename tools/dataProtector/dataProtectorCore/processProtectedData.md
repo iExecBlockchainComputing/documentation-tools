@@ -324,7 +324,7 @@ Bellecour side chain. You can monitor task execution using the
 ::: tip
 
 The
-[getResultFromCompletedTask()](../dataProtectorSharing/consume/getResultFromCompletedTask.md)
+[getResultFromCompletedTask()](../dataProtectorCore/getResultFromCompletedTask.md)
 function allows you to retrieve the result of a completed task using its
 `taskId`.
 
