@@ -77,6 +77,28 @@ const processProtectedDataResponse =
   });
 ```
 
+### path <OptionalBadge />
+
+**Type:** `string`
+
+Under the hood, a protected data is a zip file. With this `path` parameter, you
+can specify the file you're interested in. The zip file will be uncompressed for
+you, and only the desired file will be given as the `result`.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    path: 'my-content', // [!code focus]
+  });
+```
+
 ### userWhitelist <OptionalBadge />
 
 **Type:** `Address`
