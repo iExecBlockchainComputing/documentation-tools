@@ -52,7 +52,7 @@ Before getting started, ensure you have the following:
 First, you need to install the `iapp` package. Open your terminal and run:
 
 ```sh
-npm i -g @iexec/iapp-maker
+npm i -g @iexec/iapp
 ```
 
 You can check if the installation was successful by running:

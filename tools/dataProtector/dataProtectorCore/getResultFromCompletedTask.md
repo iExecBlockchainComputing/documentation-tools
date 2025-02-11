@@ -5,18 +5,14 @@ Method to get the result of a completed task.
 ## Usage
 
 ```ts twoslash
-import {
-  IExecDataProtectorSharing,
-  getWeb3Provider,
-} from '@iexec/dataprotector';
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-const completedTaskResult =
-  await dataProtectorSharing.getResultFromCompletedTask({
-    taskId: '0x7ac398...',
-  });
+const completedTaskResult = await dataProtectorCore.getResultFromCompletedTask({
+  taskId: '0x7ac398...',
+});
 ```
 
 ## Parameters
@@ -32,18 +28,14 @@ import { type GetResultFromCompletedTaskParams } from '@iexec/dataprotector';
 Address of the task ID data you'd like to get the result from.
 
 ```ts twoslash
-import {
-  IExecDataProtectorSharing,
-  getWeb3Provider,
-} from '@iexec/dataprotector';
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-const completedTaskResult =
-  await dataProtectorSharing.getResultFromCompletedTask({
-    taskId: '0x7ac398...', // [!code focus]
-  });
+const completedTaskResult = await dataProtectorCore.getResultFromCompletedTask({
+  taskId: '0x7ac398...', // [!code focus]
+});
 ```
 
 ### path <OptionalBadge />
@@ -55,19 +47,15 @@ can specify the file you're interested in. The zip file will be uncompressed for
 you, and only the desired file will be given as the `result`.
 
 ```ts twoslash
-import {
-  IExecDataProtectorSharing,
-  getWeb3Provider,
-} from '@iexec/dataprotector';
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-const completedTaskResult =
-  await dataProtectorSharing.getResultFromCompletedTask({
-    taskId: '0x7ac398...',
-    path: 'content', // [!code focus]
-  });
+const completedTaskResult = await dataProtectorCore.getResultFromCompletedTask({
+  taskId: '0x7ac398...',
+  path: 'content', // [!code focus]
+});
 ```
 
 ### pemPrivateKey <OptionalBadge />
@@ -81,20 +69,15 @@ It needs to be the private key corresponding to the public key initially used to
 encrypt the protected data.
 
 ```ts twoslash
-import {
-  IExecDataProtectorSharing,
-  getWeb3Provider,
-} from '@iexec/dataprotector';
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
-const completedTaskResult =
-  await dataProtectorSharing.getResultFromCompletedTask({
-    taskId: '0x7ac398...',
-    pemPrivateKey:
-      '-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----', // [!code focus]
-  });
+const completedTaskResult = await dataProtectorCore.getResultFromCompletedTask({
+  taskId: '0x7ac398...',
+  pemPrivateKey: '-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----', // [!code focus]
+});
 ```
 
 ### onStatusUpdate <OptionalBadge />
@@ -106,15 +89,15 @@ Callback function to be notified at intermediate steps.
 <!-- prettier-ignore-start -->
 ```ts twoslash
 import {
-  IExecDataProtectorSharing,
+  IExecDataProtectorCore,
   getWeb3Provider,
 } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorSharing = new IExecDataProtectorSharing(web3Provider);
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 // ---cut---
 const completedTaskResult =
-  await dataProtectorSharing.getResultFromCompletedTask({
+  await dataProtectorCore.getResultFromCompletedTask({
     taskId: '0x7ac398...',
     onStatusUpdate: ({ title, isDone }) => { // [!code focus]
       console.log(title, isDone); // [!code focus]

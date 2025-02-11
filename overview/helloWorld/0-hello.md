@@ -1,4 +1,4 @@
-# 👋 Welcome to iExec!
+# 👋 Welcome to iExec
 
 > Reading time 🕒 2 mins
 
@@ -20,7 +20,7 @@
     <div class="card-icon">📚</div>
     <div class="card-content">
       <h3>1 - iExec Overview</h3>
-      <p>Discover how iExec technologies work and the problems it solves</p>
+      <p>Discover how iExec technologies work and the problem they solves</p>
       <div class="time-wrapper">
         <span class="time-estimate">8 min read</span>
       </div>
@@ -48,7 +48,7 @@
       </div>
     </div>
   </a>
-    
+
   <a href="./4-manageDataAccess" class="journey-card">
     <div class="card-icon">🔑</div>
     <div class="card-content">
