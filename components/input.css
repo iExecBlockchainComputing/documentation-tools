@@ -29,7 +29,3 @@
 .dark {
   --on-bg-success: rgb(60, 60, 67);
 }
-
-.white-block-for-address {
-  @apply mt-1 break-all rounded border border-neutral-200 bg-white px-2 py-2 text-sm;
-}

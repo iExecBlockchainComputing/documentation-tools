@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="signing-info">
+    <div>
       <p>You will sign two things:</p>
       <ol>
         <li>A transaction to create the protected data</li>

@@ -23,22 +23,22 @@ Before getting started, ensure you have the following:
 
 <div class="requirements-list">
   <div class="requirement-item">
-    <div class="req-title">📦 Node.js v20+</div>
+    <div class="requirement-title">📦 Node.js v20+</div>
     <a target="_blank" href="https://nodejs.org/en/">Download →</a>
   </div>
 
   <div class="requirement-item">
-    <div class="req-title">📦 npm</div>
+    <div class="requirement-title">📦 npm</div>
     <a target="_blank" href="https://www.npmjs.com/get-npm">Download →</a>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">🐳 Docker</div>
+    <div class="requirement-title">🐳 Docker</div>
     <a target="_blank" href="https://www.docker.com/">Download →</a>
   </div>
 
   <div class="requirement-item">
-    <div class="req-title">🐳 Docker Hub Account</div>
+    <div class="requirement-title">🐳 Docker Hub Account</div>
     <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
   </div>
 </div>
@@ -52,7 +52,7 @@ Before getting started, ensure you have the following:
 First, you need to install the `iapp` package. Open your terminal and run:
 
 ```sh
-npm i -g @iexec/iapp-maker
+npm i -g @iexec/iapp
 ```
 
 You can check if the installation was successful by running:
