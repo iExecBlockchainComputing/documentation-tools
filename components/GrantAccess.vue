@@ -2,11 +2,10 @@
   <div class="protect-data-container">
     <div class="wallet-section">
       Connect Your Wallet:
-
       <div class="ml-2 inline-block">
         <ReownButton @connected="onWalletConnected" />
       </div>
-      <div class="message-info">
+      <div>
         <p>You will sign two messages:</p>
         <ol>
           <li>A message granting access to the iApp</li>

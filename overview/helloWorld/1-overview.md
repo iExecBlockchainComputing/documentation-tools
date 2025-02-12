@@ -36,19 +36,19 @@
   <div class="requirements-list">
     <p><strong>You'll need a way to:</strong></p>
     <div class="requirement-item">
-      <span class="req-icon">🔒</span>
+      <span class="requirement-icon">🔒</span>
       <span>Keep the data confidential</span>
     </div>
     <div class="requirement-item">
-      <span class="req-icon">🎮</span>
+      <span class="requirement-icon">🎮</span>
       <span>Control who can access it</span>
     </div>
     <div class="requirement-item">
-      <span class="req-icon">⚡</span>
+      <span class="requirement-icon">⚡</span>
       <span>Process it securely</span>
     </div>
     <div class="requirement-item">
-      <span class="req-icon">💎</span>
+      <span class="requirement-icon">💎</span>
       <span>Potentially monetize it</span>
     </div>
   </div>

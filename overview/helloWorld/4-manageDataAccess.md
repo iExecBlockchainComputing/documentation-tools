@@ -67,17 +67,17 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 
 <div class="requirements-list">
   <div class="requirement-item">
-    <div class="req-title">📄 protectedData</div>
+    <div class="requirement-title">📄 protectedData</div>
     <span>The protected data address (local storage for the demo)</span>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">💻 authorizedApp</div>
+    <div class="requirement-title">💻 authorizedApp</div>
     <span>The iApp address you want to authorize</span>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">👤 authorizedUser</div>
+    <div class="requirement-title">👤 authorizedUser</div>
     <span>User's wallet address (0x... means all users)</span>
   </div>
 </div>
