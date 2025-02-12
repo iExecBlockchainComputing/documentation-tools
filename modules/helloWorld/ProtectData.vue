@@ -30,7 +30,7 @@
         :disabled="!isWalletConnected || isLoadingProtect"
         @click="protectData"
         class="protect-button"
-        data-track="grantAccess"
+        data-track="protectData"
       >
         {{ isLoadingProtect ? 'Processing...' : 'Protect Data' }}
       </Button>
