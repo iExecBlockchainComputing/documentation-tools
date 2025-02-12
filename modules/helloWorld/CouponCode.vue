@@ -60,16 +60,16 @@
 <script setup>
 import { ref, computed } from 'vue';
 import ReownButton from './ReownButton.vue';
-import { useAccount } from '@wagmi/vue';
+import { useWalletConnection } from '../../hooks/useWalletConnection.vue';
 
-const { address: walletAddress } = useAccount();
+const { userAddress } = useWalletConnection();
 
 const copied = ref(false);
 const codeElement = ref(null);
 
 const couponCode = computed(() => {
-  if (!walletAddress.value) return '';
-  return `HELLO${walletAddress.value.slice(2, 10).toUpperCase()}`;
+  if (!userAddress.value) return '';
+  return `HELLO${userAddress.value.slice(2, 10).toUpperCase()}`;
 });
 
 async function copyCode() {

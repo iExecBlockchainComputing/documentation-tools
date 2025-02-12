@@ -2,19 +2,17 @@
   <div class="protect-data-container">
     <div class="wallet-section">
       Connect Your Wallet:
-      <div class="ml-2 inline-block">
-        <ReownButton @connected="onWalletConnected" />
-      </div>
-      <div>
-        <p>You will sign two messages:</p>
-        <ol>
-          <li>A message granting access to the iApp</li>
-          <li>
-            An authentication message to post your granted access on a
-            broadcasting service (iExec marketplace)
-          </li>
-        </ol>
-      </div>
+      <ReownButton @connected="onWalletConnected" />
+    </div>
+    <div>
+      <p>You will sign two messages:</p>
+      <ol>
+        <li>A message granting access to the iApp</li>
+        <li>
+          An authentication message to post your granted access on a
+          broadcasting service (iExec marketplace)
+        </li>
+      </ol>
     </div>
 
     <div class="form-container">
@@ -77,30 +75,28 @@
 import { ref } from 'vue';
 import { Icon } from '@iconify/vue';
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
-import Button from './ui/Button.vue';
+import Button from '../../components/ui/Button.vue';
 import ReownButton from './ReownButton.vue';
 import { useAccount } from '@wagmi/vue';
+import { useWalletConnection } from '../../hooks/useWalletConnection.vue';
 
-const { isConnected, connector } = useAccount();
+const { connector } = useAccount();
+const {
+  web3Provider,
+  isWalletConnected,
+  protectedDataAddress,
+  onWalletConnected,
+} = useWalletConnection();
 
-const web3Provider = ref(null);
-const isWalletConnected = ref(isConnected);
-const protectedData = ref(null);
 const authorizedApp = ref('');
 const isLoadingGrant = ref(false);
 const grantError = ref(null);
 const grantedAccess = ref(null); // Reactive variable to store the granted access data
 
-if (typeof window !== 'undefined') {
-  protectedData.value = localStorage.getItem('protectedDataAddress')
-    ? { address: localStorage.getItem('protectedDataAddress') }
-    : null;
-}
-
-const onWalletConnected = (provider) => {
-  web3Provider.value = provider;
-  isWalletConnected.value = true;
-};
+// const onWalletConnected = (provider) => {
+//   web3Provider.value = provider;
+//   isWalletConnected.value = true;
+// };
 
 const grantAccess = async () => {
   try {
@@ -111,7 +107,7 @@ const grantAccess = async () => {
       }
       web3Provider.value = provider;
     }
-    if (!protectedData?.value?.address) {
+    if (!protectedDataAddress?.value?.address) {
       throw new Error(
         'Missing protected data address. Go back to the previous page and protect something.'
       );
@@ -125,7 +121,7 @@ const grantAccess = async () => {
     });
 
     const grantedAccessResult = await dataProtectorCore.grantAccess({
-      protectedData: protectedData?.value?.address,
+      protectedData: protectedDataAddress?.value?.address,
       authorizedApp: authorizedApp.value,
       authorizedUser: '0x0000000000000000000000000000000000000000',
     });
@@ -144,12 +140,6 @@ const grantAccess = async () => {
 .protect-data-container {
   width: 100%;
   margin: 2rem 0;
-}
-
-.wallet-section {
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-  color: var(--vp-c-text-1);
 }
 
 .form-container {

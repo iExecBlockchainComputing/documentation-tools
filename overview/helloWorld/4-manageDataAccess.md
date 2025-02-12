@@ -1,5 +1,5 @@
 <script setup>
-import GrantAccess from '../../components/GrantAccess.vue';
+import GrantAccess from '../../modules/helloWorld/GrantAccess.vue';
 </script>
 
 # 🔑 Manage Data Access

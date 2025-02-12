@@ -8,10 +8,7 @@
     >
       {{ isConnected ? 'Wallet Connected' : 'Connect Wallet' }}
     </Button>
-    <div
-      v-else="walletAddress"
-      class="inline-flex items-center gap-x-2 text-sm"
-    >
+    <div v-else="walletAddress" class="flex items-center gap-2 text-sm">
       <AddressChip :address="walletAddress" />
       <button
         type="button"

@@ -6,9 +6,7 @@
         (iExec network)
       </a>
       :
-      <div class="ml-2 inline-block">
-        <ReownButton @connected="onWalletConnected" />
-      </div>
+      <ReownButton />
     </div>
 
     <div>
@@ -81,39 +79,22 @@
 import { ref } from 'vue';
 import { Icon } from '@iconify/vue';
 import { IExecDataProtectorCore } from '@iexec/dataprotector';
-import Button from './ui/Button.vue';
+import Button from '../../components/ui/Button.vue';
 import ReownButton from './ReownButton.vue';
 import { useAccount } from '@wagmi/vue';
+import { useWalletConnection } from '../../hooks/useWalletConnection.vue';
 
-const { isConnected, connector } = useAccount();
+const { connector } = useAccount();
+const {
+  web3Provider,
+  isWalletConnected,
+  protectedDataAddress,
+  protectedDataIpfsAddress,
+} = useWalletConnection();
 
-const web3Provider = ref(null);
-const isWalletConnected = ref(isConnected);
-const protectedDataAddress = ref('');
-const protectedDataIpfsAddress = ref('');
 const contentToProtect = ref('');
 const isLoadingProtect = ref(false);
 const protectError = ref(null);
-
-if (typeof window !== 'undefined') {
-  const savedProtectedDataAddress = localStorage.getItem(
-    'protectedDataAddress'
-  );
-  const savedProtectedDataIpfsAddress = localStorage.getItem(
-    'protectedDataIpfsAddress'
-  );
-  if (savedProtectedDataAddress) {
-    protectedDataAddress.value = savedProtectedDataAddress;
-  }
-  if (savedProtectedDataIpfsAddress) {
-    protectedDataIpfsAddress.value = savedProtectedDataIpfsAddress;
-  }
-}
-
-const onWalletConnected = (provider) => {
-  web3Provider.value = provider;
-  isWalletConnected.value = true;
-};
 
 async function protectData() {
   try {
@@ -158,12 +139,6 @@ async function protectData() {
 .protect-data-container {
   width: 100%;
   margin: 2rem 0;
-}
-
-.wallet-section {
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-  color: var(--vp-c-text-1);
 }
 
 .form-container {
