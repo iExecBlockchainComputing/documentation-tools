@@ -24,7 +24,7 @@
       <input
         v-model="contentToProtect"
         placeholder="Enter a secret data to protect (e.g. 'My private data / mail / phone / ...')"
-        :disabled="!isWalletConnected"
+        :disabled="!isWalletConnected || isLoadingProtect"
       />
       <Button
         :disabled="!isWalletConnected || isLoadingProtect"
@@ -123,6 +123,7 @@ async function protectData() {
     const ipfsCid = createdProtectedData.multiaddr.split('/').pop();
 
     protectedDataAddress.value = createdProtectedData.address;
+    contentToProtect.value = '';
     protectedDataIpfsAddress.value = ipfsCid;
     localStorage.setItem('protectedDataAddress', createdProtectedData.address);
     localStorage.setItem('protectedDataIpfsAddress', ipfsCid);
