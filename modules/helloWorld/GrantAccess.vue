@@ -41,7 +41,7 @@
       </div>
 
       <p class="address-label">Protected data:</p>
-      <div class="address-container">{{ protectedData.address }}</div>
+      <div class="address-container">{{ protectedDataAddress }}</div>
 
       <p class="address-label">Authorized iExec App:</p>
       <div class="address-container">{{ authorizedApp }}</div>
@@ -107,7 +107,7 @@ const grantAccess = async () => {
       }
       web3Provider.value = provider;
     }
-    if (!protectedDataAddress?.value?.address) {
+    if (!protectedDataAddress?.value) {
       throw new Error(
         'Missing protected data address. Go back to the previous page and protect something.'
       );
@@ -121,7 +121,7 @@ const grantAccess = async () => {
     });
 
     const grantedAccessResult = await dataProtectorCore.grantAccess({
-      protectedData: protectedDataAddress?.value?.address,
+      protectedData: protectedDataAddress?.value,
       authorizedApp: authorizedApp.value,
       authorizedUser: '0x0000000000000000000000000000000000000000',
     });
