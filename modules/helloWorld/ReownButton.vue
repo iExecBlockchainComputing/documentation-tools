@@ -40,8 +40,8 @@
 import { watch } from 'vue';
 import { useAppKit } from '@reown/appkit/vue';
 import { useAccount, useDisconnect } from '@wagmi/vue';
-import AddressChip from '../../Components/AddressChip.vue';
-import Button from '../../Components/ui/Button.vue';
+import AddressChip from '../../components/AddressChip.vue';
+import Button from '../../components/ui/Button.vue';
 
 const { open } = useAppKit();
 const { disconnectAsync } = useDisconnect();
