@@ -91,12 +91,7 @@ const {
 const authorizedApp = ref('');
 const isLoadingGrant = ref(false);
 const grantError = ref(null);
-const grantedAccess = ref(null); // Reactive variable to store the granted access data
-
-// const onWalletConnected = (provider) => {
-//   web3Provider.value = provider;
-//   isWalletConnected.value = true;
-// };
+const grantedAccess = ref(null);
 
 const grantAccess = async () => {
   try {
