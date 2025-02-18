@@ -43,25 +43,23 @@ import Button from './ui/Button.vue';
 import ReownButton from './ReownButton.vue';
 import { useAccount } from '@wagmi/vue';
 
-const { isConnected, connector } = useAccount();
+const { connector } = useAccount();
+const {
+  web3Provider,
+  isWalletConnected,
+  protectedDataAddress,
+  onWalletConnected,
+} = useWalletConnection();
 
-const web3Provider = ref(null);
-const isWalletConnected = ref(isConnected);
-const protectedData = ref(null);
 const isLoadingRevoke = ref(false);
 const revokeError = ref(null);
 const revokedAccess = ref(null);
 
 if (typeof window !== 'undefined') {
-  protectedData.value = localStorage.getItem('protectedDataAddress')
+  protectedDataAddress.value = localStorage.getItem('protectedDataAddress')
     ? { address: localStorage.getItem('protectedDataAddress') }
     : null;
 }
-
-const onWalletConnected = (provider) => {
-  web3Provider.value = provider;
-  isWalletConnected.value = true;
-};
 
 const revokeAccess = async () => {
   try {
@@ -72,7 +70,7 @@ const revokeAccess = async () => {
       }
       web3Provider.value = provider;
     }
-    if (!protectedData?.value?.address) {
+    if (!protectedDataAddress?.value?.address) {
       throw new Error(
         'Missing protected data address. Go back to the previous page and protect something.'
       );
@@ -86,7 +84,7 @@ const revokeAccess = async () => {
     });
 
     const revokedAccessResult = await dataProtectorCore.revokeAllAccess({
-      protectedData: protectedData?.value?.address,
+      protectedData: protectedDataAddress?.value?.address,
     });
     console.log('Access revoked:', revokedAccessResult);
     revokedAccess.value = revokedAccessResult;
@@ -103,12 +101,6 @@ const revokeAccess = async () => {
 .protect-data-container {
   width: 100%;
   margin: 2rem 0;
-}
-
-.wallet-section {
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-  color: var(--vp-c-text-1);
 }
 
 .form-container {

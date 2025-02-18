@@ -8,10 +8,7 @@
     >
       {{ isConnected ? 'Wallet Connected' : 'Connect Wallet' }}
     </Button>
-    <div
-      v-else="walletAddress"
-      class="inline-flex items-center gap-x-2 text-sm"
-    >
+    <div v-else="walletAddress" class="flex items-center gap-2 text-sm">
       <AddressChip :address="walletAddress" />
       <button
         type="button"
@@ -43,8 +40,8 @@
 import { watch } from 'vue';
 import { useAppKit } from '@reown/appkit/vue';
 import { useAccount, useDisconnect } from '@wagmi/vue';
-import AddressChip from './AddressChip.vue';
-import Button from './ui/Button.vue';
+import AddressChip from '../../components/AddressChip.vue';
+import Button from '../../components/ui/Button.vue';
 
 const { open } = useAppKit();
 const { disconnectAsync } = useDisconnect();

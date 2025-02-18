@@ -26,11 +26,6 @@ Before getting started, ensure you have the following:
     <div class="requirement-title">📦 Node.js v20+</div>
     <a target="_blank" href="https://nodejs.org/en/">Download →</a>
   </div>
-
-  <div class="requirement-item">
-    <div class="requirement-title">📦 npm</div>
-    <a target="_blank" href="https://www.npmjs.com/get-npm">Download →</a>
-  </div>
   
   <div class="requirement-item">
     <div class="requirement-title">🐳 Docker</div>

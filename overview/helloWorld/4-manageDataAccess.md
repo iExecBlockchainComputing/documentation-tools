@@ -1,5 +1,8 @@
 <script setup>
-import GrantAccess from '../../components/GrantAccess.vue';
+import GrantAccess from '../../modules/helloWorld/GrantAccess.vue';
+import { useWalletConnection } from '../../hooks/useWalletConnection.vue';
+
+const { protectedDataAddress } = useWalletConnection();
 </script>
 
 # 🔑 Manage Data Access
@@ -90,8 +93,8 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 
 You're now ready to process your protected data in a trusted environment:
 
-```sh
-iapp run <my-iapp-address> --protectedData <protectedData-address>
+```sh-vue
+iapp run <my-iapp-address> --protectedData {{ protectedDataAddress }}
 ```
 
 <div class="solution-note green">
