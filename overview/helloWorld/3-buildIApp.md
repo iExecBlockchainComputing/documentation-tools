@@ -130,18 +130,18 @@ You will be prompted with the following message:
 </div>
 
 ```txt
-✔ JavaScript app setup complete.
+✔ [Chosen language] app setup complete.
 ✔ Generated ethereum wallet (0xD4A28d.........................)
 
 ```
 
-- A JavaScript iApp project is setup
+- An iApp project is setup with the selected language
 
 - An ethereum wallet has been created (we use it to sign the iApp creation
   onchain)
 
-- A new folder has been created, it contains a very simple Node.js application,
-  with the main code being located in `src/app.js`
+- A new folder has been created, it contains a very simple application,
+  with the main code being located in `src/app.js` or `src/app.py`
 
 ## 🧪 Test Your iApp
 
@@ -188,7 +188,7 @@ iapp test --protectedData default
 ```
 
 <div class="solution-note purple">
-  <p>You can check how args and protectedData are processed in <code> src/app.js</code></p>
+  <p>You can check how args and protectedData are processed in <code> src/app.js</code> or <code> src/app.py</code></p>
 </div>
 
 ## 🚀 Deploy Your iApp
