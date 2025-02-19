@@ -9,12 +9,9 @@ export function getSidebar() {
           { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/what-we-do' },
           {
             text: '👋&nbsp;&nbsp; Hello World',
+            link: '/overview/helloWorld',
             collapsed: true,
             items: [
-              {
-                text: 'Introduction',
-                link: '/overview/helloWorld/0-hello',
-              },
               {
                 text: 'iExec Overview',
                 link: '/overview/helloWorld/1-overview',
