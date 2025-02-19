@@ -75,12 +75,12 @@ iapp init
 You will be prompted with the following message:
 
 ```txt
-  ___    _    ____  ____  
- |_ _|  / \  |  _ \|  _ \ 
+  ___    _    ____  ____
+ |_ _|  / \  |  _ \|  _ \
   | |  / _ \ | |_) | |_) |
-  | | / ___ \|  __/|  __/ 
- |___/_/   \_\_|   |_|    
-                          
+  | | / ___ \|  __/|  __/
+ |___/_/   \_\_|   |_|
+
 ✔ What's your project name? (A folder with this name will be created) … hello-world
 ✔ Which language do you want to use? › JavaScript
 ? What kind of project do you want to init? › - Use arrow-keys. Return to submit.
@@ -140,8 +140,8 @@ You will be prompted with the following message:
 - An ethereum wallet has been created (we use it to sign the iApp creation
   onchain)
 
-- A new folder has been created, it contains a very simple application,
-  with the main code being located in `src/app.js` or `src/app.py`
+- A new folder has been created, it contains a very simple application, with the
+  main code being located in `src/app.js` or `src/app.py`
 
 ## 🧪 Test Your iApp
 
