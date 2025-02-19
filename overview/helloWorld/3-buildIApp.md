@@ -151,7 +151,7 @@ To test your iApp, run `iapp test` command
 iapp test
 ```
 
-It uses your local Node.js to execute the `app.js` file.
+It uses your local docker to build and execute the app.
 
 <div class="solution-note">
   <p>- If you have <code>Error: Docker daemon is not accessible</code> Make sure Docker is installed and running.</p>
