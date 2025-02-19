@@ -74,17 +74,18 @@ iapp init
 
 You will be prompted with the following message:
 
-```sh
-  ___    _    ____  ____
- |_ _|  / \  |  _ \|  _ \
+```txt
+  ___    _    ____  ____  
+ |_ _|  / \  |  _ \|  _ \ 
   | |  / _ \ | |_) | |_) |
-  | | / ___ \|  __/|  __/
- |___/_/   \_\_|   |_|
-
-✔ What's your project name? (A folder with this name will be created) ...
-? What kind of project do you want to init?
-  > Hello World - iapp quick start
-    Advanced
+  | | / ___ \|  __/|  __/ 
+ |___/_/   \_\_|   |_|    
+                          
+✔ What's your project name? (A folder with this name will be created) … hello-world
+✔ Which language do you want to use? › JavaScript
+? What kind of project do you want to init? › - Use arrow-keys. Return to submit.
+❯   Hello World - iapp quick start
+    advanced
 ```
 
 <div class="process-steps">
@@ -94,23 +95,41 @@ You will be prompted with the following message:
   </div>
 </div>
 
-```sh
-✔ What's your project name? (A folder with this name will be created) ...
-
+```txt
+? What's your project name? (A folder with this name will be created) ...
 ```
 
 <div class="process-steps">
   <div class="step">
     <span class="step-number">2</span>
+    <span>Select a programming language for your project</span>
+  </div>
+</div>
+
+```txt
+? Which language do you want to use? › - Use arrow-keys. Return to submit.
+❯   JavaScript
+    Python
+```
+
+<div class="process-steps">
+  <div class="step">
+    <span class="step-number">3</span>
     <span>Select the type of project you want to init</span>
   </div>
 </div>
+
+```txt
+? What kind of project do you want to init? › - Use arrow-keys. Return to submit.
+❯   Hello World - iapp quick start
+    advanced
+```
 
 <div class="solution-note">
   <p>We recommend selecting <span class="highlight">"Hello World"</span> to quickly discover how iApp works! use <span class="highlight">advanced</span> only if you are familiar with iExec.</p>
 </div>
 
-```sh
+```txt
 ✔ JavaScript app setup complete.
 ✔ Generated ethereum wallet (0xD4A28d.........................)
 
@@ -142,7 +161,7 @@ It uses your local Node.js to execute the `app.js` file.
 
 You can see the output of the computation by saying yes to the question:
 
-```sh
+```txt
 ? Would you like to see the result? (View ./output/) (Y/n)
 ```
 
