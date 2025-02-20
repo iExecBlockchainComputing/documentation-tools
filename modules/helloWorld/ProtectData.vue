@@ -10,13 +10,16 @@
     </div>
 
     <div>
-      <p>You will sign two things:</p>
+      <p>You will sign three things:</p>
       <ol>
         <li>A transaction to create the protected data</li>
         <li>
           A message signature to prove your identity to the production SMS
         </li>
-        <li>A message signature to prove your identity to the debug SMS</li>
+        <li>
+          A message signature to prove your identity to the debug SMS (this
+          signature is only required during this Hello World tutorial)
+        </li>
       </ol>
     </div>
 

@@ -236,6 +236,8 @@ docker buildx inspect --bootstrap | grep -i platforms
 ```
 
   <p>The output should include <code>linux/amd64</code> in the list of supported platforms. If not, update to the latest Docker Desktop version which includes these requirements.</p>
+  <br>
+   <p>⚠️  If you set the wrong Docker username, you can change it by editing the <code>iapp.config.json</code> file</p>
 </div>
 
 ## 🏃 Run Your iApp

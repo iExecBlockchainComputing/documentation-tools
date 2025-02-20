@@ -16,7 +16,7 @@
 ## What you'll learn and build
 
 <div class="journey-grid">
-  <a href="./1-overview" class="journey-card">
+  <a href="helloWorld/1-overview" class="journey-card">
     <div class="card-icon">📚</div>
     <div class="card-content">
       <h3>1 - iExec Overview</h3>
@@ -27,7 +27,7 @@
     </div>
   </a>
 
-  <a href="./2-protectData" class="journey-card">
+  <a href="helloWorld/2-protectData" class="journey-card">
     <div class="card-icon">🔒</div>
     <div class="card-content">
       <h3>2. Protect Your Data</h3>
@@ -38,7 +38,7 @@
     </div>
   </a>
 
-  <a href="./3-buildIApp" class="journey-card">
+  <a href="helloWorld/3-buildIApp" class="journey-card">
     <div class="card-icon">💻</div>
     <div class="card-content">
       <h3>3. Build your iApp</h3>
@@ -49,7 +49,7 @@
     </div>
   </a>
 
-  <a href="./4-manageDataAccess" class="journey-card">
+  <a href="helloWorld/4-manageDataAccess" class="journey-card">
     <div class="card-icon">🔑</div>
     <div class="card-content">
       <h3>4. Manage Data Access</h3>
@@ -60,7 +60,7 @@
     </div>
   </a>
   
-  <a href="./5-bonusChapter" class="journey-card special">
+  <a href="helloWorld/5-bonusChapter" class="journey-card special">
     <div class="card-icon">✨</div>
     <div class="card-content">
       <h3>Bonus Chapter</h3>
