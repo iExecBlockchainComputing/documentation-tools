@@ -10,7 +10,7 @@
     </div>
 
     <div>
-      <p>You will sign two things:</p>
+      <p>You will sign three things:</p>
       <ol>
         <li>A transaction to create the protected data</li>
         <li>
