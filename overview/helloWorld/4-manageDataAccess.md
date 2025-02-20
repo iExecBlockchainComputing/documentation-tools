@@ -1,5 +1,8 @@
 <script setup>
-import GrantAccess from '../../components/GrantAccess.vue';
+import GrantAccess from '../../modules/helloWorld/GrantAccess.vue';
+import { useWalletConnection } from '../../hooks/useWalletConnection.vue';
+
+const { protectedDataAddress } = useWalletConnection();
 </script>
 
 # 🔑 Manage Data Access
@@ -67,17 +70,17 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 
 <div class="requirements-list">
   <div class="requirement-item">
-    <div class="req-title">📄 protectedData</div>
+    <div class="requirement-title">📄 protectedData</div>
     <span>The protected data address (local storage for the demo)</span>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">💻 authorizedApp</div>
+    <div class="requirement-title">💻 authorizedApp</div>
     <span>The iApp address you want to authorize</span>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">👤 authorizedUser</div>
+    <div class="requirement-title">👤 authorizedUser</div>
     <span>User's wallet address (0x... means all users)</span>
   </div>
 </div>
@@ -90,8 +93,8 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 
 You're now ready to process your protected data in a trusted environment:
 
-```sh
-iapp run <my-iapp-address> --protectedData <protectedData-address>
+```sh-vue
+iapp run <my-iapp-address> --protectedData {{ protectedDataAddress }}
 ```
 
 <div class="solution-note green">

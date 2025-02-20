@@ -9,3 +9,4 @@ components.d.ts
 .DS_Store
 .env
 **/tailwind-output.css
+.vercel

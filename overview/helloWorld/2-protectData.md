@@ -1,5 +1,5 @@
 <script setup>
-import ProtectData from '../../components/ProtectData.vue';
+import ProtectData from '../../modules/helloWorld/ProtectData.vue';
 </script>
 
 # 🛡️ Let's protect data

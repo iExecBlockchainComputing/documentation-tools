@@ -66,7 +66,7 @@
       <h3>Bonus Chapter</h3>
       <p>Finish the journey with a surprise bonus chapter!</p>
       <div class="time-wrapper">
-        <span class="surprise-badge">Special Content</span>
+        <span>Special Content</span>
       </div>
     </div>
   </a>
@@ -78,21 +78,21 @@ Before you begin, make sure you have:
 
 <div class="requirements-list">
   <div class="requirement-item">
-    <div class="req-title">🦊 Ethereum Wallet <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Required to interact with iExec sidechain Bellecour features, manage your data access permissions, and handle transactions on the iExec platform</span></div></div>
+    <div class="requirement-title">🦊 Ethereum Wallet <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Required to interact with iExec sidechain Bellecour features, manage your data access permissions, and handle transactions on the iExec platform</span></div></div>
     <a target="_blank" href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">Metamask Download →</a>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">📦 Node.js v20+ <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Required runtime environment for running JavaScript code and managing project dependencies</span></div></div>
+    <div class="requirement-title">📦 Node.js v20+ <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Required runtime environment for running JavaScript code and managing project dependencies</span></div></div>
     <a target="_blank" href="https://nodejs.org/en/">Download →</a>
   </div>
    <div class="requirement-item">
-    <div class="req-title">🐳 Docker installed <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Docker is essential for creating isolated containers that package your iExec applications with all dependencies. This ensures consistent and secure execution across different environments, especially in TEEs (Trusted Execution Environments)</span></div></div>
+    <div class="requirement-title">🐳 Docker installed <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Docker is essential for creating isolated containers that package your iExec applications with all dependencies. This ensures consistent and secure execution across different environments, especially in TEEs (Trusted Execution Environments)</span></div></div>
     <a target="_blank" href="https://docker.com/">Download →</a>
   </div>
   
   <div class="requirement-item">
-    <div class="req-title">🐳 DockerHub Account <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Needed to publish and manage your iExec applications in containers for secure deployment</span></div></div>
+    <div class="requirement-title">🐳 DockerHub Account <div class="tooltip-container"><svg class="info-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"/><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/></svg><span class="tooltip-text">Needed to publish and manage your iExec applications in containers for secure deployment</span></div></div>
     <a target="_blank" href="https://hub.docker.com/">Sign Up →</a>
   </div>
 
@@ -107,11 +107,10 @@ Before you begin, make sure you have:
   display: inline-flex;
   align-items: center;
   position: relative;
-  margin-left: 4px;
   cursor: help;
 }
 
-.info-icon {
+.tooltip-container .info-icon {
   opacity: 0.6;
   transition: opacity 0.2s;
   color: #666;
@@ -122,7 +121,7 @@ Before you begin, make sure you have:
   color: #333;
 }
 
-.tooltip-text {
+.tooltip-container .tooltip-text {
   visibility: hidden;
   position: absolute;
   bottom: 100%;
@@ -141,7 +140,7 @@ Before you begin, make sure you have:
   transition: opacity 0.2s, visibility 0.2s;
 }
 
-.tooltip-text::after {
+.tooltip-container .tooltip-text::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -155,11 +154,5 @@ Before you begin, make sure you have:
 .tooltip-container:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
-}
-
-.req-title {
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 </style>
