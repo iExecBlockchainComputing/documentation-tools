@@ -16,7 +16,10 @@
         <li>
           A message signature to prove your identity to the production SMS
         </li>
-        <li>A message signature to prove your identity to the debug SMS</li>
+        <li>
+          A message signature to prove your identity to the debug SMS (this
+          signature is only required during this Hello World tutorial)
+        </li>
       </ol>
     </div>
 
