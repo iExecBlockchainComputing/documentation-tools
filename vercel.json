@@ -4,6 +4,10 @@
     {
       "source": "/tools/dataprotector/:path*",
       "destination": "/tools/dataProtector/:path*"
+    },
+    {
+      "source": "/overview/helloWorld/0-hello",
+      "destination": "/overview/helloWorld"
     }
   ]
 }
