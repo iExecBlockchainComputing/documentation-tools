@@ -97,7 +97,8 @@ const grantedAccess = await dataProtectorCore.grantAccess({
   authorizedUser: '0x789cba...', // address of the person you allow to send you messages // [!code focus]
   pricePerAccess: 3, // price you want to set when receiving messages // [!code focus]
   numberOfAccess: 10, // number of times they can send you messages // [!code focus]
-  onStatusUpdate: ({ title, isDone }) => { // [!code focus]
+  onStatusUpdate: ({ title, isDone }) => {
+    // [!code focus]
     // [!code focus]
     console.log(title, isDone); // [!code focus]
   }, // [!code focus]

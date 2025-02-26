@@ -34,9 +34,8 @@ const web3telegram = new IExecWeb3telegram(web3Provider, {
 ### dappWhitelistAddress
 
 The Ethereum contract address for the web3telegram dApps whitelist. By granting
-access to a whitelist, Chat Id owners ensure their Chat Id is still
-available to consumers even after a new version of web3telegram dApp gets
-released.
+access to a whitelist, Chat Id owners ensure their Chat Id is still available to
+consumers even after a new version of web3telegram dApp gets released.
 
 If not provided, the default whitelist smart contract address provided by iExec
 will be used.
