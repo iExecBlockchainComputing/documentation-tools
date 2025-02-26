@@ -345,7 +345,7 @@ export function getSidebar() {
         ],
       },
       {
-        text: '💬&nbsp;&nbsp;Web3telegram',
+        text: '💬&nbsp;&nbsp;Web3telegram <span class="VPBadge warning" style="margin-left: 8px; margin-bottom: -1px; transform: translateY(-1px);">alpha</span>',
         link: '/tools/web3telegram',
         collapsed: false,
         items: [
