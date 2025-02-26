@@ -57,10 +57,6 @@ export function getSidebar() {
             text: '🔧&nbsp;&nbsp;How to Pay for Web3mail',
             link: '/overview/how-to-pay-for-web3mail',
           },
-          {
-            text: '🔧&nbsp;&nbsp;How to Pay for Web3telegram',
-            link: '/overview/how-to-pay-for-web3telegram',
-          },
         ],
       },
       {
@@ -378,6 +374,10 @@ export function getSidebar() {
           {
             text: 'Integration Guide',
             link: '/tools/web3telegram/integration-guide',
+          },
+          {
+            text: 'How to Pay for Web3telegram',
+            link: '/tools/web3telegram/how-to-pay-for-web3telegram',
           },
           {
             text: 'Advanced Configuration',

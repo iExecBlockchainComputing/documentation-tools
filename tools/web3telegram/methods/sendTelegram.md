@@ -16,7 +16,7 @@ documentation for more details.
 
 For executing the `sendTelegram` method with a voucher or xRLC, refer to the
 dedicated section in the documentation under
-"[How to Pay for web3telegram](../../../overview/how-to-pay-for-web3telegram)".
+"[How to Pay for web3telegram](/tools/web3telegram/how-to-pay-for-web3telegram)".
 
 :::
 
