@@ -73,7 +73,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider);
 <!-- ## Sandbox
 
 <a href="https://codesandbox.io/p/github/iExecBlockchainComputing/web3mail-sandbox/main?file=/src/web3mail/web3mail.tsx:1,1&preventWorkspaceRedirect=true" target="_blank" rel="noreferrer" class="link-as-block">
- ⚡Work in progress⚡ 
+ ⚡Work in progress⚡
   <!-- ⚡&nbsp;Code Sandbox  -->
 <!-- </a>
 

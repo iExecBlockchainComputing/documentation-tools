@@ -1,8 +1,8 @@
 # Advanced configuration
 
-The `IExecWeb3Telegram` constructor accepts configuration options object. As these
-options are very specific, you won't need to use them for a standard usage of
-`@iexec/web3telegram`.
+The `IExecWeb3Telegram` constructor accepts configuration options object. As
+these options are very specific, you won't need to use them for a standard usage
+of `@iexec/web3telegram`.
 
 ## Parameters
 
@@ -12,8 +12,8 @@ import { type Web3TelegramConfigOptions } from '@iexec/web3telegram';
 
 ### dappAddressOrENS
 
-The Ethereum contract address or ENS (Ethereum Name Service) for the web3telegram
-dApp.
+The Ethereum contract address or ENS (Ethereum Name Service) for the
+web3telegram dApp.
 
 If not provided, the default ENS `web3telegram.apps.iexec.eth` pointing to the
 latest version of the web3telegram dApp provided by iExec will be used.
@@ -35,7 +35,8 @@ const web3telegram = new IExecWeb3telegram(web3Provider, {
 
 The Ethereum contract address for the web3telegram dApps whitelist. By granting
 access to a whitelist, email address owners ensure their email is still
-available to consumers even after a new version of web3telegram dApp gets released.
+available to consumers even after a new version of web3telegram dApp gets
+released.
 
 If not provided, the default whitelist smart contract address provided by iExec
 will be used.
@@ -83,7 +84,7 @@ import { IExecWeb3telegram, getWeb3Provider } from '@iexec/web3telegram';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
-const web3telegram= new IExecWeb3telegram(web3Provider, {
+const web3telegram = new IExecWeb3telegram(web3Provider, {
   ipfsNode: 'https://ipfs-upload.v8-bellecour.iex.ec', // [!code focus]
 });
 ```
