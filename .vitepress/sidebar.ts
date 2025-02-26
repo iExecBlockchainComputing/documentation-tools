@@ -372,8 +372,12 @@ export function getSidebar() {
             ],
           },
           {
-            text: 'Usage',
-            link: '/tools/web3telegram/usage',
+            text: 'Integration Guide',
+            link: '/tools/web3telegram/integration-guide',
+          },
+          {
+            text: 'Advanced Configuration',
+            link: '/tools/web3telegram/advanced-configuration',
           },
         ],
       },
