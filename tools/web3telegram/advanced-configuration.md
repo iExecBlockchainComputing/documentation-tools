@@ -34,7 +34,7 @@ const web3telegram = new IExecWeb3telegram(web3Provider, {
 ### dappWhitelistAddress
 
 The Ethereum contract address for the web3telegram dApps whitelist. By granting
-access to a whitelist, email address owners ensure their email is still
+access to a whitelist, Chat Id owners ensure their Chat Id is still
 available to consumers even after a new version of web3telegram dApp gets
 released.
 
@@ -47,12 +47,12 @@ import { IExecWeb3telegram, getWeb3Provider } from '@iexec/web3telegram';
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 // ---cut---
 const web3telegram = new IExecWeb3telegram(web3Provider, {
-  dappWhitelistAddress: '0x781482C39CcE25546583EaC4957Fb7Bf04C277D2', // [!code focus]
+  dappWhitelistAddress: '0x192C6f5AccE52c81Fcc2670f10611a3665AAA98F', // [!code focus]
 });
 ```
 
 See it in
-[https://blockscout-bellecour.iex.ec/](https://blockscout-bellecour.iex.ec/address/0x781482C39CcE25546583EaC4957Fb7Bf04C277D2)
+[https://blockscout-bellecour.iex.ec/](https://blockscout-bellecour.iex.ec/address/0x192C6f5AccE52c81Fcc2670f10611a3665AAA98F)
 
 ### dataProtectorSubgraph
 

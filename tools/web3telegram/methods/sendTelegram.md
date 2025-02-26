@@ -8,7 +8,7 @@ message must explicitly authorize you to send them telegram communications and
 permission must be granted for the `Web3Telegram` tool to use the
 `protectedData` entity containing their chat ID. This is best done by granting
 authorization to the Web3Telegram app whitelist
-`0x781482C39CcE25546583EaC4957Fb7Bf04C277D2` as `authorizedApp`. Refer to the
+`0x192C6f5AccE52c81Fcc2670f10611a3665AAA98F` as `authorizedApp`. Refer to the
 [Data Protector `grantAccess`](../../dataProtector/dataProtectorCore/grantAccess.md)
 documentation for more details.
 
