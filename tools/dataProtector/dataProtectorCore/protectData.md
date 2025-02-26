@@ -163,6 +163,34 @@ The name is public and not encrypted.
 
 :::
 
+### allowDebug <OptionalBadge />
+
+**Type:** `boolean`  
+**Default:** `false`
+
+Allow using the protected data in TEE debug apps.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const protectedData = await dataProtectorCore.protectData({
+  name: 'myEmail',
+  data: {
+    email: 'example@gmail.com',
+  },
+  allowDebug: true, // [!code focus]
+});
+```
+
+::: tip
+
+This param is for development only.
+
+:::
+
 ### onStatusUpdate <OptionalBadge />
 
 **Type:** `OnStatusUpdateFn<ProtectDataStatuses>`
@@ -289,7 +317,7 @@ details on the transaction using the [iExec explorer](https://explorer.iex.ec).
 Under the hood, your protected data will be **compressed as a zip file**. In
 this zip file, you'll find back all of your protected fields, each field being
 serialized with a tool called `borsh`. You can find more details here:
-[deserializer](../advanced/iDapp/deserializer).
+[deserializer](../advanced/iApp/deserializer).
 
 This is mainly returned for debug purpose.
 
@@ -310,6 +338,22 @@ data or download it consider adding a zip extension to it.
 
 :::
 
+### multiaddr
+
+`string` | `undefined`
+
+The multiaddr field is the IPFS path of your encrypted data.
+
+::: tip
+
+You can access your encrypted IPFS data with the link:
+
+`https://ipfs-gateway.v8-bellecour.iex.ec/ipfs/abc123...`
+
+`abc123...` is the second part of the returned string `/p2p/abc123...`
+
+:::
+
 ## Created protected data
 
 To further check your data was correctly created, you can inspect it on the
@@ -318,5 +362,3 @@ To further check your data was correctly created, you can inspect it on the
 <a href="https://explorer.iex.ec/" target="_blank" rel="noreferrer" style="display: inline-block">
   <img src="/assets/explorer-dataset-example.png" alt="iExec explorer - Dataset example">
 </a>
-
-The `Multiaddr` field is the URL on IPFS of your encrypted data.

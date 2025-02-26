@@ -12,95 +12,163 @@ the Ethereum price in USD:
 <a href="https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd">CoinGecko
 Ethereum API</a>.
 
-```js
-const updateOracleRes = factory
-  .updateOracle({
-    cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
+```ts twoslash
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
+// create an observable
+const updateOracleObservable = factory.updateOracle(
+  {
+    JSONPath: "$['ethereum']['usd']",
+    body: '',
+    dataType: 'number',
+    dataset: '0x0000000000000000000000000000000000000000',
+    headers: {},
+    method: 'GET',
+    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  },
+  {
     workerpool: '0xa5de76...',
-    targetBlockchains: ['134', '137'],
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle update Completed');
-    },
-  });
+    targetBlockchains: [137],
+  }
+);
+
+// subscribe to the observable and start the workflow
+updateOracleObservable.subscribe({
+  next: (data) => {
+    console.log('next', data);
+  },
+  error: (error) => {
+    console.log('error', error);
+  },
+  complete: () => {
+    console.log('Oracle update Completed');
+  },
+});
 ```
-
-## Return values during creation process
-
-These are the possible events iExec may send to the subscriber:
-
-| message                              | sent                  | additional entries                                                                                                         |
-| ------------------------------------ | --------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| ENSURE_PARAMS                        | once                  |                                                                                                                            |
-| ENSURE_PARAMS_SUCCESS                | once                  | paramSet: Object<br/> cid: String                                                                                          |
-| FETCH_APP_ORDER                      | once                  |                                                                                                                            |
-| FETCH_APP_ORDER_SUCCESS              | once                  | order: Object                                                                                                              |
-| FETCH_DATASET_ORDER                  | once if using dataset |                                                                                                                            |
-| FETCH_DATASET_ORDER_SUCCESS          | once if using dataset | order: Object                                                                                                              |
-| FETCH_WORKERPOOL_ORDER               | once                  |                                                                                                                            |
-| FETCH_WORKERPOOL_ORDER_SUCCESS       | once                  | order: Object                                                                                                              |
-| REQUEST_ORDER_SIGNATURE_SIGN_REQUEST | once                  | order: Object                                                                                                              |
-| REQUEST_ORDER_SIGNATURE_SUCCESS      | once                  | order: Object                                                                                                              |
-| MATCH_ORDERS_SIGN_TX_REQUEST         | once                  | apporder: Object<br/> datasetorder: Object<br/> workerpoolorder: Object<br/> requestorder: Object                          |
-| MATCH_ORDERS_SUCCESS                 | once                  | dealid: String<br/> txHash: String                                                                                         |
-| TASK_UPDATED                         | once per task update  | dealid: String<br/> taskid: String<br/> status: 'UNSET' \| 'ACTIVE' \| 'REVEALING' \| 'COMPLETED' \| 'TIMEOUT' \| 'FAILED' |
-| TASK_COMPLETED                       | once                  | dealid: String<br/> taskid: String<br/> status: String                                                                     |
 
 ## Parameters
 
-### cid
+### paramSet or paramSetCid <RequiredBadge />
 
-Content ID of the Oracle that needs to be updated.
+::: tip
 
-```js
-const updateOracleRes = factory
-  .updateOracle({
-    cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit', // [!code focus]
-    workerpool: '0xa5de76...',
-    targetBlockchains: ['134', '137'],
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle update Completed');
-    },
-  });
+- The oracle `ParamSet` describes the parameters used to feed the oracle.
+
+- Any different `ParamSet` has a unique `ParamSetCid` which is the Content ID of
+  the document on IPFS. With a `ParamSetCid` anyone can retrieve the `ParamSet`
+  from IPFS.
+
+:::
+
+- ParamSet of the Oracle to update.
+
+<!-- prettier-ignore-start -->
+```ts twoslash
+import {
+  IExecOracleFactory,
+  ParamSet,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
+const paramSet: ParamSet = { // [!code focus]
+  JSONPath: "$['ethereum']['usd']", // [!code focus]
+  body: '', // [!code focus]
+  dataType: 'number', // [!code focus]
+  dataset: '0x0000000000000000000000000000000000000000', // [!code focus]
+  headers: {}, // [!code focus]
+  method: 'GET', // [!code focus]
+  url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', // [!code focus]
+}; // [!code focus]
+
+const updateOracleObservable = factory.updateOracle(
+  paramSet // [!code focus]
+);
+```
+<!-- prettier-ignore-end -->
+
+- ParamSet CID of the Oracle to update.
+
+```ts twoslash
+import {
+  IExecOracleFactory,
+  ParamSetCID,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
+const paramSetCid: ParamSetCID = // [!code focus]
+  'QmbeY27w6dKxNQnGXih4AaotgNY3XuZ2yzbi2ZWQfRApqs'; // [!code focus]
+
+const updateOracleObservable = factory.updateOracle(
+  paramSetCid // [!code focus]
+);
 ```
 
-### workerpool
+### useVoucher <OptionalBadge />
+
+**Type:** `boolean`  
+**Default:** `false`
+
+This optional param allows you to pay for the deal using your voucher. Make sure
+that your voucher is held by your connected wallet.
+
+```ts
+import { IExecOracleFactory } from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
+const updateOracleObservable = factory.updateOracle(
+  {
+    JSONPath: "$['ethereum']['usd']",
+    body: '',
+    dataType: 'number',
+    dataset: '0x0000000000000000000000000000000000000000',
+    headers: {},
+    method: 'GET',
+    url: 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+  },
+  {
+    useVoucher: true, // [!code focus]
+  }
+);
+```
+
+::: tip
+
+If your voucher doesn't have enough xRLC to cover the deal, the SDK will
+automatically get the required amount to your iExec account. Ensure that your
+voucher is authorized to access your iExec account and that your account has
+sufficient funds for this transfer to proceed.
+
+:::
+
+### workerpool <OptionalBadge />
 
 Address of the workerpool that should perform the update.
 
-```js
-const updateOracleRes = factory
-  .updateOracle({
-    cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
+```ts twoslash
+import {
+  IExecOracleFactory,
+  ParamSetCID,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
+const updateOracleObservable = factory.updateOracle(
+  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
+  {
     workerpool: '0xa5de76...', // [!code focus]
-    targetBlockchains: ['134', '137'],
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle update Completed');
-    },
-  });
+    targetBlockchains: [137],
+  }
+);
 ```
 
 ::: tip
@@ -111,37 +179,100 @@ default workerpool for running confidential computations on the iExec platform.
 
 :::
 
-### targetBlockchains
+### targetBlockchains <OptionalBadge />
 
-Array of target blockchain IDs where the oracle is deployed. 137 for polygon,
-134 for iExec.
+Array of target blockchain chainId where the oracle is deployed. 1 for Ethereum
+mainnet, 137 for Polygon mainnet.
 
-```js
-const updateOracleRes = factory
-  .updateOracle({
-    cid: 'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
+```ts twoslash
+import {
+  IExecOracleFactory,
+  ParamSetCID,
+} from '@iexec/iexec-oracle-factory-wrapper';
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+// ---cut---
+const updateOracleObservable = factory.updateOracle(
+  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit',
+  {
     workerpool: '0xa5de76...',
-    targetBlockchains: ['134', '137'], // [!code focus]
-  })
-  .subscribe({
-    next: (data) => {
-      console.log('next', data);
-    },
-    error: (error) => {
-      console.log('error', error);
-    },
-    complete: () => {
-      console.log('Oracle update Completed');
-    },
-  });
+    targetBlockchains: [1, 137], // [!code focus]
+  }
+);
 ```
 
 ## Return value
 
-```json
-{
-  "dealid": "0x86e1d2b13cd176f86b2c9d10931bc20dba0d626f1dac07dd76c1b1cec569f232",
-  "taskid": "0x90a100c10780f1d0595dd9e37dc1655eb66f192bf1b2b31d719a6ca3c6b62d07",
-  "status": "REVEALING"
-}
+`Observable<UpdateOracleMessage>`
+
+```ts twoslash
+import type {
+  UpdateOracleMessage, // any `data` the `next(data)` handler can receive
+
+  // all `data` types
+  EnsureParamsMessage, // check ParamSet can be found on IPFS
+  EnsureParamsUploadMessage, // the ParamSet will be uploaded on IPFS
+  EnsureParamsSuccessMessage, // ParamSet exists on IPFS
+  FetchAppOrderMessage, // fetching app order
+  FetchAppOrderSuccessMessage, // app order found
+  FetchDatasetOrderMessage, // fetching dataset order (only for oracles using API key dataset)
+  FetchDatasetOrderSuccessMessage, // app order found (only for oracles using API key dataset)
+  FetchWorkerpoolOrderMessage, // fetching workerpool order
+  FetchWorkerpoolOrderSuccessMessage, // app workerpool found
+  RequestOrderSignatureSignRequestMessage, // asking the user to sign the request order
+  RequestOrderSignatureSuccessMessage, //
+  MatchOrdersSignTxRequestMessage, // asking the user to sign the transaction to match the orders and make a deal
+  MatchOrdersSuccessMessage, // orders matched
+  TaskUpdatedMessage, // notifies a task status change
+  UpdateTaskCompletedMessage, // the oracle update task is completed
+} from '@iexec/iexec-oracle-factory-wrapper';
 ```
+
+::: tip
+
+Nothing happens before `subscribe()` is called on the returned observable.
+
+You can provide custom `next`, `complete` and `error` callback methods to
+`subscribe`
+
+```ts twoslash
+import {
+  IExecOracleFactory,
+  Observable,
+  ObservableNext,
+  ObservableComplete,
+  ObservableError,
+  UpdateOracleMessage,
+} from '@iexec/iexec-oracle-factory-wrapper';
+
+const web3Provider = {} as any;
+const factory = new IExecOracleFactory(web3Provider);
+
+const updateOracleObservable = factory.updateOracle(
+  'QmbXhtjAJysMMA69KkB8KohsEDTZA2PXuhYdAQcHjjQFit'
+);
+// ---cut---
+// method to call when the workflow goes to a new step
+const nextCallback: ObservableNext<UpdateOracleMessage> = (data) => {
+  // your logic
+};
+
+// method to call when the workflow completes successfully
+const completeCallback: ObservableComplete = () => {
+  // your logic
+};
+
+// method to call when the workflow fails
+const errorCallback: ObservableError = (error: Error) => {
+  // your logic
+};
+
+updateOracleObservable.subscribe({
+  next: nextCallback,
+  complete: completeCallback,
+  error: errorCallback,
+});
+```
+
+:::

@@ -8,6 +8,33 @@ export function getSidebar() {
         items: [
           { text: '💡&nbsp;&nbsp;What We Do', link: '/overview/what-we-do' },
           {
+            text: '👋&nbsp;&nbsp; Hello World',
+            link: '/overview/helloWorld',
+            collapsed: true,
+            items: [
+              {
+                text: 'iExec Overview',
+                link: '/overview/helloWorld/1-overview',
+              },
+              {
+                text: 'Protect data',
+                link: '/overview/helloWorld/2-protectData',
+              },
+              {
+                text: 'Build iApp',
+                link: '/overview/helloWorld/3-buildIApp',
+              },
+              {
+                text: 'Manage data access',
+                link: '/overview/helloWorld/4-manageDataAccess',
+              },
+              {
+                text: 'Bonus chapter!',
+                link: '/overview/helloWorld/5-bonusChapter',
+              },
+            ],
+          },
+          {
             text: '📽&nbsp;&nbsp;Use Case Demo',
             collapsed: true,
             link: '/overview/use-case-demo',
@@ -21,6 +48,14 @@ export function getSidebar() {
                 link: '/overview/use-case-demo/content-creator',
               },
             ],
+          },
+          // {
+          //   text: '💰&nbsp;&nbsp;Pricing Considerations',
+          //   link: '/overview/pricing-considerations',
+          // },
+          {
+            text: '🔧&nbsp;&nbsp;How to Pay for Web3mail',
+            link: '/overview/how-to-pay-for-web3mail',
           },
         ],
       },
@@ -39,24 +74,24 @@ export function getSidebar() {
             collapsed: true,
             items: [
               {
-                text: 'getGrantedAccess',
-                link: '/tools/dataProtector/dataProtectorCore/getGrantedAccess',
+                text: 'protectData',
+                link: '/tools/dataProtector/dataProtectorCore/protectData',
               },
               {
                 text: 'getProtectedData',
                 link: '/tools/dataProtector/dataProtectorCore/getProtectedData',
               },
               {
+                text: 'transferOwnership',
+                link: '/tools/dataProtector/dataProtectorCore/transferOwnership',
+              },
+              {
                 text: 'grantAccess',
                 link: '/tools/dataProtector/dataProtectorCore/grantAccess',
               },
               {
-                text: 'processProtectedData',
-                link: '/tools/dataProtector/dataProtectorCore/processProtectedData',
-              },
-              {
-                text: 'protectData',
-                link: '/tools/dataProtector/dataProtectorCore/protectData',
+                text: 'getGrantedAccess',
+                link: '/tools/dataProtector/dataProtectorCore/getGrantedAccess',
               },
               {
                 text: 'revokeOneAccess',
@@ -67,8 +102,12 @@ export function getSidebar() {
                 link: '/tools/dataProtector/dataProtectorCore/revokeAllAccess',
               },
               {
-                text: 'transferOwnership',
-                link: '/tools/dataProtector/dataProtectorCore/transferOwnership',
+                text: 'processProtectedData',
+                link: '/tools/dataProtector/dataProtectorCore/processProtectedData',
+              },
+              {
+                text: 'getResultFromCompletedTask',
+                link: '/tools/dataProtector/dataProtectorCore/getResultFromCompletedTask',
               },
             ],
           },
@@ -108,6 +147,10 @@ export function getSidebar() {
                   {
                     text: 'setProtectedDataToRenting',
                     link: '/tools/dataProtector/dataProtectorSharing/renting/setProtectedDataToRenting',
+                  },
+                  {
+                    text: 'setProtectedDataRentingParams',
+                    link: '/tools/dataProtector/dataProtectorSharing/renting/setProtectedDataRentingParams',
                   },
                   {
                     text: 'rentProtectedData',
@@ -168,10 +211,6 @@ export function getSidebar() {
                   {
                     text: 'consumeProtectedData',
                     link: '/tools/dataProtector/dataProtectorSharing/consume/consumeProtectedData',
-                  },
-                  {
-                    text: 'getResultFromCompletedTask',
-                    link: '/tools/dataProtector/dataProtectorSharing/consume/getResultFromCompletedTask',
                   },
                 ],
               },
@@ -243,18 +282,18 @@ export function getSidebar() {
                 ],
               },
               {
-                text: 'iDapp',
-                link: '/tools/dataProtector/advanced/iDapp',
+                text: 'iApp',
+                link: '/tools/dataProtector/advanced/iApp',
                 collapsed: true,
                 items: [
                   {
                     text: 'DataProtector Deserializer',
-                    link: '/tools/dataProtector/advanced/iDapp/deserializer',
+                    link: '/tools/dataProtector/advanced/iApp/deserializer',
                     collapsed: true,
                     items: [
                       {
                         text: 'getValue',
-                        link: '/tools/dataProtector/advanced/iDapp/deserializer/getValue',
+                        link: '/tools/dataProtector/advanced/iApp/deserializer/getValue',
                       },
                     ],
                   },

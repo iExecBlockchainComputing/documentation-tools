@@ -105,6 +105,12 @@ milliseconds since the epoch. This timestamp provides precise information about
 the moment of creation and can be used for chronological ordering or time-based
 operations.
 
+### multiaddr
+
+`string` | `undefined`
+
+The multiaddr field is the IPFS path of your encrypted data.
+
 ## RevokedAccess
 
 ### access

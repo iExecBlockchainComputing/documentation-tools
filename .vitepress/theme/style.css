@@ -28,7 +28,7 @@
 }
 
 /* Force dark header even if light theme */
-header {
+header .VPNavBar {
   --vp-c-bg: #161618;
   --vp-c-text-1: white;
   --vp-c-text-3: rgba(235, 235, 245, 0.38);
@@ -58,7 +58,8 @@ header .title > span {
 
 /* `Code` in links. Primary yellow is too light */
 /* Here especially for the underline color */
-.vp-doc a {
+.vp-doc a,
+.custom-block.info code {
   color: var(--vp-code-color);
 }
 

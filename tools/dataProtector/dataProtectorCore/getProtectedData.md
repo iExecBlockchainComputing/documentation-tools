@@ -1,14 +1,14 @@
 # getProtectedData
 
 This method allows the user to retrieve all protected data for a given owner,
-data schema, or both. Only protected data objects the invoker has permissions to
-access are included in the result set. You must include at least one of the
-optional parameters when invoking this method.
+data schema, or both.
+
+Results are ordered by `creationTimestamp` desc.
 
 ::: tip
 
 A data schema is the metadata describing the contents of the protected data
-object. The schema is returned as part of the [protectedData](protectData.md)
+object. The schema is returned as part of the [protectData](protectData.md)
 method invocation.
 
 :::
@@ -35,6 +35,24 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 import { type GetProtectedDataParams } from '@iexec/dataprotector';
 ```
 
+### protectedDataAddress <OptionalBadge />
+
+**Type:** `AddressOrENS`
+
+Returns the protected data associated with this address.  
+Returns an empty array if the protected data is not found.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const oneProtectedData = await dataProtectorCore.getProtectedData({
+  protectedDataAddress: '0x123abc...', // [!code focus]
+});
+```
+
 ### requiredSchema <OptionalBadge />
 
 **Type:** `SearchableDataSchema`
@@ -55,6 +73,25 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 });
 ```
 <!-- prettier-ignore-end -->
+
+It's also possible to provide a list of accepted types for one schema field:
+
+<!-- prettier-ignore-start -->
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const listProtectedData = await dataProtectorCore.getProtectedData({
+  requiredSchema: { // [!code focus]
+    picture: ['image/png', 'image/jpeg'], // [!code focus]
+  }, // [!code focus]
+});
+```
+<!-- prettier-ignore-end -->
+
+Available types are listed [here](./protectData#schema).
 
 ### owner <OptionalBadge />
 
@@ -95,11 +132,12 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 
 ### page <OptionalBadge />
 
-**Type:** `number`
+**Type:** `number`  
+**Default:** `0`
 
-Specifies the results page to return. The default for this is `0` which returns
-all results. Pages are indexed starting at page 1. If using this field you may
-also specify a `pageSize` to control the size of the results.
+Specifies the results page to return. Pages are indexed starting at page 0. If
+using this field you may also specify a `pageSize` to control the size of the
+results.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -117,7 +155,7 @@ const listProtectedData = await dataProtectorCore.getProtectedData({
 ### pageSize <OptionalBadge />
 
 **Type:** `number`  
-**Default:** `20`  
+**Default:** `1000`  
 **Range:** `[10...1000]`
 
 Specifies the number of records in each page of the result set. This is used in

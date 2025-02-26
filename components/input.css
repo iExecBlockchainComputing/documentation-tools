@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* -------------- iExec Colors -------------- */
+    /* iExec Yellow/iexec-yellow-300 = #FCD15A */
+    --yellow-300: 44 96% 67%;
+
+    /* Grey/grey-100 = #F2F2F7 */
+    --grey-100: 240 24% 96%;
+
+    /* Grey/grey-800 = #1D1D24 = rgb(29 29 36) */
+    --grey-800: 240 11% 13%;
+
+    --success: #4caf50;
+    --bg-success: #e8f5e9;
+    --on-bg-success: rgb(60, 60, 67);
+
+    /* -------------- Meaningful colors --------------- */
+
+    --primary: var(--yellow-300);
+    /* Text color when on primary background */
+    --primary-foreground: var(--grey-800);
+  }
+}
+
+.dark {
+  --on-bg-success: rgb(60, 60, 67);
+}

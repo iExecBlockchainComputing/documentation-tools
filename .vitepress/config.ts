@@ -1,3 +1,4 @@
+import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -12,6 +13,7 @@ export default defineConfig({
   // Remove the trailing .html from URLs. Also needs the same option in vercel.json
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,
   markdown: {
     codeTransformers: [transformerTwoslash()],
     theme: {
@@ -30,10 +32,46 @@ export default defineConfig({
     ],
     [
       'script',
+      {},
+      `
+      window.axeptioSettings = {
+        clientId: "6413111857e4d2a6342cd5c6",
+        cookiesVersion: "iexec-en",
+      };
+
+      (function(d, s) {
+        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+        e.async = true; e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+      })(document, "script");
+      `,
+    ],
+    [
+      'script',
       {
-        async: '',
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-10RGBF003J',
+        defer: '',
+        src: 'https://widget.mava.app',
+        'widget-version': 'v2',
+        id: 'MavaWebChat',
+        'enable-sdk': 'false',
+        'data-token':
+          '8e4e10aad5750451e8726768e8c639dae54f461beeb176f5ebd687371c9390f2',
       },
+    ],
+    // 🔥 Hotjar Tracking Script
+    [
+      'script',
+      {},
+      `
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:5303222,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      `,
     ],
   ],
   themeConfig: {
@@ -52,7 +90,13 @@ export default defineConfig({
       { text: 'Contact Us', link: '/help/contact-us' },
       { text: 'Protocol', link: 'https://protocol.docs.iex.ec/' },
     ],
-    outline: [2, 3],
+
+    // Nav Table of Content on the right
+    aside: true,
+    outline: {
+      level: [2, 3],
+    },
+
     search: {
       provider: 'local',
     },
@@ -72,11 +116,11 @@ export default defineConfig({
         dateStyle: 'medium',
       },
     },
-    // TODO: See if we keep that, and if so witch to 'main' branch
-    // editLink: {
-    //   pattern:
-    //     'https://github.com/iExecBlockchainComputing/documentation-tools/edit/feature/migrate-to-vitepress/:path',
-    // },
+    editLink: {
+      pattern:
+        'https://github.com/iExecBlockchainComputing/documentation-tools/blob/main/:path',
+      text: 'Suggest changes to this page',
+    },
   },
   vite: {
     plugins: [
@@ -90,5 +134,15 @@ export default defineConfig({
         resolvers: [ElementPlusResolver({ ssr: true })],
       }),
     ],
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPDocOutlineItem\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/CustomVPDocOutlineItem.vue', import.meta.url)
+          ),
+        },
+      ],
+    },
   },
 });
