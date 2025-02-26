@@ -146,6 +146,7 @@ voucher is authorized to access your iExec account and that your account has
 sufficient funds for this transfer to proceed.
 
 :::
+
 ### label
 
 `string | undefined`

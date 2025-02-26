@@ -3,11 +3,11 @@
 [Web3Telegram](../tools/web3telegram) dev tool offers secure, blockchain-based
 communication by encrypting emails and protecting user privacy.
 
-The `sendTelegram` function uses confidential computing power to encrypt and send
-messages, ensuring secure and decentralized email exchanges.
+The `sendTelegram` function uses confidential computing power to encrypt and
+send messages, ensuring secure and decentralized email exchanges.
 
-This guide explains how to pay for Web3Telegram's computing power using **vouchers**
-and **xRLC**, detailing the steps for each method.
+This guide explains how to pay for Web3Telegram's computing power using
+**vouchers** and **xRLC**, detailing the steps for each method.
 
 ## Using Vouchers for Web3Telegram
 
@@ -45,8 +45,8 @@ contract to debit your account if the voucher balance is insufficient. This
 ensures that if the voucher alone doesn't cover the execution cost, the
 remaining balance is automatically deducted from your account.
 
-For additional information on using xRLC for fallback payment in Web3Telegram, refer
-to the **Using xRLC with Web3Telegram** section.
+For additional information on using xRLC for fallback payment in Web3Telegram,
+refer to the **Using xRLC with Web3Telegram** section.
 
 ### Step 4: Execute Web3Telegram's sendTelegram Function
 
@@ -74,8 +74,9 @@ const sendTelegram = await web3telegram.sendTelegram({
 
 ## Using xRlC for Web3Telegram
 
-If you choose to use xRLC to cover the computational cost of Web3Telegram (or if you
-need to cover data access costs such as retrieving the recipient's Chat Id), follow these steps:
+If you choose to use xRLC to cover the computational cost of Web3Telegram (or if
+you need to cover data access costs such as retrieving the recipient's Chat Id),
+follow these steps:
 
 ### Install the iExec SDK
 
