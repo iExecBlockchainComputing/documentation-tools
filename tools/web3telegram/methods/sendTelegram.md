@@ -12,6 +12,14 @@ authorization to the Web3Telegram app whitelist
 [Data Protector `grantAccess`](../../dataProtector/dataProtectorCore/grantAccess.md)
 documentation for more details.
 
+::: tip
+
+For executing the `sendTelegram` method with a voucher or xRLC, refer to the
+dedicated section in the documentation under
+"[How to Pay for web3telegram](../../../overview/how-to-pay-for-web3telegram)".
+
+:::
+
 ## Usage
 
 ```ts twoslash
@@ -102,6 +110,42 @@ const sendTelegram = await web3telegram.sendTelegram({
 });
 ```
 
+### useVoucher <OptionalBadge />
+
+**Type:** `boolean`  
+**Default:** `false`
+
+This optional param allows you to pay for the deal using your voucher. Make sure
+that your voucher is held by your connected wallet.
+
+```ts twoslash
+import { IExecWeb3telegram, getWeb3Provider } from '@iexec/web3telegram';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const web3telegram = new IExecWeb3telegram(web3Provider);
+// ---cut---
+
+const sendTelegram = await web3telegram.sendTelegram({
+  protectedData: '0x123abc...',
+  telegramContent: 'My telegram message content',
+  senderName: 'Awesome project team',
+  label: 'some-cutom-id',
+  workerpoolAddressOrEns: 'prod-v8-bellecour.main.pools.iexec.eth',
+  dataMaxPrice: 42,
+  appMaxPrice: 42,
+  workerpoolMaxPrice: 42,
+  useVoucher: true, // [!code focus]
+});
+```
+
+::: tip
+
+If your voucher doesn't have enough xRLC to cover the deal, the SDK will
+automatically get the required amount to your iExec account. Ensure that your
+voucher is authorized to access your iExec account and that your account has
+sufficient funds for this transfer to proceed.
+
+:::
 ### label
 
 `string | undefined`
