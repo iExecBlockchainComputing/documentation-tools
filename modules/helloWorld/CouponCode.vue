@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="!walletAddress">
+    <div v-if="!userAddress">
       <p>
         <b>
           🔑 Get your unique coupon code (it will be asked during the voucher

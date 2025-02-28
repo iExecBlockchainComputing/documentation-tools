@@ -1,3 +1,7 @@
+<script setup>
+import CouponCode from '../../modules/helloWorld/CouponCode.vue';
+</script>
+
 # 🎉 Bonus chapter
 
 > Reading time 🕒 4 mins
@@ -37,9 +41,9 @@ raffles</strong>, stay tuned for the next one!</p>
 
 <div class="coupon-section">
   <p>Here's your unique coupon code based on your wallet address. You'll need to provide this code when claiming your voucher on Discord:</p>
-  <ClientOnly>
+  <!-- <ClientOnly> -->
     <CouponCode />
-  </ClientOnly>
+  <!-- </ClientOnly> -->
 </div>
 
 <br>
@@ -54,7 +58,3 @@ raffles</strong>, stay tuned for the next one!</p>
 <div class="solution-note green">
   <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
 </div>
-
-<style>
-
-</style>
