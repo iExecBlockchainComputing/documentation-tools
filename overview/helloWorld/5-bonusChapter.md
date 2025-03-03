@@ -41,9 +41,9 @@ raffles</strong>, stay tuned for the next one!</p>
 
 <div class="coupon-section">
   <p>Here's your unique coupon code based on your wallet address. You'll need to provide this code when claiming your voucher on Discord:</p>
-  <!-- <ClientOnly> -->
+  <ClientOnly>
     <CouponCode />
-  <!-- </ClientOnly> -->
+  </ClientOnly>
 </div>
 
 <br>
