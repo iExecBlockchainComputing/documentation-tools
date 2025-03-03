@@ -31,7 +31,9 @@ ID.
 - Once the Chat ID is protected, all messages will arrive within this bot
   conversation.
 - The recipient can leave the conversation at any time to stop receiving
-  messages. :::
+  messages.
+
+:::
 
 ## 2. Create the Protected Data with Data Protector SDK
 
