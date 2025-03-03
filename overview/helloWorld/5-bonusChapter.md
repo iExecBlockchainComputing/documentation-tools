@@ -1,3 +1,7 @@
+<script setup>
+import CouponCode from '../../modules/helloWorld/CouponCode.vue';
+</script>
+
 # 🎉 Bonus chapter
 
 > Reading time 🕒 4 mins
@@ -54,7 +58,3 @@ raffles</strong>, stay tuned for the next one!</p>
 <div class="solution-note green">
   <p>Thank you for being part of the iExec journey! We can't wait to see what you'll build next! 🚀</p>
 </div>
-
-<style>
-
-</style>
