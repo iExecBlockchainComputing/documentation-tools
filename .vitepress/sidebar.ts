@@ -374,10 +374,13 @@ export function getSidebar() {
           {
             text: 'Integration Guide',
             link: '/tools/web3telegram/integration-guide',
-          },
+            collapsed: true,
+            items: [
           {
             text: 'How to Pay for Web3telegram',
             link: '/tools/web3telegram/how-to-pay-for-web3telegram',
+          }
+            ],
           },
           {
             text: 'Advanced Configuration',
