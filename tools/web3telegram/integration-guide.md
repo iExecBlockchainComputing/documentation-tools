@@ -2,32 +2,41 @@
 
 ## Overview
 
-Integrating **iExec Web3Telegram** enables secure and private messaging on Telegram using blockchain-based access control. This allows users to send and receive messages while maintaining full control over their data. 
+Integrating **iExec Web3Telegram** enables secure and private messaging on
+Telegram using blockchain-based access control. This allows users to send and
+receive messages while maintaining full control over their data.
 
 The integration process consists of the following steps:
 
 1. **Get your user to retrieve their Chat ID from the iExec Web3Telegram bot.**
 2. **Create the protected data via the iExec Data Protector SDK.**
-3. **Grant access via the Data Protector SDK to authorize users to receive messages.**
+3. **Grant access via the Data Protector SDK to authorize users to receive
+   messages.**
 4. **Send messages securely using the Web3Telegram SDK.**
 
 ## 1. Get Your Users to Retrieve Their Chat ID
 
-To enable messaging via Web3Telegram, you need to retrieve the recipient's Chat ID.
+To enable messaging via Web3Telegram, you need to retrieve the recipient's Chat
+ID.
 
 ### Steps:
-- Ask the recipient to open Telegram and start a conversation with [**@IExecWeb3Telegrambot**](https://t.me/IExecWeb3TelegramBot).
+
+- Ask the recipient to open Telegram and start a conversation with
+  [**@IExecWeb3Telegrambot**](https://t.me/IExecWeb3TelegramBot).
 - The bot will reply with their unique Chat ID.
 - Save this Chat ID as you will need it for the next steps.
 
 ::: tip
-- Once the Chat ID is protected, all messages will arrive within this bot conversation.
-- The recipient can leave the conversation at any time to stop receiving messages.
-:::
+
+- Once the Chat ID is protected, all messages will arrive within this bot
+  conversation.
+- The recipient can leave the conversation at any time to stop receiving
+  messages. :::
 
 ## 2. Create the Protected Data with Data Protector SDK
 
-After obtaining your user's Chat ID, you need to protect it using iExec’s Data Protector to ensure privacy and security.
+After obtaining your user's Chat ID, you need to protect it using iExec’s Data
+Protector to ensure privacy and security.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -42,7 +51,8 @@ const protectedData = await dataProtectorCore.protectData({
 
 ## 3. Grant Access via Data Protector SDK
 
-To allow users to send messages, you must explicitly grant access to specific users.
+To allow users to send messages, you must explicitly grant access to specific
+users.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -77,6 +87,10 @@ const sendTelegram = await web3telegram.sendTelegram({
 
 ## Conclusion
 
-By integrating **iExec Web3Telegram**, you ensure privacy, security, and decentralized control over your Telegram messaging. Your users decide who can send them messages and set a cost for access while keeping their Telegram handle hidden.
+By integrating **iExec Web3Telegram**, you ensure privacy, security, and
+decentralized control over your Telegram messaging. Your users decide who can
+send them messages and set a cost for access while keeping their Telegram handle
+hidden.
 
-For further support, join the iExec community on [Discord](https://discord.com/invite/pbt9m98wnU).
+For further support, join the iExec community on
+[Discord](https://discord.com/invite/pbt9m98wnU).
