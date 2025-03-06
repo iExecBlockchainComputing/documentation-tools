@@ -19,6 +19,8 @@ The integration process consists of the following steps:
 To enable messaging via Web3Telegram, you need to retrieve the recipient's Chat
 ID.
 
+A **Chat ID** is a unique identifier assigned to your Telegram account. It allows applications to send messages to you **without revealing your actual Telegram username or phone number**. By **protecting your Chat ID with iExec**, you ensure that it remains **encrypted and private**, so only **authorized senders** can contact you.
+
 ### Steps:
 
 - Ask the recipient to open Telegram and start a conversation with
