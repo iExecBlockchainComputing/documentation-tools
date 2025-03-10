@@ -26,6 +26,7 @@
     "@iexec/dataprotector-deserializer": "^0.1.1",
     "@iexec/iexec-oracle-factory-wrapper": "^2.5.0",
     "@iexec/web3mail": "^1.1.1",
+    "@iexec/web3telegram": "^0.0.1-alpha",
     "@reown/appkit": "^1.6.5",
     "@reown/appkit-adapter-wagmi": "^1.6.5",
     "@tanstack/vue-query": "^5.64.2",

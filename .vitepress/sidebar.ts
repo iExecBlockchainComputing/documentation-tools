@@ -345,6 +345,50 @@ export function getSidebar() {
         ],
       },
       {
+        text: '💬&nbsp;&nbsp;Web3telegram <span class="VPBadge warning" style="margin-left: 8px; margin-bottom: -1px; transform: translateY(-1px);">alpha</span>',
+        link: '/tools/web3telegram',
+        collapsed: false,
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/tools/web3telegram/getting-started',
+          },
+          {
+            text: 'Methods',
+            collapsed: true,
+            items: [
+              {
+                text: 'fetchMyContacts',
+                link: '/tools/web3telegram/methods/fetchMyContacts',
+              },
+              {
+                text: 'fetchUserContacts',
+                link: '/tools/web3telegram/methods/fetchUserContacts',
+              },
+              {
+                text: 'sendTelegram',
+                link: '/tools/web3telegram/methods/sendTelegram',
+              },
+            ],
+          },
+          {
+            text: 'Integration Guide',
+            link: '/tools/web3telegram/integration-guide',
+            collapsed: true,
+            items: [
+              {
+                text: 'How to Pay for Web3telegram',
+                link: '/tools/web3telegram/how-to-pay-for-web3telegram',
+              },
+            ],
+          },
+          {
+            text: 'Advanced Configuration',
+            link: '/tools/web3telegram/advanced-configuration',
+          },
+        ],
+      },
+      {
         text: '🧙&nbsp;&nbsp;Oracle Factory',
         link: '/tools/oracle-factory',
         collapsed: false,
