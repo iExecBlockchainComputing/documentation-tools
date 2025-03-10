@@ -13,22 +13,21 @@ import CouponCode from '../../modules/helloWorld/CouponCode.vue';
   </div>
 </div>
 
-## 🏁 Final steps
+## 🏁 Any questions?
 
 <div style="display: flex; align-items: center; gap: 2rem;">
   <div style="flex: 1;line-height: 2.5" class="p-6 space-y-4 text-lg font-medium text-center">
-    Now that you've completed the Hello World, enter our RAFFLE for a chance to win $50 USDC! on the link below 
+    If you have any questions, please schedule an appointment with our DevRel team who will be happy to help!
     <br>
-   <a href="https://app.galxe.com/quest/fArdRcqqbivyjCJ9u7nPt8/GCQm3tpA74" target="_blank">🎉QUEST🎉</a>
+    <a href="https://calendly.com/martin-leclercq-iexec/30min" target="_blank">📅 Book a meeting</a>
   </div>
   <div style="flex: 1; display: flex; justify-content: center;">
     <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenE3ZW42enUydnl5b2F3ZDcyNHZkdXF6bzFydjl6bmc4MzYydHRweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g9582DNuQppxC/giphy.gif" alt="Funny waiting animation" width="300" height="300" />
   </div>
 </div>
 
-<div class="solution-note">
-  <p>As an <strong>early tester</strong>, you'll have the chance to enter our <strong>exclusive monthly
-raffles</strong>, stay tuned for the next one!</p>
+<div class="solution-note green">
+  <p>Need help setting up or got some questions? Join our <a target="_blank" href="https://discord.gg/6yrgRH6ATD">Discord Community</a> for support!</p>
 </div>
 
 ## 🎁 Claim your voucher
