@@ -52,7 +52,7 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 const protectedData = await dataProtectorCore.protectData({
   data: {
-    chatId: '12345678', // Recipient's Chat ID
+    telegram_chatId: '12345678', // Recipient's Chat ID
   },
 });
 ```
