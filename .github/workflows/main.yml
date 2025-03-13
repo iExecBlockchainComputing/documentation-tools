@@ -1,23 +1,16 @@
 name: main-ci
 
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_TOOLS_DOC_PROJECT_ID }}
-
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
     paths-ignore:
       - 'README.md'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,21 +28,3 @@ jobs:
 
       - name: Check Prettier
         run: npm run check-format
-
-      - name: Set Vercel Token
-        id: set-vercel-token
-        run: |
-          if [ "${{ github.actor }}" = "ErwanDecoster" ]; then
-            echo "vercel_token=${{ secrets.VERCEL_TOKEN_ERWAN }}" >> $GITHUB_OUTPUT
-          else
-            echo "vercel_token=${{ secrets.VERCEL_TOKEN }}" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Vercel deploy to prod
-        env:
-          VITE_REOWN_PROJECT_ID: ${{ secrets.VITE_REOWN_PROJECT_ID }}
-        run: |
-          npm install --global vercel@latest
-          vercel pull --yes --environment=production --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
-          VITE_APP_COMMIT=${{ github.sha }} vercel build --prod --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
-          vercel deploy --prod --prebuilt --scope i-exec --token=${{ steps.set-vercel-token.outputs.vercel_token }}
