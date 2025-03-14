@@ -60,6 +60,44 @@ export function getSidebar() {
         ],
       },
       {
+        text: '🧠 &nbsp;Resources for AI <span class="VPBadge warning" style="margin-left: 8px; margin-bottom: -1px; transform: translateY(-1px);">beta</span>',
+        link: '/tools/ai-resources',
+        collapsed: false,
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/tools/ai-resources/getting-started',
+          },
+          {
+            text: 'Supported AI frameworks',
+            link: '/tools/ai-resources/frameworks/',
+            collapsed: true,
+            items: [
+              {
+                text: 'TensorFlow',
+                link: '/tools/ai-resources/frameworks/TensorFlow',
+              },
+              {
+                text: 'PyTorch',
+                link: '/tools/ai-resources/frameworks/PyTorch',
+              },
+              {
+                text: 'OpenVINO',
+                link: '/tools/ai-resources/frameworks/OpenVINO',
+              },
+            ],
+          },
+          {
+            text: 'iApp Generator templates',
+            link: '/tools/ai-resources/iAppGenerator',
+          },
+          {
+            text: 'Intel TDX Workers',
+            link: '/tools/ai-resources/tdx',
+          },
+        ]
+      },
+      {
         text: '🔐 &nbsp;DataProtector <span class="VPBadge warning" style="margin-left: 8px; margin-bottom: -1px; transform: translateY(-1px);">beta</span>',
         link: '/tools/dataProtector',
         collapsed: false,
