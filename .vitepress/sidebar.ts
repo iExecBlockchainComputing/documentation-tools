@@ -308,6 +308,39 @@ export function getSidebar() {
         ],
       },
       {
+        text: '🧬&nbsp;&nbsp;iAppGenerator',
+        link: '/tools/iappGenerator',
+        collapsed: false,
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/tools/iappGenerator/getting-started',
+          },
+          {
+            text: 'Commands',
+            collapsed: true,
+            items: [
+              {
+                text: 'Init iApp',
+                link: '/tools/iappGenerator/commands/init-iapp',
+              },
+              {
+                text: 'configure',
+                link: '/tools/iappGenerator/commands/configure',
+              },
+              {
+                text: 'launch',
+                link: '/tools/iappGenerator/commands/launch',
+              },
+            ],
+          },
+          {
+            text: 'Going Further',
+            link: '/tools/iappGenerator/going-further',
+          },
+        ],
+      },
+      {
         text: '✉&nbsp;&nbsp;Web3mail',
         link: '/tools/web3mail',
         collapsed: false,
