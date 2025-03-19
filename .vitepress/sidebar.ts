@@ -325,11 +325,11 @@ export function getSidebar() {
                 link: '/tools/iappGenerator/commands/init-iapp',
               },
               {
-                text: 'configure',
+                text: 'Configure',
                 link: '/tools/iappGenerator/commands/configure',
               },
               {
-                text: 'launch',
+                text: 'Launch',
                 link: '/tools/iappGenerator/commands/launch',
               },
             ],
