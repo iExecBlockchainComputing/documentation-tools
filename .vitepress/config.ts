@@ -5,6 +5,10 @@ import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
 import { getSidebar } from './sidebar';
+import {
+  groupIconMdPlugin,
+  groupIconVitePlugin,
+} from 'vitepress-plugin-group-icons';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -16,6 +20,9 @@ export default defineConfig({
   ignoreDeadLinks: true,
   markdown: {
     codeTransformers: [transformerTwoslash()],
+    config(md) {
+      md.use(groupIconMdPlugin);
+    },
     theme: {
       light: 'min-light',
       dark: 'vitesse-dark',
@@ -133,6 +140,7 @@ export default defineConfig({
         include: [/\.vue$/, /\.md$/],
         resolvers: [ElementPlusResolver({ ssr: true })],
       }),
+      groupIconVitePlugin(),
     ],
     resolve: {
       alias: [
