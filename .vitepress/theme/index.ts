@@ -9,7 +9,7 @@ import './style.css';
 import './tailwind-output.css';
 import { wagmiAdapter } from '../../utils/wagmiConfig.ts';
 import googleAnalytics from 'vitepress-plugin-google-analytics';
-import 'virtual:group-icons.css'
+import 'virtual:group-icons.css';
 
 declare global {
   interface Window {
