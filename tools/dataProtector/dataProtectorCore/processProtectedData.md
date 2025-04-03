@@ -178,8 +178,8 @@ sufficient funds for this transfer to proceed.
 
 **Type:** `Address`
 
-This optional parameter allows you to pay for the deal using someone else’s
-voucher. Make sure the voucher has authorized you to use it. This parameter must
+This optional parameter allows you to pay for the task using someone else’s
+voucher. Make sure the voucher's owner has authorized you to use it. This parameter must
 be used in combination with `useVoucher: true`.
 
 ```ts twoslash
