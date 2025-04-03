@@ -148,8 +148,9 @@ const processProtectedDataResponse =
 **Type:** `boolean`  
 **Default:** `false`
 
-This optional param allows you to pay for the deal using your voucher. Make sure
-that your voucher is held by your connected wallet.
+This optional parameter allows you to pay for the task using a voucher. By
+default, it uses the voucher associated with your connected wallet, but you can
+override this by specifying a voucherAddress.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
@@ -179,8 +180,8 @@ sufficient funds for this transfer to proceed.
 **Type:** `Address`
 
 This optional parameter allows you to pay for the task using someone else’s
-voucher. Make sure the voucher's owner has authorized you to use it. This parameter must
-be used in combination with `useVoucher: true`.
+voucher. Make sure the voucher's owner has authorized you to use it. This
+parameter must be used in combination with `useVoucher: true`.
 
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
