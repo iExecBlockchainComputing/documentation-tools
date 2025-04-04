@@ -40,12 +40,12 @@ export function getSidebar() {
             link: '/overview/use-case-demo',
             items: [
               {
-                text: 'Web3Messaging',
-                link: '/overview/use-case-demo/web3messaging',
-              },
-              {
                 text: 'Content Creator',
                 link: '/overview/use-case-demo/content-creator',
+              },
+              {
+                text: 'Web3Messaging',
+                link: '/overview/use-case-demo/web3messaging',
               },
             ],
           },
