@@ -4,6 +4,10 @@ import { Icon } from '@iconify/vue';
 
 # Web3Messaging
 
+<a href="https://demo.iex.ec/web3messaging/" target="_blank" rel="noreferrer" style="display: inline-block; margin-top: 20px">
+  <img src="/assets/web3messaging-screenshot.png" alt="Web3Messaging screenshot">
+</a>
+
 In the Web3 ecosystem, blockchain wallets serve as digital identities, creating significant privacy risks due to public ledgers containing transaction histories and assets.
 
 Web3Messaging, a core iExec use case, enables secure communications between Web3 users and decentralized applications (dApps) while preserving privacy and requiring explicit consent. This technology allows for targeted messaging without compromising personal data, while empowering users to monetize their engagement with received communications.
