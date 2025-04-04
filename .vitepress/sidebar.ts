@@ -74,6 +74,10 @@ export function getSidebar() {
             collapsed: true,
             items: [
               {
+                text: 'scikit-learn',
+                link: '/tools/ai-resources/frameworks/scikit-learn',
+              },
+              {
                 text: 'TensorFlow',
                 link: '/tools/ai-resources/frameworks/TensorFlow',
               },
