@@ -8,6 +8,10 @@
     {
       "source": "/overview/helloWorld/0-hello",
       "destination": "/overview/helloWorld"
+    },
+    {
+      "source": "/overview/use-case-demo/privacy-enhancing-marketing",
+      "destination": "overview/use-case-demo"
     }
   ]
 }

@@ -1,3 +1,7 @@
+<script setup>
+import { Icon } from '@iconify/vue';
+</script>
+
 # :speech_balloon: Web3Telegram
 
 Web3Telegram offers a secure method to manage telegram communications via the
@@ -26,3 +30,9 @@ Apps using Web3Telegram can:
   username
 - grant users complete control over which entities are authorized to use their
   chat ID to send them communications
+
+**Try the demo:**
+
+<a href="https://demo.iex.ec/web3messaging" target="_blank" rel="noreferrer" class="link-as-block">
+  <Icon icon="mdi:art" height="25" style="margin-right: -1px" /> Web3Messaging Demo
+</a>

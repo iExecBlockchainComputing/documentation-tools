@@ -59,7 +59,7 @@ support their needs for confidentiality and security.
 
 **Use Cases**
 
-- [Privacy Enhanced Marketing](./use-case-demo/privacy-enhancing-marketing.md)
+- [Web3Messaging](./use-case-demo/web3messaging.md)
 - [Content Creator](./use-case-demo/content-creator.md)
 
 _\*digital estate represents every digital asset that you own and can create
