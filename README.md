@@ -61,7 +61,7 @@ for input parameters:
 - `appWhitelist`: '0xba46d6...',
 - `owner`: '0xa0c15e...',
 - `newOwner`: '0xc5e9f4...',
-- `voucherAddress`: '0x5714eB...',
+- `voucherOwner`: '0x5714eB...',
 - `renterAddress`: '0x246bdf...'
 - `subscriberAddress`: '0x246bdf...'
 - `workerpool`: '0xa5de76...'
