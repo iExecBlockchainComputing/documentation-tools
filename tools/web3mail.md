@@ -1,3 +1,7 @@
+<script setup>
+import { Icon } from '@iconify/vue';
+</script>
+
 # ✉ Web3Mail
 
 The Web3Mail tool offers a secure method to manage email-based communications
@@ -29,3 +33,9 @@ The Web3Mail tool currently supports the following methods:
   have authorized a given entity to email them
 - **sendEmail** — send an email message to a user knowing only the Ethereum
   address for the `protectedData` containing their email address
+
+**Try the demo:**
+
+<a href="https://demo.iex.ec/web3messaging" target="_blank" rel="noreferrer" class="link-as-block">
+  <Icon icon="mdi:art" height="25" style="margin-right: -1px" /> Web3Messaging Demo
+</a>
