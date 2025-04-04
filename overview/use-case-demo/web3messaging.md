@@ -8,23 +8,34 @@ import { Icon } from '@iconify/vue';
   <img src="/assets/web3messaging-screenshot.png" alt="Web3Messaging screenshot">
 </a>
 
-In the Web3 ecosystem, blockchain wallets serve as digital identities, creating significant privacy risks due to public ledgers containing transaction histories and assets.
+In the Web3 ecosystem, blockchain wallets serve as digital identities, creating
+significant privacy risks due to public ledgers containing transaction histories
+and assets.
 
-Web3Messaging, a core iExec use case, enables secure communications between Web3 users and decentralized applications (dApps) while preserving privacy and requiring explicit consent. This technology allows for targeted messaging without compromising personal data, while empowering users to monetize their engagement with received communications.
+Web3Messaging, a core iExec use case, enables secure communications between Web3
+users and decentralized applications (dApps) while preserving privacy and
+requiring explicit consent. This technology allows for targeted messaging
+without compromising personal data, while empowering users to monetize their
+engagement with received communications.
 
 ## Key Components:
 
-- **User Consent Management**: Users explicitly authorize sharing their data with third parties
-- **Secure Data Sharing**: Confidential computing enables protected data exchange
-- **Privacy-Preserving Channels**: Third parties contact users without accessing personal data directly
-- **Targeted Communication**: Reach relevant users without exposing their personal information
+- **User Consent Management**: Users explicitly authorize sharing their data
+  with third parties
+- **Secure Data Sharing**: Confidential computing enables protected data
+  exchange
+- **Privacy-Preserving Channels**: Third parties contact users without accessing
+  personal data directly
+- **Targeted Communication**: Reach relevant users without exposing their
+  personal information
 - **User Monetization**: Users can earn rewards for engaging with communications
 
 ## Available Solutions
 
 **Web3Mail**: Privacy-preserving email communications for Web3 users
 
-**Web3Telegram**: Our new solution extending private messaging capabilities via Telegram
+**Web3Telegram**: Our new solution extending private messaging capabilities via
+Telegram
 
 **Try the demo:**
 
@@ -36,7 +47,8 @@ View our live Web3Messaging demo by connecting your Ethereum wallet.
 
 **GitHub repository:**
 
-Access our full codebase, documentation, and integration guidelines. Run the demo locally or within Docker using our instructions.
+Access our full codebase, documentation, and integration guidelines. Run the
+demo locally or within Docker using our instructions.
 
 <a href="https://github.com/iExecBlockchainComputing/web3-messaging-usecase-demo" target="_blank" rel="noreferrer" class="link-as-block">
   <Icon icon="mdi:github" height="24" /> Web3Messaging use case demo
