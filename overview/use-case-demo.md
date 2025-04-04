@@ -6,7 +6,7 @@ applications to ensure data **privacy** and **ownership** while sharing and
 **monetizing computing resources**.
 
 These examples combine our tools in different ways. For example, the
-[Web3Messaging](./use-case-demo/privacy-enhancing-marketing.md)
+[Web3Messaging](./use-case-demo/web3messaging.md)
 use case uses the Web3Mail and Web3Telegram tools to send directed communications to a
 user's email or telegram inbox. It employs the DataProtector tool to hide the user's email
 address or the Telegram ID.
