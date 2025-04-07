@@ -1,3 +1,10 @@
+---
+description:
+  Web3Mail enables secure, private email communication on the blockchain using
+  Ethereum addresses. Manage contact permissions and send emails without
+  revealing personal information.
+---
+
 # ✉ Web3Mail
 
 The Web3Mail tool offers a secure method to manage email-based communications
