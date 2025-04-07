@@ -24,8 +24,8 @@ engagement with received communications.
   with third parties
 - **Secure Data Sharing**: Confidential computing enables protected data
   exchange
-- **Privacy-Preserving Channels**: Third parties contact users without accessing
-  personal data directly
+- **Privacy-Preserving Channels**: Third parties can contact users without accessing
+personal data.
 - **Targeted Communication**: Reach relevant users without revealing their
 identities.
 - **User Monetization**: Users can earn rewards for engaging with communications
