@@ -34,8 +34,8 @@ engagement with received communications.
 
 **Web3Mail**: Privacy-preserving email communications for Web3 users
 
-**Web3Telegram**: Our new solution extending private messaging capabilities via
-Telegram
+**Web3Telegram**: A new solution extending private messaging to Telegram, while
+protecting the user's chat ID.
 
 **Try the demo:**
 
