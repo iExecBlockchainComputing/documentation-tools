@@ -12,10 +12,10 @@ In the Web3 ecosystem, blockchain wallets serve as digital identities, creating
 significant privacy risks due to public ledgers containing transaction histories
 and assets.
 
-Web3Messaging, a core iExec use case, enables secure communications between Web3
+Web3Messaging, a core iExec use case, enables secure communication between Web3
 users and decentralized applications (dApps) while preserving privacy and
-requiring explicit consent. This technology allows for targeted messaging
-without compromising personal data, while empowering users to monetize their
+requiring explicit user consent. It supports targeted messaging
+without exposing personal data, and empowers users to monetize their
 engagement with received communications.
 
 ## Key Components:
