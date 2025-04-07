@@ -175,7 +175,7 @@ sufficient funds for this transfer to proceed.
 
 :::
 
-### voucherAddress <OptionalBadge />
+### voucherOwner <OptionalBadge />
 
 **Type:** `Address`
 
@@ -194,7 +194,7 @@ const processProtectedDataResponse =
     protectedData: '0x123abc...',
     app: '0x456def...',
     useVoucher: true, // [!code focus]
-    voucherAddress: '0x5714eB...', // [!code focus]
+    voucherOwner: '0x5714eB...', // [!code focus]
   });
 ```
 
