@@ -1,3 +1,9 @@
+---
+description:
+  Use the fetchMyContacts method from iExec web3telegram to retrieve contact
+  infos of users who authorized you to message them
+---
+
 # fetchMyContacts
 
 This method provides a list of `contact` objects identifying all users who

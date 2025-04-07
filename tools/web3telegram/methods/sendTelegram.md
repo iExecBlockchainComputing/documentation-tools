@@ -1,3 +1,10 @@
+---
+description:
+  Use the sendTelegram method from Web3Telegram to send secure Telegram messages
+  without knowing the recipient's username or chat ID, leveraging Ethereum
+  addresses and iExec's Data Protector tool.
+---
+
 # sendTelegram
 
 This method allows an authorized entity to send a telegram message to a User

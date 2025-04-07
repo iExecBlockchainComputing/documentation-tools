@@ -1,3 +1,10 @@
+---
+description:
+  Web3Telegram enables private, blockchain-based Telegram messaging using
+  Ethereum addresses. Users retain full control over who can contact
+  them—without sharing their chat ID.
+---
+
 # :speech_balloon: Web3Telegram
 
 Web3Telegram offers a secure method to manage telegram communications via the
