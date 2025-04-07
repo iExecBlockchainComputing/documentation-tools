@@ -14,9 +14,9 @@ and assets.
 
 Web3Messaging, a core iExec use case, enables secure communication between Web3
 users and decentralized applications (dApps) while preserving privacy and
-requiring explicit user consent. It supports targeted messaging
-without exposing personal data, and empowers users to monetize their
-engagement with received communications.
+requiring explicit user consent. It supports targeted messaging without exposing
+personal data, and empowers users to monetize their engagement with received
+communications.
 
 ## Key Components:
 
@@ -24,10 +24,10 @@ engagement with received communications.
   with third parties
 - **Secure Data Sharing**: Confidential computing enables protected data
   exchange
-- **Privacy-Preserving Channels**: Third parties can contact users without accessing
-personal data.
+- **Privacy-Preserving Channels**: Third parties can contact users without
+  accessing personal data.
 - **Targeted Communication**: Reach relevant users without revealing their
-identities.
+  identities.
 - **User Monetization**: Users can earn rewards for engaging with communications
 
 ## Available Solutions
