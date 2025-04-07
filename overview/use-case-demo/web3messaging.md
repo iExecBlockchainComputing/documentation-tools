@@ -26,8 +26,8 @@ engagement with received communications.
   exchange
 - **Privacy-Preserving Channels**: Third parties contact users without accessing
   personal data directly
-- **Targeted Communication**: Reach relevant users without exposing their
-  personal information
+- **Targeted Communication**: Reach relevant users without revealing their
+identities.
 - **User Monetization**: Users can earn rewards for engaging with communications
 
 ## Available Solutions
