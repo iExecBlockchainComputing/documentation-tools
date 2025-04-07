@@ -1,3 +1,11 @@
+---
+description:
+  Renting options for distributing protected data allow consumers to access data
+  for a set price and duration. The Data Sharing smart contract ensures renter
+  protection, guaranteeing access for the agreed term and enforcing rental
+  terms, even if modified by the owner.
+---
+
 # Data sharing - Renting
 
 Rental agreements are one of the options given for distributing a collection

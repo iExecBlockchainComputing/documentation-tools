@@ -1,3 +1,10 @@
+---
+description:
+  Learn how DataProtector Core gives developers powerful tools to encrypt data,
+  manage ownership with NFTs, and control access using smart contracts and
+  confidential computing.
+---
+
 # DataProtector Core
 
 The DataProtector tool allows application developers to provide users with

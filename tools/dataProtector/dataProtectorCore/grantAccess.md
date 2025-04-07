@@ -1,3 +1,10 @@
+---
+description:
+  Grant secure access to encrypted data with iExec's grantAccess method.
+  Authorize specific applications or users to process protected data, with
+  customizable access limits and pricing.
+---
+
 # grantAccess
 
 Data encrypted through the Data Protector tool requires explicit authorization

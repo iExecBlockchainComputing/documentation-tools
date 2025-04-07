@@ -1,3 +1,10 @@
+---
+description:
+  Retrieve all protected data for a specific owner or schema with the
+  getProtectedData method in iExec DataProtector. Easily access encrypted data
+  and metadata, sorted by creation date.
+---
+
 # getProtectedData
 
 This method allows the user to retrieve all protected data for a given owner,

@@ -1,3 +1,10 @@
+---
+description:
+  Create a new data collection with iExec’s createCollection method. Organize
+  and manage your protected data for seamless distribution and monetization
+  through DataProtector Sharing.
+---
+
 # createCollection
 
 Method to create a new collection in the Data Sharing smart contract.

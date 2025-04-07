@@ -1,3 +1,10 @@
+---
+description:
+  Discover DataProtector, iExec’s secure data management solution. Encrypt,
+  share, and monetize your data with DataProtector Core and Sharing modules, all
+  powered by blockchain technology.
+---
+
 # 🔐 DataProtector <span style="margin-left: 12px; position: absolute; top: -2px;"><Badge type="tip" text="2.0.0" /> <Badge type="warning" text="beta" /></span>
 
 DataProtector **simplifies secure data management**, offering users essential

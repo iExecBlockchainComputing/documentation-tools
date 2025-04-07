@@ -1,3 +1,10 @@
+---
+description:
+  Learn how to build your own iApp with the iExec TEE framework, supporting
+  languages like Go, Rust, Python, and JavaScript for decentralized,
+  privacy-preserving applications.
+---
+
 # iApp
 
 Building your own iApp is essential if you want to utilize our development tools

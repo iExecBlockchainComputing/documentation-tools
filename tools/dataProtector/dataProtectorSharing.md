@@ -1,3 +1,10 @@
+---
+description:
+  Distribute and monetize your protected data effortlessly with DataProtector
+  Sharing. Use smart contracts to manage access, rent, or sell data while
+  maintaining control and privacy.
+---
+
 # DataProtector Sharing
 
 The DataProtector Sharing module includes a set of methods for distributing and

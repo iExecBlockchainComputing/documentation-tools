@@ -1,3 +1,10 @@
+---
+description:
+  Revoke all or specific access permissions to protected data with iExec’s
+  revokeAllAccess method. Efficiently manage data security by removing access
+  from users or applications.
+---
+
 # revokeAllAccess
 
 This method allows revoking authorizations granted to a `protectedData` entity.

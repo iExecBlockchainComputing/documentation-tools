@@ -1,3 +1,10 @@
+---
+description:
+  Explore the iExec tools documentation and start building decentralized apps
+  with data ownership, privacy, and monetization in mind. Learn about Web3Mail,
+  DataProtector, Oracle Factory, and more.
+---
+
 # iExec tools documentation
 
 ## Start building with iExec

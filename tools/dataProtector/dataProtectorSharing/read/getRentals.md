@@ -1,3 +1,9 @@
+---
+description:
+  Retrieve all rentals for a specific protected data or user in iExec. Access
+  detailed rental information based on the protected data ID.
+---
+
 # getRentals
 
 Method to get all rentals for:

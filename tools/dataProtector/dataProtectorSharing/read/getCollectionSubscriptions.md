@@ -1,3 +1,9 @@
+---
+description:
+  Fetch all subscriptions for a specific collection or user in iExec. Get
+  detailed information about subscription activity based on collection ID.
+---
+
 # getCollectionSubscriptions
 
 Method to get all subscriptions for:
