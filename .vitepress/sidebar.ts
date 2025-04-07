@@ -44,7 +44,7 @@ export function getSidebar() {
                 link: '/overview/use-case-demo/content-creator',
               },
               {
-                text: 'Web3Messaging',
+                text: 'Web3 Messaging',
                 link: '/overview/use-case-demo/web3messaging',
               },
             ],
