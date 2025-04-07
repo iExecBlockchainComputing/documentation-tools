@@ -40,12 +40,12 @@ export function getSidebar() {
             link: '/overview/use-case-demo',
             items: [
               {
-                text: 'Privacy Enhancing Marketing',
-                link: '/overview/use-case-demo/privacy-enhancing-marketing',
-              },
-              {
                 text: 'Content Creator',
                 link: '/overview/use-case-demo/content-creator',
+              },
+              {
+                text: 'Web3 Messaging',
+                link: '/overview/use-case-demo/web3messaging',
               },
             ],
           },
