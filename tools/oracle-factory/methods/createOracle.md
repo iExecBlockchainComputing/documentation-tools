@@ -1,3 +1,10 @@
+---
+description:
+  Create an oracle with the createOracle method using the iExec Oracle Factory
+  SDK. In this guide, we use the CoinGecko API to fetch Ethereum price data and
+  set up a real-time data source for blockchain applications.
+---
+
 # createOracle
 
 The `createOracle` method is designed to facilitate the creation of an oracle,

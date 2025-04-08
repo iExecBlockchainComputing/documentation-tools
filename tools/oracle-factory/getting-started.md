@@ -1,3 +1,10 @@
+---
+description:
+  Learn how to integrate Oracle Factory into project with the IExec Oracle
+  Factory SDK. Set up your environment, install dependencies, and instantiate
+  the SDK to start creating and managing decentralized oracles.
+---
+
 # Getting Started
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/iexec-oracle-factory-wrapper?color=green)](https://github.com/iExecBlockchainComputing/iexec-oracle-factory-wrapper)

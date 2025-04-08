@@ -1,3 +1,11 @@
+---
+description:
+  update an existing oracle using the updateOracle method from the iExec Oracle
+  Factory SDK. This guide demonstrates how to fetch and refresh Ethereum price
+  data from the CoinGecko API to ensure that your oracle stays up-to-date and
+  reliable.
+---
+
 # updateOracle
 
 The `updateOracle` method serves to refresh an existing oracle with the latest

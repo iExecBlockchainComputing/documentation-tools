@@ -1,3 +1,11 @@
+---
+description:
+  Discover how to configure the iExec Oracle Factory SDK with advanced options,
+  including custom smart contract addresses, IPFS nodes, and workerpools. Learn
+  how to override default settings to tailor your oracle deployment for specific
+  environments or infrastructures.
+---
+
 # Advanced configuration
 
 The `IExecOracleFactory` constructor accepts configuration options object. As
