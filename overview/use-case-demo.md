@@ -1,3 +1,7 @@
+---
+  description: Discover real-world demos of iExec's privacy-first tools like DataProtector and Web3Mail. Learn how to empower users to monetize their data, protect personal info, and integrate confidential computing into your apps with seamless TypeScript and Web3 support.
+---
+
 # 📽 Use case demo
 
 Here you'll find several use cases built using iExec's **tools**. These examples
