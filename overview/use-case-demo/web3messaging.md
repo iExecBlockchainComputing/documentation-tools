@@ -1,5 +1,9 @@
 ---
-  description: Explore Web3Messaging by iExec—enable private, consent-based communication in Web3. Discover tools like Web3Mail and Web3Telegram that protect user data, support targeted messaging, and let users monetize interactions. Live demo and full GitHub code available.
+description:
+  Explore Web3Messaging by iExec—enable private, consent-based communication in
+  Web3. Discover tools like Web3Mail and Web3Telegram that protect user data,
+  support targeted messaging, and let users monetize interactions. Live demo and
+  full GitHub code available.
 ---
 
 <script setup>
