@@ -1,7 +1,7 @@
 ---
 description:
   Use fetchUserContacts from iExec Web3Mail to get users who authorized a
-  specific Ethereum address to email them.
+  specific address to email them.
 ---
 
 # fetchUserContacts
