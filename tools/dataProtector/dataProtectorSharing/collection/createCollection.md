@@ -1,6 +1,6 @@
 ---
 description:
-  Create a new data collection with iExec’s createCollection method. Organize
+  Create a new NFT collection with iExec’s createCollection method. Organize
   and manage your protected data for seamless distribution and monetization
   through DataProtector Sharing.
 ---
