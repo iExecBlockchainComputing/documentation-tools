@@ -2,8 +2,7 @@
 description:
   The rentProtectedData method allows you to rent a protected data item by
   specifying the price and duration. If the parameters don't match the current
-  listing, the SDK ensures the transaction is valid to protect against
-  front-running attacks.
+  listing, the SDK will not submit the transaction to avoid paying gas fees for a transaction that would revert.
 ---
 
 # rentProtectedData
