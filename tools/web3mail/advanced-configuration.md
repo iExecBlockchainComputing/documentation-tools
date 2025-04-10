@@ -1,7 +1,7 @@
 ---
 description:
-  Customize iExec Web3Mail with advanced options like custom dApp address,
-  whitelist, IPFS node, and subgraph URL for tailored blockchain email
+  Customize iExec Web3Mail with advanced options like custom iApp address,
+  iApp whitelist, IPFS node, and subgraph URL for tailored blockchain email
   communication.
 ---
 
