@@ -1,8 +1,8 @@
 ---
 description:
   Learn how to manage subscription agreements for protected data on the iExec
-  platform. Understand subscription pricing and duration,
-  along with options for modifying terms and protecting subscribers' access.
+  platform. Understand subscription pricing and duration, along with options for
+  modifying terms and protecting subscribers' access.
 ---
 
 # Data sharing - Subscription
