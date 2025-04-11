@@ -1,3 +1,10 @@
+---
+description:
+  Get started with the @iexec/dataprotector SDK. Learn how to install,
+  configure, and instantiate core and sharing modules to protect and manage data
+  in Web3 applications.
+---
+
 # Getting Started
 
 [![GitHub package.json version (branch)](https://img.shields.io/badge/npm-2.0.0--beta-green)](https://www.npmjs.com/package/@iexec/dataprotector/v/beta)

@@ -1,3 +1,10 @@
+---
+description:
+  Learn about the DataProtector Sharing smart contract for managing and sharing
+  protected data via collections, subscriptions, rentals, and sales. Explore the
+  Solidity code and features in iExec’s implementation.
+---
+
 # DataProtector Sharing smart contract
 
 A specific smart contract has been developed to support all of the "Sharing"

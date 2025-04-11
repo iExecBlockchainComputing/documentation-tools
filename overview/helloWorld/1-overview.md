@@ -1,3 +1,11 @@
+---
+description:
+  Explore how iExec enables developers to build privacy-preserving dApps using
+  confidential computing, blockchain, and secure data management. Learn how
+  tools like DataProtector and iApps empower users to control, protect, and
+  monetize sensitive data across Web3 applications.
+---
+
 # 🧐 iExec overview
 
 > Reading time 🕒 8 mins

@@ -187,12 +187,12 @@ export function getSidebar() {
                 collapsed: true,
                 items: [
                   {
-                    text: 'setSubscriptionParams',
-                    link: '/tools/dataProtector/dataProtectorSharing/subscription/setSubscriptionParams',
-                  },
-                  {
                     text: 'setProtectedDataToSubscription',
                     link: '/tools/dataProtector/dataProtectorSharing/subscription/setProtectedDataToSubscription',
+                  },
+                  {
+                    text: 'setSubscriptionParams',
+                    link: '/tools/dataProtector/dataProtectorSharing/subscription/setSubscriptionParams',
                   },
                   {
                     text: 'subscribeToCollection',

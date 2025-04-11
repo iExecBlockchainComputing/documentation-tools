@@ -1,3 +1,10 @@
+---
+description:
+  The setProtectedDataToRenting method allows a protected data item to be listed
+  for rent. This method sets the price and duration for future rentals. If the
+  data is already listed for rent, it updates the terms accordingly.
+---
+
 # setProtectedDataToRenting
 
 Method to allow a protected data to be rented.

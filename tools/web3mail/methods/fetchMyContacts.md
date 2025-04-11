@@ -1,3 +1,9 @@
+---
+description:
+  Use the fetchMyContacts method from iExec Web3Mail to retrieve contact infos
+  of users who authorized you to email them.
+---
+
 # fetchMyContacts
 
 This method provides a list of `contact` objects identifying all users who

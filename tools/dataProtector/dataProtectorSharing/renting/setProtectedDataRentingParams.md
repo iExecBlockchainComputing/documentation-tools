@@ -1,3 +1,10 @@
+---
+description:
+  The setProtectedDataRentingParams method allows you to set or update the
+  renting parameters (price and duration) for a protected data item. If the data
+  isn't listed for rent yet, it will be set for renting with the provided terms.
+---
+
 # setProtectedDataRentingParams
 
 Method to update a protected data renting params.

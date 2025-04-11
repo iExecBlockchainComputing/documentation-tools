@@ -1,3 +1,10 @@
+---
+description:
+  Remove a protected data from one of your collections in the Data Sharing smart
+  contract. This method transfers the ownership of the protected data back to
+  the owner.
+---
+
 # removeProtectedDataFromCollection
 
 Method to remove one of your protected data from a collection of yours in the

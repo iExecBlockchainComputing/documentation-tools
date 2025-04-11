@@ -1,3 +1,10 @@
+---
+description:
+  Process encrypted data securely with iExec’s processProtectedData method. Use
+  authorized applications to process protected datasets while maintaining data
+  privacy and security
+---
+
 # processProtectedData
 
 Allows processing a protected dataset through use of a specified iExec

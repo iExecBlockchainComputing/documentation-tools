@@ -1,3 +1,10 @@
+---
+description:
+  Web3Telegram enables private, blockchain-based Telegram messaging using
+  Ethereum addresses. Users retain full control over who can contact
+  them—without sharing their chat ID.
+---
+
 <script setup>
 import { Icon } from '@iconify/vue';
 </script>

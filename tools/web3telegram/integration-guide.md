@@ -1,3 +1,10 @@
+---
+description:
+  Integrate iExec Web3Telegram to enable secure and private Telegram messaging
+  via blockchain-based access control, ensuring user privacy and decentralized
+  messaging control
+---
+
 # iExec Web3Telegram Integration Guide
 
 ## Overview

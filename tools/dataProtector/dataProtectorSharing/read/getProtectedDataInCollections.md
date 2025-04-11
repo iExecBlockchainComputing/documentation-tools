@@ -1,3 +1,10 @@
+---
+description:
+  Retrieve protected data from collections in iExec. Each protected data can
+  belong to only one collection at a time, with results ordered by creation
+  timestamp in descending order.
+---
+
 # getProtectedDataInCollections
 
 Method to get protected data that are in collections.

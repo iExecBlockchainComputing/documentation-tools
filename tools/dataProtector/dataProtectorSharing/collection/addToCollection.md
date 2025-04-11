@@ -1,3 +1,10 @@
+---
+description:
+  Transfer a protected data to one of your collections in the Data Sharing smart
+  contract. The method approves the contract to manage the data and adds it to
+  the specified collection.
+---
+
 # addToCollection
 
 Method to transfer one of your protected data to a collection of yours in the

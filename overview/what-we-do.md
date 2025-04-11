@@ -1,3 +1,10 @@
+---
+description:
+  Discover how iExec enables developers to build Web3 apps with full data
+  privacy, ownership, and monetization. Learn about confidential computing,
+  blockchain-based access control, and privacy-enhanced use cases.
+---
+
 # 💡 What we do
 
 iExec's distinct approach helps protect your digital estate\* while

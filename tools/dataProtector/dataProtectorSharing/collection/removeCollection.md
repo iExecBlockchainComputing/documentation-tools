@@ -1,3 +1,10 @@
+---
+description:
+  Remove a collection from the Data Sharing smart contract by burning its
+  associated NFT. Transfer the NFT to the zero address and permanently remove
+  the collection.
+---
+
 # removeCollection
 
 Method to remove one of your collections in the Data Sharing smart contract.

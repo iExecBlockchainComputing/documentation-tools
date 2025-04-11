@@ -1,3 +1,9 @@
+---
+description:
+  Get all distribution parameters for a protected data in iExec. Retrieve
+  detailed pricing information for a specific protected data using its address.
+---
+
 # getProtectedDataPricingParams
 
 Method to get all distribution params for a protected data.

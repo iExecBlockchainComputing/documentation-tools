@@ -1,3 +1,10 @@
+---
+description:
+  Learn how to pay for Web3Telegram using vouchers or xRLC. This guide walks you
+  through obtaining vouchers, managing RLC to xRLC conversion, and using both
+  methods for secure Telegram communication.
+---
+
 # How to pay for Web3telegram
 
 [Web3Telegram](../tools/web3telegram) dev tool offers secure, blockchain-based

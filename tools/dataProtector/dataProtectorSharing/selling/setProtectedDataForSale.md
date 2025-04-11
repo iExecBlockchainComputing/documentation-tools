@@ -1,3 +1,10 @@
+---
+description:
+  Allows a data owner to list their protected data for sale by setting a price.
+  Upon successful sale, ownership is transferred to the buyer, who can choose
+  their own pricing or retain the data for personal use."
+---
+
 # setProtectedDataForSale
 
 Method to set a protected data for sale.

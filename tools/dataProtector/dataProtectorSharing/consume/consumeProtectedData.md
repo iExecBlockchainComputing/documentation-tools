@@ -1,3 +1,10 @@
+---
+description:
+  Consume protected data in iExec by visualizing or downloading it. This method
+  involves generating RSA keys, interacting with iExec's Secret Management
+  Service, and securely retrieving encrypted data from IPFS.
+---
+
 <script setup>
 import { Icon } from '@iconify/vue';
 </script>

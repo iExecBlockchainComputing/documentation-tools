@@ -1,3 +1,10 @@
+---
+description:
+  Retrieve data from an oracle using the readOracle method of the iExec Oracle
+  Factory SDK. In this guide, we fetch Ethereum price data from the CoinGecko
+  API oracle using a specific content ID.
+---
+
 # readOracle
 
 The `readOracle` method is designed to retrieve the value from a specific

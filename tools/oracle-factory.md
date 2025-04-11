@@ -1,3 +1,10 @@
+---
+description:
+  Discover Oracle Factory, a powerful tool for creating and managing
+  decentralized oracles. Integrate real-world data into blockchain apps with
+  seamless API connections and cross-chain support on iExec's infrastructure.
+---
+
 # 🧙 Oracle Factory
 
 Oracle Factory introduces a streamlined and efficient way for developers to

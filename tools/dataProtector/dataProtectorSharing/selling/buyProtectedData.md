@@ -1,3 +1,10 @@
+---
+description:
+  Allows a user to purchase protected data that is listed for sale. Upon
+  successful purchase, the buyer gains full ownership and can distribute or keep
+  the data as desired.
+---
+
 # buyProtectedData
 
 Method to buy a protected data that is for sale.

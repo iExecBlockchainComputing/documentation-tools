@@ -1,3 +1,10 @@
+---
+description:
+  Get started with the iExec Web3Mail SDK. Learn how to install, configure, and
+  instantiate it with or without a Web3 provider to enable blockchain-based
+  email communication.
+---
+
 # Getting Started
 
 [![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/iExecBlockchainComputing/web3mail-sdk?color=green)](https://github.com/iExecBlockchainComputing/web3mail-sdk)

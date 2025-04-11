@@ -1,3 +1,10 @@
+---
+description:
+  Organize your protected data into collections with iExec’s Data Sharing
+  module. Choose distribution options like renting, free access, subscription,
+  or selling to control how your data is shared and monetized.
+---
+
 # Data sharing - Collection methods
 
 A collection is a way to group protected data for sharing by the Data Sharing

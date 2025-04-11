@@ -1,3 +1,10 @@
+---
+description:
+  Understand the Apps Whitelist mechanism for consuming protected data in the
+  iExec DataProtector Sharing module. Learn about the Trusted Execution
+  Environment (TEE) dApp and whitelist usage for secure data delivery.
+---
+
 # Apps Whitelist
 
 In order to consume a protected data, an iExec TEE dApp needs to be provided.

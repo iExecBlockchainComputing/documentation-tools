@@ -1,3 +1,10 @@
+---
+description:
+  Revoke specific access permissions to protected data with iExec’s
+  revokeOneAccess method. Manage and remove access granted to users or
+  applications through blockchain transactions.
+---
+
 # revokeOneAccess
 
 This method allows revoking a specific access authorization from a

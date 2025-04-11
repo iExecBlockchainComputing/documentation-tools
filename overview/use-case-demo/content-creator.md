@@ -1,3 +1,10 @@
+---
+description:
+  Explore the Content Creator demo app showcasing iExec’s DataProtector Sharing
+  module. Try the live demo and browse the GitHub repository to see
+  privacy-first data sharing in action.
+---
+
 <script setup>
 import { Icon } from '@iconify/vue';
 </script>
