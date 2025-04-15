@@ -22,7 +22,7 @@
         :disabled="!isWalletConnected"
       />
       <Button
-        :disabled="!isWalletConnected || isLoadingGrant"
+        :disabled="!isWalletConnected || isLoadingGrant || true"
         @click="grantAccess"
         class="protect-button"
         data-track="grantAccess"
