@@ -21,7 +21,7 @@ html:not(.dark) .dark-only {
   background: linear-gradient(135deg, #fcd15a, #ffad4d);
   border-radius: var(--border-radius);
   padding: 0rem 2rem 1rem;
-  color: #1d1d24;
+  color: var(--accent-color);
   max-width: 800px;
   margin: 0 auto;
 }
