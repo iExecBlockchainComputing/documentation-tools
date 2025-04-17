@@ -78,7 +78,8 @@ CodeSandbox demo
 Here's a quick overview of what happened when you clicked the **Protect Data**
 button:
 
-![alt](/assets/hello-world/dataprotector_light.png)
+![alt](/assets/hello-world/dataprotector_light.png){.light-only}
+![alt](/assets/hello-world/dataprotector_dark.png){.dark-only}
 
 <div class="process-steps">
   <div class="step">
