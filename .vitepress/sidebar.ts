@@ -422,6 +422,25 @@ export function getSidebar() {
         ],
       },
       {
+        text: '🤖 iAppGenerator',
+        link: '/tools/iapp-generator',
+        collapsed: false,
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/tools/iapp-generator/getting-started',
+          },
+          {
+            text: 'Crafting Your iApp',
+            link: '/tools/iapp-generator/crafting-your-iapp',
+          },
+          {
+            text: 'Going Further',
+            link: '/tools/iapp-generator/going-further',
+          },
+        ],
+      },
+      {
         text: 'HELP',
         items: [{ text: '🆘&nbsp;&nbsp;Contact Us', link: '/help/contact-us' }],
       },

@@ -92,6 +92,7 @@ export default defineConfig({
           { text: 'Web3Mail', link: '/tools/web3mail' },
           { text: 'Web3Telegram', link: '/tools/web3telegram' },
           { text: 'Oracle Factory', link: '/tools/oracle-factory' },
+          { text: 'iApp Generator', link: '/tools/iapp-generator' },
         ],
       },
       { text: 'Contact Us', link: '/help/contact-us' },
