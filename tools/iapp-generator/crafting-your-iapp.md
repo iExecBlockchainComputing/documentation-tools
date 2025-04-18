@@ -56,7 +56,7 @@ For more information on **App Secrets**, refer to
 :::
 
 For more details and to learn how to use them in your application, refer here
-[Application I/O](https://protocol.docs.iex.ec/for-developers/application-io#input-files)
+[Application I/O](https://protocol.docs.iex.ec/for-developers/application-io)
 
 ## 😻 Launching your iApp
 
