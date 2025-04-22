@@ -6,44 +6,38 @@ The iApp Generator CLI simplifies the setup of your iApp by guiding you through
 a step-by-step initialization process. This ensures your iApp is correctly
 configured and compatible with iExec’s confidential computing environment.
 
-### Step 1: Define Your Project
+### 🏗 Define Your Project
 
-Upon running the iapp init command, you will be prompted to provide key details
-about your project:
+Run:
 
-- Project name: A folder with this name will be created to store your project
+```sh
+iapp init
+```
+
+You will be prompted to provide:
+
+- **Project name** – A folder with this name will be created to store project
   files.
+- **Language selection** – Choose between **JavaScript**, **Python**, etc.
+- **Project mode** – Select **Basic** (Hello-World setup) or **Advanced** (full
+  debug capabilities).
 
-- Language selection: Choose the primary programming language for your iApp
-  (e.g., JavaScript, Python).
+### ⚙ Configure
 
-- Project mode: Select between basic or advanced setup, depending on your
-  application’s complexity.
+You'll set up:
 
-  - basic It leverages a restricted version of the App Generator, tailored
-    specifically for Hello-World purposes
+- **Arguments (Args)** – Public parameters passed to the iApp.
+- **Input Files** – Files dynamically downloaded during execution These can come
+  from **a specific URL**.
+- **Requester Secrets** – Confidential authentication strings.
+- **Protected Data** – Encrypted data accessible only inside the TEE.
+- **App Secret** – Immutable secret provisioned by the iApp owner.
 
-  - advanced Offers full debug capabilities, allowing complete customization and
-    integration with iExec’s confidential computing features.
+::: warning Warning
 
-### Step 2: Configure
+App secrets cannot be updated once set.
 
-You'll be guided to configure the following elements:
-
-- **Arguments (Args)** : **Public parameters** passed to the iApp during
-  execution. They allow customization without modifying the source code.
-
-- **Input Files** : Files **dynamically downloaded** during execution. These can
-  come from **a specific URL**.
-
-- **Requester Secrets** : Confidential strings used for authentication or
-  containing sensitive data.
-
-- **Protected Data** : Encrypted data provided by a third party, accessible only
-  within the **TEE**.
-
-- **App Secret** : A fixed, immutable secret provisioned by the iApp owner to
-  secure application logic execution.
+:::
 
 ::: warning 💡 The Secret Management Service (SMS) securely stores application
 
@@ -58,29 +52,27 @@ For more information on **App Secrets**, refer to
 For more details and to learn how to use them in your application, refer here
 [Application I/O](https://protocol.docs.iex.ec/for-developers/application-io)
 
-## 😻 Launching your iApp
+## 🚀 Launching your iApp
 
-Once your iApp is initialized, the following essential files and directories are
+After initialization, the following essential files and directories are
 generated:
 
 - `iapp.config.json`
-- `src/app.js` _(for JavaScript users)_ or `src/app.py` _(for Python users)_
+- `src/app.js` _(JavaScript)_ or `src/app.py` _(Python)_
 - `Dockerfile`
 - Directories:
   - `input/`
   - `output/`
   - `cache/`
 
-After initialization and configuration, the next steps are to **update, test
-locally**, and **deploy your iApp** on iExec.
+### 📝 Updating your iApp
 
-### Step 1: Personalize Your iApp
+To modify your main application logic open:
 
-Open:
-
-- `src/app.js` _(JavaScript)_  
-  or
-- `src/app.py` _(Python)_
+```sh
+src/app.js  # For JavaScript
+src/app.py  # For Python
+```
 
 ::: info
 
@@ -95,17 +87,25 @@ algorithms, and define how your iApp behaves.**
 Use the following CLI commands to **validate**, **deploy**, and **execute** your
 iApp:
 
-| Command                     | Description                                                                        |
-| --------------------------- | ---------------------------------------------------------------------------------- |
-| `iapp test`                 | Runs a basic test of your iApp locally.                                            |
-| `iapp deploy`               | Sconifies the app, generates metadata, and registers it on the iExec protocol.     |
-| `iapp run <iApp-address>`   | Executes your deployed iApp on an iExec worker node.                               |
-| `iapp --help`               | Displays the help menu and available commands.                                     |
-| `iapp debug <iApp-address>` | Retrieves logs and output files if execution exceeds the timeout (default: 5 min). |
-| `iexec mock`                | Creates mocked input data for local testing.                                       |
+```sh
+iapp test                 # Runs a basic test locally.
+iapp deploy               # Sconifies and registers the iApp on iExec.
+iapp run <iApp-address>   # Executes the deployed iApp on a worker node.
+iapp --help               # Displays available commands.
+iapp debug <iApp-address> # Retrieves logs and output files.
+iexec mock                # Creates a mocked input for testing.
 
-Once your iApp is tested and deployed, it will be ready to run securely in a
-**TEE-enabled workerpool** on the iExec network.
+```
+
+::: info
+
+use `iapp debug <iApp-address>` if execution exceeds the timeout (default: 5
+min).
+
+:::
+
+Once deployed, your iApp will run **securely in a TEE-enabled workerpool**
+within the iExec network.
 
 ::: tip
 
