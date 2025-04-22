@@ -24,7 +24,8 @@ const { protectedDataAddress } = useWalletConnection();
 
 Here is a simple diagram to explain the process:
 
-![alt text](/assets/hello-world/process.png)
+![alt](/assets/hello-world/process_light.png){.light-only}
+![alt](/assets/hello-world/process_dark.png){.dark-only}
 
 <div class="process-steps">
   <div class="step">
