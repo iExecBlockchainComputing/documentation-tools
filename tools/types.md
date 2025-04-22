@@ -21,5 +21,5 @@ The address for the contact who granted permission to send them communications.
 `number`
 
 The precise date and time when the user granted authorization to send them
-email-based communications. This timestamp represents the moment the access was
-granted.
+direct communications (such as email or telegram messages). This timestamp
+represents the moment the access was granted.
