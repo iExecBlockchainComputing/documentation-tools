@@ -83,4 +83,4 @@ with `userAddress` to send them messages.
 import { type Contact } from '@iexec/web3mail';
 ```
 
-[`Contract[]`](../types.md#contact)
+[`Contract[]`](../../types.md#contact)
