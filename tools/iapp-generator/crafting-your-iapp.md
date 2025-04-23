@@ -1,6 +1,6 @@
 # 🧑‍🏭 Crafting your iApp
 
-## 🧰 Initializing your iApp
+## 🧰 Initialize your iApp
 
 The iApp Generator CLI simplifies the setup of your iApp by guiding you through
 a step-by-step initialization process. This ensures your iApp is correctly
@@ -27,17 +27,11 @@ You will be prompted to provide:
 You'll set up:
 
 - **Arguments (Args)** – Public parameters passed to the iApp.
-- **Input Files** – Files dynamically downloaded during execution These can come
-  from **a specific URL**.
+- **Input Files** – Files dynamically downloaded during execution. These can
+  come from **a specific URL**.
 - **Requester Secrets** – Confidential authentication strings.
 - **Protected Data** – Encrypted data accessible only inside the TEE.
 - **App Secret** – Immutable secret provisioned by the iApp owner.
-
-::: warning Warning
-
-App secrets cannot be updated once set.
-
-:::
 
 ::: warning 💡 The Secret Management Service (SMS) securely stores application
 
@@ -52,7 +46,7 @@ For more information on **App Secrets**, refer to
 For more details and to learn how to use them in your application, refer here
 [Application I/O](https://protocol.docs.iex.ec/for-developers/application-io)
 
-## 🚀 Launching your iApp
+## 🚀 Launch your iApp
 
 After initialization, the following essential files and directories are
 generated:
@@ -65,7 +59,7 @@ generated:
   - `output/`
   - `cache/`
 
-### 📝 Updating your iApp
+### 📝 Update your iApp
 
 To modify your main application logic open:
 
@@ -76,13 +70,13 @@ src/app.py  # For Python
 
 ::: info
 
-💡 The `src/` directory is the **core of your iApp** It’s where you write your
+💡 The `src/` directory is the **core of your iApp**. It’s where you write your
 main application logic. This is **where you handle data processing, implement
 algorithms, and define how your iApp behaves.**
 
 :::
 
-### Step 2: Testing and Deploying Your iApp
+### 🧪 Test and Deploy your iApp
 
 Use the following CLI commands to **validate**, **deploy**, and **execute** your
 iApp:
@@ -107,9 +101,27 @@ min).
 Once deployed, your iApp will run **securely in a TEE-enabled workerpool**
 within the iExec network.
 
-::: tip
+::: info
 
 💡 A **workerpool** is a decentralized network of nodes that execute iApps
 securely within a **Trusted Execution Environment (TEE)**.
 
 :::
+
+### 🚀 Go Further
+
+#### 🎉 Your iApp is now running in **debug mode** on iExec!
+
+Now that your application is **stable** and **functional**, you can:
+
+- Contact the **iExec team** to transition to **production mode** (Full
+  Privacy).
+
+- Optimize your **iApp** by learning how to **manage orders** and interact with
+  the **iExec protocol**.
+
+#### 📚 Recommended Resources
+
+- 🔗
+  [Order Management](https://protocol.docs.iex.ec/for-developers/advanced/manage-your-apporders)
+- 🔗 [iExec Protocol Documentation](https://protocol.docs.iex.ec/)
