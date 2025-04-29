@@ -1,11 +1,19 @@
 /* Global style */
 :root {
   --primary-color: #fcd15a;
-  --accent-color: #ce2c68;
-  --card-shadow: 0 2px 6px rgba(29, 29, 36, 0.1);
-  --card-hover-shadow: 0 8px 24px rgba(29, 29, 36, 0.15);
+  --accent-color: #1d1d24;
+  --card-shadow: 0px 2px 6px 0px #1d1d241a;
+  --card-hover-shadow: 0px 4px 8px #1d1d242d;
   --border-radius: 6px;
   --transition: all 0.3s ease;
+}
+
+html.dark .light-only {
+  display: none !important;
+}
+
+html:not(.dark) .dark-only {
+  display: none !important;
 }
 
 /* Hero */
@@ -13,7 +21,7 @@
   background: linear-gradient(135deg, #fcd15a, #ffad4d);
   border-radius: var(--border-radius);
   padding: 0rem 2rem 1rem;
-  color: white;
+  color: var(--accent-color);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -30,7 +38,8 @@
 }
 
 .hero-time-badge {
-  background: rgba(255, 255, 255, 0.2);
+  background: #121212;
+  color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 500;
@@ -53,7 +62,7 @@
   display: flex;
   gap: 1rem;
   text-decoration: none !important;
-  color: var(--vp-c-text-1);
+  /* color: var(--vp-c-text-1); */
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -257,6 +266,7 @@
   border-radius: var(--border-radius);
   padding: 1.5rem;
   margin: 1.5rem 0;
+  border-left: 4px solid #ce2c68;
 }
 
 .solution-note p {
@@ -276,6 +286,7 @@
 
 .solution-note.purple {
   background: linear-gradient(135deg, #9c27b01a, #9c27b00d);
+  border-color: #9c27b0;
 }
 
 .solution-note.purple .highlight {
@@ -284,6 +295,7 @@
 
 .solution-note.green {
   background: linear-gradient(135deg, #4caf501a, #4caf500d);
+  border-color: #4caf50;
 }
 
 .solution-note.green .highlight {

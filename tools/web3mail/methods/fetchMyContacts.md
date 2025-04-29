@@ -63,4 +63,4 @@ messages.
 import { type Contact } from '@iexec/web3mail';
 ```
 
-[`Contact[]`](../types.md#contact)
+[`Contact[]`](../../types.md#contact)
