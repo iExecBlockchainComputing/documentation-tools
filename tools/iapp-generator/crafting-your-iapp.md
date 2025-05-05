@@ -86,7 +86,7 @@ iapp test                 # Runs a basic test locally.
 iapp deploy               # Sconifies and registers the iApp on iExec.
 
 iapp run <iAppAddress>    # Executes the deployed iApp on a worker node.
-iapp debug <taskId>       # iapp debug <taskId>     Retrieve detailed execution logs from worker nodes for a specific task
+iapp debug <taskId>       # Retrieve detailed execution logs from worker nodes for a specific task
 
 iapp mock <inputType>     # Creates a mocked input for testing.
 iapp --help               # Displays available commands.
