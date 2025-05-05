@@ -94,8 +94,7 @@ iapp --help               # Displays available commands.
 
 ::: info
 
-use `iapp debug <taskId>` if execution exceeds the timeout (default: 5
-min).
+use `iapp debug <taskId>` if execution exceeds the timeout (default: 5 min).
 
 :::
 
