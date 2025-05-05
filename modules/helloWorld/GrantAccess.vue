@@ -22,7 +22,7 @@
         :disabled="!isWalletConnected"
       />
       <Button
-        :disabled="!isWalletConnected || isLoadingGrant"
+        :disabled="!isWalletConnected || isLoadingGrant || true"
         @click="grantAccess"
         class="protect-button"
         data-track="grantAccess"
@@ -140,6 +140,7 @@ const grantAccess = async () => {
 .form-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   margin: 1.5rem 0;
   width: 100%;
@@ -168,6 +169,7 @@ input:disabled {
 }
 
 .protect-button {
+  max-width: 250px;
   width: 100%;
 }
 

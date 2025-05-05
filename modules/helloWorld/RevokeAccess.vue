@@ -106,12 +106,14 @@ const revokeAccess = async () => {
 .form-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   margin: 1.5rem 0;
   width: 100%;
 }
 
 .protect-button {
+  max-width: 250px;
   width: 100%;
 }
 
