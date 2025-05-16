@@ -60,6 +60,21 @@ export function getSidebar() {
         ],
       },
       {
+        text: '🤖 &nbsp;iAppGenerator',
+        link: '/tools/iapp-generator',
+        collapsed: false,
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/tools/iapp-generator/getting-started',
+          },
+          {
+            text: 'Crafting Your iApp',
+            link: '/tools/iapp-generator/crafting-your-iapp',
+          },
+        ],
+      },
+      {
         text: '🔐 &nbsp;DataProtector <span class="VPBadge warning" style="margin-left: 8px; margin-bottom: -1px; transform: translateY(-1px);">beta</span>',
         link: '/tools/dataProtector',
         collapsed: false,
