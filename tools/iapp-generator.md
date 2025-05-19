@@ -31,21 +31,3 @@ You want to go **deeper into iApps** ? See the
 [Discord](https://discord.com/invite/pbt9m98wnU)
 
 :::
-
-## Build in debug go further in prod mode 
-
-### Debug Mode
-
-Start by creating and testing your iApp locally. In this mode, you can quickly
-iterate and troubleshoot your code. Logs and output files are available for
-debugging, helping you refine your app before moving to production.
-
-### Production Mode
-
-Once your iApp is tested and refined, switch to **Production Mode** to ensure
-**full confidentiality**. Your iApp will run securely in a TEE on the iExec
-protocol, and no logs or intermediate results will be accessible, even to you as
-the developer. This mode is critical for handling sensitive data, ensuring
-privacy and data integrity. The iApp Generator automates much of the process,
-making it easy to transition from development to production, and allowing you to
-focus on building secure, decentralized applications.

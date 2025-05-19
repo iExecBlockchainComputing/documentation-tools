@@ -24,6 +24,14 @@ Follow the prompts to specify:
 
 ### ⚙ Configure
 
+::: info
+
+We are going to create and test our iApp locally. In **debug mode**, you can
+quickly iterate and troubleshoot your code. Logs and output files are available
+for debugging, helping you refine your app before moving to production.
+
+:::
+
 You'll set up:
 
 - **Arguments (Args)** – Public parameters for your iApp.
