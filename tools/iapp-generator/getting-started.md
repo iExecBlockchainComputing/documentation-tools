@@ -8,7 +8,6 @@ Before using the iApp Generator, make sure you have:
 
 \- **Docker**
 
-
 \- **Docker Buildx** _(for macOS users, check AMD64 compatibility)_
 
 ::: tip 🔍 Verify Docker Compatibility
