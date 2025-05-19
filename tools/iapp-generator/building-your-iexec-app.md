@@ -1,8 +1,8 @@
-# 🧑‍🏭 Building Your iExec Application
+# 🧑‍🏭 Build Your iApp
 
 ## 🧰 Initialize your iApp
 
-The iApp Generator CLI simplifies the setup of your iApp by guiding you through
+The iApp (iExec Application) Generator CLI simplifies the setup of your iApp by guiding you through
 a step-by-step initialization process. This ensures your iApp is correctly
 configured and compatible with iExec’s confidential computing environment.
 
