@@ -69,8 +69,8 @@ export function getSidebar() {
             link: '/tools/iapp-generator/getting-started',
           },
           {
-            text: 'Crafting Your iApp',
-            link: '/tools/iapp-generator/crafting-your-iapp',
+            text: 'Building Your iExec Application',
+            link: '/tools/iapp-generator/building-your-iexec-app',
           },
         ],
       },

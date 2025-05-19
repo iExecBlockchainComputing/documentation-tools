@@ -1,4 +1,4 @@
-# 🧑‍🏭 Crafting your iApp
+# 🧑‍🏭 Building Your iExec Application
 
 ## 🧰 Initialize your iApp
 
