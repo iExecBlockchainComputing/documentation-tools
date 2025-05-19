@@ -11,13 +11,15 @@ Before using the iApp Generator, make sure you have:
 
 \- **Docker Buildx** _(for macOS users, check AMD64 compatibility)_
 
-### 🔍 Verify Docker Compatibility
+::: tip 🔍 Verify Docker Compatibility
 
 ```bash
 docker buildx inspect --bootstrap | grep -i platforms
 ```
 
 If `linux/amd64` is not listed, **update your Docker installation.**
+
+:::
 
 ### 📦 Installation via npm
 
