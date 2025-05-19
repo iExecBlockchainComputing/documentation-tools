@@ -2,9 +2,10 @@
 
 ## 🧰 Initialize your iApp
 
-The iApp (iExec Application) Generator CLI simplifies the setup of your iApp by guiding you through
-a step-by-step initialization process. This ensures your iApp is correctly
-configured and compatible with iExec’s confidential computing environment.
+The iApp (iExec Application) Generator CLI simplifies the setup of your iApp by
+guiding you through a step-by-step initialization process. This ensures your
+iApp is correctly configured and compatible with iExec’s confidential computing
+environment.
 
 ### 🏗 Define Your Project
 
@@ -14,19 +15,18 @@ Run:
 iapp init
 ```
 
-You will be prompted to provide:
+Follow the prompts to specify:
 
-- **Project name** – A folder with this name will be created to store project
-  files.
-- **Language selection** – Choose between **JavaScript**, **Python**, etc.
-- **Project mode** – Select **Basic** (Hello-World setup) or **Advanced** (full
-  debug capabilities).
+- **Project name** – Creates a folder for your project files.
+- **Language** – Choose between JavaScript, Python, etc.
+- **Project mode** – Choose Basic (Hello-World setup) or Advanced (full debug
+  capabilities).
 
 ### ⚙ Configure
 
 You'll set up:
 
-- **Arguments (Args)** – Public parameters passed to the iApp.
+- **Arguments (Args)** – Public parameters for your iApp.
 - **Input Files** – Files dynamically downloaded during execution. These can
   come from **a specific URL**.
 - **Requester Secrets** – Confidential authentication strings.
@@ -70,9 +70,8 @@ src/app.py  # For Python
 
 ::: info
 
-💡 The `src/` directory is the **core of your iApp**. It’s where you write your
-main application logic. This is **where you handle data processing, implement
-algorithms, and define how your iApp behaves.**
+💡 The `src/` directory contains the core logic of your iApp. Implement your
+algorithms and data processing here.
 
 :::
 
@@ -108,17 +107,14 @@ securely within a **Trusted Execution Environment (TEE)**.
 
 :::
 
-### 🚀 Go Further
+### 🚀 Next Steps
 
-#### 🎉 Your iApp is now running in **debug mode** on iExec!
+Your iApp is now running in **debug mode** on iExec!
 
-Now that your application is **stable** and **functional**, you can:
+Once your application is **stable** and **functional**, you can:
 
-- Contact the **iExec team** to transition to **production mode** (Full
-  Privacy).
-
-- Optimize your **iApp** by learning how to **manage orders** and interact with
-  the **iExec protocol**.
+- Contact **iExec** to move to **production mode** (Full Privacy).
+- Learn how to **manage orders** and integrate with the **iExec protocol**.
 
 #### 📚 Recommended Resources
 
