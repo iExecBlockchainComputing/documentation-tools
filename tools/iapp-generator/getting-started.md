@@ -22,9 +22,25 @@ If `linux/amd64` is not listed, **update your Docker installation.**
 
 ### 📦 Installation via npm
 
-```bash
+::: code-group
+
+```sh [npm]
 npm install -g @iexec/iapp
 ```
+
+```sh [yarn]
+yarn global add @iexec/iapp
+```
+
+```sh [pnpm]
+pnpm add -g @iexec/iapp 
+```
+
+```sh [bun]
+bun add -g @iexec/iapp 
+```
+
+:::
 
 Once installed, generate the auto-completion script and add it to your shell by
 following the instructions:
