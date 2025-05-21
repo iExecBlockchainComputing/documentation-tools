@@ -20,7 +20,7 @@ If `linux/amd64` is not listed, **update your Docker installation.**
 
 :::
 
-### 📦 Installation via npm
+### 📦 Installation
 
 ::: code-group
 
