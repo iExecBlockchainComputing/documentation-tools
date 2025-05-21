@@ -33,11 +33,11 @@ yarn global add @iexec/iapp
 ```
 
 ```sh [pnpm]
-pnpm add -g @iexec/iapp 
+pnpm add -g @iexec/iapp
 ```
 
 ```sh [bun]
-bun add -g @iexec/iapp 
+bun add -g @iexec/iapp
 ```
 
 :::
