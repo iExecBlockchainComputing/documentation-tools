@@ -42,8 +42,8 @@ Before getting started, ensure you have the following:
 
 ## 🚀 Types of iApps You Can Build
 
-iExec enables you to build various types of confidential applications. Here are
-some popular use cases:
+iExec enables you to build various types of Privacy-preserving applications.
+Here are some popular use cases:
 
 ### 📧 Web3 Mail
 
