@@ -90,7 +90,7 @@ iApp:
 
 ```sh
 iapp test                 # Runs a basic test locally.
-iapp deploy               # Sconifies and registers the iApp on iExec.
+iapp deploy               # Turns your code into a TEE app and registers the iApp on iExec.
 
 iapp run <iAppAddress>    # Executes the deployed iApp on a worker node.
 iapp debug <taskId>       # Retrieve detailed execution logs from worker nodes for a specific task
@@ -112,6 +112,19 @@ within the iExec network.
 
 💡 A **workerpool** is a decentralized network of nodes that execute iApps
 securely within a **Trusted Execution Environment (TEE)**.
+
+:::
+
+::: info
+
+🧪 While **TEE** iApp are base on **intel SGX** technology by default, iApp has
+an experimental support for **intel TDX** applications.
+
+TDX mode is enabled by setting the environment variable
+`EXPERIMENTAL_TDX_APP=true`.
+
+⚠️ Keep in mind: TDX mode is experimental and can be subject to instabilities or
+discontinuity.
 
 :::
 
