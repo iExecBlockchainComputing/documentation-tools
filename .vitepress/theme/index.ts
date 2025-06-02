@@ -1,4 +1,5 @@
 import { WagmiPlugin } from '@wagmi/vue';
+import Layout from './Layout.vue';
 import { QueryClient, VueQueryPlugin } from '@tanstack/vue-query';
 import Theme from 'vitepress/theme';
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client';
@@ -9,6 +10,7 @@ import './style.css';
 import './tailwind-output.css';
 import { wagmiAdapter } from '../../utils/wagmiConfig.ts';
 import googleAnalytics from 'vitepress-plugin-google-analytics';
+import ChatGPTButton from './ChatGPTButton.vue'
 import 'virtual:group-icons.css';
 
 declare global {
@@ -23,8 +25,11 @@ declare global {
 
 export default {
   extends: Theme,
+  Layout,
   enhanceApp({ app }: EnhanceAppContext) {
     app.use(TwoslashFloatingVue as any);
+
+    app.component('ChatGPTButton', ChatGPTButton)
 
     const queryClient = new QueryClient();
 
@@ -62,5 +67,6 @@ export default {
         }
       });
     }
+    
   },
 };
