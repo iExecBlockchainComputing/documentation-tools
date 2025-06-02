@@ -6,11 +6,7 @@
       target="_blank"
       rel="noopener"
     >
-      <img
-        src="/assets/icons/chatgpt.png"
-        alt="ChatGPT"
-        class="chatgpt-icon"
-      />
+      <img src="/assets/icons/chatgpt.png" alt="ChatGPT" class="chatgpt-icon" />
       Ask in ChatGPT
     </a>
   </div>
@@ -32,7 +28,7 @@
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.2s ease;
 }
 .chatgpt-btn:hover {

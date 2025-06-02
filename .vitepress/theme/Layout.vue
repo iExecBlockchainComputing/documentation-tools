@@ -1,8 +1,8 @@
 <script setup>
-import DefaultTheme from 'vitepress/theme'
-import ChatGptButton from './ChatGptButton.vue'
+import DefaultTheme from 'vitepress/theme';
+import ChatGptButton from './ChatGptButton.vue';
 
-const { Layout } = DefaultTheme
+const { Layout } = DefaultTheme;
 </script>
 
 <template>
