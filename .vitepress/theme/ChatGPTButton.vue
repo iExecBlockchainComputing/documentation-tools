@@ -6,7 +6,11 @@
       target="_blank"
       rel="noopener"
     >
-      <img src="/assets/icons/chatgpt.png" alt="ChatGPT" class="chatgpt-icon" />
+      <img
+        src="/assets/icons/chatgpt.png"
+        alt="ChatGPT"
+        class="chatgpt-icon"
+      />
       Ask in ChatGPT
     </a>
   </div>
@@ -14,21 +18,21 @@
 
 <style scoped>
 .chatgpt-btn-wrapper {
-  position: fixed;
-  top: 70px;
-  right: 170px;
-  z-index: 999;
+  position: absolute;
+  top: 5rem;
+  right: 30rem;
+  z-index: 10;
 }
 .chatgpt-btn {
   display: flex;
   align-items: center;
-  padding: 6px 12px;
+  padding: 6px2px;
   background-color: #202123;
   color: white;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   transition: background-color 0.2s ease;
 }
 .chatgpt-btn:hover {
