@@ -131,3 +131,35 @@ const dataProtector = new IExecDataProtector(web3Provider, {
   iexecOptions: { smsURL: 'https://sms.scone-prod.v8-bellecour.iex.ec' }, // [!code focus]
 });
 ```
+
+::: info
+
+🧪 While protected data are processed in **TEE** by **intel SGX** technology by
+default, `@iexec/dataprotector` can be configured to create and process
+protected data in the experimental **intel TDX** environment.
+
+TDX mode is enabled by setting connecting the TDX SMS and using the TDX
+workerpool.
+
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+import { IExecDataProtector } from '@iexec/dataprotector';
+
+const web3Provider = window.ethereum;
+// Instantiate dataProtector connected to the TDX SMS
+const dataProtector = new IExecDataProtector(web3Provider, {
+  iexecOptions: {
+    smsURL: 'https://sms.labs.iex.ec',
+  },
+});
+```
+
+⚠️ Keep in mind: TDX mode is experimental and can be subject to instabilities or
+discontinuity.
+
+:::
