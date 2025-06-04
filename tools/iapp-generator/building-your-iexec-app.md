@@ -123,6 +123,12 @@ an experimental support for **intel TDX** applications.
 TDX mode is enabled by setting the environment variable
 `EXPERIMENTAL_TDX_APP=true`.
 
+examples:
+
+- `EXPERIMENTAL_TDX_APP=true iapp test`
+- `EXPERIMENTAL_TDX_APP=true iapp deploy`
+- `EXPERIMENTAL_TDX_APP=true iapp run <app-address>`
+
 ⚠️ Keep in mind: TDX mode is experimental and can be subject to instabilities or
 discontinuity.
 
