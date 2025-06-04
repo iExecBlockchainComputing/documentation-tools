@@ -55,6 +55,48 @@ const protectedData = await dataProtectorCore.protectData({
 });
 ```
 
+::: info
+
+🧪 While protected data are processed in **TEE** by **intel SGX** technology by
+default, `@iexec/dataprotector` can be configured to create and process
+protected data in the experimental **intel TDX** environment.
+
+TDX mode is enabled by setting connecting the **TDX SMS** and using the **TDX
+workerpool**.
+
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+import { IExecDataProtectorCore } from '@iexec/dataprotector';
+
+const web3Provider = window.ethereum;
+// Instantiate dataProtector connected to the TDX SMS
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider, {
+  iexecOptions: {
+    smsURL: 'https://sms.labs.iex.ec', // [!code focus]
+  },
+});
+// create a protected data
+const protectedData = await dataProtectorCore.protectData({
+  data: {
+    email: 'example@gmail.com',
+    SMTPserver: {
+      port: 5000,
+      smtp_server: 'smtp.gmail.com',
+    },
+  },
+});
+```
+
+⚠️ Keep in mind: TDX mode is experimental and can be subject to instabilities or
+discontinuity.
+
+:::
+
 ## Parameters
 
 ```ts twoslash
