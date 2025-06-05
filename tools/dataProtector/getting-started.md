@@ -199,6 +199,23 @@ const dataProtectorSharing = dataProtector.sharing;
 To add optional parameters, see
 [advanced configuration](./advanced/advanced-configuration.md).
 
+::: info
+
+🧪 While protected data are processed in **TEE** by **intel SGX** technology by
+default, `@iexec/dataprotector` can be configured to create and process
+protected data in the experimental **intel TDX** environment.
+
+For more details see:
+
+- [configure DataProtector TDX](./advanced/advanced-configuration.md#iexecoptions)
+- [create TDX protected data](./dataProtectorCore/protectData.md#usage)
+- [process TDX protected data](./dataProtectorCore/processProtectedData.md#workerpool)
+
+⚠️ Keep in mind: TDX mode is experimental and can be subject to instabilities or
+discontinuity.
+
+:::
+
 ## Sandbox
 
 ### Core methods
