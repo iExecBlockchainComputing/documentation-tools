@@ -18,21 +18,20 @@
 
 <style scoped>
 .chatgpt-btn-wrapper {
-  position: absolute;
-  top: 5rem;
-  right: 30rem;
-  z-index: 10;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 .chatgpt-btn {
   display: flex;
   align-items: center;
-  padding: 6px2px;
+  padding: 6px 12px;
   background-color: #202123;
   color: white;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.2s ease;
 }
 .chatgpt-btn:hover {
@@ -41,15 +40,7 @@
   color: white;
 }
 .chatgpt-icon {
-  width: 32px;
+  width: 24px;
   margin-right: 8px;
-}
-
-/* Ensure the button doesn't interfere with other VitePress elements */
-@media (max-width: 768px) {
-  .chatgpt-btn-wrapper {
-    top: 70px;
-    right: 16px;
-  }
 }
 </style>

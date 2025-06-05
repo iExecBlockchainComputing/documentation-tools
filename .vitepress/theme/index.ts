@@ -29,8 +29,6 @@ export default {
   enhanceApp({ app }: EnhanceAppContext) {
     app.use(TwoslashFloatingVue as any);
 
-    app.component('ChatGPTButton', ChatGPTButton);
-
     const queryClient = new QueryClient();
 
     app.use(VueQueryPlugin, { queryClient });
