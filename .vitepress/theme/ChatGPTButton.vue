@@ -1,20 +1,30 @@
 <template>
   <div class="chatgpt-btn-wrapper">
-    <a
-      class="chatgpt-btn"
-      href="https://chatgpt.com/?hints=search&amp;q=Please%20research%20and%20analyze%20this%20page%3A%20https%3A%2F%2Ftools.docs.iex.ec%2F%20so%20I%20can%20ask%20you%20questions%20about%20it.%20Once%20you%20have%20read%20it%2C%20prompt%20me%20with%20any%20questions%20I%20have.%20Do%20not%20post%20content%20from%20the%20page%20in%20your%20response.%20Any%20of%20my%20follow%20up%20questions%20must%20reference%20the%20site%20I%20gave%20you."
-      target="_blank"
-      rel="noopener"
-    >
-      <img
-        src="/assets/icons/chatgpt.png"
-        alt="ChatGPT"
-        class="chatgpt-icon"
-      />
+    <a class="chatgpt-btn" :href="chatGPTLink" target="_blank" rel="noopener">
+      <img src="/assets/icons/chatgpt.png" alt="ChatGPT" class="chatgpt-icon" />
       Ask in ChatGPT
     </a>
   </div>
 </template>
+
+<script setup>
+import { ref, watch } from 'vue';
+import { useRoute } from 'vitepress';
+
+const route = useRoute();
+const chatGPTLink = ref('#');
+
+// Utilise le chemin actuel à chaque changement de route
+const updateLink = () => {
+  const productionBase = 'https://tools.docs.iex.ec';
+  const fullUrl = productionBase + route.path;
+  const prompt = `Please research and analyze this page: ${fullUrl} so I can ask you questions about it. Once you have read it, prompt me with any questions I have. Do not post content from the page in your response. Any of my follow up questions must reference the site I gave you.`;
+  chatGPTLink.value = `https://chatgpt.com/?hints=search&q=${encodeURIComponent(prompt)}`;
+};
+
+// Appel initial + chaque changement de route
+watch(route, updateLink, { immediate: true });
+</script>
 
 <style scoped>
 .chatgpt-btn-wrapper {
@@ -42,5 +52,11 @@
 .chatgpt-icon {
   width: 24px;
   margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .chatgpt-btn-wrapper {
+    display: none;
+  }
 }
 </style>

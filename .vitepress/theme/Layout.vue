@@ -1,8 +1,8 @@
 <script setup>
-import DefaultTheme from 'vitepress/theme'
-import ChatGPTButton from './ChatGPTButton.vue'
+import DefaultTheme from 'vitepress/theme';
+import ChatGPTButton from './ChatGPTButton.vue';
 
-const { Layout } = DefaultTheme
+const { Layout } = DefaultTheme;
 </script>
 
 <template>
