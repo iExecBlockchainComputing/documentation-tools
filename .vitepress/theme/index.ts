@@ -1,4 +1,5 @@
 import { WagmiPlugin } from '@wagmi/vue';
+import Layout from './Layout.vue';
 import { QueryClient, VueQueryPlugin } from '@tanstack/vue-query';
 import Theme from 'vitepress/theme';
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client';
@@ -23,6 +24,7 @@ declare global {
 
 export default {
   extends: Theme,
+  Layout,
   enhanceApp({ app }: EnhanceAppContext) {
     app.use(TwoslashFloatingVue as any);
 
