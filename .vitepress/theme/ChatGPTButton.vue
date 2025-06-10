@@ -45,23 +45,102 @@
 
     <!-- Dropdown menu -->
     <div class="dropdown-menu" v-show="isDropdownOpen">
+      <a
+        class="dropdown-item"
+        :href="chatGPTLink"
+        target="_blank"
+        rel="noopener"
+        @click="closeDropdown"
+      >
+        <div class="item-icon-wrapper">
+          <img
+            src="/assets/icons/chatgpt.png"
+            alt="ChatGPT"
+            class="item-icon"
+          />
+        </div>
+        <div class="item-content">
+          <div class="item-title">Open in ChatGPT</div>
+          <div class="item-description">Ask questions about this page</div>
+        </div>
+        <svg
+          class="item-arrow"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+        >
+          <path
+            d="M6.5 3L11 7.5L6.5 12"
+            stroke="currentColor"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+
+      <a
+        class="dropdown-item"
+        :href="claudeLink"
+        target="_blank"
+        rel="noopener"
+        @click="closeDropdown"
+      >
+        <div class="item-icon-wrapper">
+          <img
+            src="/assets/icons/anthropic.png"
+            alt="Anthropic"
+            class="item-icon"
+          />
+        </div>
+        <div class="item-content">
+          <div class="item-title">Open in Claude</div>
+          <div class="item-description">Ask questions about this page</div>
+        </div>
+        <svg
+          class="item-arrow"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+        >
+          <path
+            d="M6.5 3L11 7.5L6.5 12"
+            stroke="currentColor"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+
       <button
         class="dropdown-item"
         @click="copyPageContent"
         :disabled="isCopying"
       >
-        <svg
-          class="item-icon"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
-          />
-        </svg>
-        {{ isCopying ? 'Copied!' : 'Copy page for LLMs' }}
+        <div class="item-icon-wrapper">
+          <svg
+            class="item-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+            />
+          </svg>
+        </div>
+        <div class="item-content">
+          <div class="item-title">
+            {{ isCopying ? 'Copied!' : 'Copy page' }}
+          </div>
+          <div class="item-description">Copy page as Markdown for LLMs</div>
+        </div>
       </button>
     </div>
   </div>
@@ -84,6 +163,12 @@ const chatGPTLink = computed(() => {
   const fullUrl = `https://tools.docs.iex.ec${route.path}`;
   const prompt = `Please research and analyze this page: ${fullUrl} so I can ask you questions about it. Once you have read it, prompt me with any questions I have. Do not post content from the page in your response. Any of my follow up questions must reference the site I gave you.`;
   return `https://chatgpt.com/?hints=search&q=${encodeURIComponent(prompt)}`;
+});
+
+const claudeLink = computed(() => {
+  const fullUrl = `https://tools.docs.iex.ec${route.path}`;
+  const prompt = `Please research and analyze this page: ${fullUrl} so I can ask you questions about it. Once you have read it, prompt me with any questions I have. Do not post content from the page in your response. Any of my follow up questions must reference the site I gave you.`;
+  return `https://claude.ai/new?q=${encodeURIComponent(prompt)}`;
 });
 
 const toggleDropdown = () => {
@@ -170,8 +255,8 @@ onUnmounted(() => {
 }
 
 .chatgpt-icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-right: 8px;
 }
 
@@ -186,47 +271,86 @@ onUnmounted(() => {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  right: 3;
-  background-color: #2d2f31;
+  right: 0;
+  background-color: #1f1f1f;
+  border: 1px solid #333;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin-top: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  margin-top: 8px;
   overflow: hidden;
   z-index: 1000;
-  min-width: 180px;
+  min-width: 220px;
 }
 
 .dropdown-item {
   display: flex;
   align-items: center;
-  padding: 10px 12px;
-  color: white;
+  padding: 14px 16px;
+  color: #e0e0e0;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
   border: none;
   background: none;
   cursor: pointer;
   width: 100%;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  gap: 12px;
 }
 
 .dropdown-item:hover:not(:disabled) {
-  background-color: #3d3f41;
+  background-color: #2a2a2a;
   text-decoration: none;
   color: white;
 }
 
 .dropdown-item:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
+.item-icon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
 .item-icon {
+  width: auto;
+  height: auto;
+  max-width: 80%;
+}
+
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.item-description {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.3;
+}
+
+.item-arrow {
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
-  margin-right: 8px;
-  flex-shrink: 0;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.dropdown-item:hover .item-arrow {
+  color: #999;
 }
 
 @media (max-width: 768px) {
