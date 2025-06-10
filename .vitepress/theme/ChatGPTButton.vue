@@ -294,10 +294,17 @@ onUnmounted(() => {
   width: 100%;
   transition: all 0.2s ease;
   gap: 12px;
+  text-align: left;
 }
 
 .dropdown-item:hover:not(:disabled) {
   background-color: #2a2a2a;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-item:active:not(:disabled) {
+  background-color: #333;
   text-decoration: none;
   color: white;
 }
