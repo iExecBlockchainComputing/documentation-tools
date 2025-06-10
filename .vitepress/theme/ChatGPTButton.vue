@@ -180,13 +180,19 @@ const closeDropdown = () => {
 };
 
 const copyPageContent = async () => {
+  isCopying.value = true;
+
   const turndownService = new TurndownService();
   const mainContent = document.querySelector('.vp-doc');
   const markdown = turndownService.turndown(mainContent);
+
   await navigator.clipboard.writeText(markdown);
+
+  await new Promise((resolve) => setTimeout(resolve, 800));
+
+  isCopying.value = false;
 };
 
-// Fermer le dropdown en cliquant à l'extérieur
 const handleClickOutside = (event) => {
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
     closeDropdown();
