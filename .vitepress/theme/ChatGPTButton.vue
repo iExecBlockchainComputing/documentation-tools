@@ -338,7 +338,6 @@ onUnmounted(() => {
 .item-title {
   font-size: 14px;
   font-weight: 500;
-  color: #e0e0e0;
 }
 
 .item-description {
