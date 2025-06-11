@@ -221,7 +221,6 @@ onUnmounted(() => {
 .split-button {
   display: flex;
   border-radius: 20px;
-  overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -277,13 +276,11 @@ onUnmounted(() => {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  right: 3;
   background-color: #1f1f1f;
   border: 1px solid #333;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   margin-top: 8px;
-  overflow: hidden;
   z-index: 1000;
   min-width: 280px;
 }
