@@ -277,7 +277,7 @@ onUnmounted(() => {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 3;
   background-color: #1f1f1f;
   border: 1px solid #333;
   border-radius: 12px;
@@ -285,7 +285,7 @@ onUnmounted(() => {
   margin-top: 8px;
   overflow: hidden;
   z-index: 1000;
-  min-width: 220px;
+  min-width: 280px;
 }
 
 .dropdown-item {
