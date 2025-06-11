@@ -10,7 +10,7 @@
         rel="noopener"
       >
         <img
-          src="/assets/icons/chatgpt.png"
+          src="/assets/icons/chatgpt.svg"
           alt="ChatGPT"
           class="chatgpt-icon"
         />
@@ -54,7 +54,7 @@
       >
         <div class="item-icon-wrapper">
           <img
-            src="/assets/icons/chatgpt.png"
+            src="/assets/icons/chatgpt.svg"
             alt="ChatGPT"
             class="item-icon"
           />
@@ -90,7 +90,7 @@
       >
         <div class="item-icon-wrapper">
           <img
-            src="/assets/icons/anthropic.png"
+            src="/assets/icons/anthropic.svg"
             alt="Anthropic"
             class="item-icon"
           />
