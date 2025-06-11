@@ -293,10 +293,6 @@ onUnmounted(() => {
   align-items: center;
   padding: 14px 16px;
   color: #e0e0e0;
-  text-decoration: none;
-  border: none;
-  background: none;
-  cursor: pointer;
   width: 100%;
   transition: all 0.2s ease;
   gap: 12px;
