@@ -180,13 +180,19 @@ const closeDropdown = () => {
 };
 
 const copyPageContent = async () => {
+  isCopying.value = true;
+
   const turndownService = new TurndownService();
   const mainContent = document.querySelector('.vp-doc');
   const markdown = turndownService.turndown(mainContent);
+
   await navigator.clipboard.writeText(markdown);
+
+  await new Promise((resolve) => setTimeout(resolve, 800));
+
+  isCopying.value = false;
 };
 
-// Fermer le dropdown en cliquant à l'extérieur
 const handleClickOutside = (event) => {
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
     closeDropdown();
@@ -271,7 +277,7 @@ onUnmounted(() => {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 3;
   background-color: #1f1f1f;
   border: 1px solid #333;
   border-radius: 12px;
@@ -279,7 +285,7 @@ onUnmounted(() => {
   margin-top: 8px;
   overflow: hidden;
   z-index: 1000;
-  min-width: 220px;
+  min-width: 280px;
 }
 
 .dropdown-item {
@@ -294,10 +300,17 @@ onUnmounted(() => {
   width: 100%;
   transition: all 0.2s ease;
   gap: 12px;
+  text-align: left;
 }
 
 .dropdown-item:hover:not(:disabled) {
   background-color: #2a2a2a;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-item:active:not(:disabled) {
+  background-color: #333;
   text-decoration: none;
   color: white;
 }
