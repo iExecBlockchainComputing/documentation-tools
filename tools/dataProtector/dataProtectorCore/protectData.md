@@ -212,6 +212,29 @@ The name is public and not encrypted.
 
 :::
 
+### uploadMode <OptionalBadge />
+
+**Type:** `"ipfs" | "arweave"`  
+**Default:** `"ipfs"`
+
+Specify the storage solution to use for the protected data encrypted payload
+hosting.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const protectedData = await dataProtectorCore.protectData({
+  name: 'myEmail',
+  data: {
+    email: 'example@gmail.com',
+  },
+  uploadMode: 'arweave', // [!code focus]
+});
+```
+
 ### allowDebug <OptionalBadge />
 
 **Type:** `boolean`  
