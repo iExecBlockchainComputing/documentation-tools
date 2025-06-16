@@ -28,7 +28,6 @@ const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
     app: '0x456def...',
-    maxPrice: 10,
     args: 'arg1 arg2',
     inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
     secrets: {
@@ -125,28 +124,6 @@ const processProtectedDataResponse =
     protectedData: '0x123abc...',
     app: '0x456def...',
     userWhitelist: '0x656def...', // [!code focus]
-  });
-```
-
-### maxPrice <OptionalBadge />
-
-**Type:** `number`
-
-The maximum price (in nRLC) that a requester is willing to pay for each task
-related to processing the protected data. It is the sum of the application
-price, dataset price, and workerpool price per task.
-
-```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-const processProtectedDataResponse =
-  await dataProtectorCore.processProtectedData({
-    protectedData: '0x123abc...',
-    app: '0x456def...',
-    maxPrice: 10, // [!code focus]
   });
 ```
 
@@ -275,7 +252,6 @@ const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 const processProtectedDataResponse = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0x456def...',
-  maxPrice: 10,
   secrets: { // [!code focus]
     1: 'secret1', // [!code focus]
     2: 'secret2', // [!code focus]
