@@ -5,7 +5,7 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Time to build!</h2>
-    <p>Let's build an iApp that can process protected data in a secure environment using the <a href="https://tools.docs.iex.ec/tools/iapp-generator" target="_blank">iExec iApp generator tool</a>. This tool helps you create, test and deploy iApps with just a few commands.</p>
+    <p>Let's build an iApp that can process protected data in a secure environment using the <a href="../../tools/iapp-generator" target="_blank">iExec iApp generator tool</a>. This tool helps you create, test and deploy iApps with just a few commands.</p>
 
   </div>
 </div>
@@ -63,11 +63,10 @@ Telegram handles.
 
 Transfer, sell or rent protected content to authorized users.
 [Github](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/protected-data-delivery-dapp)
-|
-[Documentation](../../tools/dataProtector/dataProtectorSharing.md)
+| [Documentation](../../tools/dataProtector/dataProtectorSharing)
 
 <div class="solution-note">
-  <p>These are just a few examples, the possibilities are endless. Want to explore iApp Generator? Check out our <a href="../../tools/iapp-generator.md" target="_blank">documentation</a> and see what you can build!</p>
+  <p>These are just a few examples, the possibilities are endless. Want to explore iApp Generator? Check out our <a href="../../tools/iapp-generator" target="_blank">documentation</a> and see what you can build!</p>
 </div>
 
 ## 💾 Installation (win / mac / linux)
