@@ -123,7 +123,7 @@ Want to see it in action? Check out our
 - Track your earnings
 
 For more technical details, see the
-[DataProtector Sharing](https://beta.tools.docs.iex.ec/tools/dataProtector/dataProtectorSharing.html)
+[DataProtector Sharing](../../tools/dataProtector/dataProtectorSharing.html)
 documentation.
 
 <div class="solution-note green">

@@ -5,17 +5,15 @@
 <div class="hero">
   <div class="hero-content">
     <h2>Time to build!</h2>
-    <p>Let's build an iApp that can process protected data in a secure environment.</p>
+    <p>Let's build an iApp that can process protected data in a secure environment using the <a href="../../tools/iapp-generator" target="_blank">iExec iApp generator tool</a>. This tool helps you create, test and deploy iApps with just a few commands.</p>
+
   </div>
 </div>
 
-<div class="solution-note purple">
-  <p>An iApp runs in a Trusted Execution Environment (TEE), it can process data in a secure environment.</p>
-</div>
-
-This guide will help you set up, test, deploy and run your iApp using the
-[`iapp-cli`](https://github.com/iExecBlockchainComputing/iapp/tree/main/cli)
-tool. Follow the instructions carefully for a smooth development experience.
+If you wanna explore and deep dive in the CLI. You can check the
+[iapp-cli](https://github.com/iExecBlockchainComputing/iapp/tree/main/cli)
+github repository. Follow the instructions carefully for a smooth development
+experience.
 
 ## 📋 Prerequisites
 
@@ -42,6 +40,35 @@ Before getting started, ensure you have the following:
   <p>Don't worry! All secrets used in this tutorial stay on your machine and aren’t shared with anyone. You’ll only need them to run the <code>iApp run</code> command.</p>
 </div>
 
+## 🚀 Types of iApps You Can Build
+
+iExec enables you to build various types of Privacy-preserving applications.
+Here are some popular use cases:
+
+### 📧 Web3 Mail
+
+Send privacy-preserving emails to registered Ethereum account holders without
+knowing or storing their email addresses.
+[Github](https://github.com/iExecBlockchainComputing/web3mail-sdk/tree/main/dapp)
+| [Documentation](../../tools/web3mail.md)
+
+### 💬 Web3 Telegram
+
+Send privacy-preserving Telegram messages without knowing or storing their
+Telegram handles.
+[Github](https://github.com/iExecBlockchainComputing/web3telegram-sdk/tree/main/dapp)
+| [Documentation](../../tools/web3telegram.md)
+
+### 🌐 Content Delivery
+
+Transfer, sell or rent protected content to authorized users.
+[Github](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/protected-data-delivery-dapp)
+| [Documentation](../../tools/dataProtector/dataProtectorSharing)
+
+<div class="solution-note">
+  <p>These are just a few examples, the possibilities are endless. Want to explore iApp Generator? Check out our <a href="../../tools/iapp-generator" target="_blank">documentation</a> and see what you can build!</p>
+</div>
+
 ## 💾 Installation (win / mac / linux)
 
 First, you need to install the `iapp` package. Open your terminal and run:
@@ -60,7 +87,7 @@ iapp --version
 iapp --help
 ```
 
-## 🛠️ Initialize Framework
+## 🛠️ Bootstrap your iApp
 
 To initialize the working directory for developing your iApp, use the
 `iapp init` command. This command sets up the necessary project structure and

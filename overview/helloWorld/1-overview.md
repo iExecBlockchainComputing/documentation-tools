@@ -87,7 +87,7 @@ Computing</a></span> technologies.
 
 iExec combines three fundamental elements that work together seamlessly:
 
-#### 1. Protect data with our devtool [DataProtector](https://tools.docs.iex.ec/tools/dataProtector/getting-started)
+#### 1. Protect data with our devtool [DataProtector](../../tools/dataProtector/getting-started)
 
 - Encrypt your sensitive data and store it securely on IPFS
 - Only you control who can access it and when
