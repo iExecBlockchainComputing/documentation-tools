@@ -28,7 +28,6 @@ const processProtectedDataResponse =
   await dataProtectorCore.processProtectedData({
     protectedData: '0x123abc...',
     app: '0x456def...',
-    maxPrice: 10,
     args: 'arg1 arg2',
     inputFiles: ['https://example.com/file1', 'https://example.com/file2'],
     secrets: {
@@ -125,28 +124,6 @@ const processProtectedDataResponse =
     protectedData: '0x123abc...',
     app: '0x456def...',
     userWhitelist: '0x656def...', // [!code focus]
-  });
-```
-
-### maxPrice <OptionalBadge />
-
-**Type:** `number`
-
-The maximum price (in nRLC) that a requester is willing to pay for each task
-related to processing the protected data. It is the sum of the application
-price, dataset price, and workerpool price per task.
-
-```ts twoslash
-import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
-
-const web3Provider = getWeb3Provider('PRIVATE_KEY');
-const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-// ---cut---
-const processProtectedDataResponse =
-  await dataProtectorCore.processProtectedData({
-    protectedData: '0x123abc...',
-    app: '0x456def...',
-    maxPrice: 10, // [!code focus]
   });
 ```
 
@@ -275,7 +252,6 @@ const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 const processProtectedDataResponse = await dataProtectorCore.processProtectedData({
   protectedData: '0x123abc...',
   app: '0x456def...',
-  maxPrice: 10,
   secrets: { // [!code focus]
     1: 'secret1', // [!code focus]
     2: 'secret2', // [!code focus]
@@ -301,6 +277,45 @@ default workerpool for running confidential computations on the iExec platform.
 If you don't specify a workerpool preference,
 0x0000000000000000000000000000000000000000 represents any randomly available
 workerpool.
+
+:::
+
+::: info
+
+🧪 While protected data are processed in **TEE** by **intel SGX** technology by
+default, `@iexec/dataprotector` can be configured to create and process
+protected data in the experimental **intel TDX** environment.
+
+TDX mode is enabled by setting connecting the **TDX SMS** and using the **TDX
+workerpool**.
+
+```ts twoslash [Browser]
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+// ---cut---
+import { IExecDataProtectorCore } from '@iexec/dataprotector';
+
+const web3Provider = window.ethereum;
+// Instantiate dataProtector connected to the TDX SMS
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider, {
+  iexecOptions: {
+    smsURL: 'https://sms.labs.iex.ec', // [!code focus]
+  },
+});
+
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    workerpool: 'tdx-labs.pools.iexec.eth', // [!code focus]
+  });
+```
+
+⚠️ Keep in mind: TDX mode is experimental and can be subject to instabilities or
+discontinuity.
 
 :::
 

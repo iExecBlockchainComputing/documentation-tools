@@ -57,6 +57,10 @@ header .title > span {
   font-weight: bold !important;
 }
 
+.aside .aside-container {
+  overflow: visible;
+}
+
 /* `Code` in links. Primary yellow is too light */
 /* Here especially for the underline color */
 .vp-doc a,
