@@ -64,7 +64,7 @@ Telegram handles.
 Transfer, sell or rent protected content to authorized users.
 [Github](https://github.com/iExecBlockchainComputing/dataprotector-sdk/tree/main/packages/protected-data-delivery-dapp)
 |
-[Documentation](https://tools.docs.iex.ec/tools/dataProtector/dataProtectorSharing)
+[Documentation](../../tools/dataProtector/dataProtectorSharing.md)
 
 <div class="solution-note">
   <p>These are just a few examples, the possibilities are endless. Want to explore iApp Generator? Check out our <a href="https://tools.docs.iex.ec/tools/iapp-generator" target="_blank">documentation</a> and see what you can build!</p>
