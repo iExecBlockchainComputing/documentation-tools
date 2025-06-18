@@ -57,7 +57,7 @@ knowing or storing their email addresses.
 Send privacy-preserving Telegram messages without knowing or storing their
 Telegram handles.
 [Github](https://github.com/iExecBlockchainComputing/web3telegram-sdk/tree/main/dapp)
-| [Documentation](https://tools.docs.iex.ec/tools/web3telegram)
+| [Documentation](../../tools/web3telegram.md)
 
 ### 🌐 Content Delivery
 
