@@ -50,7 +50,7 @@ Here are some popular use cases:
 Send privacy-preserving emails to registered Ethereum account holders without
 knowing or storing their email addresses.
 [Github](https://github.com/iExecBlockchainComputing/web3mail-sdk/tree/main/dapp)
-| [Documentation](https://tools.docs.iex.ec/tools/web3mail)
+| [Documentation](../../tools/web3mail.md)
 
 ### 💬 Web3 Telegram
 
