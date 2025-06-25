@@ -333,6 +333,73 @@ const processProtectedDataResponse =
   });
 ```
 
+### dataMaxPrice <OptionalBadge />
+
+**Type:** `number`  
+**Default:** `0`
+
+Allows specifying the maximum amount (in nRLC) you are willing to pay the
+protected data owner for using their data. The owner of the protected data
+receives this as a payment for sharing their data.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    dataMaxPrice: 42, // [!code focus]
+  });
+```
+
+### appMaxPrice <OptionalBadge />
+
+**Type:** `number`  
+**Default:** `0`
+
+Allows specifying the maximum amount (in nRLC) you are willing to pay the iApp
+provider for using the deployed application.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    appMaxPrice: 42, // [!code focus]
+  });
+```
+
+### workerpoolMaxPrice <OptionalBadge />
+
+**Type:** `number`  
+**Default:** `0`
+
+Allows specifying the maximum amount you want to pay the workerpool provider for
+using their infrastructure to run the iApp in nRLC.
+
+```ts twoslash
+import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
+const web3Provider = getWeb3Provider('PRIVATE_KEY');
+const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
+// ---cut---
+const processProtectedDataResponse =
+  await dataProtectorCore.processProtectedData({
+    protectedData: '0x123abc...',
+    app: '0x456def...',
+    workerpoolMaxPrice: 42, // [!code focus]
+  });
+```
+
 ### onStatusUpdate <OptionalBadge />
 
 **Type:** `OnStatusUpdateFn<ProcessProtectedDataStatuses>`
