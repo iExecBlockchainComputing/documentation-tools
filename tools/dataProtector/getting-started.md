@@ -7,7 +7,7 @@ description:
 
 # Getting Started
 
-[![GitHub package.json version (branch)](https://img.shields.io/badge/npm-2.0.0--beta-green)](https://www.npmjs.com/package/@iexec/dataprotector/v/beta)
+[![GitHub package.json version (branch)](https://img.shields.io/badge/npm-2.0.0--beta-green)](https://www.npmjs.com/package/@iexec/dataprotector)
 
 ## Overview
 
