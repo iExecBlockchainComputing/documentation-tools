@@ -12,8 +12,8 @@ import {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'iExec tools',
-  description: 'iExec documentation for dev tools',
+  title: 'iExec Documentation Draft',
+  description: 'iExec documentation draft - rebuild in progress',
   // Remove the trailing .html from URLs. Also needs the same option in vercel.json
   cleanUrls: true,
   lastUpdated: true,
