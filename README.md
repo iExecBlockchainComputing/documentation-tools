@@ -1,7 +1,7 @@
-# iExec Tools documentation
+# iExec Documentation Draft
 
 This is the source repository of the
-[iExec tools documentation](https://tools.docs.iex.ec)
+[iExec documentation draft](https://tools.docs.iex.ec)
 
 ## Prerequisites
 

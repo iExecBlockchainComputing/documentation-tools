@@ -10,8 +10,8 @@ const projectId = import.meta.env.VITE_REOWN_PROJECT_ID;
 
 // WalletConnect metadata
 const metadata = {
-  name: 'iExec Documentation tools',
-  description: 'iExec Documentation tools',
+      name: 'iExec Documentation Draft',
+    description: 'iExec Documentation Draft',
   url: 'https://tools.docs.iex.ec/',
   icons: [
     'https://cdn.prod.website-files.com/6646148828eddb19c172bf2a/665db3ba85a625628c353a64_Logo-RLC-Yellow.png',
