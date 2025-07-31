@@ -21,7 +21,7 @@ use of this `protectedData`
 
 `string`
 
-Number of authorized uses of this `protectedData`;
+Number of authorized uses of this `protectedData`
 
 ### tag
 
