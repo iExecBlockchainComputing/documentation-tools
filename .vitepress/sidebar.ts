@@ -53,10 +53,6 @@ export function getSidebar() {
           //   text: '💰&nbsp;&nbsp;Pricing Considerations',
           //   link: '/overview/pricing-considerations',
           // },
-          {
-            text: '🔧&nbsp;&nbsp;How to Pay for Web3mail',
-            link: '/overview/how-to-pay-for-web3mail',
-          },
         ],
       },
       {
@@ -346,6 +342,17 @@ export function getSidebar() {
               {
                 text: 'sendEmail',
                 link: '/tools/web3mail/methods/sendEmail',
+              },
+            ],
+          },
+          {
+            text: 'Integration Guide',
+            link: '/tools/web3mail/integration-guide',
+            collapsed: true,
+            items: [
+              {
+                text: 'How to Pay for Web3mail',
+                link: '/tools/web3mail/how-to-pay-for-web3mail',
               },
             ],
           },

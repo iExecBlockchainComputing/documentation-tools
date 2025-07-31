@@ -53,11 +53,13 @@ senders** can contact you.
 After obtaining your user's Chat ID, you need to protect it using iExec’s Data
 Protector to ensure privacy and security.
 
+<!-- prettier-ignore -->
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-const protectedData = await dataProtectorCore.protectData({
+const protectedData = await dataProtectorCore.protectData({// [!code focus:5]
   data: {
     telegram_chatId: '12345678', // Recipient's Chat ID
   },
@@ -69,11 +71,13 @@ const protectedData = await dataProtectorCore.protectData({
 To allow users to send messages, you must explicitly grant access to specific
 users.
 
+<!-- prettier-ignore -->
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
+
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-const grantedAccess = await dataProtectorCore.grantAccess({
+const grantedAccess = await dataProtectorCore.grantAccess({ // [!code focus:10]
   protectedData: '0x123abc...', // Protected Chat ID data address
   authorizedApp: '0x456def...', // Web3Telegram app address
   authorizedUser: '0x789cba...', // Ethereum address of the authorized sender
@@ -89,11 +93,13 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 
 Once authorized, a user can send messages via Web3Telegram SDK.
 
+<!-- prettier-ignore -->
 ```ts twoslash
 import { IExecWeb3telegram, getWeb3Provider } from '@iexec/web3telegram';
+
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3telegram = new IExecWeb3telegram(web3Provider);
-const sendTelegram = await web3telegram.sendTelegram({
+const sendTelegram = await web3telegram.sendTelegram({ // [!code focus:5]
   protectedData: '0x123abc...', // Protected Chat ID data address
   senderName: 'Arthur',
   telegramContent: 'My telegram message content',
