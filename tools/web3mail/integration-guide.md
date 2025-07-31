@@ -54,12 +54,13 @@ By **protecting their email address with iExec**, users ensure that only
 Your users need to protect their email address using iExec's Data Protector to
 ensure privacy and security.
 
+<!-- prettier-ignore -->
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-const protectedData = await dataProtectorCore.protectData({
+const protectedData = await dataProtectorCore.protectData({ // [!code focus:5]
   data: {
     email: 'example@gmail.com', // User's email address
   },
@@ -71,12 +72,13 @@ const protectedData = await dataProtectorCore.protectData({
 To allow specific users or applications to send emails, you must explicitly
 grant access.
 
+<!-- prettier-ignore -->
 ```ts twoslash
 import { IExecDataProtectorCore, getWeb3Provider } from '@iexec/dataprotector';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
-const grantedAccess = await dataProtectorCore.grantAccess({
+const grantedAccess = await dataProtectorCore.grantAccess({ // [!code focus:10]
   protectedData: '0x123abc...', // Protected email data address
   authorizedApp: '0x456def...', // Web3Mail app address
   authorizedUser: '0x789cba...', // Ethereum address of the authorized sender
@@ -92,17 +94,18 @@ const grantedAccess = await dataProtectorCore.grantAccess({
 
 Once authorized, a user can send emails via Web3Mail SDK.
 
+<!-- prettier-ignore -->
 ```ts twoslash
 import { IExecWeb3mail, getWeb3Provider } from '@iexec/web3mail';
 
 const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
-const sendEmail = await web3mail.sendEmail({
+const sendEmail = await web3mail.sendEmail({ // [!code focus:7]
   protectedData: '0x123abc...', // Protected email data address
-  emailSubject: 'My email subject',
+  emailSubject: 'My email subject', 
   emailContent: 'My email content',
   senderName: 'Arthur',
-  contentType: 'text/html', // or 'text/plain'
+  contentType: 'text/html', // or 'text/plain' 
 });
 ```
 
