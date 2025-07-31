@@ -61,7 +61,7 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const dataProtectorCore = new IExecDataProtectorCore(web3Provider);
 const protectedData = await dataProtectorCore.protectData({
   data: {
-    email: 'user@example.com', // User's email address
+    email: 'example@gmail.com', // User's email address
   },
 });
 ```
@@ -99,8 +99,8 @@ const web3Provider = getWeb3Provider('PRIVATE_KEY');
 const web3mail = new IExecWeb3mail(web3Provider);
 const sendEmail = await web3mail.sendEmail({
   protectedData: '0x123abc...', // Protected email data address
-  emailSubject: 'Hello from Web3Mail',
-  emailContent: 'This is a secure email sent via iExec Web3Mail',
+  emailSubject: 'My email subject',
+  emailContent: 'My email content',
   senderName: 'Arthur',
   contentType: 'text/html', // or 'text/plain'
 });
