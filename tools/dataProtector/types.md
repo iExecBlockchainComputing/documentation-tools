@@ -23,6 +23,12 @@ use of this `protectedData`
 
 Number of authorized uses of this `protectedData`
 
+### remainingAccess
+
+`string`
+
+Number of remaining uses of this `protectedData`
+
 ### tag
 
 `string`
