@@ -10,8 +10,8 @@ computing technologies. With the iApp Generator, you can:
 
 - **Create a basic application structure** ready to run on a decentralized
   worker in a TEE.
-- **Test your application locally** in **Debug Mode**, enabling fast iteration
-  and troubleshooting.
+- **Test your application locally**, enabling fast iteration and
+  troubleshooting.
 - **Deploy your iApp** as a confidential application on the iExec protocol.
 
 ## Why Use the iApp Generator?

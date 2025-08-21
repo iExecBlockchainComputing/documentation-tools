@@ -19,16 +19,16 @@ Follow the prompts to specify:
 
 - **Project name** – Creates a folder for your project files.
 - **Language** – Choose between JavaScript, Python, etc.
-- **Project mode** – Choose Basic (Hello-World setup) or Advanced (full debug
-  capabilities).
+- **Project mode** – Choose Basic (Hello-World setup) or Advanced (cherry-pick
+  what you need).
 
 ### ⚙ Configure
 
 ::: info
 
-We are going to create and test our iApp locally. In **debug mode**, you can
+We are going to create and test our iApp locally. In **test** mode, you can
 quickly iterate and troubleshoot your code. Logs and output files are available
-for debugging, helping you refine your app before moving to production.
+for debugging, helping you refine your app before deploying to production.
 
 :::
 
@@ -136,11 +136,10 @@ discontinuity.
 
 ### 🚀 Next Steps
 
-Your iApp is now running in **debug mode** on iExec!
+Your iApp is now running on iExec!
 
 Once your application is **stable** and **functional**, you can:
 
-- Contact **iExec** to move to **production mode** (Full Privacy).
 - Learn how to **manage orders** and integrate with the **iExec protocol**.
 
 #### 📚 Recommended Resources
