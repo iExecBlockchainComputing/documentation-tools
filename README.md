@@ -1,4 +1,7 @@
-# iExec Tools documentation
+# Important Update:
+The **tools** and **[protocol](https://github.com/iExecBlockchainComputing/documentation-protocol)** documentations have been merged into a new project. Please refer to the new repository at the following link: [New Documentation](https://github.com/iExecBlockchainComputing/documentation).
+
+## iExec Tools documentation
 
 This is the source repository of the
 [iExec tools documentation](https://tools.docs.iex.ec)
